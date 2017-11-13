@@ -1,0 +1,50 @@
+:host {
+  // positioning
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+
+  // layering
+  z-index: 3; // DO NOT GO ABOVE 3 Z-INDEX
+
+  // colors
+  background-color: #fff;
+  box-shadow: 0 16px 12px 0 rgba(0,0,0,0.22), 0 19px 38px 0 rgba(0,0,0,0.30);
+  opacity: 1;
+  
+  // contents flow down
+  display: flex;
+  flex-direction: column;
+  
+  // padding 
+  padding-top: 1.5rem;
+
+  // animations: 
+  transition: all 300ms ease-out; 
+
+  &.drawer-is-open {
+    width: 16rem;
+    opacity: 1;
+  }
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  margin: 0 1rem .5rem 1rem;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.close-icon {
+  padding: 0.25rem;
+  color: #757575;
+  cursor: pointer; 
+}

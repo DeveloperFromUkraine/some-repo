@@ -1,0 +1,38 @@
+// stretch full screen and center
+:host {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+.align-left {
+  align-self: flex-start;
+}
+
+// actual container
+.container {
+  width: 100%;
+  max-width: 36rem;
+  margin-top: 4rem;
+}
+
+:host /deep/ ign-button-group {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+// backwards compat
+:host /deep/ ign-button-group {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+:host /deep/ button {
+  text-transform: uppercase;
+}

@@ -1,0 +1,17 @@
+$field-label-color: #757575;
+$field-label-font-size: 0.85rem;
+
+:host {
+  display: block;
+  margin: 0 0 1.75rem 0;
+  line-height: 1.4rem;
+}
+
+.label {
+  color: $field-label-color;
+  font-size: $field-label-font-size;
+}
+
+.value {
+  word-wrap: break-word;
+}

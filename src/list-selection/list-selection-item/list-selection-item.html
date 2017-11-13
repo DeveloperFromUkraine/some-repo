@@ -1,0 +1,7 @@
+<div class="list-detail-container" [attr.da]="'list-item-' + title" (click)="onClick.emit($event)">
+  <!-- <div class="gray-square"></div> -->
+  <div class="list-detail-info">
+    <div *ngIf="!!title" class="list-detail-title">{{ title }}</div>
+    <div *ngIf="!!subtitle" class="list-detail-subtitle">{{ subtitle }}</div>
+  </div>
+</div>

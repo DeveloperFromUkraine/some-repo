@@ -1,0 +1,13 @@
+<div [ngClass]="{'active': isOpen}" class="buttons-container" (click)="handleClick()">
+  <ng-content></ng-content>
+  <div class="main-button-container" da="mainButton">
+    <a mat-fab class="icon-container">
+      <mat-icon style="position:absolute"  class="icon icon-secondary" [ngClass]="{'icon-secondary-active': isOpen}">
+        clear
+      </mat-icon>
+      <mat-icon class="icon icon-primary" [ngClass]="{'icon-primary-active': isOpen}">
+        add
+      </mat-icon>
+    </a>
+  </div>
+</div>

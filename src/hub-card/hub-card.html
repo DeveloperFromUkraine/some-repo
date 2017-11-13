@@ -1,0 +1,31 @@
+<div
+  role="button"
+  tabindex="0"
+  da="button"
+  class="card-container"
+  matRipple
+  [matRippleCentered]="false"
+  [matRippleUnbounded]="false"
+  [matRippleRadius]="380"
+  [matRippleSpeedFactor]="0.5"
+  [style.background-color]="colors[color]"
+  (keyup.enter)="handleClick()"
+  (click)="handleClick()"
+>
+  <div class="card-opacity-cover"></div>
+  <div class="card-contents">
+    <div
+      class="circle-icon-container"
+      [style.background-color]="colors[color]"
+    >
+      <mat-icon
+        class="icon material-icons"
+      >
+        {{ icons[icon] }}
+      </mat-icon>
+    </div>
+    <div class="primary-text">{{ title }}</div>
+    <div class="secondary-text">{{ subtitle }}</div>
+    <div class="action-text">{{ primaryActionText }}</div>
+  </div>
+</div>

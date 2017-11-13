@@ -1,0 +1,10 @@
+<span class="mat-tooltip fab-tooltip">{{ tooltipText }}</span>
+<a
+  [attr.href]="href"
+  (click)="this.clicked.emit()"
+  mat-fab
+>
+  <mat-icon>
+    {{ icon }}
+  </mat-icon>
+</a>

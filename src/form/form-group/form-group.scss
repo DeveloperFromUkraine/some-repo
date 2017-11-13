@@ -1,0 +1,16 @@
+:host {
+  flex-direction: row;
+  flex: 1;
+}
+
+// this doesn't handle responsive, need to talk to design
+:host ::ng-deep > * {
+  padding-right: 8px;
+  width: 100%;
+}
+
+// css here for every child except the first
+// :host ::ng-deep > *:nth-child(3n),
+// :host ::ng-deep > *:nth-child(3n-1) {
+//   margin-left: 16px;
+// }

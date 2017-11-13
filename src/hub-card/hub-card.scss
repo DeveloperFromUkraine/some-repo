@@ -1,0 +1,87 @@
+.card-container {
+  height: 340px;
+  margin: 0 8px 16px 8px;
+  display: inline-block;
+  position: relative;
+  border-radius: 2px;
+  width: 253px;
+  background: #708A97;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.20), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
+  cursor: pointer;
+}
+.card-container:hover {
+  transform: scale(1.008);
+  transition-duration: 150ms;
+}
+
+.primary-text {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.secondary-text {
+  font-size: 15px;
+  font-weight: 300;
+  font-family: Avenir;
+  opacity: 0.9;
+  color: #ffffff;
+}
+
+
+.action-text {
+  position: absolute;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 300;
+  bottom: 20px;
+  // uncomment for white pillbox css
+  // border: 1px solid white;
+  // border-radius: 100px;
+}
+
+.card-contents {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 8px;
+  text-align: center;
+}
+
+.icon {
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  height: 50%;
+  color: #ffffff;
+  font-size: 40px;
+}
+
+.circle-icon-container {
+  margin: 0 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+  background: #708A97; /*default color for card*/
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 22px 0 rgba(0, 0, 0, 0.12);
+  z-index: 2;
+  margin-bottom: 14px;
+}
+
+.card-opacity-cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  opacity: 0.2;
+  background: #000000;
+}

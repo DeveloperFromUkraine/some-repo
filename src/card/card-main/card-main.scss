@@ -1,0 +1,32 @@
+$mq-xxs: 'only screen and (max-width : 479px)';
+$mq-xs: 'only screen and (min-width: 480px) and (max-width: 599px)';
+$mq-sm: 'only screen and (min-width: 600px) and (max-width: 839px)';
+$mq-md: 'only screen and (min-width: 840px) and (max-width: 1023px)';
+$mq-lg: 'only screen and (min-width: 1024px) and (max-width: 1279px)';
+$mq-xl: 'only screen and (min-width: 1280px) and (max-width: 1439px)';
+$mq-xxl: 'only screen and (min-width: 1440px)';
+
+:host {
+  flex: 3;
+  padding: 48px 48px 48px;
+
+  @media #{$mq-xxs} {
+    padding: 16px 16px;
+  }
+
+  @media #{$mq-xs} {
+    padding: 16px 16px;
+  }
+
+  @media #{$mq-sm} {
+    padding: 24px 24px;
+  }
+
+  @media #{$mq-md} {
+    padding: 24px 24px;
+  }
+
+  @media #{$mq-lg} {
+    padding: 24px 16px;
+  }
+}

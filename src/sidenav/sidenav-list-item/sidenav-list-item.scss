@@ -1,0 +1,25 @@
+.app-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 0 8px 22px;
+  margin: 8px 0;
+}
+
+.app-link-icon {
+  color: #BFBFBF;
+  font-size: 24px;
+}
+
+.app-link-text {
+  margin-left: 16px;
+  margin-top: 2px;
+}
+
+:host(.active) ::ng-deep i {
+  color: #509E2F;
+}
+
+:host {
+  cursor: pointer;
+}
