@@ -1,0 +1,20 @@
+<mat-input-container class="full-width">
+  <input
+    matInput
+    da="autocompleteAddressInput"
+    [matAutocomplete]="matAutocomplete"
+    (blur)="actionBuffer.emit('blur')"
+    [formControl]="autocompleteCtrl"
+    [placeholder]="displayName || 'PEOPLE.ADDRESS' | translate"
+  >
+</mat-input-container>
+
+<mat-autocomplete>
+  <mat-option
+    (onSelectionChange)="actionBuffer.emit('onSelectionChange')"
+    *ngFor="let suggestion of suggestions$ | async"
+    [value]="suggestion.description"
+  >
+    {{ suggestion.description }}
+  </mat-option>
+</mat-autocomplete>
