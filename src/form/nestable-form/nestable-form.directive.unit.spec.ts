@@ -1,10 +1,4 @@
-import { Observable, BehaviorSubject } from 'rxjs/Rx';
 import { NestableFormDirective } from './nestable-form.directive';
-import { mockLogger } from '../../../../../test/mocks/logger';
-import { stubOf } from '../../../../../test/stub-of';
-import { ActivatedRoute } from '@angular/router';
-import { GraphQLErrorResponse } from '../../../services/apollo/graphql-error';
-import { graphQLError } from '../../../../../test/mocks/mock-apollo';
 import { FormBuilder, Validators } from '@angular/forms';
 
 describe('Messages component', () => {
