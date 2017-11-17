@@ -1,6 +1,8 @@
 import { Address } from './types';
 import { negate, isEmpty, flatMap } from 'lodash';
 
+declare var google;
+
 export class AddressTransformService {
   addressFromGeocoderResult(result: google.maps.GeocoderResult): Address {
     if (!result) {

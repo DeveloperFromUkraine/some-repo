@@ -6,7 +6,11 @@ import { AutocompletePlacesService } from './autocomplete-places.service';
 import { AutocompleteServiceProvider } from './autocomplete-service.provider';
 import { GoogleCallbackWrapper } from '../helpers/google-callback-wrapper';
 
-export const imports = [GeocoderModule];
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatAutocompleteModule } from '@angular/material';
+
+export const imports = [GeocoderModule, MatAutocompleteModule, ReactiveFormsModule, CommonModule];
 
 export const declarations = [AutocompletePlacesComponent];
 

@@ -3,6 +3,8 @@
 import { InjectionToken, Provider } from '@angular/core';
 import { MockAutocompleteService } from './autocomplete-service.mock';
 
+declare var google;
+
 export const AutocompleteService = new InjectionToken<google.maps.places.AutocompleteService>(
   'AutocompleteService'
 );

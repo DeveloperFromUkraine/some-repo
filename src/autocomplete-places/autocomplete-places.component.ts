@@ -25,8 +25,10 @@ import { AddressTransformService } from '../geocoder/address-transform.service';
 import { Address } from '../geocoder/types';
 import { CallbackRequestError } from '../helpers/google-callback-wrapper';
 
+declare var google;
+
 @Component({
-  selector: 'nu-autocomplete-places',
+  selector: 'ign-autocomplete-places',
   templateUrl: './autocomplete-places.html',
   styleUrls: ['./autocomplete-places.scss'],
   providers: [

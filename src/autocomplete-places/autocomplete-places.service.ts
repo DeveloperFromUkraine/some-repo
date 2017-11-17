@@ -5,6 +5,8 @@ import { Observable } from 'rxjs/Observable';
 import { AutocompleteService } from './autocomplete-service.provider';
 import { GoogleCallbackWrapper } from '../helpers/google-callback-wrapper';
 
+declare var google;
+
 @Injectable()
 export class AutocompletePlacesService implements google.maps.places.AutocompleteService {
   constructor(
