@@ -14,7 +14,9 @@
     "playground": "concurrently \"npm run build:watch\" \"npm run playground:build\" \"npm run lite\"",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:ci": "jest --runInBand"
+    "test:ci": "jest --runInBand",
+    "ci:test": "npm run test:ci",
+    "ci:package": "npm run build"
   },
   "jest": {
     "preset": "jest-preset-angular",
@@ -23,6 +25,9 @@
   "repository": {
     "type": "git",
     "url": "http://devgit.dev.us.corp:7990/projects/NUI/repos/ignite-design-system"
+  },
+  "publishConfig": {
+    "registry": "http://artifactory.mia.ucloud.int/artifactory/api/npm/npm-local"
   },
   "author": {
     "name": "Derek Stobbe",
