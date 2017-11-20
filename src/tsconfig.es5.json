@@ -14,8 +14,7 @@
       "es2015",
       "dom"
     ],
-    "skipLibCheck": true,
-    "types": []
+    "skipLibCheck": true
   },
   "angularCompilerOptions": {
     "annotateForClosureCompiler": true,

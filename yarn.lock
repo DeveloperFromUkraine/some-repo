@@ -6,6 +6,12 @@
   version "0.3.8"
   resolved "https://registry.yarnpkg.com/8fold-marked/-/8fold-marked-0.3.8.tgz#c529a89bb90d3559fcab3ba4f7d4fa31c80fbb13"
 
+"@angular/animations@4.4.4":
+  version "4.4.4"
+  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-4.4.4.tgz#a2f9353604347abe15df98292058842f52f08bc2"
+  dependencies:
+    tslib "^1.7.1"
+
 "@angular/cdk@^2.0.0-beta.10":
   version "2.0.0-beta.12"
   resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-2.0.0-beta.12.tgz#3a243cb62b93f4e039120ba70f900dc9e235622e"
@@ -41,6 +47,12 @@
 "@angular/forms@4.4.4":
   version "4.4.4"
   resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-4.4.4.tgz#4db3790509b6b10f1db8a7c1b7f52187cf64cfd4"
+  dependencies:
+    tslib "^1.7.1"
+
+"@angular/http@4.4.4":
+  version "4.4.4"
+  resolved "https://registry.yarnpkg.com/@angular/http/-/http-4.4.4.tgz#667faf616bb624168eafae6ee92e5eba23a9d1f2"
   dependencies:
     tslib "^1.7.1"
 
@@ -119,6 +131,10 @@
 "@ngx-translate/core@7.1.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@ngx-translate/core/-/core-7.1.0.tgz#5087a65c8ff312e4244ca0646ed45cde83b170cd"
+
+"@types/googlemaps@^3.29.2":
+  version "3.29.2"
+  resolved "https://registry.yarnpkg.com/@types/googlemaps/-/googlemaps-3.29.2.tgz#6af8b3f6b94a2d4f590b95c738b905a49b97aa91"
 
 "@types/jest@^19.2.3":
   version "19.2.4"
@@ -4546,9 +4562,9 @@ rx@4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/rx/-/rx-4.1.0.tgz#a5f13ff79ef3b740fe30aa803fb09f98805d4782"
 
-rxjs@^5.1.0:
-  version "5.5.2"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.2.tgz#28d403f0071121967f18ad665563255d54236ac3"
+rxjs@5.4.3:
+  version "5.4.3"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.4.3.tgz#0758cddee6033d68e0fd53676f0f3596ce3d483f"
   dependencies:
     symbol-observable "^1.0.1"
 
