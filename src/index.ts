@@ -117,10 +117,6 @@ import {
   MatRippleModule,
 } from '@angular/material';
 
-import { AutocompletePlacesModule } from './autocomplete-places/autocomplete-places.module';
-import { AutocompletePlacesComponent } from './autocomplete-places';
-export * from './autocomplete-places';
-
 const components = [
   CardHeaderContainerComponent,
   CardSubtitleComponent,
@@ -184,10 +180,9 @@ const components = [
     MatCardModule,
     MatIconModule,
     MatRippleModule,
-    AutocompletePlacesModule,
   ],
   declarations: components,
-  exports: [...components, AutocompletePlacesComponent],
+  exports: [...components],
 })
 export class IgniteDesignSystemModule {
   static forRoot(): ModuleWithProviders {
