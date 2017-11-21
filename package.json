@@ -86,5 +86,19 @@
   "engines": {
     "node": ">=6.0.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "main": "./dist/ignite-design-system.umd.js",
+  "module": "./dist/ignite-design-system.js",
+  "jsnext:main": "./dist/ignite-design-system.js",
+  "typings": "./dist/ignite-design-system.d.ts",
+  "peerDependencies": {
+    "@angular/cdk": "^2.0.0-beta.12",
+    "@angular/core": "4.4.4",
+    "@angular/forms": "4.4.4",
+    "@angular/material": "^2.0.0-beta.12",
+    "@angular/router": "4.4.4",
+    "@ngx-translate/core": "7.1.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
 }
