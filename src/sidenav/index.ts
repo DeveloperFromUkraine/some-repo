@@ -1,3 +1,3 @@
-export * from './sidenav-header';
-export * from './sidenav-list';
-export * from './sidenav-list-item';
+export * from './sidenav-header/index';
+export * from './sidenav-list/index';
+export * from './sidenav-list-item/index';

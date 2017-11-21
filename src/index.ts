@@ -12,8 +12,8 @@ import {
   SideNavHeaderComponent,
   SideNavListComponent,
   SideNavListItemComponent,
-} from './sidenav';
-export * from './sidenav';
+} from './sidenav/index';
+export * from './sidenav/index';
 
 import { DividerComponent } from './divider/divider.component';
 export * from './divider/divider.component';
@@ -31,8 +31,8 @@ import {
   ListContentEmptyStateComponent,
   ListContentPanelComponent,
   ListContentUnselectedStateComponent,
-} from './list-content';
-export * from './list-content';
+} from './list-content/index';
+export * from './list-content/index';
 
 import {
   EmptyStateComponent,
@@ -48,8 +48,8 @@ import {
   ListSelectionComponent,
   ListSelectionItemComponent,
   ListSelectionSearchComponent,
-} from './list-selection';
-export * from './list-selection';
+} from './list-selection/index';
+export * from './list-selection/index';
 
 import {
   CardHeaderContainerComponent,
@@ -62,8 +62,8 @@ import {
   CardSectionTitleComponent,
   CardActionsComponent,
   CardToolbarComponent,
-} from './card';
-export * from './card';
+} from './card/index';
+export * from './card/index';
 
 import { HubCardComponent } from './hub-card/hub-card.component';
 export * from './hub-card/hub-card.component';
@@ -84,8 +84,8 @@ import {
   SizingMediumDirective,
   SizingSmallDirective,
   NestableFormDirective,
-} from './form';
-export * from './form';
+} from './form/index';
+export * from './form/index';
 
 import { ErrorBannerComponent } from './error-banner/error-banner.component';
 export * from './error-banner/error-banner.component';
@@ -93,8 +93,8 @@ export * from './error-banner/error-banner.component';
 import { InfoBannerComponent } from './info-banner/info-banner.component';
 export * from './info-banner/info-banner.component';
 
-import { ButtonGroupComponent } from './button-group';
-export * from './button-group';
+import { ButtonGroupComponent } from './button-group/index';
+export * from './button-group/index';
 
 import { ExpandableFabComponent } from './expandable-fab/expandable-fab.component';
 export * from './expandable-fab/expandable-fab.component';

@@ -1,3 +1,3 @@
-export * from './form-group';
-export * from './form-sizing';
-export * from './nestable-form';
+export * from './form-group/index';
+export * from './form-sizing/index';
+export * from './nestable-form/index';
