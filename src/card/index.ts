@@ -4,6 +4,7 @@ export * from './card-container/index';
 export * from './card-header-container/index';
 export * from './card-main/index';
 export * from './card-section/index';
+export * from './card-section-subtitle/index';
 export * from './card-section-title/index';
 export * from './card-subtitle/index';
 export * from './card-title/index';
