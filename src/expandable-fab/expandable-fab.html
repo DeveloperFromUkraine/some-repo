@@ -1,5 +1,5 @@
 <div [ngClass]="{'active': isOpen}" class="buttons-container" (click)="handleClick()">
-  <ng-content></ng-content>
+  <ng-content *ngIf="isOpen"></ng-content>
   <div class="main-button-container" da="mainButton">
     <a mat-fab class="icon-container">
       <mat-icon style="position:absolute"  class="icon icon-secondary" [ngClass]="{'icon-secondary-active': isOpen}">
