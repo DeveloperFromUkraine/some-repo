@@ -1,4 +1,19 @@
-## vNEXT
-* Initial migration of ign components from yamazaki webapp to standalone module
-* Upgrade to Angular 5.x
-* Extract `CardSectionSubTitleComponent`
+### vNEXT
+
+### v0.1.5
+- Make expandable FAB items inaccessible when the add button is collapsed ([PR #3](http://devgit:7990/projects/NUI/repos/ignite-design-system/pull-requests/3/overview))
+
+### v0.1.4
+- Migrate `CardSectionSubTitleComponent` from webapp
+
+### v0.1.3
+- Upgrade to Angular 5.x
+- Remove `autocomplete-places` again pending ng5 upgrade
+
+### v0.1.2
+- Configure package.json to allow deployment from root
+
+### v0.1.1
+- Add changelog
+- Migrate `autocomplete-places` from webapp ([PR #1](http://devgit.dev.us.corp:7990/projects/NUI/repos/ignite-design-system/pull-requests/1/overview))
+- Initial migration of ign components from yamazaki webapp to standalone module
