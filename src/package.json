@@ -1,0 +1,33 @@
+{
+  "name": "ignite-design-system",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "http://devgit.dev.us.corp:7990/projects/NUI/repos/ignite-design-system"
+  },
+  "author": {
+    "name": "Derek Stobbe",
+    "email": "derek_stobbe@ultimatesoftware.com"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "http://devgit.dev.us.corp:7990/projects/NUI/repos/ignite-design-system/issues"
+  },
+  "main": "ignite-design-system.umd.js",
+  "module": "ignite-design-system.js",
+  "jsnext:main": "ignite-design-system.js",
+  "typings": "ignite-design-system.d.ts",
+  "peerDependencies": {
+    "@angular/cdk": "^5.0.0-rc0",
+    "@angular/core": "^5.0.0",
+    "@angular/forms": "^5.0.0",
+    "@angular/material": "^5.0.0-rc0",
+    "@angular/router": "^5.0.0",
+    "@ngx-translate/core": "7.1.0",
+    "rxjs": "^5.4.3",
+    "zone.js": "^0.8.4"
+  }
+}
