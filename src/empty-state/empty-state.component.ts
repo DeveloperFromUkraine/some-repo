@@ -2,14 +2,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'ign-empty-state, ign-empty-state',
+  selector: 'ign-empty-state',
   templateUrl: './empty-state.html',
   styleUrls: ['./empty-state.scss'],
 })
 export class EmptyStateComponent {}
 
 @Component({
-  selector: 'ign-empty-state-title, ign-empty-state-title',
+  selector: 'ign-empty-state-title',
   template: '<ng-content></ng-content>',
   styles: [
     `
@@ -27,7 +27,7 @@ export class EmptyStateComponent {}
 export class EmptyStateTitleComponent {}
 
 @Component({
-  selector: 'ign-empty-state-description, ign-empty-state-description',
+  selector: 'ign-empty-state-description',
   template: '<div><ng-content></ng-content></div>',
   styles: [
     `
@@ -46,7 +46,7 @@ export class EmptyStateTitleComponent {}
 export class EmptyStateDescriptionComponent {}
 
 @Component({
-  selector: 'ign-empty-state-image, ign-empty-state-image',
+  selector: 'ign-empty-state-image',
   template: `
     <img class='image' width="640px" src='/assets/images/empty-state.svg'/>'
   `,

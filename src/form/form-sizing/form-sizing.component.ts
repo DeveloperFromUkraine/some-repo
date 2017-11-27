@@ -3,8 +3,6 @@ import {
   ElementRef,
   Input,
   OnChanges,
-  OnInit,
-  Renderer,
   Renderer2,
   SimpleChanges,
 } from '@angular/core';
@@ -12,9 +10,9 @@ import {
 
 @Directive({ selector: '[ignSizeSmall], [nuSizeSmall]' })
 export class SizingSmallDirective {
-  constructor(el: ElementRef, renderer: Renderer) {
-    renderer.setElementStyle(el.nativeElement, 'max-width', '192px');
-    renderer.setElementStyle(el.nativeElement, 'flex', '1');
+  constructor(el: ElementRef, renderer: Renderer2) {
+    renderer.setStyle(el.nativeElement, 'max-width', '192px');
+    renderer.setStyle(el.nativeElement, 'flex', '1');
   }
 }
 
@@ -78,8 +76,8 @@ export class SizingLargeDirective implements OnChanges {
 
 @Directive({ selector: '[ignSizeFull], [nuSizeFull]' })
 export class SizingFullDirective {
-  constructor(el: ElementRef, renderer: Renderer) {
-    renderer.setElementStyle(el.nativeElement, 'max-width', '100%');
-    renderer.setElementStyle(el.nativeElement, 'width', '100%');
+  constructor(el: ElementRef, renderer: Renderer2) {
+    renderer.setStyle(el.nativeElement, 'max-width', '100%');
+    renderer.setStyle(el.nativeElement, 'width', '100%');
   }
 }

@@ -11,7 +11,7 @@ export default sandboxOf([ErrorBannerComponent])
   })
   .add('error banner as directive with text inside', {
     template: `
-  <div nuErrorBanner>
+  <div ignErrorBanner>
     error
   </div>
   `,
