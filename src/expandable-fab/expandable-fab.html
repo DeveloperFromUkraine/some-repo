@@ -1,7 +1,7 @@
 <div [ngClass]="{'active': isOpen}" class="buttons-container">
   <ng-content *ngIf="isOpen"></ng-content>
   <div class="main-button-container" da="mainButton">
-    <a mat-fab class="icon-container" ignA11yClick (click)="handleClick()" attr.aria-label="{{ 'COMMON.ADD' | translate }}" attr.aria-expanded="{{ isOpen }}>
+    <a mat-fab class="icon-container" ignA11yClick (click)="handleClick()" aria-label="{{ 'COMMON.ADD' | translate }}" aria-expanded="{{ isOpen }}>
       <mat-icon style="position:absolute"  class="icon icon-secondary" [ngClass]="{'icon-secondary-active': isOpen}">
         clear
       </mat-icon>
