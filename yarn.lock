@@ -241,6 +241,12 @@ angular-in-memory-web-api@^0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/angular-in-memory-web-api/-/angular-in-memory-web-api-0.3.2.tgz#8836d9e2534d37b728f3cb5a1caf6fe1e7fbbecd"
 
+angular-playground@^1.7.0:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/angular-playground/-/angular-playground-1.7.1.tgz#6cd6df61c8fdbe027270a1bc73ffb0e1028e82cb"
+  dependencies:
+    node-watch "^0.4.1"
+
 ansi-align@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ansi-align/-/ansi-align-2.0.0.tgz#c36aeccba563b89ceb556f3690f0b1d9e3547f7f"
@@ -3705,6 +3711,10 @@ node-sass@^4.5.2:
 node-uuid@^1.4.7:
   version "1.4.8"
   resolved "https://registry.yarnpkg.com/node-uuid/-/node-uuid-1.4.8.tgz#b040eb0923968afabf8d32fb1f17f1167fdab907"
+
+node-watch@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/node-watch/-/node-watch-0.4.1.tgz#d0947d54a995f91135db4056b68722c6d7c322ad"
 
 node-watch@^0.5.2:
   version "0.5.5"

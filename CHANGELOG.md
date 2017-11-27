@@ -1,5 +1,8 @@
 ### vNEXT
 
+### v0.1.6
+- Bring extracted components to parity with the state the embedded components were in prior to the migration ([PR #4](http://devgit:7990/projects/NUI/repos/ignite-design-system/pull-requests/4/overview))
+
 ### v0.1.5
 - Make expandable FAB items inaccessible when the add button is collapsed ([PR #3](http://devgit:7990/projects/NUI/repos/ignite-design-system/pull-requests/3/overview))
 

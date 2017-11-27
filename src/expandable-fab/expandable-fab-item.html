@@ -1,7 +1,9 @@
 <span class="mat-tooltip fab-tooltip">{{ tooltipText }}</span>
 <a
   [attr.href]="href"
+  ignA11yClick
   (click)="this.clicked.emit()"
+  attr.aria-label="{{ tooltipText }}"
   mat-fab
 >
   <mat-icon>

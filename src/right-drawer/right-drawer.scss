@@ -13,16 +13,16 @@
   background-color: #fff;
   box-shadow: 0 16px 12px 0 rgba(0,0,0,0.22), 0 19px 38px 0 rgba(0,0,0,0.30);
   opacity: 1;
-  
+
   // contents flow down
   display: flex;
   flex-direction: column;
-  
-  // padding 
+
+  // padding
   padding-top: 1.5rem;
 
   // animations: 
-  transition: all 300ms ease-out; 
+  transition: all 300ms ease-out;
 
   &.drawer-is-open {
     width: 16rem;
@@ -46,5 +46,5 @@
 .close-icon {
   padding: 0.25rem;
   color: #757575;
-  cursor: pointer; 
+  cursor: pointer;
 }
