@@ -16,6 +16,9 @@
   "bugs": {
     "url": "http://devgit.dev.us.corp:7990/projects/NUI/repos/ignite-design-system/issues"
   },
+  "publishConfig": {
+    "registry": "http://artifactory.mia.ucloud.int/artifactory/api/npm/npm-local"
+  },
   "main": "ignite-design-system.umd.js",
   "module": "ignite-design-system.js",
   "jsnext:main": "ignite-design-system.js",
