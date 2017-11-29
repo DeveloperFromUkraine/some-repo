@@ -1,5 +1,8 @@
 ### vNEXT
 
+### v0.2.0
+- Revert to deploying from `dist/` now that pipeline support exists (thanks Baker!)
+
 ### v0.1.6
 - Bring extracted components to parity with the state the embedded components were in prior to the migration ([PR #4](http://devgit:7990/projects/NUI/repos/ignite-design-system/pull-requests/4/overview))
 
