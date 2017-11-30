@@ -108,6 +108,8 @@ export * from './field/field.component';
 
 import { CenterComponent } from './center/center.component';
 
+import { FooterComponent } from './footer/footer.component';
+
 import {
   MatToolbarModule,
   MatMenuModule,
@@ -170,6 +172,7 @@ const components = [
   FieldComponent,
   CenterComponent,
   NestableFormDirective,
+  FooterComponent,
 ];
 
 @NgModule({
