@@ -27,7 +27,10 @@
 }
 
 // backwards compat
-:host /deep/ ign-button-group {
+:host /deep/ ign-button-group,
+:host /deep/ nu-button-group,
+:host /deep/ mat-card-actions
+ {
   justify-content: center;
   align-items: center;
   margin-bottom: 1.5rem;
