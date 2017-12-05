@@ -2,6 +2,7 @@
 - Empty state buttons will now center and style correctly when using either ign-button-group or mat-card-actions
 - Remove version number from root `package.json`, as the library is published using `src/package.json`
 - Add CONTRIBUTING.md file to make contribution process a little more clear
+- New loading container component `ign-loading-container` 
 
 ### v0.2.0
 - Revert to deploying from `dist/` now that pipeline support exists (thanks Baker!)
