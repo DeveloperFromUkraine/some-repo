@@ -26,9 +26,9 @@ describe('SizingMediumDirective', () => {
     const maxWidth: string = '256px';
     const flex: string = '2';
 
-    beforeEach(async(() => {
-        ComponentTest.createTestBed([], [DirectiveHostComponent, SizingMediumDirective]);
-    }));
+    beforeEach(async () => {
+        await ComponentTest.createTestBed([], [DirectiveHostComponent, SizingMediumDirective]);
+    });
 
 
     beforeEach(() => {

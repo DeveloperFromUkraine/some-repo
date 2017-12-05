@@ -24,9 +24,9 @@ describe('SizingLargeDirective', () => {
     const maxWidth: string = '448px';
     const flex: string = '3';
 
-    beforeEach(async(() => {
-        ComponentTest.createTestBed([], [DirectiveHostComponent, SizingLargeDirective]);
-    }));
+    beforeEach(async () => {
+        await ComponentTest.createTestBed([], [DirectiveHostComponent, SizingLargeDirective]);
+    });
 
     beforeEach(() => {
         fixture = TestBed.createComponent(DirectiveHostComponent);
