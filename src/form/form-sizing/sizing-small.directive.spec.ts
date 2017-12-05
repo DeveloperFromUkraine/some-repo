@@ -15,7 +15,6 @@ class DirectiveHostComponent {
 
 describe('SizingSmallDirective', () => {
     let fixture: ComponentFixture<DirectiveHostComponent>;
-    let directive: ComponentFixture<SizingSmallDirective>;
     const maxWidth: string = '192px';
     const flex: string = '1';
     
@@ -30,8 +29,7 @@ describe('SizingSmallDirective', () => {
 
     it('should set max-width to 192px', () => {
         let de = fixture.debugElement.queryAll(By.css('p'));
-        let number: Number = 2;
-        console.log(number.toString());
+        
         expect(de[0].nativeElement.style.maxWidth).toBe(maxWidth);
         expect(de[1].nativeElement.style.maxWidth).toBe(maxWidth);
     });
