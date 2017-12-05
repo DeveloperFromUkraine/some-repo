@@ -6,7 +6,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 export class ComponentTest {
 
-    static createTestBed(imports: any[] = [], declarations: any[] = []): void {
+    static createTestBed(imports: any[] = [], declarations: any[] = [], providers: any[] = []): void {
         TestBed.configureTestingModule({
             imports: [
                 ...imports,
@@ -15,7 +15,7 @@ export class ComponentTest {
             declarations: [
                 ...declarations
             ],
-            providers: [{provide: APP_BASE_HREF, useValue: '/'}]
+            providers: [{provide: APP_BASE_HREF, useValue: '/'}, ...providers]
         })
         .compileComponents();
     }

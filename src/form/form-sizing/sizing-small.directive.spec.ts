@@ -30,7 +30,8 @@ describe('SizingSmallDirective', () => {
 
     it('should set max-width to 192px', () => {
         let de = fixture.debugElement.queryAll(By.css('p'));
-
+        let number: Number = 2;
+        console.log(number.toString());
         expect(de[0].nativeElement.style.maxWidth).toBe(maxWidth);
         expect(de[1].nativeElement.style.maxWidth).toBe(maxWidth);
     });

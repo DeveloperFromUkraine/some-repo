@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/form/form-sizing/form-sizing.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/form/form-sizing</a> form-sizing.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">62.22% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>28/45</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">53.57% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>15/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>21/35</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84</td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">60x</span>
+<span class="cline-any cline-yes">60x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {
+  Directive,
+  ElementRef,
+  Input,
+  OnChanges,
+  Renderer2,
+  SimpleChanges,
+} from '@angular/core';
+// tslint:disable:max-classes-per-file
+&nbsp;
+@Directive({ selector: '[ignSizeSmall], [nuSizeSmall]' })
+export class SizingSmallDirective {
+  constructor(el: ElementRef<span class="branch-1 cbranch-no" title="branch not covered" >, renderer: Renderer2) {</span>
+    renderer.setStyle(el.nativeElement, 'max-width', '192px');
+    renderer.setStyle(el.nativeElement, 'flex', '1');
+  }
+}
+&nbsp;
+@Directive({ selector: '[ignSizeMedium], [nuSizeMedium]' })
+export class SizingMediumDirective implements OnChanges {
+  @Input() ignSizeMedium: boolean = null;
+  @Input() nuSizeMedium: boolean = null;
+&nbsp;
+  constructor(private readonly el: ElementRef<span class="branch-1 cbranch-no" title="branch not covered" >, private readonly renderer: Renderer2) {</span>
+    this.applyStyleChange();
+  }
+&nbsp;
+  ngOnChanges(changes: SimpleChanges): void {
+    if (this.ignSizeMedium !== null) {
+      if (this.ignSizeMedium) {
+        this.applyStyleChange();
+      }
+    } else <span class="missing-if-branch" title="else path not taken" >E</span>if (this.nuSizeMedium !== null) {
+      if (this.nuSizeMedium) {
+        this.applyStyleChange();
+      }
+    } else {
+<span class="cstat-no" title="statement not covered" >      this.a</span>pplyStyleChange();
+    }
+  }
+&nbsp;
+  applyStyleChange() {
+    this.renderer.setStyle(this.el.nativeElement, 'max-width', '256px');
+    this.renderer.setStyle(this.el.nativeElement, 'flex', '2');
+  }
+}
+&nbsp;
+@Directive({ selector: '[ignSizeLarge], [nuSizeLarge]' })
+export class SizingLargeDirective implements OnChanges {
+  @Input() <span class="cstat-no" title="statement not covered" >nuSizeLarge: boolean = n</span>ull;
+  @Input() <span class="cstat-no" title="statement not covered" >ignSizeLarge: boolean = n</span>ull;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  constructor(private readonly <span class="cstat-no" title="statement not covered" ></span>el: ElementRef<span class="branch-1 cbranch-no" title="branch not covered" >, private readonly <span class="cstat-no" title="statement not covered" >renderer: Renderer2) {</span></span></span>
+<span class="cstat-no" title="statement not covered" >    this.a</span>pplyStyleChange();
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  ngOnChanges(</span>changes: SimpleChanges): void {
+<span class="cstat-no" title="statement not covered" >    if (this.nuSizeLarge !== null) {</span>
+<span class="cstat-no" title="statement not covered" >      if (this.nuSizeLarge) {</span>
+<span class="cstat-no" title="statement not covered" >        this.a</span>pplyStyleChange();
+      }
+    } else <span class="cstat-no" title="statement not covered" >if (this.ignSizeLarge !== null) {</span>
+<span class="cstat-no" title="statement not covered" >      if (this.ignSizeLarge) {</span>
+<span class="cstat-no" title="statement not covered" >        this.a</span>pplyStyleChange();
+      }
+    } else {
+<span class="cstat-no" title="statement not covered" >      this.a</span>pplyStyleChange();
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  applyStyleChange() {</span>
+<span class="cstat-no" title="statement not covered" >    this.renderer.setStyle(this.el.nativeElement, 'max-width', '</span>448px');
+<span class="cstat-no" title="statement not covered" >    this.renderer.setStyle(this.el.nativeElement, 'flex', '</span>3');
+  }
+}
+&nbsp;
+@Directive({ selector: '[ignSizeFull], [nuSizeFull]' })
+export class SizingFullDirective {
+<span class="fstat-no" title="function not covered" >  constructor(</span>el: ElementRef<span class="branch-1 cbranch-no" title="branch not covered" >, renderer: Renderer2) {</span>
+<span class="cstat-no" title="statement not covered" >    renderer.setStyle(el.nativeElement, 'max-width', '</span>100%');
+<span class="cstat-no" title="statement not covered" >    renderer.setStyle(el.nativeElement, 'width', '</span>100%');
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Dec 04 2017 11:31:17 GMT-0500 (EST)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
