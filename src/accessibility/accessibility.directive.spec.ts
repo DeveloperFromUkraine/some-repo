@@ -4,12 +4,15 @@ import { DebugElement } from '@angular/core';
 import { ComponentTest } from '../../test/test-bed/component';
 import { AccessibleClickDirective } from '../accessibility/accessibility.directive';
 import { By } from '@angular/platform-browser';
+import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
 
 @Component({
     template: `
         <button class="directive" ignA11yClick>button</button>
-        <button class="directive" routerLink="*">routerLink</button>
-        <a class="directive" src="#" routerLink="*">anchor</a>
+        <button class="directive" [routerLink]="'./'">routerLink button</button>
+        <a class="directive" src="#" [routerLink]="'./'">anchor</a>
     `
 })
 class DirectiveHostComponent {
@@ -22,7 +25,9 @@ describe('AccessibleClickDirective', () => {
     let directive: AccessibleClickDirective;
 
     beforeEach(async () => {
-        await ComponentTest.createTestBed([], [DirectiveHostComponent, AccessibleClickDirective]);
+        await ComponentTest.createTestBed([RouterTestingModule.withRoutes([
+            { path: '*', component: DirectiveHostComponent }
+        ])], [DirectiveHostComponent, AccessibleClickDirective]);
     });
 
     beforeEach(() => {
@@ -52,6 +57,19 @@ describe('AccessibleClickDirective', () => {
         expect(directive.onAccessibleClick).toHaveBeenCalled();
     });
 
+    it('should trigger onAccessibleClick when keyup.space event emitted', () => {
+        directive = de[0].injector.get(AccessibleClickDirective);
+        let ne: HTMLElement = de[0].nativeElement;
+        let spy = jest.spyOn(directive, 'onAccessibleClick').mockImplementation(() => {
+
+        });
+
+        de[0].triggerEventHandler('keyup.space', null);
+        fixture.detectChanges();
+
+        expect(directive.onAccessibleClick).toHaveBeenCalled();
+    });
+
     it('should not trigger onAccessibleClick with routerLink in button', () => {
         directive = de[1].injector.get(AccessibleClickDirective);
         let ne: HTMLElement = de[1].nativeElement;
@@ -65,7 +83,7 @@ describe('AccessibleClickDirective', () => {
         expect(directive.onAccessibleClick).toHaveBeenCalled();
     });
 
-    it('should not trigger onAccessibleClick with routerLink in button', () => {
+    it('should not trigger onAccessibleClick with routerLink in anchor', () => {
         directive = de[2].injector.get(AccessibleClickDirective);
         let ne: HTMLElement = de[2].nativeElement;
         let spy = jest.spyOn(directive, 'onAccessibleClick').mockImplementation(() => {
