@@ -6,7 +6,7 @@ import { SizingFullDirective } from "index";
 import { By } from '@angular/platform-browser';
 
 @Component({
-    template: `
+    template:`
         <p ignSizeFull>one</p>
         <p nuSizeFull>two</p>
     `

@@ -6,7 +6,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core/src/debug/debug_node';
 
 @Component({
-    template: `
+    template:`
         <p ignSizeSmall>one</p>
         <p nuSizeSmall>two</p>
     `

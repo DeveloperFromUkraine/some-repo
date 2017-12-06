@@ -8,7 +8,7 @@ import { DebugElement } from '@angular/core/src/debug/debug_node';
 
 
 @Component({
-    template: `
+    template:`
         <p class="directive" ignSizeMedium>medium</p>
         <p class="directive" nuSizeMedium>medium</p>                
         <h1 class="directive" [ignSizeMedium]="sizeMedium">mediumTrue</h1>

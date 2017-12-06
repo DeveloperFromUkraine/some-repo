@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 
 @Component({
-    template: `
+    template:`
         <button class="directive" ignA11yClick>button</button>
         <button class="directive" [routerLink]="'./'">routerLink button</button>
         <a class="directive" src="#" [routerLink]="'./'">anchor</a>

@@ -6,7 +6,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from "@angular/core/src/debug/debug_node";
 
 @Component({
-    template: `
+    template:`
         <p class="directive" ignSizeLarge>large</p>
         <p class="directive" nuSizeLarge>large</p>                
         <h1 class="directive" [ignSizeLarge]="sizeLarge">largeTrue</h1>
