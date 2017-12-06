@@ -85,20 +85,19 @@ describe('SizingMediumDirective', () => {
         let neIgnMedium: HTMLElement;
         let neNuMedium: HTMLElement;
         let directive: SizingMediumDirective;
-        let spyApplyChanges;
-        let spyNgOnChanges;
 
         beforeEach(() => {
             neIgnMedium = de[5].nativeElement;
             neNuMedium = de[6].nativeElement;
             directive = de[5].injector.get(SizingMediumDirective);
-            spyApplyChanges = jest.spyOn(directive, 'applyStyleChange').mockImplementation(() => {
+            
+            jest.spyOn(directive, 'applyStyleChange').mockImplementation(() => {
                 neIgnMedium.style.maxWidth = '256px';
                 neNuMedium.style.maxWidth = '256px';
                 neIgnMedium.style.flex = '2';
                 neNuMedium.style.flex = '2';
             });
-            spyNgOnChanges = jest.spyOn(directive, 'ngOnChanges').mockImplementation(() => {
+            jest.spyOn(directive, 'ngOnChanges').mockImplementation(() => {
                 directive.applyStyleChange();
             });
         });

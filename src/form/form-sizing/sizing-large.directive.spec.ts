@@ -80,20 +80,18 @@ describe('SizingLargeDirective', () => {
         let neIgnLarge: HTMLElement;
         let neNuLarge: HTMLElement;
         let directive: SizingLargeDirective;
-        let spyApplyChanges;
-        let spyNgOnChanges;
 
         beforeEach(() => {
             neIgnLarge = de[5].nativeElement;
             neNuLarge = de[6].nativeElement;
             directive = de[5].injector.get(SizingLargeDirective);
-            spyApplyChanges = jest.spyOn(directive, 'applyStyleChange').mockImplementation(() => {
+            jest.spyOn(directive, 'applyStyleChange').mockImplementation(() => {
                 neIgnLarge.style.maxWidth = '448px';
                 neNuLarge.style.maxWidth = '448px';
                 neIgnLarge.style.flex = '3';
                 neNuLarge.style.flex = '3';
             });
-            spyNgOnChanges = jest.spyOn(directive, 'ngOnChanges').mockImplementation(() => {
+            jest.spyOn(directive, 'ngOnChanges').mockImplementation(() => {
                 directive.applyStyleChange();
             });
         });
