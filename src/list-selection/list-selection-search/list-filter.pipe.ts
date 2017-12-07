@@ -12,12 +12,12 @@ export interface IFilterProvider {
 export class ListFilterPipe implements PipeTransform {
   // assumes array of entities
   transform<T>(
-    values$: Observable<T[]>, 
-    filterProvider: IFilterProvider, 
+    values$: Observable<T[]>,
+    filterProvider: IFilterProvider,
     matchFn: (searchTerm: string, value: T) => boolean): any {
 
     return Observable
-    .combineLatest(values$.startWith([]),filterProvider.filterInput$.startWith(''))
-    .map(([values, searchTerm]) => values.filter(value => matchFn(searchTerm, value)));
+      .combineLatest(values$.startWith([]), filterProvider.filterInput$.startWith(''))
+      .map(([values, searchTerm]) => values.filter(value => matchFn(searchTerm, value)));
   }
 }
