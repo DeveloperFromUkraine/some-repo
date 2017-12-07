@@ -8,6 +8,8 @@ import { DebugElement } from '@angular/core/src/debug/debug_node';
 describe('ExpandableFabItemComponent', () => {
     let fixture: ComponentFixture<ExpandableFabItemComponent>;
     let component: ExpandableFabItemComponent;
+    let de: DebugElement;
+    let ne: HTMLElement;
 
     beforeEach(async () => {
         await ComponentTest.createTestBed([MatIconModule], [ExpandableFabItemComponent]);
@@ -20,13 +22,10 @@ describe('ExpandableFabItemComponent', () => {
         fixture.detectChanges();
     });
 
-    it('should be truthy', () => {
-        expect(component).toBeTruthy();
-    });
-
     it('should set tooltipText', async () => {
-        let ne: HTMLElement = fixture.debugElement.query(By.css('.mat-tooltip')).nativeElement;
-
+        de = fixture.debugElement.query(By.css('.mat-tooltip'));
+        ne = de.nativeElement;
+        
         component.tooltipText = 'toolTip';
         await fixture.detectChanges();
 
@@ -34,7 +33,8 @@ describe('ExpandableFabItemComponent', () => {
     });
 
     it('should set icon', async () => {
-        let ne: HTMLElement = fixture.debugElement.query(By.css('mat-icon')).nativeElement;
+        de = fixture.debugElement.query(By.css('mat-icon'));
+        ne = de.nativeElement;
 
         component.icon = 'email';
         await fixture.detectChanges();
@@ -43,7 +43,8 @@ describe('ExpandableFabItemComponent', () => {
     });
 
     it('should set href', async () => {
-        let ne: HTMLElement = fixture.debugElement.query(By.css('a')).nativeElement;
+        de = fixture.debugElement.query(By.css('a'));
+        ne = de.nativeElement;
 
         component.href = 'updatedHref';
         await fixture.detectChanges();
@@ -52,8 +53,7 @@ describe('ExpandableFabItemComponent', () => {
     });
 
     it('should emit clicked event', () => {
-        let de: DebugElement = fixture.debugElement.query(By.css('a'));
-        let ne: HTMLElement = de.nativeElement;
+        de = fixture.debugElement.query(By.css('a'));
         let spy = jest.fn();
 
         component.clicked.subscribe(spy);
