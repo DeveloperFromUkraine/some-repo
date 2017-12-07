@@ -86,7 +86,7 @@ describe('AccessibleClickDirective', () => {
     xit('should not trigger onAccessibleClick with routerLink in anchor', () => {
         directive = de[2].injector.get(AccessibleClickDirective);
         let ne: HTMLElement = de[2].nativeElement;
-        jest.spyOn(directive, 'onAccessibleClick').mock(Implementation(() => {
+        jest.spyOn(directive, 'onAccessibleClick').mockImplementation(() => {
             ne.style.color = 'red';
         });
 

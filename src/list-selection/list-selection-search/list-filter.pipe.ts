@@ -20,8 +20,4 @@ export class ListFilterPipe implements PipeTransform {
     .combineLatest(values$.startWith([]),filterProvider.filterInput$.startWith(''))
     .map(([values, searchTerm]) => values.filter(value => matchFn(searchTerm, value)));
   }
-
-  test<T>(searchTerm: string, value: T) {
-    return true;
-  }
 }
