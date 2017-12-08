@@ -58,7 +58,9 @@ describe('ExpandableFabComponent', () => {
         expect(fixture.debugElement.query(By.css('.icon-secondary-active'))).toBeTruthy();
     });
 
-    it('should not have active class is isOpen is false', () => {
+    it('should not have active class if isOpen is false', () => {
         expect(fixture.debugElement.query(By.css('.active'))).not.toBeTruthy();
+        expect(fixture.debugElement.query(By.css('.icon-primary-active'))).not.toBeTruthy();
+        expect(fixture.debugElement.query(By.css('.icon-secondary-active'))).not.toBeTruthy();
     });
 });
