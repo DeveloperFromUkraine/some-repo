@@ -108,6 +108,7 @@ export * from './field/field.component';
 
 import { CenterComponent } from './center/center.component';
 
+import { LoadingContainer } from './loading-container/loading-container.component';
 import { FooterComponent } from './footer/footer.component';
 
 import {
@@ -118,6 +119,7 @@ import {
   MatCardModule,
   MatIconModule,
   MatRippleModule,
+  MatProgressSpinnerModule,
 } from '@angular/material';
 
 const components = [
@@ -172,6 +174,7 @@ const components = [
   FieldComponent,
   CenterComponent,
   NestableFormDirective,
+  LoadingContainer,
   FooterComponent,
 ];
 
@@ -185,6 +188,7 @@ const components = [
     MatCardModule,
     MatIconModule,
     MatRippleModule,
+    MatProgressSpinnerModule,
   ],
   declarations: components,
   exports: [...components],
