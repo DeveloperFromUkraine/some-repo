@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1512753370999" clover="3.2.0">
+  <project timestamp="1512753370999" name="All files">
+    <metrics statements="358" coveredstatements="333" conditionals="53" coveredconditionals="39" methods="48" coveredmethods="25" elements="459" coveredelements="397" complexity="0" loc="358" ncloc="358" packages="47" files="109" classes="109">
+      <package name="src">
+        <metrics statements="55" coveredstatements="50" conditionals="4" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/index.ts">
+          <metrics statements="45" coveredstatements="45" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="2" count="8" type="stmt"/>
+          <line num="3" count="8" type="stmt"/>
+          <line num="5" count="8" type="stmt"/>
+          <line num="6" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+          <line num="9" count="8" type="stmt"/>
+          <line num="11" count="8" type="stmt"/>
+          <line num="16" count="8" type="stmt"/>
+          <line num="18" count="8" type="stmt"/>
+          <line num="19" count="8" type="stmt"/>
+          <line num="21" count="8" type="stmt"/>
+          <line num="26" count="8" type="stmt"/>
+          <line num="28" count="8" type="stmt"/>
+          <line num="35" count="8" type="stmt"/>
+          <line num="37" count="8" type="stmt"/>
+          <line num="43" count="8" type="stmt"/>
+          <line num="45" count="8" type="stmt"/>
+          <line num="52" count="8" type="stmt"/>
+          <line num="54" count="8" type="stmt"/>
+          <line num="67" count="8" type="stmt"/>
+          <line num="69" count="8" type="stmt"/>
+          <line num="70" count="8" type="stmt"/>
+          <line num="72" count="8" type="stmt"/>
+          <line num="76" count="8" type="stmt"/>
+          <line num="78" count="8" type="stmt"/>
+          <line num="79" count="8" type="stmt"/>
+          <line num="81" count="8" type="stmt"/>
+          <line num="89" count="8" type="stmt"/>
+          <line num="91" count="8" type="stmt"/>
+          <line num="92" count="8" type="stmt"/>
+          <line num="94" count="8" type="stmt"/>
+          <line num="95" count="8" type="stmt"/>
+          <line num="97" count="8" type="stmt"/>
+          <line num="98" count="8" type="stmt"/>
+          <line num="100" count="8" type="stmt"/>
+          <line num="101" count="8" type="stmt"/>
+          <line num="103" count="8" type="stmt"/>
+          <line num="104" count="8" type="stmt"/>
+          <line num="106" count="8" type="stmt"/>
+          <line num="107" count="8" type="stmt"/>
+          <line num="109" count="8" type="stmt"/>
+          <line num="111" count="8" type="stmt"/>
+          <line num="113" count="8" type="stmt"/>
+          <line num="194" count="8" type="stmt"/>
+        </file>
+        <file name="jest-global-mocks.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/jest-global-mocks.ts">
+          <metrics statements="8" coveredstatements="3" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="0"/>
+          <line num="2" count="24" type="stmt"/>
+          <line num="4" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="5" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="11" count="12" type="stmt"/>
+          <line num="12" count="12" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+        </file>
+        <file name="jest.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/jest.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="12" type="stmt"/>
+          <line num="2" count="12" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.accessibility">
+        <metrics statements="9" coveredstatements="7" conditionals="5" coveredconditionals="4" methods="3" coveredmethods="2"/>
+        <file name="accessibility.directive.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/accessibility/accessibility.directive.ts">
+          <metrics statements="9" coveredstatements="7" conditionals="5" coveredconditionals="4" methods="3" coveredmethods="2"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="8" count="6" type="stmt"/>
+          <line num="13" count="2" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="25" count="2" type="stmt"/>
+          <line num="31" count="16" type="cond" truecount="2" falsecount="0"/>
+          <line num="32" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.button-group">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/button-group/index.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.card">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/index.ts">
+          <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="2" count="8" type="stmt"/>
+          <line num="3" count="8" type="stmt"/>
+          <line num="4" count="8" type="stmt"/>
+          <line num="5" count="8" type="stmt"/>
+          <line num="6" count="8" type="stmt"/>
+          <line num="7" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+          <line num="9" count="8" type="stmt"/>
+          <line num="10" count="8" type="stmt"/>
+          <line num="11" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.card.card-actions">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="card-actions.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-actions/card-actions.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+        </file>
+        <file name="card-actions.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-actions/card-actions.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-actions/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.card.card-aside">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="card-aside.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-aside/card-aside.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+        </file>
+        <file name="card-aside.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-aside/card-aside.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-aside/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.card.card-container">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="card-container.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-container/card-container.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+        </file>
+        <file name="card-container.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-container/card-container.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-container/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.card.card-header-container">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="card-header-container.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-header-container/card-header-container.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="15" count="8" type="stmt"/>
+        </file>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-header-container/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.card.card-main">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="card-main.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-main/card-main.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+        </file>
+        <file name="card-main.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-main/card-main.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-main/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.card.card-section">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="card-section.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-section/card-section.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+        </file>
+        <file name="card-section.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-section/card-section.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-section/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.card.card-section-subtitle">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="card-section-subtitle.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-section-subtitle/card-section-subtitle.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="9" count="8" type="stmt"/>
+        </file>
+        <file name="card-section-subtitle.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-section-subtitle/card-section-subtitle.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-section-subtitle/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.card.card-section-title">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="card-section-title.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-section-title/card-section-title.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="9" count="8" type="stmt"/>
+        </file>
+        <file name="card-section-title.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-section-title/card-section-title.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-section-title/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.card.card-subtitle">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="card-subtitle.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-subtitle/card-subtitle.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="14" count="8" type="stmt"/>
+        </file>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-subtitle/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.card.card-title">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="card-title.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-title/card-title.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="9" count="8" type="stmt"/>
+        </file>
+        <file name="card-title.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-title/card-title.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-title/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.card.card-toolbar">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="card-toolbar.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-toolbar/card-toolbar.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+        </file>
+        <file name="card-toolbar.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-toolbar/card-toolbar.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/card/card-toolbar/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.center">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="center.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/center/center.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="2" count="8" type="stmt"/>
+          <line num="9" count="8" type="stmt"/>
+        </file>
+        <file name="center.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/center/center.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.divider">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="divider.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/divider/divider.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="17" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.empty-state">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="empty-state.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/empty-state/empty-state.component.ts">
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="2" count="8" type="stmt"/>
+          <line num="9" count="8" type="stmt"/>
+          <line num="27" count="8" type="stmt"/>
+          <line num="46" count="8" type="stmt"/>
+          <line num="64" count="8" type="stmt"/>
+        </file>
+        <file name="empty-state.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/empty-state/empty-state.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.error-banner">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="error-banner.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/error-banner/error-banner.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+        </file>
+        <file name="error-banner.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/error-banner/error-banner.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.expandable-fab">
+        <metrics statements="16" coveredstatements="16" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <file name="expandable-fab-item.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/expandable-fab/expandable-fab-item.component.ts">
+          <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+          <line num="9" count="8" type="stmt"/>
+          <line num="10" count="8" type="stmt"/>
+          <line num="11" count="8" type="stmt"/>
+          <line num="12" count="8" type="stmt"/>
+        </file>
+        <file name="expandable-fab-item.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/expandable-fab/expandable-fab-item.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+        <file name="expandable-fab.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/expandable-fab/expandable-fab.component.ts">
+          <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+          <line num="9" count="5" type="stmt"/>
+          <line num="10" count="5" type="stmt"/>
+          <line num="13" count="3" type="stmt"/>
+          <line num="14" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="17" count="2" type="stmt"/>
+        </file>
+        <file name="expandable-fab.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/expandable-fab/expandable-fab.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.field">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="field.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/field/field.component.ts">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="9" type="stmt"/>
+          <line num="11" count="9" type="stmt"/>
+          <line num="12" count="9" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.form">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/form/index.ts">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="2" count="8" type="stmt"/>
+          <line num="3" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.form.form-group">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="form-group.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/form/form-group/form-group.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="9" count="8" type="stmt"/>
+        </file>
+        <file name="form-group.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/form/form-group/form-group.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/form/form-group/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.form.form-sizing">
+        <metrics statements="36" coveredstatements="34" conditionals="28" coveredconditionals="22" methods="8" coveredmethods="8"/>
+        <file name="form-sizing.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/form/form-sizing/form-sizing.component.ts">
+          <metrics statements="35" coveredstatements="33" conditionals="28" coveredconditionals="22" methods="8" coveredmethods="8"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="12" count="8" type="stmt"/>
+          <line num="14" count="4" type="stmt"/>
+          <line num="15" count="4" type="stmt"/>
+          <line num="20" count="8" type="stmt"/>
+          <line num="21" count="56" type="stmt"/>
+          <line num="22" count="56" type="stmt"/>
+          <line num="24" count="56" type="cond" truecount="2" falsecount="1"/>
+          <line num="25" count="56" type="stmt"/>
+          <line num="29" count="64" type="cond" truecount="2" falsecount="0"/>
+          <line num="30" count="38" type="cond" truecount="2" falsecount="0"/>
+          <line num="31" count="3" type="stmt"/>
+          <line num="33" count="26" type="cond" truecount="1" falsecount="1"/>
+          <line num="34" count="26" type="cond" truecount="2" falsecount="0"/>
+          <line num="35" count="1" type="stmt"/>
+          <line num="38" count="0" type="stmt"/>
+          <line num="43" count="60" type="stmt"/>
+          <line num="44" count="60" type="stmt"/>
+          <line num="49" count="8" type="stmt"/>
+          <line num="50" count="56" type="stmt"/>
+          <line num="51" count="56" type="stmt"/>
+          <line num="53" count="56" type="cond" truecount="2" falsecount="1"/>
+          <line num="54" count="56" type="stmt"/>
+          <line num="58" count="64" type="cond" truecount="2" falsecount="0"/>
+          <line num="59" count="26" type="cond" truecount="2" falsecount="0"/>
+          <line num="60" count="1" type="stmt"/>
+          <line num="62" count="38" type="cond" truecount="1" falsecount="1"/>
+          <line num="63" count="38" type="cond" truecount="2" falsecount="0"/>
+          <line num="64" count="3" type="stmt"/>
+          <line num="67" count="0" type="stmt"/>
+          <line num="72" count="60" type="stmt"/>
+          <line num="73" count="60" type="stmt"/>
+          <line num="78" count="8" type="stmt"/>
+          <line num="80" count="4" type="stmt"/>
+          <line num="81" count="4" type="stmt"/>
+        </file>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/form/form-sizing/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.form.nestable-form">
+        <metrics statements="19" coveredstatements="19" conditionals="11" coveredconditionals="10" methods="8" coveredmethods="8"/>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/form/nestable-form/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+        <file name="nestable-form.directive.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/form/nestable-form/nestable-form.directive.ts">
+          <metrics statements="18" coveredstatements="18" conditionals="11" coveredconditionals="10" methods="8" coveredmethods="8"/>
+          <line num="1" count="9" type="stmt"/>
+          <line num="11" count="9" type="stmt"/>
+          <line num="13" count="9" type="stmt"/>
+          <line num="18" count="9" type="stmt"/>
+          <line num="19" count="9" type="stmt"/>
+          <line num="21" count="9" type="stmt"/>
+          <line num="26" count="10" type="cond" truecount="4" falsecount="1"/>
+          <line num="27" count="10" type="stmt"/>
+          <line num="31" count="6" type="stmt"/>
+          <line num="35" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="36" count="1" type="stmt"/>
+          <line num="42" count="5" type="cond" truecount="2" falsecount="0"/>
+          <line num="43" count="1" type="stmt"/>
+          <line num="47" count="4" type="stmt"/>
+          <line num="51" count="1" type="stmt"/>
+          <line num="55" count="6" type="cond" truecount="2" falsecount="0"/>
+          <line num="56" count="4" type="stmt"/>
+          <line num="62" count="6" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.hub-card">
+        <metrics statements="12" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <file name="hub-card.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/hub-card/hub-card.component.ts">
+          <metrics statements="11" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+          <line num="9" count="8" type="stmt"/>
+          <line num="10" count="8" type="stmt"/>
+          <line num="11" count="8" type="stmt"/>
+          <line num="12" count="8" type="stmt"/>
+          <line num="13" count="8" type="stmt"/>
+          <line num="14" count="8" type="stmt"/>
+          <line num="15" count="8" type="stmt"/>
+          <line num="16" count="8" type="stmt"/>
+          <line num="43" count="0" type="stmt"/>
+        </file>
+        <file name="hub-card.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/hub-card/hub-card.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.info-banner">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="info-banner.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/info-banner/info-banner.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+        </file>
+        <file name="info-banner.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/info-banner/info-banner.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.list-content">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-content/index.ts">
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="2" count="8" type="stmt"/>
+          <line num="3" count="8" type="stmt"/>
+          <line num="4" count="8" type="stmt"/>
+          <line num="5" count="8" type="stmt"/>
+        </file>
+        <file name="list-content.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-content/list-content.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+        </file>
+        <file name="list-content.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-content/list-content.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.list-content.list-content-card">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-content/list-content-card/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+        <file name="list-content-card.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-content/list-content-card/list-content-card.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+        </file>
+        <file name="list-content-card.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-content/list-content-card/list-content-card.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.list-content.list-content-empty-state">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-content/list-content-empty-state/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+        <file name="list-content-empty-state.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-content/list-content-empty-state/list-content-empty-state.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+        </file>
+        <file name="list-content-empty-state.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-content/list-content-empty-state/list-content-empty-state.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.list-content.list-content-panel">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-content/list-content-panel/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+        <file name="list-content-panel.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-content/list-content-panel/list-content-panel.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+        </file>
+        <file name="list-content-panel.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-content/list-content-panel/list-content-panel.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.list-content.list-content-unselected-state">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-content/list-content-unselected-state/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+        <file name="list-content-unselected-state.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-content/list-content-unselected-state/list-content-unselected-state.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+        </file>
+        <file name="list-content-unselected-state.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-content/list-content-unselected-state/list-content-unselected-state.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.list-item">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="list-item.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-item/list-item.component.ts">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="19" count="8" type="stmt"/>
+          <line num="34" count="8" type="stmt"/>
+          <line num="48" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.list-selection">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-selection/index.ts">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="2" count="8" type="stmt"/>
+          <line num="3" count="8" type="stmt"/>
+          <line num="4" count="8" type="stmt"/>
+        </file>
+        <file name="list-selection.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-selection/list-selection.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+        </file>
+        <file name="list-selection.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-selection/list-selection.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.list-selection.list-selection-add-button">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-selection/list-selection-add-button/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+        <file name="list-selection-add-button.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-selection/list-selection-add-button/list-selection-add-button.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+        </file>
+        <file name="list-selection-add-button.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-selection/list-selection-add-button/list-selection-add-button.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.list-selection.list-selection-item">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-selection/list-selection-item/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+        <file name="list-selection-item.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-selection/list-selection-item/list-selection-item.component.ts">
+          <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="9" count="8" type="stmt"/>
+          <line num="10" count="8" type="stmt"/>
+          <line num="11" count="8" type="stmt"/>
+          <line num="12" count="8" type="stmt"/>
+          <line num="13" count="8" type="stmt"/>
+          <line num="14" count="8" type="stmt"/>
+        </file>
+        <file name="list-selection-item.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-selection/list-selection-item/list-selection-item.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.list-selection.list-selection-search">
+        <metrics statements="22" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="3"/>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-selection/list-selection-search/index.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="2" count="8" type="stmt"/>
+        </file>
+        <file name="list-filter.pipe.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-selection/list-selection-search/list-filter.pipe.ts">
+          <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="2" count="8" type="stmt"/>
+          <line num="3" count="8" type="stmt"/>
+          <line num="4" count="8" type="stmt"/>
+          <line num="5" count="8" type="stmt"/>
+          <line num="12" count="8" type="stmt"/>
+          <line num="19" count="4" type="stmt"/>
+          <line num="21" count="24" type="stmt"/>
+        </file>
+        <file name="list-selection-search.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-selection/list-selection-search/list-selection-search.component.ts">
+          <metrics statements="11" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="2" count="8" type="stmt"/>
+          <line num="4" count="8" type="stmt"/>
+          <line num="5" count="8" type="stmt"/>
+          <line num="6" count="8" type="stmt"/>
+          <line num="7" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+          <line num="17" count="8" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+        </file>
+        <file name="list-selection-search.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/list-selection/list-selection-search/list-selection-search.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.loading-container">
+        <metrics statements="10" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <file name="loading-container.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/loading-container/loading-container.component.ts">
+          <metrics statements="9" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="3" count="8" type="stmt"/>
+          <line num="11" count="8" type="stmt"/>
+          <line num="12" count="8" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+        </file>
+        <file name="loading-container.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/loading-container/loading-container.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.page">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="page.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/page/page.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="21" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.right-drawer">
+        <metrics statements="12" coveredstatements="7" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <file name="right-drawer.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/right-drawer/right-drawer.component.ts">
+          <metrics statements="11" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="12" count="8" type="stmt"/>
+          <line num="13" count="8" type="stmt"/>
+          <line num="14" count="8" type="stmt"/>
+          <line num="15" count="8" type="stmt"/>
+          <line num="16" count="8" type="stmt"/>
+          <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
+        </file>
+        <file name="right-drawer.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/right-drawer/right-drawer.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.select-container">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="select-container.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/select-container/select-container.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+        </file>
+        <file name="select-container.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/select-container/select-container.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.sidenav">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/sidenav/index.ts">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="2" count="8" type="stmt"/>
+          <line num="3" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.sidenav.sidenav-header">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/sidenav/sidenav-header/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+        <file name="sidenav-header.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/sidenav/sidenav-header/sidenav-header.component.ts">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+          <line num="9" count="8" type="stmt"/>
+          <line num="10" count="8" type="stmt"/>
+        </file>
+        <file name="sidenav-header.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/sidenav/sidenav-header/sidenav-header.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.sidenav.sidenav-list">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/sidenav/sidenav-list/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+        <file name="sidenav-list.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/sidenav/sidenav-list/sidenav-list.component.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="8" count="8" type="stmt"/>
+        </file>
+        <file name="sidenav-list.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/sidenav/sidenav-list/sidenav-list.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.sidenav.sidenav-list-item">
+        <metrics statements="11" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <file name="index.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/sidenav/sidenav-list-item/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+        <file name="sidenav-list-item.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/sidenav/sidenav-list-item/sidenav-list-item.component.ts">
+          <metrics statements="9" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="16" count="8" type="stmt"/>
+          <line num="17" count="8" type="stmt"/>
+          <line num="18" count="8" type="stmt"/>
+          <line num="19" count="8" type="stmt"/>
+          <line num="20" count="8" type="stmt"/>
+          <line num="24" count="8" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+        </file>
+        <file name="sidenav-list-item.html" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/sidenav/sidenav-list-item/sidenav-list-item.html">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.text">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="text.component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/src/text/text.component.ts">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="8" type="stmt"/>
+          <line num="17" count="8" type="stmt"/>
+          <line num="32" count="8" type="stmt"/>
+        </file>
+      </package>
+      <package name="test.test-bed">
+        <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <file name="component.ts" path="/Users/brianm/Desktop/Cross-Cutting/ignite-design-system/test/test-bed/component.ts">
+          <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+          <line num="1" count="10" type="stmt"/>
+          <line num="2" count="10" type="stmt"/>
+          <line num="5" count="10" type="stmt"/>
+          <line num="7" count="10" type="stmt"/>
+          <line num="10" count="38" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>
