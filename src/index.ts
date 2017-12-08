@@ -109,6 +109,7 @@ export * from './field/field.component';
 import { CenterComponent } from './center/center.component';
 
 import { LoadingContainer } from './loading-container/loading-container.component';
+import { FooterComponent } from './footer/footer.component';
 
 import {
   MatToolbarModule,
@@ -174,6 +175,7 @@ const components = [
   CenterComponent,
   NestableFormDirective,
   LoadingContainer,
+  FooterComponent,
 ];
 
 @NgModule({
