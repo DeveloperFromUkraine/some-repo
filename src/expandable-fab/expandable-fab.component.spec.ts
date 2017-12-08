@@ -48,11 +48,11 @@ describe('ExpandableFabComponent', () => {
         expect(component.activeClass).toBe(null);
     });
 
-    it('should have active classes if isOpen is true', async() => {
+    it('should have active classes if isOpen is true', async () => {
         component.isOpen = true;
 
         await fixture.detectChanges();
-        
+
         expect(fixture.debugElement.query(By.css('.active'))).toBeTruthy();
         expect(fixture.debugElement.query(By.css('.icon-primary-active'))).toBeTruthy();
         expect(fixture.debugElement.query(By.css('.icon-secondary-active'))).toBeTruthy();

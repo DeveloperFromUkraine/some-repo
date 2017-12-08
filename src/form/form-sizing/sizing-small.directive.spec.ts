@@ -6,7 +6,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core/src/debug/debug_node';
 
 @Component({
-    template:`
+    template: `
         <p ignSizeSmall>one</p>
         <p nuSizeSmall>two</p>
     `
@@ -19,7 +19,7 @@ describe('SizingSmallDirective', () => {
     let de: DebugElement[];
     const maxWidth: string = '192px';
     const flex: string = '1';
-    
+
     beforeEach(async () => {
         await ComponentTest.createTestBed([], [DirectiveHostComponent, SizingSmallDirective]);
     });
@@ -27,7 +27,7 @@ describe('SizingSmallDirective', () => {
     beforeEach(() => {
         fixture = TestBed.createComponent(DirectiveHostComponent);
         fixture.detectChanges();
-        de = fixture.debugElement.queryAll(By.css('p'));        
+        de = fixture.debugElement.queryAll(By.css('p'));
     });
 
     it('should set max-width to 192px', () => {

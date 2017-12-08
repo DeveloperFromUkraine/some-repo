@@ -8,7 +8,7 @@ import { DebugElement } from '@angular/core/src/debug/debug_node';
 
 
 @Component({
-    template:`
+    template: `
         <p class="directive" ignSizeMedium>medium</p>
         <p class="directive" nuSizeMedium>medium</p>                
         <h1 class="directive" [ignSizeMedium]="sizeMedium">mediumTrue</h1>
@@ -50,14 +50,14 @@ describe('SizingMediumDirective', () => {
         component.sizeMedium = true;
 
         expect(de[2].nativeElement.style.maxWidth).toBe(maxWidth);
-        expect(de[3].nativeElement.style.maxWidth).toBe(maxWidth);        
+        expect(de[3].nativeElement.style.maxWidth).toBe(maxWidth);
     });
 
     it('should set max-width to 256px for ignSizeMedium and nuSizeMedium set to false', () => {
         component.sizeMedium = false;
 
-        expect(de[4].nativeElement.style.maxWidth).toBe(maxWidth);  
-        expect(de[5].nativeElement.style.maxWidth).toBe(maxWidth);                
+        expect(de[4].nativeElement.style.maxWidth).toBe(maxWidth);
+        expect(de[5].nativeElement.style.maxWidth).toBe(maxWidth);
     });
 
     it('should set flex to 2', () => {
@@ -71,14 +71,14 @@ describe('SizingMediumDirective', () => {
         component.sizeMedium = true;
 
         expect(de[2].nativeElement.style.flex).toBe(flex);
-        expect(de[3].nativeElement.style.flex).toBe(flex);        
+        expect(de[3].nativeElement.style.flex).toBe(flex);
     });
 
     it('should set flex to 2 for nuSizeMedium and ignSizeMedium set to false', () => {
         component.sizeMedium = false;
-        
+
         expect(de[4].nativeElement.style.flex).toBe(flex);
-        expect(de[5].nativeElement.style.flex).toBe(flex);        
+        expect(de[5].nativeElement.style.flex).toBe(flex);
     });
 
     describe('NgOnChanges', () => {
@@ -90,7 +90,7 @@ describe('SizingMediumDirective', () => {
             neIgnMedium = de[5].nativeElement;
             neNuMedium = de[6].nativeElement;
             directive = de[5].injector.get(SizingMediumDirective);
-            
+
             jest.spyOn(directive, 'applyStyleChange').mockImplementation(() => {
                 neIgnMedium.style.maxWidth = '256px';
                 neNuMedium.style.maxWidth = '256px';
@@ -108,20 +108,20 @@ describe('SizingMediumDirective', () => {
             component.sizeMedium = true;
 
             fixture.detectChanges();
-    
+
             expect(directive.ngOnChanges).toHaveBeenCalled();
             expect(directive.applyStyleChange).toHaveBeenCalled();
             expect(neIgnMedium.style.maxWidth).toBe(maxWidth);
             expect(neNuMedium.style.maxWidth).toBe(maxWidth);
         });
-    
+
         it('should set flex to 2 once triggered', () => {
             neIgnMedium.style.flex = '1';
             neNuMedium.style.flex = '1';
             component.sizeMedium = false;
 
             fixture.detectChanges();
-        
+
             expect(directive.ngOnChanges).toHaveBeenCalled();
             expect(directive.applyStyleChange).toHaveBeenCalled();
             expect(neIgnMedium.style.flex).toBe(flex);

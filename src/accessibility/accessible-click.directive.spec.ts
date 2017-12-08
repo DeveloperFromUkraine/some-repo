@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 
 @Component({
-    template:`
+    template: `
         <button class="directive" ignA11yClick>button</button>
         <button class="directive" [routerLink]="'./'">routerLink button</button>
         <a class="directive" src="#" [routerLink]="'./'">anchor</a>
@@ -33,10 +33,10 @@ describe('AccessibleClickDirective', () => {
 
     beforeEach(() => {
         fixture = TestBed.createComponent(DirectiveHostComponent);
-        de = fixture.debugElement.queryAll(By.css('.directive'));     
+        de = fixture.debugElement.queryAll(By.css('.directive'));
         ne = de[0].nativeElement;
-        
-        fixture.detectChanges();        
+
+        fixture.detectChanges();
     });
 
     it('should trigger onAccessibleClick when keyup.enter event emitted', () => {
@@ -70,7 +70,6 @@ describe('AccessibleClickDirective', () => {
         directive = de[1].injector.get(AccessibleClickDirective);
         let ne: HTMLElement = de[1].nativeElement;
         jest.spyOn(directive, 'onAccessibleClick').mockImplementation(() => {
-            ne.style.color = 'red';
         });
 
         de[1].triggerEventHandler('keyup.enter', null);
@@ -87,7 +86,6 @@ describe('AccessibleClickDirective', () => {
         directive = de[2].injector.get(AccessibleClickDirective);
         let ne: HTMLElement = de[2].nativeElement;
         jest.spyOn(directive, 'onAccessibleClick').mockImplementation(() => {
-            ne.style.color = 'red';
         });
 
         de[2].triggerEventHandler('keyup.enter', null);

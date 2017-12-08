@@ -43,7 +43,7 @@ describe('Messages component', () => {
         parentDirective.registerNestedForm('myself', parentDirective.formGroup)
       ).toThrowError(
         'Trying to add itself! Nestable form can be added only on parent "FormGroup".'
-      );
+        );
     });
   });
 });

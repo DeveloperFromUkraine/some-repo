@@ -25,7 +25,7 @@ describe('ExpandableFabItemComponent', () => {
     it('should set tooltipText', async () => {
         de = fixture.debugElement.query(By.css('.mat-tooltip'));
         ne = de.nativeElement;
-        
+
         component.tooltipText = 'toolTip';
         await fixture.detectChanges();
 
