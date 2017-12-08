@@ -2,8 +2,8 @@
 - Empty state buttons will now center and style correctly when using either ign-button-group or mat-card-actions
 - Remove version number from root `package.json`, as the library is published using `src/package.json`
 - Add CONTRIBUTING.md file to make contribution process a little more clear
-- New [loading container component](./src/loading-container/README.md) `ign-loading-container` 
-
+- New [loading container component](./src/loading-container/README.md) `ign-loading-container`
+- New [date range picker component](./src/date-range/README.md) `ign-date-range`
 
 ### v0.2.0
 - Revert to deploying from `dist/` now that pipeline support exists (thanks Baker!)
