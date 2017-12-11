@@ -23,10 +23,6 @@ describe('HubCardComponent', () => {
         fixture.detectChanges();
     });
 
-    it('should be truthy', () => {
-        expect(component).toBeTruthy();
-    });
-
     it('should set background color if valid color provided', async () => {
         de = fixture.debugElement.query(By.css('.card-container'));
         ne = de.nativeElement;
