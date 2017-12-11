@@ -8,7 +8,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core/src/debug/debug_node';
 
 @Component({
-    template:`
+    template: `
         <form nuNestableForm="form"  [formGroup]="form">
             <input formControlName="name">
             <input formControlName="email">
@@ -28,7 +28,7 @@ class DirectiveHostComponent {
 
 describe('NestableFormDirective', () => {
     let fixture: ComponentFixture<DirectiveHostComponent>;
-    let de: DebugElement;    
+    let de: DebugElement;
     let directive: NestableFormDirective;
     let ne: HTMLElement;
 
@@ -41,7 +41,7 @@ describe('NestableFormDirective', () => {
         de = fixture.debugElement.query(By.directive(NestableFormDirective));
         ne = de.nativeElement;
         directive = de.injector.get(NestableFormDirective);
-        
+
         fixture.detectChanges();
     });
 
