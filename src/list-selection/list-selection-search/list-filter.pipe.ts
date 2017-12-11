@@ -14,11 +14,10 @@ export class ListFilterPipe implements PipeTransform {
   transform<T>(
     values$: Observable<T[]>,
     filterProvider: IFilterProvider,
-    matchFn: (searchTerm: string, value: T) => boolean
-  ): any {
-    return Observable.combineLatest(
-      values$.startWith([]),
-      filterProvider.filterInput$.startWith('')
-    ).map(([values, searchTerm]) => values.filter(value => matchFn(searchTerm, value)));
+    matchFn: (searchTerm: string, value: T) => boolean): any {
+
+    return Observable
+      .combineLatest(values$.startWith([]), filterProvider.filterInput$.startWith(''))
+      .map(([values, searchTerm]) => values.filter(value => matchFn(searchTerm, value)));
   }
 }

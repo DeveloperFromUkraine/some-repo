@@ -33,3 +33,6 @@ dist/*
 
 # Playground tmp files
 .playground
+
+# Coverage files
+.coverage
