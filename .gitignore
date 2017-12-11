@@ -35,4 +35,4 @@ dist/*
 .playground
 
 # Coverage files
-.coverage
+coverage
