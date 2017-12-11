@@ -23,10 +23,12 @@ describe('ListSelectionItemComponent', () => {
 
     it('should emit onClick event', () => {
         de = fixture.debugElement.query(By.css('.list-detail-container'));
+        ne = de.nativeElement;
         let spy = jest.fn();
 
         component.onClick.subscribe(spy);
-        de.triggerEventHandler('click', null);
+        //de.triggerEventHandler('click', null);
+        ne.dispatchEvent(new Event('click'));
 
         expect(spy).toHaveBeenCalled();
     });
