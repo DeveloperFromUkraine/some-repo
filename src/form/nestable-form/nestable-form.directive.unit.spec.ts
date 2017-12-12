@@ -1,7 +1,7 @@
 import { NestableFormDirective } from './nestable-form.directive';
 import { FormBuilder, Validators } from '@angular/forms';
 
-describe('Messages component', () => {
+describe('NestableFormDirective', () => {
   let directive: NestableFormDirective;
   let parentDirective: NestableFormDirective;
 

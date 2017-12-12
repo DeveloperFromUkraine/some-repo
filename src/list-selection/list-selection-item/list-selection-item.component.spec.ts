@@ -27,7 +27,6 @@ describe('ListSelectionItemComponent', () => {
         let spy = jest.fn();
 
         component.onClick.subscribe(spy);
-        //de.triggerEventHandler('click', null);
         ne.dispatchEvent(new Event('click'));
 
         expect(spy).toHaveBeenCalled();
