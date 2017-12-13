@@ -29,7 +29,7 @@ describe('RightDrawerComponent', () => {
         expect(de).toBeTruthy();
     });
 
-    it('should net create title-container if title is not set', async () => {
+    it('should net create title-container if title is not set', () => {
         component.title = '';
         
         fixture.detectChanges();
