@@ -111,6 +111,9 @@ import { CenterComponent } from './center/center.component';
 import { LoadingContainer } from './loading-container/loading-container.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { DateRangeModule } from './date-range/date-range.module';
+import { DateRangeComponent } from './date-range/date-range.component';
+
 import {
   MatToolbarModule,
   MatMenuModule,
@@ -120,6 +123,7 @@ import {
   MatIconModule,
   MatRippleModule,
   MatProgressSpinnerModule,
+  MatNativeDateModule,
 } from '@angular/material';
 
 const components = [
@@ -189,9 +193,11 @@ const components = [
     MatIconModule,
     MatRippleModule,
     MatProgressSpinnerModule,
+    MatNativeDateModule,
+    DateRangeModule,
   ],
   declarations: components,
-  exports: [...components],
+  exports: [...components, DateRangeComponent],
 })
 export class IgniteDesignSystemModule {
   static forRoot(): ModuleWithProviders {
