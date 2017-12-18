@@ -1,15 +1,14 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ExpandableFabComponent } from 'index';
+import { ExpandableFabComponent } from './expandable-fab.component';
 import { ComponentTest } from '../../test/test-bed/component';
 import { MatIconModule } from '@angular/material';
-import { DebugElement } from '@angular/core/src/debug/debug_node';
+import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
 describe('ExpandableFabComponent', () => {
     let fixture: ComponentFixture<ExpandableFabComponent>;
     let component: ExpandableFabComponent;
     let de: DebugElement;
-    let ne: HTMLElement;
 
     beforeEach(async () => {
         ComponentTest.createTestBed([MatIconModule], [ExpandableFabComponent]);
@@ -24,11 +23,11 @@ describe('ExpandableFabComponent', () => {
 
     it('should trigger handleClick when click event emitted', () => {
         de = fixture.debugElement.query(By.css('.icon-container'));
-        let spy = jest.spyOn(component, 'handleClick');
+        jest.spyOn(component, 'handleClick');
 
         de.triggerEventHandler('click', null);
 
-        expect(spy).toHaveBeenCalled;
+        expect(component.handleClick).toHaveBeenCalled();
     });
 
     it('should set activeClass(null) when handleClick triggered', () => {

@@ -1,7 +1,7 @@
 import { ComponentTest } from '../../../test/test-bed/component';
 import { ListSelectionItemComponent } from 'index';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { DebugElement } from '@angular/core/src/debug/debug_node';
+import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
 describe('ListSelectionItemComponent', () => {
@@ -60,7 +60,7 @@ describe('ListSelectionItemComponent', () => {
 
     it('should not set title if not provided', () => {
         de = fixture.debugElement.query(By.css('.list-detail-title'));
-        
+
         expect(de).not.toBeTruthy();
     });
     it('should set subtitle', async () => {
@@ -74,7 +74,7 @@ describe('ListSelectionItemComponent', () => {
 
     it('should not set subtitle if not provided', () => {
         de = fixture.debugElement.query(By.css('.list-detail-subtitle'));
-        
+
         expect(de).not.toBeTruthy();
     });
 });

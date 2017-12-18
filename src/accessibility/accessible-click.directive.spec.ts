@@ -4,8 +4,6 @@ import { DebugElement } from '@angular/core';
 import { ComponentTest } from '../../test/test-bed/component';
 import { AccessibleClickDirective } from '../accessibility/accessibility.directive';
 import { By } from '@angular/platform-browser';
-import { RouterOutlet } from '@angular/router';
-import { RouterModule } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 
 @Component({
@@ -68,7 +66,7 @@ describe('AccessibleClickDirective', () => {
      */
     xit('should not trigger onAccessibleClick with routerLink in button', () => {
         directive = de[1].injector.get(AccessibleClickDirective);
-        let ne: HTMLElement = de[1].nativeElement;
+        ne = de[1].nativeElement;
         jest.spyOn(directive, 'onAccessibleClick').mockImplementation(() => {
         });
 
@@ -84,7 +82,7 @@ describe('AccessibleClickDirective', () => {
      */
     xit('should not trigger onAccessibleClick with routerLink in anchor', () => {
         directive = de[2].injector.get(AccessibleClickDirective);
-        let ne: HTMLElement = de[2].nativeElement;
+        ne = de[2].nativeElement;
         jest.spyOn(directive, 'onAccessibleClick').mockImplementation(() => {
         });
 

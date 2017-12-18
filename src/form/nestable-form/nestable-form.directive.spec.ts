@@ -5,7 +5,7 @@ import { ComponentTest } from '../../../test/test-bed/component';
 import { By } from '@angular/platform-browser';
 import { NestableFormDirective } from 'index';
 import { BrowserModule } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core/src/debug/debug_node';
+import { DebugElement } from '@angular/core';
 
 @Component({
     template: `
