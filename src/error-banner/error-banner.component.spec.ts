@@ -6,7 +6,7 @@ describe('ErrorBannerComponent', () => {
     let fixture: ComponentFixture<ErrorBannerComponent>;
 
     beforeEach(async () => {
-        ComponentTest.createTestBed([], [ErrorBannerComponent]);
+        await ComponentTest.createTestBed([], [ErrorBannerComponent]);
     });
 
     beforeEach(() => {

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListSelectionSearchComponent should match snapshot 1`] = `
+<ign-list-selection-search
+  filterInput$={[Function AnonymousSubject]}
+  searchCtrl={[Function FormControl]}
+>
+  <div
+    class="container"
+  >
+    <i
+      class="material-icons search-icon"
+    >
+      search
+    </i>
+    <input
+      class="input"
+      type="text"
+    />
+  </div>
+</ign-list-selection-search>
+`;

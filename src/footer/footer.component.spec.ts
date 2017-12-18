@@ -6,7 +6,7 @@ describe('FooterComponent', () => {
     let fixture: ComponentFixture<FooterComponent>;
 
     beforeEach(async () => {
-        ComponentTest.createTestBed([], [FooterComponent]);
+        await ComponentTest.createTestBed([], [FooterComponent]);
     });
 
     beforeEach(() => {

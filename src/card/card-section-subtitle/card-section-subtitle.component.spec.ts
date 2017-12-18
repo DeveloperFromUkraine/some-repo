@@ -7,7 +7,7 @@ describe('CardSectionSubTitleComponent', () => {
     let fixture: ComponentFixture<CardSectionSubTitleComponent>;
 
     beforeEach(async () => {
-        ComponentTest.createTestBed([], [CardSectionSubTitleComponent]);
+        await ComponentTest.createTestBed([], [CardSectionSubTitleComponent]);
     });
 
     beforeEach(() => {

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItemComponent should match snapshot 1`] = `
+<ign-list-item>
+  
+</ign-list-item>
+`;

@@ -7,7 +7,7 @@ describe('DividerComponent', () => {
     let fixture: ComponentFixture<DividerComponent>;
 
     beforeEach(async () => {
-        ComponentTest.createTestBed([], [DividerComponent]);
+        await ComponentTest.createTestBed([], [DividerComponent]);
     });
 
     beforeEach(() => {

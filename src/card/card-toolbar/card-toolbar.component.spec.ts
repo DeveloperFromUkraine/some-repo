@@ -7,7 +7,7 @@ describe('CardToolbarComponent', () => {
     let fixture: ComponentFixture<CardToolbarComponent>;
 
     beforeEach(async () => {
-        ComponentTest.createTestBed([], [CardToolbarComponent]);
+        await ComponentTest.createTestBed([], [CardToolbarComponent]);
     });
 
     beforeEach(() => {

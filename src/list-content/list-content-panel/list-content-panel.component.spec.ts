@@ -7,7 +7,7 @@ describe('ListContentPanelComponent', () => {
     let fixture: ComponentFixture<ListContentPanelComponent>;
 
     beforeEach(async () => {
-        ComponentTest.createTestBed([], [ListContentPanelComponent]);
+        await ComponentTest.createTestBed([], [ListContentPanelComponent]);
     });
 
     beforeEach(() => {

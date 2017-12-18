@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListSelectionAddButtonComponent should match snapshot 1`] = `
+<ign-list-selection-add-button>
+  <a
+    mat-fab=""
+  >
+    <mat-icon
+      class="mat-icon"
+      role="img"
+      aria-hidden="true"
+    >
+      add
+    </mat-icon>
+  </a>
+</ign-list-selection-add-button>
+`;

@@ -6,7 +6,7 @@ describe('EmptyStateImageComponent', () => {
     let fixture: ComponentFixture<EmptyStateImageComponent>;
 
     beforeEach(async () => {
-        ComponentTest.createTestBed([], [EmptyStateImageComponent]);
+        await ComponentTest.createTestBed([], [EmptyStateImageComponent]);
     });
 
     beforeEach(() => {

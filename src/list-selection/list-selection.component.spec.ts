@@ -6,7 +6,7 @@ describe('ListSelectionComponent', () => {
     let fixture: ComponentFixture<ListSelectionComponent>;
 
     beforeEach(async () => {
-        ComponentTest.createTestBed([], [ListSelectionComponent]);
+        await ComponentTest.createTestBed([], [ListSelectionComponent]);
     });
 
     beforeEach(() => {
