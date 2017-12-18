@@ -53,9 +53,7 @@ describe('SizingMediumDirective', () => {
         expect(de[3].nativeElement.style.maxWidth).toBe(maxWidth);
     });
 
-    it('should set max-width to 256px for ignSizeMedium and nuSizeMedium set to false', () => {
-        component.sizeMedium = false;
-
+    it('should set max-width to 256px for ignSizeMedium and nuSizeMedium set to null', () => {
         expect(de[4].nativeElement.style.maxWidth).toBe(maxWidth);
         expect(de[5].nativeElement.style.maxWidth).toBe(maxWidth);
     });
@@ -74,9 +72,7 @@ describe('SizingMediumDirective', () => {
         expect(de[3].nativeElement.style.flex).toBe(flex);
     });
 
-    it('should set flex to 2 for nuSizeMedium and ignSizeMedium set to false', () => {
-        component.sizeMedium = false;
-
+    it('should set flex to 2 for nuSizeMedium and ignSizeMedium set to null', () => {
         expect(de[4].nativeElement.style.flex).toBe(flex);
         expect(de[5].nativeElement.style.flex).toBe(flex);
     });
@@ -91,15 +87,8 @@ describe('SizingMediumDirective', () => {
             neNuMedium = de[6].nativeElement;
             directive = de[5].injector.get(SizingMediumDirective);
 
-            jest.spyOn(directive, 'applyStyleChange').mockImplementation(() => {
-                neIgnMedium.style.maxWidth = '256px';
-                neNuMedium.style.maxWidth = '256px';
-                neIgnMedium.style.flex = '2';
-                neNuMedium.style.flex = '2';
-            });
-            jest.spyOn(directive, 'ngOnChanges').mockImplementation(() => {
-                directive.applyStyleChange();
-            });
+            jest.spyOn(directive, 'applyStyleChange');
+            jest.spyOn(directive, 'ngOnChanges');
         });
 
         it('should set max-width to 256px once triggered', () => {
@@ -118,7 +107,7 @@ describe('SizingMediumDirective', () => {
         it('should set flex to 2 once triggered', () => {
             neIgnMedium.style.flex = '1';
             neNuMedium.style.flex = '1';
-            component.sizeMedium = false;
+            component.sizeMedium = null;
 
             fixture.detectChanges();
 

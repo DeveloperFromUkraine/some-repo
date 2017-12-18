@@ -50,9 +50,7 @@ describe('SizingLargeDirective', () => {
         expect(de[3].nativeElement.style.maxWidth).toBe(maxWidth);
     });
 
-    it('should set max-width to 448px for ignSizeLarge and nuSizeLarge set to false', () => {
-        component.sizeLarge = false;
-
+    it('should set max-width to 448px for ignSizeLarge and nuSizeLarge set to null', () => {
         expect(de[4].nativeElement.style.maxWidth).toBe(maxWidth);
         expect(de[5].nativeElement.style.maxWidth).toBe(maxWidth);
     });
@@ -69,9 +67,7 @@ describe('SizingLargeDirective', () => {
         expect(de[3].nativeElement.style.flex).toBe(flex);
     });
 
-    it('should set flex to 3 for nuSizeLarge and ignSizeLarge set to false', () => {
-        component.sizeLarge = false;
-
+    it('should set flex to 3 for nuSizeLarge and ignSizeLarge set to null', () => {
         expect(de[4].nativeElement.style.flex).toBe(flex);
         expect(de[5].nativeElement.style.flex).toBe(flex);
     });
@@ -85,15 +81,9 @@ describe('SizingLargeDirective', () => {
             neIgnLarge = de[5].nativeElement;
             neNuLarge = de[6].nativeElement;
             directive = de[5].injector.get(SizingLargeDirective);
-            jest.spyOn(directive, 'applyStyleChange').mockImplementation(() => {
-                neIgnLarge.style.maxWidth = '448px';
-                neNuLarge.style.maxWidth = '448px';
-                neIgnLarge.style.flex = '3';
-                neNuLarge.style.flex = '3';
-            });
-            jest.spyOn(directive, 'ngOnChanges').mockImplementation(() => {
-                directive.applyStyleChange();
-            });
+
+            jest.spyOn(directive, 'applyStyleChange');
+            jest.spyOn(directive, 'ngOnChanges');
         });
 
         it('should set max-width to 448px once ngOnChanges is triggered', () => {
@@ -109,10 +99,10 @@ describe('SizingLargeDirective', () => {
             expect(neNuLarge.style.maxWidth).toBe(maxWidth);
         });
 
-        it('should set flex to 2 once ngOnChanges is triggered', () => {
+        it('should set flex to 3 once ngOnChanges is triggered', () => {
             neIgnLarge.style.flex = '1';
             neNuLarge.style.flex = '1';
-            component.sizeLarge = false;
+            component.sizeLarge = null;
 
             fixture.detectChanges();
 
