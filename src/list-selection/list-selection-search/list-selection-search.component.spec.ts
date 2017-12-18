@@ -1,0 +1,19 @@
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { ListSelectionSearchComponent } from "index";
+import { ComponentTest } from "../../../test/test-bed/component";
+
+describe('ListSelectionSearchComponent', () => {
+    let fixture: ComponentFixture<ListSelectionSearchComponent>;
+
+    beforeEach(async () => {
+        await ComponentTest.createTestBed([], [ListSelectionSearchComponent]);
+    });
+
+    beforeEach(() => {
+        fixture = TestBed.createComponent(ListSelectionSearchComponent);
+    });
+
+    it('should match snapshot', () => {
+        expect(fixture).toMatchSnapshot();
+    });
+});

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { InfoBannerComponent } from "index";
+import { ListSelectionComponent } from "index";
 import { ComponentTest } from "../../test/test-bed/component";
 
-describe('InfoBannerComponent', () => {
-    let fixture: ComponentFixture<InfoBannerComponent>;
+describe('ListSelectionComponent', () => {
+    let fixture: ComponentFixture<ListSelectionComponent>;
 
     beforeEach(async () => {
-        await ComponentTest.createTestBed([], [InfoBannerComponent]);
+        ComponentTest.createTestBed([], [ListSelectionComponent]);
     });
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(InfoBannerComponent);
+        fixture = TestBed.createComponent(ListSelectionComponent);
     });
 
     it('should match snapshot', () => {
