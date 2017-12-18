@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardSectionComponent should match snapshot 1`] = `
+<ign-card-section>
+  <div
+    class="card-section"
+  >
+    
+  </div>
+</ign-card-section>
+`;

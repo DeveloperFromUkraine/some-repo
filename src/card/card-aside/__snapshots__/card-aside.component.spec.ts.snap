@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardAsideComponent should match snapshot 1`] = `
+<ign-card-aside>
+  
+</ign-card-aside>
+`;

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardHeaderContainerComponent should match snapshot 1`] = `
+<ign-card-header-container>
+  <div
+    _ngcontent-c0=""
+    class="card-header-container"
+  />
+</ign-card-header-container>
+`;

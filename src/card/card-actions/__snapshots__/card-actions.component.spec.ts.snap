@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardActionsComponent should match snapshot 1`] = `
+<ign-card-actions>
+  
+</ign-card-actions>
+`;
