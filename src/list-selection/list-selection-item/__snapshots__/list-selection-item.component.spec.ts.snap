@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListSelectionItemComponent should match snapshot 1`] = `
+<ign-list-selection-item
+  onClick={[Function EventEmitter]}
+  subtitle={[Function String]}
+  title={[Function String]}
+>
+  <div
+    class="list-detail-container"
+    da="list-item-title"
+  >
+    <div
+      class="list-detail-info"
+    >
+      <div
+        class="list-detail-title"
+      >
+        title
+      </div>
+      <div
+        class="list-detail-subtitle"
+      >
+        subtitle
+      </div>
+    </div>
+  </div>
+</ign-list-selection-item>
+`;

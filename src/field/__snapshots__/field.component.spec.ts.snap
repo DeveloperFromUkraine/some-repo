@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FieldComponent should match snapshot 1`] = `
+<ign-field
+  label={[Function String]}
+>
+  <div
+    class="value"
+    da="fieldValue"
+  /><div
+    class="label"
+  >
+    label!
+  </div>
+</ign-field>
+`;

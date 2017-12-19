@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateRangeComponent should match snapshot 1`] = `
+<ign-date-range
+  close$={[Function Subject]}
+  endDateControlName={[Function String]}
+  endPickerInput={[Function MatDatepickerInput]}
+  startDateControlName={[Function String]}
+  startPickerInput={[Function MatDatepickerInput]}
+>
+  <form
+    novalidate=""
+  >
+    <mat-form-field
+      class="mat-input-container mat-form-field ng-tns-c0-0"
+    >
+      <div
+        class="mat-input-wrapper mat-form-field-wrapper"
+      >
+        <div
+          class="mat-input-flex mat-form-field-flex"
+        >
+          <div
+            class="mat-input-infix mat-form-field-infix"
+          >
+            <input
+              class="mat-input-element mat-form-field-autofill-control"
+              matinput=""
+              placeholder="Start Date"
+            />
+            <mat-datepicker />
+            <span
+              class="mat-input-placeholder-wrapper mat-form-field-placeholder-wrapper"
+            >
+              
+            </span>
+          </div>
+        </div>
+        <div
+          class="mat-input-underline mat-form-field-underline"
+        >
+          <span
+            class="mat-input-ripple mat-form-field-ripple"
+          />
+        </div>
+        <div
+          class="mat-input-subscript-wrapper mat-form-field-subscript-wrapper"
+        >
+          
+        </div>
+      </div>
+    </mat-form-field>
+    <mat-form-field
+      class="mat-input-container mat-form-field ng-tns-c0-1"
+    >
+      <div
+        class="mat-input-wrapper mat-form-field-wrapper"
+      >
+        <div
+          class="mat-input-flex mat-form-field-flex"
+        >
+          <div
+            class="mat-input-infix mat-form-field-infix"
+          >
+            <input
+              class="mat-input-element mat-form-field-autofill-control"
+              matinput=""
+              placeholder="End Date"
+            />
+            <mat-datepicker />
+            <span
+              class="mat-input-placeholder-wrapper mat-form-field-placeholder-wrapper"
+            >
+              
+            </span>
+          </div>
+        </div>
+        <div
+          class="mat-input-underline mat-form-field-underline"
+        >
+          <span
+            class="mat-input-ripple mat-form-field-ripple"
+          />
+        </div>
+        <div
+          class="mat-input-subscript-wrapper mat-form-field-subscript-wrapper"
+        >
+          
+        </div>
+      </div>
+    </mat-form-field>
+  </form>
+</ign-date-range>
+`;

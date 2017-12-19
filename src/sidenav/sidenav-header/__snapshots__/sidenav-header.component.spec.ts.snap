@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideNavHeaderComponent should match snapshot 1`] = `
+<ign-sidenav-header
+  subtitle={[Function String]}
+  title={[Function String]}
+>
+  <div
+    class="header-container"
+  >
+    <div
+      class="user-profile-container"
+    >
+      <div
+        class="user-picture-container"
+        routerlink="/profile"
+        tabindex="0"
+      >
+        <i
+          class="material-icons circle"
+        >
+          account_circle
+        </i>
+      </div>
+      <div
+        class="user-info-container"
+      >
+        <div
+          class="user-name-container"
+        >
+          <div
+            class="name"
+            tabindex="0"
+          >
+            title
+          </div>
+        </div>
+        <div
+          class="position"
+          tabindex="0"
+        >
+          subTitle
+        </div>
+      </div>
+    </div>
+  </div>
+</ign-sidenav-header>
+`;

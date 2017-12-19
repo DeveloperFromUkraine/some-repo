@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExpandableFabComponent should match snapshot 1`] = `
+<ign-expandable-fab
+  activeClass="null"
+  isOpen={[Function Boolean]}
+>
+  <div
+    class="buttons-container active"
+    ng-reflect-klass="buttons-container"
+    ng-reflect-ng-class="[object Object]"
+  >
+    <div
+      class="main-button-container"
+      da="mainButton"
+    >
+      <a
+        class="icon-container"
+        igna11yclick=""
+        mat-fab=""
+      >
+        <mat-icon
+          class="icon icon-secondary mat-icon material-icons icon-secondary-active"
+          role="img"
+          style="position:absolute"
+          aria-hidden="true"
+          ng-reflect-klass="icon icon-secondary"
+          ng-reflect-ng-class="[object Object]"
+        >
+          clear
+        </mat-icon>
+        <mat-icon
+          class="icon icon-primary mat-icon material-icons icon-primary-active"
+          role="img"
+          aria-hidden="true"
+          ng-reflect-klass="icon icon-primary"
+          ng-reflect-ng-class="[object Object]"
+        >
+          add
+        </mat-icon>
+      </a>
+    </div>
+  </div>
+</ign-expandable-fab>
+`;

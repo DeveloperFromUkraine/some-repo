@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingContainer should match snapshot 1`] = `
+<ign-loading-container
+  delay={[Function Number]}
+  loading={[Function Boolean]}
+  pastDelay="false"
+>
+  <div>
+    
+  </div>
+</ign-loading-container>
+`;
