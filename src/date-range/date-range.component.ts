@@ -1,11 +1,10 @@
-import { Component, Input, ChangeDetectionStrategy, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { MatDatepickerInput, MatDatepickerInputEvent } from '@angular/material';
 import 'rxjs/util/pipe';
 import { combineLatest } from 'rxjs/observable/combineLatest';
 import { of as observableOf } from 'rxjs/observable/of';
 import { startWith, switchMap, pairwise, takeUntil } from 'rxjs/operators';
-import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
 import { Subject } from 'rxjs/Subject';
 
 @Component({
@@ -22,9 +21,9 @@ export class DateRangeComponent implements OnInit, OnDestroy {
   endDateControlName = 'endDate';
 
   @Input()
-  startDateFilter: (Date) => boolean;
+  startDateFilter: (date: Date) => boolean;
   @Input()
-  endDateFilter: (Date) => boolean;
+  endDateFilter: (date: Date) => boolean;
 
   @ViewChild('startPickerInput')
   startPickerInput: MatDatepickerInput<Date>;

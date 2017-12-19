@@ -3,16 +3,15 @@ import { ComponentFixture, async, TestBed } from '@angular/core/testing';
 import { ComponentTest } from '../../../test/test-bed/component';
 import { SizingMediumDirective } from 'index';
 import { By } from '@angular/platform-browser';
-import { ElementRef } from '@angular/core/src/linker/element_ref';
-import { DebugElement } from '@angular/core/src/debug/debug_node';
+import { ElementRef, DebugElement } from '@angular/core';
 
 
 @Component({
     template: `
         <p class="directive" ignSizeMedium>medium</p>
-        <p class="directive" nuSizeMedium>medium</p>                
+        <p class="directive" nuSizeMedium>medium</p>
         <h1 class="directive" [ignSizeMedium]="sizeMedium">mediumTrue</h1>
-        <h3 class="directive" [nuSizeMedium]="sizeMedium">mediumTrue</h3>        
+        <h3 class="directive" [nuSizeMedium]="sizeMedium">mediumTrue</h3>
         <textarea class="directive" [ignSizeMedium]="sizeMedium">mediumFalse</textarea>
         <p class="directive" [nuSizeMedium]="sizeMedium">mediumFalse</p>
         <input class="directive" type="text" value="input" [ignSizeMedium]="sizeMedium" />

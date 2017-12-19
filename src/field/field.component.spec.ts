@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FieldComponent } from './field.component';
 import { ComponentTest } from '../../test/test-bed/component';
 import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core/src/debug/debug_node';
+import { DebugElement } from '@angular/core';
 
 describe('FieldComponent', () => {
     let fixture: ComponentFixture<FieldComponent>;

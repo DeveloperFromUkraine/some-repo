@@ -108,7 +108,7 @@ export * from './field/field.component';
 
 import { CenterComponent } from './center/center.component';
 
-import { LoadingContainer } from './loading-container/loading-container.component';
+import { LoadingContainerComponent } from './loading-container/loading-container.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { DateRangeModule } from './date-range/date-range.module';
@@ -178,7 +178,7 @@ const components = [
   FieldComponent,
   CenterComponent,
   NestableFormDirective,
-  LoadingContainer,
+  LoadingContainerComponent,
   FooterComponent,
 ];
 

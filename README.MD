@@ -25,7 +25,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import your library
-import { SampleModule } from 'ignite-design-system';
+import { IgniteDesignSystemModule } from 'ignite-design-system';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,7 @@ import { SampleModule } from 'ignite-design-system';
     BrowserModule,
 
     // Specify your library as an import
-    LibraryModule
+    IgniteDesignSystemModule
   ],
   providers: [],
   bootstrap: [AppComponent]

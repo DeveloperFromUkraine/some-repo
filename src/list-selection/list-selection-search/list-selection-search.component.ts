@@ -1,11 +1,8 @@
 import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 import { FormControl, ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/distinctUntilChanged';
-import 'rxjs/add/operator/skipWhile';
-import 'rxjs/add/operator/share';
-import { isEmpty } from 'lodash';
+import 'rxjs/util/pipe';
+import { map, distinctUntilChanged, skipWhile, share } from 'rxjs/operators';
 import { IFilterProvider } from './list-filter.pipe';
 
 @Component({
@@ -19,10 +16,11 @@ export class ListSelectionSearchComponent implements IFilterProvider {
   filterInput$: Observable<string>;
 
   constructor() {
-    this.filterInput$ = this.searchCtrl.valueChanges
-      .map((val: string) => val.trim())
-      .distinctUntilChanged()
-      .skipWhile(isEmpty)
-      .share();
+    this.filterInput$ = this.searchCtrl.valueChanges.pipe(
+      map((val: string) => val.trim()),
+      distinctUntilChanged(),
+      skipWhile(val => !val),
+      share()
+    );
   }
 }

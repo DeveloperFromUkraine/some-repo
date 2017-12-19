@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { DebugElement } from '@angular/core/src/debug/debug_node';
+import { DebugElement } from '@angular/core';
 import { AccessibleViewDirective } from 'accessibility/accessibility.directive';
 import { ComponentTest } from '../../test/test-bed/component';
 
@@ -22,7 +22,6 @@ describe('AccessibleViewDirective', () => {
     let fixture: ComponentFixture<DirectiveHostComponent>;
     let de: DebugElement[];
     let ne: HTMLElement;
-    let directive: AccessibleViewDirective;
 
     beforeEach(async () => {
         await ComponentTest.createTestBed([], [DirectiveHostComponent, AccessibleViewDirective]);
