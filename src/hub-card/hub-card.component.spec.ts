@@ -47,7 +47,7 @@ describe('HubCardComponent', () => {
         de = fixture.debugElement.query(By.css('.card-container'));
         ne = de.nativeElement;
 
-        expect(ne.style.backgroundColor).toBe("");
+        expect(ne.style.backgroundColor).toBe('');
     });
 
     it('should call handleClick when click event emitted', () => {

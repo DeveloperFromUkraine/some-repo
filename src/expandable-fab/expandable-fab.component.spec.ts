@@ -24,7 +24,7 @@ describe('ExpandableFabComponent', () => {
 
     it('should trigger handleClick when click event emitted', () => {
         de = fixture.debugElement.query(By.css('.icon-container'));
-        let spy = jest.spyOn(component, 'handleClick').mock;
+        let spy = jest.spyOn(component, 'handleClick');
 
         de.triggerEventHandler('click', null);
 

@@ -22,10 +22,10 @@ describe('FieldComponent', () => {
     });
 
     it('should set label input', async () => {
-        component.label = 'label!';
         de = fixture.debugElement.query(By.css('.label'));
         ne = de.nativeElement;
 
+        component.label = 'label!';        
         await fixture.detectChanges();
 
         expect(ne.textContent).toContain(component.label);
