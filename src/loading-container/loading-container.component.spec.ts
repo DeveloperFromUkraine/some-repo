@@ -1,18 +1,20 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { LoadingContainer } from "loading-container/loading-container.component";
+import { LoadingContainerComponent } from "./loading-container.component";
 import { ComponentTest } from "../../test/test-bed/component";
 import { MatProgressSpinnerModule } from "@angular/material";
 
 
 describe('LoadingContainer', () => {
-    let fixture: ComponentFixture<LoadingContainer>;
+    let fixture: ComponentFixture<LoadingContainerComponent>;
 
     beforeEach(async () => {
-        await ComponentTest.createTestBed([MatProgressSpinnerModule], [LoadingContainer]);
+        await ComponentTest.createTestBed([MatProgressSpinnerModule], [LoadingContainerComponent]);
     });
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(LoadingContainer);
+        fixture = TestBed.createComponent(LoadingContainerComponent);
+
+        fixture.detectChanges();
     }); 
 
     it('should match snapshot', async () => {
