@@ -4,11 +4,11 @@ const DEFAULT_LOADING_DELAY_MS = 400;
 
 @Component({
   selector: 'ign-loading-container',
-  styleUrls: ['./loading-container.scss'],  
+  styleUrls: ['./loading-container.scss'],
   templateUrl: './loading-container.html',
 })
 
-export class LoadingContainer implements OnInit {
+export class LoadingContainerComponent implements OnInit {
   @Input() loading: boolean;
   pastDelay: boolean;
   private delay: number;

@@ -1,9 +1,9 @@
 import { ComponentTest } from '../../test/test-bed/component';
-import { ExpandableFabItemComponent } from 'index';
-import { ComponentFixture, TestBed, async } from '@angular/core/testing';
+import { ExpandableFabItemComponent } from './expandable-fab-item.component';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatIconModule } from '@angular/material';
 import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core/src/debug/debug_node';
+import { DebugElement } from '@angular/core';
 
 describe('ExpandableFabItemComponent', () => {
     let fixture: ComponentFixture<ExpandableFabItemComponent>;
@@ -62,6 +62,7 @@ describe('ExpandableFabItemComponent', () => {
 
         expect(spy).toHaveBeenCalled();
     });
+<<<<<<< HEAD
 
     it('should match snapshot', async () => {
         component.tooltipText = 'toolTip';
@@ -73,3 +74,6 @@ describe('ExpandableFabItemComponent', () => {
         expect(fixture).toMatchSnapshot();
     });
 });
+=======
+});
+>>>>>>> develop

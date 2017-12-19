@@ -3,7 +3,7 @@ import { ListSelectionSearchComponent } from 'index';
 import { ComponentTest } from '../../../test/test-bed/component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core/src/debug/debug_node';
+import { DebugElement } from '@angular/core';
 
 describe('ListSelectionSearchComponent', () => {
     let component: ListSelectionSearchComponent;

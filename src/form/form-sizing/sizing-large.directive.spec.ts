@@ -3,17 +3,17 @@ import { ComponentFixture, async, TestBed } from "@angular/core/testing";
 import { ComponentTest } from '../../../test/test-bed/component';
 import { SizingLargeDirective } from "index";
 import { By } from '@angular/platform-browser';
-import { DebugElement } from "@angular/core/src/debug/debug_node";
+import { DebugElement } from "@angular/core";
 
 @Component({
     template: `
         <p class="directive" ignSizeLarge>large</p>
-        <p class="directive" nuSizeLarge>large</p>                
+        <p class="directive" nuSizeLarge>large</p>
         <h1 class="directive" [ignSizeLarge]="sizeLarge">largeTrue</h1>
-        <h3 class="directive" [nuSizeLarge]="sizeLarge">largeTrue</h3>        
+        <h3 class="directive" [nuSizeLarge]="sizeLarge">largeTrue</h3>
         <textarea class="directive" [ignSizeLarge]="sizeLarge">largeFalse</textarea>
         <p class="directive" [nuSizeLarge]="sizeLarge">largeFalse</p>
-        <input class="directive" type="text" value="input" [ignSizeLarge]="sizeLarge" />        
+        <input class="directive" type="text" value="input" [ignSizeLarge]="sizeLarge" />
     `
 })
 class DirectiveHostComponent {

@@ -1,10 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { HubCardComponent } from 'index';
+import { HubCardComponent } from './hub-card.component';
 import { ComponentTest } from '../../test/test-bed/component';
 import { MatIconModule, MatRippleModule } from '@angular/material';
 import { By } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DebugElement } from '@angular/core/src/debug/debug_node';
+import { DebugElement } from '@angular/core';
 
 describe('HubCardComponent', () => {
     let fixture: ComponentFixture<HubCardComponent>;
@@ -30,7 +29,7 @@ describe('HubCardComponent', () => {
         component.color = 'gray';
         await fixture.detectChanges();
 
-        expect(ne.style.backgroundColor).not.toBe("");
+        expect(ne.style.backgroundColor).not.toBe('');
     });
 
     it('should not set background color if invalid color provided', async () => {
@@ -40,7 +39,7 @@ describe('HubCardComponent', () => {
         component.color = 'sdfsdfsdf';
         await fixture.detectChanges();
 
-        expect(ne.style.backgroundColor).toBe("");
+        expect(ne.style.backgroundColor).toBe('');
     });
 
     it('should not set background color if no value passed', () => {
@@ -115,6 +114,7 @@ describe('HubCardComponent', () => {
         expect(subTitle.nativeElement.textContent).toContain(component.subtitle);
         expect(primaryActionText.nativeElement.textContent).toContain(component.primaryActionText);
     });
+<<<<<<< HEAD
 
     it('should match snapshot', async () => {
         component.title = 'titleTest';
@@ -130,3 +130,6 @@ describe('HubCardComponent', () => {
         expect(fixture).toMatchSnapshot();
     });
 });
+=======
+});
+>>>>>>> develop
