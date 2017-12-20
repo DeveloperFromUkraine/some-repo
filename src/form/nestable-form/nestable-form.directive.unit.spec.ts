@@ -1,7 +1,7 @@
 import { NestableFormDirective } from './nestable-form.directive';
 import { FormBuilder, Validators } from '@angular/forms';
 
-describe('Messages component', () => {
+describe('NestableFormDirective', () => {
   let directive: NestableFormDirective;
   let parentDirective: NestableFormDirective;
 
@@ -43,7 +43,7 @@ describe('Messages component', () => {
         parentDirective.registerNestedForm('myself', parentDirective.formGroup)
       ).toThrowError(
         'Trying to add itself! Nestable form can be added only on parent "FormGroup".'
-      );
+        );
     });
   });
 });

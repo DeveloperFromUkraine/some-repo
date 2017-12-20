@@ -1,0 +1,26 @@
+<form [formGroup]="formGroup">
+  <mat-form-field>
+    <input
+      #startPickerInput="matDatepickerInput"
+      [formControlName]="startDateControlName"
+      matInput
+      placeholder="Start Date"
+      [matDatepicker]="startPicker"
+      [matDatepickerFilter]="startDateFilter"
+    >
+    <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
+    <mat-datepicker #startPicker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+    <input
+      #endPickerInput="matDatepickerInput"
+      [formControlName]="endDateControlName"
+      matInput
+      placeholder="End Date"
+      [matDatepicker]="endPicker"
+      [matDatepickerFilter]="endDateFilter"
+    >
+    <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
+    <mat-datepicker #endPicker [startAt]="startPicker._selected"></mat-datepicker>
+  </mat-form-field>
+</form>
