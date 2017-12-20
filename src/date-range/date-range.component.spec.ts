@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { DateRangeComponent } from "date-range/date-range.component";
+import { DateRangeComponent } from './date-range.component';
 import { ComponentTest } from "../../test/test-bed/component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatFormFieldModule, MatInputModule, MatDatepickerModule, MatNativeDateModule } from "@angular/material";

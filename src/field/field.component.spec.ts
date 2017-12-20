@@ -30,7 +30,6 @@ describe('FieldComponent', () => {
 
         expect(ne.textContent).toContain(component.label);
     });
-<<<<<<< HEAD
 
     it('should match snapshot', async () => {
         component.label = 'label!';
@@ -39,6 +38,3 @@ describe('FieldComponent', () => {
         expect(fixture).toMatchSnapshot();
     });
 });
-=======
-});
->>>>>>> develop
