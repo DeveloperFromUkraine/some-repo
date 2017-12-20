@@ -4,6 +4,7 @@
 - Add CONTRIBUTING.md file to make contribution process a little more clear
 - New [loading container component](./src/loading-container/README.md) `ign-loading-container`
 - New [date range picker component](./src/date-range/README.md) `ign-date-range`
+- Empty state image will now scale to fit the page
 
 ### v0.2.0
 - Revert to deploying from `dist/` now that pipeline support exists (thanks Baker!)
