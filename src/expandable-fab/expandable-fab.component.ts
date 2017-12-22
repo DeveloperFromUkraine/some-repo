@@ -13,7 +13,7 @@ export class ExpandableFabComponent implements AfterContentInit, OnDestroy {
 
   activeClass: string = null;
   isOpen = false;
-  unSubscribe$ = new Subject<void>();
+  private readonly unSubscribe$ = new Subject<void>();
 
   ngAfterContentInit() {
     const outputs = this.btns.map(button => button.clicked);
