@@ -41,53 +41,41 @@ describe('SideNavListItemComponent', () => {
         expect(ne.textContent).toContain(component.description);
     });
 
-    /*it('should call handleClick with event', () => {
-        let spy = jest.spyOn(component, 'handleClick');
-        let event = new Event('keyup.enter');
-
-        component.handleClick(event);
-        fixture.detectChanges();
-
-        expect(spy).toHaveBeenCalledWith(event);
-    });*/
-
-    xit('should emit onClick when click event emitted', () => {
+    it('should emit onClick when click event emitted', () => {
         de = fixture.debugElement.query(By.css('.app-link'));
         ne = de.nativeElement;
         let spy = jest.fn();
-        let event = new Event('click');
 
         component.onClick.subscribe(spy);
-        ne.dispatchEvent(event);
-        fixture.detectChanges();
+        ne.dispatchEvent(new Event('click'));
 
         expect(spy).toHaveBeenCalled();
     });
 
     it('should call handleClick when keyup.enter event emitted', () => {
-        de = fixture.debugElement.query(By.css('.app-link'));
-        ne = de.nativeElement;
-        let event = new KeyboardEvent('keyup.enter');
         jest.spyOn(component, 'handleClick');
-        //let spy = jest.spyOn(window, 'dispatchEvent');
-        
-        //window.dispatchEvent(event);
-        de.triggerEventHandler('keyup.enter', {});
-        //ne.dispatchEvent(event);
-        //document.dispatchEvent(event);
-        
-        fixture.detectChanges();
 
-        //expect(spy).toHaveBeenCalledWith(event);
+        fixture.debugElement.triggerEventHandler('keyup.enter', { preventDefault: jest.fn() });
+
         expect(component.handleClick).toHaveBeenCalled();
     });
 
-    it('should emit onClick when keyup.space event emitted', () => {
+    it('should call handleClick when keyup.space event emitted', () => {
+        jest.spyOn(component, 'handleClick');
 
+        fixture.debugElement.triggerEventHandler('keyup.space', { preventDefault: jest.fn() });
+
+        expect(component.handleClick).toHaveBeenCalled();
     });
 
-    it('should emit onClick event with key value', async () => {
+    it('should emit onClick event with key value', () => {
+        component.key = 'test';
+        let spy = jest.fn();
+        
+        component.onClick.subscribe(spy);
+        component.handleClick(new Event('keyup.enter'));
 
+        expect(spy).toHaveBeenCalledWith(component.key);
     });
 
     it('should match snapshot', async () => {
@@ -95,7 +83,7 @@ describe('SideNavListItemComponent', () => {
         component.description = 'test description';
 
         await fixture.detectChanges();
-        
+
         expect(fixture).toMatchSnapshot();
     });
 });
