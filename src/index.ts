@@ -114,6 +114,10 @@ import { FooterComponent } from './footer/footer.component';
 import { DateRangeModule } from './date-range/date-range.module';
 import { DateRangeComponent } from './date-range/date-range.component';
 
+import { TextListItemComponent } from './text-list-item/text-list-item.component';
+import { NavListComponent } from './nav-list/nav-list.component';
+
+
 import {
   MatToolbarModule,
   MatMenuModule,
@@ -124,6 +128,7 @@ import {
   MatRippleModule,
   MatProgressSpinnerModule,
   MatNativeDateModule,
+  MatListModule,
 } from '@angular/material';
 
 const components = [
@@ -180,6 +185,8 @@ const components = [
   NestableFormDirective,
   LoadingContainerComponent,
   FooterComponent,
+  TextListItemComponent,
+  NavListComponent
 ];
 
 @NgModule({
@@ -195,6 +202,7 @@ const components = [
     MatProgressSpinnerModule,
     MatNativeDateModule,
     DateRangeModule,
+    MatListModule,
   ],
   declarations: components,
   exports: [...components, DateRangeComponent],
