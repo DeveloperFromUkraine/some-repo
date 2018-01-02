@@ -48,11 +48,12 @@ export class EmptyStateDescriptionComponent {}
 @Component({
   selector: 'ign-empty-state-image',
   template: `
-    <img class='image' width="640px" src='/assets/images/empty-state.svg'/>'
+    <img width="100%" src='/assets/images/empty-state.svg'/>'
   `,
   styles: [
     `
     :host {
+      width: 33%;
       position: absolute;
       z-index: 0;
       bottom: 0px;
