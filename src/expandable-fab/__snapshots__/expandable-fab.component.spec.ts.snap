@@ -3,7 +3,9 @@
 exports[`ExpandableFabComponent should match snapshot 1`] = `
 <ign-expandable-fab
   activeClass="null"
+  btns={[Function QueryList]}
   isOpen={[Function Boolean]}
+  unSubscribe$={[Function Subject]}
 >
   <div
     class="buttons-container active"

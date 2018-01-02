@@ -4,9 +4,8 @@ exports[`EmptyStateImageComponent should match snapshot 1`] = `
 <ign-empty-state-image>
   <img
     _ngcontent-c0=""
-    class="image"
     src="/assets/images/empty-state.svg"
-    width="640px"
+    width="100%"
   />'
 </ign-empty-state-image>
 `;
