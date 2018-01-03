@@ -97,4 +97,8 @@ describe('TextListItemComponent', () => {
         expect(secondaryTextDE).toBeNull();
         expect(tertiaryTextDE).toBeNull();
     });
+
+    it('should match snapshot', () => {
+        expect(fixture).toMatchSnapshot();
+    });
 });
