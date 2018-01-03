@@ -1,7 +1,10 @@
 ### vNEXT
 
+
 ### v0.3.1
 - Updated the expandable-fab component so that when one of its children buttons are clicked, it collapses automatically.
+- Introducing first pass of text-list-item component
+- Extracting text-list-item and nav-list into modules
 
 ### v0.3.0
 - Empty state buttons will now center and style correctly when using either ign-button-group or mat-card-actions
