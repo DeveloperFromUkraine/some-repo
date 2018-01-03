@@ -30,4 +30,15 @@ describe('FieldComponent', () => {
 
         expect(ne.textContent).toContain(component.label);
     });
+<<<<<<< HEAD
+
+    it('should match snapshot', async () => {
+        component.label = 'label!';
+        await fixture.detectChanges();
+
+        expect(fixture).toMatchSnapshot();
+    });
 });
+=======
+});
+>>>>>>> develop

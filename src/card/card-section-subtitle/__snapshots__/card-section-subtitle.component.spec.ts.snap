@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardSectionSubTitleComponent should match snapshot 1`] = `
+<ign-card-section-subtitle>
+  <h3
+    class="ign-card-section-subtitle mat-card-subtitle"
+  >
+    
+  </h3>
+</ign-card-section-subtitle>
+`;

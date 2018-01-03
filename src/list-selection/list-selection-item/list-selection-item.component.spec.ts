@@ -77,4 +77,17 @@ describe('ListSelectionItemComponent', () => {
 
         expect(de).not.toBeTruthy();
     });
+<<<<<<< HEAD
+
+    it('should match snapshot', async () => {
+        component.title = 'title';
+        component.subtitle = 'subtitle';
+
+        await fixture.detectChanges();
+
+        expect(fixture).toMatchSnapshot();
+    });
 });
+=======
+});
+>>>>>>> develop

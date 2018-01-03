@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListContentUnselectedStateComponent should match snapshot 1`] = `
+<ign-list-content-unselected-state>
+  
+</ign-list-content-unselected-state>
+`;

@@ -8,9 +8,25 @@ const mock = () => {
   };
 };
 
-Object.defineProperty(window, 'localStorage', {value: mock()});
-Object.defineProperty(window, 'sessionStorage', {value: mock()});
+Object.defineProperty(window, 'localStorage', { value: mock() });
+Object.defineProperty(window, 'sessionStorage', { value: mock() });
 Object.defineProperty(window, 'getComputedStyle', {
   value: () => ['-webkit-appearance']
 });
-Object.defineProperty(window, 'CSS', {value: () => ({})});
+Object.defineProperty(window, 'CSS', { value: () => ({}) });
+Object.defineProperty(window, 'matchMedia', {
+  value: () => (
+    {
+      matches: false,
+      addListener: () => { },
+      removeListener: () => { }
+    }
+  )
+});
+Object.defineProperty(document.body.style, 'transform', {
+  value: () =>
+    ({
+      enumerable: true,
+      configurable: true
+    })
+});

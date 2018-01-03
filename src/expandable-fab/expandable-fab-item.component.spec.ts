@@ -62,4 +62,18 @@ describe('ExpandableFabItemComponent', () => {
 
         expect(spy).toHaveBeenCalled();
     });
+<<<<<<< HEAD
+
+    it('should match snapshot', async () => {
+        component.tooltipText = 'toolTip';
+        component.icon = 'email';
+        component.href = 'updatedHref';
+        
+        await fixture.detectChanges();
+
+        expect(fixture).toMatchSnapshot();
+    });
 });
+=======
+});
+>>>>>>> develop

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListSelectionComponent should match snapshot 1`] = `
+<ign-list-selection>
+  <div
+    class="container"
+  >
+    
+  </div>
+</ign-list-selection>
+`;
