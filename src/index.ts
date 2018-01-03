@@ -114,9 +114,10 @@ import { FooterComponent } from './footer/footer.component';
 import { DateRangeModule } from './date-range/date-range.module';
 import { DateRangeComponent } from './date-range/date-range.component';
 
+import { TextListItemModule } from './text-list-item/text-list-item.module';
 import { TextListItemComponent } from './text-list-item/text-list-item.component';
+import { NavListModule } from './nav-list/nav-list.module';
 import { NavListComponent } from './nav-list/nav-list.component';
-
 
 import {
   MatToolbarModule,
@@ -184,9 +185,7 @@ const components = [
   CenterComponent,
   NestableFormDirective,
   LoadingContainerComponent,
-  FooterComponent,
-  TextListItemComponent,
-  NavListComponent
+  FooterComponent
 ];
 
 @NgModule({
@@ -203,9 +202,11 @@ const components = [
     MatNativeDateModule,
     DateRangeModule,
     MatListModule,
+    NavListModule,
+    TextListItemModule
   ],
   declarations: components,
-  exports: [...components, DateRangeComponent],
+  exports: [...components, DateRangeComponent, NavListModule, TextListItemModule],
 })
 export class IgniteDesignSystemModule {
   static forRoot(): ModuleWithProviders {
