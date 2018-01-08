@@ -62,7 +62,6 @@ describe('ExpandableFabComponent', () => {
         expect(fixture.debugElement.query(By.css('.icon-primary-active'))).not.toBeTruthy();
         expect(fixture.debugElement.query(By.css('.icon-secondary-active'))).not.toBeTruthy();
     });
-<<<<<<< HEAD
 
     it('should match snapshot', async () => {
         component.isOpen = true;
@@ -72,6 +71,3 @@ describe('ExpandableFabComponent', () => {
         expect(fixture).toMatchSnapshot();
     });
 });
-=======
-});
->>>>>>> develop

@@ -62,7 +62,6 @@ describe('ExpandableFabItemComponent', () => {
 
         expect(spy).toHaveBeenCalled();
     });
-<<<<<<< HEAD
 
     it('should match snapshot', async () => {
         component.tooltipText = 'toolTip';
@@ -74,6 +73,3 @@ describe('ExpandableFabItemComponent', () => {
         expect(fixture).toMatchSnapshot();
     });
 });
-=======
-});
->>>>>>> develop

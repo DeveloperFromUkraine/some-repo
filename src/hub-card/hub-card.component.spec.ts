@@ -114,7 +114,6 @@ describe('HubCardComponent', () => {
         expect(subTitle.nativeElement.textContent).toContain(component.subtitle);
         expect(primaryActionText.nativeElement.textContent).toContain(component.primaryActionText);
     });
-<<<<<<< HEAD
 
     it('should match snapshot', async () => {
         component.title = 'titleTest';
@@ -130,6 +129,3 @@ describe('HubCardComponent', () => {
         expect(fixture).toMatchSnapshot();
     });
 });
-=======
-});
->>>>>>> develop
