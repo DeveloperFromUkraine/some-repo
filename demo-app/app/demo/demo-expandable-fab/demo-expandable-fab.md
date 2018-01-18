@@ -1,10 +1,10 @@
-<br>
+
 ## Content
 
 * Buttons within the FAB should only include those relevant to the current page and its navigation.
 * Three or four buttons maximum should be located within the FAB to avoid unfriendly user experience.
 
-<br>
+
 ## Style
 
 ign-expandable-fab

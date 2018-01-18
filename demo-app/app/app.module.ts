@@ -38,7 +38,6 @@ import { DemoLoadingContainerComponent } from './demo/demo-loading-container/dem
 import { DemoNavListComponent } from './demo/demo-nav-list/demo-nav-list.component';
 import { DemoPageComponent } from './demo/demo-page/demo-page.component';
 import { DemoRightDrawerComponent } from './demo/demo-right-drawer/demo-right-drawer.component';
-import { DemoSelectContainerComponent } from './demo/demo-select-container/demo-select-container.component';
 import { DemoSidenavComponent } from './demo/demo-sidenav/demo-sidenav.component';
 import { DemoTextComponent } from './demo/demo-text/demo-text.component';
 import { DemoAccessibilityDirective } from './demo/demo-accessibility/demo-accessibility.directive';
@@ -47,67 +46,66 @@ import { DemoIconComponent } from './demo/demo-icon/demo-icon.component';
 import { DemoSelectionListComponent } from './demo/demo-selection-list/demo-selection-list.component';
 
 const routes: Routes = [
-  { path: '', component: WelcomeComponent },
-  { path: 'dialog', component: DemoDialogComponent },
-  { path: 'radio-button', component: DemoRadioButtonComponent },
-  { path: 'checkbox', component: DemoCheckboxComponent },
-  { path: 'card', component: DemoCardComponent },
-  { path: 'center', component: DemoCenterComponent },
-  { path: 'date-range', component: DemoDateRangeComponent },
-  { path: 'divider', component: DemoDividerComponent },
-  { path: 'empty-state', component: DemoEmptyStateComponent },
-  { path: 'empty-state/empty-state-example', component: DemoEmptyStateExampleComponent },
-  { path: 'error-banner', component: DemoErrorBannerComponent },
-  { path: 'expandable-fab', component: DemoExpandableFabComponent },
-  { path: 'field', component: DemoFieldComponent },
-  { path: 'footer', component: DemoFooterComponent },
-  { path: 'form', component: DemoFormComponent },
-  { path: 'hub-card', component: DemoHubCardComponent },
-  { path: 'info-banner', component: DemoInfoBannerComponent },
-  { path: 'list-content', component: DemoListContentComponent },
-  { path: 'loading-container', component: DemoLoadingContainerComponent },
-  { path: 'nav-list', component: DemoNavListComponent },
-  { path: 'page', component: DemoPageComponent },
-  { path: 'right-drawer', component: DemoRightDrawerComponent },
-  { path: 'select-container', component: DemoSelectContainerComponent },
-  { path: 'sidenav', component: DemoSidenavComponent },
-  { path: 'text', component: DemoTextComponent },
-  { path: 'accessibility', component: DemoAccessibilityDirective },
-  { path: 'accessibility-component', component: DemoAccessibilityComponent },
-  { path: 'icon', component: DemoIconComponent },
-  { path: 'selection-list', component: DemoSelectionListComponent },
+    { path: '', component: WelcomeComponent },
+    { path: 'dialog', component: DemoDialogComponent },
+    { path: 'radio-button', component: DemoRadioButtonComponent },
+    { path: 'checkbox', component: DemoCheckboxComponent },
+    { path: 'card', component: DemoCardComponent },
+    { path: 'center', component: DemoCenterComponent },
+    { path: 'date-range', component: DemoDateRangeComponent },
+    { path: 'divider', component: DemoDividerComponent },
+    { path: 'empty-state', component: DemoEmptyStateComponent },
+    { path: 'empty-state/empty-state-example', component: DemoEmptyStateExampleComponent },
+    { path: 'error-banner', component: DemoErrorBannerComponent },
+    { path: 'expandable-fab', component: DemoExpandableFabComponent },
+    { path: 'field', component: DemoFieldComponent },
+    { path: 'footer', component: DemoFooterComponent },
+    { path: 'form', component: DemoFormComponent },
+    { path: 'hub-card', component: DemoHubCardComponent },
+    { path: 'info-banner', component: DemoInfoBannerComponent },
+    { path: 'list-content', component: DemoListContentComponent },
+    { path: 'loading-container', component: DemoLoadingContainerComponent },
+    { path: 'nav-list', component: DemoNavListComponent },
+    { path: 'page', component: DemoPageComponent },
+    { path: 'right-drawer', component: DemoRightDrawerComponent },
+    { path: 'sidenav', component: DemoSidenavComponent },
+    { path: 'text', component: DemoTextComponent },
+    { path: 'accessibility', component: DemoAccessibilityDirective },
+    { path: 'accessibility-component', component: DemoAccessibilityComponent },
+    { path: 'icon', component: DemoIconComponent },
+    { path: 'selection-list', component: DemoSelectionListComponent },
 
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    WelcomeComponent,
-    DemoAccessibilityDirective,
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    RouterModule.forRoot(routes, {
-      useHash: true
-    }),
-    MatButtonModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatRadioModule,
-    MatIconModule,
+    declarations: [
+        AppComponent,
+        WelcomeComponent,
+        DemoAccessibilityDirective,
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        BrowserAnimationsModule,
+        RouterModule.forRoot(routes, {
+            useHash: true
+        }),
+        MatButtonModule,
+        MatToolbarModule,
+        MatSidenavModule,
+        MatCardModule,
+        MatCheckboxModule,
+        MatRadioModule,
+        MatIconModule,
 
-    IgniteDesignSystemModule,
+        IgniteDesignSystemModule,
 
-    MarkdownModule,
-    DemoModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-  exports: [MatIconModule, MatButtonModule]
+        MarkdownModule,
+        DemoModule,
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    exports: [MatIconModule, MatButtonModule]
 })
 
 export class AppModule {

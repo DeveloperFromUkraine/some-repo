@@ -1,4 +1,4 @@
-<br>
+
 ## Content
 
 * Error banners should be displayed when there was an issue executing an instruction, whether it is an error from
@@ -6,7 +6,6 @@ the front end or back end.
 * Error banners should include mechanisms that allow the user to close the component.
 * Error banners should not include informational, non-error messages.
 
-<br>
 
 ## Style
 * Error banners should be short and concise. Longer errors should be displayed in logs.

@@ -1,11 +1,11 @@
-<br>
+
 ## Content
 
 * Info banners should be displayed when there is a message regarding a request sent by the user.
 * Info banners should include mechanisms that allow the user to close the component.
 * Info banners should not contain error messages.
 
-<br>
+
 ## Style
 
 * Info banners should be short and concise.

@@ -1,14 +1,12 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import { Component } from '@angular/core';
 
 const NOTES: string = require('raw-loader!./demo-checkbox.md');
 
 @Component({
-  encapsulation: ViewEncapsulation.None,
-  selector: 'demo-checkbox',
-  templateUrl: './demo-checkbox.html',
-  styleUrls: ['./demo-checkbox.css'],
+    selector: 'demo-checkbox',
+    templateUrl: './demo-checkbox.html',
 })
 
 export class DemoCheckboxComponent {
-  notes = NOTES;
+    notes = NOTES;
 }

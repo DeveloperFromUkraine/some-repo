@@ -1,4 +1,4 @@
-<br>
+
 ## Content
 * Cards can be used to display a wide variety of content.
 * Content should be separated by context.
@@ -14,7 +14,7 @@
     * card-title
     * card-toolbar
 
-<br>
+
 ## Style
 * Cards should be placed evenly spaced around the page in respect to other cards.
 * The hierarchy of card components should be as follows (in descending order):
@@ -32,5 +32,5 @@
 * Variations to the above may be made to fulfill the purposes of the card, where some components may not be needed.
 * Stylistic specification per Card component may be found in the respective expansion panel below.
 
-<br>
+
 ## Card Components
