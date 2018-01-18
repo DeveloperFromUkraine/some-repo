@@ -1,8 +1,6 @@
-<header #header>
-  <mat-toolbar>Ignite Design System</mat-toolbar>
-</header>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <mat-sidenav-container>
-  <mat-sidenav class="sidenav" mode="side" opened="true" [fixedInViewport]="true" [fixedTopGap]="headerHeight">
+  <mat-sidenav #sidenav class="sidenav" mode="side" opened="false" [fixedInViewport]="true" [fixedTopGap]="headerHeight + 8">
     <ul>
       <li *ngFor="let item of navItems">
         <a [routerLink]="[item.route]">{{ item.name }}</a>
@@ -11,6 +9,13 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-card>
+      <header #header>
+        <mat-toolbar style="background-color: white; color: #424949" class="mat-elevation-z5">
+          <button mat-icon-button> <mat-icon style="color:lightgray" (click)="sidenav.toggle()" class="material-icons">menu</mat-icon></button>
+          <button mat-button><img class ="logo-small" src="/assets/logo-small.png"></button>
+          Ignite Design System
+        </mat-toolbar>
+      </header>
       <router-outlet></router-outlet>
     </mat-card>
   </mat-sidenav-content>

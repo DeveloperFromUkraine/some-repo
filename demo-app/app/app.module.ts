@@ -12,15 +12,24 @@ import { MatSidenavModule, MatToolbarModule, MatCardModule } from '@angular/mate
 import { RouterModule, Routes } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 
+import { MatCheckboxModule } from '@angular/material';
+import { MatRadioModule } from '@angular/material/';
+import { MatIconModule } from '@angular/material/';
+import { MatButtonModule } from '@angular/material';
+
 import { DemoDialogComponent } from './demo/demo-dialog/demo-dialog.component';
 import { DemoRadioButtonComponent } from './demo/demo-radio-button/demo-radio-button.component';
 import { DemoCheckboxComponent } from './demo/demo-checkbox/demo-checkbox.component';
+import { DemoCardComponent } from './demo/demo-card/demo-card.component';
+import { DemoCenterComponent } from './demo/demo-center/demo-center.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
   { path: 'dialog', component: DemoDialogComponent },
   { path: 'radio-button', component: DemoRadioButtonComponent },
   { path: 'checkbox', component: DemoCheckboxComponent },
+  { path: 'card', component: DemoCardComponent },
+  { path: 'center', component: DemoCenterComponent },
 ];
 
 @NgModule({
@@ -35,10 +44,13 @@ const routes: Routes = [
     RouterModule.forRoot(routes, {
       useHash: true
     }),
-
+    MatButtonModule,
     MatToolbarModule,
     MatSidenavModule,
     MatCardModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatIconModule,
 
     IgniteDesignSystemModule,
 
@@ -46,6 +58,10 @@ const routes: Routes = [
     DemoModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [MatIconModule, MatButtonModule]
 })
-export class AppModule { }
+
+export class AppModule {
+
+}

@@ -13,9 +13,11 @@ export class AppComponent implements AfterViewInit {
   headerHeight: number;
 
   navItems = [
+    { name: 'Card', route: '/card' },
+    { name: 'Center', route: '/center' },
+    { name: 'Checkbox', route: '/checkbox' },
     { name: 'Dialog', route: '/dialog' },
     { name: 'Radio Button', route: '/radio-button' },
-    { name: 'Checkbox', route: '/checkbox' },
   ];
 
   ngAfterViewInit () {

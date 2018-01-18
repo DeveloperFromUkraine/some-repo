@@ -1,0 +1,16 @@
+.tabHeight{
+    padding: 16px;
+}
+
+.mat-ink-bar {
+    background-color: darkgreen !important;
+}
+
+a{
+    color: darkgreen;
+}
+
+#bodyContainer{
+    font: 500 20px/32px Avenir,Roboto,Helvetica Neue,sans-serif;
+    font-size: 15px;
+}
