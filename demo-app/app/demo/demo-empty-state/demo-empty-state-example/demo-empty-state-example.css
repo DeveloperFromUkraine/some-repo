@@ -2,12 +2,9 @@
     padding: 16px;
 }
 
-.mat-ink-bar {
-    background-color: green !important;
-}
-
-.mat-tab-group.mat-primary .mat-tab-label:focus{
-    background-color: rgba(8, 149, 8, 0.3) !important;
+.mat-button.mat-accent, .mat-icon-button.mat-accent{
+    background-color: green;
+    color: white;
 }
 
 #bodyContainer{
@@ -34,4 +31,9 @@ h2{
 ul{
     list-style-type:disc!important;
     padding: 10px 10px 10px 25px;
+}
+
+.mat-card{
+    min-height: 100vh;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,0), 0 5px 8px 0 rgba(0,0,0,.0), 0 1px 14px 0 rgba(0,0,0,0) !important;
 }

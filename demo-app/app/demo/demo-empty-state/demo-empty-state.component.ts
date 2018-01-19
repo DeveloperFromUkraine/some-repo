@@ -1,7 +1,8 @@
-import {Component} from '@angular/core';
+import {Component,  ViewEncapsulation} from '@angular/core';
 const NOTES: string = require('raw-loader!./demo-empty-state.md');
 
 @Component({
+    encapsulation: ViewEncapsulation.None,
     selector: 'demo-empty-state',
     templateUrl: './demo-empty-state.html',
     styleUrls: ['./demo-empty-state.css'],

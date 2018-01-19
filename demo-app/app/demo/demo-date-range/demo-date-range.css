@@ -1,6 +1,6 @@
 .tabHeight{
-     padding: 16px;
- }
+    padding: 16px;
+}
 
 .mat-ink-bar {
     background-color: green !important;
@@ -12,7 +12,7 @@
 
 #bodyContainer{
     font: 500 20px/32px Avenir,Roboto,Helvetica Neue,sans-serif;
-    font-size: 15px;
+    font-size: 15px !important;
     font-weight: normal;
 }
 
@@ -34,4 +34,8 @@ h2{
 ul{
     list-style-type:disc!important;
     padding: 10px 10px 10px 25px;
+}
+
+.mat-form-field-ripple{
+    background-color: rgba(8, 149, 8, 0.3);
 }

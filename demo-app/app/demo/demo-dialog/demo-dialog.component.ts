@@ -1,8 +1,9 @@
-import {Component} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 import {MatDialog} from '@angular/material';
 const NOTES: string = require('raw-loader!./demo-dialog.md');
 
 @Component({
+   encapsulation: ViewEncapsulation.None,
   selector: 'demo-dialog',
   templateUrl: './demo-dialog.html',
   styleUrls: ['./demo-dialog.css'],

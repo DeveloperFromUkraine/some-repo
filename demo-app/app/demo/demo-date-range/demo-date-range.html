@@ -1,43 +1,46 @@
 <div id="bodyContainer"><br><h1><u>Date-Range</u></h1>
-<br><h2>Use</h2>
+    <br><h2>Use</h2>
+    The date range component is used to create a pair of date pickers corresponding to the start and end dates of a range.
 
-<br>
-<h2>Sample</h2>
+    <br><br>
+    <h2>Sample</h2>
 
-<mat-tab-group>
-    <mat-tab label="Component Sample"><div class="tabHeight">
-        <form [formGroup]="form">
-            <ign-date-range [formGroup]="form.controls.myDateRange"></ign-date-range>
-        </form>
-    </div></mat-tab>
-    <mat-tab label="HTML"><div class="tabHeight">
-        <table style="width:100%">
-            &lt;ign-date-range [formGroup]="form.controls.myDateRange"&gt;&lt;/ign-date-range&gt;
-        </table></div>
-    </mat-tab>
-    <mat-tab label="TS"><div class="tabHeight">
-        <table style="width:100%">
-            public formBuilder: FormBuilder; <br>
-            private close$ = new Subject&lt;void&gt;(); <br>
-            form: FormGroup; <br>
-            constructor (formBuilder: FormBuilder) &#123; <br>
-            &nbsp;&nbsp;this.formBuilder = formBuilder; <br>
-            &#125; <br>
+    <mat-tab-group>
+        <mat-tab label="Component Sample"><div class="tabHeight">
+            <form [formGroup]="form">
+                <ign-date-range [formGroup]="form.controls.myDateRange"></ign-date-range>
+            </form>
+        </div></mat-tab>
+        <mat-tab label="HTML"><div class="tabHeight">
+            <table style="width:100%">
+                &lt;ign-date-range [formGroup]="form.controls.myDateRange"&gt;&lt;/ign-date-range&gt;
+            </table></div>
+        </mat-tab>
+        <mat-tab label="TS"><div class="tabHeight">
+            <table style="width:100%">
+                public formBuilder: FormBuilder; <br>
+                private close$ = new Subject&lt;void&gt;(); <br>
+                form: FormGroup; <br>
+                constructor (formBuilder: FormBuilder) &#123; <br>
+                &nbsp;&nbsp;this.formBuilder = formBuilder; <br>
+                &#125; <br>
 
 
-            ngOnInit(): void &#123; <br>
-            &nbsp;&nbsp;this.form = this.formBuilder.group(&#123; <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;myDateRange: this.formBuilder.group(&#123; <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;startDate: [new Date()], <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;endDate: [null] <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&#125;) <br>
-            &nbsp;&nbsp;&#125;) <br>
-            &#125; <br>
+                ngOnInit(): void &#123; <br>
+                &nbsp;&nbsp;this.form = this.formBuilder.group(&#123; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;myDateRange: this.formBuilder.group(&#123; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;startDate: [new Date()], <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;endDate: [null] <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&#125;) <br>
+                &nbsp;&nbsp;&#125;) <br>
+                &#125; <br>
 
-            ngOnDestroy(): void &#123; <br>
-            &nbsp;&nbsp;this.close$.next(); <br>
-            &nbsp;&nbsp;this.close$.complete(); <br>
-            &#125;
-        </table></div>
-    </mat-tab>
-</mat-tab-group></div>
+                ngOnDestroy(): void &#123; <br>
+                &nbsp;&nbsp;this.close$.next(); <br>
+                &nbsp;&nbsp;this.close$.complete(); <br>
+                &#125;
+            </table></div>
+        </mat-tab>
+    </mat-tab-group>
+    <markdown [content]="notes"></markdown>
+</div>

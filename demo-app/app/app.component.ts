@@ -20,6 +20,7 @@ export class AppComponent implements AfterViewInit {
     { name: 'Dialog', route: '/dialog' },
     { name: 'Divider', route: '/divider' },
     { name: 'Empty State', route: '/empty-state' },
+    { name: 'Error Banner', route: '/error-banner' },
     { name: 'Radio Button', route: '/radio-button' },
   ];
 

@@ -14,6 +14,8 @@ import { DemoCenterComponent } from './demo-center/demo-center.component';
 import { DemoDateRangeComponent } from './demo-date-range/demo-date-range.component';
 import { DemoDividerComponent } from './demo-divider/demo-divider.component';
 import { DemoEmptyStateComponent } from './demo-empty-state/demo-empty-state.component';
+import { DemoEmptyStateExampleComponent } from './demo-empty-state/demo-empty-state-example/demo-empty-state-example.component';
+import { DemoErrorBannerComponent } from './demo-error-banner/demo-error-banner.component';
 
 import { MatExpansionModule } from '@angular/material';
 import { MatTabsModule, MatButtonModule } from '@angular/material';
@@ -27,8 +29,9 @@ import { MatSelectModule } from '@angular/material';
 import { MatInputModule } from '@angular/material';
 import { MatDatepickerModule } from '@angular/material';
 
-import { DateRangeModule } from '../../../src/date-range/date-range.module';
+import { RouterModule } from '@angular/router';
 
+import { DateRangeModule } from '../../../src/date-range/date-range.module';
 import {IgniteDesignSystemModule} from '../../../src';
 
 const materialModules = [
@@ -55,6 +58,7 @@ const materialModules = [
     CommonModule,
     IgniteDesignSystemModule,
     DateRangeModule,
+    RouterModule,
   ],
   declarations: [
     DemoDialogComponent,
@@ -66,11 +70,13 @@ const materialModules = [
     DemoDateRangeComponent,
     DemoDividerComponent,
     DemoEmptyStateComponent,
+    DemoEmptyStateExampleComponent,
+    DemoErrorBannerComponent,
   ],
   exports: [
-      ...materialModules,
+      ...materialModules, RouterModule
   ],
-    entryComponents: [DemoDialogComponent, DemoDialogComponentDialog],
+    entryComponents: [DemoDialogComponent, DemoDialogComponentDialog, DemoEmptyStateExampleComponent, ]
 
 })
 export class DemoModule {}
