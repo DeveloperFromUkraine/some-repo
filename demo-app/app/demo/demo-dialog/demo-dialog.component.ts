@@ -1,5 +1,5 @@
-import {Component, Inject} from '@angular/core';
-import {MatDialog, MatDialogRef} from '@angular/material';
+import {Component} from '@angular/core';
+import {MatDialog} from '@angular/material';
 const NOTES: string = require('raw-loader!./demo-dialog.md');
 
 @Component({

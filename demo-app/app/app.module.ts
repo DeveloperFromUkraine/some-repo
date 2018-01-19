@@ -22,6 +22,9 @@ import { DemoRadioButtonComponent } from './demo/demo-radio-button/demo-radio-bu
 import { DemoCheckboxComponent } from './demo/demo-checkbox/demo-checkbox.component';
 import { DemoCardComponent } from './demo/demo-card/demo-card.component';
 import { DemoCenterComponent } from './demo/demo-center/demo-center.component';
+import { DemoDateRangeComponent } from './demo/demo-date-range/demo-date-range.component';
+import { DemoDividerComponent } from './demo/demo-divider/demo-divider.component';
+import { DemoEmptyStateComponent } from './demo/demo-empty-state/demo-empty-state.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -30,6 +33,9 @@ const routes: Routes = [
   { path: 'checkbox', component: DemoCheckboxComponent },
   { path: 'card', component: DemoCardComponent },
   { path: 'center', component: DemoCenterComponent },
+  { path: 'date-range', component: DemoDateRangeComponent },
+  { path: 'divider', component: DemoDividerComponent },
+  { path: 'empty-state', component: DemoEmptyStateComponent },
 ];
 
 @NgModule({

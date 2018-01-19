@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 
 import { MarkdownModule } from '../markdown/markdown.module';
 import { FormsModule } from '@angular/forms';
-import {CommonModule} from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 import { DemoDialogComponent } from './demo-dialog/demo-dialog.component';
 import { DemoDialogComponentDialog } from './demo-dialog/demo-dialog.component';
@@ -10,9 +11,12 @@ import { DemoRadioButtonComponent } from './demo-radio-button/demo-radio-button.
 import { DemoCheckboxComponent } from './demo-checkbox/demo-checkbox.component';
 import { DemoCardComponent } from './demo-card/demo-card.component';
 import { DemoCenterComponent } from './demo-center/demo-center.component';
+import { DemoDateRangeComponent } from './demo-date-range/demo-date-range.component';
+import { DemoDividerComponent } from './demo-divider/demo-divider.component';
+import { DemoEmptyStateComponent } from './demo-empty-state/demo-empty-state.component';
 
 import { MatExpansionModule } from '@angular/material';
-import { MatTabsModule } from '@angular/material';
+import { MatTabsModule, MatButtonModule } from '@angular/material';
 import { MatRadioModule} from '@angular/material';
 import { MatCardModule } from '@angular/material';
 import { MatCheckboxModule } from '@angular/material';
@@ -21,39 +25,50 @@ import { MatFormFieldModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material';
 import { MatInputModule } from '@angular/material';
+import { MatDatepickerModule } from '@angular/material';
+
+import { DateRangeModule } from '../../../src/date-range/date-range.module';
 
 import {IgniteDesignSystemModule} from '../../../src';
 
-@NgModule({
-  imports: [
+const materialModules = [
     MarkdownModule,
+    MatButtonModule,
     MatCheckboxModule,
     MatExpansionModule,
     MatTabsModule,
     MatRadioModule,
-    FormsModule,
-    CommonModule,
     MatCardModule,
     MatIconModule,
     MatFormFieldModule,
     MatDialogModule,
     MatSelectModule,
     MatInputModule,
-    IgniteDesignSystemModule
+    MatDatepickerModule,
+    ReactiveFormsModule,
+];
+
+@NgModule({
+  imports: [
+    ...materialModules,
+    FormsModule,
+    CommonModule,
+    IgniteDesignSystemModule,
+    DateRangeModule,
   ],
   declarations: [
     DemoDialogComponent,
-     DemoDialogComponentDialog,
+    DemoDialogComponentDialog,
     DemoRadioButtonComponent,
     DemoCheckboxComponent,
     DemoCardComponent,
     DemoCenterComponent,
+    DemoDateRangeComponent,
+    DemoDividerComponent,
+    DemoEmptyStateComponent,
   ],
   exports: [
-      MatCheckboxModule,
-      MatExpansionModule,
-      MatTabsModule,
-      MatRadioModule
+      ...materialModules,
   ],
     entryComponents: [DemoDialogComponent, DemoDialogComponentDialog],
 

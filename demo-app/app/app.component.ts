@@ -16,7 +16,10 @@ export class AppComponent implements AfterViewInit {
     { name: 'Card', route: '/card' },
     { name: 'Center', route: '/center' },
     { name: 'Checkbox', route: '/checkbox' },
+    { name: 'Date Range', route: '/date-range' },
     { name: 'Dialog', route: '/dialog' },
+    { name: 'Divider', route: '/divider' },
+    { name: 'Empty State', route: '/empty-state' },
     { name: 'Radio Button', route: '/radio-button' },
   ];
 
