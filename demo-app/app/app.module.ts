@@ -40,6 +40,7 @@ import { DemoPageComponent } from './demo/demo-page/demo-page.component';
 import { DemoRightDrawerComponent } from './demo/demo-right-drawer/demo-right-drawer.component';
 import { DemoSelectContainerComponent } from './demo/demo-select-container/demo-select-container.component';
 import { DemoSidenavComponent } from './demo/demo-sidenav/demo-sidenav.component';
+import { DemoTextComponent } from './demo/demo-text/demo-text.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -66,6 +67,7 @@ const routes: Routes = [
   { path: 'right-drawer', component: DemoRightDrawerComponent },
   { path: 'select-container', component: DemoSelectContainerComponent },
   { path: 'sidenav', component: DemoSidenavComponent },
+  { path: 'text', component: DemoTextComponent },
 
 ];
 
