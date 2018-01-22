@@ -20,6 +20,8 @@ import { DemoExpandableFabComponent } from './demo-expandable-fab/demo-expandabl
 import { DemoFieldComponent } from './demo-field/demo-field.component';
 import { DemoFooterComponent } from './demo-footer/demo-footer.component';
 import { DemoFormComponent } from './demo-form/demo-form.component';
+import { DemoHubCardComponent } from './demo-hub-card/demo-hub-card.component';
+
 
 import { MatExpansionModule } from '@angular/material';
 import { MatTabsModule, MatButtonModule } from '@angular/material';
@@ -80,6 +82,7 @@ const materialModules = [
     DemoFieldComponent,
     DemoFooterComponent,
     DemoFormComponent,
+    DemoHubCardComponent,
   ],
   exports: [
       ...materialModules, RouterModule

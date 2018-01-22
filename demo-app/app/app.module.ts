@@ -31,6 +31,8 @@ import { DemoExpandableFabComponent } from './demo/demo-expandable-fab/demo-expa
 import { DemoFieldComponent } from './demo/demo-field/demo-field.component';
 import { DemoFooterComponent } from './demo/demo-footer/demo-footer.component';
 import { DemoFormComponent } from './demo/demo-form/demo-form.component';
+import { DemoHubCardComponent } from './demo/demo-hub-card/demo-hub-card.component';
+
 
 
 
@@ -50,6 +52,8 @@ const routes: Routes = [
   { path: 'field', component: DemoFieldComponent },
   { path: 'footer', component: DemoFooterComponent },
   { path: 'form', component: DemoFormComponent },
+  { path: 'hub-card', component: DemoHubCardComponent },
+
 ];
 
 @NgModule({

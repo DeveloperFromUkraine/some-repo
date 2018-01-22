@@ -25,6 +25,7 @@ export class AppComponent implements AfterViewInit {
     { name: 'Field', route: '/field' },
     { name: 'Footer', route: '/footer' },
     { name: 'Form', route: '/form' },
+    { name: 'Hub Card', route: '/hub-card' },
     { name: 'Radio Button', route: '/radio-button' },
   ];
 
