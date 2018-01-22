@@ -41,6 +41,8 @@ import { DemoRightDrawerComponent } from './demo/demo-right-drawer/demo-right-dr
 import { DemoSelectContainerComponent } from './demo/demo-select-container/demo-select-container.component';
 import { DemoSidenavComponent } from './demo/demo-sidenav/demo-sidenav.component';
 import { DemoTextComponent } from './demo/demo-text/demo-text.component';
+import { DemoAccessibilityDirective } from './demo/demo-accessibility/demo-accessibility.directive';
+import { DemoAccessibilityComponent } from './demo/demo-accessibility/demo-accessibility.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -68,6 +70,8 @@ const routes: Routes = [
   { path: 'select-container', component: DemoSelectContainerComponent },
   { path: 'sidenav', component: DemoSidenavComponent },
   { path: 'text', component: DemoTextComponent },
+  { path: 'accessibility', component: DemoAccessibilityDirective },
+  { path: 'accessibility-component', component: DemoAccessibilityComponent },
 
 ];
 
@@ -75,6 +79,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     WelcomeComponent,
+    DemoAccessibilityDirective,
   ],
   imports: [
     BrowserModule,

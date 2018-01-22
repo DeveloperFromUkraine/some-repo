@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import {Component,  ViewEncapsulation} from '@angular/core';
 
 @Component({
-  selector: 'app-welcome',
-  template: 'This is a doc site containing information about material components. ' +
-  'Click the menu icon in the upper left to view the components and get started!',
+    encapsulation: ViewEncapsulation.None,
+    selector: 'welcome-app',
+    templateUrl: './welcome.html',
+    styleUrls: ['./welcome.css'],
 })
+
 export class WelcomeComponent {}

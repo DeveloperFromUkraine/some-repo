@@ -30,6 +30,7 @@ import { DemoRightDrawerComponent } from './demo-right-drawer/demo-right-drawer.
 import { DemoSelectContainerComponent } from './demo-select-container/demo-select-container.component';
 import { DemoSidenavComponent } from './demo-sidenav/demo-sidenav.component';
 import { DemoTextComponent } from './demo-text/demo-text.component';
+import { DemoAccessibilityComponent } from './demo-accessibility/demo-accessibility.component';
 
 import { MatExpansionModule } from '@angular/material';
 import { MatTabsModule, MatButtonModule } from '@angular/material';
@@ -100,6 +101,7 @@ const materialModules = [
     DemoSelectContainerComponent,
     DemoSidenavComponent,
     DemoTextComponent,
+    DemoAccessibilityComponent,
   ],
   exports: [
       ...materialModules, RouterModule,

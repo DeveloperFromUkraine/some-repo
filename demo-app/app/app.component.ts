@@ -13,6 +13,7 @@ export class AppComponent implements AfterViewInit {
   headerHeight: number;
 
   navItems = [
+    { name: 'Accessibility', route: '/accessibility-component' },
     { name: 'Card', route: '/card' },
     { name: 'Center', route: '/center' },
     { name: 'Checkbox', route: '/checkbox' },
