@@ -24,6 +24,8 @@ import { DemoHubCardComponent } from './demo-hub-card/demo-hub-card.component';
 import { DemoInfoBannerComponent } from './demo-info-banner/demo-info-banner.component';
 import { DemoListContentComponent } from './demo-list-content/demo-list-content.component';
 import { DemoLoadingContainerComponent } from './demo-loading-container/demo-loading-container.component';
+import { DemoNavListComponent } from './demo-nav-list/demo-nav-list.component';
+
 
 
 import { MatExpansionModule } from '@angular/material';
@@ -89,6 +91,7 @@ const materialModules = [
     DemoInfoBannerComponent,
     DemoListContentComponent,
     DemoLoadingContainerComponent,
+    DemoNavListComponent,
   ],
   exports: [
       ...materialModules, RouterModule

@@ -1,0 +1,48 @@
+<div id="bodyContainer"><br><h1><u>Navigation List</u></h1>
+    <br><h2> Use</h2>
+    <p> UsUtilize the nav-list component for navigation lists, such as those with anchor tags. Nav-list components'
+    anchor tags can be wrapped in a ign-list-item for multiple links within the list. </p>
+
+    <br><h2>Sample</h2>
+    <mat-tab-group>
+        <mat-tab label="Component Sample">
+            <div class="tabHeight">
+                <ign-nav-list>
+                    <a ign-list-item onClick=window.open() *ngFor="let folder of folders">
+                        <mat-icon mat-list-icon>folder</mat-icon>
+                        <h4>{{folder.name}}</h4>
+                        <p> {{folder.updated | date}} </p>
+                    </a>
+                </ign-nav-list>
+            </div></mat-tab>
+        <mat-tab label="HTML"><div class="tabHeight">
+            <table style="width:100%">
+                &lt;ign-nav-list&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;a ign-list-item onClick&#61;window&#46;open&#40;&#41; &#42;ngFor&#61;"let folder of folders"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mat-icon mat-list-icon&gt;folder&lt;/mat-icon&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;&#123;folder&#46;name&#125;&lt;/h4&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt; &#123;folder&#46;updated &#124; date&#125; &lt;/p&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br>
+                &lt;/ign-nav-list&gt;
+            </table>
+        </div></mat-tab>
+        <mat-tab label="TS"><div class="tabHeight">
+            <table style="width:100%">
+                folders = [<br>
+                &nbsp;&nbsp;&#123;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;name: 'Click the folders to open a blank page.',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;updated: new Date('1/1/16'), <br>
+                &nbsp;&nbsp;&#125;,<br>
+                &nbsp;&nbsp;&#123;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;name: 'Your descriptor will go here.',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;updated: new Date('1/17/16'),<br>
+                &nbsp;&nbsp;&#125;,<br>
+                &nbsp;&nbsp;&#123;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;name: 'The dates are just for show.',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;updated: new Date('1/28/16'),<br>
+                &nbsp;&nbsp;&#125;<br>
+                ];
+            </table>
+        </div></mat-tab>
+    </mat-tab-group>
+    <markdown [content]="notes"></markdown></div>

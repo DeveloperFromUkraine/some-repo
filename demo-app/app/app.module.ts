@@ -35,6 +35,8 @@ import { DemoHubCardComponent } from './demo/demo-hub-card/demo-hub-card.compone
 import { DemoInfoBannerComponent } from './demo/demo-info-banner/demo-info-banner.component';
 import { DemoListContentComponent } from './demo/demo-list-content/demo-list-content.component';
 import { DemoLoadingContainerComponent } from './demo/demo-loading-container/demo-loading-container.component';
+import { DemoNavListComponent } from './demo/demo-nav-list/demo-nav-list.component';
+
 
 
 
@@ -58,6 +60,8 @@ const routes: Routes = [
   { path: 'info-banner', component: DemoInfoBannerComponent },
   { path: 'list-content', component: DemoListContentComponent },
   { path: 'loading-container', component: DemoLoadingContainerComponent },
+  { path: 'nav-list', component: DemoNavListComponent },
+
 
 
 
