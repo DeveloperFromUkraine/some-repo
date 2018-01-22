@@ -29,6 +29,9 @@ import { DemoEmptyStateExampleComponent } from './demo/demo-empty-state/demo-emp
 import { DemoErrorBannerComponent } from './demo/demo-error-banner/demo-error-banner.component';
 import { DemoExpandableFabComponent } from './demo/demo-expandable-fab/demo-expandable-fab.component';
 import { DemoFieldComponent } from './demo/demo-field/demo-field.component';
+import { DemoFooterComponent } from './demo/demo-footer/demo-footer.component';
+import { DemoFormComponent } from './demo/demo-form/demo-form.component';
+
 
 
 const routes: Routes = [
@@ -45,8 +48,8 @@ const routes: Routes = [
   { path: 'error-banner', component: DemoErrorBannerComponent },
   { path: 'expandable-fab', component: DemoExpandableFabComponent },
   { path: 'field', component: DemoFieldComponent },
-
-
+  { path: 'footer', component: DemoFooterComponent },
+  { path: 'form', component: DemoFormComponent },
 ];
 
 @NgModule({

@@ -16,6 +16,10 @@ import { DemoDividerComponent } from './demo-divider/demo-divider.component';
 import { DemoEmptyStateComponent } from './demo-empty-state/demo-empty-state.component';
 import { DemoEmptyStateExampleComponent } from './demo-empty-state/demo-empty-state-example/demo-empty-state-example.component';
 import { DemoErrorBannerComponent } from './demo-error-banner/demo-error-banner.component';
+import { DemoExpandableFabComponent } from './demo-expandable-fab/demo-expandable-fab.component';
+import { DemoFieldComponent } from './demo-field/demo-field.component';
+import { DemoFooterComponent } from './demo-footer/demo-footer.component';
+import { DemoFormComponent } from './demo-form/demo-form.component';
 
 import { MatExpansionModule } from '@angular/material';
 import { MatTabsModule, MatButtonModule } from '@angular/material';
@@ -72,6 +76,10 @@ const materialModules = [
     DemoEmptyStateComponent,
     DemoEmptyStateExampleComponent,
     DemoErrorBannerComponent,
+    DemoExpandableFabComponent,
+    DemoFieldComponent,
+    DemoFooterComponent,
+    DemoFormComponent,
   ],
   exports: [
       ...materialModules, RouterModule

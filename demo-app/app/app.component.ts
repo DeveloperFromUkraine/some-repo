@@ -23,6 +23,8 @@ export class AppComponent implements AfterViewInit {
     { name: 'Error Banner', route: '/error-banner' },
     { name: 'Expandable Floating Action Button (FAB)', route: '/expandable-fab' },
     { name: 'Field', route: '/field' },
+    { name: 'Footer', route: '/footer' },
+    { name: 'Form', route: '/form' },
     { name: 'Radio Button', route: '/radio-button' },
   ];
 
