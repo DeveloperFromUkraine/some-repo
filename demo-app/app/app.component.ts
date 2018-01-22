@@ -30,7 +30,11 @@ export class AppComponent implements AfterViewInit {
     { name: 'List', route: '/list-content' },
     { name: 'Loading Container', route: '/loading-container' },
     { name: 'Nav List', route: '/nav-list' },
+    { name: 'Page', route: '/page' },
     { name: 'Radio Button', route: '/radio-button' },
+    { name: 'Right Drawer', route: '/right-drawer' },
+    { name: 'Select Container', route: '/select-container' },
+    { name: 'Sidenav', route: '/sidenav' },
   ];
 
   ngAfterViewInit () {

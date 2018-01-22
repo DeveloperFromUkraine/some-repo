@@ -25,8 +25,10 @@ import { DemoInfoBannerComponent } from './demo-info-banner/demo-info-banner.com
 import { DemoListContentComponent } from './demo-list-content/demo-list-content.component';
 import { DemoLoadingContainerComponent } from './demo-loading-container/demo-loading-container.component';
 import { DemoNavListComponent } from './demo-nav-list/demo-nav-list.component';
-
-
+import { DemoPageComponent } from './demo-page/demo-page.component';
+import { DemoRightDrawerComponent } from './demo-right-drawer/demo-right-drawer.component';
+import { DemoSelectContainerComponent } from './demo-select-container/demo-select-container.component';
+import { DemoSidenavComponent } from './demo-sidenav/demo-sidenav.component';
 
 import { MatExpansionModule } from '@angular/material';
 import { MatTabsModule, MatButtonModule } from '@angular/material';
@@ -92,11 +94,15 @@ const materialModules = [
     DemoListContentComponent,
     DemoLoadingContainerComponent,
     DemoNavListComponent,
+    DemoPageComponent,
+    DemoRightDrawerComponent,
+    DemoSelectContainerComponent,
+    DemoSidenavComponent,
   ],
   exports: [
-      ...materialModules, RouterModule
+      ...materialModules, RouterModule,
   ],
-    entryComponents: [DemoDialogComponent, DemoDialogComponentDialog, DemoEmptyStateExampleComponent, ]
+    entryComponents: [DemoDialogComponent, DemoDialogComponentDialog, DemoEmptyStateExampleComponent,]
 
 })
 export class DemoModule {}

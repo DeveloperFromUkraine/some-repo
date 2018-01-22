@@ -36,9 +36,10 @@ import { DemoInfoBannerComponent } from './demo/demo-info-banner/demo-info-banne
 import { DemoListContentComponent } from './demo/demo-list-content/demo-list-content.component';
 import { DemoLoadingContainerComponent } from './demo/demo-loading-container/demo-loading-container.component';
 import { DemoNavListComponent } from './demo/demo-nav-list/demo-nav-list.component';
-
-
-
+import { DemoPageComponent } from './demo/demo-page/demo-page.component';
+import { DemoRightDrawerComponent } from './demo/demo-right-drawer/demo-right-drawer.component';
+import { DemoSelectContainerComponent } from './demo/demo-select-container/demo-select-container.component';
+import { DemoSidenavComponent } from './demo/demo-sidenav/demo-sidenav.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -61,10 +62,10 @@ const routes: Routes = [
   { path: 'list-content', component: DemoListContentComponent },
   { path: 'loading-container', component: DemoLoadingContainerComponent },
   { path: 'nav-list', component: DemoNavListComponent },
-
-
-
-
+  { path: 'page', component: DemoPageComponent },
+  { path: 'right-drawer', component: DemoRightDrawerComponent },
+  { path: 'select-container', component: DemoSelectContainerComponent },
+  { path: 'sidenav', component: DemoSidenavComponent },
 
 ];
 
