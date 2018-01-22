@@ -28,6 +28,7 @@ export class AppComponent implements AfterViewInit {
     { name: 'Hub Card', route: '/hub-card' },
     { name: 'Info Banner', route: '/info-banner' },
     { name: 'List', route: '/list-content' },
+    { name: 'Loading Container', route: '/loading-container' },
     { name: 'Radio Button', route: '/radio-button' },
   ];
 

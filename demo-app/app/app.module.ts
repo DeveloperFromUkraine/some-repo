@@ -34,6 +34,8 @@ import { DemoFormComponent } from './demo/demo-form/demo-form.component';
 import { DemoHubCardComponent } from './demo/demo-hub-card/demo-hub-card.component';
 import { DemoInfoBannerComponent } from './demo/demo-info-banner/demo-info-banner.component';
 import { DemoListContentComponent } from './demo/demo-list-content/demo-list-content.component';
+import { DemoLoadingContainerComponent } from './demo/demo-loading-container/demo-loading-container.component';
+
 
 
 const routes: Routes = [
@@ -55,6 +57,8 @@ const routes: Routes = [
   { path: 'hub-card', component: DemoHubCardComponent },
   { path: 'info-banner', component: DemoInfoBannerComponent },
   { path: 'list-content', component: DemoListContentComponent },
+  { path: 'loading-container', component: DemoLoadingContainerComponent },
+
 
 
 
