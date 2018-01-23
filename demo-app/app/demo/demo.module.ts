@@ -31,6 +31,7 @@ import { DemoSelectContainerComponent } from './demo-select-container/demo-selec
 import { DemoSidenavComponent } from './demo-sidenav/demo-sidenav.component';
 import { DemoTextComponent } from './demo-text/demo-text.component';
 import { DemoAccessibilityComponent } from './demo-accessibility/demo-accessibility.component';
+import { DemoIconComponent } from './demo-icon/demo-icon.component';
 
 import { MatExpansionModule } from '@angular/material';
 import { MatTabsModule, MatButtonModule } from '@angular/material';
@@ -102,6 +103,7 @@ const materialModules = [
     DemoSidenavComponent,
     DemoTextComponent,
     DemoAccessibilityComponent,
+    DemoIconComponent,
   ],
   exports: [
       ...materialModules, RouterModule,

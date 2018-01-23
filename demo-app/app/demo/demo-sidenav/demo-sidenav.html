@@ -11,8 +11,8 @@
             </div></mat-tab>
         <mat-tab label="HTML"><div class="tabHeight">
             <table style="width:100%">
-                &lt;ign-sidenav-container&gt;<br>
-                &nbsp;&lt;ign-sidenav #sidenav class="sidenav" mode="side" opened="false" [fixedInViewport]="true" [fixedTopGap]="headerHeight + 8"&gt;<br>
+                &lt;mat-sidenav-container&gt;<br>
+                &nbsp;&lt;mat-sidenav #sidenav class="sidenav" mode="side" opened="false" [fixedInViewport]="true" [fixedTopGap]="headerHeight + 8"&gt;<br>
                 &nbsp;&nbsp;&lt;ul&gt;<br>
                 &nbsp;&nbsp;&nbsp;&lt;li *ngFor="let item of navItems"&gt;<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&lt;a [routerLink]="[item.route]"&gt;	&#123; item.name &#125;&lt;/a&gt;<br>
@@ -31,8 +31,8 @@
                 &nbsp;&nbsp;&nbsp;&lt;/header&gt;<br>
                 &nbsp;&nbsp;&nbsp;&lt;router-outlet&gt;&lt;/router-outlet&gt;<br>
                 &nbsp;&nbsp;&lt;/mat-card&gt;<br>
-                &nbsp;&lt;/ign-sidenav-content&gt;<br>
-                &lt;/ign-sidenav-container&gt;<br>
+                &nbsp;&lt;/mat-sidenav-content&gt;<br>
+                &lt;/mat-sidenav-container&gt;<br>
             </table>
         </div></mat-tab>
     </mat-tab-group>

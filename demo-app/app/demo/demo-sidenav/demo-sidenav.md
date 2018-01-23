@@ -5,7 +5,6 @@
     * sidenav-header
     * sidenav-list
     * sidenav-list-item
-
 * The sidenav component should contain references and links to other pages.
 * Ths sidenav component should be used solely for navigational purposes.
 

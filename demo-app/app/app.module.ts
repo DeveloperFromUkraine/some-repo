@@ -43,6 +43,7 @@ import { DemoSidenavComponent } from './demo/demo-sidenav/demo-sidenav.component
 import { DemoTextComponent } from './demo/demo-text/demo-text.component';
 import { DemoAccessibilityDirective } from './demo/demo-accessibility/demo-accessibility.directive';
 import { DemoAccessibilityComponent } from './demo/demo-accessibility/demo-accessibility.component';
+import { DemoIconComponent } from './demo/demo-icon/demo-icon.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -72,6 +73,7 @@ const routes: Routes = [
   { path: 'text', component: DemoTextComponent },
   { path: 'accessibility', component: DemoAccessibilityDirective },
   { path: 'accessibility-component', component: DemoAccessibilityComponent },
+  { path: 'icon', component: DemoIconComponent },
 
 ];
 

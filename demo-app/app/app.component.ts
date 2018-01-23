@@ -27,6 +27,7 @@ export class AppComponent implements AfterViewInit {
     { name: 'Footer', route: '/footer' },
     { name: 'Form', route: '/form' },
     { name: 'Hub Card', route: '/hub-card' },
+    { name: 'Icon', route: '/icon' },
     { name: 'Info Banner', route: '/info-banner' },
     { name: 'List', route: '/list-content' },
     { name: 'Loading Container', route: '/loading-container' },
