@@ -12,9 +12,16 @@
 
 #welcomeBodyContainer{
     font: 500 20px/32px Avenir,Roboto,Helvetica Neue,sans-serif;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: normal;
     text-align: right;
+}
+
+#paragraph{
+    font: 500 20px/32px Avenir,Roboto,Helvetica Neue,sans-serif;
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 a{
@@ -30,6 +37,14 @@ h1{
 h2{
     font-size: 20px;
     font-weight: bold;
+}
+
+h3{
+    font-weight: bold;
+}
+
+h4{
+    font-style: italic;
 }
 
 ul{
