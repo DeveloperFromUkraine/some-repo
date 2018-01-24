@@ -6,12 +6,13 @@
     "start": "ng serve",
     "build": "ng-packagr -p package.json",
     "build:watch": "chokidar 'src/**/*.ts' -c './bin/build' --initial",
+    "package": "tar cvf $npm_package_name-$npm_package_version.tgz manifest-* Staticfile dist node_modules",
     "lint": "tslint --project tsconfig.json src/**/*.ts",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:ci": "jest --runInBand",
     "ci:test": "npm run test:ci",
-    "ci:package": "npm run build"
+    "ci:package": "npm run build && npm prune --production && npm run package"
   },
   "jest": {
     "preset": "jest-preset-angular",
