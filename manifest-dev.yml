@@ -1,0 +1,2 @@
+inherit: manifest-common.yml
+host: ignite-design-system

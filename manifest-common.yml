@@ -1,0 +1,4 @@
+---
+applications:
+- name: ignite-design-system
+  memory: 64MB
