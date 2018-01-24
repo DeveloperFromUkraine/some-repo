@@ -35,3 +35,7 @@ ul{
     list-style-type:disc!important;
     padding: 10px 10px 10px 25px;
 }
+
+.mat-primary .mat-pseudo-checkbox-checked{
+    background: green;
+}

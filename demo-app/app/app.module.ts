@@ -44,6 +44,7 @@ import { DemoTextComponent } from './demo/demo-text/demo-text.component';
 import { DemoAccessibilityDirective } from './demo/demo-accessibility/demo-accessibility.directive';
 import { DemoAccessibilityComponent } from './demo/demo-accessibility/demo-accessibility.component';
 import { DemoIconComponent } from './demo/demo-icon/demo-icon.component';
+import { DemoSelectionListComponent } from './demo/demo-selection-list/demo-selection-list.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -74,6 +75,7 @@ const routes: Routes = [
   { path: 'accessibility', component: DemoAccessibilityDirective },
   { path: 'accessibility-component', component: DemoAccessibilityComponent },
   { path: 'icon', component: DemoIconComponent },
+  { path: 'selection-list', component: DemoSelectionListComponent },
 
 ];
 

@@ -10,3 +10,7 @@
 
 * Product icons are 48dp
 * System icons are 24dp
+* Stylistic specifications per mat-icon component can be found in the accordion below.
+
+<br>
+## Icon Components

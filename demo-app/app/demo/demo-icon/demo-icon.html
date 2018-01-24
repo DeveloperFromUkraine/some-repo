@@ -3,8 +3,8 @@
     <p>The icon component makes it easier to use vector-based icons. Material icons use geometric shapes to visually
         represent core ideas, capabilities, or topics.
         <br>See <a href="https://material.io/guidelines/style/icons.html">
-            Material Design Selection Controls</a>
-        and <a href="https://material.angular.io/components/icon/overview">Angular Material Checkboxes</a>.
+            Material Design Style Icons</a>
+        and <a href="https://material.angular.io/components/icon/overview">Angular Material Icon</a>.
     </p><br>
     <h2>Sample</h2>
     <mat-tab-group>
@@ -20,3 +20,27 @@
         </div></mat-tab>
     </mat-tab-group>
     <markdown [content]="notes"></markdown></div>
+
+<mat-accordion>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title><b>
+                mat-icon matListIcon
+            </b></mat-panel-title>
+            <mat-panel-description><i>Creates icons to add to nav list items.</i></mat-panel-description>
+
+        </mat-expansion-panel-header>
+        <mat-tab-group>
+            <mat-tab label="Component Styling"><div class="tabHeight">
+                <ul>
+                    <li>The mat-icon matListIcon component should be used for list items.</li>
+                    <li>This component should not be used for selection lists.</li>
+                    <li>This component should be used for nav lists.</li>
+                </ul>
+            </div></mat-tab>
+            <mat-tab label="HTML"><div class="tabHeight">
+                <p>&lt;mat-icon matListIcon&gt; &lt;/mat-icon matListIcon&gt;</p>
+            </div></mat-tab>
+        </mat-tab-group>
+    </mat-expansion-panel>
+</mat-accordion>
