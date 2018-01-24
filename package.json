@@ -12,7 +12,7 @@
     "test:watch": "jest --watch",
     "test:ci": "jest --runInBand",
     "ci:test": "npm run test:ci",
-    "ci:package": "npm run build:prod && npm prune --production && npm run package"
+    "ci:package": "npm run build && npm prune --production && npm run package"
   },
   "jest": {
     "preset": "jest-preset-angular",
