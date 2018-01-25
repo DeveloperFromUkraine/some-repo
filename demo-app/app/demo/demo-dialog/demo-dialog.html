@@ -1,1 +1,48 @@
-<markdown [content]="notes"></markdown>
+<div id="bodyContainer"><br><h1><u>Dialogs</u></h1>
+    <br>
+    <h2> Use</h2>
+    <p>Dialogs inform users about a specific task and may contain critical information, require decisions, or involve
+        multiple tasks. Use dialogs to progressively disclose additional information, prompt users to take action or
+        confirm choices that may be destructive or have far reaching consequences. Dialogs can also be used to present
+        modal forms when it is important user stays in context.<br>
+        See <a href="https://material.io/guidelines/components/dialogs.html">Material Design Dialogs </a>
+        and <a href="https://material.angular.io/components/dialog/overview">Angular Material Dialogs</a>.
+    </p>
+    <br>
+    <h2>Sample</h2>
+
+    <mat-tab-group>
+        <mat-tab label="Component Sample"><div class="tabHeight">
+            <button mat-raised-button (click)="openDialog()">Click Me For Dialog</button></div>
+        </mat-tab>
+        <mat-tab label="HTML"><div class="tabHeight">
+            <table style="width:100%">
+                &lt;button mat-raised-button (click)="openDialog()"&gt; Click Me For Dialog&lt;/button&gt; </table></div>
+          </mat-tab>
+        <mat-tab label="TS"><div class="tabHeight">
+            <table style="width:50%"><p>
+                export class DemoDialogComponent &#123;<br>
+                &nbsp;selectedOption: string;<br>
+
+                &nbsp;constructor(public dialog: MatDialog) &#123;}<br>
+
+                &nbsp;openDialog() &#123;<br>
+                &nbsp;let dialogRef = this.dialog.open(DemoDialogComponentDialog);<br>
+                &nbsp;dialogRef.afterClosed().subscribe(result => &#123;<br>
+                &nbsp;&nbsp;this.selectedOption = result;<br>
+                &nbsp;&nbsp;&#125;);<br>
+                &nbsp;}<br>
+                }<br>
+
+                @Component(&#123;<br>
+                &nbsp;selector: 'demo-dialog-dialog',<br>
+                &nbsp;templateUrl: './demo-dialog-dialog.html',<br>
+                &#125;)<br>
+                export class DemoDialogComponentDialog &#123;&#125;
+            </p>
+            </table>
+        </div></mat-tab>
+    </mat-tab-group>
+    <markdown [content]="notes"></markdown>
+</div>
+

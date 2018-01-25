@@ -1,0 +1,41 @@
+<div id="bodyContainer"><br><h1><u>Selection Lists</u></h1>
+    <br><h2> Use</h2>
+    <p>A selection list provides an interface for selecting values, where each list item is an option.
+        <br>See <a href="https://material.io/guidelines/style/icons.html">
+            Material Design List</a>
+        and <a href="https://material.io/guidelines/components/lists-controls.html#lists-controls-usage">Angular Material List Controls</a>.
+    </p>
+    <br><h2>Sample</h2>
+    <mat-tab-group>
+        <mat-tab label="Component Sample">
+            <div class="tabHeight">
+                <mat-selection-list #options>
+                    <mat-list-option *ngFor="let option of typesOfOptions">
+                        {{option}}
+                    </mat-list-option>
+                </mat-selection-list>
+                <br>
+                <p>
+                    Options selected: {{options.selectedOptions.selected.length}}
+                </p>
+            </div></mat-tab>
+        <mat-tab label="HTML"><div class="tabHeight">
+            <table style="width:100%">
+                &lt;mat-selection-list #options&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;mat-list-option *ngFor="let option of typesOfOptions"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#123;option&#125;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mat-list-option&gt;<br>
+                &lt;/mat-selection-list&gt;<br>
+                &lt;br&gt; <br>
+                &lt;p&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;Options selected: {{options.selectedOptions.selected.length}}<br>
+                &lt;/p&gt;
+            </table>
+        </div></mat-tab>
+        <mat-tab label="TS"><div class="tabHeight">
+            <table style="width:100%">
+                typesOfOptions = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
+            </table>
+        </div></mat-tab>
+    </mat-tab-group>
+    <markdown [content]="notes"></markdown></div>

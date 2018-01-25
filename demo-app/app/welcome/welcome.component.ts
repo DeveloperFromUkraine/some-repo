@@ -1,7 +1,13 @@
-import { Component } from '@angular/core';
+import {Component,  ViewEncapsulation} from '@angular/core';
+const NOTES: string = require('raw-loader!./welcome.md');
 
 @Component({
-  selector: 'app-welcome',
-  template: 'Hello, world!',
+    encapsulation: ViewEncapsulation.None,
+    selector: 'welcome-app',
+    templateUrl: './welcome.html',
+    styleUrls: ['./welcome.css'],
 })
-export class WelcomeComponent {}
+
+export class WelcomeComponent {
+    notes = NOTES;
+}

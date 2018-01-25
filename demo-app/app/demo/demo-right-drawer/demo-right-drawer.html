@@ -1,0 +1,50 @@
+<div id="bodyContainer"><br><h1><u>Right Drawer</u></h1>
+    <br><h2> Use</h2>
+    <p> Right drawer components are used to display summarized information and navigational linkage to other pages
+    and components when a selected item is clicked on.</p>
+
+    <br><h2>Sample</h2>
+    <mat-tab-group>
+        <mat-tab label="Component Sample">
+            <div class="tabHeight">
+                Look to the right!
+                <ign-list-content>
+                    <ign-list-content-panel>
+                        <ign-right-drawer
+                                title="I am a title."
+                                [startOpen]="true">
+                            <ign-list-selection-item
+                                    key="1234"
+                                    title="I am a right drawer."
+                                    subtitle="I am a right drawer subtitle."
+                            >
+                            </ign-list-selection-item>
+                        </ign-right-drawer>
+                    </ign-list-content-panel>
+                </ign-list-content>
+            </div></mat-tab>
+        <mat-tab label="HTML"><div class="tabHeight">
+            <table style="width:100%">
+                Look to the right!<br>
+                &lt;ign-list-content&gt;<br>
+                &nbsp;&nbsp; &lt;ign-list-content-panel&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;  &lt;ign-right-drawer<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; title="I am a title."<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [startOpen]="true"&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ign-list-selection-item <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  key="1234" <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  title="I am a right drawer."<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  subtitle="I am a right drawer subtitle."<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ign-list-selection-item&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;  &lt;/ign-right-drawer&gt;<br>
+                &nbsp;&nbsp; &lt;/ign-list-content-panel&gt;<br>
+                &lt;/ign-list-content&gt;
+
+            </table>
+        </div></mat-tab>
+    </mat-tab-group>
+    <markdown [content]="notes"></markdown>
+</div>
+
+

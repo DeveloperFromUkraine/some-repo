@@ -1,0 +1,55 @@
+.tabHeight {
+    padding: 16px;
+}
+
+/* Styles for the ink bar */
+.mat-ink-bar {
+    background-color: green !important;
+}
+
+.mat-checkbox.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: green;
+}
+
+.mat-checkbox.mat-accent .mat-radio-inner-circle {
+    background-color: green;
+}
+
+
+.mat-checkbox.mat-accent .mat-checkbox-ripple .mat-ripple-element {
+    background-color:rgba(173, 255, 47,0) !important;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background{
+    background-color: green !important;
+}
+
+.mat-tab-group.mat-primary .mat-tab-label:focus{
+    background-color: rgba(8, 149, 8, 0.3)
+}
+
+#bodyContainer{
+    font: 500 20px/32px Avenir,Roboto,Helvetica Neue,sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+a{
+    color: green;
+}
+
+h1{
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+ul{
+    list-style-type:disc!important;
+    padding: 10px 10px 10px 25px;
+}
