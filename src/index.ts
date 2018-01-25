@@ -119,6 +119,9 @@ import { TextListItemComponent } from './text-list-item/text-list-item.component
 import { NavListModule } from './nav-list/nav-list.module';
 import { NavListComponent } from './nav-list/nav-list.component';
 
+import { DataTableContainerModule } from './data-table-container/data-table-container.module';
+import { DataTableContainerComponent } from './data-table-container/data-table-container.component';
+
 import {
   MatToolbarModule,
   MatMenuModule,
@@ -204,10 +207,17 @@ const components = [
     DateRangeModule,
     MatListModule,
     NavListModule,
-    TextListItemModule
+    TextListItemModule,
+    DataTableContainerModule
   ],
   declarations: components,
-  exports: [...components, DateRangeComponent, NavListModule, TextListItemModule],
+  exports: [
+    ...components,
+    DateRangeComponent,
+    NavListComponent,
+    TextListItemComponent,
+    DataTableContainerComponent
+  ],
 })
 export class IgniteDesignSystemModule {
   static forRoot(): ModuleWithProviders {
