@@ -1,5 +1,7 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 import {MatDialog} from '@angular/material';
+import {Observable} from "rxjs/Observable";
+import {DemoDialogAcceptCancelComponent} from "./dialog-accept-cancel/dialog-accept-cancel.component";
 const NOTES: string = require('raw-loader!./demo-dialog.md');
 
 @Component({
@@ -12,6 +14,7 @@ export class DemoDialogComponent {
   notes = NOTES;
 
     selectedOption: string;
+    dialogRefMain: any;
 
     constructor(public dialog: MatDialog) {}
 
@@ -19,7 +22,25 @@ export class DemoDialogComponent {
         let dialogRef = this.dialog.open(DemoDialogComponentDialog);
         dialogRef.afterClosed().subscribe(result => {
             this.selectedOption = result;
-        });
+    });
+    }
+
+    openDialogBackgroundSubscription() {
+        this.dialogRefMain = this.dialog.open(DemoDialogComponentDialogBackground, {disableClose: true});
+
+        Observable.merge(this.dialogRefMain.backdropClick())
+            .map(() => this.openDialogAcceptReject())
+            .subscribe();
+    }
+
+    openDialogAcceptReject(): void {
+    this.dialog.open(DemoDialogAcceptCancelComponent)
+        .afterClosed()
+            .subscribe(response => {
+                if (response) {
+                    this.dialogRefMain.close()
+                };
+            });
     }
 }
 
@@ -28,3 +49,10 @@ export class DemoDialogComponent {
     templateUrl: './demo-dialog-dialog.html',
 })
 export class DemoDialogComponentDialog {}
+
+@Component({
+    selector: 'demo-dialog-dialog-background',
+    templateUrl: './demo-dialog-dialog-background.html',
+})
+export class DemoDialogComponentDialogBackground {}
+

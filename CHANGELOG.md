@@ -4,6 +4,7 @@
 - Adding manifests and modifying ci:package script in order to deploy doc site
 - New [inline field component](./src/field/README.md#inline-field-component) `ign-field-inline`
 - Adding data table container with paginator
+- Added enhanced dialog examples and demo
 
 ### v0.3.1
 - Updated the expandable-fab component so that when one of its children buttons are clicked, it collapses automatically.
