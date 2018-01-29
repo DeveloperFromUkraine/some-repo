@@ -1,5 +1,5 @@
 ### vNEXT
-
+- New [inline field component](./src/field/README.md#inline-field-component) `ign-field-inline`
 
 ### v0.3.1
 - Updated the expandable-fab component so that when one of its children buttons are clicked, it collapses automatically.
