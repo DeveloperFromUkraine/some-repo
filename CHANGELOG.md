@@ -1,11 +1,12 @@
 ### vNEXT
-- New [inline field component](./src/field/README.md#inline-field-component) `ign-field-inline`
-
-### v0.3.1
-- Updated the expandable-fab component so that when one of its children buttons are clicked, it collapses automatically.
 - Introducing first pass of text-list-item component
 - Extracting text-list-item and nav-list into modules
 - Adding manifests and modifying ci:package script in order to deploy doc site
+- New [inline field component](./src/field/README.md#inline-field-component) `ign-field-inline`
+- Adding data table container with paginator
+
+### v0.3.1
+- Updated the expandable-fab component so that when one of its children buttons are clicked, it collapses automatically.
 
 ### v0.3.0
 - Empty state buttons will now center and style correctly when using either ign-button-group or mat-card-actions
