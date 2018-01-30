@@ -6,7 +6,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import { DemoDialogComponent } from './demo-dialog/demo-dialog.component';
-import { DemoDialogComponentDialog } from './demo-dialog/demo-dialog.component';
+import { DemoDialogComponentDialog, DemoDialogComponentDialogBackground } from './demo-dialog/demo-dialog.component';
+import { DemoDialogAcceptCancelComponent } from './demo-dialog/dialog-accept-cancel/dialog-accept-cancel.component';
 import { DemoRadioButtonComponent } from './demo-radio-button/demo-radio-button.component';
 import { DemoCheckboxComponent } from './demo-checkbox/demo-checkbox.component';
 import { DemoCardComponent } from './demo-card/demo-card.component';
@@ -82,6 +83,8 @@ const materialModules = [
   declarations: [
     DemoDialogComponent,
     DemoDialogComponentDialog,
+    DemoDialogComponentDialogBackground,
+    DemoDialogAcceptCancelComponent,
     DemoRadioButtonComponent,
     DemoCheckboxComponent,
     DemoCardComponent,
@@ -112,7 +115,11 @@ const materialModules = [
   exports: [
       ...materialModules, RouterModule,
   ],
-    entryComponents: [DemoDialogComponent, DemoDialogComponentDialog, DemoEmptyStateExampleComponent,]
+    entryComponents: [DemoDialogComponent,
+        DemoDialogComponentDialog,
+        DemoDialogComponentDialogBackground,
+        DemoDialogAcceptCancelComponent,
+        DemoEmptyStateExampleComponent,]
 
 })
 export class DemoModule {}
