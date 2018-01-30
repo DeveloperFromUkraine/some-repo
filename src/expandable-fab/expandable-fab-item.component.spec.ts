@@ -62,4 +62,14 @@ describe('ExpandableFabItemComponent', () => {
 
         expect(spy).toHaveBeenCalled();
     });
+
+    it('should match snapshot', async () => {
+        component.tooltipText = 'toolTip';
+        component.icon = 'email';
+        component.href = 'updatedHref';
+        
+        await fixture.detectChanges();
+
+        expect(fixture).toMatchSnapshot();
+    });
 });

@@ -59,6 +59,17 @@ describe('AccessibleClickDirective', () => {
         expect(directive.onAccessibleClick).toHaveBeenCalled();
     });
 
+    it('should run the code inside onAccessibleClick', () => {
+        directive = de[0].injector.get(AccessibleClickDirective);
+        let spy = jest.spyOn(directive, 'onAccessibleClick');
+        let event: KeyboardEvent = new KeyboardEvent('keyup.space', null);
+
+        directive.onAccessibleClick(event);
+        fixture.detectChanges();
+
+        expect(spy).toHaveBeenCalledWith(event);
+    });
+
     /**
      * 12/06/17
      * THESE TESTS SHOULD FAIL

@@ -84,5 +84,13 @@ describe('RightDrawerComponent', () => {
         ne.dispatchEvent(new Event('click'));
 
         expect(component.open).toBe(false);
-    })
+    });
+
+    it('should match snapshot', async () => {
+        component.title = 'test';
+
+        await fixture.detectChanges();
+
+        expect(fixture).toMatchSnapshot();
+    });
 });

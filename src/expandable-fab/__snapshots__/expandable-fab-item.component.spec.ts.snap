@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExpandableFabItemComponent should match snapshot 1`] = `
+<ign-expandable-fab-item
+  clicked={[Function EventEmitter]}
+  href={[Function String]}
+  icon={[Function String]}
+  tooltipText={[Function String]}
+>
+  <span
+    class="mat-tooltip fab-tooltip"
+  >
+    toolTip
+  </span><a
+    igna11yclick=""
+    mat-fab=""
+    href="updatedHref"
+  >
+    <mat-icon
+      class="mat-icon material-icons"
+      role="img"
+      aria-hidden="true"
+    >
+      email
+    </mat-icon>
+  </a>
+</ign-expandable-fab-item>
+`;

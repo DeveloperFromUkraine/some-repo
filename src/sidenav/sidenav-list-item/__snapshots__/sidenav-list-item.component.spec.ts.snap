@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideNavListItemComponent should match snapshot 1`] = `
+<ign-sidenav-list-item
+  description={[Function String]}
+  icon={[Function String]}
+  onClick={[Function EventEmitter]}
+>
+  <a
+    class="app-link"
+  >
+    <i
+      aria-hidden="true"
+      class="material-icons app-link-icon"
+    >
+      mail
+    </i>
+    <div
+      class="app-link-text"
+    >
+      test description
+    </div>
+  </a>
+</ign-sidenav-list-item>
+`;

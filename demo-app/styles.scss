@@ -1,1 +1,192 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+// CSS RESETS [START]
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+// CSS RESETS [END]
+
+// MATERIAL THEME [START]
+@import '~@angular/material/theming';
+@include mat-core();
+
+// $ulti-green: rgb(80, 158, 47);
+$ulti-primary: mat-palette($mat-blue, 500, A100, 700);
+$ulti-accent: mat-palette($mat-blue, A200, A100, A400);
+$ulti-warn: mat-palette($mat-red);
+
+$ulti-theme: mat-light-theme($ulti-primary, $ulti-accent, $ulti-warn);
+@include angular-material-theme($ulti-theme);
+
+@import '~@angular/material/theming';
+
+// Define a custom typography config that overrides the font-family as well as the
+// `headlines` and `body-1` levels.
+$custom-typography: mat-typography-config(
+        $font-family: Avenir,
+        $headline: mat-typography-level(32px, 48px, 700),
+        $body-1: mat-typography-level(16px, 24px, 500)
+);
+// Override all material w/ custom typography
+@include angular-material-typography($custom-typography);
+
+// mat-select width fix
+// https://github.com/angular/material2/issues/4289
+span.mat-select-placeholder.mat-floating-placeholder {
+  width: auto !important;
+}
+
+.mat-form-field {
+  width: auto;
+}
+
+.mat-input-suffix .mat-datepicker-toggle {
+  font-size: 150%;
+}
+
+.mat-radio-button {
+  margin-bottom: 16px;
+}
+
+mat-card-actions.mat-card-actions {
+  margin-left: 0px;
+}
+
+mat-radio-button .mat-radio-label {
+  white-space: normal;
+}
+
+nu-card-main .mat-card-actions {
+  margin-left: 0px;
+}
+
+// MATERIAL THEME [END]
+
+// NU THEMES [START]
+@font-face {
+  font-family: "Avenir";
+  font-weight: 300; // light
+  src: url("assets/fonts/avenir/AvenirLTStd-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Avenir";
+  font-weight: 400;
+  src: url("assets/fonts/avenir/AvenirLTStd-Book.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Avenir";
+  font-weight: 500; // medium
+  src: url("assets/fonts/avenir/AvenirLTStd-Medium.otf") format("opentype");
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+input, button, select {
+  font-family: Avenir;
+  font-weight: 500;
+}
+
+html {
+  // 8 pt grid, use rem everywhere pls.
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-family: Avenir;
+  font-weight: 300;
+  color: #212121;
+  box-sizing: border-box;
+  background-color: #F9f9f9;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  font-weight: 300;
+}
+
+span {
+  font-weight: 300;
+}
+// NU THEMES [END]
+
+[ignA11yClick] {
+  cursor: pointer;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.paddingless-dialog .mat-dialog-container {
+  padding: 0px;
+  border-radius: 0px;
+}
+
+.flag{
+  display:inline-block;
+  width:24px;
+  height:24px;
+  background:url('/assets/images/flags.png') no-repeat;
+}
+.flag.flag-ca {
+  background-position: -72px -48px;
+}
+.flag.flag-us {
+  background-position: -312px -312px;
+}
+
+h1{
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+h2{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+ul{
+  list-style-type:disc!important;
+  padding: 10px 10px 10px 25px;
+}

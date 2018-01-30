@@ -1,0 +1,42 @@
+<div id="bodyContainer"><br><h1><u>Sidenav</u></h1>
+    <br><h2> Use</h2>
+    <p> Sidenav components are utilized to act as site navigational windows without the need to open a different page
+    or interrupt the user experience.
+    <br>See <a href="https://material.angular.io/components/sidenav/overview">
+            Material SideNav</a>
+        and <a href="https://material.io/guidelines/patterns/navigation-drawer.html#">Material Navigation Drawer Patterns</a>.</p>
+
+    <br><h2>Sample</h2>
+    <mat-tab-group>
+        <mat-tab label="Component Sample">
+            <div class="tabHeight">
+                Click on the hamburger menu icon at the top left of this page to toggle the side nav component!
+            </div></mat-tab>
+        <mat-tab label="HTML"><div class="tabHeight">
+            <table style="width:100%">
+                &lt;mat-sidenav-container&gt;<br>
+                &nbsp;&lt;mat-sidenav #sidenav class="sidenav" mode="side" opened="false" [fixedInViewport]="true" [fixedTopGap]="headerHeight + 8"&gt;<br>
+                &nbsp;&nbsp;&lt;ul&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;li *ngFor="let item of navItems"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;a [routerLink]="[item.route]"&gt;	&#123; item.name &#125;&lt;/a&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;/li&gt;<br>
+                &nbsp;&nbsp;&lt;/ul&gt;<br>
+                &nbsp;&lt;/mat-sidenav&gt;<br>
+                &nbsp;&lt;mat-sidenav-content&gt;<br>
+                &nbsp;&nbsp;&lt;mat-card&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;header #header&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;mat-toolbar style="background-color: white; color: #424949" class="mat-elevation-z5"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button mat-icon-button&gt; &lt;mat-icon style="color:lightgray"
+                &#40;click&#41;="sidenav&#46;toggle&#40;&#41;" class="material-icons"&gt;menu&lt;/mat-icon&gt;&lt;/button&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button mat-button&gt;&lt;img class ="logo-small" src="/assets/logo-small.png"&gt;&lt;/button&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ignite Design System<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mat-toolbar&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;/header&gt;<br>
+                &nbsp;&nbsp;&nbsp;&lt;router-outlet&gt;&lt;/router-outlet&gt;<br>
+                &nbsp;&nbsp;&lt;/mat-card&gt;<br>
+                &nbsp;&lt;/mat-sidenav-content&gt;<br>
+                &lt;/mat-sidenav-container&gt;<br>
+            </table>
+        </div></mat-tab>
+    </mat-tab-group>
+    <markdown [content]="notes"></markdown></div>

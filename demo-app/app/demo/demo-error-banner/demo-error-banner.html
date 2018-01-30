@@ -1,0 +1,28 @@
+<div id="bodyContainer"><br><h1><u>Error Banner</u></h1>
+    <br><h2> Use</h2>
+    <p> Error banner components are used to display error messages to the front end in order to notify users that there
+    was a problem processing a command.</p>
+
+    <br><h2>Sample</h2>
+    <mat-tab-group>
+        <mat-tab label="Component Sample">
+            <div class="tabHeight">
+                <ign-error-banner> <button class="dismiss-button" type="button" mat-icon-button>&times;</button>
+                    <ul class="message-list">
+                        <li>This is an error message.</li>
+                        <li>You can add icons like the red x above to clear the message.</li>
+                        <li>That one doesn't work, but you can still click it.</li>
+                    </ul></ign-error-banner>
+            </div></mat-tab>
+        <mat-tab label="HTML"><div class="tabHeight">
+            <table style="width:100%">
+                &lt;ign-error-banner&gt; &lt;button class="dismiss-button" type="button" mat-icon-button"&gt;&times;&lt;/button&gt;<br>
+                &nbsp;&nbsp;&lt;ul class="message-list"&gt;<br>
+                &nbsp;&nbsp; &nbsp;&nbsp; &lt;li&gt;This is an error message.&lt;/li&gt;<br>
+                &nbsp;&nbsp; &nbsp;&nbsp; &lt;li>You can add icons like the red x above to clear the message.&lt;/li&gt;<br>
+                &nbsp;&nbsp; &nbsp;&nbsp;&lt;li&gt;That one doesn't work, but you can still click it.&lt;/li&gt;<br>
+                &nbsp;&nbsp;&lt;/ul&gt;&lt;/ign-error-banner><br>
+            </table>
+        </div></mat-tab>
+    </mat-tab-group>
+    <markdown [content]="notes"></markdown></div>

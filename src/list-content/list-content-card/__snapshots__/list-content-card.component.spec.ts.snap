@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListContentCardComponent should match snapshot 1`] = `
+<ign-list-content-card>
+  <mat-card
+    class="container mat-card"
+  >
+    
+  </mat-card>
+</ign-list-content-card>
+`;

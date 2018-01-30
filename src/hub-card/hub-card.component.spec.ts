@@ -114,4 +114,18 @@ describe('HubCardComponent', () => {
         expect(subTitle.nativeElement.textContent).toContain(component.subtitle);
         expect(primaryActionText.nativeElement.textContent).toContain(component.primaryActionText);
     });
+
+    it('should match snapshot', async () => {
+        component.title = 'titleTest';
+        component.subtitle = 'subTitleTest';
+        component.primaryActionText = 'primartActionTest';
+        component.icon = component.icons.checkmark;
+        component.color = component.colors.blue;
+        component.complete = true;
+        component.active = true;
+        
+        await fixture.detectChanges();
+
+        expect(fixture).toMatchSnapshot();
+    });
 });

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListContentPanelComponent should match snapshot 1`] = `
+<ign-list-content-panel>
+  
+</ign-list-content-panel>
+`;

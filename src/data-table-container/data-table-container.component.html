@@ -1,0 +1,9 @@
+<ng-content></ng-content>
+
+<mat-paginator #paginator
+               [pageSize]="(pageSize || 10)"
+               [pageSizeOptions]="(pageSizeOptions || [5, 10, 15, 20, 50])"
+               [pageIndex]="pageIndex"
+               [length]="totalElements"
+               (page)="emitPageEvents($event)">
+</mat-paginator>

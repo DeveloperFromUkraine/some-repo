@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardSubtitleComponent should match snapshot 1`] = `
+<ign-card-subtitle>
+  <h4
+    _ngcontent-c0=""
+    class="card-subtitle"
+  />
+</ign-card-subtitle>
+`;

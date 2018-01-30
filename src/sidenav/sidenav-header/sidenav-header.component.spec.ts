@@ -54,4 +54,13 @@ describe('SideNavHeaderComponent', () => {
 
         expect(ne.textContent).not.toContain(component.subtitle);
     });
+
+    it('should match snapshot', async () => {
+        component.title = 'title';
+        component.subtitle = 'subTitle';
+
+        await fixture.detectChanges();
+
+        expect(fixture).toMatchSnapshot();
+    });
 });

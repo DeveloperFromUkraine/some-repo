@@ -11,3 +11,17 @@ import { Component, Input } from '@angular/core';
 export class FieldComponent {
   @Input() label: string;
 }
+
+@Component({
+    selector: 'ign-field-inline',
+    template: `
+    <div da="fieldValue" class="value">
+    <span class="label">{{label}}</span>
+    <ng-content></ng-content>
+    </div>
+  `,
+    styleUrls: ['field.component.scss'],
+})
+export class FieldInlineComponent {
+    @Input() label: string;
+}

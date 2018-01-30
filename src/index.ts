@@ -103,7 +103,7 @@ export * from './expandable-fab/expandable-fab.component';
 import { ExpandableFabItemComponent } from './expandable-fab/expandable-fab-item.component';
 export * from './expandable-fab/expandable-fab-item.component';
 
-import { FieldComponent } from './field/field.component';
+import { FieldComponent, FieldInlineComponent } from './field/field.component';
 export * from './field/field.component';
 
 import { CenterComponent } from './center/center.component';
@@ -113,6 +113,14 @@ import { FooterComponent } from './footer/footer.component';
 
 import { DateRangeModule } from './date-range/date-range.module';
 import { DateRangeComponent } from './date-range/date-range.component';
+
+import { TextListItemModule } from './text-list-item/text-list-item.module';
+import { TextListItemComponent } from './text-list-item/text-list-item.component';
+import { NavListModule } from './nav-list/nav-list.module';
+import { NavListComponent } from './nav-list/nav-list.component';
+
+import { DataTableContainerModule } from './data-table-container/data-table-container.module';
+import { DataTableContainerComponent } from './data-table-container/data-table-container.component';
 
 import {
   MatToolbarModule,
@@ -124,6 +132,7 @@ import {
   MatRippleModule,
   MatProgressSpinnerModule,
   MatNativeDateModule,
+  MatListModule,
 } from '@angular/material';
 
 const components = [
@@ -176,10 +185,11 @@ const components = [
   ExpandableFabComponent,
   ExpandableFabItemComponent,
   FieldComponent,
+  FieldInlineComponent,
   CenterComponent,
   NestableFormDirective,
   LoadingContainerComponent,
-  FooterComponent,
+  FooterComponent
 ];
 
 @NgModule({
@@ -195,9 +205,19 @@ const components = [
     MatProgressSpinnerModule,
     MatNativeDateModule,
     DateRangeModule,
+    MatListModule,
+    NavListModule,
+    TextListItemModule,
+    DataTableContainerModule
   ],
   declarations: components,
-  exports: [...components, DateRangeComponent],
+  exports: [
+    ...components,
+    DateRangeComponent,
+    NavListComponent,
+    TextListItemComponent,
+    DataTableContainerComponent
+  ],
 })
 export class IgniteDesignSystemModule {
   static forRoot(): ModuleWithProviders {

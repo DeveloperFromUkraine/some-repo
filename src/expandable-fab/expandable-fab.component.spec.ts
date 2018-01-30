@@ -11,7 +11,7 @@ describe('ExpandableFabComponent', () => {
     let de: DebugElement;
 
     beforeEach(async () => {
-        ComponentTest.createTestBed([MatIconModule], [ExpandableFabComponent]);
+        await ComponentTest.createTestBed([MatIconModule], [ExpandableFabComponent]);
     });
 
     beforeEach(() => {
@@ -61,5 +61,13 @@ describe('ExpandableFabComponent', () => {
         expect(fixture.debugElement.query(By.css('.active'))).not.toBeTruthy();
         expect(fixture.debugElement.query(By.css('.icon-primary-active'))).not.toBeTruthy();
         expect(fixture.debugElement.query(By.css('.icon-secondary-active'))).not.toBeTruthy();
+    });
+
+    it('should match snapshot', async () => {
+        component.isOpen = true;
+        
+        await fixture.detectChanges();
+
+        expect(fixture).toMatchSnapshot();
     });
 });
