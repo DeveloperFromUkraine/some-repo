@@ -1,11 +1,11 @@
-import {Component, ViewEncapsulation} from '@angular/core';
-import {MatDialog} from '@angular/material';
-import {Observable} from "rxjs/Observable";
-import {DemoDialogAcceptCancelComponent} from "./dialog-accept-cancel/dialog-accept-cancel.component";
+import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { Observable } from 'rxjs/Observable';
+import { DemoDialogAcceptCancelComponent } from './dialog-accept-cancel/dialog-accept-cancel.component';
+
 const NOTES: string = require('raw-loader!./demo-dialog.md');
 
 @Component({
-   encapsulation: ViewEncapsulation.None,
   selector: 'demo-dialog',
   templateUrl: './demo-dialog.html',
   styleUrls: ['./demo-dialog.css'],

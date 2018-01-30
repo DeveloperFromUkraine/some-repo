@@ -1,48 +1,6 @@
-.tabHeight{
-     padding: 16px;
- }
-
 ign-field{
     font-size: .3rem;
     border-style: dashed;
     border-width: .1rem;
     color: gray;
-}
-
-.mat-ink-bar {
-    background-color: green !important;
-}
-
-.mat-tab-group.mat-primary .mat-tab-label:focus{
-    background-color: rgba(8, 149, 8, 0.3)
-}
-
-a{
-    color: green;
-}
-
-#bodyContainer{
-    font: 500 20px/32px Avenir,Roboto,Helvetica Neue,sans-serif;
-    font-size: 15px;
-    font-weight: normal;
-}
-
-h1{
-    font-size: 25px;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-h2{
-    font-size: 20px;
-    font-weight: bold;
-}
-
-ul{
-    list-style-type:disc!important;
-    padding: 10px 10px 10px 25px;
-}
-
-.mat-raised-button.mat-accent, .mat-fab.mat-accent, .mat-mini-fab.mat-accent{
-    background-color: green;
 }

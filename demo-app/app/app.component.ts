@@ -22,7 +22,7 @@ export class AppComponent implements AfterViewInit {
     { name: 'Divider', route: '/divider' },
     { name: 'Empty State', route: '/empty-state' },
     { name: 'Error Banner', route: '/error-banner' },
-    { name: 'Expandable Floating Action Button (FAB)', route: '/expandable-fab' },
+    { name: 'Floating Action Button', route: '/expandable-fab' },
     { name: 'Field', route: '/field' },
     { name: 'Footer', route: '/footer' },
     { name: 'Form', route: '/form' },
