@@ -33,6 +33,7 @@ import { DemoTextComponent } from './demo-text/demo-text.component';
 import { DemoAccessibilityComponent } from './demo-accessibility/demo-accessibility.component';
 import { DemoIconComponent } from './demo-icon/demo-icon.component';
 import { DemoSelectionListComponent } from './demo-selection-list/demo-selection-list.component';
+import { DemoMarkdownComponent } from './demo-markdown/demo-markdown.component';
 
 import { MatExpansionModule } from '@angular/material';
 import { MatTabsModule, MatButtonModule } from '@angular/material';
@@ -45,7 +46,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material';
 import { MatInputModule } from '@angular/material';
 import { MatDatepickerModule } from '@angular/material';
-import {MatListModule} from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
 
 import { RouterModule } from '@angular/router';
 
@@ -71,48 +72,50 @@ const materialModules = [
 ];
 
 @NgModule({
-    imports: [
-        ...materialModules,
-        FormsModule,
-        CommonModule,
-        IgniteDesignSystemModule,
-        DateRangeModule,
-        RouterModule,
-    ],
-    declarations: [
-        DemoDialogComponent,
-        DemoDialogComponentDialog,
-        DemoDialogComponentDialogBackground,
-        DemoDialogAcceptCancelComponent,
-        DemoRadioButtonComponent,
-        DemoCheckboxComponent,
-        DemoCardComponent,
-        DemoCenterComponent,
-        DemoDateRangeComponent,
-        DemoDividerComponent,
-        DemoEmptyStateComponent,
-        DemoEmptyStateExampleComponent,
-        DemoErrorBannerComponent,
-        DemoExpandableFabComponent,
-        DemoFieldComponent,
-        DemoFooterComponent,
-        DemoFormComponent,
-        DemoHubCardComponent,
-        DemoInfoBannerComponent,
-        DemoListContentComponent,
-        DemoLoadingContainerComponent,
-        DemoNavListComponent,
-        DemoPageComponent,
-        DemoRightDrawerComponent,
-        DemoSidenavComponent,
-        DemoTextComponent,
-        DemoAccessibilityComponent,
-        DemoIconComponent,
-        DemoSelectionListComponent,
-    ],
-    exports: [
-        ...materialModules, RouterModule,
-    ],
+
+  imports: [
+    ...materialModules,
+    FormsModule,
+    CommonModule,
+    IgniteDesignSystemModule,
+    DateRangeModule,
+    RouterModule,
+  ],
+  declarations: [
+    DemoDialogComponent,
+    DemoDialogComponentDialog,
+    DemoDialogComponentDialogBackground,
+    DemoDialogAcceptCancelComponent,
+    DemoRadioButtonComponent,
+    DemoCheckboxComponent,
+    DemoCardComponent,
+    DemoCenterComponent,
+    DemoDateRangeComponent,
+    DemoDividerComponent,
+    DemoEmptyStateComponent,
+    DemoEmptyStateExampleComponent,
+    DemoErrorBannerComponent,
+    DemoExpandableFabComponent,
+    DemoFieldComponent,
+    DemoFooterComponent,
+    DemoFormComponent,
+    DemoHubCardComponent,
+    DemoInfoBannerComponent,
+    DemoListContentComponent,
+    DemoLoadingContainerComponent,
+    DemoNavListComponent,
+    DemoPageComponent,
+    DemoRightDrawerComponent,
+    DemoSidenavComponent,
+    DemoTextComponent,
+    DemoAccessibilityComponent,
+    DemoIconComponent,
+    DemoSelectionListComponent,
+    DemoMarkdownComponent,
+  ],
+  exports: [
+      ...materialModules, RouterModule,
+  ],
     entryComponents: [DemoDialogComponent,
         DemoDialogComponentDialog,
         DemoDialogComponentDialogBackground,
