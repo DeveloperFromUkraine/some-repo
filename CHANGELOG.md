@@ -1,4 +1,6 @@
 ### vNEXT
+
+### v0.4.0
 - Introducing first pass of text-list-item component
 - Extracting text-list-item and nav-list into modules
 - Adding manifests and modifying ci:package script in order to deploy doc site
