@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataTableContainerComponent should match snapshot 1`] = `
+<ign-data-table-container
+  dataSource={[Function MatTableDataSource]}
+  paginator={[Function MatPaginator]}
+  paginatorEvents$={[Function BehaviorSubject]}
+>
+  <mat-paginator
+    class="mat-paginator"
+    ng-reflect-page-size="10"
+    ng-reflect-page-size-options="5,10,15,20,50"
+  >
+    <div
+      class="mat-paginator-container"
+    >
+      <div
+        class="mat-paginator-page-size"
+      >
+        <div
+          class="mat-paginator-page-size-label"
+        >
+          Items per page:
+        </div>
+        <mat-form-field
+          class="mat-paginator-page-size-select mat-input-container mat-form-field ng-tns-c31-0 mat-form-field-type-mat-select mat-form-field-can-float mat-primary"
+        >
+          <div
+            class="mat-input-wrapper mat-form-field-wrapper"
+          >
+            <div
+              class="mat-input-flex mat-form-field-flex"
+            >
+              <div
+                class="mat-input-infix mat-form-field-infix"
+              >
+                <mat-select
+                  tabindex="0"
+                  class="mat-select ng-tns-c32-1"
+                  ng-reflect-value="10"
+                  ng-reflect-aria-label="Items per page:"
+                  id="mat-select-6"
+                  role="listbox"
+                  aria-label="Items per page:"
+                  aria-required="false"
+                  aria-disabled="false"
+                  aria-owns="mat-option-34 mat-option-35 mat-option-36 mat-option-37 mat-option-38"
+                  aria-multiselectable="false"
+                >
+                  <div
+                    class="mat-select-trigger"
+                    aria-hidden="true"
+                    cdk-overlay-origin=""
+                  >
+                    <div
+                      class="mat-select-value"
+                    >
+                      
+                    </div>
+                    <div
+                      class="mat-select-arrow-wrapper"
+                    >
+                      <div
+                        class="mat-select-arrow"
+                      />
+                    </div>
+                  </div>
+                </mat-select>
+                <span
+                  class="mat-input-placeholder-wrapper mat-form-field-placeholder-wrapper"
+                >
+                  
+                </span>
+              </div>
+            </div>
+            <div
+              class="mat-input-underline mat-form-field-underline"
+            >
+              <span
+                class="mat-input-ripple mat-form-field-ripple"
+              />
+            </div>
+            <div
+              class="mat-input-subscript-wrapper mat-form-field-subscript-wrapper"
+              ng-reflect-ng-switch="hint"
+            >
+              <div
+                class="mat-input-hint-wrapper mat-form-field-hint-wrapper ng-tns-c31-0 ng-trigger ng-trigger-transitionMessages"
+                style="opacity: 1;"
+              >
+                <div
+                  class="mat-input-hint-spacer mat-form-field-hint-spacer"
+                />
+              </div>
+            </div>
+          </div>
+        </mat-form-field>
+      </div>
+      <div
+        class="mat-paginator-range-actions"
+      >
+        <div
+          class="mat-paginator-range-label"
+        >
+          NaN - NaN of NaN
+        </div>
+        <button
+          class="mat-paginator-navigation-previous mat-icon-button"
+          mat-icon-button=""
+          type="button"
+          ng-reflect-disabled="true"
+          aria-describedby="cdk-describedby-message-12"
+          cdk-describedby-host=""
+          ng-reflect-position="above"
+          ng-reflect-message="Previous page"
+          aria-label="Previous page"
+          disabled=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            <div
+              class="mat-paginator-increment"
+            />
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple mat-button-ripple-round"
+            matripple=""
+            ng-reflect-trigger="[object HTMLButtonElement]"
+            ng-reflect-centered="true"
+            ng-reflect-disabled="true"
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+        <button
+          class="mat-paginator-navigation-next mat-icon-button"
+          mat-icon-button=""
+          type="button"
+          ng-reflect-disabled="true"
+          aria-describedby="cdk-describedby-message-13"
+          cdk-describedby-host=""
+          ng-reflect-position="above"
+          ng-reflect-message="Next page"
+          aria-label="Next page"
+          disabled=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            <div
+              class="mat-paginator-decrement"
+            />
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple mat-button-ripple-round"
+            matripple=""
+            ng-reflect-trigger="[object HTMLButtonElement]"
+            ng-reflect-centered="true"
+            ng-reflect-disabled="true"
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+      </div>
+    </div>
+  </mat-paginator>
+</ign-data-table-container>
+`;
