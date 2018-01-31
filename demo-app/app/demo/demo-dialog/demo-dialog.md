@@ -57,7 +57,10 @@ Simple dialogs provide in-context assistance such as a definition of a complex t
 * Simple: (TBD based on context)
 * Forms
   * maxWidth: 672px;
-  * height: (in research)
+  * height: Any height set with this parameter will be static
+  * maxHeight: This parameter does not work as of the current Angular Material (@angular/material@^5.0.0-rc0). Max height
+    can be set with adding a parent div in the HTML loaded by the dialog with a max-height set in the style. Ie:
+    &lt;div style="max-height: 10vh;"&gt; {Dialog Content} &lt;/div&gt;
   * dialogs should not take 100% of the screen width or height (except in modal)
   * for implementing size: see [MatDialogConfig](https://material.angular.io/components/form-field/overview) in Angular
    Material docs for dialogs.
