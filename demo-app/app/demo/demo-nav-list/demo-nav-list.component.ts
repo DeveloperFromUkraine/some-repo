@@ -1,8 +1,7 @@
-import {Component,  ViewEncapsulation} from '@angular/core';
+import { Component } from '@angular/core';
 const NOTES: string = require('raw-loader!./demo-nav-list.md');
 
 @Component({
-    encapsulation: ViewEncapsulation.None,
     selector: 'demo-nav-list',
     templateUrl: './demo-nav-list.html',
     styleUrls: ['./demo-nav-list.css'],

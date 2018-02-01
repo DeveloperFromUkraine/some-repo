@@ -1,4 +1,4 @@
-<div id="bodyContainer"><br><h1><u>Text</u></h1>
+<div id="body-container"><br><h1>Text</h1>
     <br><h2> Use</h2>
     <p> The text component and its subcomponents purposes is to display list items composed of primary and/or
         secondary/tertiary text and may include routes. </p>
@@ -54,72 +54,74 @@
             </table>
         </div></mat-tab>
     </mat-tab-group>
-    <markdown [content]="notes"></markdown></div>
+    <markdown [content]="notes"></markdown>
 
-<mat-accordion>
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
-            <mat-panel-title><b>
-                text-list-item
-            </b></mat-panel-title>
-            <mat-panel-description><i>Allows for the user to select an textual item from a list and
-            perform an action. </i></mat-panel-description>
+    <mat-accordion>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title><b>
+                    text-list-item
+                </b></mat-panel-title>
+                <mat-panel-description><i>Allows for the user to select an textual item from a list and
+                perform an action. </i></mat-panel-description>
 
-        </mat-expansion-panel-header>
-        <mat-tab-group>
-            <mat-tab label="Component Styling"><div class="tabHeight">
-                <ul>
-                    <li>Text list items should be short and concise</li>
-                    <li>Text list items should be references to other pages or used as options in multi-selection content.</li>
-                </ul>
-            </div></mat-tab>
-            <mat-tab label="HTML"><div class="tabHeight">
-                <p>&lt;text-list-item&gt; &lt;/text-list-item&gt;</p>
-            </div></mat-tab>
-        </mat-tab-group>
+            </mat-expansion-panel-header>
+            <mat-tab-group>
+                <mat-tab label="Component Styling"><div class="tabHeight">
+                    <ul>
+                        <li>Text list items should be short and concise</li>
+                        <li>Text list items should be references to other pages or used as options in multi-selection content.</li>
+                    </ul>
+                </div></mat-tab>
+                <mat-tab label="HTML"><div class="tabHeight">
+                    <p>&lt;text-list-item&gt; &lt;/text-list-item&gt;</p>
+                </div></mat-tab>
+            </mat-tab-group>
 
-    </mat-expansion-panel>
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
-            <mat-panel-title><b>
-                list-item-primary-text
-            </b></mat-panel-title>
-            <mat-panel-description><i>Allows for a differentiation between primary and secondary text in a list of elements.</i></mat-panel-description>
-        </mat-expansion-panel-header>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title><b>
+                    list-item-primary-text
+                </b></mat-panel-title>
+                <mat-panel-description><i>Allows for a differentiation between primary and secondary text in a list of elements.</i></mat-panel-description>
+            </mat-expansion-panel-header>
 
-        <mat-tab-group>
-            <mat-tab label="Component Styling"><div class="tabHeight">
-                <ul>
-                    <li>List-item-primary-text is an optional component.</li>
-                    <li>List-item-primary-text should display the main information.</li>
-                </ul>
-            </div></mat-tab>
-            <mat-tab label="HTML"><div class="tabHeight">
-                <p> &lt;ign-list-item-primary-text&gt;&lt;/ign-list-item-primary-text&gt;</p>
-            </div></mat-tab>
-        </mat-tab-group>
+            <mat-tab-group>
+                <mat-tab label="Component Styling"><div class="tabHeight">
+                    <ul>
+                        <li>List-item-primary-text is an optional component.</li>
+                        <li>List-item-primary-text should display the main information.</li>
+                    </ul>
+                </div></mat-tab>
+                <mat-tab label="HTML"><div class="tabHeight">
+                    <p> &lt;ign-list-item-primary-text&gt;&lt;/ign-list-item-primary-text&gt;</p>
+                </div></mat-tab>
+            </mat-tab-group>
 
-    </mat-expansion-panel>
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
-            <mat-panel-title><b>
-                list-item-secondary-text
-            </b></mat-panel-title>
-            <mat-panel-description><i>Allows for a differentiation between primary and secondary text in a list of elements.</i></mat-panel-description>
-        </mat-expansion-panel-header>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title><b>
+                    list-item-secondary-text
+                </b></mat-panel-title>
+                <mat-panel-description><i>Allows for a differentiation between primary and secondary text in a list of elements.</i></mat-panel-description>
+            </mat-expansion-panel-header>
 
-        <mat-tab-group>
-            <mat-tab label="Component Styling"><div class="tabHeight">
-                <ul>
-                    <li>List-item-secondary-text is an optional component, but should only be utilized if there is
-                        a primary text component in use.</li>
-                    <li>List-item-secondary-text should display the a more specific set of information from the primary
-                        text component.</li>
-                </ul>
-            </div></mat-tab>
-            <mat-tab label="HTML"><div class="tabHeight">
-                <p>&lt;ign-list-item-secondary-text&gt;&lt;/ign-list-item-secondary-text&gt;</p>
-            </div></mat-tab>
-        </mat-tab-group>
+            <mat-tab-group>
+                <mat-tab label="Component Styling"><div class="tabHeight">
+                    <ul>
+                        <li>List-item-secondary-text is an optional component, but should only be utilized if there is
+                            a primary text component in use.</li>
+                        <li>List-item-secondary-text should display the a more specific set of information from the primary
+                            text component.</li>
+                    </ul>
+                </div></mat-tab>
+                <mat-tab label="HTML"><div class="tabHeight">
+                    <p>&lt;ign-list-item-secondary-text&gt;&lt;/ign-list-item-secondary-text&gt;</p>
+                </div></mat-tab>
+            </mat-tab-group>
 
-    </mat-expansion-panel>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

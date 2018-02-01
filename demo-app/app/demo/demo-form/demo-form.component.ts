@@ -1,6 +1,6 @@
-import {Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup} from '@angular/forms';
-import {Subject} from 'rxjs/Subject';
+import { Subject } from 'rxjs/Subject';
 
 const NOTES: string = require('raw-loader!./demo-form.md');
 
@@ -8,7 +8,6 @@ const NOTES: string = require('raw-loader!./demo-form.md');
     selector: 'demo-form',
     templateUrl: './demo-form.html',
     styleUrls: ['./demo-form.css'],
-    encapsulation: ViewEncapsulation.None,
 })
 export class DemoFormComponent implements OnInit, OnDestroy{
     notes = NOTES;

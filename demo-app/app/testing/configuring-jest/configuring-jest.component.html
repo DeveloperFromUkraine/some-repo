@@ -1,1 +1,32 @@
-<h1>configuring jest</h1>
+<div id="body-container">
+    <h1>Configuring Jest</h1>
+    <hr />
+
+    <h2>Testing Platform: Jest</h2>
+    <p>1. JavaScript testing platform built by Facebook.</p>
+    <p>2. Sits on top of Jasmine.</p>
+
+    <h3>Pros</h3>
+    <p>1. API is nearly identical to Jasmine.</p>
+    <p>2. Mocking is a piece of cake.</p>
+    <p>3. Runs tests in parallel.</p>
+    <p>4. Tests run on jsdom rather than a headless browser.</p>
+    <p>5. 3.01 second average test run for starter Angular CLI project (10.9 second average for Jasmine) based on command execution time. 353% faster command execution than Jasmine.</p>
+
+    <h3>Cons</h3>
+    <p>1. Requires additional configuration in your Angular application to get Jest running.</p>
+    <p>2. Not a lot of existing documentation on using Jest with Angular applications.</p>
+
+    <h2>Setting Up Jest</h2>
+    <p>1. Install dependency.</p>
+    <code>$ yarn add --dev jest jest-preset-angular @types/jest</code>
+    <p>2. Add this entry to package.json.</p>
+    <pre>
+        <code class="code-block">
+            "jest": {{ '{' }}
+                "preset": "jest-preset-angular",
+                "setupTestFrameworkScriptFile": "&lt;rootDir&gt;/src/jest.ts"
+            }
+        </code>
+    </pre>
+</div>

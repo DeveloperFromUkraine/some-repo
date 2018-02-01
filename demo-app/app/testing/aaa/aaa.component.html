@@ -1,5 +1,30 @@
-<h1>aaa</h1>
+<div id="body-container">
+    <h1>AAA Pattern</h1>
 
-<code>
-    aaa
-</code>
+    <hr />
+
+    <p>
+        <span style="text-decoration: underline">Arrange</span> variables, mocks and data needed for the test to run. Add common variables, mocks and data to beforeEach()
+        block.</p>
+    <p>
+        <span style="text-decoration: underline">Act</span> on the class or method under test.</p>
+    <p>
+        <span style="text-decoration: underline">Assert</span> to make sure that your expectations are met.</p>
+
+    <pre>
+        <code class="code-block">
+            it('should call closeDrawer when click event emitted', () => {{ '{' }}
+                //Arrange
+                de = fixture.debugElement.query(By.css('.close-icon'));
+                ne = de.nativeElement;
+                jest.spyOn(component, 'closeDrawer');
+                
+                //Act
+                ne.dispatchEvent(new Event('click'));
+
+                //Assert
+                expect(component.closeDrawer).toHaveBeenCalled();
+            });
+        </code>
+    </pre>
+</div>

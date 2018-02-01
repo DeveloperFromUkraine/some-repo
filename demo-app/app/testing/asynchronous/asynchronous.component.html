@@ -1,1 +1,58 @@
-<h1>asynchronous</h1>
+<div id="body-container">
+    <h1>Angular Testing - Asynchronous Operations</h1>
+    <hr />
+
+    <h2>1. Angular Testing Utility - async/fixture.whenStable()</h2>
+    <p>a. Will return a promise when the asynchronous operations are done and the fixture is stable.</p>
+    <p>b. Assert inside the callback block.</p>
+    <pre>
+        <code class="code-block">
+            it('should set endDate html element', async (() => {{ '{' }}
+                let de = fixture.debugElement.query(By.css('#end-date-input'));
+                let ne: HTMLInputElement = de.nativeElement;
+
+                component.endDate = '2019-12-12';
+                fixture.detectChanges();
+
+                fixture.whenStable().then(() => {{ '{' }}
+                    expect(ne.value).toEqual(component.endDate);
+                });
+            }));
+        </code>
+    </pre>
+
+    <h2>2. Angular Testing Utility - fakeAsync/tick()</h2>
+    <p>a. tick() method will execute any asynchronous tasks in the queue.</p>
+    <p>b. tick(100) would execute any asynchronous tasks that would occur within 100ms.</p>
+    <pre>
+        <code class="code-block">
+            it('should set endDate html element', fakeAsync (() => {{ '{' }}
+                let de = fixture.debugElement.query(By.css('#end-date-input'));
+                let ne: HTMLInputElement = de.nativeElement;
+        
+                component.endDate = '2019-12-12';
+                fixture.detectChanges();
+                tick();
+        
+                expect(ne.value).toEqual(component.endDate);
+            }));
+        </code>
+    </pre>
+
+    <h2>3. ES8 Async Functions</h2>
+    <p>a. Built on top of Promises.</p>
+    <p>b. Await works with Promises, not callbacks.</p>
+    <pre>
+        <code class="code=block">
+            it('should set endDate html element', async () => {{ '{' }}
+                let de = fixture.debugElement.query(By.css('#end-date-input'));
+                let ne: HTMLInputElement = de.nativeElement;
+
+                component.endDate = '20190-12-12';
+                await fixture.detectChanges();
+
+                expect(ne.value).toEqual(component.endDate);
+            });
+        </code>
+    </pre>
+</div>
