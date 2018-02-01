@@ -8,8 +8,8 @@
     </ul>
     <ign-center>Testing</ign-center>
     <ul>
-      <li>
-        
+      <li *ngFor="let testItem of testNavItems">
+        <a [routerLink]="testItem.route">{{ testItem.name }}</a>
       </li>
     </ul>
     <ign-center>Questions? <a href="https://ultimatesoftware.slack.com/messages/docsitequestions/" target="_blank">Ask here!</a></ign-center>

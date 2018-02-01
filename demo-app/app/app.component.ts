@@ -40,6 +40,16 @@ export class AppComponent implements AfterViewInit {
     { name: 'Text', route: '/text' },
   ];
 
+  testNavItems = [
+    { name: 'AAA Test Pattern', route: 'aaa'},
+    { name: 'Asynchronous Operations', route: 'asynchronous'},
+    { name: 'Configuring Jest', route: 'jest'},
+    { name: 'Triggering Event Handlers', route: 'event-handler'},
+    { name: 'Resources', route: 'resources'},
+    { name: 'Snapshot Testing', route: 'snapshot'},
+    { name: 'Test Types', route: 'test-types'},
+  ];
+
   ngAfterViewInit () {
     setTimeout(() => {
       this.headerHeight = this.header.nativeElement.offsetHeight;

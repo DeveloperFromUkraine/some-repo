@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { IgniteDesignSystemModule } from '../../src';
+import { TestingModule } from './testing/testing.module';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
@@ -92,6 +93,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes, {
       useHash: true
     }),
+    TestingModule,
     MatButtonModule,
     MatToolbarModule,
     MatSidenavModule,
