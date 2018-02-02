@@ -103,7 +103,7 @@ export * from './expandable-fab/expandable-fab.component';
 import { ExpandableFabItemComponent } from './expandable-fab/expandable-fab-item.component';
 export * from './expandable-fab/expandable-fab-item.component';
 
-import { FieldComponent, FieldInlineComponent } from './field/field.component';
+import { FieldComponent, FieldInlineComponent, EditableFieldComponent, EditableFieldInlineComponent } from './field/field.component';
 export * from './field/field.component';
 
 import { CenterComponent } from './center/center.component';
@@ -186,6 +186,8 @@ const components = [
   ExpandableFabItemComponent,
   FieldComponent,
   FieldInlineComponent,
+  EditableFieldComponent,
+  EditableFieldInlineComponent,
   CenterComponent,
   NestableFormDirective,
   LoadingContainerComponent,

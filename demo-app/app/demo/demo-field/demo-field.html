@@ -6,11 +6,21 @@
     <mat-tab-group>
         <mat-tab label="Component Sample">
             <div class="tabHeight">
+                <p>None editable Field:</p>
                 <ign-field label="The Answer">42</ign-field>
+                <p>Editable Field:</p>
+                <ign-editable-field label="The Answer">42</ign-editable-field>
+                <p>Editable Field with defined icon (home):</p>
+                <ign-editable-field editIcon="home" label="The Answer">42</ign-editable-field >
             </div></mat-tab>
         <mat-tab label="HTML"><div class="tabHeight">
             <table style="width:100%">
+                <p>None editable Field:</p>
                 &lt;ign-field label="The Answer"&gt;42&lt;/ign-field&gt;
+                <p>Editable Field:</p>
+                &lt;ign-editable-field label="The Answer"&gt;42&lt;/ign-editable-field&gt;
+                <p>Editable Field with defined icon (home):</p>
+                &lt;ign-editable-field editIcon="home" label="The Answer"&gt;42&lt;/ign-editable-field&gt;
             </table>
         </div></mat-tab>
     </mat-tab-group>
