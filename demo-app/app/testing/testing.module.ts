@@ -15,9 +15,9 @@ const routes: Routes = [
     { path: 'asynchronous', component: AsynchronousComponent },
     { path: 'jest', component: ConfiguringJestComponent },
     { path: 'event-handler', component: EventHandlersComponent },
-    { path: 'resources', component: ResourcesComponent },
     { path: 'snapshot', component: SnapshotComponent },
-    { path: 'test-types', component: TestTypesComponent }
+    { path: 'test-types', component: TestTypesComponent },
+    { path: 'resources', component: ResourcesComponent }
 ];
 
 @NgModule({

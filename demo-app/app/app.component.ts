@@ -45,9 +45,9 @@ export class AppComponent implements AfterViewInit {
     { name: 'Asynchronous Operations', route: 'asynchronous'},
     { name: 'Configuring Jest', route: 'jest'},
     { name: 'Triggering Event Handlers', route: 'event-handler'},
-    { name: 'Resources', route: 'resources'},
     { name: 'Snapshot Testing', route: 'snapshot'},
     { name: 'Test Types', route: 'test-types'},
+    { name: 'Resources', route: 'resources'}
   ];
 
   ngAfterViewInit () {
