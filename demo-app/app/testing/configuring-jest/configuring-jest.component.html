@@ -29,4 +29,76 @@
             }
         </code>
     </pre>
+    <p>3. At the root of your src folder, create the file <span>jest-global-mocks.ts</span></p>
+    <p>a. Include the following code to patch the window object since jsdom doesn't have it all implemented.</p>
+    <pre>
+        <code class="code-block">
+            const mock = () => {{ '{' }}
+                let storage = {{ '{' }}};
+                return {{ '{' }}
+                    getItem: key => key in storage ? storage[key] : null,
+                    setItem: (key, value) => storage[key] = value || '',
+                    removeItem: key => delete storage[key],
+                    clear: () => storage = {{ '{' }}},
+                };
+            };
+        </code>
+    </pre>
+    <p>4. At the same location, create the file <span>jest.ts</span> and include the following</p>
+    <pre>
+        <code class="code-block">
+            import 'jest-preset-angular';
+            import './jest-global-mocks';
+        </code>
+    </pre>
+    <p>5. Update your npm test scripts</p>
+    <pre>
+        <code class="code-block">
+            "test": "jest",
+            "test:watch": "jest --watch",
+            "test:ci": "jest --runInBand"
+        </code>
+    </pre>
+    <p>6. Remove @types/jasmine in node_modules. Contains duplicate declarations from @types/jest.</p>
+    <p>7. Update <span>tsconfig.spec.json</span>: Change "jasmine" to "jest"</p>
+    <pre>
+        <code class="code-block">
+            "types": [
+                "jest",
+                "node"
+            ]
+        </code>
+    </pre>
+    <pre>
+        <code class="code-block">
+            "types": [
+                "jest",
+                "node"
+            ]
+        </code>
+    </pre>
+    <p>8. Update <span>tsconfig.e2e.json</span>: Change "jasmine" to "jest"</p>
+    <pre>
+        <code class="code-block">
+            "types": [
+                "jasmine",
+                "jasminewd2",
+                "node"
+            ]
+        </code>
+    </pre>
+    <pre>
+        <code class="code-block">
+            "types": [
+                "jest",
+                "jasminewd2",
+                "node"
+            ]
+        </code>
+    </pre>
+    <hr />
+    <h3>References</h3>
+    <p>1. Pierzchala, Michal. "TESTING ANGULAR FASTER WITH JEST", <a href="https://www.xfive.co/blog/testing-angular-faster-jest/">https://www.xfive.co/blog/testing-angular-faster-jest/</a>, March 31, 2017</p>
+    <p>2. “TESTING REACT ON JSDOM”, <a href="https://jaketrent.com/post/testing-react-with-jsdom/">https://jaketrent.com/post/testing-react-with-jsdom/</a>, June 18, 2015</p>
+    <p>3. “Mocha vs. Jest vs. Jasmine”, <a href="https://stackshare.io/stackups/jasmine-vs-jest-vs-mocha">https://stackshare.io/stackups/jasmine-vs-jest-vs-mocha</a></p>
 </div>
