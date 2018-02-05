@@ -7,7 +7,8 @@ import {
     EventHandlersComponent,
     ResourcesComponent,
     SnapshotComponent,
-    TestTypesComponent
+    TestTypesComponent,
+    StatusComponent
 } from './testing';
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
     { path: 'event-handler', component: EventHandlersComponent },
     { path: 'snapshot', component: SnapshotComponent },
     { path: 'test-types', component: TestTypesComponent },
-    { path: 'resources', component: ResourcesComponent }
+    { path: 'resources', component: ResourcesComponent },
+    { path: 'status', component: StatusComponent }
 ];
 
 @NgModule({
@@ -28,7 +30,8 @@ const routes: Routes = [
         EventHandlersComponent,
         ResourcesComponent,
         SnapshotComponent,
-        TestTypesComponent
+        TestTypesComponent,
+        StatusComponent
     ],
     imports: [
         RouterModule.forChild(routes)

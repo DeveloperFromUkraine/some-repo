@@ -41,6 +41,7 @@ export class AppComponent implements AfterViewInit {
   ];
 
   testNavItems = [
+    { name: 'Status', route: 'status' },
     { name: 'AAA Test Pattern', route: 'aaa'},
     { name: 'Asynchronous Operations', route: 'asynchronous'},
     { name: 'Configuring Jest', route: 'jest'},
