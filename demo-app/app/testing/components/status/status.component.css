@@ -131,11 +131,10 @@
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 2fr 1fr;
+    grid-template-rows: 0.5fr 2fr;
     grid-template-areas: 
         "header"
-        "d-content"
-        "concourse";
+        "d-content";
 }
 
 .i1 {
@@ -145,11 +144,6 @@
 .i2 {
     grid-area: d-content;
 }
-
-.i3 {
-    grid-area: concourse;
-}
-
 .avatar {
     height: 18rem;
     width: 18rem;
