@@ -17,7 +17,28 @@
     </mat-card>
 
     <mat-card class="e">
-        <h1>MASTER</h1>
+        <table class="status-container">
+            <tr>
+                <td>
+                    <h1>MASTER</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Latest Commit by: {{ masterBranch.latestCommit.author.displayName }} <br>
+                    Email: {{ masterBranch.latestCommit.author.emailAddress }}
+                </td>
+                <td>
+                    <img src="{{ masterBranch.latestCommit.author.avatarUrl }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Commit Message: <br>
+                    {{ masterBranch.latestCommit.message }}
+                </td>
+            </tr>
+        </table>
     </mat-card>
 
     <mat-card class="f">
