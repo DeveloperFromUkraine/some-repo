@@ -8,17 +8,28 @@
     </mat-card>
 
     <mat-card class="c" *ngIf="(data.metrics.status === 'GREEN'); else lastFailure">
-        <mat-card-title>Last Successful Run</mat-card-title>
-        <mat-card-content>
-            <h2 style="text-align: center">Details</h2>
+
+        <div class="c1">
+            <h1>Last Successful Run</h1>
+        </div>
+        <div class="c2">
             <p>Author: {{ data.metrics.lastSuccess.author }}</p>
+        </div>
+        <div class="c3">
             <p>Branch Name: {{ data.metrics.lastSuccess.branchName }}</p>
-            <a [attr.href]="data.metrics.lastSuccess.concourseUrl" target="_blank">
-                <img src="../../../assets/concourse.png" alt="concourse logo" />
-            </a>
-            <a [attr.href]="data.repoUrl + '/commits/' + data.metrics.lastSuccess.commitHash" target="_blank"><img src="../../../assets/bitbucket.png" alt="bit bucket logo" /></a>
+        </div>
+        <div class="c4">
             <p>Commit Message: {{ data.metrics.lastSuccess.commitMessage }}</p>
-        </mat-card-content>
+        </div>
+        <div class="c5">
+            <a [attr.href]="data.metrics.lastSuccess.concourseUrl" target="_blank">
+                <img src="../../../assets/concourse.png" height="50px" width="50px" alt="concourse logo" />
+            </a>
+            <a [attr.href]="data.repoUrl + '/commits/' + data.metrics.lastSuccess.commitHash" target="_blank">
+                <img src="../../../assets/bitbucket.png" height="50px" width="50px" alt="bit bucket logo" />
+            </a>
+
+        </div>
     </mat-card>
 
     <mat-card class="d">
