@@ -1,32 +1,22 @@
 <div class="status-container">
     <mat-card [style.border-bottom]="getBorder()" class="a">
-        <h1>{{ data.name }} status</h1>
-    </mat-card>
-    <mat-card class="b">
-        
+        <h1>{{ data.name.toUpperCase() }} STATUS</h1>
     </mat-card>
 
     <mat-card class="c" *ngIf="(data.metrics.status === 'GREEN'); else lastFailure">
         <div class="c1">
-            <h1>Last Successful Run</h1>
+            <h1>LAST SUCCESSFUL RUN</h1>
         </div>
         <div class="c2">
             <p>Author: {{ data.metrics.lastSuccess.author }}</p>
-        </div>
-        <div class="c3">
             <p>Branch Name: {{ data.metrics.lastSuccess.branchName }}</p>
-        </div>
-        <div class="c4">
             <p>Commit Message: {{ data.metrics.lastSuccess.commitMessage }}</p>
-        </div>
-        <div class="c5">
             <a [attr.href]="data.metrics.lastSuccess.concourseUrl" target="_blank">
-                <img src="../../../assets/concourse.png" height="50px" width="50px" alt="concourse logo" />
-            </a>
-            <a [attr.href]="data.repoUrl + '/commits/' + data.metrics.lastSuccess.commitHash" target="_blank">
-                <img src="../../../assets/bitbucket.png" height="50px" width="50px" alt="bit bucket logo" />
-            </a>
-
+                    <img src="../../../assets/concourse.png" height="75px" width="75px" alt="concourse logo" />
+                </a>
+                <a [attr.href]="data.repoUrl + '/commits/' + data.metrics.lastSuccess.commitHash" target="_blank">
+                    <img src="../../../assets/bitbucket.png" height="75px" width="75px" alt="bit bucket logo" />
+                </a>
         </div>
     </mat-card>
 
@@ -38,7 +28,7 @@
         <div class="e1">
             <h1>MASTER BRANCH</h1>
         </div>
-        <div class="e2">          
+        <div class="e2">
             <img src="{{ masterBranch.latestCommit.author.avatarUrl }}">
         </div>
         <div class="e3">
@@ -53,7 +43,7 @@
         <div class="f1">
             <h1>DEVELOP BRANCH</h1>
         </div>
-        <div class="f2">          
+        <div class="f2">
             <img src="{{ developBranch.latestCommit.author.avatarUrl }}">
         </div>
         <div class="f3">
@@ -72,7 +62,7 @@
         <div class="h1">
             <h1>MASTER BUILDS</h1>
         </div>
-        <div class="h2">          
+        <div class="h2">
             <p>Author: {{ masterBranch.builds[0].author }}</p>
             <p>Commit Message: </p>
             <p>{{ masterBranch.builds[0].commitMessage.split('\':')[1] }}</p>
@@ -90,7 +80,7 @@
         <div class="i1">
             <h1>DEVELOP BUILDS</h1>
         </div>
-        <div class="i2">    
+        <div class="i2">
             <p>Author: {{ developBranch.builds[0].author }}</p>
             <p>Commit Message: </p>
             <p>{{ developBranch.builds[0].commitMessage.split('\':')[1] }}</p>
