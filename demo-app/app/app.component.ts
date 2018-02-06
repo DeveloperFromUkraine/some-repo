@@ -39,5 +39,6 @@ export class AppComponent{
     { name: 'Selection List', route: '/selection-list' },
     { name: 'Sidenav', route: '/sidenav' },
     { name: 'Text', route: '/text' },
+      {name: 'Doc Site Contributions', route: '/contribution'},
   ];
 }
