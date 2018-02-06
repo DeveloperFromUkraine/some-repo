@@ -122,6 +122,9 @@ import { NavListComponent } from './nav-list/nav-list.component';
 import { DataTableContainerModule } from './data-table-container/data-table-container.module';
 import { DataTableContainerComponent } from './data-table-container/data-table-container.component';
 
+import { ExpandableSearchComponent } from './expandable-search/expandable-search.component';
+import { RightAlignContainerComponent } from './right-align-container/right-align-container.component';
+
 import {
   MatToolbarModule,
   MatMenuModule,
@@ -133,6 +136,8 @@ import {
   MatProgressSpinnerModule,
   MatNativeDateModule,
   MatListModule,
+  MatFormFieldModule,
+  MatInputModule
 } from '@angular/material';
 
 const components = [
@@ -189,7 +194,9 @@ const components = [
   CenterComponent,
   NestableFormDirective,
   LoadingContainerComponent,
-  FooterComponent
+  FooterComponent,
+  ExpandableSearchComponent,
+  RightAlignContainerComponent
 ];
 
 @NgModule({
@@ -208,7 +215,9 @@ const components = [
     MatListModule,
     NavListModule,
     TextListItemModule,
-    DataTableContainerModule
+    DataTableContainerModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   declarations: components,
   exports: [
