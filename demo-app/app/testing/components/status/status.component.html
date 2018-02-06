@@ -35,7 +35,9 @@
     </mat-card>
 
     <mat-card class="e">
-        <h1 class="e1">MASTER Branch</h1>
+        <div class="e1">
+            <h1>MASTER BRANCH</h1>
+        </div>
         <div class="e2">          
             <img src="{{ masterBranch.latestCommit.author.avatarUrl }}">
         </div>
@@ -43,12 +45,23 @@
             <p>Latest Commit by: {{ masterBranch.latestCommit.author.displayName }}</p>
             <p>Email: {{ masterBranch.latestCommit.author.emailAddress }}</p>
             <p>Commit Message:</p>
-            <p>{{ masterBranch.latestCommit.message }}</p>
+            <p>{{ masterBranch.latestCommit.message.split('\':')[1] }}</p>
         </div>
     </mat-card>
 
     <mat-card class="f">
-        <h1>DEVELOP</h1>
+        <div class="f1">
+            <h1>DEVELOP BRANCH</h1>
+        </div>
+        <div class="f2">          
+            <img src="{{ developBranch.latestCommit.author.avatarUrl }}">
+        </div>
+        <div class="f3">
+            <p>Latest Commit by: {{ developBranch.latestCommit.author.displayName }}</p>
+            <p>Email: {{ developBranch.latestCommit.author.emailAddress }}</p>
+            <p>Commit Message:</p>
+            <p>{{ developBranch.latestCommit.message.split('\':')[1] }}</p>
+        </div>
     </mat-card>
 
     <mat-card class="g">
@@ -56,11 +69,39 @@
     </mat-card>
 
     <mat-card class="h">
-        <h1>MASTER BUILDS</h1>
+        <div class="h1">
+            <h1>MASTER BUILDS</h1>
+        </div>
+        <div class="h2">          
+            <p>Author: {{ masterBranch.builds[0].author }}</p>
+            <p>Commit Message: </p>
+            <p>{{ masterBranch.builds[0].commitMessage.split('\':')[1] }}</p>
+            <p>Time: {{ masterBranch.builds[0].time }}</p>
+            <p>Status: {{ masterBranch.builds[0].status }}</p>
+        </div>
+        <div class="h3">
+            <a [attr.href]="masterBranch.builds[0].concourseUrl" target="_blank">
+                <img src="../../../assets/concourse.png" height="50px" width="50px" alt="concourse logo" />
+            </a>
+        </div>
     </mat-card>
 
     <mat-card class="i">
-        <h1>DEVELOP BUILDS</h1>
+        <div class="i1">
+            <h1>DEVELOP BUILDS</h1>
+        </div>
+        <div class="i2">    
+            <p>Author: {{ developBranch.builds[0].author }}</p>
+            <p>Commit Message: </p>
+            <p>{{ developBranch.builds[0].commitMessage.split('\':')[1] }}</p>
+            <p>Time: {{ developBranch.builds[0].time }}</p>
+            <p>Status: {{ developBranch.builds[0].status }}</p>
+        </div>
+        <div class="i3">
+            <a [attr.href]="developBranch.builds[0].concourseUrl" target="_blank">
+                <img src="../../../assets/concourse.png" height="50px" width="50px" alt="concourse logo" />
+            </a>
+        </div>
     </mat-card>
 </div>
 
