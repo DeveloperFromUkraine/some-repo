@@ -2,7 +2,7 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav class="sidenav" mode="side" opened="false" [fixedInViewport]="true"
                [fixedTopGap]="headerHeight + 8">
-    <div><mat-toolbar class = "component-side-nav">Components</mat-toolbar></div><br>
+    <div><mat-toolbar class = "component-side-nav">Components</mat-toolbar></div>
     <mat-nav-list dense>
       <div *ngFor="let item of navItems">
         <h3><a mat-list-item [routerLink]="[item.route]"><span mat-line>{{ item.name }}</span></a></h3>
@@ -11,7 +11,7 @@
 
     <ign-center>Questions? <a
             href="https://ultimatesoftware.slack.com/messages/docsitequestions/" target="_blank">Ask here!</a>
-    </ign-center><br>
+    </ign-center>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar>

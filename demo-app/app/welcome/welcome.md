@@ -13,7 +13,6 @@
 * Create declarations within the modules for the imports.
 * Add the correct route and name to navitem array within the app.component.ts file.
 * Double check your work before you commit!
-<br><br>
 
 #### Sub-Components
 * If your component is a sub-component, check for a expansion panel component at the end of the component's HTML File.

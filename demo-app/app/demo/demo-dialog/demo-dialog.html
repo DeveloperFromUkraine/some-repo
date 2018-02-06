@@ -54,13 +54,13 @@
             </div></mat-tab>
 
             <mat-tab label="TS"><div class="tabHeight">
-                <table style="width:50%"><p>
-                    let dialogRef = this.dialog.open(DemoDialogComponentDialogBackground, &#123; disableClose: true &#125;);<br><br>
+                <table style="width:50%">
+                    <p>let dialogRef = this.dialog.open(DemoDialogComponentDialogBackground, &#123; disableClose: true &#125;);</p>
 
-                    Observable.merge(this.dialogRef.backdropClick())<br>
-                    &nbsp;.map(() => &#123;Action&#125;)<br>
-                    &nbsp; &nbsp;.subscribe();
-                </p>
+                    <p>Observable.merge(this.dialogRef.backdropClick())</p>
+                    <p>&nbsp;.map(() => &#123;Action&#125;)</p>
+                    <p>&nbsp; &nbsp;.subscribe();</p>
+
                 </table>
             </div></mat-tab>
         </mat-tab-group>
