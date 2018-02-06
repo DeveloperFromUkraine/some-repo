@@ -44,7 +44,7 @@ interface Metrics {
     greenSinceDate?: Date;
     status?: string;
     lastFailure?: BuildRun;
-    LastSuccess?: BuildRun;
+    lastSuccess?: BuildRun;
 }
 
 interface BuildRun {
@@ -52,6 +52,7 @@ interface BuildRun {
     branchName?: string;
     branchType?: string;
     commitMessage?: string;
+    commitHash?: string;
     concourseUrl?: string;
     job?: string;
     status?: string;
