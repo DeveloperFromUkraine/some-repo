@@ -1,7 +1,7 @@
 .status-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: .25fr auto .25fr 4fr .25fr 4fr;
+    grid-template-rows: .25fr auto .25fr auto .25fr auto;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     grid-template-areas:
@@ -166,4 +166,8 @@
 
 .header {
     font-size: 2rem;
+}
+
+span {
+    font-weight: bold;
 }

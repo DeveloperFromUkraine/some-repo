@@ -8,9 +8,9 @@
             <h1 class="header">LAST SUCCESSFUL RUN</h1>
         </div>
         <div class="c2">
-            <p class="information">Author: {{ data.metrics.lastSuccess.author }}</p>
-            <p class="information">Branch Name: {{ data.metrics.lastSuccess.branchName }}</p>
-            <p class="information">Commit Message: {{ data.metrics.lastSuccess.commitMessage }}</p>
+            <p class="information"><span>Author:</span> {{ data.metrics.lastSuccess.author }}</p>
+            <p class="information"><span>Branch Name:</span> {{ data.metrics.lastSuccess.branchName }}</p>
+            <p class="information"><span>Commit Message:</span> {{ data.metrics.lastSuccess.commitMessage }}</p>
             <a [attr.href]="data.metrics.lastSuccess.concourseUrl" target="_blank">
                 <img class="icon" src="../../../assets/concourse.png" alt="concourse logo" />
             </a>
@@ -32,10 +32,9 @@
             <img class="avatar" src="{{ masterBranch.latestCommit.author.avatarUrl }}" alt="avatar url" />
         </div>
         <div class="e3">
-            <p class="information">Latest Commit by: {{ masterBranch.latestCommit.author.displayName }}</p>
-            <p class="information">Email: {{ masterBranch.latestCommit.author.emailAddress }}</p>
-            <p class="information">Commit Message:</p>
-            <p class="information">{{ masterBranch.latestCommit.message.split('\':')[1] }}</p>
+            <p class="information"><span>Author:</span> {{ masterBranch.latestCommit.author.displayName }}</p>
+            <p class="information"><span>Email:</span> {{ masterBranch.latestCommit.author.emailAddress }}</p>
+            <p class="information"><span>Commit Message:</span> {{ masterBranch.latestCommit.message }}</p>
         </div>
     </mat-card>
 
@@ -47,10 +46,9 @@
             <img class="avatar" src="{{ developBranch.latestCommit.author.avatarUrl }}" alt="avatar url" />
         </div>
         <div class="f3">
-            <p class="information">Latest Commit by: {{ developBranch.latestCommit.author.displayName }}</p>
-            <p class="information">Email: {{ developBranch.latestCommit.author.emailAddress }}</p>
-            <p class="information">Commit Message:</p>
-            <p class="information">{{ developBranch.latestCommit.message.split('\':')[1] }}</p>
+            <p class="information"><span>Author:</span> {{ developBranch.latestCommit.author.displayName }}</p>
+            <p class="information"><span>Email:</span> {{ developBranch.latestCommit.author.emailAddress }}</p>
+            <p class="information"><span>Commit Message:</span> {{ developBranch.latestCommit.message }}</p>
         </div>
     </mat-card>
 
