@@ -2,7 +2,7 @@ export interface Service {
     name?: string;
     project?: string;
     repoUrl?: string;
-    branches?: Branches[];
+    branches?: Branches;
     metrics?: Metrics;
 }
 
