@@ -3,12 +3,10 @@
         <h1>{{ data.name }} status</h1>
     </mat-card>
     <mat-card class="b">
-        <h1>{{ data.metrics.greenSinceDate }}</h1>
-        <h1>{{ data.repoUrl }}</h1>
+        
     </mat-card>
 
     <mat-card class="c" *ngIf="(data.metrics.status === 'GREEN'); else lastFailure">
-
         <div class="c1">
             <h1>Last Successful Run</h1>
         </div>

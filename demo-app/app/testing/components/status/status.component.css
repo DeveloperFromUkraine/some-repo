@@ -6,7 +6,7 @@
     grid-row-gap: 10px;
     grid-template-areas:
         "header header"
-        "content1 content2"
+        "content1 content1"
         "activity activity"
         "content3 content4"
         "builds builds"
@@ -20,17 +20,13 @@
     border-bottom: 5px
 }
 
-.b {
-    grid-area: content1;
-}
-
 .c {
-    grid-area: content2;
+    grid-area: content1;
     display: grid;
     align-items: stretch;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 2fr 2fr 1fr;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas: 
         "header header"
         "author branch"
@@ -41,25 +37,21 @@
 .c1 {
     grid-area: header;
     border: 1px solid black;
-    background-color: red;
 }
 
 .c2 {
     grid-area: author;
     border: 1px solid black;
-    background-color: red;
 }
 
 .c3 {
     grid-area: branch;
     border: 1px solid black;
-    background-color: red;
 }
 
 .c4 {
     grid-area: commit;
     border: 1px solid black;
-    background-color: red;
 }
 
 .c5 {
