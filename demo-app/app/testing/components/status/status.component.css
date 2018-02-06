@@ -1,7 +1,7 @@
 .status-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: .25fr 4fr .25fr 4fr .25fr 4fr;
+    grid-template-rows: .25fr auto .25fr 4fr .25fr 4fr;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     grid-template-areas:
@@ -29,35 +29,21 @@
     grid-template-rows: auto auto auto auto;
     grid-template-areas: 
         "header header"
-        "author branch"
-        "commit commit"
-        "footer footer";
+        "body body2"
 }
 
 .c1 {
     grid-area: header;
-    border: 1px solid black;
 }
 
 .c2 {
-    grid-area: author;
-    border: 1px solid black;
+    grid-area: body;
 }
 
 .c3 {
-    grid-area: branch;
-    border: 1px solid black;
-}
-
-.c4 {
-    grid-area: commit;
-    border: 1px solid black;
-}
-
-.c5 {
-    grid-area: footer;
-    border: 1px solid black;
-    justify-self: start;
+    grid-area: body2;
+    justify-self: end;
+    align-self: start;
 }
 
 .d {
@@ -157,4 +143,21 @@
 
 .i2 {
     grid-area: d-content;
+}
+.avatar {
+    height: 18rem;
+    width: 18rem;
+}
+
+.icon {
+    height: 4rem;
+    width: 4rem;
+}
+
+.information {
+    font-size: 1.25rem;
+}
+
+.header {
+    font-size: 2rem;
 }
