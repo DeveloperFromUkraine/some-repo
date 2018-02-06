@@ -8,8 +8,17 @@
     </mat-card>
 
     <mat-card class="c" *ngIf="(data.metrics.status === 'GREEN'); else lastFailure">
-        <mat-card-title>Last Success</mat-card-title>
-
+        <mat-card-title>Last Successful Run</mat-card-title>
+        <mat-card-content>
+            <h2 style="text-align: center">Details</h2>
+            <p>Author: {{ data.metrics.lastSuccess.author }}</p>
+            <p>Branch Name: {{ data.metrics.lastSuccess.branchName }}</p>
+            <a [attr.href]="data.metrics.lastSuccess.concourseUrl" target="_blank">
+                <img src="../../../assets/concourse.png" alt="concourse logo" />
+            </a>
+            <a [attr.href]="data.repoUrl + '/commits/' + data.metrics.lastSuccess.commitHash" target="_blank"><img src="../../../assets/bitbucket.png" alt="bit bucket logo" /></a>
+            <p>Commit Message: {{ data.metrics.lastSuccess.commitMessage }}</p>
+        </mat-card-content>
     </mat-card>
 
     <mat-card class="d">
@@ -31,7 +40,7 @@
     <mat-card class="h">
         <h1>MASTER BUILDS</h1>
     </mat-card>
-    
+
     <mat-card class="i">
         <h1>DEVELOP BUILDS</h1>
     </mat-card>
@@ -39,6 +48,15 @@
 
 <ng-template #lastFailure>
     <mat-card class="c">
-        <h1>FAILURE</h1>
+        <mat-card-title>Last Failed Run</mat-card-title>
+        <mat-card-content>
+            <h2 style="text-align: center">Details</h2>
+            <p>Author: {{ data.metrics.lastFailure.author }}</p>
+            <p>Branch Name: {{ data.metrics.lastFailure.branchName }}</p>
+            <a [attr.href]="data.metrics.lastSuccess.concourseUrl" target="_blank">
+                <img src="../../../assets/concourse.png" alt="concourse logo" />
+            </a>
+            <p>Commit Message: {{ data.metrics.lastFailure.commitMessage }}</p>
+        </mat-card-content>
     </mat-card>
 </ng-template>

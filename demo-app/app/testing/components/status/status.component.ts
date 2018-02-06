@@ -43,6 +43,7 @@ export class StatusComponent implements OnInit {
                                 branchType
                                 status
                                 commitMessage
+                                commitHash
                             }
                             lastSuccess {
                                 job
@@ -53,6 +54,7 @@ export class StatusComponent implements OnInit {
                                 branchType
                                 status
                                 commitMessage
+                                commitHash
                             }
                         }
                         project
