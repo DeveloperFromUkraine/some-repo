@@ -147,11 +147,14 @@
 .avatar {
     height: 18rem;
     width: 18rem;
+    border: 3px solid black;
+    padding: 0;
 }
 
 .icon {
     height: 4rem;
     width: 4rem;
+    margin-right: 5rem;
 }
 
 .information {
