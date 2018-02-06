@@ -1,61 +1,61 @@
 <div class="status-container">
     <mat-card [style.border-bottom]="getBorder()" class="a">
-        <h1>{{ data.name.toUpperCase() }} STATUS</h1>
+        <h1 class="header">{{ data.name.toUpperCase() }} STATUS</h1>
     </mat-card>
 
     <mat-card class="c" *ngIf="(data.metrics.status === 'GREEN'); else lastFailure">
         <div class="c1">
-            <h1>LAST SUCCESSFUL RUN</h1>
+            <h1 class="header">LAST SUCCESSFUL RUN</h1>
         </div>
         <div class="c2">
-            <p>Author: {{ data.metrics.lastSuccess.author }}</p>
-            <p>Branch Name: {{ data.metrics.lastSuccess.branchName }}</p>
-            <p>Commit Message: {{ data.metrics.lastSuccess.commitMessage }}</p>
+            <p class="information">Author: {{ data.metrics.lastSuccess.author }}</p>
+            <p class="information">Branch Name: {{ data.metrics.lastSuccess.branchName }}</p>
+            <p class="information">Commit Message: {{ data.metrics.lastSuccess.commitMessage }}</p>
             <a [attr.href]="data.metrics.lastSuccess.concourseUrl" target="_blank">
-                    <img src="../../../assets/concourse.png" height="75px" width="75px" alt="concourse logo" />
-                </a>
-                <a [attr.href]="data.repoUrl + '/commits/' + data.metrics.lastSuccess.commitHash" target="_blank">
-                    <img src="../../../assets/bitbucket.png" height="75px" width="75px" alt="bit bucket logo" />
-                </a>
+                <img class="icon" src="../../../assets/concourse.png" alt="concourse logo" />
+            </a>
+            <a [attr.href]="data.repoUrl + '/commits/' + data.metrics.lastSuccess.commitHash" target="_blank">
+                <img class="icon" src="../../../assets/bitbucket.png" alt="bit bucket logo" />
+            </a>
         </div>
     </mat-card>
 
     <mat-card class="d">
-        <h1>RECENT ACTIVITY</h1>
+        <h1 class="header">RECENT ACTIVITY</h1>
     </mat-card>
 
     <mat-card class="e">
         <div class="e1">
-            <h1>MASTER BRANCH</h1>
+            <h1 class="header">MASTER BRANCH</h1>
         </div>
         <div class="e2">
-            <img src="{{ masterBranch.latestCommit.author.avatarUrl }}">
+            <img class="avatar" src="{{ masterBranch.latestCommit.author.avatarUrl }}" alt="avatar url" />
         </div>
         <div class="e3">
-            <p>Latest Commit by: {{ masterBranch.latestCommit.author.displayName }}</p>
-            <p>Email: {{ masterBranch.latestCommit.author.emailAddress }}</p>
-            <p>Commit Message:</p>
-            <p>{{ masterBranch.latestCommit.message.split('\':')[1] }}</p>
+            <p class="information">Latest Commit by: {{ masterBranch.latestCommit.author.displayName }}</p>
+            <p class="information">Email: {{ masterBranch.latestCommit.author.emailAddress }}</p>
+            <p class="information">Commit Message:</p>
+            <p class="information">{{ masterBranch.latestCommit.message.split('\':')[1] }}</p>
         </div>
     </mat-card>
 
     <mat-card class="f">
         <div class="f1">
-            <h1>DEVELOP BRANCH</h1>
+            <h1 class="header">DEVELOP BRANCH</h1>
         </div>
         <div class="f2">
-            <img src="{{ developBranch.latestCommit.author.avatarUrl }}">
+            <img class="avatar" src="{{ developBranch.latestCommit.author.avatarUrl }}" alt="avatar url" />
         </div>
         <div class="f3">
-            <p>Latest Commit by: {{ developBranch.latestCommit.author.displayName }}</p>
-            <p>Email: {{ developBranch.latestCommit.author.emailAddress }}</p>
-            <p>Commit Message:</p>
-            <p>{{ developBranch.latestCommit.message.split('\':')[1] }}</p>
+            <p class="information">Latest Commit by: {{ developBranch.latestCommit.author.displayName }}</p>
+            <p class="information">Email: {{ developBranch.latestCommit.author.emailAddress }}</p>
+            <p class="information">Commit Message:</p>
+            <p class="information">{{ developBranch.latestCommit.message.split('\':')[1] }}</p>
         </div>
     </mat-card>
 
     <mat-card class="g">
-        <h1>BUILDS</h1>
+        <h1 class="header">BUILDS</h1>
     </mat-card>
 
     <mat-card class="h">

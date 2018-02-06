@@ -149,3 +149,21 @@
 .i3 {
     grid-area: concourse;
 }
+
+.avatar {
+    height: 18rem;
+    width: 18rem;
+}
+
+.icon {
+    height: 4rem;
+    width: 4rem;
+}
+
+.information {
+    font-size: 1.25rem;
+}
+
+.header {
+    font-size: 2rem;
+}
