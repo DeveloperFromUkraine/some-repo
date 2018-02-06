@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Apollo } from "apollo-angular/Apollo";
 import { Observable } from 'rxjs/Observable';
 import { map } from 'rxjs/operators';
-import { Service } from "../../models/service";
+import { Service, Branches, Values } from "../../models/service";
 import gql from 'graphql-tag';
 
 
@@ -14,6 +14,8 @@ export class StatusComponent implements OnInit {
     data: Service;
     service: string = 'nui-ignite-design-system';
     limit: number = 5;
+    masterBranch: Values;
+    developBranch: Values;
 
     constructor(private apollo: Apollo) { }
 
@@ -95,6 +97,17 @@ export class StatusComponent implements OnInit {
             .subscribe(response => {
                 this.data = response.data.serviceBySlug;
                 console.dir(this.data);
+
+                let values = this.data.branches.values;
+                for (let value of values) {
+                    if (value.displayId === 'master') {
+                        this.masterBranch = value;
+                    }
+                    else if (value.displayId === 'develop') {
+                        this.developBranch = value;
+                    }
+                }
+                // console.dir('mst:', this.masterBranch, 'dev:', this.developBranch);
             });
     }
 }

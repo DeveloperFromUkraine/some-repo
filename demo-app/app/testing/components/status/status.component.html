@@ -37,7 +37,16 @@
     </mat-card>
 
     <mat-card class="e">
-        <h1>MASTER</h1>
+        <h1 class="e1">MASTER Branch</h1>
+        <div class="e2">          
+            <img src="{{ masterBranch.latestCommit.author.avatarUrl }}">
+        </div>
+        <div class="e3">
+            <p>Latest Commit by: {{ masterBranch.latestCommit.author.displayName }}</p>
+            <p>Email: {{ masterBranch.latestCommit.author.emailAddress }}</p>
+            <p>Commit Message:</p>
+            <p>{{ masterBranch.latestCommit.message }}</p>
+        </div>
     </mat-card>
 
     <mat-card class="f">

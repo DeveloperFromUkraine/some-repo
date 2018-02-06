@@ -6,11 +6,11 @@ export interface Service {
     metrics?: Metrics;
 }
 
-interface Branches {
+export interface Branches {
     values?: Values[];
 }
 
-interface Values {
+export interface Values {
     displayId?: string;
     url?: string;
     builds?: Builds[];
