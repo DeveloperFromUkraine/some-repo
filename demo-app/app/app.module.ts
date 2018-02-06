@@ -105,7 +105,7 @@ const routes: Routes = [
     IgniteDesignSystemModule,
 
     MarkdownModule,
-    DemoModule,
+    DemoModule
   ],
   providers: [],
   bootstrap: [AppComponent],

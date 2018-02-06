@@ -1,0 +1,44 @@
+<div class="status-container">
+    <mat-card [style.border-bottom]="getBorder()" class="a">
+        <h1>{{ data.name }} status</h1>
+    </mat-card>
+    <mat-card class="b">
+        <h1>{{ data.metrics.greenSinceDate }}</h1>
+        <h1>{{ data.repoUrl }}</h1>
+    </mat-card>
+
+    <mat-card class="c" *ngIf="(data.metrics.status === 'GREEN'); else lastFailure">
+        <mat-card-title>Last Success</mat-card-title>
+
+    </mat-card>
+
+    <mat-card class="d">
+        <h1>RECENT ACTIVITY</h1>
+    </mat-card>
+
+    <mat-card class="e">
+        <h1>MASTER</h1>
+    </mat-card>
+
+    <mat-card class="f">
+        <h1>DEVELOP</h1>
+    </mat-card>
+
+    <mat-card class="g">
+        <h1>BUILDS</h1>
+    </mat-card>
+
+    <mat-card class="h">
+        <h1>MASTER BUILDS</h1>
+    </mat-card>
+    
+    <mat-card class="i">
+        <h1>DEVELOP BUILDS</h1>
+    </mat-card>
+</div>
+
+<ng-template #lastFailure>
+    <mat-card class="c">
+        <h1>FAILURE</h1>
+    </mat-card>
+</ng-template>
