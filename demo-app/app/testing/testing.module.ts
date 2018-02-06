@@ -28,7 +28,8 @@ import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { BrowserModule } from "@angular/platform-browser";
 import { CommonModule } from "@angular/common";
-import { MatCardModule, MatIconModule, MatToolbarModule, MatMenuModule, MatButtonModule } from "@angular/material";
+import { MatCardModule, MatIconModule, MatToolbarModule, MatMenuModule, MatButtonModule, MatExpansionModule } from "@angular/material";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
@@ -51,7 +52,9 @@ import { MatCardModule, MatIconModule, MatToolbarModule, MatMenuModule, MatButto
         MatIconModule,
         MatToolbarModule,
         MatMenuModule,
-        MatButtonModule
+        MatButtonModule,
+        MatExpansionModule,
+        BrowserAnimationsModule
     ],
     providers: [],
 })

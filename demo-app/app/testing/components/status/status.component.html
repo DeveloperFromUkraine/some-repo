@@ -90,17 +90,8 @@
         <div class="i1">
             <h1>DEVELOP BUILDS</h1>
         </div>
-        <div class="i2">    
-            <p>Author: {{ developBranch.builds[0].author }}</p>
-            <p>Commit Message: </p>
-            <p>{{ developBranch.builds[0].commitMessage.split('\':')[1] }}</p>
-            <p>Time: {{ developBranch.builds[0].time }}</p>
-            <p>Status: {{ developBranch.builds[0].status }}</p>
-        </div>
-        <div class="i3">
-            <a [attr.href]="developBranch.builds[0].concourseUrl" target="_blank">
-                <img src="../../../assets/concourse.png" height="50px" width="50px" alt="concourse logo" />
-            </a>
+        <div class="i2">
+            
         </div>
     </mat-card>
 </div>
