@@ -79,11 +79,12 @@
             <h1>DEVELOP BUILDS</h1>
         </div>
         <div class="i2">
-            <p>Author: {{ developBranch.builds[0].author }}</p>
-            <p>Commit Message: </p>
-            <p>{{ developBranch.builds[0].commitMessage.split('\':')[1] }}</p>
-            <p>Time: {{ developBranch.builds[0].time }}</p>
-            <p>Status: {{ developBranch.builds[0].status }}</p>
+            <div *ngFor="let build of developBranch.builds">
+                <p>Author: {{ developBranch.builds[0].author }}</p>
+                <p>Time: {{ developBranch.builds[0].time }}</p>
+                <p>Status: {{ developBranch.builds[0].status }}</p>
+                <button mat-button (click)="openBuildDialog(build)">See More Details</button>
+            </div>
         </div>
     </mat-card>
 </div>

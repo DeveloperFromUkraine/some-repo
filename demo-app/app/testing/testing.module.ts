@@ -9,7 +9,8 @@ import {
     ResourcesComponent,
     SnapshotComponent,
     TestTypesComponent,
-    StatusComponent
+    StatusComponent,
+    StatusDialogComponent
 } from './components/testing';
 
 const routes: Routes = [
@@ -28,7 +29,14 @@ import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { BrowserModule } from "@angular/platform-browser";
 import { CommonModule } from "@angular/common";
-import { MatCardModule, MatIconModule, MatToolbarModule, MatMenuModule, MatButtonModule, MatExpansionModule } from "@angular/material";
+import { 
+    MatCardModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatDialogModule
+} from "@angular/material";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -40,7 +48,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         ResourcesComponent,
         SnapshotComponent,
         TestTypesComponent,
-        StatusComponent
+        StatusComponent,
+        StatusDialogComponent
     ],
     imports: [
         RouterModule.forChild(routes),
@@ -53,10 +62,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         MatToolbarModule,
         MatMenuModule,
         MatButtonModule,
-        MatExpansionModule,
+        MatDialogModule,
         BrowserAnimationsModule
     ],
     providers: [],
+    entryComponents: [ StatusDialogComponent ]
 })
 export class TestingModule {
     constructor(apollo: Apollo, httpLink: HttpLink) {
