@@ -3,7 +3,7 @@ import { Component } from "@angular/core";
 
 @Component({
     templateUrl: './asynchronous.component.html',
-    styleUrls: [ './asynchronous.component.css' ]
+    styleUrls: [ '../testing.scss' ]
 })
 export class AsynchronousComponent {
     
