@@ -1,19 +1,16 @@
 <div class="status-container">
     <mat-card [style.border-bottom]="getBorder()" class="a">
-        <mat-card-title class="header">
-            {{ data?.name.toUpperCase() }} STATUS
-        </mat-card-title>
+        <h1>{{ data?.name.toUpperCase() }} STATUS</h1>
         <mat-card-subtitle *ngIf="(data?.metrics.status === 'GREEN'); else failureSubTitle">
             Passing Since: {{ data?.metrics.greenSinceDate | date }}
         </mat-card-subtitle>
     </mat-card>
 
     <mat-card class="c" *ngIf="(data?.metrics.status === 'GREEN'); else lastFailure">
-        <mat-card-title class="header">
-            LAST SUCCESSFUL RUN
-        </mat-card-title>
+
+        <h1>LAST SUCCESSFUL RUN</h1>
         <mat-card-content>
-            <p class="information">
+            <p>
                 <span>Author:</span> {{ data?.metrics.lastSuccess.author }}
             </p>
             <p class="information">
