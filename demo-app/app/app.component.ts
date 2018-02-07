@@ -1,16 +1,20 @@
-import { Component, ElementRef, ViewChild,  OnInit, OnDestroy } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit, OnDestroy} from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { MatDialog } from '@angular/material';
+import {Routes} from '@angular/router';
+import { DemoContributionComponent } from './demo/demo-contribution/demo-contribution.component';
 import {Subject} from 'rxjs/Subject';
-import {FormBuilder, FormGroup} from '@angular/forms';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+
+const routes: Routes = [
+    { path: 'contribution', component: DemoContributionComponent},
+];
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: [
-        './app.component.scss'
-    ],
+    styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent {
     @ViewChild('header')
     header: ElementRef;
     headerHeight: number;
@@ -42,8 +46,10 @@ export class AppComponent implements OnInit, OnDestroy {
     { name: 'Selection List', route: '/selection-list' },
     { name: 'Sidenav', route: '/sidenav' },
     { name: 'Text', route: '/text' },
-    {name: 'Doc Site Contributions', route: '/contribution'},
   ];
+    selectedOption: string;
+    constructor (public dialog: MatDialog) {
+    }
 
   testNavItems = [
     { name: 'Status', route: 'status' },
@@ -56,25 +62,26 @@ export class AppComponent implements OnInit, OnDestroy {
     { name: 'Resources', route: 'resources'}
   ];
 
+    openDialog(): void {
+        let dialogRef = this.dialog.open(SlackBotDialogComponent);
+        dialogRef.afterClosed().subscribe(result => {
+            this.selectedOption = result;
+        });
+    }
+}
+
+@Component({
+    selector: 'slackbot-dialog',
+    templateUrl: './slackbot-dialog.html',
+})
+export class SlackBotDialogComponent implements OnInit, OnDestroy {
+
     public formBuilder: FormBuilder;
     private close$ = new Subject<void>();
     form: FormGroup;
-    animal: string;
-    name: string;
-    constructor (formBuilder: FormBuilder, public dialog: MatDialog) {
+
+    constructor (formBuilder: FormBuilder) {
         this.formBuilder = formBuilder;
-    }
-
-    openDialog(): void {
-        let dialogRef = this.dialog.open(SlackBotDialogComponent, {
-            width: '250px',
-            data: { name: this.name, animal: this.animal }
-        });
-
-        dialogRef.afterClosed().subscribe(result => {
-            console.log('The dialog was closed');
-            this.animal = result;
-        });
     }
     ngOnInit(): void {
         this.form = this.formBuilder.group({
@@ -90,9 +97,3 @@ export class AppComponent implements OnInit, OnDestroy {
         this.close$.complete();
     }
 }
-
-@Component({
-    selector: 'slackbot-dialog',
-    templateUrl: './slackbot-dialog.html',
-})
-export class SlackBotDialogComponent {}

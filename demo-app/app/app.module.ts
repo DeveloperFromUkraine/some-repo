@@ -18,10 +18,7 @@ import { MatRadioModule } from '@angular/material/';
 import { MatIconModule } from '@angular/material/';
 import { MatButtonModule } from '@angular/material';
 
-import {
-    DemoDialogComponent, DemoDialogComponentDialog,
-    DemoDialogComponentDialogBackground
-} from './demo/demo-dialog/demo-dialog.component';
+import { DemoDialogComponent, DemoDialogComponentDialog, DemoDialogComponentDialogBackground} from './demo/demo-dialog/demo-dialog.component';
 import { DemoRadioButtonComponent } from './demo/demo-radio-button/demo-radio-button.component';
 import { DemoCheckboxComponent } from './demo/demo-checkbox/demo-checkbox.component';
 import { DemoCardComponent } from './demo/demo-card/demo-card.component';
@@ -115,7 +112,8 @@ const routes: Routes = [
     providers: [],
     bootstrap: [AppComponent],
     exports: [MatIconModule, MatButtonModule],
-    entryComponents: [SlackBotDialogComponent, ]
+
+    entryComponents: [SlackBotDialogComponent],
 })
 
 export class AppModule {
