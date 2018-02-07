@@ -1,7 +1,8 @@
-import { Component, ElementRef, ViewChild,  OnInit, OnDestroy } from '@angular/core';
+import { Component, ElementRef, ViewChild} from '@angular/core';
 import {Subject} from 'rxjs/Subject';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import {DemoDialogComponentDialog} from './demo/demo-dialog/demo-dialog.component';
 
 @Component({
     selector: 'app-root',
@@ -10,7 +11,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
         './app.component.scss'
     ],
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent{
     @ViewChild('header')
     header: ElementRef;
     headerHeight: number;
@@ -48,35 +49,16 @@ export class AppComponent implements OnInit, OnDestroy {
     public formBuilder: FormBuilder;
     private close$ = new Subject<void>();
     form: FormGroup;
-    animal: string;
-    name: string;
+    selectedOption: string;
     constructor (formBuilder: FormBuilder, public dialog: MatDialog) {
         this.formBuilder = formBuilder;
     }
 
     openDialog(): void {
-        let dialogRef = this.dialog.open(SlackBotDialogComponent, {
-            width: '250px',
-            data: { name: this.name, animal: this.animal }
-        });
-
+        let dialogRef = this.dialog.open(SlackBotDialogComponent);
         dialogRef.afterClosed().subscribe(result => {
-            console.log('The dialog was closed');
-            this.animal = result;
+            this.selectedOption = result;
         });
-    }
-    ngOnInit(): void {
-        this.form = this.formBuilder.group({
-            myDateRange: this.formBuilder.group({
-                startDate: [null],
-                endDate: [null]
-            })
-        })
-    }
-
-    ngOnDestroy(): void {
-        this.close$.next();
-        this.close$.complete();
     }
 }
 
