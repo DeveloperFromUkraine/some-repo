@@ -1,4 +1,4 @@
-<br>
+
 ## Content
 
 * Hub cards consist of an icon and a title.

@@ -6,12 +6,11 @@ import { DemoDialogAcceptCancelComponent } from './dialog-accept-cancel/dialog-a
 const NOTES: string = require('raw-loader!./demo-dialog.md');
 
 @Component({
-  selector: 'demo-dialog',
-  templateUrl: './demo-dialog.html',
-  styleUrls: ['./demo-dialog.css'],
+    selector: 'demo-dialog',
+    templateUrl: './demo-dialog.html',
 })
 export class DemoDialogComponent {
-  notes = NOTES;
+    notes = NOTES;
 
     selectedOption: string;
     dialogRefMain: any;
@@ -22,7 +21,7 @@ export class DemoDialogComponent {
         let dialogRef = this.dialog.open(DemoDialogComponentDialog);
         dialogRef.afterClosed().subscribe(result => {
             this.selectedOption = result;
-    });
+        });
     }
 
     openDialogBackgroundSubscription() {
@@ -34,8 +33,8 @@ export class DemoDialogComponent {
     }
 
     openDialogAcceptReject(): void {
-    this.dialog.open(DemoDialogAcceptCancelComponent)
-        .afterClosed()
+        this.dialog.open(DemoDialogAcceptCancelComponent)
+            .afterClosed()
             .subscribe(response => {
                 if (response) {
                     this.dialogRefMain.close()

@@ -7,7 +7,6 @@ const NOTES: string = require('raw-loader!./demo-date-range.md');
 @Component({
     selector: 'demo-date-range',
     templateUrl: './demo-date-range.html',
-    styleUrls: ['./demo-date-range.css'],
 })
 export class DemoDateRangeComponent implements OnInit, OnDestroy{
     notes = NOTES;

@@ -2,32 +2,28 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav class="sidenav" mode="side" opened="false" [fixedInViewport]="true"
                [fixedTopGap]="headerHeight + 8">
-    <mat-toolbar style="background: #4A4A4F; color:white">Components</mat-toolbar><br>
+    <div><mat-toolbar class = "component-side-nav">Components</mat-toolbar></div>
     <mat-nav-list dense>
       <div *ngFor="let item of navItems">
         <h3><a mat-list-item [routerLink]="[item.route]"><span mat-line>{{ item.name }}</span></a></h3>
       </div>
     </mat-nav-list>
-    
-    <mat-toolbar style="background: #4A4A4F; color:white">Testing</mat-toolbar>
-    <mat-nav-list dense>
-      <div *ngFor="let testItem of testNavItems">
-        <h3><a mat-list-item [routerLink]="testItem.route"><span mat-line>{{ testItem.name }}</span></a></h3>
-      </div>
-    </mat-nav-list>
-    
-    <ign-center>Questions? <a
-            href="https://ultimatesoftware.slack.com/messages/docsitequestions/" target="_blank">Ask here!</a>
-    </ign-center><br>
+
   </mat-sidenav>
   <mat-sidenav-content>
-      <mat-toolbar style="color: white">
-        <button mat-icon-button> <mat-icon style="color:white" (click)="sidenav.toggle()" class="material-icons">
-          menu</mat-icon>
-        </button>
-        <img class ="ultimate-icon" src="/assets/ultiu.svg">
-        Ignite Design System Documentation Site
-      </mat-toolbar>
-    <router-outlet></router-outlet>
+    <mat-toolbar>
+      <button mat-icon-button> <mat-icon style="color:white" (click)="sidenav.toggle()" class="material-icons">
+        menu</mat-icon>
+      </button>
+      <img class ="ultimate-icon" src="/assets/ultiu.svg">
+      Ignite Design System Documentation Site
+    </mat-toolbar>
+    <div id ="body-container">
+      <router-outlet></router-outlet>
+      <div id="footer" layout-align="end start"><button mat-raised-button color = "accent" (click)="openDialog()">
+        <pre>Questions About Our Components?</pre></button></div>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
+

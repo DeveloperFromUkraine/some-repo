@@ -1,4 +1,4 @@
-<br>
+
 ## Content
 
 * The accessibility directive has two sub directives:
@@ -8,6 +8,6 @@
 * The view directive is used for visual processing.
 * Both directives must be imported.
 
-<br>
+
 ## Style
 * This is a directive- no styling needed!

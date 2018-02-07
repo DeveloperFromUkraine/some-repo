@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { IgniteDesignSystemModule } from '../../src';
 import { TestingModule } from './testing/testing.module';
 
-import { AppComponent } from './app.component';
+import { AppComponent, SlackBotDialogComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { DemoModule } from './demo/demo.module';
 import { MarkdownModule } from './markdown/markdown.module';
@@ -18,7 +18,10 @@ import { MatRadioModule } from '@angular/material/';
 import { MatIconModule } from '@angular/material/';
 import { MatButtonModule } from '@angular/material';
 
-import { DemoDialogComponent } from './demo/demo-dialog/demo-dialog.component';
+import {
+    DemoDialogComponent, DemoDialogComponentDialog,
+    DemoDialogComponentDialogBackground
+} from './demo/demo-dialog/demo-dialog.component';
 import { DemoRadioButtonComponent } from './demo/demo-radio-button/demo-radio-button.component';
 import { DemoCheckboxComponent } from './demo/demo-checkbox/demo-checkbox.component';
 import { DemoCardComponent } from './demo/demo-card/demo-card.component';
@@ -39,13 +42,15 @@ import { DemoLoadingContainerComponent } from './demo/demo-loading-container/dem
 import { DemoNavListComponent } from './demo/demo-nav-list/demo-nav-list.component';
 import { DemoPageComponent } from './demo/demo-page/demo-page.component';
 import { DemoRightDrawerComponent } from './demo/demo-right-drawer/demo-right-drawer.component';
-import { DemoSelectContainerComponent } from './demo/demo-select-container/demo-select-container.component';
 import { DemoSidenavComponent } from './demo/demo-sidenav/demo-sidenav.component';
 import { DemoTextComponent } from './demo/demo-text/demo-text.component';
 import { DemoAccessibilityDirective } from './demo/demo-accessibility/demo-accessibility.directive';
 import { DemoAccessibilityComponent } from './demo/demo-accessibility/demo-accessibility.component';
 import { DemoIconComponent } from './demo/demo-icon/demo-icon.component';
 import { DemoSelectionListComponent } from './demo/demo-selection-list/demo-selection-list.component';
+import { DemoMarkdownComponent } from './demo/demo-markdown/demo-markdown.component';
+import { DemoContributionComponent } from './demo/demo-contribution/demo-contribution.component';
+import {DemoDialogAcceptCancelComponent} from './demo/demo-dialog/dialog-accept-cancel/dialog-accept-cancel.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -70,46 +75,53 @@ const routes: Routes = [
   { path: 'nav-list', component: DemoNavListComponent },
   { path: 'page', component: DemoPageComponent },
   { path: 'right-drawer', component: DemoRightDrawerComponent },
-  { path: 'select-container', component: DemoSelectContainerComponent },
   { path: 'sidenav', component: DemoSidenavComponent },
   { path: 'text', component: DemoTextComponent },
   { path: 'accessibility', component: DemoAccessibilityDirective },
   { path: 'accessibility-component', component: DemoAccessibilityComponent },
   { path: 'icon', component: DemoIconComponent },
   { path: 'selection-list', component: DemoSelectionListComponent },
-
+  { path: 'markdown', component: DemoMarkdownComponent },
+  { path: 'contribution', component: DemoContributionComponent },
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    WelcomeComponent,
-    DemoAccessibilityDirective,
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    RouterModule.forRoot(routes, {
-      useHash: true
-    }),
-    TestingModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatRadioModule,
-    MatIconModule,
-
-    IgniteDesignSystemModule,
-
-    MarkdownModule,
-    DemoModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-  exports: [MatIconModule, MatButtonModule]
+        MatIconModule,
+        
+        MatIconModule,
+        
+        MatIconModule,
+        
+    declarations: [
+        AppComponent,
+        SlackBotDialogComponent,
+        WelcomeComponent,
+        DemoAccessibilityDirective,
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        BrowserAnimationsModule,
+        RouterModule.forRoot(routes, {
+            useHash: true
+        }),
+        MatButtonModule,
+        MatToolbarModule,
+        MatSidenavModule,
+        MatCardModule,
+        MatCheckboxModule,
+        MatRadioModule,
+        MatIconModule,
+        IgniteDesignSystemModule,
+        
+        TestingModule,
+        MarkdownModule,
+        DemoModule,
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    exports: [MatIconModule, MatButtonModule],
+    entryComponents: [SlackBotDialogComponent, ]
 })
 
 export class AppModule {

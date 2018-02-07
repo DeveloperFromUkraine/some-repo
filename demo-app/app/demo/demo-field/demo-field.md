@@ -1,9 +1,9 @@
-<br>
+
 ## Content
 
 * The contents of the tag will be displayed as the value.
 
-<br>
+
 ## Style
 
 * A label must be provided.

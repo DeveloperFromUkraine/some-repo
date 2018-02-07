@@ -1,8 +1,8 @@
-<br>
+
 ## Content
 * Radio button components should use succinct labels for options rather than sentences.
 
-<br>
+
 ## Style
 
 * Options should have 16px spacing vertically and horizontally between items.

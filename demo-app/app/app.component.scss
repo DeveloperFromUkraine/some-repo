@@ -25,3 +25,17 @@
   height: 50%;
   width: 5%;
 }
+
+.mat-toolbar {
+  color: white;
+}
+
+.mat-toolbar.component-side-nav {
+  background: #4A4A4F;
+}
+
+#footer {
+  position:absolute;
+  bottom:0;
+  right: 0;
+}
