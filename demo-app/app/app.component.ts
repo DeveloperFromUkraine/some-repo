@@ -45,6 +45,17 @@ export class AppComponent implements OnInit, OnDestroy {
     {name: 'Doc Site Contributions', route: '/contribution'},
   ];
 
+  testNavItems = [
+    { name: 'Status', route: 'status' },
+    { name: 'AAA Test Pattern', route: 'aaa'},
+    { name: 'Asynchronous Operations', route: 'asynchronous'},
+    { name: 'Configuring Jest', route: 'jest'},
+    { name: 'Triggering Event Handlers', route: 'event-handler'},
+    { name: 'Snapshot Testing', route: 'snapshot'},
+    { name: 'Test Types', route: 'test-types'},
+    { name: 'Resources', route: 'resources'}
+  ];
+
     public formBuilder: FormBuilder;
     private close$ = new Subject<void>();
     form: FormGroup;

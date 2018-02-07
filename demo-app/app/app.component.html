@@ -9,6 +9,13 @@
       </div>
     </mat-nav-list>
 
+    <div><mat-toolbar class = "component-side-nav">Testing</mat-toolbar></div>
+    <mat-nav-list dense>
+      <div *ngFor="let testItem of testNavItems">
+        <h3><a mat-list-item [routerLink]="[testItem.route]"><span mat-line>{{ testItem.name }}</span></a></h3>
+      </div>
+    </mat-nav-list>
+
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar>

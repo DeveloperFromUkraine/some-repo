@@ -86,12 +86,6 @@ const routes: Routes = [
 ];
 
 @NgModule({
-        MatIconModule,
-        
-        MatIconModule,
-        
-        MatIconModule,
-        
     declarations: [
         AppComponent,
         SlackBotDialogComponent,
