@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { IgniteDesignSystemModule } from '../../src';
 
-import { AppComponent } from './app.component';
+import { AppComponent, SlackBotDialogComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { DemoModule } from './demo/demo.module';
 import { MarkdownModule } from './markdown/markdown.module';
@@ -17,7 +17,10 @@ import { MatRadioModule } from '@angular/material/';
 import { MatIconModule } from '@angular/material/';
 import { MatButtonModule } from '@angular/material';
 
-import { DemoDialogComponent } from './demo/demo-dialog/demo-dialog.component';
+import {
+    DemoDialogComponent, DemoDialogComponentDialog,
+    DemoDialogComponentDialogBackground
+} from './demo/demo-dialog/demo-dialog.component';
 import { DemoRadioButtonComponent } from './demo/demo-radio-button/demo-radio-button.component';
 import { DemoCheckboxComponent } from './demo/demo-checkbox/demo-checkbox.component';
 import { DemoCardComponent } from './demo/demo-card/demo-card.component';
@@ -46,6 +49,7 @@ import { DemoIconComponent } from './demo/demo-icon/demo-icon.component';
 import { DemoSelectionListComponent } from './demo/demo-selection-list/demo-selection-list.component';
 import { DemoMarkdownComponent } from './demo/demo-markdown/demo-markdown.component';
 import { DemoContributionComponent } from './demo/demo-contribution/demo-contribution.component';
+import {DemoDialogAcceptCancelComponent} from './demo/demo-dialog/dialog-accept-cancel/dialog-accept-cancel.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -83,6 +87,7 @@ const routes: Routes = [
 @NgModule({
     declarations: [
         AppComponent,
+        SlackBotDialogComponent,
         WelcomeComponent,
         DemoAccessibilityDirective,
     ],
@@ -108,7 +113,8 @@ const routes: Routes = [
     ],
     providers: [],
     bootstrap: [AppComponent],
-    exports: [MatIconModule, MatButtonModule]
+    exports: [MatIconModule, MatButtonModule],
+    entryComponents: [SlackBotDialogComponent, ]
 })
 
 export class AppModule {

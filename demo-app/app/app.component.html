@@ -21,6 +21,12 @@
       <img class ="ultimate-icon" src="/assets/ultiu.svg">
       Ignite Design System Documentation Site
     </mat-toolbar>
-    <div id ="body-container"><router-outlet></router-outlet></div>
+    <div id ="body-container">
+      <router-outlet></router-outlet>
+      <div id="footer" layout-align="end start"><button mat-raised-button color = "accent" (click)="openDialog()">
+        <pre>Questions About Our Components?</pre></button></div>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
+

@@ -1,4 +1,7 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild,  OnInit, OnDestroy } from '@angular/core';
+import {Subject} from 'rxjs/Subject';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 @Component({
     selector: 'app-root',
@@ -7,7 +10,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
         './app.component.scss'
     ],
 })
-export class AppComponent {
+export class AppComponent implements OnInit, OnDestroy {
     @ViewChild('header')
     header: ElementRef;
     headerHeight: number;
@@ -41,4 +44,44 @@ export class AppComponent {
     { name: 'Text', route: '/text' },
     {name: 'Doc Site Contributions', route: '/contribution'},
   ];
+
+    public formBuilder: FormBuilder;
+    private close$ = new Subject<void>();
+    form: FormGroup;
+    animal: string;
+    name: string;
+    constructor (formBuilder: FormBuilder, public dialog: MatDialog) {
+        this.formBuilder = formBuilder;
+    }
+
+    openDialog(): void {
+        let dialogRef = this.dialog.open(SlackBotDialogComponent, {
+            width: '250px',
+            data: { name: this.name, animal: this.animal }
+        });
+
+        dialogRef.afterClosed().subscribe(result => {
+            console.log('The dialog was closed');
+            this.animal = result;
+        });
+    }
+    ngOnInit(): void {
+        this.form = this.formBuilder.group({
+            myDateRange: this.formBuilder.group({
+                startDate: [null],
+                endDate: [null]
+            })
+        })
+    }
+
+    ngOnDestroy(): void {
+        this.close$.next();
+        this.close$.complete();
+    }
 }
+
+@Component({
+    selector: 'slackbot-dialog',
+    templateUrl: './slackbot-dialog.html',
+})
+export class SlackBotDialogComponent {}

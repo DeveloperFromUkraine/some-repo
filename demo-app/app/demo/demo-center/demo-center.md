@@ -8,4 +8,3 @@ at the discretion of the developer.
 
 * The center component is used for centering elements without needing to utilize the center property in css. The css center
 property is not needed and should be avoided when utilizing this component.
-
