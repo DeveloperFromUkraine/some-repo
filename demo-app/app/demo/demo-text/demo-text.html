@@ -1,60 +1,60 @@
-<div id="bodyContainer"><br><h1><u>Text</u></h1>
-    <br><h2> Use</h2>
-    <p> The text component and its subcomponents purposes is to display list items composed of primary and/or
-        secondary/tertiary text and may include routes. </p>
+<h1>Text</h1>
+<h2> Use</h2>
+<p> The text component and its subcomponents purposes is to display list items composed of primary and/or
+    secondary/tertiary text and may include routes. </p>
 
-    <br><h2>Sample</h2>
-    <mat-tab-group>
-        <mat-tab label="Component Sample">
-            <div class="tabHeight">
-                <ign-page>
-                    <ign-card-container>
-                        <ign-card-main>
-                            <ign-card-title>
-                               The card contains a two text-list-item components.
-                            </ign-card-title>
+<h2>Sample</h2>
+<mat-tab-group>
+    <mat-tab label="Component Sample">
+        <div class="tab-height">
+            <ign-page>
+                <ign-card-container>
+                    <ign-card-main>
+                        <ign-card-title>
+                            The card contains a two text-list-item components.
+                        </ign-card-title>
 
-                            <ign-nav-list>
-                                <ign-text-list-item
+                        <ign-nav-list>
+                            <ign-text-list-item
                                     primaryText="I'm one text-list-item."
                                     secondaryText="You can click me.">
                             </ign-text-list-item>
-                                <ign-text-list-item
-                                        primaryText="I'm another text-list-item."
-                                        secondaryText="I'm also clickable.">
-                                </ign-text-list-item>
-                            </ign-nav-list>
-                        </ign-card-main>
-                    </ign-card-container>
-                </ign-page>
-            </div></mat-tab>
-        <mat-tab label="HTML"><div class="tabHeight">
-            <table style="width:100%">
-                &lt;ign-page&gt;<br>
-                &nbsp; &lt;ign-card-container&gt;<br>
-                &nbsp;&nbsp;  &lt;ign-card-main&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;ign-card-title&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The card contains a two text-list-item components.<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ign-card-title&gt;<br>
-
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;ign-nav-list&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ign-text-list-item<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  primaryText="I'm one text-list-item."<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  secondaryText="You can click me."&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ign-text-list-item&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ign-text-list-item<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;primaryText="I'm another text-list-item."<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;secondaryText="I'm also clickable."&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ign-text-list-item&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ign-nav-list&gt;<br>
-                &nbsp;&nbsp;  &lt;/ign-card-main&gt;<br>
-                &nbsp; &lt;/ign-card-container&gt;<br>
-                &lt;/ign-page&gt;
-
-            </table>
+                            <ign-text-list-item
+                                    primaryText="I'm another text-list-item."
+                                    secondaryText="I'm also clickable.">
+                            </ign-text-list-item>
+                        </ign-nav-list>
+                    </ign-card-main>
+                </ign-card-container>
+            </ign-page>
         </div></mat-tab>
-    </mat-tab-group>
-    <markdown [content]="notes"></markdown></div>
+    <mat-tab label="HTML"><div class="tab-height">
+        <table style="width:100%">
+            <p> &lt;ign-page&gt;</p>
+            <p>&nbsp; &lt;ign-card-container&gt;</p>
+            <p> &nbsp;&nbsp;  &lt;ign-card-main&gt;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;ign-card-title&gt;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The card contains a two text-list-item components.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ign-card-title&gt;</p>
+
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;ign-nav-list&gt;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ign-text-list-item</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  primaryText="I'm one text-list-item."</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  secondaryText="You can click me."&gt;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ign-text-list-item&gt;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ign-text-list-item</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;primaryText="I'm another text-list-item."</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;secondaryText="I'm also clickable."&gt;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ign-text-list-item&gt;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ign-nav-list&gt;</p>
+            <p>&nbsp;&nbsp;  &lt;/ign-card-main&gt;</p>
+            <p>&nbsp; &lt;/ign-card-container&gt;</p>
+            <p> &lt;/ign-page&gt;
+
+        </table>
+    </div></mat-tab>
+</mat-tab-group>
+<markdown [content]="notes"></markdown>
 
 <mat-accordion>
     <mat-expansion-panel>
@@ -63,17 +63,17 @@
                 text-list-item
             </b></mat-panel-title>
             <mat-panel-description><i>Allows for the user to select an textual item from a list and
-            perform an action. </i></mat-panel-description>
+                perform an action. </i></mat-panel-description>
 
         </mat-expansion-panel-header>
         <mat-tab-group>
-            <mat-tab label="Component Styling"><div class="tabHeight">
+            <mat-tab label="Component Styling"><div class="tab-height">
                 <ul>
                     <li>Text list items should be short and concise</li>
                     <li>Text list items should be references to other pages or used as options in multi-selection content.</li>
                 </ul>
             </div></mat-tab>
-            <mat-tab label="HTML"><div class="tabHeight">
+            <mat-tab label="HTML"><div class="tab-height">
                 <p>&lt;text-list-item&gt; &lt;/text-list-item&gt;</p>
             </div></mat-tab>
         </mat-tab-group>
@@ -88,13 +88,13 @@
         </mat-expansion-panel-header>
 
         <mat-tab-group>
-            <mat-tab label="Component Styling"><div class="tabHeight">
+            <mat-tab label="Component Styling"><div class="tab-height">
                 <ul>
                     <li>List-item-primary-text is an optional component.</li>
                     <li>List-item-primary-text should display the main information.</li>
                 </ul>
             </div></mat-tab>
-            <mat-tab label="HTML"><div class="tabHeight">
+            <mat-tab label="HTML"><div class="tab-height">
                 <p> &lt;ign-list-item-primary-text&gt;&lt;/ign-list-item-primary-text&gt;</p>
             </div></mat-tab>
         </mat-tab-group>
@@ -109,7 +109,7 @@
         </mat-expansion-panel-header>
 
         <mat-tab-group>
-            <mat-tab label="Component Styling"><div class="tabHeight">
+            <mat-tab label="Component Styling"><div class="tab-height">
                 <ul>
                     <li>List-item-secondary-text is an optional component, but should only be utilized if there is
                         a primary text component in use.</li>
@@ -117,9 +117,10 @@
                         text component.</li>
                 </ul>
             </div></mat-tab>
-            <mat-tab label="HTML"><div class="tabHeight">
+            <mat-tab label="HTML"><div class="tab-height">
                 <p>&lt;ign-list-item-secondary-text&gt;&lt;/ign-list-item-secondary-text&gt;</p>
             </div></mat-tab>
         </mat-tab-group>
 
     </mat-expansion-panel>
+</mat-accordion>

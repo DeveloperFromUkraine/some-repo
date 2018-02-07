@@ -1,53 +1,53 @@
-<div id="bodyContainer"><br><h1><u>Form</u></h1>
-    <br><h2> Use</h2>
-    <p>Forms are components used to house, select, and submit multiple sets of content within one sitting.</p>
+<h1>Form</h1>
+<h2> Use</h2>
+<p>Forms are components used to house, select, and submit multiple sets of content within one sitting.</p>
 
-    <br><h2>Sample</h2>
-    <mat-tab-group>
-        <mat-tab label="Component Sample">
-            <div class="tabHeight">
+<h2>Sample</h2>
+<mat-tab-group>
+    <mat-tab label="Component Sample">
+        <div class="tab-height">
 
-                <form [formGroup]="form"> <ign-card-section> <div fxLayout="column">
-                    <mat-form-field ignSizeLarge>
-                        <mat-select><mat-option da="jobSelect-empty" [value]="null">Pick me!</mat-option></mat-select>
-                    </mat-form-field></div></ign-card-section>
-                </form>
-                Click the form above!
-            </div></mat-tab>
-        <mat-tab label="HTML"><div class="tabHeight">
-            <table style="width:100%">
-                &lt;form [formGroup]="form"&gt; &lt;ign-card-section&gt; &lt;div fxLayout="column"&gt;<br>
-                &nbsp;&nbsp;&lt;mat-form-field ignSizeLarge&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;mat-select>&lt;mat-option da="jobSelect-empty" [value]="null">Pick me!&lt;/mat-option&gt;&lt;/mat-select&gt;<br>
-                &nbsp;&nbsp;&lt;/mat-form-field&gt;&lt;/div>&lt;/ign-card-section&gt;<br>
-                &lt;/form&gt;
-                <br> Click the form above!
-            </table></div>
-        </mat-tab>
-        <mat-tab label="TS"><div class="tabHeight">
-            <table style="width:100%">
-                public formBuilder: FormBuilder; <br>
-                private close$ = new Subject&lt;void&gt;(); <br>
-                form: FormGroup; <br>
-                constructor (formBuilder: FormBuilder) &#123; <br>
-                &nbsp;&nbsp;this.formBuilder = formBuilder; <br>
-                &#125; <br>
+            <form [formGroup]="form"> <ign-card-section> <div fxLayout="column">
+                <mat-form-field ignSizeLarge>
+                    <mat-select><mat-option da="jobSelect-empty" [value]="null">Pick me!</mat-option></mat-select>
+                </mat-form-field></div></ign-card-section>
+            </form>
+            Click the form above!
+        </div></mat-tab>
+    <mat-tab label="HTML"><div class="tab-height">
+        <table style="width:100%">
+            <p>&lt;form [formGroup]="form"&gt; &lt;ign-card-section&gt; &lt;div fxLayout="column"&gt;</p>
+            <p> &nbsp;&nbsp;&lt;mat-form-field ignSizeLarge&gt;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;mat-select>&lt;mat-option da="jobSelect-empty" [value]="null">Pick me!&lt;/mat-option&gt;&lt;/mat-select&gt;</p>
+            <p>&nbsp;&nbsp;&lt;/mat-form-field&gt;&lt;/div>&lt;/ign-card-section&gt;</p>
+            <p> &lt;/form&gt;</p>
+            <p> Click the form above!</p>
+        </table></div>
+    </mat-tab>
+    <mat-tab label="TS"><div class="tab-height">
+        <table style="width:100%">
+            <p> public formBuilder: FormBuilder; </p>
+            <p>private close$ = new Subject&lt;void&gt;(); </p>
+            <p>form: FormGroup; </p>
+            <p>constructor (formBuilder: FormBuilder) &#123; </p>
+            <p>&nbsp;&nbsp;this.formBuilder = formBuilder; </p>
+            <p>&#125; </p>
 
 
-                ngOnInit(): void &#123; <br>
-                &nbsp;&nbsp;this.form = this.formBuilder.group(&#123; <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;myDateRange: this.formBuilder.group(&#123; <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;startDate: [new Date()], <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;endDate: [null] <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&#125;) <br>
-                &nbsp;&nbsp;&#125;) <br>
-                &#125; <br>
+            <p> ngOnInit(): void &#123; </p>
+            <p>&nbsp;&nbsp;this.form = this.formBuilder.group(&#123; </p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;myDateRange: this.formBuilder.group(&#123; </p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;startDate: [new Date()], </p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;endDate: [null] </p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&#125;) </p>
+            <p>&nbsp;&nbsp;&#125;) </p>
+            <p>&#125; </p>
 
-                ngOnDestroy(): void &#123; <br>
-                &nbsp;&nbsp;this.close$.next(); <br>
-                &nbsp;&nbsp;this.close$.complete(); <br>
-                &#125;
-            </table></div>
-        </mat-tab>
-    </mat-tab-group>
-    <markdown [content]="notes"></markdown></div>
+            <p>ngOnDestroy(): void &#123; </p>
+            <p> &nbsp;&nbsp;this.close$.next(); </p>
+            <p>&nbsp;&nbsp;this.close$.complete(); </p>
+            <p>&#125;</p>
+        </table></div>
+    </mat-tab>
+</mat-tab-group>
+<markdown [content]="notes"></markdown>

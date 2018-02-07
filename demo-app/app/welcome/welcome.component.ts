@@ -5,7 +5,6 @@ const NOTES: string = require('raw-loader!./welcome.md');
     encapsulation: ViewEncapsulation.None,
     selector: 'welcome-app',
     templateUrl: './welcome.html',
-    styleUrls: ['./welcome.css'],
 })
 
 export class WelcomeComponent {

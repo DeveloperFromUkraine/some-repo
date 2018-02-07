@@ -1,16 +1,23 @@
-import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit, OnDestroy} from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { MatDialog } from '@angular/material';
+import {Routes} from '@angular/router';
+import { DemoContributionComponent } from './demo/demo-contribution/demo-contribution.component';
+import {Subject} from 'rxjs/Subject';
+
+const routes: Routes = [
+    { path: 'contribution', component: DemoContributionComponent},
+];
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: [
-    './app.component.scss'
-  ],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements AfterViewInit {
-  @ViewChild('header')
-  header: ElementRef;
-  headerHeight: number;
+export class AppComponent {
+    @ViewChild('header')
+    header: ElementRef;
+    headerHeight: number;
 
   navItems = [
     { name: 'Accessibility', route: '/accessibility-component' },
@@ -22,7 +29,7 @@ export class AppComponent implements AfterViewInit {
     { name: 'Divider', route: '/divider' },
     { name: 'Empty State', route: '/empty-state' },
     { name: 'Error Banner', route: '/error-banner' },
-    { name: 'Expandable Floating Action Button (FAB)', route: '/expandable-fab' },
+    { name: 'Floating Action Button', route: '/expandable-fab' },
     { name: 'Field', route: '/field' },
     { name: 'Footer', route: '/footer' },
     { name: 'Form', route: '/form' },
@@ -32,6 +39,7 @@ export class AppComponent implements AfterViewInit {
     { name: 'List', route: '/list-content' },
     { name: 'Loading Container', route: '/loading-container' },
     { name: 'Nav List', route: '/nav-list' },
+    { name: 'Markdown', route: '/markdown' },
     { name: 'Page', route: '/page' },
     { name: 'Radio Button', route: '/radio-button' },
     { name: 'Right Drawer', route: '/right-drawer' },
@@ -39,10 +47,42 @@ export class AppComponent implements AfterViewInit {
     { name: 'Sidenav', route: '/sidenav' },
     { name: 'Text', route: '/text' },
   ];
+    selectedOption: string;
+    constructor (public dialog: MatDialog) {
+    }
 
-  ngAfterViewInit () {
-    setTimeout(() => {
-      this.headerHeight = this.header.nativeElement.offsetHeight;
-    });
-  }
+    openDialog(): void {
+        let dialogRef = this.dialog.open(SlackBotDialogComponent);
+        dialogRef.afterClosed().subscribe(result => {
+            this.selectedOption = result;
+        });
+    }
+}
+
+@Component({
+    selector: 'slackbot-dialog',
+    templateUrl: './slackbot-dialog.html',
+})
+export class SlackBotDialogComponent implements OnInit, OnDestroy {
+
+    public formBuilder: FormBuilder;
+    private close$ = new Subject<void>();
+    form: FormGroup;
+
+    constructor (formBuilder: FormBuilder) {
+        this.formBuilder = formBuilder;
+    }
+    ngOnInit(): void {
+        this.form = this.formBuilder.group({
+            myDateRange: this.formBuilder.group({
+                startDate: [null],
+                endDate: [null]
+            })
+        })
+    }
+
+    ngOnDestroy(): void {
+        this.close$.next();
+        this.close$.complete();
+    }
 }

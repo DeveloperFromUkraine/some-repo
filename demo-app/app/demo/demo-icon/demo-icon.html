@@ -1,27 +1,27 @@
-<div id="bodyContainer"><br><h1><u>Icon</u></h1><br>
-    <h2>Use</h2>
-    <p>The icon component makes it easier to use vector-based icons. Material icons use geometric shapes to visually
-        represent core ideas, capabilities, or topics.
-        <br>See <a href="https://material.io/guidelines/style/icons.html">
-            Material Design Style Icons</a>
-        and <a href="https://material.angular.io/components/icon/overview">Angular Material Icon</a>.
-    </p><br>
-    <h2>Sample</h2>
-    <mat-tab-group>
-        <mat-tab label="Component Sample">
-            <div class="tabHeight">
-                <mat-icon>home</mat-icon>
-            </div>
-        </mat-tab>
-        <mat-tab label="HTML"><div class="tabHeight">
-            <table style="width:100%">
-                &lt;mat-icon&gt;home&lt;/mat-icon&gt;<br/>
-            </table>
-        </div></mat-tab>
-    </mat-tab-group>
-    <markdown [content]="notes"></markdown></div>
+<h1>Icon</h1>
+<h2>Use</h2>
+<p>The icon component makes it easier to use vector-based icons. Material icons use geometric shapes to visually
+    represent core ideas, capabilities, or topics. </p>
+<p>See <a href="https://material.io/guidelines/style/icons.html">
+    Material Design Style Icons</a>
+    and <a href="https://material.angular.io/components/icon/overview">Angular Material Icon</a>.
+</p>
+<h2>Sample</h2>
+<mat-tab-group>
+    <mat-tab label="Component Sample">
+        <div class="tab-height">
+            <mat-icon>home</mat-icon>
+        </div>
+    </mat-tab>
+    <mat-tab label="HTML"><div class="tab-height">
+        <table style="width:100%">
+            &lt;mat-icon&gt;home&lt;/mat-icon&gt;
+        </table>
+    </div></mat-tab>
+</mat-tab-group>
+<markdown [content]="notes"></markdown>
 
-<mat-accordion>
+<mat-accordion id = "accordion">
     <mat-expansion-panel>
         <mat-expansion-panel-header>
             <mat-panel-title><b>
@@ -31,14 +31,14 @@
 
         </mat-expansion-panel-header>
         <mat-tab-group>
-            <mat-tab label="Component Styling"><div class="tabHeight">
+            <mat-tab label="Component Styling"><div class="tab-height">
                 <ul>
                     <li>The mat-icon matListIcon component should be used for list items.</li>
                     <li>This component should not be used for selection lists.</li>
                     <li>This component should be used for nav lists.</li>
                 </ul>
             </div></mat-tab>
-            <mat-tab label="HTML"><div class="tabHeight">
+            <mat-tab label="HTML"><div class="tab-height">
                 <p>&lt;mat-icon matListIcon&gt; &lt;/mat-icon matListIcon&gt;</p>
             </div></mat-tab>
         </mat-tab-group>
