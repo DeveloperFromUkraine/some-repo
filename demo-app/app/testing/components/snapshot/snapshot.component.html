@@ -4,8 +4,9 @@
 
     <h2>Snapshot Tests have to be deterministic</h2>
     <p>Set component data members that are in template to static values (ex. Date.now() would be different every run).</p>
-    <pre>
-        <code class="code-block">
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
 it('should match snapshot', async () => {{ '{' }}
     component.description = 'test description';
     Date.now = jest.fn(() => 1482363367071);
@@ -14,12 +15,14 @@ it('should match snapshot', async () => {{ '{' }}
 
     expect(fixture).toMatchSnapshot();
 });
-        </code>
-    </pre>
+            </code>
+        </pre>
+    </mat-card>
 
     <p>Now we can expect this date value to consistently return the same value every run.</p>
-    <pre>
-        <code class="code-block">
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
 &lt;div class="date-output"&gt;{{ '{' }}{{ '{' }} date }}&lt;/div&gt;
 &lt;a
     (click)="handleClick($event)"
@@ -28,6 +31,7 @@ it('should match snapshot', async () => {{ '{' }}
     &lt;i class="material-icons app-link-icon" aria-hidden="true"&gt;{{ '{' }}{{ '{' }} icon }}&lt;/i&gt;
     &lt;div class="app-link-text"&gt;{{ '{' }}{{ '{' }} description }}&lt;/div&gt;
 &lt;/a&gt;
-        </code>
-    </pre>
+            </code>
+        </pre>
+    </mat-card>
 </div>
