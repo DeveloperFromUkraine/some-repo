@@ -112,11 +112,7 @@ const routes: Routes = [
     bootstrap: [AppComponent],
     exports: [MatIconModule, MatButtonModule],
 
-    entryComponents: [DemoDialogComponent,
-        DemoDialogComponentDialog,
-        DemoDialogComponentDialogBackground,
-        DemoDialogAcceptCancelComponent,
-        DemoEmptyStateExampleComponent,]
+    entryComponents: [SlackBotDialogComponent],
 })
 
 export class AppModule {

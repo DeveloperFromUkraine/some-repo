@@ -1,8 +1,9 @@
-import { Component, ElementRef, ViewChild} from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit, OnDestroy} from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material';
 import {Routes} from '@angular/router';
 import { DemoContributionComponent } from './demo/demo-contribution/demo-contribution.component';
+import {Subject} from 'rxjs/Subject';
 
 const routes: Routes = [
     { path: 'contribution', component: DemoContributionComponent},
@@ -46,12 +47,8 @@ export class AppComponent {
     { name: 'Sidenav', route: '/sidenav' },
     { name: 'Text', route: '/text' },
   ];
-
-    public formBuilder: FormBuilder;
-    form: FormGroup;
     selectedOption: string;
-    constructor (formBuilder: FormBuilder, public dialog: MatDialog) {
-        this.formBuilder = formBuilder;
+    constructor (public dialog: MatDialog) {
     }
 
     openDialog(): void {
@@ -66,4 +63,26 @@ export class AppComponent {
     selector: 'slackbot-dialog',
     templateUrl: './slackbot-dialog.html',
 })
-export class SlackBotDialogComponent {}
+export class SlackBotDialogComponent implements OnInit, OnDestroy {
+
+    public formBuilder: FormBuilder;
+    private close$ = new Subject<void>();
+    form: FormGroup;
+
+    constructor (formBuilder: FormBuilder) {
+        this.formBuilder = formBuilder;
+    }
+    ngOnInit(): void {
+        this.form = this.formBuilder.group({
+            myDateRange: this.formBuilder.group({
+                startDate: [null],
+                endDate: [null]
+            })
+        })
+    }
+
+    ngOnDestroy(): void {
+        this.close$.next();
+        this.close$.complete();
+    }
+}
