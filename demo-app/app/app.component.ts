@@ -7,7 +7,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
         './app.component.scss'
     ],
 })
-export class AppComponent{
+export class AppComponent {
     @ViewChild('header')
     header: ElementRef;
     headerHeight: number;
@@ -39,6 +39,6 @@ export class AppComponent{
     { name: 'Selection List', route: '/selection-list' },
     { name: 'Sidenav', route: '/sidenav' },
     { name: 'Text', route: '/text' },
-      {name: 'Doc Site Contributions', route: '/contribution'},
+    {name: 'Doc Site Contributions', route: '/contribution'},
   ];
 }
