@@ -1,104 +1,170 @@
 <div class="status-container">
     <mat-card [style.border-bottom]="getBorder()" class="a">
-        <h1 class="header">{{ data.name.toUpperCase() }} STATUS</h1>
+        <mat-card-title class="header">
+            {{ data?.name.toUpperCase() }} STATUS
+        </mat-card-title>
+        <mat-card-subtitle>
+            Passing Since: {{ data?.metrics.greenSinceDate | date }}
+        </mat-card-subtitle>
     </mat-card>
 
     <mat-card class="c" *ngIf="(data.metrics.status === 'GREEN'); else lastFailure">
-        <div class="c1">
-            <h1 class="header">LAST SUCCESSFUL RUN</h1>
-        </div>
-        <div class="c2">
-            <p class="information"><span>Author:</span> {{ data.metrics.lastSuccess.author }}</p>
-            <p class="information"><span>Branch Name:</span> {{ data.metrics.lastSuccess.branchName }}</p>
-            <p class="information"><span>Commit Message:</span> {{ data.metrics.lastSuccess.commitMessage }}</p>
-            <a [attr.href]="data.metrics.lastSuccess.concourseUrl" target="_blank">
+        <mat-card-title class="header">
+            LAST SUCCESSFUL RUN
+        </mat-card-title>
+        <mat-card-content>
+            <p class="information">
+                <span>Author:</span> {{ data?.metrics.lastSuccess.author }}
+            </p>
+            <p class="information">
+                <span>Date:</span> {{ data?.metrics.lastSuccess.time | date }}
+            </p>
+            <p class="information">
+                <span>Branch Name:</span> {{ data?.metrics.lastSuccess.branchName }}</p>
+            <p class="information" style="width: 50%">
+                <span>Commit Message:</span> {{ data?.metrics.lastSuccess.commitMessage }}</p>
+            <a [attr.href]="data?.metrics.lastSuccess.concourseUrl" target="_blank">
                 <img class="icon" src="../../../assets/concourse.png" alt="concourse logo" />
             </a>
-            <a [attr.href]="data.repoUrl + '/commits/' + data.metrics.lastSuccess.commitHash" target="_blank">
+            <a [attr.href]="data?.repoUrl + '/commits/' + data.metrics.lastSuccess.commitHash" target="_blank">
                 <img class="icon" src="../../../assets/bitbucket.png" alt="bit bucket logo" />
             </a>
-        </div>
+        </mat-card-content>
     </mat-card>
 
     <mat-card class="d">
-        <h1 class="header">RECENT ACTIVITY</h1>
+        <mat-card-title class="header">
+            RECENT ACTIVITY
+        </mat-card-title>
     </mat-card>
 
     <mat-card class="e">
-        <div class="e1">
-            <h1 class="header">MASTER BRANCH</h1>
-        </div>
-        <div class="e2">
-            <img class="avatar" src="{{ masterBranch.latestCommit.author.avatarUrl }}" alt="avatar url" />
-        </div>
-        <div class="e3">
-            <p class="information"><span>Author:</span> {{ masterBranch.latestCommit.author.displayName }}</p>
-            <p class="information"><span>Email:</span> {{ masterBranch.latestCommit.author.emailAddress }}</p>
-            <p class="information"><span>Commit Message:</span> {{ masterBranch.latestCommit.message }}</p>
-        </div>
+        <mat-card-title class="e1 header">
+            MASTER BRANCH
+        </mat-card-title>
+        <mat-card-content class="e2">
+            <img class="avatar" src="{{ masterBranch?.latestCommit.author.avatarUrl }}" alt="avatar url" />
+        </mat-card-content>
+        <mat-card-content class="e3">
+            <p class="information">
+                <span>Author:</span> {{ masterBranch?.latestCommit.author.displayName }}</p>
+            <p class="information">
+                <span>Email:</span> {{ masterBranch?.latestCommit.author.emailAddress }}</p>
+            <p class="information">
+                <span>Commit Message:</span> {{ masterBranch?.latestCommit.message }}</p>
+        </mat-card-content>
     </mat-card>
 
     <mat-card class="f">
-        <div class="f1">
-            <h1 class="header">DEVELOP BRANCH</h1>
-        </div>
-        <div class="f2">
-            <img class="avatar" src="{{ developBranch.latestCommit.author.avatarUrl }}" alt="avatar url" />
-        </div>
-        <div class="f3">
-            <p class="information"><span>Author:</span> {{ developBranch.latestCommit.author.displayName }}</p>
-            <p class="information"><span>Email:</span> {{ developBranch.latestCommit.author.emailAddress }}</p>
-            <p class="information"><span>Commit Message:</span> {{ developBranch.latestCommit.message }}</p>
-        </div>
+        <mat-card-title class="f1 header">
+            DEVELOP BRANCH
+        </mat-card-title>
+        <mat-card-content class="f2">
+            <img class="avatar" src="{{ developBranch?.latestCommit.author.avatarUrl }}" alt="avatar url" />
+        </mat-card-content>
+        <mat-card-content class="f3">
+            <p class="information">
+                <span>Author:</span> {{ developBranch?.latestCommit.author.displayName }}</p>
+            <p class="information">
+                <span>Email:</span> {{ developBranch?.latestCommit.author.emailAddress }}</p>
+            <p class="information">
+                <span>Commit Message:</span> {{ developBranch?.latestCommit.message }}</p>
+        </mat-card-content>
     </mat-card>
 
     <mat-card class="g">
-        <h1 class="header">BUILDS</h1>
+        <mat-card-title class="header">
+            BUILDS
+        </mat-card-title>
     </mat-card>
 
     <mat-card class="h">
-        <div class="h1">
-            <h1>MASTER BUILDS</h1>
-        </div>
-        <div class="h2">
-            <p>Author: {{ masterBranch.builds[0].author }}</p>
-            <p>Commit Message: </p>
-            <p>{{ masterBranch.builds[0].commitMessage.split('\':')[1] }}</p>
-            <p>Time: {{ masterBranch.builds[0].time }}</p>
-            <p>Status: {{ masterBranch.builds[0].status }}</p>
-        </div>
-        <div class="h3">
-            <a [attr.href]="masterBranch.builds[0].concourseUrl" target="_blank">
-                <img src="../../../assets/concourse.png" height="50px" width="50px" alt="concourse logo" />
-            </a>
-        </div>
+        <mat-card-title class="header">
+            MASTER BUILDS
+        </mat-card-title>
+        <mat-card-content>
+            <mat-expansion-panel *ngFor="let build of data.branches.values[1].builds">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <p class="information">
+                            <span>{{ build?.author }}</span>
+                        </p>
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        <p class="information">
+                            <span>{{ build?.status }}</span>
+                        </p>
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <div class="panel-body">
+                    <p class="information">
+                        <span>Date:</span> {{ build?.time | date }}</p>
+                    <p class="information">
+                        <span>Duration:</span> {{ build?.duration }} Seconds</p>
+                    <p class="information">
+                        <span>Pipeline:</span> {{ build?.pipeline }}</p>
+                    <p class="information">
+                        <span>Commit Message:</span> {{ build?.commitMessage }}</p>
+                </div>
+            </mat-expansion-panel>
+        </mat-card-content>
     </mat-card>
 
     <mat-card class="i">
-        <div class="i1">
-            <h1>DEVELOP BUILDS</h1>
-        </div>
-        <div class="i2">
-            <p>Author: {{ developBranch.builds[0].author }}</p>
-            <p>Commit Message: </p>
-            <p>{{ developBranch.builds[0].commitMessage.split('\':')[1] }}</p>
-            <p>Time: {{ developBranch.builds[0].time }}</p>
-            <p>Status: {{ developBranch.builds[0].status }}</p>
-        </div>
+        <mat-card-title class="header">
+            DEVELOP BUILDS
+        </mat-card-title>
+        <mat-card-content>
+            <mat-expansion-panel *ngFor="let build of data.branches.values[0].builds">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <p class="information">
+                            <span>{{ build?.author }}</span>
+                        </p>
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        <p class="information">
+                            <span>{{ build?.status }}</span>
+                        </p>
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <div class="panel-body">
+                    <p class="information">
+                        <span>Date:</span> {{ build?.time | date }}</p>
+                    <p class="information">
+                        <span>Duration:</span> {{ build?.duration }} Seconds</p>
+                    <p class="information">
+                        <span>Pipeline:</span> {{ build?.pipeline }}</p>
+                    <p class="information">
+                        <span>Commit Message:</span> {{ build?.commitMessage }}</p>
+                </div>
+            </mat-expansion-panel>
+        </mat-card-content>
     </mat-card>
 </div>
 
 <ng-template #lastFailure>
     <mat-card class="c">
-        <mat-card-title>Last Failed Run</mat-card-title>
+        <mat-card-title class="header">
+            LAST FAILED RUN
+        </mat-card-title>
         <mat-card-content>
-            <h2 style="text-align: center">Details</h2>
-            <p>Author: {{ data.metrics.lastFailure.author }}</p>
-            <p>Branch Name: {{ data.metrics.lastFailure.branchName }}</p>
-            <a [attr.href]="data.metrics.lastSuccess.concourseUrl" target="_blank">
-                <img src="../../../assets/concourse.png" alt="concourse logo" />
+            <p class="information">
+                <span>Author:</span> {{ data?.metrics.lastFailure.author }}
+            </p>
+            <p class="information">
+                <span>Date:</span> {{ data?.metrics.lastFailure.time | date }}
+            </p>
+            <p class="information">
+                <span>Branch Name:</span> {{ data?.metrics.lastFailure.branchName }}</p>
+            <p class="information" style="width: 50%">
+                <span>Commit Message:</span> {{ data?.metrics.lastFailure.commitMessage }}</p>
+            <a [attr.href]="data?.metrics.lastFailure.concourseUrl" target="_blank">
+                <img class="icon" src="../../../assets/concourse.png" alt="concourse logo" />
             </a>
-            <p>Commit Message: {{ data.metrics.lastFailure.commitMessage }}</p>
+            <a [attr.href]="data?.repoUrl + '/commits/' + data.metrics.lastFailure.commitHash" target="_blank">
+                <img class="icon" src="../../../assets/bitbucket.png" alt="bit bucket logo" />
+            </a>
         </mat-card-content>
     </mat-card>
 </ng-template>

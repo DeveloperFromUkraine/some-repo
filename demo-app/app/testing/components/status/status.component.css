@@ -1,54 +1,41 @@
 .status-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: .25fr auto .25fr auto .25fr auto;
+    grid-auto-rows: repeat(6, auto);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+    margin: 0 auto;
     grid-template-areas:
         "header header"
         "content1 content1"
+        "content1 content1"
         "activity activity"
         "content3 content4"
+        "content3 content4"
         "builds builds"
+        "content5 content6"
         "content5 content6";
-    justify-content: space-around;
 }
 
 .a {
     grid-area: header;
     text-align: center;
-    border-bottom: 5px
+    border-bottom: 5px;
+    min-width: 250px;
+    min-height: 75px;
+    max-height: 200px;
 }
 
 .c {
     grid-area: content1;
-    display: grid;
-    align-items: stretch;
-    grid-gap: 10px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas: 
-        "header header"
-        "body body2"
-}
-
-.c1 {
-    grid-area: header;
-}
-
-.c2 {
-    grid-area: body;
-}
-
-.c3 {
-    grid-area: body2;
-    justify-self: end;
-    align-self: start;
 }
 
 .d {
     grid-area: activity;
     text-align: center;
+    min-width: 250px;
+    min-height: 75px;
+    max-height: 200px;
 }
 
 .e {
@@ -104,45 +91,10 @@
 
 .h {
     grid-area: content5;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 2fr 1fr;
-    grid-template-areas: 
-        "header"
-        "m-content"
-        "concourse";
-}
-
-.h1 {
-    grid-area: header;
-}
-
-.h2 {
-    grid-area: m-content;
-}
-
-.h3 {
-    grid-area: concourse;
 }
 
 .i {
     grid-area: content6;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 2fr;
-    grid-template-areas: 
-        "header"
-        "d-content";
-}
-
-.i1 {
-    grid-area: header;
-}
-
-.i2 {
-    grid-area: d-content;
 }
 .avatar {
     height: 18rem;
@@ -167,4 +119,12 @@
 
 span {
     font-weight: bold;
+}
+
+mat-panel-title {
+    width: 50%;
+}
+
+mat-panel-description {
+    width: 50%;
 }
