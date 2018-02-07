@@ -1,20 +1,20 @@
 .status-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: repeat(6, auto);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     margin: 0 auto;
     grid-template-areas:
-        "header header"
-        "content1 content1"
-        "content1 content1"
-        "activity activity"
-        "content3 content4"
-        "content3 content4"
-        "builds builds"
-        "content5 content6"
-        "content5 content6";
+        "header header header header"
+        ". content1 content1 ."
+        ". content1 content1 ."
+        "activity activity activity activity"
+        "content3 content3 content4 content4"
+        "content3 content3 content4 content4"
+        "builds builds builds builds"
+        "content5 content5 content6 content6"
+        "content5 content5 content6 content6";
 }
 
 .a {
@@ -97,8 +97,8 @@
     grid-area: content6;
 }
 .avatar {
-    height: 18rem;
-    width: 18rem;
+    height: 15rem;
+    width: 15rem;
     border: 3px solid black;
     padding: 0;
 }

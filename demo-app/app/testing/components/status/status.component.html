@@ -8,17 +8,17 @@
 
     <mat-card class="c" *ngIf="(data?.metrics.status === 'GREEN'); else lastFailure">
 
-        <h1>LAST SUCCESSFUL RUN</h1>
+        <h2>LAST SUCCESSFUL RUN</h2>
         <mat-card-content>
             <p>
                 <span>Author:</span> {{ data?.metrics.lastSuccess.author }}
             </p>
-            <p class="information">
+            <p>
                 <span>Date:</span> {{ data?.metrics.lastSuccess.time | date }}
             </p>
-            <p class="information">
+            <p>
                 <span>Branch Name:</span> {{ data?.metrics.lastSuccess.branchName }}</p>
-            <p class="information" style="width: 50%">
+            <p>
                 <span>Commit Message:</span> {{ data?.metrics.lastSuccess.commitMessage }}</p>
             <a [attr.href]="data?.metrics.lastSuccess.concourseUrl" target="_blank">
                 <img class="icon" src="../../../assets/concourse.png" alt="concourse logo" />
@@ -30,77 +30,70 @@
     </mat-card>
 
     <mat-card class="d">
-        <mat-card-title class="header">
-            RECENT ACTIVITY
-        </mat-card-title>
+        <h1>RECENT ACTIVITY</h1>
     </mat-card>
 
     <mat-card class="e">
-        <mat-card-title class="e1 header">
-            MASTER BRANCH
-        </mat-card-title>
+        <h2 class="e1">MASTER BRANCH</h2>
         <mat-card-content class="e2">
             <img class="avatar" src="{{ masterBranch?.latestCommit.author.avatarUrl }}" alt="avatar url" />
         </mat-card-content>
         <mat-card-content class="e3">
-            <p class="information">
-                <span>Author:</span> {{ masterBranch?.latestCommit.author.displayName }}</p>
-            <p class="information">
-                <span>Email:</span> {{ masterBranch?.latestCommit.author.emailAddress }}</p>
-            <p class="information">
-                <span>Commit Message:</span> {{ masterBranch?.latestCommit.message }}</p>
+            <p>
+                <span>Author:</span> {{ masterBranch?.latestCommit.author.displayName }}
+            </p>
+            <p>
+                <span>Email:</span> {{ masterBranch?.latestCommit.author.emailAddress }}
+            </p>
+            <p>
+                <span>Commit Message:</span> {{ masterBranch?.latestCommit.message }}
+            </p>
         </mat-card-content>
     </mat-card>
 
     <mat-card class="f">
-        <mat-card-title class="f1 header">
-            DEVELOP BRANCH
-        </mat-card-title>
+        <h2 class="f1">DEVELOP BRANCH</h2>
         <mat-card-content class="f2">
             <img class="avatar" src="{{ developBranch?.latestCommit.author.avatarUrl }}" alt="avatar url" />
         </mat-card-content>
         <mat-card-content class="f3">
-            <p class="information">
+            <p>
                 <span>Author:</span> {{ developBranch?.latestCommit.author.displayName }}</p>
-            <p class="information">
+            <p>
                 <span>Email:</span> {{ developBranch?.latestCommit.author.emailAddress }}</p>
-            <p class="information">
+            <p>
                 <span>Commit Message:</span> {{ developBranch?.latestCommit.message }}</p>
         </mat-card-content>
     </mat-card>
 
     <mat-card class="g">
-        <mat-card-title class="header">
-            BUILDS
-        </mat-card-title>
+        <h1>BUILDS</h1>
     </mat-card>
 
     <mat-card class="h">
-        <mat-card-title class="header">
-            MASTER BUILDS
-        </mat-card-title>
+        <h2>MASTER BUILDS</h2>
         <mat-card-content>
             <mat-expansion-panel *ngFor="let build of data.branches.values[1].builds">
                 <mat-expansion-panel-header>
                     <mat-panel-title>
-                        <p class="information">
+                        <p>
                             <span>{{ build?.author }}</span>
                         </p>
                     </mat-panel-title>
                     <mat-panel-description>
-                        <p class="information">
+                        <p>
                             <span>{{ build?.status }}</span>
                         </p>
                     </mat-panel-description>
                 </mat-expansion-panel-header>
-                <div class="panel-body">
-                    <p class="information">
+                <div>
+                    <p>
                         <span>Date:</span> {{ build?.time | date }}</p>
-                    <p class="information">
+                    <p>
                         <span>Duration:</span> {{ build?.duration }} Seconds</p>
-                    <p class="information">
+                    <p>
                         <span>Pipeline:</span> {{ build?.pipeline }}</p>
-                    <p class="information">
+                    <p>
                         <span>Commit Message:</span> {{ build?.commitMessage }}</p>
                 </div>
             </mat-expansion-panel>
@@ -108,31 +101,29 @@
     </mat-card>
 
     <mat-card class="i">
-        <mat-card-title class="header">
-            DEVELOP BUILDS
-        </mat-card-title>
+        <h2>DEVELOP BRANCH</h2>
         <mat-card-content>
             <mat-expansion-panel *ngFor="let build of data.branches.values[0].builds">
                 <mat-expansion-panel-header>
                     <mat-panel-title>
-                        <p class="information">
+                        <p>
                             <span>{{ build?.author }}</span>
                         </p>
                     </mat-panel-title>
                     <mat-panel-description>
-                        <p class="information">
+                        <p>
                             <span>{{ build?.status }}</span>
                         </p>
                     </mat-panel-description>
                 </mat-expansion-panel-header>
-                <div class="panel-body">
-                    <p class="information">
+                <div>
+                    <p>
                         <span>Date:</span> {{ build?.time | date }}</p>
-                    <p class="information">
+                    <p>
                         <span>Duration:</span> {{ build?.duration }} Seconds</p>
-                    <p class="information">
+                    <p>
                         <span>Pipeline:</span> {{ build?.pipeline }}</p>
-                    <p class="information">
+                    <p>
                         <span>Commit Message:</span> {{ build?.commitMessage }}</p>
                 </div>
             </mat-expansion-panel>
