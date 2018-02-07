@@ -6,28 +6,28 @@
     <p>Set component data members that are in template to static values (ex. Date.now() would be different every run).</p>
     <pre>
         <code class="code-block">
-            it('should match snapshot', async () => {{ '{' }}
-                component.description = 'test description';
-                Date.now = jest.fn(() => 1482363367071);
+it('should match snapshot', async () => {{ '{' }}
+    component.description = 'test description';
+    Date.now = jest.fn(() => 1482363367071);
 
-                await fixture.detectChanges();
+    await fixture.detectChanges();
 
-                expect(fixture).toMatchSnapshot();
-            });
+    expect(fixture).toMatchSnapshot();
+});
         </code>
     </pre>
 
     <p>Now we can expect this date value to consistently return the same value every run.</p>
     <pre>
         <code class="code-block">
-            &lt;div class="date-output"&gt;{{ '{' }}{{ '{' }} date }}&lt;/div&gt;
-            &lt;a
-                (click)="handleClick($event)"
-                class="app-link"
-            &gt;
-                &lt;i class="material-icons app-link-icon" aria-hidden="true"&gt;{{ '{' }}{{ '{' }} icon }}&lt;/i&gt;
-                &lt;div class="app-link-text"&gt;{{ '{' }}{{ '{' }} description }}&lt;/div&gt;
-            &lt;/a&gt;
+&lt;div class="date-output"&gt;{{ '{' }}{{ '{' }} date }}&lt;/div&gt;
+&lt;a
+    (click)="handleClick($event)"
+    class="app-link"
+&gt;
+    &lt;i class="material-icons app-link-icon" aria-hidden="true"&gt;{{ '{' }}{{ '{' }} icon }}&lt;/i&gt;
+    &lt;div class="app-link-text"&gt;{{ '{' }}{{ '{' }} description }}&lt;/div&gt;
+&lt;/a&gt;
         </code>
     </pre>
 </div>

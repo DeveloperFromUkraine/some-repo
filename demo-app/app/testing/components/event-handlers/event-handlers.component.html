@@ -5,33 +5,33 @@
     <h2>1. Trigger Event Handler on DebugElement</h2>
     <pre>
         <code class="code-block">
-            it('should emit clicked event', () => {{ '{' }}
-                de = fixture.debugElement.query(By.css('a'));
-                let spy = jest.fn();
+it('should emit clicked event', () => {{ '{' }}
+    de = fixture.debugElement.query(By.css('a'));
+    let spy = jest.fn();
 
-                component.clicked.subscribe(spy);
-                de.triggerEventHandler('click', null);
-                fixture.detectChanges();
+    component.clicked.subscribe(spy);
+    de.triggerEventHandler('click', null);
+    fixture.detectChanges();
 
-                expect(spy).toHaveBeenCalled();
-            });
+    expect(spy).toHaveBeenCalled();
+});
         </code>
     </pre>
 
     <h2>2. DispatchEvent on NativeElement</h2>
     <pre>
         <code class="code-block">
-            it('should emit clicked event', () => {{ '{' }}
-                de = fixture.debugElement.query(By.css('a'));
-                ne = de.nativeElement;
-                let spy = jest.fn();
+it('should emit clicked event', () => {{ '{' }}
+    de = fixture.debugElement.query(By.css('a'));
+    ne = de.nativeElement;
+    let spy = jest.fn();
 
-                component.clicked.subscribe(spy);
-                ne.dispatchEvent(new Event('click'));
-                fixture.detectChanges();
+    component.clicked.subscribe(spy);
+    ne.dispatchEvent(new Event('click'));
+    fixture.detectChanges();
 
-                expect(spy).toHaveBeenCalled();
-            });
+    expect(spy).toHaveBeenCalled();
+});
         </code>
     </pre>
 </div>

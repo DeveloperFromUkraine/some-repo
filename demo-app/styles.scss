@@ -231,3 +231,18 @@ h6 {
   font-size: .67em;
   font-weight: bold;
 }
+
+pre {
+  background-color: #EFF2F4;
+  overflow: auto;
+  width: min-content;
+  padding: 0.5em;
+}
+
+.code-block {
+  font-family: Courier New, Courier, monospace;
+  font-size: 1em;
+  line-height: 100%;
+  word-break: break-all;
+  padding: 0.5em;
+}
