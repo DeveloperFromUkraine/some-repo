@@ -3,12 +3,12 @@
         <mat-card-title class="header">
             {{ data?.name.toUpperCase() }} STATUS
         </mat-card-title>
-        <mat-card-subtitle>
+        <mat-card-subtitle *ngIf="(data?.metrics.status === 'GREEN'); else failureSubTitle">
             Passing Since: {{ data?.metrics.greenSinceDate | date }}
         </mat-card-subtitle>
     </mat-card>
 
-    <mat-card class="c" *ngIf="(data.metrics.status === 'GREEN'); else lastFailure">
+    <mat-card class="c" *ngIf="(data?.metrics.status === 'GREEN'); else lastFailure">
         <mat-card-title class="header">
             LAST SUCCESSFUL RUN
         </mat-card-title>
@@ -167,4 +167,10 @@
             </a>
         </mat-card-content>
     </mat-card>
+</ng-template>
+
+<ng-template #failureSubTitle>
+    <mat-card-subtitle id="failing-subtitle">
+        FAILING
+    </mat-card-subtitle>
 </ng-template>
