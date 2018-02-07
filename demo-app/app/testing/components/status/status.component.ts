@@ -2,9 +2,11 @@ import { Component, OnInit } from "@angular/core";
 import { Apollo } from "apollo-angular/Apollo";
 import { Observable } from 'rxjs/Observable';
 import { map } from 'rxjs/operators';
-import { Service, Branches, Values } from "../../models/service";
+import { Service, Branches, Values, Builds } from "../../models/service";
 import gql from 'graphql-tag';
 
+import { MatDialog } from '@angular/material';
+import { StatusDialogComponent } from './status.dialog';
 
 @Component({
     templateUrl: './status.component.html',
@@ -16,8 +18,9 @@ export class StatusComponent implements OnInit {
     limit: number = 5;
     masterBranch: Values;
     developBranch: Values;
+    dialogRef;
 
-    constructor(private apollo: Apollo) { }
+    constructor(private apollo: Apollo, public dialog: MatDialog) { }
 
     ngOnInit() {
         this.getServiceInfo();
@@ -109,5 +112,13 @@ export class StatusComponent implements OnInit {
                 }
                 // console.dir('mst:', this.masterBranch, 'dev:', this.developBranch);
             });
+    }
+
+    openBuildDialog(build: Builds) {
+        this.dialogRef = this.dialog.open(StatusDialogComponent, {
+            height: '500px',
+            width: '500px',
+            data: { build: build }
+        });
     }
 }

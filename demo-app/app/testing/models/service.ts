@@ -17,7 +17,7 @@ export interface Values {
     latestCommit?: LatestCommit;
 }
 
-interface Builds {
+export interface Builds {
     author?: string;
     branchName?: string;
     branchType?: string;
