@@ -1,17 +1,19 @@
 import { Component, ElementRef, ViewChild} from '@angular/core';
-import {Subject} from 'rxjs/Subject';
-import {FormBuilder, FormGroup} from '@angular/forms';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
-import {DemoDialogComponentDialog} from './demo/demo-dialog/demo-dialog.component';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { MatDialog } from '@angular/material';
+import {Routes} from '@angular/router';
+import { DemoContributionComponent } from './demo/demo-contribution/demo-contribution.component';
+
+const routes: Routes = [
+    { path: 'contribution', component: DemoContributionComponent},
+];
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: [
-        './app.component.scss'
-    ],
+    styleUrls: ['./app.component.scss'],
 })
-export class AppComponent{
+export class AppComponent {
     @ViewChild('header')
     header: ElementRef;
     headerHeight: number;
@@ -43,11 +45,9 @@ export class AppComponent{
     { name: 'Selection List', route: '/selection-list' },
     { name: 'Sidenav', route: '/sidenav' },
     { name: 'Text', route: '/text' },
-    {name: 'Doc Site Contributions', route: '/contribution'},
   ];
 
     public formBuilder: FormBuilder;
-    private close$ = new Subject<void>();
     form: FormGroup;
     selectedOption: string;
     constructor (formBuilder: FormBuilder, public dialog: MatDialog) {
