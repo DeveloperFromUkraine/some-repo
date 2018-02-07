@@ -7,7 +7,6 @@ const NOTES: string = require('raw-loader!./demo-form.md');
 @Component({
     selector: 'demo-form',
     templateUrl: './demo-form.html',
-    styleUrls: ['./demo-form.css'],
 })
 export class DemoFormComponent implements OnInit, OnDestroy{
     notes = NOTES;

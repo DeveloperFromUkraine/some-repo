@@ -1,4 +1,5 @@
 ### vNEXT
+- Added example and demo for max height in dialog
 
 ### v0.4.0
 - Introducing first pass of text-list-item component

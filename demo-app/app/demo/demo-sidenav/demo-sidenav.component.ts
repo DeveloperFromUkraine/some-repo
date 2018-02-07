@@ -4,7 +4,6 @@ const NOTES: string = require('raw-loader!./demo-sidenav.md');
 @Component({
     selector: 'demo-sidenav',
     templateUrl: './demo-sidenav.html',
-    styleUrls: ['./demo-sidenav.css'],
 })
 export class DemoSidenavComponent {
     notes = NOTES;

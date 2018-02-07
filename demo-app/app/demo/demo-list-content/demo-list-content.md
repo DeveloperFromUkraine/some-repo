@@ -1,4 +1,4 @@
-<br>
+
 ## Content
 
 * List components are composed of nine elements:
@@ -17,7 +17,7 @@
 * There should be action buttons within the content panel to add and remove content
 * Content within the content panel should be directly related to the linked content in list view.
 
-<br>
+
 ## Style
 
 * List components is nested in the following way:

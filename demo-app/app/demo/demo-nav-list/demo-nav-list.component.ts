@@ -4,7 +4,6 @@ const NOTES: string = require('raw-loader!./demo-nav-list.md');
 @Component({
     selector: 'demo-nav-list',
     templateUrl: './demo-nav-list.html',
-    styleUrls: ['./demo-nav-list.css'],
 })
 export class DemoNavListComponent {
     notes = NOTES;
