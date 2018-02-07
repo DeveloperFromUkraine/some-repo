@@ -133,19 +133,17 @@
 
 <ng-template #lastFailure>
     <mat-card class="c">
-        <mat-card-title class="header">
-            LAST FAILED RUN
-        </mat-card-title>
+        <h2>LAST FAILED RUN</h2>
         <mat-card-content>
-            <p class="information">
+            <p>
                 <span>Author:</span> {{ data?.metrics.lastFailure.author }}
             </p>
-            <p class="information">
+            <p>
                 <span>Date:</span> {{ data?.metrics.lastFailure.time | date }}
             </p>
-            <p class="information">
+            <p>
                 <span>Branch Name:</span> {{ data?.metrics.lastFailure.branchName }}</p>
-            <p class="information" style="width: 50%">
+            <p>
                 <span>Commit Message:</span> {{ data?.metrics.lastFailure.commitMessage }}</p>
             <a [attr.href]="data?.metrics.lastFailure.concourseUrl" target="_blank">
                 <img class="icon" src="../../../assets/concourse.png" alt="concourse logo" />

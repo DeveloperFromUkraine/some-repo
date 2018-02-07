@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     templateUrl: './configuring-jest.component.html',
-    styleUrls: [ './configuring-jest.component.css' ]
+    styleUrls: [ '../testing.scss' ]
 })
 export class ConfiguringJestComponent {
 

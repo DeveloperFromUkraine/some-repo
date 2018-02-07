@@ -9,8 +9,7 @@ import {
     ResourcesComponent,
     SnapshotComponent,
     TestTypesComponent,
-    StatusComponent,
-    StatusDialogComponent
+    StatusComponent
 } from './components/testing';
 
 const routes: Routes = [
@@ -35,7 +34,6 @@ import {
     MatToolbarModule,
     MatMenuModule,
     MatButtonModule,
-    MatDialogModule,
     MatExpansionModule
 } from "@angular/material";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -49,8 +47,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         ResourcesComponent,
         SnapshotComponent,
         TestTypesComponent,
-        StatusComponent,
-        StatusDialogComponent
+        StatusComponent
     ],
     imports: [
         RouterModule.forChild(routes),
@@ -66,8 +63,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         MatExpansionModule,
         BrowserAnimationsModule
     ],
-    providers: [],
-    entryComponents: [ StatusDialogComponent ]
+    providers: []
 })
 export class TestingModule {
     constructor(apollo: Apollo, httpLink: HttpLink) {

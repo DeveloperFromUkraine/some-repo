@@ -5,9 +5,6 @@ import { map } from 'rxjs/operators';
 import { Service, Branches, Values, Builds } from "../../models/service";
 import gql from 'graphql-tag';
 
-import { MatDialog } from '@angular/material';
-import { StatusDialogComponent } from './status.dialog';
-
 @Component({
     templateUrl: './status.component.html',
     styleUrls: ['./status.component.css']
@@ -20,7 +17,7 @@ export class StatusComponent implements OnInit {
     developBranch: Values;
     dialogRef;
 
-    constructor(private apollo: Apollo, public dialog: MatDialog) { }
+    constructor(private apollo: Apollo) { }
 
     ngOnInit() {
         this.getServiceInfo();
@@ -110,15 +107,6 @@ export class StatusComponent implements OnInit {
                         this.developBranch = value;
                     }
                 }
-                // console.dir('mst:', this.masterBranch, 'dev:', this.developBranch);
             });
-    }
-
-    openBuildDialog(build: Builds) {
-        this.dialogRef = this.dialog.open(StatusDialogComponent, {
-            height: '500px',
-            width: '500px',
-            data: { build: build }
-        });
     }
 }

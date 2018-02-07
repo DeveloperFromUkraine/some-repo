@@ -6,4 +6,3 @@ export { ResourcesComponent } from './resources/resources.component';
 export { SnapshotComponent } from './snapshot/snapshot.component';
 export { TestTypesComponent } from './test-types/test-types.component';
 export { StatusComponent } from './status/status.component';
-export { StatusDialogComponent } from './status/status.dialog';
