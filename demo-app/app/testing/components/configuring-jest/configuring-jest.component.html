@@ -24,26 +24,31 @@
 
     <h2>Setting Up Jest</h2>
     <p>1. Install dependency.</p>
-    <pre>
-        <code class="code-block">
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
 $ yarn add --dev jest jest-preset-angular @types/jest
-        </code>
-    </pre>
+            </code>
+        </pre>
+    </mat-card>
 
     <p>2. Add this entry to package.json.</p>
-    <pre>
-        <code class="code-block">
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
 "jest": {{ '{' }}
     "preset": "jest-preset-angular",
     "setupTestFrameworkScriptFile": "&lt;rootDir&gt;/src/jest.ts"
 }
-        </code>
-    </pre>
+            </code>
+        </pre>
+    </mat-card>
 
     <p>3. At the root of your src folder, create the file <span>jest-global-mocks.ts</span></p>
     <p>a. Include the following code to patch the window object since jsdom doesn't have it all implemented.</p>
-    <pre>
-        <code class="code-block">
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
 const mock = () => {{ '{' }}
     let storage = {{ '{' }}};
     return {{ '{' }}
@@ -53,65 +58,77 @@ const mock = () => {{ '{' }}
         clear: () => storage = {{ '{' }}},
     };
 };
-        </code>
-    </pre>
+            </code>
+        </pre>
+    </mat-card>
 
     <p>4. At the same location, create the file <span>jest.ts</span> and include the following</p>
-    <pre>
-        <code class="code-block">
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
 import 'jest-preset-angular';
 import './jest-global-mocks';
-        </code>
-    </pre>
+            </code>
+        </pre>
+    </mat-card>
 
     <p>5. Update your npm test scripts</p>
-    <pre>
-        <code class="code-block">
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
 "test": "jest",
 "test:watch": "jest --watch",
 "test:ci": "jest --runInBand"
-        </code>
-    </pre>
+            </code>
+        </pre>
+    </mat-card>
 
     <p>6. Remove @types/jasmine in node_modules. Contains duplicate declarations from @types/jest.</p>
 
     <p>7. Update <span>tsconfig.spec.json</span>: Change "jasmine" to "jest"</p>
-    <pre>
-        <code class="code-block">
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
 "types": [
     "jasmine",
     "node"
 ]
-        </code>
-    </pre>
-    <pre>
-        <code class="code-block">
+            </code>
+        </pre>
+    </mat-card>
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
 "types": [
     "jest",
     "node"
 ]
-        </code>
-    </pre>
-    
+            </code>
+        </pre>
+    </mat-card>
     <p>8. Update <span>tsconfig.e2e.json</span>: Change "jasmine" to "jest"</p>
-    <pre>
-        <code class="code-block">
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
 "types": [
     "jasmine",
     "jasminewd2",
     "node"
 ]
-        </code>
-    </pre>
-    <pre>
-        <code class="code-block">
+            </code>
+        </pre>
+    </mat-card>
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
 "types": [
     "jest",
     "jasminewd2",
     "node"
 ]
-        </code>
-    </pre>
+            </code>
+        </pre>
+    </mat-card>
     <hr />
     <h3>References</h3>
     <p>1. Pierzchala, Michal. "TESTING ANGULAR FASTER WITH JEST", <a href="https://www.xfive.co/blog/testing-angular-faster-jest/">https://www.xfive.co/blog/testing-angular-faster-jest/</a>, March 31, 2017</p>

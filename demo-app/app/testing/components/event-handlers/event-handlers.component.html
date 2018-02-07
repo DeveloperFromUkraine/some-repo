@@ -3,8 +3,9 @@
     <hr />
 
     <h2>1. Trigger Event Handler on DebugElement</h2>
-    <pre>
-        <code class="code-block">
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
 it('should emit clicked event', () => {{ '{' }}
     de = fixture.debugElement.query(By.css('a'));
     let spy = jest.fn();
@@ -15,12 +16,15 @@ it('should emit clicked event', () => {{ '{' }}
 
     expect(spy).toHaveBeenCalled();
 });
-        </code>
-    </pre>
+            </code>
+        </pre>
+    </mat-card>
 
     <h2>2. DispatchEvent on NativeElement</h2>
-    <pre>
-        <code class="code-block">
+    
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
 it('should emit clicked event', () => {{ '{' }}
     de = fixture.debugElement.query(By.css('a'));
     ne = de.nativeElement;
@@ -32,6 +36,7 @@ it('should emit clicked event', () => {{ '{' }}
 
     expect(spy).toHaveBeenCalled();
 });
-        </code>
-    </pre>
+            </code>
+        </pre>
+    </mat-card>
 </div>
