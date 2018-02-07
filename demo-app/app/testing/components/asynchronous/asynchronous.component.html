@@ -7,17 +7,17 @@
     <p>b. Assert inside the callback block.</p>
     <pre>
         <code class="code-block">
-            it('should set endDate html element', async (() => {{ '{' }}
-                let de = fixture.debugElement.query(By.css('#end-date-input'));
-                let ne: HTMLInputElement = de.nativeElement;
+it('should set endDate html element', async (() => {{ '{' }}
+    let de = fixture.debugElement.query(By.css('#end-date-input'));
+    let ne: HTMLInputElement = de.nativeElement;
 
-                component.endDate = '2019-12-12';
-                fixture.detectChanges();
+    component.endDate = '2019-12-12';
+    fixture.detectChanges();
 
-                fixture.whenStable().then(() => {{ '{' }}
-                    expect(ne.value).toEqual(component.endDate);
-                });
-            }));
+    fixture.whenStable().then(() => {{ '{' }}
+        expect(ne.value).toEqual(component.endDate);
+    });
+}));
         </code>
     </pre>
 
@@ -26,16 +26,16 @@
     <p>b. tick(100) would execute any asynchronous tasks that would occur within 100ms.</p>
     <pre>
         <code class="code-block">
-            it('should set endDate html element', fakeAsync (() => {{ '{' }}
-                let de = fixture.debugElement.query(By.css('#end-date-input'));
-                let ne: HTMLInputElement = de.nativeElement;
-        
-                component.endDate = '2019-12-12';
-                fixture.detectChanges();
-                tick();
-        
-                expect(ne.value).toEqual(component.endDate);
-            }));
+it('should set endDate html element', fakeAsync (() => {{ '{' }}
+    let de = fixture.debugElement.query(By.css('#end-date-input'));
+    let ne: HTMLInputElement = de.nativeElement;
+
+    component.endDate = '2019-12-12';
+    fixture.detectChanges();
+    tick();
+
+    expect(ne.value).toEqual(component.endDate);
+}));
         </code>
     </pre>
 
@@ -43,16 +43,16 @@
     <p>a. Built on top of Promises.</p>
     <p>b. Await works with Promises, not callbacks.</p>
     <pre>
-        <code class="code=block">
-            it('should set endDate html element', async () => {{ '{' }}
-                let de = fixture.debugElement.query(By.css('#end-date-input'));
-                let ne: HTMLInputElement = de.nativeElement;
+        <code class="code-block">
+it('should set endDate html element', async () => {{ '{' }}
+    let de = fixture.debugElement.query(By.css('#end-date-input'));
+    let ne: HTMLInputElement = de.nativeElement;
 
-                component.endDate = '20190-12-12';
-                await fixture.detectChanges();
+    component.endDate = '20190-12-12';
+    await fixture.detectChanges();
 
-                expect(ne.value).toEqual(component.endDate);
-            });
+    expect(ne.value).toEqual(component.endDate);
+});
         </code>
     </pre>
 </div>

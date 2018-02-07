@@ -13,18 +13,18 @@
 
     <pre>
         <code class="code-block">
-            it('should call closeDrawer when click event emitted', () => {{ '{' }}
-                //Arrange
-                de = fixture.debugElement.query(By.css('.close-icon'));
-                ne = de.nativeElement;
-                jest.spyOn(component, 'closeDrawer');
-                
-                //Act
-                ne.dispatchEvent(new Event('click'));
+it('should call closeDrawer when click event emitted', () => {{ '{' }}
+    //Arrange
+    de = fixture.debugElement.query(By.css('.close-icon'));
+    ne = de.nativeElement;
+    jest.spyOn(component, 'closeDrawer');
+    
+    //Act
+    ne.dispatchEvent(new Event('click'));
 
-                //Assert
-                expect(component.closeDrawer).toHaveBeenCalled();
-            });
+    //Assert
+    expect(component.closeDrawer).toHaveBeenCalled();
+});
         </code>
     </pre>
 </div>

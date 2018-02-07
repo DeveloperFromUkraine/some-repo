@@ -24,15 +24,19 @@
 
     <h2>Setting Up Jest</h2>
     <p>1. Install dependency.</p>
-    <code>$ yarn add --dev jest jest-preset-angular @types/jest</code>
+    <pre>
+        <code class="code-block">
+$ yarn add --dev jest jest-preset-angular @types/jest
+        </code>
+    </pre>
 
     <p>2. Add this entry to package.json.</p>
     <pre>
         <code class="code-block">
-            "jest": {{ '{' }}
-                "preset": "jest-preset-angular",
-                "setupTestFrameworkScriptFile": "&lt;rootDir&gt;/src/jest.ts"
-            }
+"jest": {{ '{' }}
+    "preset": "jest-preset-angular",
+    "setupTestFrameworkScriptFile": "&lt;rootDir&gt;/src/jest.ts"
+}
         </code>
     </pre>
 
@@ -40,32 +44,32 @@
     <p>a. Include the following code to patch the window object since jsdom doesn't have it all implemented.</p>
     <pre>
         <code class="code-block">
-            const mock = () => {{ '{' }}
-                let storage = {{ '{' }}};
-                return {{ '{' }}
-                    getItem: key => key in storage ? storage[key] : null,
-                    setItem: (key, value) => storage[key] = value || '',
-                    removeItem: key => delete storage[key],
-                    clear: () => storage = {{ '{' }}},
-                };
-            };
+const mock = () => {{ '{' }}
+    let storage = {{ '{' }}};
+    return {{ '{' }}
+        getItem: key => key in storage ? storage[key] : null,
+        setItem: (key, value) => storage[key] = value || '',
+        removeItem: key => delete storage[key],
+        clear: () => storage = {{ '{' }}},
+    };
+};
         </code>
     </pre>
 
     <p>4. At the same location, create the file <span>jest.ts</span> and include the following</p>
     <pre>
         <code class="code-block">
-            import 'jest-preset-angular';
-            import './jest-global-mocks';
+import 'jest-preset-angular';
+import './jest-global-mocks';
         </code>
     </pre>
 
     <p>5. Update your npm test scripts</p>
     <pre>
         <code class="code-block">
-            "test": "jest",
-            "test:watch": "jest --watch",
-            "test:ci": "jest --runInBand"
+"test": "jest",
+"test:watch": "jest --watch",
+"test:ci": "jest --runInBand"
         </code>
     </pre>
 
@@ -74,38 +78,38 @@
     <p>7. Update <span>tsconfig.spec.json</span>: Change "jasmine" to "jest"</p>
     <pre>
         <code class="code-block">
-            "types": [
-                "jest",
-                "node"
-            ]
+"types": [
+    "jasmine",
+    "node"
+]
         </code>
     </pre>
     <pre>
         <code class="code-block">
-            "types": [
-                "jest",
-                "node"
-            ]
+"types": [
+    "jest",
+    "node"
+]
         </code>
     </pre>
     
     <p>8. Update <span>tsconfig.e2e.json</span>: Change "jasmine" to "jest"</p>
     <pre>
         <code class="code-block">
-            "types": [
-                "jasmine",
-                "jasminewd2",
-                "node"
-            ]
+"types": [
+    "jasmine",
+    "jasminewd2",
+    "node"
+]
         </code>
     </pre>
     <pre>
         <code class="code-block">
-            "types": [
-                "jest",
-                "jasminewd2",
-                "node"
-            ]
+"types": [
+    "jest",
+    "jasminewd2",
+    "node"
+]
         </code>
     </pre>
     <hr />
