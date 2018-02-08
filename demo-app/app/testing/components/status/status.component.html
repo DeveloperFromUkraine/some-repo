@@ -1,14 +1,14 @@
 <div class="status-container">
-    <mat-card [style.border-bottom]="getBorder()" class="a">
-        <h1>{{ data?.name.toUpperCase() }} STATUS</h1>
-        <mat-card-subtitle *ngIf="(data?.metrics.status === 'GREEN'); else failureSubTitle">
+    <mat-card [style.border-bottom]="getBorder()" class="g-header">
+        <h1>Ignite Design System Status</h1>
+        <mat-card-subtitle *ngIf="(data?.metrics.status === 'GREEN')">
             Passing Since: {{ data?.metrics.greenSinceDate | date }}
         </mat-card-subtitle>
     </mat-card>
 
-    <mat-card class="c" *ngIf="(data?.metrics.status === 'GREEN'); else lastFailure">
+    <mat-card class="g-content-one" *ngIf="(data?.metrics.status === 'GREEN'); else lastFailure">
 
-        <h2>LAST SUCCESSFUL RUN</h2>
+        <h2>Last Successful Run</h2>
         <mat-card-content>
             <p>
                 <span>Author:</span> {{ data?.metrics.lastSuccess.author }}
@@ -29,111 +29,122 @@
         </mat-card-content>
     </mat-card>
 
-    <mat-card class="d">
-        <h1>RECENT ACTIVITY</h1>
-    </mat-card>
+    <h1 class="g-header-two">Recent Activity</h1>
 
-    <mat-card class="e">
-        <h2 class="e1">MASTER BRANCH</h2>
-        <mat-card-content class="e2">
-            <img class="avatar" src="{{ masterBranch?.latestCommit.author.avatarUrl }}" alt="avatar url" />
+    <mat-card class="g-content-two">
+        <h2 class="g-sub-header">Master Branch</h2>
+        <mat-card-content class="g-sub-image">
+            <div class="image-section">
+                <img class="avatar" src="{{ masterBranch?.latestCommit.author.avatarUrl }}" alt="avatar url" />
+            </div>
+            <div class="author-section">
+                <h3>Author</h3>
+                <p>{{ masterBranch?.latestCommit.author.displayName }}</p>
+            </div>
         </mat-card-content>
-        <mat-card-content class="e3">
+        <mat-card-content class="g-sub-content">
+            <h3>Email</h3>
             <p>
-                <span>Author:</span> {{ masterBranch?.latestCommit.author.displayName }}
+                {{ masterBranch?.latestCommit.author.emailAddress }}
             </p>
+            <h3>Commit Message</h3>
             <p>
-                <span>Email:</span> {{ masterBranch?.latestCommit.author.emailAddress }}
-            </p>
-            <p>
-                <span>Commit Message:</span> {{ masterBranch?.latestCommit.message }}
+                {{ masterBranch?.latestCommit.message }}
             </p>
         </mat-card-content>
     </mat-card>
 
-    <mat-card class="f">
-        <h2 class="f1">DEVELOP BRANCH</h2>
-        <mat-card-content class="f2">
-            <img class="avatar" src="{{ developBranch?.latestCommit.author.avatarUrl }}" alt="avatar url" />
+    <mat-card class="g-content-three">
+        <h2 class="g-sub-header">Develop Branch</h2>
+        <mat-card-content class="g-sub-image">
+            <div class="image-section">
+                <img class="avatar" src="{{ developBranch?.latestCommit.author.avatarUrl }}" alt="avatar url" />
+            </div>
+            <div class="author-section">
+                <h3>Author</h3>
+                <p>{{ developBranch?.latestCommit.author.displayName }}</p>
+            </div>
         </mat-card-content>
-        <mat-card-content class="f3">
+        <mat-card-content class="g-sub-content">
+            <h3>Email</h3>
             <p>
-                <span>Author:</span> {{ developBranch?.latestCommit.author.displayName }}</p>
+                {{ developBranch?.latestCommit.author.emailAddress }}</p>
+            <h3>Commit Message</h3>
             <p>
-                <span>Email:</span> {{ developBranch?.latestCommit.author.emailAddress }}</p>
-            <p>
-                <span>Commit Message:</span> {{ developBranch?.latestCommit.message }}</p>
+                {{ developBranch?.latestCommit.message }}</p>
         </mat-card-content>
     </mat-card>
 
-    <mat-card class="g">
-        <h1>BUILDS</h1>
-    </mat-card>
 
-    <mat-card class="h">
-        <h2>MASTER BUILDS</h2>
-        <mat-card-content>
-            <mat-expansion-panel *ngFor="let build of data.branches.values[1].builds">
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        <p>
-                            <span>{{ build?.author }}</span>
-                        </p>
-                    </mat-panel-title>
-                    <mat-panel-description>
-                        <p>
-                            <span>{{ build?.status }}</span>
-                        </p>
-                    </mat-panel-description>
-                </mat-expansion-panel-header>
-                <div>
-                    <p>
-                        <span>Date:</span> {{ build?.time | date }}</p>
-                    <p>
-                        <span>Duration:</span> {{ build?.duration }} Seconds</p>
-                    <p>
-                        <span>Pipeline:</span> {{ build?.pipeline }}</p>
-                    <p>
-                        <span>Commit Message:</span> {{ build?.commitMessage }}</p>
-                </div>
-            </mat-expansion-panel>
-        </mat-card-content>
-    </mat-card>
+    <h1 class="g-header-three">Builds</h1>
 
-    <mat-card class="i">
-        <h2>DEVELOP BRANCH</h2>
-        <mat-card-content>
-            <mat-expansion-panel *ngFor="let build of data.branches.values[0].builds">
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
+    <mat-card #buildPanel class="g-content-four">
+        <mat-tab-group (selectedTabChange)="reloadTabs()">
+            <mat-tab label="MASTER">
+                <mat-expansion-panel *ngFor="let build of data.branches.values[1].builds">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <p>
+                                <span>{{ build?.author }}</span>
+                            </p>
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            <p>
+                                <span>{{ build?.time | date }}</span>
+                            </p>
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <div>
                         <p>
-                            <span>{{ build?.author }}</span>
-                        </p>
-                    </mat-panel-title>
-                    <mat-panel-description>
+                            <span>Status:</span> {{ build?.status.toString().toLowerCase() }}</p>
                         <p>
-                            <span>{{ build?.status }}</span>
-                        </p>
-                    </mat-panel-description>
-                </mat-expansion-panel-header>
-                <div>
-                    <p>
-                        <span>Date:</span> {{ build?.time | date }}</p>
-                    <p>
-                        <span>Duration:</span> {{ build?.duration }} Seconds</p>
-                    <p>
-                        <span>Pipeline:</span> {{ build?.pipeline }}</p>
-                    <p>
-                        <span>Commit Message:</span> {{ build?.commitMessage }}</p>
-                </div>
-            </mat-expansion-panel>
-        </mat-card-content>
+                            <span>Duration:</span> {{ build?.duration }} Seconds</p>
+                        <p>
+                            <span>Pipeline:</span> {{ build?.pipeline }}</p>
+                        <p>
+                            <span>Commit Message:</span> {{ build?.commitMessage }}</p>
+                    </div>
+                </mat-expansion-panel>
+            </mat-tab>
+            <mat-tab label="DEVELOP">
+                <ng-container *ngIf="showTabContent">
+                    <mat-expansion-panel *ngFor="let build of data.branches.values[0].builds">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <p>
+                                    <span>{{ build?.author }}</span>
+                                </p>
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                <p>
+                                    <span>{{ build?.time | date }}</span>
+                                </p>
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <div>
+                            <p>
+                                <span>Status:</span> {{ build?.status.toString().toLowerCase() }}
+                            </p>
+                            <p>
+                                <span>Duration:</span> {{ build?.duration }} Seconds
+                            </p>
+                            <p>
+                                <span>Pipeline:</span> {{ build?.pipeline }}
+                            </p>
+                            <p>
+                                <span>Commit Message:</span> {{ build?.commitMessage }}
+                            </p>
+                        </div>
+                    </mat-expansion-panel>
+                </ng-container>
+            </mat-tab>
+        </mat-tab-group>
     </mat-card>
 </div>
 
 <ng-template #lastFailure>
-    <mat-card class="c">
-        <h2>LAST FAILED RUN</h2>
+    <mat-card class="g-content-one">
+        <h2>Last Failed Run</h2>
         <mat-card-content>
             <p>
                 <span>Author:</span> {{ data?.metrics.lastFailure.author }}
@@ -153,10 +164,4 @@
             </a>
         </mat-card-content>
     </mat-card>
-</ng-template>
-
-<ng-template #failureSubTitle>
-    <mat-card-subtitle id="failing-subtitle">
-        FAILING
-    </mat-card-subtitle>
 </ng-template>

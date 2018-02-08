@@ -34,7 +34,8 @@ import {
     MatToolbarModule,
     MatMenuModule,
     MatButtonModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatTabsModule
 } from "@angular/material";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -56,11 +57,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         HttpLinkModule,
         BrowserModule,
         MatCardModule,
-        MatIconModule,
         MatToolbarModule,
-        MatMenuModule,
-        MatButtonModule,
         MatExpansionModule,
+        MatTabsModule,
         BrowserAnimationsModule
     ],
     providers: []
