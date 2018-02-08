@@ -1,11 +1,10 @@
 import { Component, ElementRef, ViewChild, OnInit, OnDestroy, Inject} from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { MatDialog, MAT_DIALOG_DATA } from '@angular/material';
-import { Routes, ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { Routes, Router, NavigationEnd } from '@angular/router';
 import { DemoContributionComponent } from './demo/demo-contribution/demo-contribution.component';
-import { Subject } from 'rxjs/Subject';
+import { Observable, Subject } from 'rxjs';
 import { SlackService } from './services/slack-service'
-import { Response } from '@angular/http';
 
 const routes: Routes = [
     { path: 'contribution', component: DemoContributionComponent},
@@ -16,7 +15,7 @@ const routes: Routes = [
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
     @ViewChild('header')
     header: ElementRef;
     headerHeight: number;
@@ -93,8 +92,10 @@ export class SlackBotDialogComponent implements OnInit, OnDestroy {
     public formBuilder: FormBuilder;
     private close$ = new Subject<void>();
     form: FormGroup;
+    slackRequest$;
 
-    constructor (formBuilder: FormBuilder, @Inject(MAT_DIALOG_DATA) private data: any, private slack: SlackService) {
+    constructor (formBuilder: FormBuilder, @Inject(MAT_DIALOG_DATA) private data: any, private slack: SlackService,
+                 public dialogRef: MatDialogRef <SlackBotDialogComponent>,) {
         this.formBuilder = formBuilder;
     }
     ngOnInit(): void {
@@ -107,10 +108,13 @@ export class SlackBotDialogComponent implements OnInit, OnDestroy {
     ngOnDestroy(): void {
         this.close$.next();
         this.close$.complete();
+        this.slackRequest$.unsubscribe();
 
     }
     passInformation() {
-        this.slack.sendMessage(this.data.baseUrl + this.data.url, this.data.url.substring(1),
-            this.form.get('name').value, this.form.get('question').value).subscribe();
+        this.slackRequest$ =this.slack.sendMessage(this.data.baseUrl + this.data.url, this.data.url.substring(1),
+            this.form.get('name').value, this.form.get('question').value).subscribe(() => {
+                this.dialogRef.close();
+        });
     }
 }

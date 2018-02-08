@@ -38,7 +38,9 @@
     </mat-toolbar>
     <div id ="body-container">
       <router-outlet></router-outlet>
-      <div id="footer" layout-align="end start"><button *ngIf="currUrl !== '/'"  mat-raised-button color = "accent" (click)="openDialog()">
+      <div id="footer" layout-align="end start">
+        <button *ngIf="currUrl !== '/'"  mat-raised-button color = "accent"
+                (click)="openDialog()">
         <pre>Questions About Our Components?</pre></button></div>
     </div>
   </mat-sidenav-content>

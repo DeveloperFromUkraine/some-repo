@@ -18,7 +18,7 @@ export class SlackService {
                 },
                 {
                     'title': `Component page`,
-                    'text': `< ${completeUrl} | ${component} >`
+                    'text': `<${completeUrl}|${component}>`
                 }
             ]
         };
