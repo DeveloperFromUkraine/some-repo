@@ -1,4 +1,5 @@
 ### vNEXT
+- Added example and demo for max height in dialog
 
 ### v0.5.0
 - New [editable field component](./src/field/README.md#editable-field-component) `ign-editable-field`

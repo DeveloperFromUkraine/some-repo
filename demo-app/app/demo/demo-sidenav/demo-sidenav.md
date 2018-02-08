@@ -1,4 +1,4 @@
-<br>
+
 ## Content
 
 * API:
@@ -6,9 +6,11 @@
     * sidenav-list
     * sidenav-list-item
 * The sidenav component should contain references and links to other pages.
-* Ths sidenav component should be used solely for navigational purposes.
+* The sidenav component should be used solely for navigational purposes.
+* Single line items, two line items, and icons are supported menu items.
+* List subheaders should be used to separate distinct groups of items.
+* Two line items should consist of primary and secondary text and should not utilize icons.
 
-<br>
 ## Style
 
 * One sidenav component should be referenced throughout the entire user experience.

@@ -1,27 +1,17 @@
-<div id="bodyContainer"><br><h1><u>Field</u></h1>
-    <br><h2> Use</h2>
-    <p>This component displays a view field, consisting of a label and a value. </p>
+<h1>Field</h1>
+<h2> Use</h2>
+<p>This component displays a view field, consisting of a label and a value. </p>
 
-    <br><h2>Sample</h2>
-    <mat-tab-group>
-        <mat-tab label="Component Sample">
-            <div class="tabHeight">
-                <p>None editable Field:</p>
-                <ign-field label="The Answer">42</ign-field>
-                <p>Editable Field:</p>
-                <ign-editable-field label="The Answer">42</ign-editable-field>
-                <p>Editable Field with defined icon (home):</p>
-                <ign-editable-field editIcon="home" label="The Answer">42</ign-editable-field >
-            </div></mat-tab>
-        <mat-tab label="HTML"><div class="tabHeight">
-            <table style="width:100%">
-                <p>None editable Field:</p>
-                &lt;ign-field label="The Answer"&gt;42&lt;/ign-field&gt;
-                <p>Editable Field:</p>
-                &lt;ign-editable-field label="The Answer"&gt;42&lt;/ign-editable-field&gt;
-                <p>Editable Field with defined icon (home):</p>
-                &lt;ign-editable-field editIcon="home" label="The Answer"&gt;42&lt;/ign-editable-field&gt;
-            </table>
+<h2>Sample</h2>
+<mat-tab-group>
+    <mat-tab label="Component Sample">
+        <div class="tab-height">
+            <ign-field label="The Answer">42</ign-field>
         </div></mat-tab>
-    </mat-tab-group>
-    <markdown [content]="notes"></markdown></div>
+    <mat-tab label="HTML"><div class="tab-height">
+        <table style="width:100%">
+            &lt;ign-field label="The Answer"&gt;42&lt;/ign-field&gt;
+        </table>
+    </div></mat-tab>
+</mat-tab-group>
+<markdown [content]="notes"></markdown>

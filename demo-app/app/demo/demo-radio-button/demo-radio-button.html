@@ -1,36 +1,35 @@
-<div id="bodyContainer"><br><h1><u>Radio Buttons</u></h1>
-    <br><h2>Use</h2>
-    <p>Radio buttons allow the user to select one option from a set. Use radio buttons for exclusive selection if user
-        needs to see all available options side-by-side. Otherwise, consider a dropdown, which uses
-        less space than displaying all options.
-        <br>See <a href="https://material.io/guidelines/components/selection-controls.html#selection-controls-radio-button">
-            Material Design Radio Button</a>
-        and <a href="https://material.angular.io/components/radio/overview"> Angular Material Radio Button</a>.
-    </p>
-<br><h2>Sample</h2>
+<h1>Radio Buttons</h1>
+<h2>Use</h2>
+<p>Radio buttons allow the user to select one option from a set. Use radio buttons for exclusive selection if user
+    needs to see all available options side-by-side. Otherwise, consider a dropdown, which uses
+    less space than displaying all options.</p>
+<p>See <a href="https://material.io/guidelines/components/selection-controls.html#selection-controls-radio-button">
+    Material Design Radio Button</a>
+    and <a href="https://material.angular.io/components/radio/overview"> Angular Material Radio Button</a>.
+</p>
+<h2>Sample</h2>
 <mat-tab-group>
-    <mat-tab label="Component Sample"><div class="tabHeight">
+    <mat-tab label="Component Sample"><div class="tab-height">
         <mat-radio-group class="example-radio-group" [(ngModel)]="rowOfRadioButtons">
             <mat-radio-button class="example-radio-button" *ngFor="let button of buttons" [value]="button">
                 {{button}}
             </mat-radio-button>
         </mat-radio-group></div></mat-tab>
-    <mat-tab label="HTML"><div class="tabHeight">
+    <mat-tab label="HTML"><div class="tab-height">
         <table style="width:100%">
-            &lt;mat-radio-group class="example-radio-group" [(ngModel)]="rowOfRadioButtons"&gt;<br/>
-            &nbsp;&nbsp;&lt;mat-radio-button class="example-radio-button" *ngFor="let button of buttons" [value]="button"&gt;
-            {{button}} &lt;/mat-radio-button&gt;<br/>
-            &lt;/mat-radio-group&gt;
+            <p> &lt;mat-radio-group class="example-radio-group" [(ngModel)]="rowOfRadioButtons"&gt;</p>
+            <p> &nbsp;&nbsp;&lt;mat-radio-button class="example-radio-button" *ngFor="let button of buttons" [value]="button"&gt;</p>
+            <p>{{button}} &lt;/mat-radio-button&gt;</p>
+            <p> &lt;/mat-radio-group&gt;</p>
         </table></div>
     </mat-tab>
-    <mat-tab label="TS"><div class="tabHeight">
+    <mat-tab label="TS"><div class="tab-height">
         <table style="width:25%">
-            rowOfRadioButtons: string;<br><br/>
-            &nbsp;buttons = [<br/>
-            &nbsp;&nbsp; 'I AM A BUTTON,<br>
-            &nbsp;&nbsp; 'CLICK ON ME !',
-            &nbsp; ];
+            <p>rowOfRadioButtons: string;</p>
+            <p>&nbsp;buttons = [</p>
+            <p>&nbsp;&nbsp; 'I AM A BUTTON',</p>
+            <p>&nbsp; ];</p>
         </table>
     </div></mat-tab>
 </mat-tab-group>
-    <markdown [content]="notes"></markdown></div>
+<markdown [content]="notes"></markdown>

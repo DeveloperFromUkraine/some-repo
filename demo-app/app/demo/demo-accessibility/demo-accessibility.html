@@ -1,34 +1,31 @@
-<div id="bodyContainer"><br><h1><u>Accessibility</u></h1>
-    <br><h2> Use</h2>
-    <p> The accessibility directive is used to assist those who require accessibility features while using their
-        computers. </p>
-
-    <br><h2>Sample</h2>
-    <mat-tab-group>
-        <mat-tab label="Component Sample">
-            <div class="tabHeight">
-               <ign-center>To see the accessibility click directive in action, turn on your computer's voice over and using tab,
+<h1>Accessibility</h1>
+<h2> Use</h2>
+<p> The accessibility directive is used to assist those who require accessibility features while using their
+    computers. </p>
+<h2>Sample</h2>
+<mat-tab-group>
+    <mat-tab label="Component Sample">
+        <div class="tab-height">
+            <ign-center>To see the accessibility click directive in action, turn on your computer's voice over and using tab,
                 navigate to the button below. Follow the instructions using keys (not your mouse) to click on the
-                button!<br>
-
+                button.
+                Accessibility is all over this doc site. Give it a try!
                 <button
                         mat-raised-button
                         mat-button
                         type="submit"
                         color="accent">
                     Click here!
-                </button><br>
-
-                Accessibility is all over this doc site. Give it a try!</ign-center>
-            </div></mat-tab>
-        <mat-tab label="TS"><div class="tabHeight">
-            <table style="width:100%">
-                import 	&#123;
-                AccessibleClickDirective,
-                AccessibleViewDirective,
-                &#125; from '&#46;/accessibility/accessibility&#46;directive';
-            </table>
+                </button>
+            </ign-center>
         </div></mat-tab>
-    </mat-tab-group>
-    <markdown [content]="notes"></markdown>
-</div>
+    <mat-tab label="TS"><div class="tab-height">
+        <table style="width:100%">
+            import 	&#123;
+            AccessibleClickDirective,
+            AccessibleViewDirective,
+            &#125; from '&#46;/accessibility/accessibility&#46;directive';
+        </table>
+    </div></mat-tab>
+</mat-tab-group>
+<markdown [content]="notes"></markdown>

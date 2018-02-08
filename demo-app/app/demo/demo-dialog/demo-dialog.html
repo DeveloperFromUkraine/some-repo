@@ -1,58 +1,45 @@
-<div id="bodyContainer"><br><h1><u>Dialogs</u></h1>
-    <br>
-    <h2> Use</h2>
-    <p>Dialogs inform users about a specific task and may contain critical information, require decisions, or involve
-        multiple tasks. Use dialogs to progressively disclose additional information, prompt users to take action or
-        confirm choices that may be destructive or have far reaching consequences. Dialogs can also be used to present
-        modal forms when it is important user stays in context.<br>
-        See <a href="https://material.io/guidelines/components/dialogs.html">Material Design Dialogs </a>
-        and <a href="https://material.angular.io/components/dialog/overview">Angular Material Dialogs</a>.
-    </p>
-    <br>
-    <h2>Sample</h2>
+<h1>Dialogs</h1>
 
-    <mat-tab-group>
-        <mat-tab label="Component Sample"><div class="tabHeight">
-            <button mat-raised-button (click)="openDialog()">Click Me For Dialog</button></div>
-        </mat-tab>
-        <mat-tab label="HTML"><div class="tabHeight">
-            <table style="width:100%">
-                &lt;button mat-raised-button (click)="openDialog()"&gt; Click Me For Dialog&lt;/button&gt; </table></div>
-          </mat-tab>
-        <mat-tab label="TS"><div class="tabHeight">
-            <table style="width:50%"><p>
-                export class DemoDialogComponent &#123;<br>
-                &nbsp;selectedOption: string;<br>
+<h2> Use</h2>
+<p>Dialogs inform users about a specific task and may contain critical information, require decisions, or involve
+    multiple tasks. Use dialogs to progressively disclose additional information, prompt users to take action or
+    confirm choices that may be destructive or have far reaching consequences. Dialogs can also be used to present
+    modal forms when it is important user stays in context.</p>
+<p>See <a href="https://material.io/guidelines/components/dialogs.html">Material Design Dialogs </a>
+    and <a href="https://material.angular.io/components/dialog/overview">Angular Material Dialogs</a>.
+</p>
+<h2>Sample</h2>
 
-                &nbsp;constructor(public dialog: MatDialog) &#123;}<br>
-
-                &nbsp;openDialog() &#123;<br>
-                &nbsp;let dialogRef = this.dialog.open(DemoDialogComponentDialog);<br>
-                &nbsp;dialogRef.afterClosed().subscribe(result => &#123;<br>
-                &nbsp;&nbsp;this.selectedOption = result;<br>
-                &nbsp;&nbsp;&#125;);<br>
-                &nbsp;}<br>
-                }<br>
-
-                @Component(&#123;<br>
-                &nbsp;selector: 'demo-dialog-dialog',<br>
-                &nbsp;templateUrl: './demo-dialog-dialog.html',<br>
-                &#125;)<br>
-                export class DemoDialogComponentDialog &#123;&#125;
+<mat-tab-group>
+    <mat-tab label="Component Sample"><div class="tab-height">
+        <button mat-raised-button (click)="openDialog()">Click Me For Dialog</button></div>
+    </mat-tab>
+    <mat-tab label="HTML"><div class="tab-height">
+        <table style="width:100%">
+            &lt;button mat-raised-button (click)="openDialogBackgroundSubscription()"&gt; Click Me For Dialog&lt;/button&gt; </table></div>
+    </mat-tab>
+    <mat-tab label="TS"><div class="tab-height">
+        <table style="width:50%"><p>
+            <p>export class DemoDialogComponent &#123;</p>
+            <p>&nbsp;selectedOption: string;</p>
+            <p>&nbsp;constructor(public dialog: MatDialog) &#123;}</p>
+            <p>&nbsp;openDialog() &#123;</p>
+            <p>&nbsp;let dialogRef = this.dialog.open(DemoDialogComponentDialog);</p>
+            <p>&nbsp;dialogRef.afterClosed().subscribe(result => &#123;</p>
+            <p>&nbsp;&nbsp;this.selectedOption = result;</p>
+            <p>&nbsp;&nbsp;&#125;);</p>
+            <p> &nbsp;}</p>
+            <p>}</p>
+            <p>@Component(&#123;</p>
+            <p>&nbsp;selector: 'demo-dialog-dialog',</p>
+            <p>&nbsp;templateUrl: './demo-dialog-dialog.html',</p>
+            <p>&#125;)</p>
+            <p>export class DemoDialogComponentDialog &#123;&#125;
             </p>
-            </table>
-        </div></mat-tab>
-    </mat-tab-group>
-    <markdown [content]="notes"></markdown>
-</div>
-
-
-<br>
-<h2>Enhanced Dialog</h2>
-<br>
-<button mat-raised-button (click)="openDialogBackgroundSubscription()">Click Me For Enhanced Dialog</button>
-<br>
-<br>
+        </table>
+    </div></mat-tab>
+</mat-tab-group>
+<markdown [content]="notes"></markdown>
 <mat-accordion>
     <mat-expansion-panel>
         <mat-expansion-panel-header>
@@ -62,19 +49,22 @@
             <mat-panel-description><i>Provides a subscription to a modals background being clicked</i></mat-panel-description>
         </mat-expansion-panel-header>
         <mat-tab-group>
-            <mat-tab label="TS"><div class="tabHeight">
-                <table style="width:50%"><p>
-                    let dialogRef = this.dialog.open(DemoDialogComponentDialogBackground, &#123; disableClose: true &#125;);<br><br>
+            <mat-tab label="Content Sample"><div class="tab-height">
+                <button mat-raised-button (click)="openDialogBackgroundSubscription()">Click Me For Enhanced Dialog</button>
+            </div></mat-tab>
 
-                    Observable.merge(this.dialogRef.backdropClick())<br>
-                    &nbsp;.map(() => &#123;Action&#125;)<br>
-                    &nbsp; &nbsp;.subscribe();
-                </p>
+            <mat-tab label="TS"><div class="tabHeight">
+                <table style="width:50%">
+                    <p>let dialogRef = this.dialog.open(DemoDialogComponentDialogBackground, &#123; disableClose: true &#125;);</p>
+
+                    <p>Observable.merge(this.dialogRef.backdropClick())</p>
+                    <p>&nbsp;.map(() => &#123;Action&#125;)</p>
+                    <p>&nbsp; &nbsp;.subscribe();</p>
+
                 </table>
             </div></mat-tab>
         </mat-tab-group>
     </mat-expansion-panel>
-
     <mat-expansion-panel>
         <mat-expansion-panel-header>
             <mat-panel-title><b>
@@ -83,72 +73,68 @@
             <mat-panel-description><i>Creates a confirmation dialog to confirm an action taken within another dialog</i></mat-panel-description>
         </mat-expansion-panel-header>
         <mat-tab-group>
-            <mat-tab label="Main TS"><div class="tabHeight">
-                <table style="width:50%"><p>
-                    dialogRefMain: any; <br>
+            <mat-tab label="Main TS"><div class="tab-height">
+                <table style="width:50%">
+                    <p>dialogRefMain: any; </p>
 
-                    openMainDialog() &#123;<br>
-                    &nbsp; this.dialogRefMain = this.dialog.open(DemoDialogComponentDialogBackground, &#123;disableClose: true&#125;);<br>
+                    <p>openMainDialog() &#123;</p>
+                    <p>&nbsp; this.dialogRefMain = this.dialog.open(DemoDialogComponentDialogBackground, &#123;disableClose: true&#125;);</p>
 
-                    &nbsp; Observable.merge(this.dialogRefMain.backdropClick())<br>
-                    &nbsp; &nbsp;.map(() => this.openDialogAcceptReject())<br>
-                    &nbsp; &nbsp; &nbsp;.subscribe();<br>
-                    &#125;<br>
+                    <p>&nbsp; Observable.merge(this.dialogRefMain.backdropClick())</p>
+                    <p>&nbsp; &nbsp;.map(() => this.openDialogAcceptReject())</p>
+                    <p>&nbsp; &nbsp; &nbsp;.subscribe();</p>
+                    <p>&#125;</p>
 
-                    openDialogAcceptReject(): void &#123;<br>
-                    &nbsp;this.dialog.open(DemoDialogAcceptCancelComponent)<br>
-                    &nbsp; &nbsp;.afterClosed()<br>
-                    &nbsp; &nbsp; &nbsp;.subscribe(response => &#123;<br>
-                    &nbsp; &nbsp; &nbsp; &nbsp;if (response) &#123;<br>
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;this.dialogRefMain.close()<br>
-                    &nbsp; &nbsp; &nbsp; &nbsp;&#125;;<br>
-                    &nbsp; &nbsp; &#125;);<br>
-                    &#125;<br>
-                </p>
+                    <p>openDialogAcceptReject(): void &#123;</p>
+                    <p>&nbsp;this.dialog.open(DemoDialogAcceptCancelComponent)</p>
+                    <p>&nbsp; &nbsp;.afterClosed()</p>
+                    <p>&nbsp; &nbsp; &nbsp;.subscribe(response => &#123;</p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp;if (response) &#123;</p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;this.dialogRefMain.close()</p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp;&#125;;</p>
+                    <p>&nbsp; &nbsp; &#125;);</p>
+                    <p>&#125;</p>
+
                 </table>
             </div></mat-tab>
 
-            <mat-tab label="Accept/Reject Dialog TS"><div class="tabHeight">
-                <table style="width:50%"><p>
+            <mat-tab label="Accept/Reject Dialog TS"><div class="tab-height">
+                <table style="width:50%">
 
 
-                    import &#123; Component &#125; from '@angular/core';<br>
-                    import &#123; MatDialogRef &#125; from '@angular/material';<br>
+                    <p>import &#123; Component &#125; from '@angular/core';</p>
+                    <p>import &#123; MatDialogRef &#125; from '@angular/material';</p>
 
-                    @Component(&#123;<br>
-                    &nbsp;selector: 'ign-dialog-cancel',<br>
-                    &nbsp;templateUrl: './dialog-accept-cancel.component.html'<br>
-                    &#125;)<br>
-                    export class DemoDialogAcceptCancelComponent &#123;<br>
+                    <p>@Component(&#123;</p>
+                    <p>&nbsp;selector: 'ign-dialog-cancel',</p>
+                    <p>&nbsp;templateUrl: './dialog-accept-cancel.component.html'</p>
+                    <p>&#125;)</p>
+                    <p>export class DemoDialogAcceptCancelComponent &#123;</p>
 
-                    &nbsp;constructor(<br>
-                    &nbsp;&nbsp;public dialogRef: MatDialogRef&lt;DemoDialogAcceptCancelComponent&gt;) &#123; &#125;<br>
+                    <p>&nbsp;constructor(</p>
+                    <p>&nbsp;&nbsp;public dialogRef: MatDialogRef&lt;DemoDialogAcceptCancelComponent&gt;) &#123; &#125;</p>
 
-                    &nbsp;//Passes data from this modal back to an onclose subscriber of the original modal<br>
-                    &nbsp;onExitClick(data): void &#123;<br>
-                    &nbsp;&nbsp;this.dialogRef.close(data);<br>
-                    &nbsp;&#125;<br>
-                    &#125;<br>
+                    <p> &nbsp;//Passes data from this modal back to an onclose subscriber of the original modal</p>
+                    <p> &nbsp;onExitClick(data): void &#123;</p>
+                    <p>&nbsp;&nbsp;this.dialogRef.close(data);</p>
+                    <p>&nbsp;&#125;</p>
+                    <p>&#125;</p>
 
-                </p>
                 </table>
             </div></mat-tab>
 
-            <mat-tab label="Accept/Reject Dialog HTML"><div class="tabHeight">
-                <table style="width:50%"><p>
+            <mat-tab label="Accept/Reject Dialog HTML"><div class="tab-height">
+                <table style="width:50%">
 
-                    &lt;div mat-dialog-content&gt;<br>
-                    &nbsp; &lt;p&gt;You have clicked outside the modal. Does this mean you want to exit?&lt;/p&gt;<br>
-                    &lt;/div&gt;<br>
-                    &lt;div mat-dialog-actions align="end"&gt;<br>
-                    &nbsp;&lt;button mat-button (click)="onExitClick(true)"&gt;Yes&lt;/button&gt;<br>
-                    &nbsp;&lt;button mat-button color="accent" (click)="onExitClick(false)"&gt;No&lt;/button&gt;<br>
+                    <p>&lt;div mat-dialog-content&gt;</p>
+                    <p>&nbsp; &lt;p&gt;You have clicked outside the modal. Does this mean you want to exit?&lt;/p&gt;</p>
+                    <p>&lt;/div&gt;</p>
+                    <p> &lt;div mat-dialog-actions align="end"&gt;</p>
+                    <p> &nbsp;&lt;button mat-button (click)="onExitClick(true)"&gt;Yes&lt;/button&gt;</p>
+                    <p>&nbsp;&lt;button mat-button color="accent" (click)="onExitClick(false)"&gt;No&lt;/button&gt;</p>
                     &lt;/div&gt;
-
-                </p>
                 </table>
             </div></mat-tab>
         </mat-tab-group>
     </mat-expansion-panel>
-
 </mat-accordion>
