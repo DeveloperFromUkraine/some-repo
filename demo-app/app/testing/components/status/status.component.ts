@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild, ElementRef, AfterContentInit } from "@angular/core";
 import { Apollo } from "apollo-angular/Apollo";
 import { Observable } from 'rxjs/Observable';
 import { map } from 'rxjs/operators';
@@ -15,7 +15,11 @@ export class StatusComponent implements OnInit {
     limit: number = 5;
     masterBranch: Values;
     developBranch: Values;
-    dialogRef;
+
+    @ViewChild('buildPanel') panel: ElementRef;
+    ne: HTMLElement;
+
+    showTabContent: boolean;
 
     constructor(private apollo: Apollo) { }
 
@@ -108,5 +112,12 @@ export class StatusComponent implements OnInit {
                     }
                 }
             });
+    }
+
+    reloadTabs() {
+        this.showTabContent = false;
+        setTimeout(() => {
+            this.showTabContent = true
+        }, 250);
     }
 }
