@@ -54,8 +54,8 @@ export class AppComponent {
   testNavItems = [
     { name: 'Status', route: 'status' },
     { name: 'AAA Test Pattern', route: 'aaa'},
-    { name: 'Asynchronous Operations', route: 'asynchronous'},
     { name: 'Configuring Jest', route: 'jest'},
+    { name: 'Asynchronous Operations', route: 'asynchronous'},
     { name: 'Triggering Event Handlers', route: 'event-handler'},
     { name: 'Snapshot Testing', route: 'snapshot'},
     { name: 'Test Types', route: 'test-types'},
