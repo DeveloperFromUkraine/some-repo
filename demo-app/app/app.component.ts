@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { Routes, Router, NavigationEnd } from '@angular/router';
 import { DemoContributionComponent } from './demo/demo-contribution/demo-contribution.component';
-import { Observable, Subject } from 'rxjs';
+import { Subject } from 'rxjs';
 import { SlackService } from './services/slack-service'
 
 const routes: Routes = [
@@ -95,7 +95,7 @@ export class SlackBotDialogComponent implements OnInit, OnDestroy {
     slackRequest$;
 
     constructor (formBuilder: FormBuilder, @Inject(MAT_DIALOG_DATA) private data: any, private slack: SlackService,
-                 public dialogRef: MatDialogRef <SlackBotDialogComponent>,) {
+                 public dialogRef: MatDialogRef <SlackBotDialogComponent>, ) {
         this.formBuilder = formBuilder;
     }
     ngOnInit(): void {
@@ -108,12 +108,12 @@ export class SlackBotDialogComponent implements OnInit, OnDestroy {
     ngOnDestroy(): void {
         this.close$.next();
         this.close$.complete();
-        this.slackRequest$.unsubscribe();
 
     }
     passInformation() {
-        this.slackRequest$ =this.slack.sendMessage(this.data.baseUrl + this.data.url, this.data.url.substring(1),
+        this.slackRequest$ = this.slack.sendMessage(this.data.baseUrl + this.data.url, this.data.url.substring(1),
             this.form.get('name').value, this.form.get('question').value).subscribe(() => {
+                this.slackRequest$.unsubscribe();
                 this.dialogRef.close();
         });
     }

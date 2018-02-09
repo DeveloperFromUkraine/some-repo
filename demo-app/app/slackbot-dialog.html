@@ -1,16 +1,18 @@
-
-        <ign-card-header-container> <ign-card-section-title>Have questions? Ask our developers!</ign-card-section-title></ign-card-header-container>
-        <form [formGroup]="form">
-            <mat-form-field id = "test">
-                <input formControlName = "name" matInput placeholder="Slack Username">
-            </mat-form-field>
-            <ign-center>
-                <mat-form-field>
-                    <input formControlName = "question" matInput placeholder="What is your question?">
-                </mat-form-field>
-            </ign-center>
-            <ign-center>
-                <button mat-button mat-raised-button type="submit" color="accent"
-                        (click)="passInformation()">
-                Submit</button></ign-center>
-        </form>
+<ign-card-header-container>
+    <ign-card-section-title>Have questions? Ask our developers!</ign-card-section-title>
+</ign-card-header-container>
+<form [formGroup]="form">
+    <mat-form-field id = "test">
+        <input formControlName = "name" matInput placeholder="Slack Username">
+    </mat-form-field>
+    <ign-center>
+        <mat-form-field>
+            <input formControlName = "question" matInput placeholder="What is your question?">
+        </mat-form-field>
+    </ign-center>
+    <ign-center>
+        <button mat-button mat-raised-button type="submit" color="accent"
+                (click)="passInformation()">
+            Submit</button>
+    </ign-center>
+</form>
