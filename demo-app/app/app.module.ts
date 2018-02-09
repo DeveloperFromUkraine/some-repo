@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { IgniteDesignSystemModule } from '../../src';
 import { TestingModule } from './testing/testing.module';
@@ -47,6 +48,7 @@ import { DemoIconComponent } from './demo/demo-icon/demo-icon.component';
 import { DemoSelectionListComponent } from './demo/demo-selection-list/demo-selection-list.component';
 import { DemoMarkdownComponent } from './demo/demo-markdown/demo-markdown.component';
 import { DemoContributionComponent } from './demo/demo-contribution/demo-contribution.component';
+import { SlackService } from './services/slack-service';
 import {DemoDialogAcceptCancelComponent} from './demo/demo-dialog/dialog-accept-cancel/dialog-accept-cancel.component';
 
 const routes: Routes = [
@@ -104,12 +106,12 @@ const routes: Routes = [
         MatRadioModule,
         MatIconModule,
         IgniteDesignSystemModule,
-        
         TestingModule,
         MarkdownModule,
         DemoModule,
+        HttpClientModule,
     ],
-    providers: [],
+    providers: [SlackService],
     bootstrap: [AppComponent],
     exports: [MatIconModule, MatButtonModule],
 
