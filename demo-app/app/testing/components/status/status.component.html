@@ -1,27 +1,27 @@
 <div class="status-container">
     <mat-card [style.border-bottom]="getBorder()" class="g-header">
         <h1>Ignite Design System Status</h1>
-        <mat-card-subtitle *ngIf="(data?.metrics.status === 'GREEN')">
-            Passing Since: {{ data?.metrics.greenSinceDate | date }}
+        <mat-card-subtitle *ngIf="(data.metrics?.status === 'GREEN')">
+            Passing Since: {{ data.metrics?.greenSinceDate | date }}
         </mat-card-subtitle>
     </mat-card>
 
-    <mat-card class="g-content-one" *ngIf="(data?.metrics.status === 'GREEN'); else lastFailure">
+    <mat-card class="g-content-one" *ngIf="(data.metrics?.status === 'GREEN'); else lastFailure">
 
         <h2>Last Successful Run</h2>
         <mat-card-content>
             <h3>Author</h3>
-            <p>{{ data?.metrics.lastSuccess.author }}</p>
+            <p>{{ data.metrics.lastSuccess?.author }}</p>
             <h3>Date</h3>
-            <p>{{ data?.metrics.lastSuccess.time | date }}</p>
+            <p>{{ data.metrics.lastSuccess?.time | date }}</p>
             <h3>Branch Name</h3>
-            <p>{{ data?.metrics.lastSuccess.branchName }}</p>
+            <p>{{ data.metrics.lastSuccess?.branchName }}</p>
             <h3>Commit Message</h3>
-            <p>{{ data?.metrics.lastSuccess.commitMessage }}</p>
-            <a [attr.href]="data?.metrics.lastSuccess.concourseUrl" target="_blank">
+            <p>{{ data.metrics.lastSuccess?.commitMessage }}</p>
+            <a [attr.href]="data.metrics.lastSuccess?.concourseUrl" target="_blank">
                 <img class="icon" src="../../../assets/concourse.png" alt="concourse logo" />
             </a>
-            <a [attr.href]="data?.repoUrl + '/commits/' + data.metrics.lastSuccess.commitHash" target="_blank">
+            <a [attr.href]="data.repoUrl + '/commits/' + data.metrics.lastSuccess?.commitHash" target="_blank">
                 <img class="icon" src="../../../assets/bitbucket.png" alt="bit bucket logo" />
             </a>
         </mat-card-content>
@@ -80,7 +80,7 @@
         <!-- SelectedTabChange event a workaround for a bug involving placing an expansion panel inside a tab group -->
         <mat-tab-group (selectedTabChange)="reloadTabs()">
             <mat-tab label="MASTER">
-                <mat-expansion-panel *ngFor="let build of data.branches.values[1].builds">
+                <mat-expansion-panel *ngFor="let build of data.branches?.values[1].builds">
                     <mat-expansion-panel-header>
                         <mat-panel-title>
                             <h3>{{ build?.author }}</h3>
@@ -103,7 +103,7 @@
             </mat-tab>
             <mat-tab label="DEVELOP">
                 <ng-container *ngIf="showTabContent">
-                    <mat-expansion-panel *ngFor="let build of data.branches.values[0].builds">
+                    <mat-expansion-panel *ngFor="let build of data.branches?.values[0].builds">
                         <mat-expansion-panel-header>
                             <mat-panel-title>
                                 <h3>{{ build?.author }}</h3>
@@ -142,19 +142,19 @@
         <h2>Last Failed Run</h2>
         <mat-card-content>
             <p>
-                <span>Author:</span> {{ data?.metrics.lastFailure.author }}
+                <span>Author:</span> {{ data.metrics?.lastFailure.author }}
             </p>
             <p>
-                <span>Date:</span> {{ data?.metrics.lastFailure.time | date }}
+                <span>Date:</span> {{ data.metrics?.lastFailure.time | date }}
             </p>
             <p>
-                <span>Branch Name:</span> {{ data?.metrics.lastFailure.branchName }}</p>
+                <span>Branch Name:</span> {{ data.metrics?.lastFailure.branchName }}</p>
             <p>
-                <span>Commit Message:</span> {{ data?.metrics.lastFailure.commitMessage }}</p>
-            <a [attr.href]="data?.metrics.lastFailure.concourseUrl" target="_blank">
+                <span>Commit Message:</span> {{ data.metrics?.lastFailure.commitMessage }}</p>
+            <a [attr.href]="data.metrics?.lastFailure.concourseUrl" target="_blank">
                 <img class="icon" src="../../../assets/concourse.png" alt="concourse logo" />
             </a>
-            <a [attr.href]="data?.repoUrl + '/commits/' + data.metrics.lastFailure.commitHash" target="_blank">
+            <a [attr.href]="data?.repoUrl + '/commits/' + data.metrics?.lastFailure.commitHash" target="_blank">
                 <img class="icon" src="../../../assets/bitbucket.png" alt="bit bucket logo" />
             </a>
         </mat-card-content>

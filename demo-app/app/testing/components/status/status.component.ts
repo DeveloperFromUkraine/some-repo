@@ -10,7 +10,7 @@ import gql from 'graphql-tag';
     styleUrls: ['./status.component.scss']
 })
 export class StatusComponent implements OnInit {
-    data: Service = {};
+    data: Service;
     service: string = 'nui-ignite-design-system';
     limit: number = 5;
     masterBranch: Values;
@@ -18,7 +18,9 @@ export class StatusComponent implements OnInit {
 
     showTabContent: boolean;
 
-    constructor(private apollo: Apollo) { }
+    constructor(private apollo: Apollo) { 
+        this.data = {};
+    }
 
     ngOnInit() {
         this.getServiceInfo();

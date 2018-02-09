@@ -13,7 +13,8 @@
         "content4 content4 content4 content4";
 }
 
-@media screen and (max-width: 970px) {
+@media only screen 
+and (max-width: 970px) {
     .status-container {
         grid-template-columns: 1fr 2fr 2fr 1fr;
         grid-template-rows: repeat(7, auto);
