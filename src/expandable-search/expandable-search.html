@@ -1,0 +1,41 @@
+<button
+  *ngIf="!searchExpanded"
+  mat-icon-button
+  (click)="searchExpanded=true"
+  aria-label="Search"
+  da="searchButton">
+  <mat-icon>
+    search
+  </mat-icon>
+</button>
+
+<button
+  *ngIf="searchExpanded"
+  mat-icon-button
+  (click)="searchExpanded=false; searchInput.value=''; emitSearchEvents()"
+  da="cancelSearchButton">
+  <mat-icon>
+    arrow_back
+  </mat-icon>
+</button>
+
+<mat-form-field
+  [ngClass]="{'expanded-search-inactive': !searchExpanded, 'expanded-search-active': searchExpanded}"
+  floatLabel="never">
+  <input
+    #searchInput
+    matInput
+    placeholder="Search"
+    value=""
+    (keyup)="emitSearchEvents()">
+  <button
+    *ngIf="searchInput.value"
+    (click)="searchInput.value=''; emitSearchEvents()"
+    mat-icon-button
+    matSuffix
+    da="clearButton">
+    <mat-icon>
+      close
+    </mat-icon>
+  </button>
+</mat-form-field>
