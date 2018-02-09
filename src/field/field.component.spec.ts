@@ -66,6 +66,13 @@ describe('FieldInlineComponent', () => {
 
         expect(ne.textContent).toContain(component.label);
     });
+
+    it('should match snapshot', async () => {
+        component.label = 'label!';
+        await fixture.detectChanges();
+
+        expect(fixture).toMatchSnapshot();
+    });
 });
 
 describe('EditableFieldComponent', () => {
@@ -126,5 +133,37 @@ describe('EditableFieldComponent', () => {
         await fixture.detectChanges();
 
         expect(spy).toHaveBeenCalled();
+    });
+
+    it('should match snapshot', async () => {
+        component.label = 'label!';
+        await fixture.detectChanges();
+
+        expect(fixture).toMatchSnapshot();
+    });
+});
+
+describe('EditableFieldInlineComponent', () => {
+    let fixture: ComponentFixture<EditableFieldInlineComponent>;
+    let component: EditableFieldInlineComponent;
+    let de: DebugElement;
+    let ne: HTMLElement;
+
+    beforeEach(async () => {
+        ComponentTest.createTestBed([MatIconModule], [EditableFieldInlineComponent]);
+    });
+
+    beforeEach(() => {
+        fixture = TestBed.createComponent(EditableFieldInlineComponent);
+        component = fixture.componentInstance;
+
+        fixture.detectChanges();
+    });
+
+    it('should match snapshot', async () => {
+        component.label = 'label!';
+        await fixture.detectChanges();
+
+        expect(fixture).toMatchSnapshot();
     });
 });
