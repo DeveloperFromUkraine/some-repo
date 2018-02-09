@@ -1,7 +1,7 @@
 .status-container {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 1fr;
-    grid-auto-rows: repeat(6, auto);
+    grid-template-rows: repeat(6, auto);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     grid-template-areas:
@@ -11,6 +11,23 @@
         "content2 content2 content3 content3"
         "builds builds builds builds"
         "content4 content4 content4 content4";
+}
+
+@media screen and (max-width: 970px) {
+    .status-container {
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-template-rows: repeat(7, auto);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        grid-template-areas:
+            "header header header header"
+            "content1 content1 content1 content1"
+            "activity activity activity activity"
+            "content2 content2 content2 content2"
+            "content3 content3 content3 content3"
+            "builds builds builds builds"
+            "content4 content4 content4 content4";
+    }
 }
 
 .g-header {
@@ -69,6 +86,7 @@
 
 .g-sub-content {
     grid-area: commit;
+    padding-top: 5px;
     word-wrap: break-word;
     overflow: hidden;
 }
@@ -96,7 +114,7 @@
 
 .g-content-four {
     grid-area: content4;
-    min-height: 350px;
+    min-height: 350px;  /* Temporary while bug workaround is in place. Will revisit at a later time */
 }
 
 .g-content-five {
@@ -137,4 +155,11 @@ mat-panel-description {
 
 p {
     line-height: 1.5;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+h1, h2, h3 {
+    word-wrap: break-word;
+    overflow: hidden;
 }

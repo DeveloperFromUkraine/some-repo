@@ -27,17 +27,12 @@ import { ApolloModule, Apollo } from 'apollo-angular';
 import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { BrowserModule } from "@angular/platform-browser";
-import { CommonModule } from "@angular/common";
 import { 
     MatCardModule,
-    MatIconModule,
     MatToolbarModule,
-    MatMenuModule,
-    MatButtonModule,
     MatExpansionModule,
     MatTabsModule
 } from "@angular/material";
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
@@ -59,8 +54,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         MatCardModule,
         MatToolbarModule,
         MatExpansionModule,
-        MatTabsModule,
-        BrowserAnimationsModule
+        MatTabsModule
     ],
     providers: []
 })

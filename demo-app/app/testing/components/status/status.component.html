@@ -77,6 +77,7 @@
     <h1 class="g-header-three">Builds</h1>
 
     <mat-card #buildPanel class="g-content-four">
+        <!-- SelectedTabChange event a workaround for a bug involving placing an expansion panel inside a tab group -->
         <mat-tab-group (selectedTabChange)="reloadTabs()">
             <mat-tab label="MASTER">
                 <mat-expansion-panel *ngFor="let build of data.branches.values[1].builds">

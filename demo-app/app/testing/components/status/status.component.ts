@@ -7,7 +7,7 @@ import gql from 'graphql-tag';
 
 @Component({
     templateUrl: './status.component.html',
-    styleUrls: ['./status.component.css']
+    styleUrls: ['./status.component.scss']
 })
 export class StatusComponent implements OnInit {
     data: Service;
@@ -15,9 +15,6 @@ export class StatusComponent implements OnInit {
     limit: number = 5;
     masterBranch: Values;
     developBranch: Values;
-
-    @ViewChild('buildPanel') panel: ElementRef;
-    ne: HTMLElement;
 
     showTabContent: boolean;
 
@@ -114,6 +111,9 @@ export class StatusComponent implements OnInit {
             });
     }
 
+    /**
+     * Workaround - Will revisit and phase out at a later time. 
+     */
     reloadTabs() {
         this.showTabContent = false;
         setTimeout(() => {
