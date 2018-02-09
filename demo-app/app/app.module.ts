@@ -19,7 +19,7 @@ import { MatRadioModule } from '@angular/material/';
 import { MatIconModule } from '@angular/material/';
 import { MatButtonModule } from '@angular/material';
 
-import { DemoDialogComponent, DemoDialogComponentDialog, DemoDialogComponentDialogBackground} from './demo/demo-dialog/demo-dialog.component';
+import { DemoDialogComponent } from './demo/demo-dialog/demo-dialog.component';
 import { DemoRadioButtonComponent } from './demo/demo-radio-button/demo-radio-button.component';
 import { DemoCheckboxComponent } from './demo/demo-checkbox/demo-checkbox.component';
 import { DemoCardComponent } from './demo/demo-card/demo-card.component';
@@ -49,7 +49,6 @@ import { DemoSelectionListComponent } from './demo/demo-selection-list/demo-sele
 import { DemoMarkdownComponent } from './demo/demo-markdown/demo-markdown.component';
 import { DemoContributionComponent } from './demo/demo-contribution/demo-contribution.component';
 import { SlackService } from './services/slack-service';
-import {DemoDialogAcceptCancelComponent} from './demo/demo-dialog/dialog-accept-cancel/dialog-accept-cancel.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },

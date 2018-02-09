@@ -7,7 +7,7 @@ export class SlackService {
     }
 
     sendMessage ( completeUrl, component, user, question ) {
-        const url = 'https://hooks.slack.com/services/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';
+        const url = 'https://hooks.slack.com/services/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';
         const body: any = {
             'text': `New Component Question from <@${user}>!`,
             'attachments': [
