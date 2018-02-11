@@ -49,7 +49,7 @@ export class AppComponent implements OnInit {
     { name: 'Text', route: '/text' },
   ];
     testNavItems = [
-        { name: 'Status', route: '/status' },
+        { name: 'Status', route: 'status' },
         { name: 'AAA Test Pattern', route: 'aaa'},
         { name: 'Configuring Jest', route: 'jest'},
         { name: 'Asynchronous Operations', route: 'asynchronous'},
