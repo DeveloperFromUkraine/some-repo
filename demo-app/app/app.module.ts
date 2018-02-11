@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { IgniteDesignSystemModule } from '../../src';
 import { TestingModule } from './testing/testing.module';
 
-import { AppComponent, SlackBotDialogComponent } from './app.component';
+import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { DemoModule } from './demo/demo.module';
 import { MarkdownModule } from './markdown/markdown.module';
@@ -18,6 +18,8 @@ import { MatCheckboxModule } from '@angular/material';
 import { MatRadioModule } from '@angular/material/';
 import { MatIconModule } from '@angular/material/';
 import { MatButtonModule } from '@angular/material';
+import { SlackBotDialogComponent } from './slack-bot/slack-bot-dialog.component';
+import { SlackService } from './services/slack-service';
 
 import { DemoDialogComponent } from './demo/demo-dialog/demo-dialog.component';
 import { DemoRadioButtonComponent } from './demo/demo-radio-button/demo-radio-button.component';
@@ -48,7 +50,6 @@ import { DemoIconComponent } from './demo/demo-icon/demo-icon.component';
 import { DemoSelectionListComponent } from './demo/demo-selection-list/demo-selection-list.component';
 import { DemoMarkdownComponent } from './demo/demo-markdown/demo-markdown.component';
 import { DemoContributionComponent } from './demo/demo-contribution/demo-contribution.component';
-import { SlackService } from './services/slack-service';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
