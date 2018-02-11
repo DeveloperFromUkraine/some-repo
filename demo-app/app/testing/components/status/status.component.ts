@@ -27,7 +27,7 @@ export class StatusComponent implements OnInit {
     }
 
     getBorder() {
-        return `10px solid ${this.data.metrics.status.toLowerCase()}`;
+        //return `10px solid ${this.data.metrics.status.toLowerCase()}`;
     }
 
     getServiceInfo() {
