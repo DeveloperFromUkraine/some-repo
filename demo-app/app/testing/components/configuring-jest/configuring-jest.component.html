@@ -1,0 +1,137 @@
+<div>
+    <h1>Configuring Jest</h1>
+    <hr />
+
+    <h2>Testing Platform: Jest</h2>
+    <p>1. JavaScript testing platform built by Facebook.</p>
+    <p>2. Sits on top of Jasmine.</p>
+
+    <h3>Pros</h3>
+    <p>1. API is nearly identical to Jasmine.</p>
+
+    <p>2. Mocking is a piece of cake.</p>
+
+    <p>3. Runs tests in parallel.</p>
+
+    <p>4. Tests run on jsdom rather than a headless browser.</p>
+
+    <p>5. 3.01 second average test run for starter Angular CLI project (10.9 second average for Jasmine) based on command execution time. 353% faster command execution than Jasmine.</p>
+
+    <h3>Cons</h3>
+    <p>1. Requires additional configuration in your Angular application to get Jest running.</p>
+
+    <p>2. Not a lot of existing documentation on using Jest with Angular applications.</p>
+
+    <h2>Setting Up Jest</h2>
+    <p>1. Install dependency.</p>
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
+$ yarn add --dev jest jest-preset-angular @types/jest
+            </code>
+        </pre>
+    </mat-card>
+
+    <p>2. Add this entry to package.json.</p>
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
+"jest": {{ '{' }}
+    "preset": "jest-preset-angular",
+    "setupTestFrameworkScriptFile": "&lt;rootDir&gt;/src/jest.ts"
+}
+            </code>
+        </pre>
+    </mat-card>
+
+    <p>3. At the root of your src folder, create the file <span>jest-global-mocks.ts</span></p>
+    <p>a. Include the following code to patch the window object since jsdom doesn't have it all implemented.</p>
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
+const mock = () => {{ '{' }}
+    let storage = {{ '{' }}};
+    return {{ '{' }}
+        getItem: key => key in storage ? storage[key] : null,
+        setItem: (key, value) => storage[key] = value || '',
+        removeItem: key => delete storage[key],
+        clear: () => storage = {{ '{' }}},
+    };
+};
+            </code>
+        </pre>
+    </mat-card>
+
+    <p>4. At the same location, create the file <span>jest.ts</span> and include the following</p>
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
+import 'jest-preset-angular';
+import './jest-global-mocks';
+            </code>
+        </pre>
+    </mat-card>
+
+    <p>5. Update your npm test scripts</p>
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
+"test": "jest",
+"test:watch": "jest --watch",
+"test:ci": "jest --runInBand"
+            </code>
+        </pre>
+    </mat-card>
+
+    <p>6. Remove @types/jasmine in node_modules. Contains duplicate declarations from @types/jest.</p>
+
+    <p>7. Update <span>tsconfig.spec.json</span>: Change "jasmine" to "jest"</p>
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
+"types": [
+    "jasmine",
+    "node"
+]
+            </code>
+        </pre>
+    </mat-card>
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
+"types": [
+    "jest",
+    "node"
+]
+            </code>
+        </pre>
+    </mat-card>
+    <p>8. Update <span>tsconfig.e2e.json</span>: Change "jasmine" to "jest"</p>
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
+"types": [
+    "jasmine",
+    "jasminewd2",
+    "node"
+]
+            </code>
+        </pre>
+    </mat-card>
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
+"types": [
+    "jest",
+    "jasminewd2",
+    "node"
+]
+            </code>
+        </pre>
+    </mat-card>
+    <hr />
+    <h3>References</h3>
+    <p>1. Pierzchala, Michal. "TESTING ANGULAR FASTER WITH JEST", <a href="https://www.xfive.co/blog/testing-angular-faster-jest/">https://www.xfive.co/blog/testing-angular-faster-jest/</a>, March 31, 2017</p>
+    <p>2. “TESTING REACT ON JSDOM”, <a href="https://jaketrent.com/post/testing-react-with-jsdom/">https://jaketrent.com/post/testing-react-with-jsdom/</a>, June 18, 2015</p>
+    <p>3. “Mocha vs. Jest vs. Jasmine”, <a href="https://stackshare.io/stackups/jasmine-vs-jest-vs-mocha">https://stackshare.io/stackups/jasmine-vs-jest-vs-mocha</a></p>
+</div>

@@ -47,7 +47,14 @@
   "bugs": {
     "url": "http://devgit.dev.us.corp:7990/projects/NUI/repos/ignite-design-system/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "apollo-angular": "^1.0.1",
+    "apollo-angular-link-http": "^1.0.2-beta.0",
+    "apollo-cache-inmemory": "^1.1.7",
+    "apollo-client": "^2.2.2",
+    "graphql": "^0.12.3",
+    "graphql-tag": "^2.6.1"
+  },
   "peerDependencies": {
     "@angular/animations": "^5.0.0",
     "@angular/cdk": "^5.0.0-rc0",

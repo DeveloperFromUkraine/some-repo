@@ -1,9 +1,9 @@
-import { Component, ElementRef, ViewChild, OnInit, OnDestroy} from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { MatDialog } from '@angular/material';
-import {Routes} from '@angular/router';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material';
+import { Routes, Router, NavigationEnd } from '@angular/router';
 import { DemoContributionComponent } from './demo/demo-contribution/demo-contribution.component';
-import {Subject} from 'rxjs/Subject';
+import { Subject } from 'rxjs';
+import { SlackBotDialogComponent } from './slack-bot/slack-bot-dialog.component'
 
 const routes: Routes = [
     { path: 'contribution', component: DemoContributionComponent},
@@ -14,11 +14,12 @@ const routes: Routes = [
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
     @ViewChild('header')
     header: ElementRef;
     headerHeight: number;
-
+    private router$;
+    private currUrl: string;
   navItems = [
     { name: 'Accessibility', route: '/accessibility-component' },
     { name: 'Card', route: '/card' },
@@ -47,42 +48,35 @@ export class AppComponent {
     { name: 'Sidenav', route: '/sidenav' },
     { name: 'Text', route: '/text' },
   ];
+    testNavItems = [
+        { name: 'Status', route: 'status' },
+        { name: 'AAA Test Pattern', route: 'aaa'},
+        { name: 'Configuring Jest', route: 'jest'},
+        { name: 'Asynchronous Operations', route: 'asynchronous'},
+        { name: 'Triggering Event Handlers', route: 'event-handler'},
+        { name: 'Snapshot Testing', route: 'snapshot'},
+        { name: 'Test Types', route: 'test-types'},
+        { name: 'Resources', route: 'resources'}
+    ];
     selectedOption: string;
-    constructor (public dialog: MatDialog) {
+    constructor (public dialog: MatDialog, router: Router) {
+        this.router$ = router;
+    }
+
+    ngOnInit(): void {
+        this.router$.events.subscribe(route => {
+            if (route instanceof NavigationEnd) {
+                this.currUrl = route.url;
+            }
+        });
     }
 
     openDialog(): void {
-        let dialogRef = this.dialog.open(SlackBotDialogComponent);
+        let dialogRef = this.dialog.open(SlackBotDialogComponent, {
+            data: { url: this.currUrl, baseUrl: 'http://ignite-design-system.apps.mia.ulti.io/#' },
+        });
         dialogRef.afterClosed().subscribe(result => {
             this.selectedOption = result;
         });
-    }
-}
-
-@Component({
-    selector: 'slackbot-dialog',
-    templateUrl: './slackbot-dialog.html',
-})
-export class SlackBotDialogComponent implements OnInit, OnDestroy {
-
-    public formBuilder: FormBuilder;
-    private close$ = new Subject<void>();
-    form: FormGroup;
-
-    constructor (formBuilder: FormBuilder) {
-        this.formBuilder = formBuilder;
-    }
-    ngOnInit(): void {
-        this.form = this.formBuilder.group({
-            myDateRange: this.formBuilder.group({
-                startDate: [null],
-                endDate: [null]
-            })
-        })
-    }
-
-    ngOnDestroy(): void {
-        this.close$.next();
-        this.close$.complete();
     }
 }
