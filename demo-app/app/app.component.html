@@ -3,14 +3,30 @@
   <mat-sidenav #sidenav class="sidenav" mode="side" opened="false" [fixedInViewport]="true"
                [fixedTopGap]="headerHeight + 8">
     <div><mat-toolbar class = "component-side-nav">Components</mat-toolbar></div>
+
     <mat-nav-list dense>
       <div *ngFor="let item of navItems">
         <h3><a mat-list-item [routerLink]="[item.route]"><span mat-line>{{ item.name }}</span></a></h3>
       </div>
     </mat-nav-list>
-    <ign-center><pre><a mat-raised-button color = "accent" [routerLink]="['contribution']">
-      Doc Site Contributions
-    </a></pre></ign-center>
+
+
+    <mat-divider></mat-divider>
+    <p matSubheader class="sidenav-subheader">Testing</p>
+    <mat-nav-list dense>
+      <div *ngFor="let testItem of testNavItems">
+        <h3><a mat-list-item [routerLink]="[testItem.route]"><span mat-line>{{ testItem.name }}</span></a></h3>
+      </div>
+    </mat-nav-list>
+
+    <mat-divider></mat-divider>
+    <p matSubheader class="sidenav-subheader">Contributions</p>
+    <mat-nav-list dense>
+    <h5><a mat-list-item [routerLink]="['contribution']">
+      <span mat-line>Doc Site Contributions</span>
+    </a></h5>
+    </mat-nav-list>
+
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar>
@@ -22,7 +38,9 @@
     </mat-toolbar>
     <div id ="body-container">
       <router-outlet></router-outlet>
-      <div id="footer" layout-align="end start"><button mat-raised-button color = "accent" (click)="openDialog()">
+      <div id="footer" layout-align="end start">
+        <button *ngIf="currUrl !== '/'"  mat-raised-button color = "accent"
+                (click)="openDialog()">
         <pre>Questions About Our Components?</pre></button></div>
     </div>
   </mat-sidenav-content>

@@ -1,0 +1,115 @@
+<h1>Test Types</h1>
+    <p>This is a high-level description of the different types of tests that are done in relation to Angular.</p>
+    <hr />
+
+    <h2>Unit Tests</h2>
+    <p>Test the JavaScript file in isolation and mock out services as you need them. Unit Tests don't use the Angular Testing Utilities. (*.unit.spec.ts)</p>
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
+describe('AppComponent', () => {{ '{' }}
+    let component: AppComponent;
+
+    beforeEach(() => {{ '{' }}
+        component = new AppComponent();
+    });
+
+    it('should be truthy', () => {{ '{' }}
+        expect(component).toBeTruthy();
+    });
+});
+            </code>
+        </pre>
+    </mat-card>
+
+    <h2>Integration Tests</h2>
+    <p>Use the Angular Testing Utilities to generate the Angular environment to test. Check JavaScript integration with the template. Mock out services as you need them. (*.spec.ts)</p>
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
+describe('AppComponent', () => {{ '{' }}
+    let fixture: ComponentFixture&lt;AppComponent&gt;;
+    let component: AppComponent;
+
+    beforeEach(async () => {{ '{' }}
+        await TestBed.configureTestingModule({{ '{' }}
+            declarations: [AppComponent],
+            imports: [],
+            providers: []
+        }).compileComponents();
+    });
+
+    beforeEach(() => {{ '{' }}
+        fixture = TestBed.createComponent(AppComponent);
+        component = fixture.componentInstance;
+
+        fixture.detectChanges();
+    });
+
+    it('should be truthy', () => {{ '{' }}
+        expect(component).toBeTruthy();
+    });
+});
+            </code>
+        </pre>
+    </mat-card>
+
+    <h2>End 2 End Tests</h2>
+    <p>Testing the application as a whole. Simulate a user through real world scenarios. (*.e2e-spec.ts)</p>
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
+describe('test-app1 App', () => {{ '{' }}
+    let page: AppPage;
+
+    beforeEach(() => {{ '{' }}
+        page = new AppPage();
+    });
+
+    it('should display welcome message', () => {{ '{' }}
+        page.navigateTo();
+
+        expect(page.getParagraphTest()).toEqual('Welcome to app!');
+    });
+});
+            </code>
+        </pre>
+    </mat-card>
+    <h2>Snapshot Testing</h2>
+    <p>Will serialize component and create reference image. When snapshot test is run, it will fail if the two images do not match. (*.spec.ts)</p>
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
+exports[`renders correctly 1`] = `
+&lt;a
+    className="normal"
+    href="http://www.facebook.com"
+    onMouseEnter={{ '{' }}[Function]}
+    onMouseLeave={{ '{' }}[Function]}
+&gt;
+    Facebook
+    &lt;/a&gt;
+`;
+            </code>
+        </pre>
+    </mat-card>
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
+Received value does not match stored snapshot 1.
+
+- Snapshot
++ Received
+
+&gt;a
+    className="normal"
+-   href="http://facebook.com"
++   href="http://instagram.com"
+    onMouseEnter={{ '{' }}[Function]}
+    onMouseLeave={{ '{' }}[Function]}&gt;
+-   Facebook
++   Instagram
+&lt;a&gt;
+            </code>
+        </pre>
+    </mat-card>
