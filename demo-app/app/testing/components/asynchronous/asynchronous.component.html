@@ -24,7 +24,7 @@ it('should set endDate html element', async (() => {{ '{' }}
     </mat-card>
 
     <h2>2. Angular Testing Utility - fakeAsync/tick()</h2>
-    <p>a. tick() method will execute any asynchronous tasks in the queue.</p>
+    <p>a. tick() method will execute any asynchronous tasks in the microtask queue.</p>
     <p>b. tick(100) would execute any asynchronous tasks that would occur within 100ms.</p>
     <mat-card class='code-block-card'>
         <pre>
@@ -43,7 +43,33 @@ it('should set endDate html element', fakeAsync (() => {{ '{' }}
         </pre>
     </mat-card>
 
-    <h2>3. ES8 Async Functions</h2>
+    <h2>3. Angular Testing Utility - fakeAsync/flush()</h2>
+    <p>a. flush() method will execute any asynchronous tasks in the macrotask queue.</p>
+    <p>b. flushMicrotasks() is synonymous with tick().</p>
+
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block">
+it('should return the edited unit data', fakeAsync(() => {{ '{' }}
+    let data = {{ '{' }}};
+    let dialogRef = this.dialog.open(Component, {{ '{' }}data: data});
+    let spy = jest.fn();
+    let returnData = {{ '{' }}
+        data: data
+    };
+    dialogRef.afterClosed().subscribe(spy);
+
+    dialogRef.close(returnData);
+    fixture.detectChanges();
+    flush();
+
+    expect(spy).toHaveBeenCalledWith(returnData);
+}));
+            </code>
+        </pre>
+    </mat-card>
+
+    <h2>4. ES8 Async Functions</h2>
     <p>a. Built on top of Promises.</p>
     <p>b. Await works with Promises, not callbacks.</p>
 
