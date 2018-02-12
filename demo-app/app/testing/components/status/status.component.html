@@ -1,5 +1,5 @@
 <div class="status-container">
-    <mat-card [style.border-bottom]="getBorder()" class="g-header">
+    <mat-card class="g-header" [ngStyle]="{'border-bottom': '10px solid ' + data.metrics?.status.toLowerCase()}">
         <h1>Ignite Design System Status</h1>
         <mat-card-subtitle *ngIf="(data.metrics?.status === 'GREEN')">
             Passing Since: {{ data.metrics?.greenSinceDate | date }}
