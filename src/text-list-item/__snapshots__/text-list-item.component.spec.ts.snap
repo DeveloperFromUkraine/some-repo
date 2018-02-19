@@ -4,7 +4,6 @@ exports[`TextListItemComponent should match snapshot 1`] = `
 <ign-text-list-item>
   <mat-list-item
     class="mat-list-item"
-    role="listitem"
   >
     <div
       class="mat-list-item-content"
