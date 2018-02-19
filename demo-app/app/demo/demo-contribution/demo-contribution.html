@@ -7,6 +7,9 @@
         </li></ul>
     </li>
     <li>After installing the package, run the following from the terminal: 
+        <ul><li>npm install -g yo</li></ul>
+    </li>
+    <li>After installing yeoman, run the following from the terminal in the directory where the generator is installed: 
         <ul><li>yo ign</li></ul>
     </li>
     <li>Be sure to separate all words within the name of your component with hyphens, i.e. "demo-app-example", when prompted.</li>
@@ -52,3 +55,27 @@
     </li>
 </ul>
 
+<h3>Troubleshooting</h3>
+    <ul>
+        <li>"npm ERR! enoent ENOENT: no such file or directory, access error" when running npm install on the generator.
+            <ul>
+                <li>Run rm -rf node_modules and attempt the install again.</li>
+            </ul>
+        </li>
+        <li>"You don't seem to have a generator with the name “ign” installed" error when running the yo ign command.
+            <ul>
+                <li>Run "npm link" from the terminal in the generator's directory.</li>
+                <li>Run "npm link generator-ign" from the terminal in the generator's directory, if the above fails to work.</li>
+            </ul>
+        </li>
+        <li>"This usually happens because your environment has changed since running npm install" error when running yarn start from the terminal.
+                <ul>
+                    <li>Run rm -rf node_module && yarn install. </li>
+                </ul>
+            </li>
+        <li>"Cannot find command 'yo'" error when running yo ign from the terminal.
+            <ul>
+                <li>Run npm install -g yo from the terminal.</li>
+            </ul>
+        </li>
+    </ul>
