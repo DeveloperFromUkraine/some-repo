@@ -23,7 +23,7 @@ exports[`DataTableContainerComponent should match snapshot 1`] = `
           Items per page:
         </div>
         <mat-form-field
-          class="mat-paginator-page-size-select mat-input-container mat-form-field ng-tns-c31-0 mat-form-field-type-mat-select mat-form-field-can-float mat-primary"
+          class="mat-paginator-page-size-select mat-input-container mat-form-field ng-tns-c31-0 mat-form-field-type-mat-select mat-form-field-can-float mat-form-field-hide-placeholder mat-primary ng-star-inserted"
         >
           <div
             class="mat-input-wrapper mat-form-field-wrapper"
@@ -35,15 +35,16 @@ exports[`DataTableContainerComponent should match snapshot 1`] = `
                 class="mat-input-infix mat-form-field-infix"
               >
                 <mat-select
-                  tabindex="0"
-                  class="mat-select ng-tns-c32-1"
+                  aria-label="Items per page:"
+                  class="mat-select ng-tns-c32-1 ng-star-inserted"
                   ng-reflect-value="10"
                   ng-reflect-aria-label="Items per page:"
                   id="mat-select-6"
+                  tabindex="0"
                   role="listbox"
-                  aria-label="Items per page:"
                   aria-required="false"
                   aria-disabled="false"
+                  aria-invalid="false"
                   aria-owns="mat-option-34 mat-option-35 mat-option-36 mat-option-37 mat-option-38"
                   aria-multiselectable="false"
                 >
@@ -54,8 +55,13 @@ exports[`DataTableContainerComponent should match snapshot 1`] = `
                   >
                     <div
                       class="mat-select-value"
+                      ng-reflect-ng-switch="true"
                     >
-                      
+                      <span
+                        class="mat-select-placeholder ng-tns-c32-1 ng-star-inserted"
+                      >
+                        
+                      </span>
                     </div>
                     <div
                       class="mat-select-arrow-wrapper"
@@ -67,7 +73,7 @@ exports[`DataTableContainerComponent should match snapshot 1`] = `
                   </div>
                 </mat-select>
                 <span
-                  class="mat-input-placeholder-wrapper mat-form-field-placeholder-wrapper"
+                  class="mat-form-field-label-wrapper mat-input-placeholder-wrapper mat-form-field-placeholder-wrapper"
                 >
                   
                 </span>
@@ -85,7 +91,7 @@ exports[`DataTableContainerComponent should match snapshot 1`] = `
               ng-reflect-ng-switch="hint"
             >
               <div
-                class="mat-input-hint-wrapper mat-form-field-hint-wrapper ng-tns-c31-0 ng-trigger ng-trigger-transitionMessages"
+                class="mat-input-hint-wrapper mat-form-field-hint-wrapper ng-tns-c31-0 ng-trigger ng-trigger-transitionMessages ng-star-inserted"
                 style="opacity: 1;"
               >
                 <div
