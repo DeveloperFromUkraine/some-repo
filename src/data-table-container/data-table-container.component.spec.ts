@@ -6,7 +6,7 @@ import { MatTableDataSource } from '@angular/material';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core/src/debug/debug_node';
 
-fdescribe('DataTableContainerComponent', () => {
+describe('DataTableContainerComponent', () => {
     let fixture: ComponentFixture<DataTableContainerComponent>;
     let component: DataTableContainerComponent;
     let matTableDataSource: MatTableDataSource<any> = new MatTableDataSource();

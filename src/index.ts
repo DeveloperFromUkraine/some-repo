@@ -103,7 +103,7 @@ export * from './expandable-fab/expandable-fab.component';
 import { ExpandableFabItemComponent } from './expandable-fab/expandable-fab-item.component';
 export * from './expandable-fab/expandable-fab-item.component';
 
-import { FieldComponent, FieldInlineComponent } from './field/field.component';
+import { FieldComponent, FieldInlineComponent, EditableFieldComponent, EditableFieldInlineComponent } from './field/field.component';
 export * from './field/field.component';
 
 import { CenterComponent } from './center/center.component';
@@ -122,6 +122,9 @@ import { NavListComponent } from './nav-list/nav-list.component';
 import { DataTableContainerModule } from './data-table-container/data-table-container.module';
 import { DataTableContainerComponent } from './data-table-container/data-table-container.component';
 
+import { ExpandableSearchComponent } from './expandable-search/expandable-search.component';
+import { RightAlignContainerComponent } from './right-align-container/right-align-container.component';
+
 import {
   MatToolbarModule,
   MatMenuModule,
@@ -133,6 +136,8 @@ import {
   MatProgressSpinnerModule,
   MatNativeDateModule,
   MatListModule,
+  MatFormFieldModule,
+  MatInputModule
 } from '@angular/material';
 
 const components = [
@@ -186,10 +191,14 @@ const components = [
   ExpandableFabItemComponent,
   FieldComponent,
   FieldInlineComponent,
+  EditableFieldComponent,
+  EditableFieldInlineComponent,
   CenterComponent,
   NestableFormDirective,
   LoadingContainerComponent,
-  FooterComponent
+  FooterComponent,
+  ExpandableSearchComponent,
+  RightAlignContainerComponent
 ];
 
 @NgModule({
@@ -208,7 +217,9 @@ const components = [
     MatListModule,
     NavListModule,
     TextListItemModule,
-    DataTableContainerModule
+    DataTableContainerModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   declarations: components,
   exports: [

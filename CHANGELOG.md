@@ -1,5 +1,8 @@
 ### vNEXT
 - Added example and demo for max height in dialog
+- New [editable field component](./src/field/README.md#editable-field-component) `ign-editable-field`
+- New [editable inline field component](./src/field/README.md#editable-inline-field-component) `ign-editable-field-inline`
+- Added expandable search component and options container
 
 ### v0.4.0
 - Introducing first pass of text-list-item component

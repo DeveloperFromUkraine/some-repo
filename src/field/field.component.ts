@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'ign-field',
@@ -22,6 +22,42 @@ export class FieldComponent {
   `,
     styleUrls: ['field.component.scss'],
 })
-export class FieldInlineComponent {
-    @Input() label: string;
+export class FieldInlineComponent extends FieldComponent {}
+@Component({
+  selector: 'ign-editable-field',
+  template: `
+    <div class="label-container">
+    <div da="fieldValue" class="value flex-lable-value"><ng-content></ng-content></div>
+    <button mat-icon-button class="mat-icon-button" (click)=handleClick()>
+      <mat-icon>{{editIcon}}</mat-icon>
+    </button>
+    </div>
+    <div class="label">{{label}}</div>
+  `,
+  styleUrls: ['field.component.scss'],
+})
+export class EditableFieldComponent extends FieldComponent {
+  @Input() editIcon: string = 'mode_edit';
+  @Output() onIconClick: EventEmitter<any> = new EventEmitter();
+
+  handleClick() {
+    this.onIconClick.emit();
+  }
 }
+
+@Component({
+    selector: 'ign-editable-field-inline',
+    template: `
+    <div class="label-container">
+      <div da="fieldValue" class="value flex-lable-value">
+      <span class="label">{{label}}</span>
+      <ng-content></ng-content>
+      </div>
+      <button mat-icon-button class="mat-icon-button" (click)=handleClick()>
+      <mat-icon>{{editIcon}}</mat-icon>
+      </button>
+    </div>
+  `,
+    styleUrls: ['field.component.scss'],
+})
+export class EditableFieldInlineComponent extends EditableFieldComponent {}
