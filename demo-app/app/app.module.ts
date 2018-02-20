@@ -50,6 +50,7 @@ import { DemoIconComponent } from './demo/demo-icon/demo-icon.component';
 import { DemoSelectionListComponent } from './demo/demo-selection-list/demo-selection-list.component';
 import { DemoMarkdownComponent } from './demo/demo-markdown/demo-markdown.component';
 import { DemoContributionComponent } from './demo/demo-contribution/demo-contribution.component';
+import { DemoButtonGroupComponent } from './demo/demo-button-group/demo-button-group.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -82,6 +83,7 @@ const routes: Routes = [
   { path: 'selection-list', component: DemoSelectionListComponent },
   { path: 'markdown', component: DemoMarkdownComponent },
   { path: 'contribution', component: DemoContributionComponent },
+  { path: 'button-group', component: DemoButtonGroupComponent },
 ];
 
 @NgModule({

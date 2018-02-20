@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
     private currUrl: string;
   navItems = [
     { name: 'Accessibility', route: '/accessibility-component' },
+    { name: 'Button Group', route: '/button-group' },
     { name: 'Card', route: '/card' },
     { name: 'Center', route: '/center' },
     { name: 'Checkbox', route: '/checkbox' },
