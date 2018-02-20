@@ -51,6 +51,7 @@ import { DemoSelectionListComponent } from './demo/demo-selection-list/demo-sele
 import { DemoMarkdownComponent } from './demo/demo-markdown/demo-markdown.component';
 import { DemoContributionComponent } from './demo/demo-contribution/demo-contribution.component';
 import { DemoButtonGroupComponent } from './demo/demo-button-group/demo-button-group.component';
+import { DemoDataTableContainerComponent } from './demo/demo-data-table-container/demo-data-table-container.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -59,6 +60,7 @@ const routes: Routes = [
   { path: 'checkbox', component: DemoCheckboxComponent },
   { path: 'card', component: DemoCardComponent },
   { path: 'center', component: DemoCenterComponent },
+  { path: 'data-table-container', component: DemoDataTableContainerComponent },
   { path: 'date-range', component: DemoDateRangeComponent },
   { path: 'divider', component: DemoDividerComponent },
   { path: 'empty-state', component: DemoEmptyStateComponent },
@@ -115,7 +117,7 @@ const routes: Routes = [
     ],
     providers: [SlackService],
     bootstrap: [AppComponent],
-    exports: [MatIconModule, MatButtonModule],
+    exports: [MatIconModule, MatButtonModule], 
 
     entryComponents: [SlackBotDialogComponent],
 })
