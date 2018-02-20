@@ -88,6 +88,7 @@ const routes: Routes = [
   { path: 'contribution', component: DemoContributionComponent },
   { path: 'button-group', component: DemoButtonGroupComponent },
   { path: 'expandable-search', component: DemoExpandableSearchComponent },
+
 ];
 
 @NgModule({

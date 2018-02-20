@@ -130,6 +130,7 @@ const materialModules = [
     DemoButtonGroupComponent,
     DemoDataTableContainerComponent,
     DemoExpandableSearchComponent,
+
   ],
   exports: [
       ...materialModules, RouterModule, MatTableModule
