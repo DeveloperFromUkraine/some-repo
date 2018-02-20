@@ -46,6 +46,7 @@ export class AppComponent implements OnInit {
     { name: 'Markdown', route: '/markdown' },
     { name: 'Page', route: '/page' },
     { name: 'Radio Button', route: '/radio-button' },
+    { name: 'Right Align Container', route: '/right-align-container' },
     { name: 'Right Drawer', route: '/right-drawer' },
     { name: 'Selection List', route: '/selection-list' },
     { name: 'Sidenav', route: '/sidenav' },

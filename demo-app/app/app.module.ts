@@ -53,6 +53,7 @@ import { DemoContributionComponent } from './demo/demo-contribution/demo-contrib
 import { DemoButtonGroupComponent } from './demo/demo-button-group/demo-button-group.component';
 import { DemoDataTableContainerComponent } from './demo/demo-data-table-container/demo-data-table-container.component';
 import { DemoExpandableSearchComponent } from './demo/demo-expandable-search/demo-expandable-search.component';
+import { DemoRightAlignContainerComponent } from './demo/demo-right-align-container/demo-right-align-container.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -88,7 +89,7 @@ const routes: Routes = [
   { path: 'contribution', component: DemoContributionComponent },
   { path: 'button-group', component: DemoButtonGroupComponent },
   { path: 'expandable-search', component: DemoExpandableSearchComponent },
-
+  { path: 'right-align-container', component: DemoRightAlignContainerComponent },
 ];
 
 @NgModule({
@@ -121,7 +122,6 @@ const routes: Routes = [
     providers: [SlackService],
     bootstrap: [AppComponent],
     exports: [MatIconModule, MatButtonModule], 
-
     entryComponents: [SlackBotDialogComponent],
 })
 

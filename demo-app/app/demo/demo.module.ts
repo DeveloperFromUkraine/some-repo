@@ -43,6 +43,7 @@ import { DemoContributionComponent } from './demo-contribution/demo-contribution
 import { DemoButtonGroupComponent } from './demo-button-group/demo-button-group.component';
 import { DemoDataTableContainerComponent } from './demo-data-table-container/demo-data-table-container.component';
 import { DemoExpandableSearchComponent } from './demo-expandable-search/demo-expandable-search.component';
+import { DemoRightAlignContainerComponent } from './demo-right-align-container/demo-right-align-container.component';
 
 import { MatExpansionModule } from '@angular/material';
 import { MatTabsModule, MatButtonModule } from '@angular/material';
@@ -130,7 +131,7 @@ const materialModules = [
     DemoButtonGroupComponent,
     DemoDataTableContainerComponent,
     DemoExpandableSearchComponent,
-
+    DemoRightAlignContainerComponent,
   ],
   exports: [
       ...materialModules, RouterModule, MatTableModule
