@@ -26,6 +26,7 @@ export class AppComponent implements OnInit {
     { name: 'Card', route: '/card' },
     { name: 'Center', route: '/center' },
     { name: 'Checkbox', route: '/checkbox' },
+    { name: 'Data Table Container', route: '/data-table-container' },
     { name: 'Date Range', route: '/date-range' },
     { name: 'Dialog', route: '/dialog' },
     { name: 'Divider', route: '/divider' },
