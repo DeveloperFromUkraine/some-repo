@@ -35,6 +35,7 @@ import { DemoIconComponent } from './demo-icon/demo-icon.component';
 import { DemoSelectionListComponent } from './demo-selection-list/demo-selection-list.component';
 import { DemoMarkdownComponent } from './demo-markdown/demo-markdown.component';
 import { DemoContributionComponent } from './demo-contribution/demo-contribution.component';
+import { DemoButtonGroupComponent } from './demo-button-group/demo-button-group.component';
 
 import { MatExpansionModule } from '@angular/material';
 import { MatTabsModule, MatButtonModule } from '@angular/material';
@@ -114,6 +115,7 @@ const materialModules = [
     DemoSelectionListComponent,
     DemoMarkdownComponent,
     DemoContributionComponent,
+    DemoButtonGroupComponent,
   ],
   exports: [
       ...materialModules, RouterModule,
