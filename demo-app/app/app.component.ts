@@ -32,6 +32,7 @@ export class AppComponent implements OnInit {
     { name: 'Divider', route: '/divider' },
     { name: 'Empty State', route: '/empty-state' },
     { name: 'Error Banner', route: '/error-banner' },
+    { name: 'Expandable Search', route: '/expandable-search' },
     { name: 'Floating Action Button', route: '/expandable-fab' },
     { name: 'Field', route: '/field' },
     { name: 'Footer', route: '/footer' },
