@@ -1,5 +1,5 @@
 import { ComponentTest } from '../../../test/test-bed/component';
-import { ListSelectionItemComponent } from 'index';
+import { ListSelectionItemComponent } from './index';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';

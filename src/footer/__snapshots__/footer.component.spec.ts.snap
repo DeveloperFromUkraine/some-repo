@@ -6,11 +6,18 @@ exports[`FooterComponent should match snapshot 1`] = `
     class="footer"
     role="contentinfo"
   >
+    
+    
     <p
       class="footer-text"
     >
       
+      
+      
+    
     </p>
+    
+  
   </footer>
 </ign-footer>
 `;

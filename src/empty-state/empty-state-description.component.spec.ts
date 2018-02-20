@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { EmptyStateDescriptionComponent } from "index";
+import { EmptyStateDescriptionComponent } from "../index";
 import { ComponentTest } from "../../test/test-bed/component";
 
 describe('EmptyStateDescriptionComponent', () => {

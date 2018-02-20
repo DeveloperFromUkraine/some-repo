@@ -6,6 +6,10 @@ exports[`CardContainerComponent should match snapshot 1`] = `
     class="container mat-card"
   >
     
+    
+    
+  
   </mat-card>
+  
 </ign-card-container>
 `;

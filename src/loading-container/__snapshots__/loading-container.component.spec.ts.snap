@@ -7,8 +7,14 @@ exports[`LoadingContainer should match snapshot 1`] = `
   loading={[Function Boolean]}
   pastDelay="false"
 >
+  
   <div>
     
+    
+    
+    
+  
   </div>
+  
 </ign-loading-container>
 `;

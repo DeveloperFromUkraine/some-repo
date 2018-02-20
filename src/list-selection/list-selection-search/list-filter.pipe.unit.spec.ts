@@ -1,4 +1,4 @@
-import { ListFilterPipe } from "index";
+import { ListFilterPipe } from "./index";
 import { Observable, Subject } from 'rxjs';
 
 interface IFilterProvider {

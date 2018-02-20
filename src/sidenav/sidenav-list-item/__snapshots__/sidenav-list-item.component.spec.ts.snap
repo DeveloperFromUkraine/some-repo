@@ -9,17 +9,23 @@ exports[`SideNavListItemComponent should match snapshot 1`] = `
   <a
     class="app-link"
   >
+    
+    
     <i
       aria-hidden="true"
       class="material-icons app-link-icon"
     >
       mail
     </i>
+    
+    
     <div
       class="app-link-text"
     >
       test description
     </div>
+    
+  
   </a>
 </ign-sidenav-list-item>
 `;

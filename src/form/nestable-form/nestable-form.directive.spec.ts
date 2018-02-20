@@ -3,7 +3,7 @@ import { FormBuilder, Validators, FormGroup, FormsModule, ReactiveFormsModule } 
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ComponentTest } from '../../../test/test-bed/component';
 import { By } from '@angular/platform-browser';
-import { NestableFormDirective } from 'index';
+import { NestableFormDirective } from './index';
 import { BrowserModule } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 

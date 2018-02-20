@@ -6,6 +6,10 @@ exports[`ListSelectionComponent should match snapshot 1`] = `
     class="container"
   >
     
+    
+    
+  
   </div>
+  
 </ign-list-selection>
 `;

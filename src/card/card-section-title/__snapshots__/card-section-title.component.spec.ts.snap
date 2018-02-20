@@ -6,6 +6,10 @@ exports[`CardSectionTitleComponent should match snapshot 1`] = `
     class="ign-card-section-title mat-card-subtitle"
   >
     
+    
+    
+  
   </h2>
+  
 </ign-card-section-title>
 `;
