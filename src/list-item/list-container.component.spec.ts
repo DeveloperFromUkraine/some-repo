@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { ListContainerComponent } from "index";
+import { ListContainerComponent } from "../index";
 import { ComponentTest } from "../../test/test-bed/component";
 
 describe('ListContainerComponent', () => {

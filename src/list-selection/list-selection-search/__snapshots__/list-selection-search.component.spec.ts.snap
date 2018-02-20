@@ -8,15 +8,21 @@ exports[`ListSelectionSearchComponent should match snapshot 1`] = `
   <div
     class="container"
   >
+    
+    
     <i
       class="material-icons search-icon"
     >
       search
     </i>
+    
+    
     <input
       class="input"
       type="text"
     />
+    
+  
   </div>
 </ign-list-selection-search>
 `;

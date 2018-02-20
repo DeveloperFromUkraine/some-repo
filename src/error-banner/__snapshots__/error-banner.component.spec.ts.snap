@@ -4,6 +4,9 @@ exports[`ErrorBannerComponent should match snapshot 1`] = `
 <ign-error-banner>
   <p>
     
+    
+    
+  
   </p>
 </ign-error-banner>
 `;

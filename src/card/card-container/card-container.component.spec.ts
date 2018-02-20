@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { CardContainerComponent } from "index";
+import { CardContainerComponent } from "./index";
 import { ComponentTest } from '../../../test/test-bed/component';
 import { MatCardModule } from "@angular/material";
 

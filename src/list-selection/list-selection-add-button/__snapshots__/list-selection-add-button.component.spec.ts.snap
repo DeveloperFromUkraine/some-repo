@@ -5,13 +5,20 @@ exports[`ListSelectionAddButtonComponent should match snapshot 1`] = `
   <a
     mat-fab=""
   >
+    
+    
     <mat-icon
+      aria-hidden="true"
       class="mat-icon"
       role="img"
-      aria-hidden="true"
     >
+      
       add
+    
     </mat-icon>
+    
+  
   </a>
+  
 </ign-list-selection-add-button>
 `;

@@ -12,36 +12,59 @@ exports[`ExpandableFabComponent should match snapshot 1`] = `
     ng-reflect-klass="buttons-container"
     ng-reflect-ng-class="[object Object]"
   >
+    
+    
+    
+    
+    
+    
     <div
       class="main-button-container"
       da="mainButton"
     >
+      
+      
       <a
         class="icon-container"
         igna11yclick=""
         mat-fab=""
       >
+        
+        
         <mat-icon
-          class="icon icon-secondary mat-icon material-icons icon-secondary-active"
-          role="img"
-          style="position:absolute"
           aria-hidden="true"
+          class="icon icon-secondary mat-icon material-icons icon-secondary-active"
           ng-reflect-klass="icon icon-secondary"
           ng-reflect-ng-class="[object Object]"
-        >
-          clear
-        </mat-icon>
-        <mat-icon
-          class="icon icon-primary mat-icon material-icons icon-primary-active"
           role="img"
+          style="position:absolute"
+        >
+          
+          clear
+        
+        </mat-icon>
+        
+        
+        <mat-icon
           aria-hidden="true"
+          class="icon icon-primary mat-icon material-icons icon-primary-active"
           ng-reflect-klass="icon icon-primary"
           ng-reflect-ng-class="[object Object]"
+          role="img"
         >
+          
           add
+        
         </mat-icon>
+        
+      
       </a>
+      
+    
     </div>
+    
+  
   </div>
+  
 </ign-expandable-fab>
 `;

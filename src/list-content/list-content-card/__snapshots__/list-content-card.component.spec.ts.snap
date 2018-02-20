@@ -6,6 +6,10 @@ exports[`ListContentCardComponent should match snapshot 1`] = `
     class="container mat-card"
   >
     
+    
+    
+  
   </mat-card>
+  
 </ign-list-content-card>
 `;
