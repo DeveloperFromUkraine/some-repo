@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { LoadingContainerComponent } from "./loading-container.component";
 import { ComponentTest } from "../../test/test-bed/component";
 import { MatProgressSpinnerModule } from "@angular/material";
-import { DebugElement } from "@angular/core/src/debug/debug_node";
+import { DebugElement } from "@angular/core";
 import { By } from '@angular/platform-browser';
 
 

@@ -17,46 +17,69 @@ exports[`HubCardComponent should match snapshot 1`] = `
     class="card-container mat-ripple"
     da="button"
     matripple=""
-    role="button"
-    tabindex="0"
     ng-reflect-centered="false"
     ng-reflect-radius="380"
     ng-reflect-speed-factor="0.5"
     ng-reflect-unbounded="false"
+    role="button"
+    tabindex="0"
   >
+    
+    
     <div
       class="card-opacity-cover"
     />
+    
+    
     <div
       class="card-contents"
     >
+      
+      
       <div
         class="circle-icon-container"
       >
+        
+        
         <mat-icon
+          aria-hidden="true"
           class="icon material-icons mat-icon"
           role="img"
-          aria-hidden="true"
         >
           
+          
+        
         </mat-icon>
+        
+      
       </div>
+      
+      
       <div
         class="primary-text"
       >
         titleTest
       </div>
+      
+      
       <div
         class="secondary-text"
       >
         subTitleTest
       </div>
+      
+      
       <div
         class="action-text"
       >
         primartActionTest
       </div>
+      
+    
     </div>
+    
+  
   </div>
+  
 </ign-hub-card>
 `;

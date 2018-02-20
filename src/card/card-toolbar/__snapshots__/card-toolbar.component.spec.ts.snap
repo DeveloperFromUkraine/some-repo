@@ -2,10 +2,15 @@
 
 exports[`CardToolbarComponent should match snapshot 1`] = `
 <ign-card-toolbar>
+  
   <div
     class="right-actions"
   >
     
+    
+    
+  
   </div>
+  
 </ign-card-toolbar>
 `;

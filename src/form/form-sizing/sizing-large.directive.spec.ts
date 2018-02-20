@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { ComponentFixture, async, TestBed } from "@angular/core/testing";
 import { ComponentTest } from '../../../test/test-bed/component';
-import { SizingLargeDirective } from "index";
+import { SizingLargeDirective } from "./index";
 import { By } from '@angular/platform-browser';
 import { DebugElement } from "@angular/core";
 

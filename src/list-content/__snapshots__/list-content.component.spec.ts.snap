@@ -3,5 +3,7 @@
 exports[`ListContentComponent should match snapshot 1`] = `
 <ign-list-content>
   
+  
+  
 </ign-list-content>
 `;

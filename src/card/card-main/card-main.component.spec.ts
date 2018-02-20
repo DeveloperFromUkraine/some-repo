@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { CardMainComponent } from "index";
+import { CardMainComponent } from "./index";
 import { ComponentTest } from '../../../test/test-bed/component';
 
 describe('CardMainComponent', () => {

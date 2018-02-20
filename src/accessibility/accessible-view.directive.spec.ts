@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
-import { AccessibleViewDirective } from 'accessibility/accessibility.directive';
+import { AccessibleViewDirective } from './accessibility.directive';
 import { ComponentTest } from '../../test/test-bed/component';
 
 import { By } from '@angular/platform-browser';

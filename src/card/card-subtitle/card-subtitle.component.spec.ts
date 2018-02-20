@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { CardSubtitleComponent } from "index";
+import { CardSubtitleComponent } from "./index";
 import { ComponentTest } from "../../../test/test-bed/component";
 
 

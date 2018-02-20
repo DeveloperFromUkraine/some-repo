@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SideNavHeaderComponent } from 'index';
+import { SideNavHeaderComponent } from './index';
 import { DebugElement } from '@angular/core/src/debug/debug_node';
 import { ComponentTest } from '../../../test/test-bed/component';
 import { By } from '@angular/platform-browser';

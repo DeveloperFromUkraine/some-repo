@@ -1,7 +1,7 @@
 import { ComponentFixture, async, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
 import { ComponentTest } from '../../../test/test-bed/component';
-import { SizingSmallDirective } from 'index';
+import { SizingSmallDirective } from './index';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 

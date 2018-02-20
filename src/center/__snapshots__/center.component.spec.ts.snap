@@ -4,6 +4,10 @@ exports[`CenterComponent should match snapshot 1`] = `
 <ign-center>
   <div>
     
+    
+    
+  
   </div>
+  
 </ign-center>
 `;
