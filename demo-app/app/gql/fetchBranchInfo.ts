@@ -5,8 +5,7 @@ const fetchBranchInfo = gql`
                     serviceBySlug(slug: $slug) {
                         branches(types: [MASTER, DEVELOP]) {
                             values {
-                                }
-                                builds(limit: 5) {
+                                builds(limit: 1) {
                                     branchName
                                     concourseUrl
                                     status

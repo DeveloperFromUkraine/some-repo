@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 import { Service, Branches, Values, Builds } from "../../../models/index";
 import gql from 'graphql-tag';
 
-import fetchServiceInfo from '../../gql/fetchServiceInfo';
+import fetchServiceInfo from '../../../gql/fetchServiceInfo';
 
 @Component({
     templateUrl: './status.component.html',
