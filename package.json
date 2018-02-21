@@ -48,6 +48,7 @@
     "url": "http://devgit.dev.us.corp:7990/projects/NUI/repos/ignite-design-system/issues"
   },
   "dependencies": {
+    "angular2-cookie": "^1.2.6",
     "apollo-angular": "^1.0.1",
     "apollo-angular-link-http": "^1.0.2-beta.0",
     "apollo-cache-inmemory": "^1.1.7",

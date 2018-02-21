@@ -4,7 +4,6 @@ exports[`TextListItemComponent should match snapshot 1`] = `
 <ign-text-list-item>
   <mat-list-item
     class="mat-list-item"
-    role="listitem"
   >
     <div
       class="mat-list-item-content"
@@ -12,8 +11,8 @@ exports[`TextListItemComponent should match snapshot 1`] = `
       <div
         class="mat-list-item-ripple mat-ripple"
         mat-ripple=""
-        ng-reflect-trigger="[object HTMLUnknownElement]"
         ng-reflect-disabled="true"
+        ng-reflect-trigger="[object HTMLUnknownElement]"
       />
       <div
         class="mat-list-text"

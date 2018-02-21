@@ -50,6 +50,8 @@ import { DemoIconComponent } from './demo/demo-icon/demo-icon.component';
 import { DemoSelectionListComponent } from './demo/demo-selection-list/demo-selection-list.component';
 import { DemoMarkdownComponent } from './demo/demo-markdown/demo-markdown.component';
 import { DemoContributionComponent } from './demo/demo-contribution/demo-contribution.component';
+import { PendoService } from './pendo/pendo.service';
+import { CookieService } from 'angular2-cookie/services/cookies.service';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -111,7 +113,7 @@ const routes: Routes = [
         DemoModule,
         HttpClientModule,
     ],
-    providers: [SlackService],
+    providers: [SlackService, PendoService, CookieService],
     bootstrap: [AppComponent],
     exports: [MatIconModule, MatButtonModule],
 

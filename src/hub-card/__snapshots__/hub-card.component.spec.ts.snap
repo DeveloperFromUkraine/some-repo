@@ -19,10 +19,10 @@ exports[`HubCardComponent should match snapshot 1`] = `
     matripple=""
     role="button"
     tabindex="0"
+    ng-reflect-unbounded="false"
     ng-reflect-centered="false"
     ng-reflect-radius="380"
     ng-reflect-speed-factor="0.5"
-    ng-reflect-unbounded="false"
   >
     <div
       class="card-opacity-cover"
