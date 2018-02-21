@@ -3,6 +3,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
+//Apollo
+import { ApolloModule, Apollo } from 'apollo-angular';
+import { HttpLink, HttpLinkModule } from 'apollo-angular-link-http';
+import { InMemoryCache } from 'apollo-cache-inmemory';
+
 import { IgniteDesignSystemModule } from '../../src';
 import { TestingModule } from './testing/testing.module';
 
@@ -109,6 +114,8 @@ const routes: Routes = [
         MatCheckboxModule,
         MatRadioModule,
         MatIconModule,
+        ApolloModule,
+        HttpLinkModule,
         IgniteDesignSystemModule,
         TestingModule,
         MarkdownModule,
@@ -123,5 +130,10 @@ const routes: Routes = [
 })
 
 export class AppModule {
-
+    constructor(apollo: Apollo, httpLink: HttpLink) {
+        apollo.create({
+            link: httpLink.create({uri: 'http://bakery-server.apps.mia.ulti.io/graphql'}),
+            cache: new InMemoryCache()
+        });
+    }
 }

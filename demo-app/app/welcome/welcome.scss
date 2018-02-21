@@ -1,0 +1,40 @@
+/*@media only screen 
+and (max-width: 970px) {
+}*/
+
+@mixin grid-shell() {
+    min-height: 300px;
+    min-width: 100%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    /* autoprefixer: off */
+    grid-template-areas:
+        "build build build"
+        "coverage coverage coverage"
+        "component component component"    
+}
+
+.build {
+    grid-area: build;
+    @include grid-shell();
+}
+
+.coverage {
+    grid-area: coverage;
+    @include grid-shell();
+}
+
+.component {
+    grid-area: component;
+    @include grid-shell();
+}
+
+.build-card {
+    
+}
