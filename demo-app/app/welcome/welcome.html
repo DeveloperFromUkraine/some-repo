@@ -7,10 +7,16 @@
 </header>
 <main>
     <section aria-label="build" class="build">
-        <ign-center><h1>Build Status</h1></ign-center>
-        <ign-card-container>
-            
-        </ign-card-container>
+        <ign-center class="header"><h1>Build Status</h1></ign-center>
+            <a class="build-card master" [attr.href]="masterBranchData?.concourseUrl" target="_blank">
+                <div class="build-card-branch">Master</div>
+                <div class="build-card-status">{{ masterBranchData?.status.charAt(0) + masterBranchData?.status.toLowerCase().slice(1) }}</div>
+            </a>
+
+            <a class="build-card develop" [attr.href]="developBranchData?.concourseUrl" target="_blank">
+                <div class="build-card-branch">Develop</div>
+                <div class="build-card-status">{{ masterBranchData?.status.charAt(0) + developBranchData?.status.toLowerCase().slice(1) }}</div>
+            </a>
     </section>
     <section aria-label="coverage" class="coverage">
         <ign-center><h1>Coverage</h1></ign-center>

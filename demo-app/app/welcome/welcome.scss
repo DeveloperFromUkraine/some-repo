@@ -5,9 +5,24 @@ and (max-width: 970px) {
 @mixin grid-shell() {
     min-height: 300px;
     min-width: 100%;
+    border: 1px solid black;
+}
+
+@mixin build-card-content($color) {
+    background-color: $color;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    align-self: stretch;
+    flex-grow: 1;
+    padding: 10px 5px;
+    max-width: 50%;
 }
 
 main {
+    max-width: 1250px;
+    margin: auto;
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(3, auto);
@@ -17,12 +32,31 @@ main {
     grid-template-areas:
         "build build build"
         "coverage coverage coverage"
-        "component component component"    
+        "component component component";    
 }
 
 .build {
     grid-area: build;
-    @include grid-shell();
+
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-areas: 
+        "header-b header-b header-b header-b"
+        ". master develop. ";
+}
+
+.header {
+    grid-area: header-b;
+}
+.master {
+    grid-area: master;
+}
+.develop {
+    grid-area: develop;
 }
 
 .coverage {
@@ -36,5 +70,25 @@ main {
 }
 
 .build-card {
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    height: 40px;
+    width: 260px;
+    text-decoration: none;
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+}
+
+.build-card:hover {
+    transform: scale(1.1);
+    transition-duration: 200ms;
+}
+
+.build-card-branch {
+    @include build-card-content(black);
+}
+
+.build-card-status {
+    @include build-card-content(green);
 }

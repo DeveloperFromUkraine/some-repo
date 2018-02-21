@@ -49,4 +49,8 @@ export class WelcomeComponent implements OnInit {
                 console.dir(this.developBranchData);
             });
     }
+
+    formatString(text: string): string {
+        return text.charAt(0) + text.toLowerCase().slice(1);
+    }
 }
