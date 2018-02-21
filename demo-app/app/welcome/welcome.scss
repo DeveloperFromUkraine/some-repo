@@ -8,7 +8,7 @@ and (max-width: 970px) {
     border: 1px solid black;
 }
 
-@mixin build-card-content($color) {
+@mixin stat-card-content($color) {
     background-color: $color;
     color: white;
     font-size: 20px;
@@ -45,17 +45,17 @@ main {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     grid-template-areas: 
-        "header-b header-b header-b header-b"
+        "header header header header"
         ". master develop. ";
 }
 
-.header {
-    grid-area: header-b;
+.build-header {
+    grid-area: header;
 }
-.master {
+.build-master {
     grid-area: master;
 }
-.develop {
+.build-develop {
     grid-area: develop;
 }
 
@@ -86,9 +86,9 @@ main {
 }
 
 .build-card-branch {
-    @include build-card-content(black);
+    @include stat-card-content(black);
 }
 
 .build-card-status {
-    @include build-card-content(green);
+    @include stat-card-content(green);
 }

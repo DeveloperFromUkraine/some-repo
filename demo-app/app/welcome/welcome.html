@@ -1,5 +1,5 @@
 <header>
-    <ign-center><h2>Hello! You've stumbled upon the NU team's ignite design system playground. </h2>
+    <ign-center><h1>Hello! You've stumbled upon the NU team's ignite design system playground. </h1>
         <p>This is where we store our components that can be universally utilized within the web app. This helps to improve consistency,
         writability, and readability in code across the board!</p>
         <p>Click on the hamburger menu icon to begin navigating to our components. You can consume these components and use
@@ -7,13 +7,13 @@
 </header>
 <main>
     <section aria-label="build" class="build">
-        <ign-center class="header"><h1>Build Status</h1></ign-center>
-            <a class="build-card master" [attr.href]="masterBranchData?.concourseUrl" target="_blank">
+        <ign-center class="build-header"><h1>Build Status</h1></ign-center>
+            <a class="build-card build-master" [attr.href]="masterBranchData?.concourseUrl" target="_blank">
                 <div class="build-card-branch">Master</div>
                 <div class="build-card-status">{{ masterBranchData?.status.charAt(0) + masterBranchData?.status.toLowerCase().slice(1) }}</div>
             </a>
 
-            <a class="build-card develop" [attr.href]="developBranchData?.concourseUrl" target="_blank">
+            <a class="build-card build-develop" [attr.href]="developBranchData?.concourseUrl" target="_blank">
                 <div class="build-card-branch">Develop</div>
                 <div class="build-card-status">{{ masterBranchData?.status.charAt(0) + developBranchData?.status.toLowerCase().slice(1) }}</div>
             </a>
