@@ -39,12 +39,36 @@
         </div></mat-tab>
     <mat-tab label="HTML"><div class="tab-height">
         <table style="width:100%">
-               TBA
-        </table>
-    </div></mat-tab>
-    <mat-tab label="TS"><div class="tab-height">
-        <table style="width:100%">
-                   TBA
+            <p>&lt;div class="example-container mat-elevation-z8"&gt; </p>
+            <p>&nbsp;&lt;ign-data-table-container [dataSource]="dataSource"&gt;</p>
+            <p>&nbsp;&nbsp;&lt;mat-table #table [dataSource]="dataSource"&gt;</p>
+            
+            <p>&nbsp;&nbsp; &lt;!--- Note that these columns can be defined in any order.</p>
+            <p>&nbsp;&nbsp; The actual rendered columns are set as a property on the row definition" --&gt;</p>
+            
+            <p>&nbsp;&nbsp; &lt;!-- Name Column --&gt;</p>
+            <p>&nbsp;&nbsp; &lt;ng-container matColumnDef="name"&gt;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;mat-header-cell *matHeaderCellDef&gt; Name &lt;/mat-header-cell&gt;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;mat-cell *matCellDef="let element"&gt; element.name &lt;/mat-cell&gt;</p>
+            <p>&nbsp;&nbsp; &lt;/ng-container&gt;</p>
+            
+            <p>&nbsp;&nbsp; &lt;!-- Position Column --&gt;</p>
+            <p>&nbsp;&nbsp; &lt;ng-container matColumnDef="position"&gt;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;mat-header-cell *matHeaderCellDef&gt; Position &lt;/mat-header-cell&gt;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;mat-cell *matCellDef="let element"&gt; element.position &lt;/mat-cell&gt;</p>
+            <p>&nbsp;&nbsp; &lt;/ng-container&gt;</p>
+            
+            <p>&nbsp;&nbsp; &lt;!-- Type Column --&gt;</p>
+            <p>&nbsp;&nbsp; &lt;ng-container matColumnDef="type"&gt;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;mat-header-cell *matHeaderCellDef&gt; Type &lt;/mat-header-cell&gt;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;mat-cell *matCellDef="let element"&gt; element.type &lt;/mat-cell&gt;</p>
+            
+            <p>&nbsp;&nbsp; &lt;mat-header-row *matHeaderRowDef="displayedColumns"&gt;&lt;/mat-header-row&gt;</p>
+            <p>&nbsp;&nbsp; &lt;mat-row *matRowDef="let row; columns: displayedColumns;"&gt;&lt;/mat-row&gt;</p>
+            <p>&nbsp;&nbsp;&lt;/mat-table&gt;</p>
+            <p>&nbsp;&lt;/ign-data-table-container&gt;</p>
+            <p>&lt;/div&gt;</p> 
+            
         </table>
     </div></mat-tab>
 </mat-tab-group>
