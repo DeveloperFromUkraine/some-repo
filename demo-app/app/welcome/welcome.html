@@ -51,7 +51,7 @@
     </section>
     
     <section aria-label="component-body" class="component-b">
-        <div class="stat-card" *ngFor="let build of buildData.testResults">
+        <div class="stat-card-component" *ngFor="let build of buildData.testResults">
             <div class="component-card-title">{{ build.assertionResults[0].ancestorTitles[0] }}</div>
             <div [ngStyle]="{'background-color': componentStatusColor(build)}" class="component-card-status"></div>
         </div>

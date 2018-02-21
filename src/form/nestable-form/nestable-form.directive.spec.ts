@@ -26,7 +26,7 @@ class DirectiveHostComponent {
     }
 }
 
-describe('NestableFormDirective', () => {
+describe('Nestable Form', () => {
     let fixture: ComponentFixture<DirectiveHostComponent>;
     let de: DebugElement;
     let directive: NestableFormDirective;

@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { SelectContainerComponent } from "../index";
 import { ComponentTest } from "../../test/test-bed/component";
 
-describe('SelectContainerComponent', () => {
+describe('Select Container', () => {
     let fixture: ComponentFixture<SelectContainerComponent>;
 
     beforeEach(async () => {

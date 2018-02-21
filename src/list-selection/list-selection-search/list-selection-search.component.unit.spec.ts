@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-describe('ListSelectionSearchComponent', () => {
+describe('List Selection Search', () => {
     let component: ListSelectionSearchComponent;
     let spy;
 

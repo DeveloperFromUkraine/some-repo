@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ComponentTest } from "../../test/test-bed/component";
 
 
-describe('CenterComponent', () => {
+describe('Center', () => {
     let fixture: ComponentFixture<CenterComponent>;
 
     beforeEach(async () => {

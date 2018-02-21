@@ -20,7 +20,7 @@ class DirectiveHostComponent {
     sizeLarge: boolean;
 }
 
-describe('SizingLargeDirective', () => {
+describe('Form Sizing Large', () => {
     let fixture: ComponentFixture<DirectiveHostComponent>;
     let component: DirectiveHostComponent;
     let de: DebugElement[];

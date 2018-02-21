@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SideNavListItemComponent should match snapshot 1`] = `
+exports[`Side Nav List Item should match snapshot 1`] = `
 <ign-sidenav-list-item
   description={[Function String]}
   icon={[Function String]}

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FooterComponent should match snapshot 1`] = `
+exports[`Footer should match snapshot 1`] = `
 <ign-footer>
   <footer
     class="footer"

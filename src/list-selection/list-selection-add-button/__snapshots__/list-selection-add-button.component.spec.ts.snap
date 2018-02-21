@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ListSelectionAddButtonComponent should match snapshot 1`] = `
+exports[`List Selection Add Button should match snapshot 1`] = `
 <ign-list-selection-add-button>
   <a
     mat-fab=""

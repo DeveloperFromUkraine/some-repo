@@ -4,7 +4,7 @@ import { DebugElement } from '@angular/core/src/debug/debug_node';
 import { ComponentTest } from '../../../test/test-bed/component';
 import { By } from '@angular/platform-browser';
 
-describe('SideNavHeaderComponent', () => {
+describe('Side Nav Header', () => {
     let fixture: ComponentFixture<SideNavHeaderComponent>;
     let component: SideNavHeaderComponent;
     let de: DebugElement;

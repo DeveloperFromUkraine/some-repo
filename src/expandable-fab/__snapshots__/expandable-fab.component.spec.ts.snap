@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ExpandableFabComponent should match snapshot 1`] = `
+exports[`Expandable Fab should match snapshot 1`] = `
 <ign-expandable-fab
   activeClass="null"
   btns={[Function QueryList]}

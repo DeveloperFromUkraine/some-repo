@@ -15,7 +15,7 @@ class DirectiveHostComponent {
 
 }
 
-describe('SizingFullDirective', () => {
+describe('Form Sizing Full', () => {
     let fixture: ComponentFixture<DirectiveHostComponent>;
     let de: DebugElement[];
     const maxWidth: string = '100%';

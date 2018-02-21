@@ -3,7 +3,7 @@ import { ListContentPanelComponent } from "./index";
 import { ComponentTest } from "../../../test/test-bed/component";
 
 
-describe('ListContentPanelComponent', () => {
+describe('List Content Panel', () => {
     let fixture: ComponentFixture<ListContentPanelComponent>;
 
     beforeEach(async () => {

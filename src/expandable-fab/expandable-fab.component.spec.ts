@@ -5,7 +5,7 @@ import { MatIconModule } from '@angular/material';
 import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
-describe('ExpandableFabComponent', () => {
+describe('Expandable Fab', () => {
     let fixture: ComponentFixture<ExpandableFabComponent>;
     let component: ExpandableFabComponent;
     let de: DebugElement;

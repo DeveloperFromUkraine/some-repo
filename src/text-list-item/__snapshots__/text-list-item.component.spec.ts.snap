@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextListItemComponent should match snapshot 1`] = `
+exports[`Text List Item should match snapshot 1`] = `
 <ign-text-list-item>
   <mat-list-item
     class="mat-list-item"

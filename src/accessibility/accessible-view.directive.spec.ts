@@ -18,7 +18,7 @@ class DirectiveHostComponent {
 
 }
 
-describe('AccessibleViewDirective', () => {
+describe('Accessible View', () => {
     let fixture: ComponentFixture<DirectiveHostComponent>;
     let de: DebugElement[];
     let ne: HTMLElement;

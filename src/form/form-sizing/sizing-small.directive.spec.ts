@@ -14,7 +14,7 @@ import { DebugElement } from '@angular/core';
 class DirectiveHostComponent {
 }
 
-describe('SizingSmallDirective', () => {
+describe('Form Sizing Small', () => {
     let fixture: ComponentFixture<DirectiveHostComponent>;
     let de: DebugElement[];
     const maxWidth: string = '192px';

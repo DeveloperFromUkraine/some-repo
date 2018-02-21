@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { ListItemPrimaryTextComponent } from "../index";
 import { ComponentTest } from "../../test/test-bed/component";
 
-describe('ListItemPrimaryTextComponent', () => {
+describe('List Item Primary Text', () => {
     let fixture: ComponentFixture<ListItemPrimaryTextComponent>;
 
     beforeEach(async () => {

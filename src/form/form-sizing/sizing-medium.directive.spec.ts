@@ -21,7 +21,7 @@ class DirectiveHostComponent {
     sizeMedium: boolean;
 }
 
-describe('SizingMediumDirective', () => {
+describe('Form Sizing Medium', () => {
     let fixture: ComponentFixture<DirectiveHostComponent>;
     let component: DirectiveHostComponent;
     let de: DebugElement[];

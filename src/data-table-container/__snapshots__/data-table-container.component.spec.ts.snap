@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DataTableContainerComponent should match snapshot 1`] = `
+exports[`Data Table Container should match snapshot 1`] = `
 <ign-data-table-container
   dataSource={[Function MatTableDataSource]}
   paginator={[Function MatPaginator]}

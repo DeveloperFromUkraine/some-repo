@@ -5,7 +5,7 @@ interface IFilterProvider {
     filterInput$: Observable<string>;
 }
 
-describe('ListFilterPipe', () => {
+describe('List Filter', () => {
     let valueArray: string[] = ['1', '2', '3'];
     let pipe: ListFilterPipe;
     let values$;

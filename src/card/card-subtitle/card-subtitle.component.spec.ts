@@ -3,7 +3,7 @@ import { CardSubtitleComponent } from "./index";
 import { ComponentTest } from "../../../test/test-bed/component";
 
 
-describe('CardSubtitleComponent', () => {
+describe('Card Subtitle', () => {
     let fixture: ComponentFixture<CardSubtitleComponent>;
 
     beforeEach(async () => {

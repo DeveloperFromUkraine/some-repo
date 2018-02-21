@@ -5,7 +5,7 @@ import { MatIconModule, MatRippleModule } from '@angular/material';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-describe('HubCardComponent', () => {
+describe('Hub Card', () => {
     let fixture: ComponentFixture<HubCardComponent>;
     let component: HubCardComponent;
     let de: DebugElement;

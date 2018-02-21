@@ -25,6 +25,17 @@ and (max-width: 970px) {
     max-width: $width;
 }
 
+@mixin stat-card-shell($height, $width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    height: $height;
+    width: $width;
+    text-decoration: none;
+    box-shadow: 0px 0px 10px 1px rgb(119, 136, 153);
+}
+
 main {
     max-width: 1250px;
     margin: auto;
@@ -116,14 +127,7 @@ main {
 
 
 .stat-card {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-    height: 40px;
-    width: 260px;
-    text-decoration: none;
-    box-shadow: 0px 0px 10px 1px rgb(119, 136, 153);
+    @include stat-card-shell(40px, 260px);
 }
 
 .stat-card:hover {
@@ -145,6 +149,10 @@ main {
 
 .coverage-card-detail {
     @include stat-card-content-no-background(white, 30%);
+}
+
+.stat-card-component {
+    @include stat-card-shell(60px, 260px);
 }
 
 .component-card-title {

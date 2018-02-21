@@ -6,7 +6,7 @@ import { DebugElement } from "@angular/core";
 import { By } from '@angular/platform-browser';
 
 
-describe('LoadingContainer', () => {
+describe('Loading Container', () => {
     let fixture: ComponentFixture<LoadingContainerComponent>;
     let component: LoadingContainerComponent;
     let de: DebugElement;

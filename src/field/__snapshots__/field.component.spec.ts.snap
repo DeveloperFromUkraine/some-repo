@@ -99,7 +99,7 @@ exports[`EditableFieldInlineComponent should match snapshot 1`] = `
 </ign-editable-field-inline>
 `;
 
-exports[`FieldComponent should match snapshot 1`] = `
+exports[`Field should match snapshot 1`] = `
 <ign-field
   label={[Function String]}
 >

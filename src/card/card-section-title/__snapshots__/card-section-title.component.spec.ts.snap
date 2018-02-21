@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CardSectionTitleComponent should match snapshot 1`] = `
+exports[`Card Section Title should match snapshot 1`] = `
 <ign-card-section-title>
   <h2
     class="ign-card-section-title mat-card-subtitle"

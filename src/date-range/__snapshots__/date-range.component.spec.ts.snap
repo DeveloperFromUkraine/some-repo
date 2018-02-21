@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DateRangeComponent should match snapshot 1`] = `
+exports[`Date Range should match snapshot 1`] = `
 <ign-date-range
   close$={[Function Subject]}
   endDateControlName={[Function String]}

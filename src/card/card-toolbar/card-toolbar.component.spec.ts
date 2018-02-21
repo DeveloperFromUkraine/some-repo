@@ -3,7 +3,7 @@ import { CardToolbarComponent } from "./index";
 import { ComponentTest } from "../../../test/test-bed/component";
 
 
-describe('CardToolbarComponent', () => {
+describe('Card Toolbar', () => {
     let fixture: ComponentFixture<CardToolbarComponent>;
 
     beforeEach(async () => {

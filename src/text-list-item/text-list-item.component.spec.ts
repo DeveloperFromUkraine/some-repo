@@ -5,7 +5,7 @@ import { ComponentTest } from '../../test/test-bed/component';
 import { By } from '@angular/platform-browser';
 import { MatListModule } from '@angular/material';
 
-describe('TextListItemComponent', () => {
+describe('Text List Item', () => {
     let fixture: ComponentFixture<TextListItemComponent>;
     let component: TextListItemComponent;
     let de: DebugElement;

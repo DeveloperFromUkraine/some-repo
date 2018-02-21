@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SideNavHeaderComponent should match snapshot 1`] = `
+exports[`Side Nav Header should match snapshot 1`] = `
 <ign-sidenav-header
   subtitle={[Function String]}
   title={[Function String]}

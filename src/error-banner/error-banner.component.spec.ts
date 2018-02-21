@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { ErrorBannerComponent } from "../index";
 import { ComponentTest } from "../../test/test-bed/component";
 
-describe('ErrorBannerComponent', () => {
+describe('Error Banner', () => {
     let fixture: ComponentFixture<ErrorBannerComponent>;
 
     beforeEach(async () => {
