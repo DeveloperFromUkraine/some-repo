@@ -5,7 +5,7 @@ export interface Coverage {
     statements?: Detail;
 }
 
-interface Detail {
+export interface Detail {
     covered?: number;
     pct?: number;
     skipped?: number;

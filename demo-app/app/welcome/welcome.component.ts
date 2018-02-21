@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Coverage, JestBuild, Branch } from '../models/index';
+import { Coverage, JestBuild, Branch, Detail } from '../models/index';
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
 
@@ -52,5 +52,27 @@ export class WelcomeComponent implements OnInit {
 
     formatString(text: string): string {
         return text.charAt(0) + text.toLowerCase().slice(1);
+    }
+
+    coverageBackgroundColor(detail: Detail): string {
+        if (detail.pct <= 15) {
+            //red
+            return '#DC143C';
+        } else if (detail.pct <= 45) {
+            //orange
+            return '#FFA500';
+        } else if (detail.pct <= 65) {
+            //khaki
+            return '#F0E68C';
+        } else if (detail.pct <= 80) {
+            //olive
+            return '#808000';
+        } else if (detail.pct <= 90) {
+            //light-green
+            return '#90EE90';
+        } else {
+            //green
+            return '#008000';
+        }
     }
 }

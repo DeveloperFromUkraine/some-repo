@@ -5,18 +5,27 @@ and (max-width: 970px) {
 @mixin grid-shell() {
     min-height: 300px;
     min-width: 100%;
-    border: 1px solid black;
 }
 
-@mixin stat-card-content($color) {
-    background-color: $color;
-    color: white;
+@mixin stat-card-content($backgroundColor, $textColor, $width) {
+    background-color: $backgroundColor;
+    color: $textColor;
     font-size: 20px;
     font-weight: bold;
     align-self: stretch;
     flex-grow: 1;
     padding: 10px 5px;
-    max-width: 50%;
+    max-width: $width;
+}
+
+@mixin stat-card-content-no-background($textColor, $width) {
+    color: $textColor;
+    font-size: 20px;
+    font-weight: bold;
+    align-self: stretch;
+    flex-grow: 1;
+    padding: 10px 5px;
+    max-width: $width;
 }
 
 main {
@@ -24,15 +33,15 @@ main {
     margin: auto;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     /* autoprefixer: off */
     grid-template-areas:
-        "build build build"
-        "coverage coverage coverage"
-        "component component component";    
+        "build"
+        "coverage"
+        "component";    
 }
 
 .build {
@@ -62,7 +71,37 @@ main {
 
 .coverage {
     grid-area: coverage;
-    @include grid-shell();
+
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    /*autoprefixer: off */
+    grid-template-areas:
+        "header header header header"
+        "functions lines branches statements";
+}
+
+.coverage-header {
+    grid-area: header;
+}
+
+.coverage-branches {
+    grid-area: branches;
+}
+
+.coverage-functions {
+    grid-area: functions;
+}
+
+.coverage-lines {
+    grid-area: lines;
+}
+
+.coverage-statements {
+    grid-area: statements;
 }
 
 .component {
@@ -70,7 +109,7 @@ main {
     @include grid-shell();
 }
 
-.build-card {
+.stat-card {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -78,18 +117,26 @@ main {
     height: 40px;
     width: 260px;
     text-decoration: none;
-    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px 1px rgb(119, 136, 153);
 }
 
-.build-card:hover {
+.stat-card:hover {
     transform: scale(1.1);
     transition-duration: 200ms;
 }
 
 .build-card-branch {
-    @include stat-card-content(black);
+    @include stat-card-content(LightSlateGray, white, 50%);
 }
 
 .build-card-status {
-    @include stat-card-content(green);
+    @include stat-card-content(green, white, 50%);
+}
+
+.coverage-card-title {
+    @include stat-card-content(LightSlateGray, white, 70%);
+}
+
+.coverage-card-detail {
+    @include stat-card-content-no-background(white, 30%);
 }
