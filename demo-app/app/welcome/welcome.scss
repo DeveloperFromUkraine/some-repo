@@ -2,11 +2,6 @@
 and (max-width: 970px) {
 }*/
 
-@mixin grid-shell() {
-    min-height: 300px;
-    min-width: 100%;
-}
-
 @mixin stat-card-content($backgroundColor, $textColor, $width) {
     background-color: $backgroundColor;
     color: $textColor;
@@ -16,6 +11,8 @@ and (max-width: 970px) {
     flex-grow: 1;
     padding: 10px 5px;
     max-width: $width;
+    word-wrap: break-word;
+    overflow: hidden;
 }
 
 @mixin stat-card-content-no-background($textColor, $width) {
@@ -41,7 +38,8 @@ main {
     grid-template-areas:
         "build"
         "coverage"
-        "component";    
+        "component-h"
+        "component-b";    
 }
 
 .build {
@@ -51,8 +49,7 @@ main {
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(2, auto);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-gap: 10px;
     /* autoprefixer: off */
     grid-template-areas: 
         "header header header header"
@@ -76,8 +73,7 @@ main {
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(2, auto);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-gap: 10px;
     /*autoprefixer: off */
     grid-template-areas:
         "header header header header"
@@ -104,10 +100,20 @@ main {
     grid-area: statements;
 }
 
-.component {
-    grid-area: component;
-    @include grid-shell();
+.component-h {
+    grid-area: component-h;
 }
+
+.component-b {
+    grid-area: component-b;
+
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 260px));
+    grid-gap: 10px;
+}
+
+
 
 .stat-card {
     display: flex;
@@ -130,7 +136,7 @@ main {
 }
 
 .build-card-status {
-    @include stat-card-content(green, white, 50%);
+    @include stat-card-content(#008000, white, 50%);
 }
 
 .coverage-card-title {
@@ -139,4 +145,12 @@ main {
 
 .coverage-card-detail {
     @include stat-card-content-no-background(white, 30%);
+}
+
+.component-card-title {
+    @include stat-card-content(LightSlategray, white, 75%);
+}
+
+.component-card-status {
+    @include stat-card-content-no-background(white, 25%);
 }

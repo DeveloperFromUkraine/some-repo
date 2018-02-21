@@ -7,14 +7,14 @@ export interface JestBuild {
     testResults?: TestResults[];
 }
 
-interface SnapShot {
+export interface SnapShot {
     matched?: number;
     unmatched?: number;
     total?: number;
     didUpdate?: boolean;
 }
 
-interface TestResults {
+export interface TestResults {
     assertionResults?: AssertionResults[];
     endTime?: number;
     message?: string;
@@ -24,7 +24,7 @@ interface TestResults {
     summary?: string;
 }
 
-interface AssertionResults {
+export interface AssertionResults {
     ancestorTitles?: string[];
     failureMessages?: string[];
     fullName?: string;

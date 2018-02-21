@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Coverage, JestBuild, Branch, Detail } from '../models/index';
+import { Coverage, JestBuild, Branch, Detail, TestResults } from '../models/index';
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
 
@@ -73,6 +73,14 @@ export class WelcomeComponent implements OnInit {
         } else {
             //green
             return '#008000';
+        }
+    }
+
+    componentStatusColor(build: TestResults): string {
+        if (build.status === 'passed') {
+            return '#008000';
+        } else {
+            return '#DC143C';
         }
     }
 }
