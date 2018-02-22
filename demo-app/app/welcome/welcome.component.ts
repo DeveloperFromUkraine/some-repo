@@ -23,10 +23,13 @@ export class WelcomeComponent implements OnInit {
     masterBranchData: Branch;
     developBranchData: Branch;
 
+    componentList: any[];
+
     constructor(private apollo: Apollo) { }
 
     ngOnInit() {
         this.getServiceInfo();
+        this.buildComponentList();
 
         console.dir(this.coverageData);
         console.dir(this.buildData);
@@ -50,8 +53,17 @@ export class WelcomeComponent implements OnInit {
             });
     }
 
-    formatString(text: string): string {
-        return text.charAt(0) + text.toLowerCase().slice(1);
+    buildComponentList() {
+        this.componentList = this.buildData.testResults;
+        this.componentList
+            .sort((a, b) => {
+                let x = a.assertionResults[0].ancestorTitles[0];
+                let y = b.assertionResults[0].ancestorTitles[0];
+
+                if (x < y) {return -1;}
+                if (x > y) {return 1;}
+                return 0;
+            });
     }
 
     coverageBackgroundColor(detail: Detail): string {

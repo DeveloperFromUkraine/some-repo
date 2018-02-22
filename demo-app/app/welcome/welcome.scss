@@ -36,6 +36,11 @@ and (max-width: 970px) {
     box-shadow: 0px 0px 10px 1px rgb(119, 136, 153);
 }
 
+@mixin transform() {
+    transform: scale(1.1);
+    transition-duration: 200ms;
+}
+
 main {
     max-width: 1250px;
     margin: auto;
@@ -120,7 +125,7 @@ main {
 
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(25%, 260px));
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     grid-gap: 10px;
 }
 
@@ -131,8 +136,7 @@ main {
 }
 
 .stat-card:hover {
-    transform: scale(1.1);
-    transition-duration: 200ms;
+    @include transform();
 }
 
 .build-card-branch {
@@ -153,6 +157,10 @@ main {
 
 .stat-card-component {
     @include stat-card-shell(60px, 260px);
+}
+
+.stat-card-component:hover {
+    @include transform();
 }
 
 .component-card-title {
