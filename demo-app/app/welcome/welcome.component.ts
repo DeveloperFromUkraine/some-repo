@@ -66,6 +66,14 @@ export class WelcomeComponent implements OnInit {
             });
     }
 
+    buildBackgroundColor(data: Branch): string {
+        if (data.status === 'SUCCEEDED') {
+            return 'rgb(80, 158, 47)';
+        } else {
+            return '#DC143C';
+        }
+    }
+
     coverageBackgroundColor(detail: Detail): string {
         if (detail.pct <= 15) {
             //red
@@ -84,13 +92,13 @@ export class WelcomeComponent implements OnInit {
             return '#90EE90';
         } else {
             //green
-            return '#008000';
+            return 'rgb(80, 158, 47)';
         }
     }
 
     componentStatusColor(build: TestResults): string {
         if (build.status === 'passed') {
-            return '#008000';
+            return 'rgb(80, 158, 47)';
         } else {
             return '#DC143C';
         }

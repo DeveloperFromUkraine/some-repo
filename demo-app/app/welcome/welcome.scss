@@ -1,27 +1,23 @@
-/*@media only screen 
-and (max-width: 970px) {
-}*/
+@import '../../styles.scss';
 
-@mixin stat-card-content($backgroundColor, $textColor, $width) {
+@mixin stat-card-content($backgroundColor, $textColor, $width, $fontSize, $padding) {
     background-color: $backgroundColor;
     color: $textColor;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: $fontSize;
     align-self: stretch;
     flex-grow: 1;
-    padding: 10px 5px;
+    padding: $padding;
     max-width: $width;
     word-wrap: break-word;
     overflow: hidden;
 }
 
-@mixin stat-card-content-no-background($textColor, $width) {
+@mixin stat-card-content-no-background($textColor, $width, $fontSize, $padding) {
     color: $textColor;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: $fontSize;
     align-self: stretch;
     flex-grow: 1;
-    padding: 10px 5px;
+    padding: $padding;
     max-width: $width;
 }
 
@@ -29,7 +25,6 @@ and (max-width: 970px) {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
     height: $height;
     width: $width;
     text-decoration: none;
@@ -58,18 +53,37 @@ main {
         "component-b";    
 }
 
-.build {
-    grid-area: build;
+@media only screen and (max-width: 600px) {
+    .build {
+        grid-area: build;
+    
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-gap: 10px;
+        /* autoprefixer: off */
+        grid-template-areas: 
+            "header"
+            "master"
+            "develop";
+    }
+}
 
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(2, auto);
-    grid-gap: 10px;
-    /* autoprefixer: off */
-    grid-template-areas: 
-        "header header header header"
-        ". master develop. ";
+@media only screen and (min-width: 601px) {
+    .build {
+        grid-area: build;
+    
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(2, auto);
+        grid-gap: 10px;
+        /* autoprefixer: off */
+        grid-template-areas: 
+            "header header header header"
+            ". master develop .";
+    }
 }
 
 .build-header {
@@ -82,18 +96,59 @@ main {
     grid-area: develop;
 }
 
-.coverage {
-    grid-area: coverage;
+/* autoprefixer: off */
+@media only screen and (max-width: 600px) {
+    .coverage {
+        grid-area: coverage;
+    
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-gap: 10px;
+        /* autoprefixer: off */
+        grid-template-areas:
+            ". header header ."
+            ". functions functions ."
+            ". lines lines ."
+            ". branches branches ."
+            " . statements statements .";
+    }
+}
 
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(2, auto);
-    grid-gap: 10px;
-    /*autoprefixer: off */
-    grid-template-areas:
-        "header header header header"
-        "functions lines branches statements";
+/* autoprefixer: off */
+@media only screen and (min-width: 601px) {
+    .coverage {
+        grid-area: coverage;
+    
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-gap: 10px;
+        /* autoprefixer: off */
+        grid-template-areas:
+            ". header header ."
+            ". functions lines ."
+            ". branches statements .";
+    }
+}
+
+/* autoprefixer: off */
+@media only screen and (min-width: 1126px) {
+    .coverage {
+        grid-area: coverage;
+    
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(2, auto);
+        grid-gap: 10px;
+        /* autoprefixer: off */
+        grid-template-areas:
+            "header header header header"
+            "functions lines branches statements";
+    }
 }
 
 .coverage-header {
@@ -125,8 +180,8 @@ main {
 
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 15px;
 }
 
 
@@ -140,23 +195,23 @@ main {
 }
 
 .build-card-branch {
-    @include stat-card-content(LightSlateGray, white, 50%);
+    @include stat-card-content(WhiteSmoke, black, 50%, 20px, 10px 5px);
 }
 
 .build-card-status {
-    @include stat-card-content(#008000, white, 50%);
+    @include stat-card-content-no-background(black, 50%, 20px, 10px 5px);
 }
 
 .coverage-card-title {
-    @include stat-card-content(LightSlateGray, white, 70%);
+    @include stat-card-content(WhiteSmoke, black, 70%, 20px, 10px 5px);
 }
 
 .coverage-card-detail {
-    @include stat-card-content-no-background(white, 30%);
+    @include stat-card-content-no-background(black, 30%, 20px, 10px 5px);
 }
 
 .stat-card-component {
-    @include stat-card-shell(60px, 260px);
+    @include stat-card-shell(60px, 300px);
 }
 
 .stat-card-component:hover {
@@ -164,9 +219,9 @@ main {
 }
 
 .component-card-title {
-    @include stat-card-content(LightSlategray, white, 75%);
+    @include stat-card-content(WhiteSmoke, black, 75%, 20px, 20px 5px);
 }
 
 .component-card-status {
-    @include stat-card-content-no-background(white, 25%);
+    @include stat-card-content-no-background(black, 25%, 0px, 0px);
 }
