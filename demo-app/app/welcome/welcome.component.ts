@@ -30,9 +30,6 @@ export class WelcomeComponent implements OnInit {
     ngOnInit() {
         this.getServiceInfo();
         this.buildComponentList();
-
-        console.dir(this.coverageData);
-        console.dir(this.buildData);
     }
 
     getServiceInfo() {
@@ -44,12 +41,8 @@ export class WelcomeComponent implements OnInit {
         })
             .valueChanges
             .subscribe(response => {
-                console.log(response.data.serviceBySlug.branches);
                 this.developBranchData = response.data.serviceBySlug.branches.values[0].builds[0];
                 this.masterBranchData = response.data.serviceBySlug.branches.values[1].builds[0];
-
-                console.dir(this.masterBranchData);
-                console.dir(this.developBranchData);
             });
     }
 
@@ -66,8 +59,8 @@ export class WelcomeComponent implements OnInit {
             });
     }
 
-    buildBackgroundColor(data: Branch): string {
-        if (data.status === 'SUCCEEDED') {
+    buildBackgroundColor(status: string): string {
+        if (status === 'SUCCEEDED') {
             return 'rgb(80, 158, 47)';
         } else {
             return '#DC143C';

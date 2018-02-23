@@ -12,7 +12,7 @@
             <div class="build-card-branch">
                 <p>Master</p>
             </div>
-            <div class="build-card-status" [ngStyle]="{ 'background-color': buildBackgroundColor(masterBranchData) }">
+            <div class="build-card-status" [ngStyle]="{ 'background-color': buildBackgroundColor(masterBranchData?.status) }">
                 <p>{{ masterBranchData?.status.charAt(0) + masterBranchData?.status.toLowerCase().slice(1) }}</p>
             </div>
         </a>
@@ -21,7 +21,7 @@
             <div class="build-card-branch">
                 <p>Develop</p>
             </div>
-            <div class="build-card-status" [ngStyle]="{ 'background-color': buildBackgroundColor(developBranchData) }">
+            <div class="build-card-status" [ngStyle]="{ 'background-color': buildBackgroundColor(developBranchData?.status) }">
                 <p>{{ masterBranchData?.status.charAt(0) + developBranchData?.status.toLowerCase().slice(1) }}</p>
             </div>
         </a>

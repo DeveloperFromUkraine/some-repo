@@ -45,7 +45,6 @@ main {
     grid-template-rows: repeat(3, auto);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    /* autoprefixer: off */
     grid-template-areas:
         "build"
         "coverage"
@@ -53,6 +52,7 @@ main {
         "component-b";    
 }
 
+/* autoprefixer: off */
 @media only screen and (max-width: 600px) {
     .build {
         grid-area: build;
@@ -62,7 +62,6 @@ main {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, auto);
         grid-gap: 10px;
-        /* autoprefixer: off */
         grid-template-areas: 
             "header"
             "master"
@@ -79,7 +78,6 @@ main {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: repeat(2, auto);
         grid-gap: 10px;
-        /* autoprefixer: off */
         grid-template-areas: 
             "header header header header"
             ". master develop .";
@@ -96,27 +94,24 @@ main {
     grid-area: develop;
 }
 
-/* autoprefixer: off */
 @media only screen and (max-width: 600px) {
     .coverage {
         grid-area: coverage;
     
         display: grid;
         justify-items: center;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: repeat(5, auto);
         grid-gap: 10px;
-        /* autoprefixer: off */
         grid-template-areas:
-            ". header header ."
-            ". functions functions ."
-            ". lines lines ."
-            ". branches branches ."
-            " . statements statements .";
+            "header"
+            "functions"
+            "lines"
+            "branches"
+            "statements";
     }
 }
 
-/* autoprefixer: off */
 @media only screen and (min-width: 601px) {
     .coverage {
         grid-area: coverage;
@@ -126,15 +121,13 @@ main {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: repeat(3, auto);
         grid-gap: 10px;
-        /* autoprefixer: off */
         grid-template-areas:
-            ". header header ."
+            "header header header header"
             ". functions lines ."
             ". branches statements .";
     }
 }
 
-/* autoprefixer: off */
 @media only screen and (min-width: 1126px) {
     .coverage {
         grid-area: coverage;
@@ -144,7 +137,6 @@ main {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: repeat(2, auto);
         grid-gap: 10px;
-        /* autoprefixer: off */
         grid-template-areas:
             "header header header header"
             "functions lines branches statements";
