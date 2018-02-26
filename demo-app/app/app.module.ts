@@ -10,6 +10,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 import { IgniteDesignSystemModule } from '../../src';
 import { TestingModule } from './testing/testing.module';
+import { CommonComponentModule } from './common/common-component.module';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
@@ -122,6 +123,7 @@ const routes: Routes = [
         HttpLinkModule,
         IgniteDesignSystemModule,
         TestingModule,
+        CommonComponentModule,
         MarkdownModule,
         DemoModule,
         HttpClientModule,

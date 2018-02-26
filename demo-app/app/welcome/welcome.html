@@ -8,50 +8,19 @@
 <main>
     <section aria-label="build" class="build">
         <ign-center class="build-header"><h1>Build Status</h1></ign-center>
-        <a class="stat-card build-master" [attr.href]="masterBranchData?.concourseUrl" target="_blank">
-            <div class="build-card-branch">
-                <p>Master</p>
-            </div>
-            <div class="build-card-status" [ngStyle]="{ 'background-color': buildBackgroundColor(masterBranchData?.status) }">
-                <p>{{ masterBranchData?.status.charAt(0) + masterBranchData?.status.toLowerCase().slice(1) }}</p>
-            </div>
+        <a class="build-master" [attr.href]="masterBranchData?.concourseUrl" target="_blank">
+            <stat-card title="Master" titleBackground="WhiteSmoke" [detail]="masterBranchData?.status.charAt(0) + masterBranchData?.status.toLowerCase().slice(1)"  [detailBackground]="buildBackgroundColor(masterBranchData?.status)"></stat-card>
         </a>
-
-        <a class="stat-card build-develop" [attr.href]="developBranchData?.concourseUrl" target="_blank">
-            <div class="build-card-branch">
-                <p>Develop</p>
-            </div>
-            <div class="build-card-status" [ngStyle]="{ 'background-color': buildBackgroundColor(developBranchData?.status) }">
-                <p>{{ masterBranchData?.status.charAt(0) + developBranchData?.status.toLowerCase().slice(1) }}</p>
-            </div>
+        <a class="build-develop" [attr.href]="developBranchData?.concourseUrl" target="_blank">
+            <stat-card title="Develop" titleBackground="WhiteSmoke" [detail]="masterBranchData?.status.charAt(0) + developBranchData?.status.toLowerCase().slice(1)" [detailBackground]="buildBackgroundColor(developBranchData?.status)"></stat-card>
         </a>
     </section>
     <section aria-label="coverage" class="coverage">
         <ign-center class="coverage-header"><h1>Coverage</h1></ign-center>
-        <div class="stat-card coverage-functions">
-            <div class="coverage-card-title"><p>Functions</p></div>
-            <div [ngStyle]="{'background-color': coverageBackgroundColor(coverageData?.functions)}" class="coverage-card-detail">
-                <p>{{ coverageData.functions?.pct + '%' }}</p>
-            </div>
-        </div>
-        <div class="stat-card coverage-lines">
-            <div class="coverage-card-title"><p>Lines</p></div>
-            <div [ngStyle]="{'background-color': coverageBackgroundColor(coverageData?.lines)}" class="coverage-card-detail">
-                {{ coverageData.lines?.pct + '%' }}
-            </div>
-        </div>
-        <div class="stat-card coverage-branches">
-            <div class="coverage-card-title"><p>Branches</p></div>
-            <div [ngStyle]="{'background-color': coverageBackgroundColor(coverageData?.branches)}" class="coverage-card-detail">
-                <p>{{ coverageData.branches?.pct + '%' }}</p>
-            </div>
-        </div>
-        <div class="stat-card coverage-statements">
-            <div class="coverage-card-title"><p>Statements</p></div>
-            <div [ngStyle]="{'background-color': coverageBackgroundColor(coverageData?.statements)}" class="coverage-card-detail">
-                <p>{{ coverageData.statements?.pct + '%' }}</p>
-            </div>
-        </div>
+        <stat-card class="coverage-functions" title="Functions" titleWidth="70%" titleBackground="WhiteSmoke" [detail]="coverageData.functions?.pct + '%'" detailWidth="30%" [detailBackground]="coverageBackgroundColor(coverageData?.functions)"></stat-card>
+        <stat-card class="coverage-lines" title="Lines" titleWidth="70%" titleBackground="WhiteSmoke" [detail]="coverageData.lines?.pct + '%'" detailWidth="30%" [detailBackground]="coverageBackgroundColor(coverageData?.lines)"></stat-card>
+        <stat-card class="coverage-branches" title="Branches" titleWidth="70%" titleBackground="WhiteSmoke" [detail]="coverageData.branches?.pct + '%'" detailWidth="30%" [detailBackground]="coverageBackgroundColor(coverageData?.branches)"></stat-card>
+        <stat-card class="coverage-statements" title="Statements" titleWidth="70%" titleBackground="WhiteSmoke" [detail]="coverageData.statements?.pct + '%'" detailWidth="30%" [detailBackground]="coverageBackgroundColor(coverageData?.statements)"></stat-card>
     </section>
     
     <section aria-label="component-header" class="component-h">
@@ -59,10 +28,6 @@
     </section>
     
     <section aria-label="component-body" class="component-b">
-        <div class="stat-card-component" *ngFor="let build of componentList">
-            <div class="component-card-title"><p>{{ build.assertionResults[0].ancestorTitles[0] }}</p></div>
-            <div [ngStyle]="{'background-color': componentStatusColor(build)}" class="component-card-status"></div>
-        </div>
+        <stat-card *ngFor="let build of componentList" height="60px" width="300px" [title]="build.assertionResults[0].ancestorTitles[0]" titleWidth="75%" titleBackground="WhiteSmoke" detailWidth="25%" [detailBackground]="componentStatusColor(build)"></stat-card>
     </section>
 </main>
-
