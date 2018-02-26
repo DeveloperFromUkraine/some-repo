@@ -1,4 +1,21 @@
+%truncate {
+    min-width: 0;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+%no-truncate {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
 .status-container {
+    max-width: 1250px;
+    margin: auto;
+    
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 1fr;
     grid-template-rows: repeat(6, auto);
@@ -84,6 +101,12 @@ and (max-width: 970px) {
 
 .g-sub-image > .author-section {
     grid-area: author;
+
+    align-self: flex-start;
+
+    h3 {
+        margin-top: 5px;
+    }
 }
 
 .g-sub-content {
@@ -91,6 +114,15 @@ and (max-width: 970px) {
     padding-top: 5px;
     word-wrap: break-word;
     overflow: hidden;
+    p {
+        @extend %truncate;
+    }
+}
+
+.g-sub-content:hover {
+    p {
+        @extend %no-truncate;
+    }
 }
 
 .author-section {

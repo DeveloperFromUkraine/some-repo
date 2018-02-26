@@ -9,9 +9,9 @@ main {
     grid-row-gap: 10px;
     grid-template-areas:
         "build"
-        "coverage"
-        "component-h"
-        "component-b";    
+        "coverage";
+        //"component-h"
+        //"component-b";    
 }
 
 /* autoprefixer: off */
