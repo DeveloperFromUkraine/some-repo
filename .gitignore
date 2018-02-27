@@ -37,3 +37,4 @@ dist/*
 # Coverage files
 coverage/lcov-report
 coverage/lcov.info
+coverage/coverage-summary.json
