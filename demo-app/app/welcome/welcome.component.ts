@@ -31,7 +31,9 @@ export class WelcomeComponent implements OnInit {
         this.getServiceInfo();
         this.buildComponentList();
 
+        console.log('Coverage Data');
         console.dir(this.coverageData);
+        console.dir('Build Data');
         console.dir(this.buildData);
         
     }
@@ -48,7 +50,9 @@ export class WelcomeComponent implements OnInit {
                 this.developBranchData = response.data.serviceBySlug.branches.values[0].builds[0];
                 this.masterBranchData = response.data.serviceBySlug.branches.values[1].builds[0];
 
+                console.log('Master Branch Data');
                 console.dir(this.masterBranchData);
+                console.log('Develop Branch Data');
                 console.dir(this.developBranchData);
             });
     }

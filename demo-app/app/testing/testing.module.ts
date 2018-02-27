@@ -11,6 +11,7 @@ import {
     TestTypesComponent,
     StatusComponent
 } from './components/testing';
+import { CommonComponentModule } from "../common/common-component.module";
 
 const routes: Routes = [
     { path: 'aaa', component: AaaComponent },
@@ -49,7 +50,8 @@ import {
         MatCardModule,
         MatToolbarModule,
         MatExpansionModule,
-        MatTabsModule
+        MatTabsModule,
+        CommonComponentModule
     ],
     providers: []
 })

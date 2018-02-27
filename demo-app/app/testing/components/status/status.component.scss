@@ -12,42 +12,56 @@
     overflow: hidden;
 }
 
+p {
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+h1, h2, h3 {
+    word-wrap: break-word;
+    overflow: hidden;
+    padding-top: 5px;
+}
+
 .status-container {
     max-width: 1250px;
     margin: auto;
 
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
-    grid-template-rows: repeat(6, auto);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(7, auto);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     grid-template-areas:
-        "header header header header"
-        "content1 content1 content1 content1"
-        "activity activity activity activity"
-        "content2 content2 content3 content3"
-        "builds builds builds builds"
-        "content4 content4 content4 content4";
+        "header header"
+        "content1 content1"
+        "activity activity"
+        "content2 content3"
+        "builds builds"
+        "content4 content4"
+        "component component";
 }
 
 @media only screen 
 and (max-width: 970px) {
     .status-container {
-        grid-template-columns: 1fr 2fr 2fr 1fr;
-        grid-template-rows: repeat(6, auto);
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, auto);
         grid-column-gap: 10px;
         grid-row-gap: 10px;
         /* autoprefixer: off */
         grid-template-areas:
-            "header header header header"
-            "content1 content1 content1 content1"
-            "activity activity activity activity"
-            "content2 content2 content2 content2"
-            "content3 content3 content3 content3"
-            "builds builds builds builds"
-            "content4 content4 content4 content4";
+            "header"
+            "content1"
+            "activity"
+            "content2"
+            "content3"
+            "builds"
+            "content4"
+            "component";
     }
-}
+} 
 
 .g-header {
     grid-area: header;
@@ -73,75 +87,32 @@ and (max-width: 970px) {
 
 .g-content-two {
     grid-area: content2;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: 
-        "header"
-        "image"
-        "commit";
 
-    min-height: 0;  /* NEW */
-    min-width: 0; 
+    display: flex;
+    flex-direction: column;
 }
 
-.g-sub-header {
-    grid-area: header;
-}
-
-.g-sub-image {
-    grid-area: image;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-        "image author . . . .";
-}
-
-.g-sub-image > .image-section {
-    grid-area: image;
+.g-sub-image {    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 .g-sub-image > .author-section {
-    grid-area: author;
-
     align-self: flex-start;
+    word-wrap: break-word;
+    overflow: hidden;
 
     h3 {
         margin-top: 5px;
     }
 }
 
-.g-sub-content {
-    grid-area: commit;
-    padding-top: 5px;
-    word-wrap: break-word;
-    overflow: hidden;
-    p {
-        @extend %truncate;
-    }
-}
-
-.g-sub-content:hover {
-    p {
-        @extend %no-truncate;
-    }
-}
-
-.author-section {
-    word-wrap: break-word;
-    overflow: hidden;
-}
-
 .g-content-three {
     grid-area: content3;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: 
-        "header"
-        "image"
-        "commit";
+
+    display: flex;
+    flex-direction: column;
 }
 
 .g-header-three {
@@ -162,6 +133,7 @@ and (max-width: 970px) {
     width: 5rem;
     border-radius: 50%;
     padding: 0;
+    margin-right: 5px;
 }
 
 .icon {
@@ -190,14 +162,31 @@ mat-panel-description {
     width: 50%;
 }
 
-p {
-    line-height: 1.5;
-    word-wrap: break-word;
-    overflow: hidden;
+.component-g {
+    grid-area: component;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-h1, h2, h3 {
-    word-wrap: break-word;
-    overflow: hidden;
-    padding-top: 5px;
+.component-body {
+    /*display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap; */
+
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 15px;
+}
+
+.component-g > h4 {
+    margin-top: 0px;
+}
+
+.component-body > mat-expansion-panel {
+    width: 300px;
+    min-height: 40px;
 }

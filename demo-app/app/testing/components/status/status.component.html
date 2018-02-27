@@ -30,47 +30,40 @@
     <h1 class="g-header-two">Recent Activity</h1>
 
     <mat-card class="g-content-two">
-        <h2 class="g-sub-header">Master Branch</h2>
+        <h2>Master Branch</h2>
         <mat-card-content class="g-sub-image">
-            <div class="image-section">
-                <img class="avatar" src="{{ masterBranch?.latestCommit.author.avatarUrl }}" alt="avatar url" />
-            </div>
+            <img class=" image-section avatar" src="{{ masterBranch?.latestCommit.author.avatarUrl }}" alt="avatar url" />
             <div class="author-section">
                 <h3>Author</h3>
                 <p>{{ masterBranch?.latestCommit.author.displayName }}</p>
             </div>
         </mat-card-content>
-        <mat-card-content class="g-sub-content">
-            <h3>Email</h3>
-            <p>
-                {{ masterBranch?.latestCommit.author.emailAddress }}
-            </p>
-            <h3>Commit Message</h3>
-            <p>
-                {{ masterBranch?.latestCommit.message }}
-            </p>
-        </mat-card-content>
+        <h3>Email</h3>
+        <p>
+            {{ masterBranch?.latestCommit.author.emailAddress }}
+        </p>
+        <h3>Commit Message</h3>
+        <p>
+            {{ masterBranch?.latestCommit.message }}
+        </p>
     </mat-card>
 
     <mat-card class="g-content-three">
         <h2 class="g-sub-header">Develop Branch</h2>
         <mat-card-content class="g-sub-image">
-            <div class="image-section">
-                <img class="avatar" src="{{ developBranch?.latestCommit.author.avatarUrl }}" alt="avatar url" />
-            </div>
+            <img class="avatar" src="{{ developBranch?.latestCommit.author.avatarUrl }}" alt="avatar url" />
             <div class="author-section">
                 <h3>Author</h3>
                 <p>{{ developBranch?.latestCommit.author.displayName }}</p>
             </div>
         </mat-card-content>
-        <mat-card-content class="g-sub-content">
-            <h3>Email</h3>
-            <p>
-                {{ developBranch?.latestCommit.author.emailAddress }}</p>
-            <h3>Commit Message</h3>
-            <p>
-                {{ developBranch?.latestCommit.message }}</p>
-        </mat-card-content>
+        <h3>Email</h3>
+        <p>
+            {{ developBranch?.latestCommit.author.emailAddress }}</p>
+        <h3>Commit Message</h3>
+        <p>
+            {{ developBranch?.latestCommit.message }}
+        </p>
     </mat-card>
 
 
@@ -135,6 +128,23 @@
             </mat-tab>
         </mat-tab-group>
     </mat-card>
+
+    <section aria-label="component" class="component-g">
+        <h1>Component Test Details</h1>
+        <h4>Last Run Date: {{ buildData.startTime | date }}</h4>
+        <mat-card class="component-body">
+            <mat-expansion-panel hideToggle="'false'" *ngFor="let build of componentList" [ngStyle]="{'border-right': '5px solid ' + componentStatusColor(build)}">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <h3>{{ build.assertionResults[0].ancestorTitles[0] }}</h3>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+            </mat-expansion-panel>
+            <div>
+                <!--TODO ADD THE CONTENTS OF THE BUILD INTO THIS SECTION-->
+            </div>
+        </mat-card>
+    </section>
 </div>
 
 <ng-template #lastFailure>

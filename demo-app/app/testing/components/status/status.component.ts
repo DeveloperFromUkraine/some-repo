@@ -7,6 +7,9 @@ import gql from 'graphql-tag';
 
 import fetchServiceInfo from '../../../gql/fetchServiceInfo';
 
+import { JestBuild, TestResults } from '../../../models/index';
+const BUILD: any = require('../../../../../test/jest-output.json');
+
 @Component({
     templateUrl: './status.component.html',
     styleUrls: ['./status.component.scss']
@@ -18,12 +21,19 @@ export class StatusComponent implements OnInit {
     masterBranch: Values;
     developBranch: Values;
 
+    buildData: JestBuild = BUILD;
+    componentList: any[];
+
     showTabContent: boolean;
 
     constructor(private apollo: Apollo) { }
 
     ngOnInit() {
+        console.log('Jest Build Data');
+        console.dir(this.buildData);
+
         this.getServiceInfo();
+        this.buildComponentList();
     }
 
     getServiceInfo() {
@@ -48,6 +58,27 @@ export class StatusComponent implements OnInit {
                     }
                 }
             });
+    }
+
+    buildComponentList() {
+        this.componentList = this.buildData.testResults;
+        this.componentList
+            .sort((a, b) => {
+                let x = a.assertionResults[0].ancestorTitles[0];
+                let y = b.assertionResults[0].ancestorTitles[0];
+
+                if (x < y) {return -1;}
+                if (x > y) {return 1;}
+                return 0;
+            });
+    }
+
+    componentStatusColor(build: TestResults): string {
+        if (build.status === 'passed') {
+            return 'rgb(80, 158, 47)';
+        } else {
+            return '#DC143C';
+        }
     }
 
     /**

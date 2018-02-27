@@ -5,6 +5,7 @@ export interface JestBuild {
     failedTests?: number;
     snapshot?: SnapShot;
     testResults?: TestResults[];
+    startTime: Date;
 }
 
 export interface SnapShot {
