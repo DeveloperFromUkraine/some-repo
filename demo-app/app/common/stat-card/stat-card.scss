@@ -24,7 +24,7 @@
 
 .stat-card:hover {
     transform: scale(1.1);
-    transition-duration: 200ms;
+    transition-duration: 250ms;
 
     .stat-card-title > p {
         @extend %no-truncate;
