@@ -14,27 +14,15 @@
 
 p {
     line-height: 1.5;
-    word-wrap: break-word;
-    overflow: hidden;
-}
-
-h1, h2, h3 {
-    word-wrap: break-word;
-    overflow: hidden;
-    padding-top: 5px;
-}
-
-.status-container {
-    margin: auto;
-    
-    display: grid;
 }
 
 @media only screen 
 and (min-width: 971px) {
     .status-container {
         max-width: 1250px;
-        
+        margin: auto;
+    
+        display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(7, auto);
         grid-column-gap: 10px;
@@ -60,6 +48,9 @@ and (min-width: 971px) {
 @media only screen 
 and (max-width: 970px) {
     .status-container {
+        margin: auto;
+    
+        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(8, auto);
         grid-column-gap: 10px;
@@ -93,6 +84,8 @@ and (max-width: 970px) {
 
 .g-content-one {
     grid-area: content1;
+
+    @extend %no-truncate;
 }
 
 .g-header-two {
