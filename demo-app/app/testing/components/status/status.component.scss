@@ -25,22 +25,36 @@ h1, h2, h3 {
 }
 
 .status-container {
-    max-width: 1250px;
     margin: auto;
-
+    
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(7, auto);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    grid-template-areas:
-        "header header"
-        "content1 content1"
-        "activity activity"
-        "content2 content3"
-        "builds builds"
-        "content4 content4"
-        "component component";
+}
+
+@media only screen 
+and (min-width: 971px) {
+    .status-container {
+        max-width: 1250px;
+        
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(7, auto);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        /* autoprefixer: off */
+        grid-template-areas:
+            "header header"
+            "content1 content1"
+            "activity activity"
+            "content2 content3"
+            "builds builds"
+            "content4 content4"
+            "component component";
+    }
+
+    .component-body > mat-expansion-panel {
+        width: 750px;
+        min-height: 40px;
+    }
+    
 }
 
 @media only screen 
@@ -60,6 +74,11 @@ and (max-width: 970px) {
             "builds"
             "content4"
             "component";
+    }
+
+    .component-body > mat-expansion-panel {
+        width: 400px;
+        min-height: 40px;
     }
 } 
 
@@ -90,6 +109,8 @@ and (max-width: 970px) {
 
     display: flex;
     flex-direction: column;
+
+    @extend %no-truncate;
 }
 
 .g-sub-image {    
@@ -99,9 +120,7 @@ and (max-width: 970px) {
 }
 
 .g-sub-image > .author-section {
-    align-self: flex-start;
-    word-wrap: break-word;
-    overflow: hidden;
+    @extend %no-truncate;
 
     h3 {
         margin-top: 5px;
@@ -113,6 +132,8 @@ and (max-width: 970px) {
 
     display: flex;
     flex-direction: column;
+
+    @extend %no-truncate;
 }
 
 .g-header-three {
@@ -178,7 +199,7 @@ mat-panel-description {
 
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(1000px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
     grid-gap: 15px;
 }
 
@@ -186,13 +207,4 @@ mat-panel-description {
     margin-top: 0px;
 }
 
-.component-body > mat-expansion-panel {
-    width: 1000px;
-    min-height: 40px;
 
-}
-
-#component-test-case {
-    display: flex;
-    flex-direction: column;
-}

@@ -139,7 +139,7 @@
                         <h2>{{ build.assertionResults[0]?.ancestorTitles[0] }}</h2>
                     </mat-panel-title>
                 </mat-expansion-panel-header>
-                <div id="component-test-case" *ngFor="let test of build.assertionResults">
+                <div *ngFor="let test of build.assertionResults">
                     <h3>Test Case</h3>
                     <p>{{ test?.title }}</p>
                     <h3>Status</h3>
