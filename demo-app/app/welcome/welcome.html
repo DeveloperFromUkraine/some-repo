@@ -22,12 +22,4 @@
         <stat-card class="coverage-branches" title="Branches" titleWidth="70%" titleBackground="WhiteSmoke" [detail]="coverageData.branches?.pct + '%'" detailWidth="30%" [detailBackground]="coverageBackgroundColor(coverageData?.branches)"></stat-card>
         <stat-card class="coverage-statements" title="Statements" titleWidth="70%" titleBackground="WhiteSmoke" [detail]="coverageData.statements?.pct + '%'" detailWidth="30%" [detailBackground]="coverageBackgroundColor(coverageData?.statements)"></stat-card>
     </section>
-    
-    <!--<section aria-label="component-header" class="component-h">
-        <ign-center><h1>Component Statuses</h1></ign-center>
-    </section>
-    
-    <section aria-label="component-body" class="component-b">
-        <stat-card *ngFor="let build of componentList" height="60px" width="300px" [title]="build.assertionResults[0].ancestorTitles[0]" titleWidth="75%" titleBackground="WhiteSmoke" detailWidth="25%" [detailBackground]="componentStatusColor(build)"></stat-card>
-    </section> -->
 </main>
