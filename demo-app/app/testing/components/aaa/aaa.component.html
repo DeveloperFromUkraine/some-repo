@@ -13,17 +13,17 @@
 
     <mat-card class='code-block-card'>
         <pre>
-            <code class="code-block">
-it('should call closeDrawer when click event emitted', () => {{ '{' }}
-    //Arrange
-    de = fixture.debugElement.query(By.css('.close-icon'));
+            <code class="code-block line">
+it(<span class="string">'should call closeDrawer when click event emitted'</span>, () => {{ '{' }}
+    <span class="comment">//Arrange</span>
+    de = fixture.debugElement.query(By.css(<span class="string">'.close-icon'</span>));
     ne = de.nativeElement;
-    jest.spyOn(component, 'closeDrawer');
+    <span class="keyword">jest</span>.spyOn(component, <span class="string">'closeDrawer'</span>);
     
-    //Act
-    ne.dispatchEvent(new Event('click'));
+    <span class="comment">//Act</span>
+    ne.dispatchEvent(<span class="keyword">new</span> Event(<span class="string">'click'</span>));
 
-    //Assert
+    <span class="comment">//Assert</span>
     expect(component.closeDrawer).toHaveBeenCalled();
 });
             </code>

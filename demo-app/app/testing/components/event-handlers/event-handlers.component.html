@@ -5,13 +5,13 @@
     <h2>1. Trigger Event Handler on DebugElement</h2>
     <mat-card class='code-block-card'>
         <pre>
-            <code class="code-block">
-it('should emit clicked event', () => {{ '{' }}
-    de = fixture.debugElement.query(By.css('a'));
-    let spy = jest.fn();
+            <code class="code-block line">
+it(<span class="string">'should emit clicked event'</span>, () => {{ '{' }}
+    de = fixture.debugElement.query(By.css(<span class="string">'a'</span>));
+    <span class="keyword">let</span> spy = jest.fn();
 
     component.clicked.subscribe(spy);
-    de.triggerEventHandler('click', null);
+    de.triggerEventHandler(<span class="string">'click'</span>, <span class="keyword">null</span>);
     fixture.detectChanges();
 
     expect(spy).toHaveBeenCalled();
@@ -24,14 +24,14 @@ it('should emit clicked event', () => {{ '{' }}
     
     <mat-card class='code-block-card'>
         <pre>
-            <code class="code-block">
-it('should emit clicked event', () => {{ '{' }}
-    de = fixture.debugElement.query(By.css('a'));
+            <code class="code-block line">
+it(<span class="string">'should emit clicked event'</span>, () => {{ '{' }}
+    de = fixture.debugElement.query(By.css(<span class="string">'a'</span>));
     ne = de.nativeElement;
-    let spy = jest.fn();
+    <span class="keyword">let</span> spy = jest.fn();
 
     component.clicked.subscribe(spy);
-    ne.dispatchEvent(new Event('click'));
+    ne.dispatchEvent(<span class="keyword">new</span> Event(<span class="string">'click'</span>));
     fixture.detectChanges();
 
     expect(spy).toHaveBeenCalled();
