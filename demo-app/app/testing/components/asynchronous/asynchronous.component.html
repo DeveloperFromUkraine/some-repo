@@ -7,15 +7,15 @@
     <p>b. Assert inside the callback block.</p>
     <mat-card class='code-block-card'>
         <pre>
-            <code class="code-block">
-it('should set endDate html element', async (() => {{ '{' }}
-    let de = fixture.debugElement.query(By.css('#end-date-input'));
-    let ne: HTMLInputElement = de.nativeElement;
+            <code class="code-block line">
+<span class="keyword">it</span>(<span class="string">'should set endDate html element'</span>, <span class="keyword">async</span> (() => {{ '{' }}
+    <span class="keyword">let</span> de = fixture.debugElement.query(By.css('#end-date-input'));
+    <span class="keyword">let</span> ne: HTMLInputElement = de.nativeElement;
 
-    component.endDate = '2019-12-12';
+    component.endDate = <span class="string">'2019-12-12'</span>;
     fixture.detectChanges();
 
-    fixture.whenStable().then(() => {{ '{' }}
+    fixture.whenStable().<span class="keyword">then</span>(() => {{ '{' }}
         expect(ne.value).toEqual(component.endDate);
     });
 }));
@@ -28,12 +28,12 @@ it('should set endDate html element', async (() => {{ '{' }}
     <p>b. tick(100) would execute any asynchronous tasks that would occur within 100ms.</p>
     <mat-card class='code-block-card'>
         <pre>
-            <code class="code-block">
-it('should set endDate html element', fakeAsync (() => {{ '{' }}
-    let de = fixture.debugElement.query(By.css('#end-date-input'));
-    let ne: HTMLInputElement = de.nativeElement;
+            <code class="code-block line">
+<span class="keyword">it</span>(<span class="string">'should set endDate html element'</span>, <span class="keyword">fakeAsync</span> (() => {{ '{' }}
+    <span class="keyword">let</span> de = fixture.debugElement.query(<span class="keyword">By</span>.css(<span class="string">'#end-date-input'</span>));
+    <span class="keyword">let</span> ne: HTMLInputElement = de.nativeElement;
 
-    component.endDate = '2019-12-12';
+    component.endDate = <span class="string">'2019-12-12'</span>;
     fixture.detectChanges();
     tick();
 
@@ -49,12 +49,12 @@ it('should set endDate html element', fakeAsync (() => {{ '{' }}
 
     <mat-card class='code-block-card'>
         <pre>
-            <code class="code-block">
-it('should return the edited unit data', fakeAsync(() => {{ '{' }}
-    let data = {{ '{' }}};
-    let dialogRef = this.dialog.open(Component, {{ '{' }}data: data});
-    let spy = jest.fn();
-    let returnData = {{ '{' }}
+            <code class="code-block line">
+<span class="keyword">it</span>(<span class="string">'should return the edited unit data'</span>, <span class="keyword">fakeAsync</span>,(() => {{ '{' }}
+    <span class="keyword">let</span> data = {{ '{' }}};
+    <span class="keyword">let</span> dialogRef = <span class="keyword">this</span>.dialog.open(Component, {{ '{' }}data: data});
+    <span class="keyword">let</span> spy = jest.fn();
+    <span class="keyword">let</span> returnData = {{ '{' }}
         data: data
     };
     dialogRef.afterClosed().subscribe(spy);
@@ -75,13 +75,13 @@ it('should return the edited unit data', fakeAsync(() => {{ '{' }}
 
     <mat-card class='code-block-card'>
         <pre>
-            <code class="code-block">
-it('should set endDate html element', async () => {{ '{' }}
-    let de = fixture.debugElement.query(By.css('#end-date-input'));
-    let ne: HTMLInputElement = de.nativeElement;
+            <code class="code-block line">
+it(<span class="string">'should set endDate html element'</span>, <span class="keyword">async</span> () => {{ '{' }}
+    <span class="keyword">let</span> de = fixture.debugElement.query(By.css(<span class="string">'#end-date-input'</span>));
+    <span class="keyword">let</span> ne: HTMLInputElement = de.nativeElement;
 
-    component.endDate = '20190-12-12';
-    await fixture.detectChanges();
+    component.endDate = <span class="string">'20190-12-12'</span>;
+    <span class="keyword">await</span> fixture.detectChanges();
 
     expect(ne.value).toEqual(component.endDate);
 });
