@@ -7,18 +7,20 @@
     Material Design Radio Button</a>
     and <a href="https://material.angular.io/components/radio/overview"> Angular Material Radio Button</a>.
 </p>
-<h2>Sample</h2>
+<h2 id="randomID">Sample</h2>
 <mat-tab-group>
     <mat-tab label="Component Sample"><div class="tab-height">
         <mat-radio-group class="example-radio-group" [(ngModel)]="rowOfRadioButtons">
-            <mat-radio-button class="example-radio-button" *ngFor="let button of buttons" [value]="button">
-                {{button}}
+            <mat-radio-button class="example-radio-button" *ngFor="let button of buttons" [value]="button" aria-describedby="randomID" title = "Sample">
+                {{button}} 
+                &nbsp;
             </mat-radio-button>
         </mat-radio-group></div></mat-tab>
     <mat-tab label="HTML"><div class="tab-height">
         <table style="width:100%">
+            <p> &lt;h2 id = "randomID"&gt;&lt;/h2&gt;</p>
             <p> &lt;mat-radio-group class="example-radio-group" [(ngModel)]="rowOfRadioButtons"&gt;</p>
-            <p> &nbsp;&nbsp;&lt;mat-radio-button class="example-radio-button" *ngFor="let button of buttons" [value]="button"&gt;</p>
+            <p> &nbsp;&nbsp;&lt;mat-radio-button class="example-radio-button" *ngFor="let button of buttons" [value]="button" aria-describedby="randomID" title = "Sample"&gt;</p>
             <p>{{button}} &lt;/mat-radio-button&gt;</p>
             <p> &lt;/mat-radio-group&gt;</p>
         </table></div>
@@ -28,6 +30,7 @@
             <p>rowOfRadioButtons: string;</p>
             <p>&nbsp;buttons = [</p>
             <p>&nbsp;&nbsp; 'I AM A BUTTON',</p>
+            <p>&nbsp;&nbsp; 'I AM ANOTHER BUTTON',</p>
             <p>&nbsp; ];</p>
         </table>
     </div></mat-tab>
