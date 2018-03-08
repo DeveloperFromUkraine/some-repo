@@ -17,21 +17,12 @@ exports[`Hub Card should match snapshot 1`] = `
     class="card-container mat-ripple"
     da="button"
     matripple=""
-<<<<<<< HEAD
-    role="button"
-    tabindex="0"
-    ng-reflect-unbounded="false"
-    ng-reflect-centered="false"
-    ng-reflect-radius="380"
-    ng-reflect-speed-factor="0.5"
-=======
     ng-reflect-centered="false"
     ng-reflect-radius="380"
     ng-reflect-speed-factor="0.5"
     ng-reflect-unbounded="false"
     role="button"
     tabindex="0"
->>>>>>> develop
   >
     
     
