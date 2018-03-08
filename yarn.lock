@@ -2,73 +2,44 @@
 # yarn lockfile v1
 
 
-<<<<<<< HEAD
 "@angular-devkit/build-optimizer@0.3.2":
   version "0.3.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular-devkit/build-optimizer/-/build-optimizer-0.3.2.tgz#77d4d1e4fcd09575f0200e2d6d21c1a3f995096f"
-=======
-"@angular-devkit/build-optimizer@0.3.1":
-  version "0.3.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular-devkit/build-optimizer/-/build-optimizer-0.3.1.tgz#6a26a46c58858c7b67833c6d8a81198fa17d23e7"
->>>>>>> develop
   dependencies:
     loader-utils "^1.1.0"
     source-map "^0.5.6"
     typescript "~2.6.2"
     webpack-sources "^1.0.1"
 
-<<<<<<< HEAD
 "@angular-devkit/core@0.3.2":
   version "0.3.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular-devkit/core/-/core-0.3.2.tgz#b6fd6aa2e4f4ac3c39478198ba91a53d4c0f88d5"
-=======
-"@angular-devkit/core@0.3.1":
-  version "0.3.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular-devkit/core/-/core-0.3.1.tgz#6aeb990dec92d06360597928748aeeedc21afdde"
->>>>>>> develop
   dependencies:
     ajv "~5.5.1"
     chokidar "^1.7.0"
     rxjs "^5.5.6"
     source-map "^0.5.6"
 
-<<<<<<< HEAD
 "@angular-devkit/schematics@0.3.2":
   version "0.3.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular-devkit/schematics/-/schematics-0.3.2.tgz#09a2268fad61f4f956f42db87913b8748c512a78"
-=======
-"@angular-devkit/schematics@0.3.1":
-  version "0.3.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular-devkit/schematics/-/schematics-0.3.1.tgz#eb40ca260681f4f420ca8ed41f754fb3ea689f81"
->>>>>>> develop
   dependencies:
     "@ngtools/json-schema" "^1.1.0"
     rxjs "^5.5.6"
 
 "@angular/animations@^5.0.0":
-<<<<<<< HEAD
   version "5.2.6"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/animations/-/animations-5.2.6.tgz#433aace8929ce362762dcccdb5044c3945a194bd"
-=======
-  version "5.2.5"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/animations/-/animations-5.2.5.tgz#3e72184321c4979305619c74902b8be92d76db70"
->>>>>>> develop
   dependencies:
     tslib "^1.7.1"
 
 "@angular/cdk@^5.0.0-rc0":
-<<<<<<< HEAD
   version "5.2.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/cdk/-/cdk-5.2.2.tgz#5a53929e3a4ce4d0166d6319611d2035454bb778"
-=======
-  version "5.2.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/cdk/-/cdk-5.2.1.tgz#11500502deeaf42f88f92ca7d78d9a7642b07761"
->>>>>>> develop
   dependencies:
     tslib "^1.7.1"
 
 "@angular/cli@^1.6.1":
-<<<<<<< HEAD
   version "1.7.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/cli/-/cli-1.7.1.tgz#3a9d0b8314d4c54226f941beeb53071385c294e0"
   dependencies:
@@ -80,18 +51,6 @@
     "@schematics/angular" "0.3.2"
     "@schematics/package-update" "0.3.2"
     ajv "^6.1.1"
-=======
-  version "1.7.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/cli/-/cli-1.7.0.tgz#63c56e6d36d57bcd9d9d9425bd806f590f518211"
-  dependencies:
-    "@angular-devkit/build-optimizer" "0.3.1"
-    "@angular-devkit/core" "0.3.1"
-    "@angular-devkit/schematics" "0.3.1"
-    "@ngtools/json-schema" "1.2.0"
-    "@ngtools/webpack" "1.10.0"
-    "@schematics/angular" "0.3.1"
-    "@schematics/package-update" "0.3.1"
->>>>>>> develop
     autoprefixer "^7.2.3"
     cache-loader "^1.2.0"
     chalk "~2.2.0"
@@ -146,118 +105,65 @@
     node-sass "^4.7.2"
 
 "@angular/common@^5.0.0":
-<<<<<<< HEAD
   version "5.2.6"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/common/-/common-5.2.6.tgz#0c6771739f1407eae0533e82c3ee42425badd489"
-=======
-  version "5.2.5"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/common/-/common-5.2.5.tgz#08dd636fa46077d047066b13a1aae494066f6c55"
->>>>>>> develop
   dependencies:
     tslib "^1.7.1"
 
 "@angular/compiler-cli@^5.0.0":
-<<<<<<< HEAD
   version "5.2.6"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/compiler-cli/-/compiler-cli-5.2.6.tgz#f60fccabaf8d09641aada8c112a6e4f336f8412d"
-=======
-  version "5.2.5"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/compiler-cli/-/compiler-cli-5.2.5.tgz#b1988bb2c0a956e7fc163acf8c7d794a07a88d08"
->>>>>>> develop
   dependencies:
     chokidar "^1.4.2"
     minimist "^1.2.0"
     reflect-metadata "^0.1.2"
-<<<<<<< HEAD
     tsickle "^0.27.2"
 
 "@angular/compiler@^5.0.0":
   version "5.2.6"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/compiler/-/compiler-5.2.6.tgz#0abf72b46c401688342057e3fb7cd59fef0a5ab1"
-=======
-    tsickle "^0.26.0"
-
-"@angular/compiler@^5.0.0":
-  version "5.2.5"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/compiler/-/compiler-5.2.5.tgz#5e3b511906048a579fcd007aba72911472e5aa28"
->>>>>>> develop
   dependencies:
     tslib "^1.7.1"
 
 "@angular/core@^5.0.0":
-<<<<<<< HEAD
   version "5.2.6"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/core/-/core-5.2.6.tgz#483fb0b720d563d3ec4d1895878249beafa39b9b"
-=======
-  version "5.2.5"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/core/-/core-5.2.5.tgz#24f9cd75c5b2728f2ddd1869777590ea7177bca9"
->>>>>>> develop
   dependencies:
     tslib "^1.7.1"
 
 "@angular/forms@^5.0.0":
-<<<<<<< HEAD
   version "5.2.6"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/forms/-/forms-5.2.6.tgz#fa3e37a9e97fa3e2b24d8564a66a11d430379bfe"
-=======
-  version "5.2.5"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/forms/-/forms-5.2.5.tgz#2ad7a420c6ef6cd87a34071c5319ec83f7ed56aa"
->>>>>>> develop
   dependencies:
     tslib "^1.7.1"
 
 "@angular/http@^5.0.0":
-<<<<<<< HEAD
   version "5.2.6"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/http/-/http-5.2.6.tgz#4fa92e61b9848f8571c61ae9ad32af27cd71b043"
-=======
-  version "5.2.5"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/http/-/http-5.2.5.tgz#1208256e36f0e486d96d10a733fdc8424ffa16bf"
->>>>>>> develop
   dependencies:
     tslib "^1.7.1"
 
 "@angular/material@^5.0.0-rc0":
-<<<<<<< HEAD
   version "5.2.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/material/-/material-5.2.2.tgz#13822736b7aa034ed0566a6962ee574d299208ee"
-=======
-  version "5.2.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/material/-/material-5.2.1.tgz#c0433edf98904dc35ae15dfa93ede755418843dd"
->>>>>>> develop
   dependencies:
     tslib "^1.7.1"
 
 "@angular/platform-browser-dynamic@^5.0.0":
-<<<<<<< HEAD
   version "5.2.6"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/platform-browser-dynamic/-/platform-browser-dynamic-5.2.6.tgz#8795cca57306b7bdc2bc166d3928bc8eb145125c"
-=======
-  version "5.2.5"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/platform-browser-dynamic/-/platform-browser-dynamic-5.2.5.tgz#b89df410bd953e2a6843325f9ac3c09a10eadaf0"
->>>>>>> develop
   dependencies:
     tslib "^1.7.1"
 
 "@angular/platform-browser@^5.0.0":
-<<<<<<< HEAD
   version "5.2.6"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/platform-browser/-/platform-browser-5.2.6.tgz#ecb8a6d37506ffb3f181ea10696a3c7feaf1674c"
-=======
-  version "5.2.5"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/platform-browser/-/platform-browser-5.2.5.tgz#eae4af2b742fb901d84d6367cd99f9e88102151f"
->>>>>>> develop
   dependencies:
     tslib "^1.7.1"
 
 "@angular/router@^5.0.0":
-<<<<<<< HEAD
   version "5.2.6"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/router/-/router-5.2.6.tgz#513b555d5cc4b206833646468ffb47fa8f5c1c0b"
-=======
-  version "5.2.5"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/router/-/router-5.2.5.tgz#f8f220d5fb85fc10d60fe606b0f2a64732265142"
->>>>>>> develop
   dependencies:
     tslib "^1.7.1"
 
@@ -331,15 +237,9 @@
   version "1.1.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@ngtools/json-schema/-/json-schema-1.1.0.tgz#c3a0c544d62392acc2813a42c8a0dc6f58f86922"
 
-<<<<<<< HEAD
 "@ngtools/webpack@1.10.1":
   version "1.10.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@ngtools/webpack/-/webpack-1.10.1.tgz#0af9de19a9716ce0247b6aad83ba9c5702766a03"
-=======
-"@ngtools/webpack@1.10.0":
-  version "1.10.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@ngtools/webpack/-/webpack-1.10.0.tgz#1e4f60bdba8cdb8aeb93ebb976e63bf175acd279"
->>>>>>> develop
   dependencies:
     chalk "~2.2.0"
     enhanced-resolve "^3.1.0"
@@ -350,7 +250,6 @@
     tree-kill "^1.0.0"
     webpack-sources "^1.1.0"
 
-<<<<<<< HEAD
 "@schematics/angular@0.3.2":
   version "0.3.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@schematics/angular/-/angular-0.3.2.tgz#be209a032a3e4577992d94fbaa14bd4bfde485e2"
@@ -360,17 +259,6 @@
 "@schematics/package-update@0.3.2":
   version "0.3.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@schematics/package-update/-/package-update-0.3.2.tgz#c5a299ceba8b9e56f3e1f804f86f07664ec6e01c"
-=======
-"@schematics/angular@0.3.1":
-  version "0.3.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@schematics/angular/-/angular-0.3.1.tgz#0f5185f5e718145031532fb03d127446e22ee9b8"
-  dependencies:
-    typescript "~2.6.2"
-
-"@schematics/package-update@0.3.1":
-  version "0.3.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@schematics/package-update/-/package-update-0.3.1.tgz#b7662a2aeb724e0f162b916cc0937278a6a1e709"
->>>>>>> develop
   dependencies:
     rxjs "^5.5.6"
     semver "^5.3.0"
@@ -388,11 +276,7 @@
   version "19.2.4"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@types/jest/-/jest-19.2.4.tgz#543651712535962b7dc615e18e4a381fc2687442"
 
-<<<<<<< HEAD
 "@types/node@*", "@types/node@^9.4.6":
-=======
-"@types/node@*":
->>>>>>> develop
   version "9.4.6"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@types/node/-/node-9.4.6.tgz#d8176d864ee48753d053783e4e463aec86b8d82e"
 
@@ -441,11 +325,7 @@ acorn@^4.0.3, acorn@^4.0.4:
   version "4.0.13"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/acorn/-/acorn-4.0.13.tgz#105495ae5361d697bd195c825192e1ad7f253787"
 
-<<<<<<< HEAD
 acorn@^5.0.0, acorn@^5.2.1:
-=======
-acorn@^5.0.0, acorn@^5.2.1, acorn@^5.3.0:
->>>>>>> develop
   version "5.4.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/acorn/-/acorn-5.4.1.tgz#fdc58d9d17f4a4e98d102ded826a9b9759125102"
 
@@ -469,11 +349,7 @@ ajv@^5.0.0, ajv@^5.1.0, ajv@~5.5.1:
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.3.0"
 
-<<<<<<< HEAD
 ajv@^6.1.0, ajv@^6.1.1:
-=======
-ajv@^6.1.0:
->>>>>>> develop
   version "6.1.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ajv/-/ajv-6.1.1.tgz#978d597fbc2b7d0e5a5c3ddeb149a682f2abfa0e"
   dependencies:
@@ -503,13 +379,10 @@ amdefine@>=0.0.4:
 angular-in-memory-web-api@^0.5.2:
   version "0.5.3"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/angular-in-memory-web-api/-/angular-in-memory-web-api-0.5.3.tgz#49ba7b7d19210e14b0dbe62d2e3b63d4b4a29c4a"
-<<<<<<< HEAD
 
 angular2-cookie@^1.2.6:
   version "1.2.6"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/angular2-cookie/-/angular2-cookie-1.2.6.tgz#8fa845531e777adb042fe2f339c0040f6ddbf09d"
-=======
->>>>>>> develop
 
 ansi-escapes@^3.0.0:
   version "3.0.0"
@@ -618,7 +491,6 @@ apollo-client@^2.2.2:
     "@types/async" "2.0.47"
 
 apollo-link-dedup@^1.0.0:
-<<<<<<< HEAD
   version "1.0.8"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-link-dedup/-/apollo-link-dedup-1.0.8.tgz#8c3028cf32557bd040ab6ba8856f38067bdacead"
   dependencies:
@@ -627,24 +499,10 @@ apollo-link-dedup@^1.0.0:
 apollo-link@^1.0.0, apollo-link@^1.2.1:
   version "1.2.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-link/-/apollo-link-1.2.1.tgz#c120b16059f9bd93401b9f72b94d2f80f3f305d2"
-=======
-  version "1.0.6"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-link-dedup/-/apollo-link-dedup-1.0.6.tgz#566ab421a5f6ef41995e2e386f575600d51b1408"
-  dependencies:
-    apollo-link "^1.1.0"
-
-apollo-link@^1.0.0, apollo-link@^1.1.0:
-  version "1.1.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-link/-/apollo-link-1.1.0.tgz#9d573b16387ee0d8e147b1f319e42c8c562f18f7"
->>>>>>> develop
   dependencies:
     "@types/node" "^9.4.6"
     apollo-utilities "^1.0.0"
-<<<<<<< HEAD
     zen-observable-ts "^0.8.6"
-=======
-    zen-observable "^0.7.0"
->>>>>>> develop
 
 apollo-utilities@^1.0.0, apollo-utilities@^1.0.8:
   version "1.0.8"
@@ -1171,13 +1029,10 @@ brorand@^1.0.1:
   version "1.1.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
 
-<<<<<<< HEAD
-=======
 browser-process-hrtime@^0.1.2:
   version "0.1.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/browser-process-hrtime/-/browser-process-hrtime-0.1.2.tgz#425d68a58d3447f02a04aa894187fce8af8b7b8e"
 
->>>>>>> develop
 browser-resolve@^1.11.2:
   version "1.11.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/browser-resolve/-/browser-resolve-1.11.2.tgz#8ff09b0a2c421718a1051c260b32e48f442938ce"
@@ -1239,7 +1094,6 @@ browserify-zlib@^0.2.0:
 browserslist@^2.1.5, browserslist@^2.11.3:
   version "2.11.3"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/browserslist/-/browserslist-2.11.3.tgz#fe36167aed1bbcde4827ebfe71347a2cc70b99b2"
-<<<<<<< HEAD
   dependencies:
     caniuse-lite "^1.0.30000792"
     electron-to-chromium "^1.3.30"
@@ -1247,8 +1101,6 @@ browserslist@^2.1.5, browserslist@^2.11.3:
 bser@1.0.2:
   version "1.0.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/bser/-/bser-1.0.2.tgz#381116970b2a6deea5646dd15dd7278444b56169"
-=======
->>>>>>> develop
   dependencies:
     caniuse-lite "^1.0.30000792"
     electron-to-chromium "^1.3.30"
@@ -1395,11 +1247,7 @@ chalk@^1.0.0, chalk@^1.1.1, chalk@^1.1.3:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
-<<<<<<< HEAD
 chalk@^2.0.0, chalk@^2.3.0, chalk@^2.3.1:
-=======
-chalk@^2.0.0, chalk@^2.0.1, chalk@^2.3.0, chalk@^2.3.1:
->>>>>>> develop
   version "2.3.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/chalk/-/chalk-2.3.1.tgz#523fe2678aec7b04e8041909292fe8b17059b796"
   dependencies:
@@ -2063,13 +1911,10 @@ detect-indent@^4.0.0:
 detect-libc@^1.0.2:
   version "1.0.3"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
-<<<<<<< HEAD
-=======
 
 detect-newline@^2.1.0:
   version "2.1.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/detect-newline/-/detect-newline-2.1.0.tgz#f41f1c10be4b00e87b5f13da680759f2c5bfd3e2"
->>>>>>> develop
 
 detect-node@^2.0.3:
   version "2.0.3"
@@ -2223,13 +2068,8 @@ ejs@^2.5.7:
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ejs/-/ejs-2.5.7.tgz#cc872c168880ae3c7189762fd5ffc00896c9518a"
 
 electron-to-chromium@^1.3.30:
-<<<<<<< HEAD
   version "1.3.34"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/electron-to-chromium/-/electron-to-chromium-1.3.34.tgz#d93498f40391bb0c16a603d8241b9951404157ed"
-=======
-  version "1.3.33"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/electron-to-chromium/-/electron-to-chromium-1.3.33.tgz#bf00703d62a7c65238136578c352d6c5c042a545"
->>>>>>> develop
 
 elliptic@^6.0.0:
   version "6.4.0"
@@ -2516,8 +2356,6 @@ expand-range@^1.8.1:
   dependencies:
     fill-range "^2.1.0"
 
-<<<<<<< HEAD
-=======
 expect@^22.4.0:
   version "22.4.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/expect/-/expect-22.4.0.tgz#371edf1ae15b83b5bf5ec34b42f1584660a36c16"
@@ -2529,7 +2367,6 @@ expect@^22.4.0:
     jest-message-util "^22.4.0"
     jest-regex-util "^22.1.0"
 
->>>>>>> develop
 express@^4.16.2:
   version "4.16.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/express/-/express-4.16.2.tgz#e35c6dfe2d64b7dca0a5cd4f21781be3299e076c"
@@ -2676,13 +2513,8 @@ fb-watchman@^2.0.0:
     bser "^2.0.0"
 
 file-loader@^1.1.5:
-<<<<<<< HEAD
   version "1.1.9"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/file-loader/-/file-loader-1.1.9.tgz#cf152aedbcfb3d67038d0845efb7cf11a96e53de"
-=======
-  version "1.1.7"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/file-loader/-/file-loader-1.1.7.tgz#0a3ad0fe81695feeed6f2dac324fce500c30f0a0"
->>>>>>> develop
   dependencies:
     loader-utils "^1.0.2"
     schema-utils "^0.4.5"
@@ -2876,11 +2708,7 @@ fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
 
-<<<<<<< HEAD
-fsevents@^1.0.0:
-=======
 fsevents@^1.0.0, fsevents@^1.1.1:
->>>>>>> develop
   version "1.1.3"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/fsevents/-/fsevents-1.1.3.tgz#11f82318f5fe7bb2cd22965a108e9306208216d8"
   dependencies:
@@ -3344,11 +3172,7 @@ hpack.js@^2.1.6:
     readable-stream "^2.0.1"
     wbuf "^1.1.0"
 
-<<<<<<< HEAD
-html-encoding-sniffer@^1.0.1:
-=======
 html-encoding-sniffer@^1.0.1, html-encoding-sniffer@^1.0.2:
->>>>>>> develop
   version "1.0.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/html-encoding-sniffer/-/html-encoding-sniffer-1.0.2.tgz#e70d84b94da53aa375e11fe3a351be6642ca46f8"
   dependencies:
@@ -3844,11 +3668,7 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
-<<<<<<< HEAD
-istanbul-api@^1.1.1:
-=======
 istanbul-api@^1.1.14:
->>>>>>> develop
   version "1.2.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/istanbul-api/-/istanbul-api-1.2.2.tgz#e17cd519dd5ec4141197f246fdf380b75487f3b1"
   dependencies:
@@ -3873,11 +3693,7 @@ istanbul-instrumenter-loader@^3.0.0:
     loader-utils "^1.1.0"
     schema-utils "^0.3.0"
 
-<<<<<<< HEAD
-istanbul-lib-coverage@^1.0.1, istanbul-lib-coverage@^1.1.2:
-=======
 istanbul-lib-coverage@^1.1.1, istanbul-lib-coverage@^1.1.2:
->>>>>>> develop
   version "1.1.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/istanbul-lib-coverage/-/istanbul-lib-coverage-1.1.2.tgz#4113c8ff6b7a40a1ef7350b01016331f63afde14"
 
@@ -3887,11 +3703,7 @@ istanbul-lib-hook@^1.1.0:
   dependencies:
     append-transform "^0.4.0"
 
-<<<<<<< HEAD
-istanbul-lib-instrument@^1.4.2, istanbul-lib-instrument@^1.7.3, istanbul-lib-instrument@^1.7.5, istanbul-lib-instrument@^1.9.2:
-=======
 istanbul-lib-instrument@^1.7.3, istanbul-lib-instrument@^1.7.5, istanbul-lib-instrument@^1.8.0, istanbul-lib-instrument@^1.9.2:
->>>>>>> develop
   version "1.9.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/istanbul-lib-instrument/-/istanbul-lib-instrument-1.9.2.tgz#84905bf47f7e0b401d6b840da7bad67086b4aab6"
   dependencies:
@@ -3912,11 +3724,7 @@ istanbul-lib-report@^1.1.3:
     path-parse "^1.0.5"
     supports-color "^3.1.2"
 
-<<<<<<< HEAD
-istanbul-lib-source-maps@^1.1.0, istanbul-lib-source-maps@^1.2.3:
-=======
 istanbul-lib-source-maps@^1.2.1, istanbul-lib-source-maps@^1.2.3:
->>>>>>> develop
   version "1.2.3"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/istanbul-lib-source-maps/-/istanbul-lib-source-maps-1.2.3.tgz#20fb54b14e14b3fb6edb6aca3571fd2143db44e6"
   dependencies:
@@ -4724,13 +4532,10 @@ lodash.restparam@^3.0.0:
   version "3.6.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash.restparam/-/lodash.restparam-3.6.1.tgz#936a4e309ef330a7645ed4145986c85ae5b20805"
 
-<<<<<<< HEAD
-=======
 lodash.sortby@^4.7.0:
   version "4.7.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
 
->>>>>>> develop
 lodash.startswith@^4.2.1:
   version "4.2.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash.startswith/-/lodash.startswith-4.2.1.tgz#c598c4adce188a27e53145731cdc6c0e7177600c"
@@ -4764,11 +4569,7 @@ lodash@^3.7.0:
   version "3.10.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
-<<<<<<< HEAD
-lodash@^4.0.0, lodash@^4.11.1, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@~4.17.4:
-=======
 lodash@^4.0.0, lodash@^4.11.1, lodash@^4.13.1, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@~4.17.4:
->>>>>>> develop
   version "4.17.5"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
 
@@ -4853,13 +4654,8 @@ map-visit@^1.0.0:
     object-visit "^1.0.0"
 
 marked@^0.3.12, marked@^0.3.7:
-<<<<<<< HEAD
   version "0.3.16"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/marked/-/marked-0.3.16.tgz#2f188b7dfcfa6540fe9940adaf0f3b791c9a5cba"
-=======
-  version "0.3.15"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/marked/-/marked-0.3.15.tgz#de96982e54c880962f5093a2fa93d0866bf73668"
->>>>>>> develop
 
 md5.js@^1.3.4:
   version "1.3.4"
@@ -4937,13 +4733,8 @@ micromatch@^2.1.5, micromatch@^2.3.11, micromatch@^2.3.7:
     regex-cache "^0.4.2"
 
 micromatch@^3.1.4:
-<<<<<<< HEAD
   version "3.1.8"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/micromatch/-/micromatch-3.1.8.tgz#5c8caa008de588eebb395e8c0ad12c128f25fff1"
-=======
-  version "3.1.6"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/micromatch/-/micromatch-3.1.6.tgz#8d7c043b48156f408ca07a4715182b79b99420bf"
->>>>>>> develop
   dependencies:
     arr-diff "^4.0.0"
     array-unique "^0.3.2"
@@ -5105,13 +4896,8 @@ multipipe@^0.1.2:
     duplexer2 "0.0.2"
 
 nan@^2.3.0, nan@^2.3.2:
-<<<<<<< HEAD
   version "2.9.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/nan/-/nan-2.9.2.tgz#f564d75f5f8f36a6d9456cca7a6c4fe488ab7866"
-=======
-  version "2.8.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/nan/-/nan-2.8.0.tgz#ed715f3fe9de02b57a5e6252d90a96675e1f085a"
->>>>>>> develop
 
 nanomatch@^1.2.9:
   version "1.2.9"
@@ -5236,11 +5022,7 @@ node-modules-path@^1.0.0:
   version "1.0.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/node-modules-path/-/node-modules-path-1.0.1.tgz#40096b08ce7ad0ea14680863af449c7c75a5d1c8"
 
-<<<<<<< HEAD
-node-notifier@^5.0.2:
-=======
 node-notifier@^5.2.1:
->>>>>>> develop
   version "5.2.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/node-notifier/-/node-notifier-5.2.1.tgz#fa313dd08f5517db0e2502e5758d664ac69f9dea"
   dependencies:
@@ -5388,8 +5170,6 @@ object-visit@^1.0.0:
   dependencies:
     isobject "^3.0.0"
 
-<<<<<<< HEAD
-=======
 object.getownpropertydescriptors@^2.0.3:
   version "2.0.3"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/object.getownpropertydescriptors/-/object.getownpropertydescriptors-2.0.3.tgz#8758c846f5b407adab0f236e0986f14b051caa16"
@@ -5397,7 +5177,6 @@ object.getownpropertydescriptors@^2.0.3:
     define-properties "^1.1.2"
     es-abstract "^1.5.1"
 
->>>>>>> develop
 object.omit@^2.0.0:
   version "2.0.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/object.omit/-/object.omit-2.0.1.tgz#1a9c744829f39dbb858c76ca3579ae2a54ebd1fa"
@@ -6422,11 +6201,7 @@ sax@0.5.x:
   version "0.5.8"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/sax/-/sax-0.5.8.tgz#d472db228eb331c2506b0e8c15524adb939d12c1"
 
-<<<<<<< HEAD
-sax@^1.2.1:
-=======
 sax@^1.2.1, sax@^1.2.4:
->>>>>>> develop
   version "1.2.4"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
 
@@ -6852,16 +6627,6 @@ ssri@^5.2.4:
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ssri/-/ssri-5.2.4.tgz#9985e14041e65fc397af96542be35724ac11da52"
   dependencies:
     safe-buffer "^5.1.1"
-<<<<<<< HEAD
-
-static-extend@^0.1.1:
-  version "0.1.2"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/static-extend/-/static-extend-0.1.2.tgz#60809c39cbff55337226fd5e0b520f341f1fb5c6"
-  dependencies:
-    define-property "^0.2.5"
-    object-copy "^0.1.0"
-
-=======
 
 stack-utils@^1.0.1:
   version "1.0.1"
@@ -6874,7 +6639,6 @@ static-extend@^0.1.1:
     define-property "^0.2.5"
     object-copy "^0.1.0"
 
->>>>>>> develop
 "statuses@>= 1.3.1 < 2", statuses@~1.4.0:
   version "1.4.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/statuses/-/statuses-1.4.0.tgz#bb73d446da2796106efcc1b601a253d6c46bd087"
@@ -6927,15 +6691,9 @@ stream-shift@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/stream-shift/-/stream-shift-1.0.0.tgz#d5c752825e5367e786f78e18e445ea223a155952"
 
-<<<<<<< HEAD
-string-length@^1.0.1:
-  version "1.0.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/string-length/-/string-length-1.0.1.tgz#56970fb1c38558e9e70b728bf3de269ac45adfac"
-=======
 string-length@^2.0.0:
   version "2.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/string-length/-/string-length-2.0.0.tgz#d40dbb686a3ace960c1cffca562bf2c45f8363ed"
->>>>>>> develop
   dependencies:
     astral-regex "^1.0.0"
     strip-ansi "^4.0.0"
@@ -7339,7 +7097,6 @@ tsickle@^0.21.0:
     source-map "^0.5.6"
     source-map-support "^0.4.2"
 
-<<<<<<< HEAD
 tsickle@^0.27.2:
   version "0.27.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/tsickle/-/tsickle-0.27.2.tgz#f33d46d046f73dd5c155a37922e422816e878736"
@@ -7348,16 +7105,6 @@ tsickle@^0.27.2:
     mkdirp "^0.5.1"
     source-map "^0.6.0"
     source-map-support "^0.5.0"
-=======
-tsickle@^0.26.0:
-  version "0.26.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/tsickle/-/tsickle-0.26.0.tgz#40b30a2dd6abcb33b182e37596674bd1cfe4039c"
-  dependencies:
-    minimist "^1.2.0"
-    mkdirp "^0.5.1"
-    source-map "^0.5.6"
-    source-map-support "^0.4.2"
->>>>>>> develop
 
 tslib@^1.7.1, tslib@^1.8.0, tslib@^1.8.1:
   version "1.9.0"
@@ -7381,13 +7128,8 @@ tslint@^5.8.0:
     tsutils "^2.12.1"
 
 tsutils@^2.12.1:
-<<<<<<< HEAD
   version "2.21.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/tsutils/-/tsutils-2.21.2.tgz#902aa5987e1440c47673543d96752df8d44ab9c7"
-=======
-  version "2.21.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/tsutils/-/tsutils-2.21.1.tgz#5b23c263233300ed7442b4217855cbc7547c296a"
->>>>>>> develop
   dependencies:
     tslib "^1.8.1"
 
@@ -7452,13 +7194,8 @@ uglify-es@^3.3.4:
     source-map "~0.6.1"
 
 uglify-js@3.3.x, uglify-js@^3.0.7:
-<<<<<<< HEAD
   version "3.3.12"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/uglify-js/-/uglify-js-3.3.12.tgz#efd87c16a1f4c674a8a5ede571001ef634dcc883"
-=======
-  version "3.3.11"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/uglify-js/-/uglify-js-3.3.11.tgz#e9d058b20715138bb4e8e5cae2ea581686bdaae3"
->>>>>>> develop
   dependencies:
     commander "~2.14.1"
     source-map "~0.6.1"
@@ -7501,13 +7238,10 @@ uid-number@^0.0.6:
   version "0.0.6"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/uid-number/-/uid-number-0.0.6.tgz#0ea10e8035e8eb5b8e4449f06da1c730663baa81"
 
-<<<<<<< HEAD
-=======
 ultron@~1.1.0:
   version "1.1.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ultron/-/ultron-1.1.1.tgz#9fe1536a10a664a65266a1e3ccf85fd36302bc9c"
 
->>>>>>> develop
 union-value@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/union-value/-/union-value-1.0.0.tgz#5c71c34cb5bad5dcebe3ea0cd08207ba5aa1aea4"
@@ -7972,11 +7706,7 @@ wordwrap@~1.0.0:
   version "1.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/wordwrap/-/wordwrap-1.0.0.tgz#27584810891456a4171c8d0226441ade90cbcaeb"
 
-<<<<<<< HEAD
-worker-farm@^1.3.1, worker-farm@^1.5.2:
-=======
 worker-farm@^1.5.2:
->>>>>>> develop
   version "1.5.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/worker-farm/-/worker-farm-1.5.2.tgz#32b312e5dc3d5d45d79ef44acc2587491cd729ae"
   dependencies:
@@ -8062,15 +7792,12 @@ yargs-parser@^7.0.0:
   dependencies:
     camelcase "^4.1.0"
 
-<<<<<<< HEAD
-=======
 yargs-parser@^8.1.0:
   version "8.1.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/yargs-parser/-/yargs-parser-8.1.0.tgz#f1376a33b6629a5d063782944da732631e966950"
   dependencies:
     camelcase "^4.1.0"
 
->>>>>>> develop
 yargs@6.6.0:
   version "6.6.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/yargs/-/yargs-6.6.0.tgz#782ec21ef403345f830a808ca3d513af56065208"
@@ -8089,8 +7816,6 @@ yargs@6.6.0:
     y18n "^3.2.1"
     yargs-parser "^4.2.0"
 
-<<<<<<< HEAD
-=======
 yargs@^10.0.3:
   version "10.1.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/yargs/-/yargs-10.1.2.tgz#454d074c2b16a51a43e2fb7807e4f9de69ccb5c5"
@@ -8108,7 +7833,6 @@ yargs@^10.0.3:
     y18n "^3.2.1"
     yargs-parser "^8.1.0"
 
->>>>>>> develop
 yargs@^3.7.2:
   version "3.32.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/yargs/-/yargs-3.32.0.tgz#03088e9ebf9e756b69751611d2a5ef591482c995"
@@ -8121,11 +7845,7 @@ yargs@^3.7.2:
     window-size "^0.1.4"
     y18n "^3.2.0"
 
-<<<<<<< HEAD
 yargs@^7.0.0, yargs@^7.0.2:
-=======
-yargs@^7.0.0:
->>>>>>> develop
   version "7.1.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/yargs/-/yargs-7.1.0.tgz#6ba318eb16961727f5d284f8ea003e8d6154d0c8"
   dependencies:
@@ -8180,26 +7900,20 @@ yn@^2.0.0:
   version "2.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/yn/-/yn-2.0.0.tgz#e5adabc8acf408f6385fc76495684c88e6af689a"
 
-<<<<<<< HEAD
 zen-observable-ts@^0.8.6:
   version "0.8.6"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/zen-observable-ts/-/zen-observable-ts-0.8.6.tgz#2fe8c5f5f6171484353c3c93a71355c9521d53a0"
   dependencies:
     zen-observable "^0.8.6"
 
-=======
->>>>>>> develop
 zen-observable@^0.7.0:
   version "0.7.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/zen-observable/-/zen-observable-0.7.1.tgz#f84075c0ee085594d3566e1d6454207f126411b3"
 
-<<<<<<< HEAD
 zen-observable@^0.8.6:
   version "0.8.6"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/zen-observable/-/zen-observable-0.8.6.tgz#e2419311497019419d7bb56d8f6a56356a607272"
 
-=======
->>>>>>> develop
 zone.js@^0.8.4:
   version "0.8.20"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/zone.js/-/zone.js-0.8.20.tgz#a218c48db09464b19ff6fc8f0d4bb5b1046e185d"
