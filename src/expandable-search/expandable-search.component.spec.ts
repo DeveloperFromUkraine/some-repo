@@ -5,7 +5,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core/src/debug/debug_node';
 import { MatFormFieldModule, MatIconModule, MatInputModule } from '@angular/material';
 
-describe('ExpandableSearchComponent', () => {
+describe('Expandable Search', () => {
     let fixture: ComponentFixture<ExpandableSearchComponent>;
     let component: ExpandableSearchComponent;
     let de: DebugElement;

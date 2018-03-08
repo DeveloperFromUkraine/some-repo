@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { InfoBannerComponent } from "index";
+import { InfoBannerComponent } from "../index";
 import { ComponentTest } from "../../test/test-bed/component";
 
-describe('InfoBannerComponent', () => {
+describe('Info Banner', () => {
     let fixture: ComponentFixture<InfoBannerComponent>;
 
     beforeEach(async () => {

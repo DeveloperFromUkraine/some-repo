@@ -17,7 +17,7 @@ class DirectiveHostComponent {
 
 }
 
-describe('AccessibleClickDirective', () => {
+describe('Accessible Click', () => {
     let fixture: ComponentFixture<DirectiveHostComponent>;
     let de: DebugElement[];
     let ne: HTMLElement;

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { DebugElement } from "@angular/core";
 import { ComponentTest } from '../../../test/test-bed/component';
-import { SizingFullDirective } from "index";
+import { SizingFullDirective } from "./index";
 import { By } from '@angular/platform-browser';
 
 @Component({
@@ -15,7 +15,7 @@ class DirectiveHostComponent {
 
 }
 
-describe('SizingFullDirective', () => {
+describe('Form Sizing Full', () => {
     let fixture: ComponentFixture<DirectiveHostComponent>;
     let de: DebugElement[];
     const maxWidth: string = '100%';

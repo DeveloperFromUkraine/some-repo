@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Expandable Search Should match snapshot 1`] = `
+<ign-expandable-search
+  searchCriteria$={[Function BehaviorSubject]}
+  searchExpanded="false"
+  searchInput={[Function ElementRef]}
+>
+  <button
+    aria-label="Search"
+    class="ng-star-inserted"
+    da="searchButton"
+    mat-icon-button=""
+  >
+    
+    
+    <mat-icon
+      aria-hidden="true"
+      class="mat-icon material-icons"
+      role="img"
+    >
+      
+      search
+    
+    </mat-icon>
+    
+  
+  </button>
+  
+  
+  
+  <mat-form-field
+    class="mat-input-container mat-form-field ng-tns-c29-0 mat-primary expanded-search-inactive mat-form-field-type-mat-input mat-form-field-hide-placeholder"
+    floatlabel="never"
+    ng-reflect-float-label="never"
+    ng-reflect-ng-class="[object Object]"
+  >
+    <div
+      class="mat-input-wrapper mat-form-field-wrapper"
+    >
+      <div
+        class="mat-input-flex mat-form-field-flex"
+      >
+        
+        <div
+          class="mat-input-infix mat-form-field-infix"
+        >
+          
+    
+          <input
+            aria-invalid="false"
+            aria-required="false"
+            class="mat-input-element mat-form-field-autofill-control"
+            id="mat-input-14"
+            matinput=""
+            ng-reflect-placeholder="Search"
+            ng-reflect-value=""
+            placeholder="Search"
+            value=""
+          />
+          
+    
+          
+  
+          <span
+            class="mat-form-field-label-wrapper mat-input-placeholder-wrapper mat-form-field-placeholder-wrapper"
+          >
+            
+            <label
+              aria-owns="mat-input-14"
+              class="mat-form-field-label mat-input-placeholder mat-form-field-placeholder ng-tns-c29-0 mat-empty mat-form-field-empty ng-star-inserted"
+              for="mat-input-14"
+              ng-reflect-ng-switch="false"
+            >
+              
+              
+              Search
+              
+              
+            </label>
+          </span>
+        </div>
+        
+      </div>
+      <div
+        class="mat-input-underline mat-form-field-underline"
+      >
+        <span
+          class="mat-input-ripple mat-form-field-ripple"
+        />
+      </div>
+      <div
+        class="mat-input-subscript-wrapper mat-form-field-subscript-wrapper"
+        ng-reflect-ng-switch="hint"
+      >
+        
+        
+        <div
+          class="mat-input-hint-wrapper mat-form-field-hint-wrapper ng-tns-c29-0 ng-trigger ng-trigger-transitionMessages ng-star-inserted"
+          style="opacity: 1;"
+        >
+          
+          <div
+            class="mat-input-hint-spacer mat-form-field-hint-spacer"
+          />
+        </div>
+      </div>
+    </div>
+  </mat-form-field>
+  
+</ign-expandable-search>
+`;

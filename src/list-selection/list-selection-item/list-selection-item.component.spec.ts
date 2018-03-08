@@ -1,10 +1,10 @@
 import { ComponentTest } from '../../../test/test-bed/component';
-import { ListSelectionItemComponent } from 'index';
+import { ListSelectionItemComponent } from './index';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
-describe('ListSelectionItemComponent', () => {
+describe('List Selection Item', () => {
     let fixture: ComponentFixture<ListSelectionItemComponent>;
     let component: ListSelectionItemComponent;
     let de: DebugElement;

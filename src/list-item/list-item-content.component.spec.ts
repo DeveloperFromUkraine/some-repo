@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { ListItemContentComponent } from "index";
+import { ListItemContentComponent } from "../index";
 import { ComponentTest } from "../../test/test-bed/component";
 
-describe('ListItemContentComponent', () => {
+describe('List Item Content', () => {
     let fixture: ComponentFixture<ListItemContentComponent>;
 
     beforeEach(async () => {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DividerComponent should match snapshot 1`] = `
+exports[`Divider should match snapshot 1`] = `
 <ign-divider>
   <div
     _ngcontent-c0=""

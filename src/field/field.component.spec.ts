@@ -5,7 +5,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 import { MatIconModule } from '@angular/material';
 
-describe('FieldComponent', () => {
+describe('Field', () => {
     let fixture: ComponentFixture<FieldComponent>;
     let component: FieldComponent;
     let de: DebugElement;

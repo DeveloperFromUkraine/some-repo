@@ -11,6 +11,7 @@ import {
     TestTypesComponent,
     StatusComponent
 } from './components/testing';
+import { CommonComponentModule } from "../common/common-component.module";
 
 const routes: Routes = [
     { path: 'aaa', component: AaaComponent },
@@ -23,9 +24,6 @@ const routes: Routes = [
     { path: 'status', component: StatusComponent }
 ];
 
-import { ApolloModule, Apollo } from 'apollo-angular';
-import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
-import { InMemoryCache } from 'apollo-cache-inmemory';
 import { BrowserModule } from "@angular/platform-browser";
 import { 
     MatCardModule,
@@ -48,21 +46,14 @@ import {
     imports: [
         RouterModule.forChild(routes),
         HttpClientModule,
-        ApolloModule,
-        HttpLinkModule,
         BrowserModule,
         MatCardModule,
         MatToolbarModule,
         MatExpansionModule,
-        MatTabsModule
+        MatTabsModule,
+        CommonComponentModule
     ],
     providers: []
 })
 export class TestingModule {
-    constructor(apollo: Apollo, httpLink: HttpLink) {
-        apollo.create({
-            link: httpLink.create({uri: 'http://bakery-server.apps.mia.ulti.io/graphql'}),
-            cache: new InMemoryCache()
-        });
-    }
 }

@@ -3,7 +3,7 @@ import { RightAlignContainerComponent } from './right-align-container.component'
 import { ComponentTest } from '../../test/test-bed/component';
 
 
-describe('Right Align Container Component', () => {
+describe('Right Align Container', () => {
     let fixture: ComponentFixture<RightAlignContainerComponent>;
 
     beforeEach(async () => {

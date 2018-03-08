@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ListItemSecondaryTextComponent should match snapshot 1`] = `
+exports[`List Item Secondary Text should match snapshot 1`] = `
 <ign-list-item-secondary-text>
   <h4
     _ngcontent-c0=""

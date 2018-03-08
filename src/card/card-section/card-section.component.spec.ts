@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { CardSectionComponent } from "index";
+import { CardSectionComponent } from "./index";
 import { ComponentTest } from '../../../test/test-bed/component';
 
-describe('CardSectionComponent', () => {
+describe('Card Section', () => {
     let fixture: ComponentFixture<CardSectionComponent>;
 
     beforeEach(async () => {

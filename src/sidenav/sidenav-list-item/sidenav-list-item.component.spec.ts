@@ -6,7 +6,7 @@ import { By } from "@angular/platform-browser";
 import { EventEmitter } from "@angular/core/src/event_emitter";
 import { dispatchEvent } from "@angular/core/src/view/util";
 
-describe('SideNavListItemComponent', () => {
+describe('Side Nav List Item', () => {
     let fixture: ComponentFixture<SideNavListItemComponent>;
     let component: SideNavListItemComponent;
     let de: DebugElement;

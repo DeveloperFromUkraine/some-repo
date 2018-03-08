@@ -1,9 +1,9 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { ListSelectionAddButtonComponent } from "index";
+import { ListSelectionAddButtonComponent } from "./index";
 import { ComponentTest } from "../../../test/test-bed/component";
 import { MatIconModule } from "@angular/material";
 
-describe('ListSelectionAddButtonComponent', () => {
+describe('List Selection Add Button', () => {
     let fixture: ComponentFixture<ListSelectionAddButtonComponent>;
 
     beforeEach(async () => {

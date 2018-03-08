@@ -1,5 +1,25 @@
-<ign-center><h2>Hello! You've stumbled upon the NU team's ignite design system playground. </h2>
-    <p>This is where we store our components that can be universally utilized within the web app. This helps to improve consistency,
-    writability, and readability in code across the board!</p>
-    <p>Click on the hamburger menu icon to begin navigating to our components. You can consume these components and use
-    them in your own development!</p></ign-center>
+<header>
+    <ign-center><h1>Hello! You've stumbled upon the NU team's ignite design system playground. </h1>
+        <p>This is where we store our components that can be universally utilized within the web app. This helps to improve consistency,
+        writability, and readability in code across the board!</p>
+        <p>Click on the hamburger menu icon to begin navigating to our components. You can consume these components and use
+        them in your own development!</p></ign-center>
+</header>
+<main>
+    <section aria-label="build" class="build">
+        <ign-center class="build-header"><h1>Build Status</h1></ign-center>
+        <a class="build-master" [attr.href]="masterBranchData?.concourseUrl" target="_blank">
+            <stat-card title="Master" titleBackground="WhiteSmoke" [detail]="masterBranchData?.status.charAt(0) + masterBranchData?.status.toLowerCase().slice(1)"  [detailBackground]="buildBackgroundColor(masterBranchData?.status)"></stat-card>
+        </a>
+        <a class="build-develop" [attr.href]="developBranchData?.concourseUrl" target="_blank">
+            <stat-card title="Develop" titleBackground="WhiteSmoke" [detail]="masterBranchData?.status.charAt(0) + developBranchData?.status.toLowerCase().slice(1)" [detailBackground]="buildBackgroundColor(developBranchData?.status)"></stat-card>
+        </a>
+    </section>
+    <section aria-label="coverage" class="coverage">
+        <ign-center class="coverage-header"><h1>Coverage</h1></ign-center>
+        <stat-card class="coverage-functions" title="Functions" titleWidth="70%" titleBackground="WhiteSmoke" [detail]="coverageData.functions?.pct + '%'" detailWidth="30%" [detailBackground]="coverageBackgroundColor(coverageData?.functions)"></stat-card>
+        <stat-card class="coverage-lines" title="Lines" titleWidth="70%" titleBackground="WhiteSmoke" [detail]="coverageData.lines?.pct + '%'" detailWidth="30%" [detailBackground]="coverageBackgroundColor(coverageData?.lines)"></stat-card>
+        <stat-card class="coverage-branches" title="Branches" titleWidth="70%" titleBackground="WhiteSmoke" [detail]="coverageData.branches?.pct + '%'" detailWidth="30%" [detailBackground]="coverageBackgroundColor(coverageData?.branches)"></stat-card>
+        <stat-card class="coverage-statements" title="Statements" titleWidth="70%" titleBackground="WhiteSmoke" [detail]="coverageData.statements?.pct + '%'" detailWidth="30%" [detailBackground]="coverageBackgroundColor(coverageData?.statements)"></stat-card>
+    </section>
+</main>
