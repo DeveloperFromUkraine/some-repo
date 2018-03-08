@@ -26,7 +26,11 @@
       "<rootDir>/src/tsconfig.spec.json",
       "<rootDir>/test/*"
     ],
-    "coverageReporters": ["json-summary", "text", "lcov"]
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ]
   },
   "ngPackage": {
     "lib": {
