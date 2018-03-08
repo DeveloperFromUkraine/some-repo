@@ -4,7 +4,7 @@ import { ComponentTest } from "../../test/test-bed/component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatFormFieldModule, MatInputModule, MatDatepickerModule, MatNativeDateModule } from "@angular/material";
 
-describe('DateRangeComponent', () => {
+describe('Date Range', () => {
     let fixture: ComponentFixture<DateRangeComponent>;
 
     beforeEach(async () => {

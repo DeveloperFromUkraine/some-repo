@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SelectContainerComponent should match snapshot 1`] = `
+exports[`Select Container should match snapshot 1`] = `
 <ign-select-container>
   
 </ign-select-container>

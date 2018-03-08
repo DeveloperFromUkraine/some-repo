@@ -1,9 +1,9 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { EmptyStateComponent } from "index";
+import { EmptyStateComponent } from "../index";
 import { ComponentTest } from "../../test/test-bed/component";
 
 
-describe('EmptyStateComponent', () => {
+describe('Empty State', () => {
     let fixture: ComponentFixture<EmptyStateComponent>;
 
     beforeEach(async () => {

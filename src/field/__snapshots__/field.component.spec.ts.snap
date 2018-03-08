@@ -6,30 +6,43 @@ exports[`EditableFieldComponent should match snapshot 1`] = `
   label={[Function String]}
   onIconClick={[Function EventEmitter]}
 >
-  <div
+  
+      <div
     class="label-container"
   >
+    
+      
     <div
       class="value flex-lable-value"
       da="fieldValue"
     />
+    
+      
     <button
       class="mat-icon-button"
       mat-icon-button=""
     >
+      
+        
       <mat-icon
+        aria-hidden="true"
         class="mat-icon material-icons"
         role="img"
-        aria-hidden="true"
       >
         mode_edit
       </mat-icon>
+      
+      
     </button>
-  </div><div
+    
+      
+  </div>
+      <div
     class="label"
   >
     label!
   </div>
+    
 </ign-editable-field>
 `;
 
@@ -39,47 +52,68 @@ exports[`EditableFieldInlineComponent should match snapshot 1`] = `
   label={[Function String]}
   onIconClick={[Function EventEmitter]}
 >
-  <div
+  
+      <div
     class="label-container"
   >
+    
+        
     <div
       class="value flex-lable-value"
       da="fieldValue"
     >
+      
+        
       <span
         class="label"
       >
         label!
       </span>
+      
+        
+      
+        
     </div>
+    
+        
     <button
       class="mat-icon-button"
       mat-icon-button=""
     >
+      
+        
       <mat-icon
+        aria-hidden="true"
         class="mat-icon material-icons"
         role="img"
-        aria-hidden="true"
       >
         mode_edit
       </mat-icon>
+      
+        
     </button>
+    
+      
   </div>
+    
 </ign-editable-field-inline>
 `;
 
-exports[`FieldComponent should match snapshot 1`] = `
+exports[`Field should match snapshot 1`] = `
 <ign-field
   label={[Function String]}
 >
-  <div
+  
+      <div
     class="value"
     da="fieldValue"
-  /><div
+  />
+      <div
     class="label"
   >
     label!
   </div>
+    
 </ign-field>
 `;
 
@@ -87,15 +121,23 @@ exports[`FieldInlineComponent should match snapshot 1`] = `
 <ign-field-inline
   label={[Function String]}
 >
-  <div
+  
+      <div
     class="value"
     da="fieldValue"
   >
+    
+      
     <span
       class="label"
     >
       label!
     </span>
+    
+      
+    
+      
   </div>
+    
 </ign-field-inline>
 `;

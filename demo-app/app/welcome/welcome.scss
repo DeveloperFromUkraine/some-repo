@@ -1,0 +1,141 @@
+main {
+    max-width: 1250px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-areas:
+        "build"
+        "coverage";
+}
+
+/* autoprefixer: off */
+@media only screen and (max-width: 600px) {
+    .build {
+        grid-area: build;
+    
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-gap: 10px;
+        grid-template-areas: 
+            "header"
+            "master"
+            "develop";
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .build {
+        grid-area: build;
+    
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(2, auto);
+        grid-gap: 10px;
+        grid-template-areas: 
+            "header header header header"
+            ". master develop .";
+    }
+}
+
+.build-header {
+    grid-area: header;
+}
+.build-master {
+    grid-area: master;
+
+    text-decoration: none;
+}
+.build-develop {
+    grid-area: develop;
+
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .coverage {
+        grid-area: coverage;
+    
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-gap: 10px;
+        grid-template-areas:
+            "header"
+            "functions"
+            "lines"
+            "branches"
+            "statements";
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .coverage {
+        grid-area: coverage;
+    
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-gap: 10px;
+        grid-template-areas:
+            "header header header header"
+            ". functions lines ."
+            ". branches statements .";
+    }
+}
+
+@media only screen and (min-width: 1126px) {
+    .coverage {
+        grid-area: coverage;
+    
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(2, auto);
+        grid-gap: 10px;
+        grid-template-areas:
+            "header header header header"
+            "functions lines branches statements";
+    }
+}
+
+.coverage-header {
+    grid-area: header;
+}
+
+.coverage-branches {
+    grid-area: branches;
+}
+
+.coverage-functions {
+    grid-area: functions;
+}
+
+.coverage-lines {
+    grid-area: lines;
+}
+
+.coverage-statements {
+    grid-area: statements;
+}
+
+.component-h {
+    grid-area: component-h;
+}
+
+.component-b {
+    grid-area: component-b;
+
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 15px;
+}

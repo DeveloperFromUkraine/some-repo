@@ -5,6 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+
+import { CdkTableModule } from '@angular/cdk/table';
+
 import { DemoDialogComponent } from './demo-dialog/demo-dialog.component';
 import { DemoDialogComponentDialog, DemoDialogComponentDialogBackground } from './demo-dialog/demo-dialog.component';
 import { DemoDialogAcceptCancelComponent } from './demo-dialog/dialog-accept-cancel/dialog-accept-cancel.component';
@@ -35,6 +40,10 @@ import { DemoIconComponent } from './demo-icon/demo-icon.component';
 import { DemoSelectionListComponent } from './demo-selection-list/demo-selection-list.component';
 import { DemoMarkdownComponent } from './demo-markdown/demo-markdown.component';
 import { DemoContributionComponent } from './demo-contribution/demo-contribution.component';
+import { DemoButtonGroupComponent } from './demo-button-group/demo-button-group.component';
+import { DemoDataTableContainerComponent } from './demo-data-table-container/demo-data-table-container.component';
+import { DemoExpandableSearchComponent } from './demo-expandable-search/demo-expandable-search.component';
+import { DemoRightAlignContainerComponent } from './demo-right-align-container/demo-right-align-container.component';
 
 import { MatExpansionModule } from '@angular/material';
 import { MatTabsModule, MatButtonModule } from '@angular/material';
@@ -47,6 +56,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material';
 import { MatInputModule } from '@angular/material';
 import { MatDatepickerModule } from '@angular/material';
+import { MatTableModule } from '@angular/material';
 import { MatListModule } from '@angular/material/list';
 
 import { RouterModule } from '@angular/router';
@@ -70,6 +80,7 @@ const materialModules = [
     MatDatepickerModule,
     ReactiveFormsModule,
     MatListModule,
+    MatTableModule,
 ];
 
 @NgModule({
@@ -81,6 +92,9 @@ const materialModules = [
     IgniteDesignSystemModule,
     DateRangeModule,
     RouterModule,
+    HttpModule,
+    HttpClientModule,
+    CdkTableModule,
   ],
   declarations: [
     DemoDialogComponent,
@@ -114,15 +128,19 @@ const materialModules = [
     DemoSelectionListComponent,
     DemoMarkdownComponent,
     DemoContributionComponent,
+    DemoButtonGroupComponent,
+    DemoDataTableContainerComponent,
+    DemoExpandableSearchComponent,
+    DemoRightAlignContainerComponent,
   ],
   exports: [
-      ...materialModules, RouterModule,
+      ...materialModules, RouterModule, MatTableModule
   ],
     entryComponents: [DemoDialogComponent,
         DemoDialogComponentDialog,
         DemoDialogComponentDialogBackground,
         DemoDialogAcceptCancelComponent,
-        DemoEmptyStateExampleComponent,]
+        DemoEmptyStateExampleComponent, DemoDataTableContainerComponent]
 
 })
 export class DemoModule {}

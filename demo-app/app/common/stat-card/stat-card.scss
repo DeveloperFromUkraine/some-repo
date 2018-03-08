@@ -1,0 +1,80 @@
+%truncate {
+    min-width: 0;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+%no-truncate {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.stat-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    min-height: 40px;
+    width: 260px;
+    text-decoration: none;
+    box-shadow: 0px 0px 10px 1px rgb(119, 136, 153);
+}
+
+.stat-card:hover {
+    transform: scale(1.1);
+    transition-duration: 250ms;
+
+    .stat-card-title > p {
+        @extend %no-truncate;
+    }
+
+    .stat-card-status > p {
+        @extend %no-truncate;
+    }
+}
+
+.stat-card-title {
+    align-self: stretch;
+    flex-grow: 1;
+
+    font-size: 20px;
+    max-width: 50%;
+    padding-left: 5px;
+
+    color: black;
+    background-color: WhiteSmoke;
+
+    display: flex;
+}
+
+.stat-card-title > p {
+    @extend %truncate;
+
+    align-self: center;
+    padding: 0px;
+}
+
+.stat-card-status {
+    align-self: stretch;
+    flex-grow: 1;
+
+    font-size: 20px;
+    max-width: 50%;
+    padding-left: 5px;
+
+    color: black;
+    background-color: white;
+
+    display: flex;
+}
+
+.stat-card-status > p {
+    @extend %truncate;
+
+    align-self: center;
+    padding: 0px;
+}
+

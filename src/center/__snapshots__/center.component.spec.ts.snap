@@ -1,9 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CenterComponent should match snapshot 1`] = `
+exports[`Center should match snapshot 1`] = `
 <ign-center>
   <div>
     
+    
+    
+  
   </div>
+  
 </ign-center>
 `;

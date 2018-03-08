@@ -1,9 +1,9 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { CardSubtitleComponent } from "index";
+import { CardSubtitleComponent } from "./index";
 import { ComponentTest } from "../../../test/test-bed/component";
 
 
-describe('CardSubtitleComponent', () => {
+describe('Card Subtitle', () => {
     let fixture: ComponentFixture<CardSubtitleComponent>;
 
     beforeEach(async () => {

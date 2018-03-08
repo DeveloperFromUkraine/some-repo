@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ListItemContentComponent should match snapshot 1`] = `
+exports[`List Item Content should match snapshot 1`] = `
 <ign-list-item-content>
   
 </ign-list-item-content>

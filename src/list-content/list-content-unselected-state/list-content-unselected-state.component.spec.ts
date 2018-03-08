@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { ListContentUnselectedStateComponent } from "index";
+import { ListContentUnselectedStateComponent } from "./index";
 import { ComponentTest } from "../../../test/test-bed/component";
 
-describe('ListContentUnselectedStateComponent', () => {
+describe('List Content Unselected State', () => {
     let fixture: ComponentFixture<ListContentUnselectedStateComponent>;
 
     beforeEach(async () => {

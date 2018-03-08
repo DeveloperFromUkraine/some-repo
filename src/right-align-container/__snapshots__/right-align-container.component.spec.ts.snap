@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+<<<<<<< HEAD
 exports[`Right Align Container Component Should match snapshot 1`] = `
+=======
+exports[`Right Align Container Should match snapshot 1`] = `
+>>>>>>> develop
 <ign-right-align-container>
   
 </ign-right-align-container>

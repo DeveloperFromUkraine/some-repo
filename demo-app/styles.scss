@@ -103,19 +103,19 @@ nu-card-main .mat-card-actions {
 @font-face {
   font-family: "Avenir";
   font-weight: 300; // light
-  src: url("assets/fonts/avenir/AvenirLTStd-Light.otf") format("opentype");
+  src: url("/assets/fonts/avenir/AvenirLTStd-Light.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Avenir";
   font-weight: 400;
-  src: url("assets/fonts/avenir/AvenirLTStd-Book.otf") format("opentype");
+  src: url("/assets/fonts/avenir/AvenirLTStd-Book.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Avenir";
   font-weight: 500; // medium
-  src: url("assets/fonts/avenir/AvenirLTStd-Medium.otf") format("opentype");
+  src: url("/assets/fonts/avenir/AvenirLTStd-Medium.otf") format("opentype");
 }
 
 *, *:before, *:after {

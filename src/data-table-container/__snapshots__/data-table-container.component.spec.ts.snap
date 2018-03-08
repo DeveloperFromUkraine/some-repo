@@ -1,11 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DataTableContainerComponent should match snapshot 1`] = `
+exports[`Data Table Container should match snapshot 1`] = `
 <ign-data-table-container
   dataSource={[Function MatTableDataSource]}
   paginator={[Function MatPaginator]}
   paginatorEvents$={[Function BehaviorSubject]}
 >
+  
+  
   <mat-paginator
     class="mat-paginator"
     ng-reflect-page-size="10"
@@ -14,6 +16,7 @@ exports[`DataTableContainerComponent should match snapshot 1`] = `
     <div
       class="mat-paginator-container"
     >
+      
       <div
         class="mat-paginator-page-size ng-star-inserted"
       >
@@ -22,6 +25,7 @@ exports[`DataTableContainerComponent should match snapshot 1`] = `
         >
           Items per page:
         </div>
+        
         <mat-form-field
           class="mat-paginator-page-size-select mat-input-container mat-form-field ng-tns-c37-0 mat-primary mat-form-field-type-mat-select mat-form-field-can-float mat-form-field-hide-placeholder ng-star-inserted"
         >
@@ -31,10 +35,12 @@ exports[`DataTableContainerComponent should match snapshot 1`] = `
             <div
               class="mat-input-flex mat-form-field-flex"
             >
+              
               <div
                 class="mat-input-infix mat-form-field-infix"
               >
                 <mat-select
+<<<<<<< HEAD
                   tabindex="0"
                   class="mat-select ng-tns-c38-1 ng-star-inserted"
                   ng-reflect-value="10"
@@ -45,22 +51,44 @@ exports[`DataTableContainerComponent should match snapshot 1`] = `
                   aria-required="false"
                   aria-disabled="false"
                   aria-invalid="false"
+=======
+                  aria-disabled="false"
+                  aria-invalid="false"
+                  aria-label="Items per page:"
+>>>>>>> develop
                   aria-multiselectable="false"
+                  aria-required="false"
+                  class="mat-select ng-tns-c38-1 ng-star-inserted"
+                  id="mat-select-6"
+                  ng-reflect-aria-label="Items per page:"
+                  ng-reflect-value="10"
+                  role="listbox"
+                  tabindex="0"
                 >
                   <div
-                    class="mat-select-trigger"
                     aria-hidden="true"
                     cdk-overlay-origin=""
+                    class="mat-select-trigger"
                   >
                     <div
                       class="mat-select-value"
                       ng-reflect-ng-switch="true"
                     >
+<<<<<<< HEAD
                       <span
                         class="mat-select-placeholder ng-tns-c38-1 ng-star-inserted"
                       >
                         
                       </span>
+=======
+                      
+                      <span
+                        class="mat-select-placeholder ng-tns-c38-1 ng-star-inserted"
+                      >
+                         
+                      </span>
+                      
+>>>>>>> develop
                     </div>
                     <div
                       class="mat-select-arrow-wrapper"
@@ -70,6 +98,7 @@ exports[`DataTableContainerComponent should match snapshot 1`] = `
                       />
                     </div>
                   </div>
+                  
                 </mat-select>
                 <span
                   class="mat-form-field-label-wrapper mat-input-placeholder-wrapper mat-form-field-placeholder-wrapper"
@@ -77,6 +106,7 @@ exports[`DataTableContainerComponent should match snapshot 1`] = `
                   
                 </span>
               </div>
+              
             </div>
             <div
               class="mat-input-underline mat-form-field-underline"
@@ -89,10 +119,13 @@ exports[`DataTableContainerComponent should match snapshot 1`] = `
               class="mat-input-subscript-wrapper mat-form-field-subscript-wrapper"
               ng-reflect-ng-switch="hint"
             >
+              
+              
               <div
                 class="mat-input-hint-wrapper mat-form-field-hint-wrapper ng-tns-c37-0 ng-trigger ng-trigger-transitionMessages ng-star-inserted"
                 style="opacity: 1;"
               >
+                
                 <div
                   class="mat-input-hint-spacer mat-form-field-hint-spacer"
                 />
@@ -100,6 +133,7 @@ exports[`DataTableContainerComponent should match snapshot 1`] = `
             </div>
           </div>
         </mat-form-field>
+        
       </div>
       <div
         class="mat-paginator-range-actions"
@@ -109,17 +143,18 @@ exports[`DataTableContainerComponent should match snapshot 1`] = `
         >
           0 of 0
         </div>
+        
         <button
-          class="mat-paginator-navigation-previous mat-icon-button"
-          mat-icon-button=""
-          type="button"
-          ng-reflect-disabled="true"
           aria-describedby="cdk-describedby-message-12"
-          cdk-describedby-host=""
-          ng-reflect-position="above"
-          ng-reflect-message="Previous page"
           aria-label="Previous page"
+          cdk-describedby-host=""
+          class="mat-paginator-navigation-previous mat-icon-button"
           disabled=""
+          mat-icon-button=""
+          ng-reflect-disabled="true"
+          ng-reflect-message="Previous page"
+          ng-reflect-position="above"
+          type="button"
         >
           <span
             class="mat-button-wrapper"
@@ -140,16 +175,16 @@ exports[`DataTableContainerComponent should match snapshot 1`] = `
           />
         </button>
         <button
-          class="mat-paginator-navigation-next mat-icon-button"
-          mat-icon-button=""
-          type="button"
-          ng-reflect-disabled="true"
           aria-describedby="cdk-describedby-message-13"
-          cdk-describedby-host=""
-          ng-reflect-position="above"
-          ng-reflect-message="Next page"
           aria-label="Next page"
+          cdk-describedby-host=""
+          class="mat-paginator-navigation-next mat-icon-button"
           disabled=""
+          mat-icon-button=""
+          ng-reflect-disabled="true"
+          ng-reflect-message="Next page"
+          ng-reflect-position="above"
+          type="button"
         >
           <span
             class="mat-button-wrapper"
@@ -169,8 +204,10 @@ exports[`DataTableContainerComponent should match snapshot 1`] = `
             class="mat-button-focus-overlay"
           />
         </button>
+        
       </div>
     </div>
   </mat-paginator>
+  
 </ign-data-table-container>
 `;
