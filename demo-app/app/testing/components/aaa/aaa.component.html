@@ -18,7 +18,7 @@ it(<span class="string">'should call closeDrawer when click event emitted'</span
     <span class="comment">//Arrange</span>
     de = fixture.debugElement.query(By.css(<span class="string">'.close-icon'</span>));
     ne = de.nativeElement;
-    <span class="keyword">jest</span>.spyOn(component, <span class="string">'closeDrawer'</span>);
+    jest.spyOn(component, <span class="string">'closeDrawer'</span>);
     
     <span class="comment">//Act</span>
     ne.dispatchEvent(<span class="keyword">new</span> Event(<span class="string">'click'</span>));
