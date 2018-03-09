@@ -11,4 +11,9 @@
 * System icons are 24dp
 * Stylistic specifications per mat-icon component can be found in the accordion below.
 
+## Accessibility
+
+* Include a descriptive aria-label for the icon as well as setting aria-hidden="false"
+* Refer to HTML in Sample section on usage
+
 ## Icon Components
