@@ -1,5 +1,0 @@
-## Style
-<%= style%>
-
-## Content
-<%= content%>
