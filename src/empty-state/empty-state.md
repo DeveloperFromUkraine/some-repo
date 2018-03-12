@@ -1,0 +1,56 @@
+*** HTML ***
+# Empty State
+
+## Use
+Empty state is used when a user encounter a resource page or a page of resources he/she has not yet
+created/encountered. Empty state is composed of multiple empty state styled specific components. It is up to the
+end user to assemble the empty state page how they see fit. (Think of it as,we give you the specific lego pieces to use, and it's up to you to build your lego).
+
+
+## Sample
+<mat-tab-group>
+    <mat-tab label="Component Sample">
+        <div class="tab-height">
+            <p><a [routerLink]="['empty-state-example']" target="_blank">
+                Click Here
+            </a> to go to an example of an empty state page.</p>
+            <p>You'll need to hit the back button to come back!<p>
+        </div></mat-tab>
+    <mat-tab label="HTML"><div class="tab-height">
+        <table style="width:100%">
+            <p>&lt;ign-empty-state&gt;</p>
+            <p>&nbsp;&nbsp;&lt;ign-empty-state-title&gt;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;You've reached the example of an Empty State Page!&lt;/ign-empty-state-title&gt;</p>
+            <p> &nbsp;&nbsp;&nbsp;&nbsp;&lt;ign-empty-state-description&gt;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This page is in an empty state. You'll want to navigate out using the buttons in your implementation,</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;but for now you'll have to settle with the side nav bar or the back button!</p>
+            <p> &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ign-empty-state-description&gt;</p>
+            <p> &nbsp;&nbsp;&lt;ign-button-group&gt;</p>
+            <p> &nbsp;&nbsp;&nbsp;&nbsp;&lt;button mat-button color="accent" type="button"&gt;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We're Buttons</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;button mat-button color="accent" type="button"&gt;</p>
+            <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; But We Don't Work</p>
+            <p> &nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;</p>
+            <p> &nbsp;&nbsp;&lt;/ign-button-group&gt;</p>
+            <p> &lt;/ign-empty-state&gt;</p>
+        </table>
+    </div></mat-tab>
+</mat-tab-group>
+
+## Content
+
+The empty state is used for pages and elements that do not exist. This includes:
+* Unfinished pages
+* Pages with empty groups or lists.
+* Cards with no content.
+
+
+## Style
+* The empty-state component has no stylistic specifications.
+
+*** TypeScript *** 
+
+*** ExternalTypeScript ***
+
+*** Imports ***
