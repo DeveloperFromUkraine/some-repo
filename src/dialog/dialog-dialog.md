@@ -5,9 +5,3 @@
     <p>Click 'cancel' to close this dialog.</p>
     <button mat-raised-button matDialogClose>Cancel</button>
 </div>
-
-*** TypeScript *** 
-
-*** ExternalTypeScript ***
-
-*** Imports ***

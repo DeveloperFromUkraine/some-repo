@@ -4,9 +4,3 @@
     <h1>Click on the background to trigger subscriber</h1>
     <button mat-raised-button matDialogClose>Close</button>
 </div>
-
-*** TypeScript *** 
-
-*** ExternalTypeScript ***
-
-*** Imports ***
