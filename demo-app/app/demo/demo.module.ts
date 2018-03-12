@@ -12,7 +12,7 @@ import { CdkTableModule } from '@angular/cdk/table';
 
 import { DemoDialogComponent } from './demo-dialog/demo-dialog.component';
 import { DemoDialogComponentDialog, DemoDialogComponentDialogBackground } from './demo-dialog/demo-dialog.component';
-import { DemoDialogAcceptCancelComponent } from './demo-dialog/dialog-accept-cancel/dialog-accept-cancel.component';
+import { DemoDialogAcceptCancelComponent } from './demo-dialog/demo-dialog-accept-cancel.component';
 import { DemoRadioButtonComponent } from './demo-radio-button/demo-radio-button.component';
 import { DemoCheckboxComponent } from './demo-checkbox/demo-checkbox.component';
 import { DemoCardComponent } from './demo-card/demo-card.component';
