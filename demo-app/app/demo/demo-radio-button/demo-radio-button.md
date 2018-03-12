@@ -18,8 +18,7 @@
 ## Accessibility
 
 * Relationships between radio buttons and their group heading should be programatically explicit
-    * Consider assigning <b> Unique ID </b> for each h2 heading.
-    * Reference the ID of each child radio button using the <b>aria-describedby</b> property.
-    * Add a <b>title</b> attribute to each radio button and set it equal to the group heading text. This is a fall back for the aria-describedby attribute.
+    * Assign a unique ID and a descriptive aria-label within the mat-radio-group tag
+    * Reference the unique ID in each child radio button using the <b>aria-describedby</b> property.
 
 * Refer to HTML in Sample section for example
