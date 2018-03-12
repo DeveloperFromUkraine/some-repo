@@ -15,5 +15,5 @@ the front end or back end.
 * Error banners should maintain their formatting and red font, as to draw attention to the user that there was a problem.
 
 ## Accessibility
-* Add a descriptive aria-label with the dismiss buttons tag 
+* Add a descriptive aria-label to the dismiss buttons tag that describes the action of the button (ex: exit)
 * Refer to the Sample HTML for an example
