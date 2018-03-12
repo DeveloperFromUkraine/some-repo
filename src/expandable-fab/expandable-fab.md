@@ -1,0 +1,61 @@
+*** HTML ***
+# Floating Action Buttons
+
+## Use
+Expandable Fab (floating action button) is composed of two parts:
+* ign-expanable-fab (the container)
+* ign-expanable-fab-item (items inside the expandable fab)
+
+The expandable fab handles state (open/close) implicitly so developers do not need to worry about that.
+    The base open/close button are not configurable, and are considered system-wide configuration. To use,
+    simply compose the items you wish to expand inside of the container.
+
+## Sample
+<mat-tab-group>
+    <mat-tab label="Component Sample"><div class="tab-height">
+        <div id ="element"><ign-expandable-fab>
+            <ign-expandable-fab-item icon="add">
+            </ign-expandable-fab-item>
+            <ign-expandable-fab-item icon="file\_upload">
+            </ign-expandable-fab-item>
+            <ign-expandable-fab-item icon="lock\_outline">
+            </ign-expandable-fab-item>
+        </ign-expandable-fab></div>
+    </div></mat-tab>
+    <mat-tab label="HTML"><div class="tab-height">
+        <table style="width:100%">
+            <p>&lt;ign-expandable-fab&gt;</p>
+            <p>   &nbsp;&nbsp;&lt;ign-expandable-fab-item icon="add"&gt;</p>
+            <p>   &nbsp;&nbsp;&lt;/ign-expandable-fab-item&gt;</p>
+            <p>   &nbsp;&nbsp;&lt;ign-expandable-fab-item icon="file\_upload"&gt;</p>
+            <p>   &nbsp;&nbsp;&lt;/ign-expandable-fab-item&gt;</p>
+            <p>   &nbsp;&nbsp;&lt;ign-expandable-fab-item icon="lock\_outline"&gt;</p>
+            <p>   &nbsp;&nbsp;&lt;/ign-expandable-fab-item&gt;</p>
+            <p>   &lt;/ign-expandable-fab&gt;</p>
+        </table></div>
+    </mat-tab>
+</mat-tab-group>
+
+## Content
+
+* Buttons within the FAB should only include those relevant to the current page and its navigation.
+* Three or four buttons maximum should be located within the FAB to avoid unfriendly user experience.
+
+
+## Style
+
+ign-expandable-fab
+
+* By default, the fab is allocated to the lower right hand corner, but may be allocated to any corner on the page.
+
+ign-expanadable-fab-item
+
+* (click) - click handler
+* [tooltipText] - string, tooltip text you wish to display, be sure to pass translated text
+* [icon] - text, a material icon. You can find the list of supported icons [here](https://material.io/icons/).
+
+*** TypeScript *** 
+
+*** ExternalTypeScript ***
+
+*** Imports ***
