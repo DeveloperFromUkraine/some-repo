@@ -9,7 +9,7 @@ Error banner components are used to display error messages to the front end in o
 <mat-tab-group>
     <mat-tab label="Component Sample">
         <div class="tab-height">
-            <ign-error-banner> <button class="dismiss-button" type="button" mat-icon-button>&times;</button>
+            <ign-error-banner> <button class="dismiss-button" type="button" aria-label="exit" mat-icon-button>&times;</button>
                 <ul class="message-list">
                     <li>This is an error message.</li>
                     <li>You can add icons like the red x above to clear the message.</li>
@@ -18,7 +18,7 @@ Error banner components are used to display error messages to the front end in o
         </div></mat-tab>
     <mat-tab label="HTML"><div class="tab-height">
         <table style="width:100%">
-            <p> &lt;ign-error-banner&gt; &lt;button class="dismiss-button" type="button" mat-icon-button"&gt;&times;&lt;/button&gt;</p>
+            <p> &lt;ign-error-banner&gt; &lt;button class="dismiss-button" type="button" aria-label="exit" mat-icon-button"&gt;&times;&lt;/button&gt;</p>
             <p>&nbsp;&nbsp;&lt;ul class="message-list"&gt;</p>
             <p>&nbsp;&nbsp; &nbsp;&nbsp; &lt;li&gt;This is an error message.&lt;/li&gt;</p>
             <p>&nbsp;&nbsp; &nbsp;&nbsp; &lt;li>You can add icons like the red x above to clear the message.&lt;/li&gt;</p>
@@ -42,6 +42,10 @@ the front end or back end.
 * Error banners should be displayed along the top of the page or in the corners.
 * Error banners should avoid overlapping any elements or content on the page.
 * Error banners should maintain their formatting and red font, as to draw attention to the user that there was a problem.
+
+## Accessibility
+* Add a descriptive aria-label to the dismiss buttons tag that describes the action of the button (ex: exit)
+* Refer to the Sample HTML for an example
 
 *** TypeScript *** 
 

@@ -12,15 +12,16 @@ See [Material Design Radio Button](https://material.io/guidelines/components/sel
 ## Sample
 <mat-tab-group>
     <mat-tab label="Component Sample"><div class="tab-height">
-        <mat-radio-group class="example-radio-group" [(ngModel)]="rowOfRadioButtons">
-            <mat-radio-button class="example-radio-button" \*ngFor="let button of buttons" [value]="button">
-                {{button}}
+        <mat-radio-group id="radioButtonList" class="example-radio-group" [(ngModel)]="rowOfRadioButtons" aria-label="Sample Radio Button List">
+            <mat-radio-button class="example-radio-button" *ngFor="let button of buttons" [value]="button" aria-describedby="radioButtonList">
+                {{button}} 
+                &nbsp;
             </mat-radio-button>
         </mat-radio-group></div></mat-tab>
     <mat-tab label="HTML"><div class="tab-height">
         <table style="width:100%">
-            <p> &lt;mat-radio-group class="example-radio-group" [(ngModel)]="rowOfRadioButtons"&gt;</p>
-            <p> &nbsp;&nbsp;&lt;mat-radio-button class="example-radio-button" \*ngFor="let button of buttons" [value]="button"&gt;</p>
+            <p> &lt;mat-radio-group id="radioButtonList" class="example-radio-group" [(ngModel)]="rowOfRadioButtons" aria-label="Sample Radio Button List"&gt;</p>
+            <p> &nbsp;&nbsp;&lt;mat-radio-button class="example-radio-button" *ngFor="let button of buttons" [value]="button" aria-describedby="radioButtonList"&gt;</p>
             <p>{{button}} &lt;/mat-radio-button&gt;</p>
             <p> &lt;/mat-radio-group&gt;</p>
         </table></div>
@@ -30,6 +31,7 @@ See [Material Design Radio Button](https://material.io/guidelines/components/sel
             <p>rowOfRadioButtons: string;</p>
             <p>&nbsp;buttons = [</p>
             <p>&nbsp;&nbsp; 'I AM A BUTTON',</p>
+            <p>&nbsp;&nbsp; 'I AM ANOTHER BUTTON',</p>
             <p>&nbsp; ];</p>
         </table>
     </div></mat-tab>
@@ -50,6 +52,14 @@ See [Material Design Radio Button](https://material.io/guidelines/components/sel
 * Don't
     * Don't include more than 5-7 options, depending on label length use a select menu instead.
     * Don't use long labels, consider a heading with an info dialog (for concepts that require additional instruction).
+
+## Accessibility
+
+* Relationships between radio buttons and their group heading should be programatically explicit
+    * Assign a unique ID and a descriptive aria-label within the mat-radio-group tag
+    * Reference the unique ID in each child radio button using the <b>aria-describedby</b> property.
+
+* Refer to HTML in Sample section for example
 
 *** TypeScript *** 
 

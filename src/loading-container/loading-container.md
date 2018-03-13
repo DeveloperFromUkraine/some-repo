@@ -13,7 +13,7 @@ Loading container is a wrapper (higher level) component around your content. It 
     <mat-tab label="Component Sample">
         <div class="tab-height">
             <div>
-                <ign-loading-container [loading]="!loaded">
+                <ign-loading-container [loading]="!loaded" ariaLabel="Loading Example">
                     <!-- Empty State View -->
                     <ign-empty-state>
                         <ign-empty-state-title>This is a Title</ign-empty-state-title>
@@ -48,7 +48,7 @@ Loading container is a wrapper (higher level) component around your content. It 
     <mat-tab label="HTML"><div class="tab-height">
         <table style="width:100%">
             <p> &lt;div&gt;</p>
-            <p>&nbsp; &lt;ign-loading-container [loading]="!loaded"&gt;</p>
+            <p>&nbsp; &lt;ign-loading-container [loading]="!loaded" ariaLabel="Loading Example"&gt;</p>
             <p> &nbsp;&nbsp;  &lt;!-- Empty State View --&gt;</p>
             <p> &nbsp;&nbsp;  &lt;ign-empty-state&gt;</p>
             <p> &nbsp;&nbsp;&nbsp;&nbsp;&lt;ign-empty-state-title&gt;This is a Title&lt;/ign-empty-state-title&gt;</p>
@@ -94,6 +94,11 @@ component.
 ## Style
 
 * No stylistic specifications for this component.
+
+## Accessibility
+
+* Add a descriptive ariaLabel attribute that describes what is being loaded
+* Refer to Sample HTML for an example on usage
 
 *** TypeScript *** 
 

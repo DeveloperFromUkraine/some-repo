@@ -10,12 +10,12 @@ See [Material Design Style Icons](https://material.io/guidelines/style/icons.htm
 <mat-tab-group>
     <mat-tab label="Component Sample">
         <div class="tab-height">
-            <mat-icon>home</mat-icon>
+            <mat-icon aria-label="home icon" aria-hidden="false">home</mat-icon>
         </div>
     </mat-tab>
     <mat-tab label="HTML"><div class="tab-height">
         <table style="width:100%">
-            &lt;mat-icon&gt;home&lt;/mat-icon&gt;
+            &lt;mat-icon aria-label="Home Icon" aria-hidden="false"&gt;home&lt;/mat-icon&gt;
         </table>
     </div></mat-tab>
 </mat-tab-group>
@@ -32,6 +32,10 @@ See [Material Design Style Icons](https://material.io/guidelines/style/icons.htm
 * System icons are 24dp
 * Stylistic specifications per mat-icon component can be found in the accordion below.
 
+## Accessibility
+
+* Include a descriptive aria-label for the icon as well as setting aria-hidden="false"
+* Refer to HTML in Sample section on usage
 ## Icon Components
 
 <mat-accordion id = "accordion">
@@ -48,10 +52,11 @@ See [Material Design Style Icons](https://material.io/guidelines/style/icons.htm
                     <li>The mat-icon matListIcon component should be used for list items.</li>
                     <li>This component should not be used for selection lists.</li>
                     <li>This component should be used for nav lists.</li>
+                    <li>The component should have a descriptive aria-label for the list as well as aria-hidden="false"</li>
                 </ul>
             </div></mat-tab>
             <mat-tab label="HTML"><div class="tab-height">
-                <p>&lt;mat-icon matListIcon&gt; &lt;/mat-icon matListIcon&gt;</p>
+                <p>&lt;mat-icon matListIcon aria-label="Icon List Title" aria-hidden="false"&gt; &lt;/mat-icon matListIcon&gt;</p>
             </div></mat-tab>
         </mat-tab-group>
     </mat-expansion-panel>
