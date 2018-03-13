@@ -16,3 +16,8 @@ ign-expanadable-fab-item
 * (click) - click handler
 * [tooltipText] - string, tooltip text you wish to display, be sure to pass translated text
 * [icon] - text, a material icon. You can find the list of supported icons here: https://material.io/icons/
+
+## Accessibility
+
+* Add a descriptive ariaLabelOpen and ariaLabelClose within the ign-expandable-fab tag to describe the menu being opened/closed
+* Refer to Sample HTML for usage
