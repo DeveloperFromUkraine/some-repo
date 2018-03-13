@@ -1,5 +1,5 @@
-/* Notes: Must add username, password, and generator-component directory
- below. */
+/** NOTES: User must add username and password for confluence scrape.  */
+
 import { Scraper } from  '../../scraper-component/src/scraper' 
 import { Parser } from '../../parser-component/src/index'
 let util = require('util');
@@ -15,7 +15,7 @@ if (args.length < 0) {
     console.log('Error: Missing Username and password; Run command:\nnpm start [username] [password]');
 }
 else {
-    //add ulti username and password here
+    //please add username and password below, as arguments do not currently account for special characters like ! in passwords
     let user = '';
     let pass = '';
 
@@ -33,9 +33,8 @@ else {
                 console.log(env.get('component:app'))
             });*/
             fs.writeFileSync('./data.json',JSON.stringify(result) , 'utf-8');
-
-            //add full file path to generator component here
-            env.register(require.resolve(''), 'component:app');
+            const path = __dirname.replace(/ignite-design-system\/.*/, 'ignite-design-system/');
+            env.register(require.resolve(path + 'generator-component/app/index.js'), 'component:app');
             env.run(`component:app ./data.json`);
             
             //fs.writeFileSync('./data.json', util.inspect(JSON.stringify(result)) , 'utf-8');

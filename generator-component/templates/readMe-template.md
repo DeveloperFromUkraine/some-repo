@@ -1,8 +1,9 @@
 *** HTML ***
 
-<h1><%- name %></h1>
+# <%- name %>
 <%- firstHalfContent %>
-<h2>Sample</h2>
+
+## Sample
     <mat-tab-group>
         <mat-tab label="Component Sample">
             <%- htmlCode %>
@@ -14,6 +15,7 @@
             <%= tsCode %>
         </mat-tab>
     </mat-tab-group>
+
 <%- secondHalfContent %>
 
 *** TypeScript *** 

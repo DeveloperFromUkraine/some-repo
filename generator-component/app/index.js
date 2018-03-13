@@ -13,6 +13,8 @@ var _ = require('lodash');
 const cheerio = require('cheerio');
 const rp = require('request-promise');
 const fs = require('fs');
+var toMarkdown = require('to-markdown');
+
 var useArray;
 var styleArray;
 var contentArray;
@@ -208,8 +210,8 @@ class ComponentGenerator extends Generator {
                 this.destinationPath(`../src/${(this.name).toLowerCase().split(' ').join('-')}/${(this.name).toLowerCase().split(' ').join('-')}.md`),
                 {
                    name: this.name,
-                   firstHalfContent: this.firstHalfHtmlArray[0].split(',').join('\n'),
-                   secondHalfContent: this.secondHalfHtmlArray[0].split(',').join('\n'), 
+                   firstHalfContent: toMarkdown(this.firstHalfHtmlArray[0].split(',').join('\n')),
+                   secondHalfContent: toMarkdown(this.secondHalfHtmlArray[0].split(',').join('\n')), 
                    htmlCode : this.html,
                    tsCode : this.ts,
                 }
