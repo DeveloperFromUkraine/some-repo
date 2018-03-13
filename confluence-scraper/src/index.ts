@@ -1,3 +1,5 @@
+/* Notes: Must add username, password, and generator-component directory
+ below. */
 import { Scraper } from  '../../scraper-component/src/scraper' 
 import { Parser } from '../../parser-component/src/index'
 let util = require('util');
@@ -13,7 +15,7 @@ if (args.length < 0) {
     console.log('Error: Missing Username and password; Run command:\nnpm start [username] [password]');
 }
 else {
-    //add username and password
+    //add ulti username and password here
     let user = '';
     let pass = '';
 
@@ -32,7 +34,8 @@ else {
             });*/
             fs.writeFileSync('./data.json',JSON.stringify(result) , 'utf-8');
 
-            env.register(require.resolve('/Users/mariaha/Desktop/ignite-design-system/generator-component/app/index.js'), 'component:app');
+            //add full file path to generator component here
+            env.register(require.resolve(''), 'component:app');
             env.run(`component:app ./data.json`);
             
             //fs.writeFileSync('./data.json', util.inspect(JSON.stringify(result)) , 'utf-8');
