@@ -62,40 +62,40 @@ import { DemoExpandableSearchComponent } from './demo/demo-expandable-search/dem
 import { DemoRightAlignContainerComponent } from './demo/demo-right-align-container/demo-right-align-container.component';
 
 const routes: Routes = [
-  { path: '', component: WelcomeComponent },
-  { path: 'dialog', component: DemoDialogComponent },
-  { path: 'radio-button', component: DemoRadioButtonComponent },
-  { path: 'checkbox', component: DemoCheckboxComponent },
-  { path: 'card', component: DemoCardComponent },
-  { path: 'center', component: DemoCenterComponent },
-  { path: 'data-table-container', component: DemoDataTableContainerComponent },
-  { path: 'date-range', component: DemoDateRangeComponent },
-  { path: 'divider', component: DemoDividerComponent },
-  { path: 'empty-state', component: DemoEmptyStateComponent },
-  { path: 'empty-state/empty-state-example', component: DemoEmptyStateExampleComponent },
-  { path: 'error-banner', component: DemoErrorBannerComponent },
-  { path: 'expandable-fab', component: DemoExpandableFabComponent },
-  { path: 'field', component: DemoFieldComponent },
-  { path: 'footer', component: DemoFooterComponent },
-  { path: 'form', component: DemoFormComponent },
-  { path: 'hub-card', component: DemoHubCardComponent },
-  { path: 'info-banner', component: DemoInfoBannerComponent },
-  { path: 'list-content', component: DemoListContentComponent },
-  { path: 'loading-container', component: DemoLoadingContainerComponent },
-  { path: 'nav-list', component: DemoNavListComponent },
-  { path: 'page', component: DemoPageComponent },
-  { path: 'right-drawer', component: DemoRightDrawerComponent },
-  { path: 'sidenav', component: DemoSidenavComponent },
-  { path: 'text', component: DemoTextComponent },
-  { path: 'accessibility', component: DemoAccessibilityDirective },
-  { path: 'accessibility-component', component: DemoAccessibilityComponent },
-  { path: 'icon', component: DemoIconComponent },
-  { path: 'selection-list', component: DemoSelectionListComponent },
-  { path: 'markdown', component: DemoMarkdownComponent },
-  { path: 'contribution', component: DemoContributionComponent },
-  { path: 'button-group', component: DemoButtonGroupComponent },
-  { path: 'expandable-search', component: DemoExpandableSearchComponent },
-  { path: 'right-align-container', component: DemoRightAlignContainerComponent },
+    { path: '', component: WelcomeComponent },
+    { path: 'dialog', component: DemoDialogComponent },
+    { path: 'radio-button', component: DemoRadioButtonComponent },
+    { path: 'checkbox', component: DemoCheckboxComponent },
+    { path: 'card', component: DemoCardComponent },
+    { path: 'center', component: DemoCenterComponent },
+    { path: 'data-table-container', component: DemoDataTableContainerComponent },
+    { path: 'date-range', component: DemoDateRangeComponent },
+    { path: 'divider', component: DemoDividerComponent },
+    { path: 'empty-state', component: DemoEmptyStateComponent },
+    { path: 'empty-state/empty-state-example', component: DemoEmptyStateExampleComponent },
+    { path: 'error-banner', component: DemoErrorBannerComponent },
+    { path: 'expandable-fab', component: DemoExpandableFabComponent },
+    { path: 'field', component: DemoFieldComponent },
+    { path: 'footer', component: DemoFooterComponent },
+    { path: 'form', component: DemoFormComponent },
+    { path: 'hub-card', component: DemoHubCardComponent },
+    { path: 'info-banner', component: DemoInfoBannerComponent },
+    { path: 'list-content', component: DemoListContentComponent },
+    { path: 'loading-container', component: DemoLoadingContainerComponent },
+    { path: 'nav-list', component: DemoNavListComponent },
+    { path: 'page', component: DemoPageComponent },
+    { path: 'right-drawer', component: DemoRightDrawerComponent },
+    { path: 'sidenav', component: DemoSidenavComponent },
+    { path: 'text', component: DemoTextComponent },
+    { path: 'accessibility', component: DemoAccessibilityDirective },
+    { path: 'accessibility-component', component: DemoAccessibilityComponent },
+    { path: 'icon', component: DemoIconComponent },
+    { path: 'selection-list', component: DemoSelectionListComponent },
+    { path: 'markdown', component: DemoMarkdownComponent },
+    { path: 'contribution', component: DemoContributionComponent },
+    { path: 'button-group', component: DemoButtonGroupComponent },
+    { path: 'expandable-search', component: DemoExpandableSearchComponent },
+    { path: 'right-align-container', component: DemoRightAlignContainerComponent },
 ];
 
 @NgModule({
@@ -131,15 +131,23 @@ const routes: Routes = [
     ],
     providers: [SlackService],
     bootstrap: [AppComponent],
-    exports: [MatIconModule, MatButtonModule], 
+    exports: [MatIconModule, MatButtonModule],
     entryComponents: [SlackBotDialogComponent],
 })
 
 export class AppModule {
+
     constructor(apollo: Apollo, httpLink: HttpLink) {
-        apollo.create({
-            link: httpLink.create({uri: 'http://bakery-server.apps.mia.ulti.io/graphql'}),
+        apollo.createDefault({
+            link: httpLink.create({ uri: 'http://bakery-server.apps.mia.ulti.io/graphql' }),
             cache: new InMemoryCache()
         });
+
+        apollo.createNamed(
+            'subscription',
+            {
+                link: httpLink.create({ uri: 'https://bbql.apps.mia.ulti.io/graphql' }),
+                cache: new InMemoryCache()
+            });
     }
 }
