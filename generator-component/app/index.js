@@ -80,7 +80,7 @@ class ComponentGenerator extends Generator {
                     if (keysArray[i] === 'Use'){
                         for (let j = 0; j < codeValues.length; j++){
                             if( codeValues[j].tag.length > 0){
-                                if (codeValues[j].tag === 'P' || codeValues[j].tag === 'H1' || codeValues[j].tag === 'H2' || codeValues[j].tag === 'H3'){
+                                if (codeValues[j].tag === 'P' || (codeValues[j].tag[0] === 'H' && codeValues[j].tag.length >=2 && Number.isInteger(codeValues[j].tag[1]))){
                                     this.useArray.push(('<' + codeValues[j].tag.toLowerCase() + '>') + (codeValues[j].content) + ('</' + codeValues[j].tag.toLowerCase() + '>'));
                                 }
                                 else if (codeValues[j].tag === 'IMG'){
@@ -99,7 +99,7 @@ class ComponentGenerator extends Generator {
                     else if (keysArray[i] === 'Style'){
                         for (let j = 0; j < codeValues.length; j++){
                             if( codeValues[j].tag.length > 0){
-                                if (codeValues[j].tag === 'P' || codeValues[j].tag === 'H1' || codeValues[j].tag === 'H2' || codeValues[j].tag === 'H3'){
+                                if (codeValues[j].tag === 'P' || (codeValues[j].tag[0] === 'H' && codeValues[j].tag.length >=2 && Number.isInteger(codeValues[j].tag[1]))){
                                     this.styleArray.push(('<' + codeValues[j].tag.toLowerCase() + '>') + (codeValues[j].content) + ('</' + codeValues[j].tag.toLowerCase() + '>'));
                                 }
                                 else if (codeValues[j].tag === 'IMG'){
@@ -118,7 +118,7 @@ class ComponentGenerator extends Generator {
                     else if (keysArray[i] === 'Content'){
                         for (let j = 0; j < codeValues.length; j++){
                             if( codeValues[j].tag.length > 0){
-                                if (codeValues[j].tag === 'P' || codeValues[j].tag === 'H1' || codeValues[j].tag === 'H2' || codeValues[j].tag === 'H3'){
+                                if (codeValues[j].tag === 'P' || (codeValues[j].tag[0] === 'H' && codeValues[j].tag.length >=2 && Number.isInteger(codeValues[j].tag[1]))){
                                     this.contentArray.push(('<' + codeValues[j].tag.toLowerCase() + '>') + (codeValues[j].content) + ('</' + codeValues[j].tag.toLowerCase() + '>'));
                                 }
                                 else if (codeValues[j].tag === 'IMG'){
@@ -137,7 +137,7 @@ class ComponentGenerator extends Generator {
                     else if (keysArray[i] === 'Code'){
                         for (let j = 0; j < codeValues.length; j++){
                             if( codeValues[j].tag.length > 0){
-                                if (codeValues[j].tag === 'P' || codeValues[j].tag === 'H1' || codeValues[j].tag === 'H2' || codeValues[j].tag === 'H3'){
+                                if (codeValues[j].tag === 'P' || (codeValues[j].tag[0] === 'H' && codeValues[j].tag.length >=2 && Number.isInteger(codeValues[j].tag[1]))){
                                     this.codeArray.push(('<' + codeValues[j].tag.toLowerCase() + '>') + (codeValues[j].content) + ('</' + codeValues[j].tag.toLowerCase() + '>'));
                                 }
                                 else if (codeValues[j].tag === 'IMG'){
@@ -156,7 +156,7 @@ class ComponentGenerator extends Generator {
                     else if (keysArray[i] === 'Intro'){
                         for (let j = 0; j < codeValues.length; j++){
                             if( codeValues[j].tag.length > 0){
-                                if (codeValues[j].tag === 'P' || codeValues[j].tag === 'H1' || codeValues[j].tag === 'H2' || codeValues[j].tag === 'H3'){
+                                if (codeValues[j].tag === 'P' || (codeValues[j].tag[0] === 'H' && codeValues[j].tag.length >=2 && Number.isInteger(codeValues[j].tag[1]))){
                                     this.introArray.push(('<' + codeValues[j].tag.toLowerCase() + '>') + (codeValues[j].content) + ('</' + codeValues[j].tag.toLowerCase() + '>'));
                                 }
                                 else if (codeValues[j].tag === 'IMG'){
@@ -176,7 +176,7 @@ class ComponentGenerator extends Generator {
                         this.tempArray = [];
                         for (let j = 0; j < codeValues.length; j++){
                             if( codeValues[j].tag.length > 0){
-                                if (codeValues[j].tag === 'P' || codeValues[j].tag === 'H1' || codeValues[j].tag === 'H2' || codeValues[j].tag === 'H3'){
+                                if (codeValues[j].tag === 'P' || (codeValues[j].tag[0] === 'H' && codeValues[j].tag.length >=2 && Number.isInteger(codeValues[j].tag[1]))){
                                     this.tempArray.push(('<' + codeValues[j].tag.toLowerCase() + '>') + (codeValues[j].content) + ('</' + codeValues[j].tag.toLowerCase() + '>'));
                                 }
                                 else if (codeValues[j].tag === 'IMG'){
