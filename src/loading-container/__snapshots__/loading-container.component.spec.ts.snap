@@ -2,19 +2,23 @@
 
 exports[`Loading Container should match snapshot 1`] = `
 <ign-loading-container
+  ariaLabel={[Function String]}
   delay={[Function Number]}
   delayTimeout={[Function Number]}
   loading={[Function Boolean]}
   pastDelay="false"
+  spinnerArialLabel={[Function String]}
 >
   
-  <div>
+    <div
+    aria-label="Loading"
+    role="alert"
+  >
     
-    
+      
     
     
   
   </div>
-  
 </ign-loading-container>
 `;
