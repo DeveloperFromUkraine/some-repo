@@ -47,14 +47,18 @@ class SyncGenerator extends Generator {
         let currentDirectory = './src'
         await new Promise((resolve, reject) => { 
             fs.readdir( currentDirectory, ( err, files ) => {
-                files.forEach( ( file, index ) => {
-                    let directory = path.join( currentDirectory, file);
-                    let stats = fs.statSync(directory);
-                    if (stats.isDirectory()){
-                        this.names.push(file);
-                    }
-                })
-                resolve();
+                if (err)
+                    { reject(err); } 
+                else{    
+                    files.forEach( ( file, index ) => {
+                        let directory = path.join( currentDirectory, file);
+                        let stats = fs.statSync(directory);
+                        if (stats.isDirectory()){
+                            this.names.push(file);
+                        }
+                    })
+                    resolve();
+                }
             })
         })
     }

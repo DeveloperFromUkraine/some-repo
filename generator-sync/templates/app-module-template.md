@@ -31,6 +31,7 @@ import { SlackService } from './services/slack-service';
 <% } %>
 
 const routes: Routes = [
+    { path: '', component: WelcomeComponent },
     <% for(var i = 0; i < routes.length; i ++) { %> <%- routes[i]%> 
     <% } %>
 ];
