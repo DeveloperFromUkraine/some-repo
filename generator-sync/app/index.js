@@ -319,7 +319,8 @@ class SyncGenerator extends Generator {
         let demoImports = [];
         let componentNav = [];
         for (let i = 0; i < this.readMeContent.length; i++){
-            if (this.readMeContent[i].routeName !== "text-list-item" && this.readMeContent[i].routeName !== "list-item" && this.readMeContent[i].routeName !== "list-selection"){
+            if (this.readMeContent[i].routeName !== "text-list-item" && this.readMeContent[i].routeName !== "list-item" && this.readMeContent[i].routeName !== "list-selection" && this.readMeContent[i].routeName !== 'dialog-dialog' && this.readMeContent[i].routeName !== 'dialog-dialog-background' &&
+            this.readMeContent[i].routeName !== 'dialog-accept-cancel'){
                 imports.push(`import {Demo` + this.readMeContent[i].name.split(" ").join("") + `Component} from './demo/demo-` +
                 this.readMeContent[i].routeName + `/demo-` + this.readMeContent[i].routeName + `.component';`)
                 routes.push(`{ path: '` + this.readMeContent[i].routeName + `', component: Demo` + this.readMeContent[i].name.split(" ").join("") + `Component },`)
@@ -328,8 +329,16 @@ class SyncGenerator extends Generator {
                 this.readMeContent[i].routeName + `/demo-` + this.readMeContent[i].routeName + `.component';`);
                 componentNav.push(`{ name: '` + this.readMeContent[i].name + `', route: '/` + this.readMeContent[i].routeName + `' },`)
             }
+            else if (this.readMeContent[i].routeName === 'dialog-accept-cancel'){
+                    imports.push(`import {Demo` + this.readMeContent[i].name.split(" ").join("") + `Component} from './demo/demo-dialog/demo-` + this.readMeContent[i].routeName 
+                    + `.component';`);
+                    demoList.push(`Demo` + this.readMeContent[i].name.split(" ").join("") + `Component,`)
+                    demoImports.push(`import {Demo` + this.readMeContent[i].name.split(" ").join("") + `Component} from './demo-dialog/demo-` + 
+                    this.readMeContent[i].routeName + `.component';`);
+            }
 
-            /*this.fs.copyTpl(
+
+            this.fs.copyTpl(
                 this.templatePath('../../templates/app-module-template.md'),
                 this.destinationPath(`./demo-app/app/app.module.ts`),
                 {
@@ -353,7 +362,7 @@ class SyncGenerator extends Generator {
                 {
                     componentNav: componentNav,
                 }
-            )*/
+            )
         }
     };
     

@@ -10,12 +10,13 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 import { IgniteDesignSystemModule } from '../../src';
 import { TestingModule } from './testing/testing.module';
+import { CommonComponentModule } from './common/common-component.module';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { DemoModule } from './demo/demo.module';
 import { MarkdownModule } from './markdown/markdown.module';
-import { MatSidenavModule, MatToolbarModule, MatCardModule } from '@angular/material';
+import { MatSidenavModule, MatToolbarModule, MatCardModule, MatProgressBarModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 
@@ -51,6 +52,7 @@ const routes: Routes = [
         MatToolbarModule,
         MatSidenavModule,
         MatCardModule,
+        MatProgressBarModule,
         MatCheckboxModule,
         MatRadioModule,
         MatIconModule,
@@ -58,6 +60,7 @@ const routes: Routes = [
         HttpLinkModule,
         IgniteDesignSystemModule,
         TestingModule,
+        CommonComponentModule,
         MarkdownModule,
         DemoModule,
         HttpClientModule,
