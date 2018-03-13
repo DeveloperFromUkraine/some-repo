@@ -1,3 +1,24 @@
+/* This generator automatically creates components in the Playground based off the source directory's read me's. 
+ * To use:
+ *  Run rm -rf node_modules in the IDS directory.
+ *  Run rm -rf node_modules in the generator-sync directory.
+ *  Run npm link in the IDS directory.
+ *  Run npm link in the generator-sync directory.
+ *  Run npm link generator-sync in the generator-sync directory.
+ *  Run npm link generator-sync in the IDS directory.
+ *  Run yo sync from the IDS directory.
+ * 
+ *  If you wish to add a new component, create a readme with the component name, followed by .md 
+ *  Then run the generator following the instructions above. Overwrite the demo.module, app.module, and app.component. 
+ * 
+ *  If unintenionally deleted an existing component from the Playground/demo-app directory, run yo sync and do not
+ *  override the demo.module app.module, and app.component files. 
+ * 
+ *  If deleting the demo-app directory, overwrite the demo.module, app.module, and app.component. 
+ * 
+ * PLEASE NOTE THAT ANY CSS FILES FOR FORMATTING WITHIN THE MAT-TAB GROUP WILL BE DELETED AND MUST BE MANUALLY CREATED.
+ * ALL STYLING AND FORMATTING SHOULD BE DONE WITHIN THE APP FILE'S SCSS FILE IF POSSIBLE. */
+
 var Generator = require('yeoman-generator');
 var _ = require('lodash');
 const cheerio = require('cheerio');
