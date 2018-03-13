@@ -341,7 +341,7 @@ class SyncGenerator extends Generator {
         let componentNav = [];
         for (let i = 0; i < this.readMeContent.length; i++){
             if (this.readMeContent[i].routeName !== "text-list-item" && this.readMeContent[i].routeName !== "list-item" && this.readMeContent[i].routeName !== "list-selection" && this.readMeContent[i].routeName !== 'dialog-dialog' && this.readMeContent[i].routeName !== 'dialog-dialog-background' &&
-            this.readMeContent[i].routeName !== 'dialog-accept-cancel'){
+            this.readMeContent[i].routeName !== 'dialog-accept-cancel' && this.readMeContent[i].routeName !== 'contribution'){
                 imports.push(`import {Demo` + this.readMeContent[i].name.split(" ").join("") + `Component} from './demo/demo-` +
                 this.readMeContent[i].routeName + `/demo-` + this.readMeContent[i].routeName + `.component';`)
                 routes.push(`{ path: '` + this.readMeContent[i].routeName + `', component: Demo` + this.readMeContent[i].name.split(" ").join("") + `Component },`)
@@ -356,6 +356,15 @@ class SyncGenerator extends Generator {
                     demoList.push(`Demo` + this.readMeContent[i].name.split(" ").join("") + `Component,`)
                     demoImports.push(`import {Demo` + this.readMeContent[i].name.split(" ").join("") + `Component} from './demo-dialog/demo-` + 
                     this.readMeContent[i].routeName + `.component';`);
+            }
+
+            else if (this.readMeContent[i].routeName === 'contribution'){
+                imports.push(`import {Demo` + this.readMeContent[i].name.split(" ").join("") + `Component} from './demo/demo-` +
+                this.readMeContent[i].routeName + `/demo-` + this.readMeContent[i].routeName + `.component';`)
+                routes.push(`{ path: '` + this.readMeContent[i].routeName + `', component: Demo` + this.readMeContent[i].name.split(" ").join("") + `Component },`)
+                demoList.push(`Demo` + this.readMeContent[i].name.split(" ").join("") + `Component,`)
+                demoImports.push(`import {Demo` + this.readMeContent[i].name.split(" ").join("") + `Component} from './demo-` +
+                this.readMeContent[i].routeName + `/demo-` + this.readMeContent[i].routeName + `.component';`);
             }
 
 
