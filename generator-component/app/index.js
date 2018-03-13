@@ -4,6 +4,7 @@
  * Steps:
  * Run rm -rf node_modules and npm link base directory
  * Then run rm -rf node_modules and npm link from generator-component directory.
+ * Then run rm -
  * Then run npm link generator-component from generator-component directory
  * Then run npm link generator-component from base directory.
  * Then run yo component from the base directory.*/
