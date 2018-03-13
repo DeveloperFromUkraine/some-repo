@@ -1,6 +1,6 @@
 *** HTML ***
 
-<div style="width: 100%">
-    <h1>Click on the background to trigger subscriber</h1>
-    <button mat-raised-button matDialogClose>Close</button>
-</div>
+# Click on the background to trigger subscriber
+
+<button mat-raised-button matDialogClose>Close</button>
+
