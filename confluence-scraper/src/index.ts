@@ -13,8 +13,9 @@ if (args.length < 0) {
     console.log('Error: Missing Username and password; Run command:\nnpm start [username] [password]');
 }
 else {
-    let user = 'mariaha';
-    let pass = 't1I3o5T7b9!i1N3e5G7u9!';
+    //add username and password
+    let user = '';
+    let pass = '';
 
     scraper.scrape(user, pass).then((res: any) => {
         if (res === null) {
