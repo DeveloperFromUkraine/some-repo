@@ -13,7 +13,7 @@ See [Material Design Radio Button](https://material.io/guidelines/components/sel
 <mat-tab-group>
     <mat-tab label="Component Sample"><div class="tab-height">
         <mat-radio-group id="radioButtonList" class="example-radio-group" [(ngModel)]="rowOfRadioButtons" aria-label="Sample Radio Button List">
-            <mat-radio-button class="example-radio-button" *ngFor="let button of buttons" [value]="button" aria-describedby="radioButtonList">
+            <mat-radio-button class="example-radio-button" \*ngFor="let button of buttons" [value]="button" aria-describedby="radioButtonList">
                 {{button}} 
                 &nbsp;
             </mat-radio-button>
@@ -21,7 +21,7 @@ See [Material Design Radio Button](https://material.io/guidelines/components/sel
     <mat-tab label="HTML"><div class="tab-height">
         <table style="width:100%">
             <p> &lt;mat-radio-group id="radioButtonList" class="example-radio-group" [(ngModel)]="rowOfRadioButtons" aria-label="Sample Radio Button List"&gt;</p>
-            <p> &nbsp;&nbsp;&lt;mat-radio-button class="example-radio-button" *ngFor="let button of buttons" [value]="button" aria-describedby="radioButtonList"&gt;</p>
+            <p> &nbsp;&nbsp;&lt;mat-radio-button class="example-radio-button" \*ngFor="let button of buttons" [value]="button" aria-describedby="radioButtonList"&gt;</p>
             <p>{{button}} &lt;/mat-radio-button&gt;</p>
             <p> &lt;/mat-radio-group&gt;</p>
         </table></div>

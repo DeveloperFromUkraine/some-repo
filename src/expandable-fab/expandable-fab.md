@@ -16,9 +16,9 @@ The expandable fab handles state (open/close) implicitly so developers do not ne
         <div id ="element" ><ign-expandable-fab ariaLabelOpen="open example menu" ariaLabelClose="close example menu">
             <ign-expandable-fab-item icon="add">
             </ign-expandable-fab-item >
-            <ign-expandable-fab-item icon="file_upload">
+            <ign-expandable-fab-item icon="file\_upload">
             </ign-expandable-fab-item >
-            <ign-expandable-fab-item icon="lock_outline">
+            <ign-expandable-fab-item icon="lock\_outline">
             </ign-expandable-fab-item >
         </ign-expandable-fab></div>
     </div></mat-tab>
@@ -27,9 +27,9 @@ The expandable fab handles state (open/close) implicitly so developers do not ne
             <p>&lt;ign-expandable-fab ariaLabelOpen="open example menu" ariaLabelClose="close example menu"&gt;</p>
             <p>   &nbsp;&nbsp;&lt;ign-expandable-fab-item icon="add"&gt;</p>
             <p>   &nbsp;&nbsp;&lt;/ign-expandable-fab-item&gt;</p>
-            <p>   &nbsp;&nbsp;&lt;ign-expandable-fab-item icon="file_upload"&gt;</p>
+            <p>   &nbsp;&nbsp;&lt;ign-expandable-fab-item icon="file\_upload"&gt;</p>
             <p>   &nbsp;&nbsp;&lt;/ign-expandable-fab-item&gt;</p>
-            <p>   &nbsp;&nbsp;&lt;ign-expandable-fab-item icon="lock_outline"&gt;</p>
+            <p>   &nbsp;&nbsp;&lt;ign-expandable-fab-item icon="lock\_outline"&gt;</p>
             <p>   &nbsp;&nbsp;&lt;/ign-expandable-fab-item&gt;</p>
             <p>   &lt;/ign-expandable-fab&gt;</p>
         </table></div>
