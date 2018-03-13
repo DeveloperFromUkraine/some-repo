@@ -51,6 +51,8 @@ See [Material Design List](https://material.io/guidelines/style/icons.html) and 
 
 *** TypeScript *** 
 
+typesOfOptions = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
+
 *** ExternalTypeScript ***
 
 *** Imports ***

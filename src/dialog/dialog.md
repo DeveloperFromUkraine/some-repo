@@ -1,4 +1,5 @@
 *** HTML ***
+
 # Dialogs
 
 ## Use
@@ -231,4 +232,4 @@ export class DemoDialogComponentDialogBackground {}
 *** Imports ***
 import { MatDialog } from '@angular/material';
 import { Observable } from 'rxjs/Observable';
-import { DemoDialogAcceptCancelComponent } from './dialog-accept-cancel/dialog-accept-cancel.component';
+import { DemoDialogAcceptCancelComponent } from './demo-dialog-accept-cancel.component';
