@@ -244,25 +244,7 @@ class SyncGenerator extends Generator {
                     }
                 }
             }
-
-            catch (err){
-                let capitalizedName = this.names[i];
-                capitalizedName = capitalizedName.charAt(0).toUpperCase() + this.names[i].slice(1);
-                    for (let j = 0; j < capitalizedName.length; j++){
-                        if (capitalizedName.charAt(j) === "-"){
-                            capitalizedName = capitalizedName.substr(0, j+1) + (capitalizedName.charAt(j+1).toUpperCase()) + capitalizedName.substr((j+1) + 1);
-                        }
-                    }
-
-                this.readMeContent.push(
-                    {
-                        routeName: this.names[i],
-                        name: capitalizedName.split('-').join(" "),
-                        content: "",
-                    }
-                )
-
-            }
+            catch (err) { }
         }
 
         for (let i = 0; i < this.readMeContent.length; i++){
