@@ -11,7 +11,7 @@ const DEFAULT_LOADING_DELAY_MS = 400;
 export class LoadingContainerComponent implements OnInit {
   @Input() loading: boolean;
   @Input() ariaLabel: string = "Loading";
-  spinnerArialLabel: string;
+  spinnerAriaLabel: string;
   pastDelay: boolean;
   private delay: number;
   private delayTimeout: any;
@@ -23,7 +23,7 @@ export class LoadingContainerComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.spinnerArialLabel = this.ariaLabel;
+    this.spinnerAriaLabel = this.ariaLabel;
     this.delayTimeout = setTimeout(() => {
       this.pastDelay = true;
     }, this.delay);

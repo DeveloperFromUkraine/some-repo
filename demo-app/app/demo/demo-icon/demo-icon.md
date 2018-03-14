@@ -14,6 +14,8 @@
 ## Accessibility
 
 * Include a descriptive aria-label for the icon as well as setting aria-hidden="false"
+* Add a tabindex="0" so that it could be navigated to using tabs
+* If the icon is used as a button with eventhandlers on click, include a role="button" within the mat-icon tag
 * Refer to HTML in Sample section on usage
 
 ## Icon Components
