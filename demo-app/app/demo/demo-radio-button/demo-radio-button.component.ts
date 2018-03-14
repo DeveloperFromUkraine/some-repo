@@ -11,5 +11,6 @@ export class DemoRadioButtonComponent {
 
     buttons = [
         'I AM A BUTTON',
+        'I AM ANOTHER BUTTON'
     ];
 }
