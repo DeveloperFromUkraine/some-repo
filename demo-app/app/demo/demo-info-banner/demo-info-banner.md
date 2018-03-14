@@ -14,3 +14,7 @@
 * Info banners should avoid overlapping any elements or content on the page.
 * Info banners should maintain their formatting and blue font, as to draw attention to the user that there was not
 a problem.
+
+## Accessibility
+* Add a descriptive aria-label to the dismiss buttons tag that describes the action of the button (ex: exit)
+* Refer to the Sample HTML for an example

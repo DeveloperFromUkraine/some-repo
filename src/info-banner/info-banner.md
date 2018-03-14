@@ -11,7 +11,7 @@ The info banner component is used to display messages on the front end to users,
 <mat-tab-group>
     <mat-tab label="Component Sample">
         <div class="tab-height">
-            <ign-info-banner> <button class="dismiss-button" type="button" mat-icon-button>&times;</button>
+            <ign-info-banner> <button class="dismiss-button" type="button" aria-label="exit" mat-icon-button>&times;</button>
                 <ul class="message-list">
                     <li>This is an informational message.</li>
                     <li>You can add icons like the blue x above to clear the message.</li>
@@ -20,7 +20,7 @@ The info banner component is used to display messages on the front end to users,
         </div></mat-tab>
     <mat-tab label="HTML"><div class="tab-height">
         <table style="width:100%">
-            <p> &lt;ign-info-banner> &lt;button class="dismiss-button" type="button" mat-icon-button"&gt;&times;&lt;/button&gt;</p>
+            <p> &lt;ign-info-banner> &lt;button class="dismiss-button" type="button" aria-label="exit" mat-icon-button"&gt;&times;&lt;/button&gt;</p>
             <p> &nbsp;&nbsp;&lt;ul class="message-list"&gt;</p>
             <p>&nbsp;&nbsp; &nbsp;&nbsp; &lt;li&gt;This is an informational message.&lt;/li&gt;</p>
             <p>&nbsp;&nbsp; &nbsp;&nbsp; &lt;li>You can add icons like the blue x above to clear the message.&lt;/li&gt;</p>
@@ -45,6 +45,10 @@ The info banner component is used to display messages on the front end to users,
 * Info banners should avoid overlapping any elements or content on the page.
 * Info banners should maintain their formatting and blue font, as to draw attention to the user that there was not
 a problem.
+
+## Accessibility
+* Add a descriptive aria-label to the dismiss buttons tag that describes the action of the button (ex: exit)
+* Refer to the Sample HTML for an example
 
 *** TypeScript *** 
 

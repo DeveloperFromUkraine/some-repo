@@ -10,11 +10,19 @@ See [Material Design Selection Controls](https://material.io/guidelines/componen
 ## Sample
 <mat-tab-group>
     <mat-tab label="Component Sample">
-        <div class="tab-height"> <mat-checkbox>Check me!</mat-checkbox> </div>
+        <div class="tab-height"> 
+            <div id="checkboxList" aria-label="Checkbox List">
+                <mat-checkbox aria-describedby="checkboxList">Check me!</mat-checkbox> 
+                <mat-checkbox aria-describedby="checkboxList">Check me too!</mat-checkbox> 
+            </div>    
+        </div>
     </mat-tab>
     <mat-tab label="HTML"><div class="tab-height">
         <table style="width:100%">
-            &lt;mat-checkbox&gt;Check me!&lt;/mat-checkbox&gt;
+            &lt;div id="checkboxList" aria-label ="Checkbox List"&gt; <br/>
+                &nbsp; &lt;mat-checkbox aria-describedby="checkboxList"&gt;Check me!&lt;/mat-checkbox&gt; <br/>
+                &nbsp; &lt;mat-checkbox aria-describedby="checkboxList"&gt;Check me too!&lt;/mat-checkbox&gt; <br/>
+            &lt;/div&gt;
         </table>
     </div></mat-tab>
 </mat-tab-group>
@@ -27,6 +35,12 @@ See [Material Design Selection Controls](https://material.io/guidelines/componen
 
 ## Content
 * Use short, succinct labels for options; groups can be preceded by a heading and/or informational text. Progressively disclose longer descriptions when possible.
+
+## Accessibility
+* Assign a unique ID within the enclosing div for the checkboxes
+* Assign a descriptive aria-label within the enclosing div for the checkboxes
+* Reference that same ID within each checkbox using the aria-describedby tag
+* Refer to Sample HTML for an example
 
 *** TypeScript *** 
 
