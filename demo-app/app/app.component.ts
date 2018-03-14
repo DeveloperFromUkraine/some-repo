@@ -66,6 +66,9 @@ export class AppComponent implements OnInit {
         { name: 'Test Types', route: 'test-types'},
         { name: 'Resources', route: 'resources'}
     ];
+    accessibilityItems = [
+        { name: 'A11y Home', route: 'a11y-guidelines' },
+    ];
     selectedOption: string;
 
     constructor (public dialog: MatDialog, private router: Router, 
