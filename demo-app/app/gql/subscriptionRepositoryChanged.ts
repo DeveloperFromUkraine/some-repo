@@ -1,21 +1,50 @@
 import gql from 'graphql-tag';
 
 export const SubscriptionRepositoryChanged = gql`
-    subscription($types: [RepoChangeType], $project: String!, $repo: String!, $branches: [String]) {
-        repositoryChanged(types: $types, project: $project, repo: $repo, branches: $branches) {
-            type
-            repo {
-                id
+repositoryChanged(types: $types, project: $project, repo: $repo, branches: $branches) {
+    type
+    repo {
+      slug
+      id
+      name
+      state
+      project
+      url
+      branches(types: [MASTER, DEVELOP]) {
+        values {
+          displayId
+          url
+          latestCommit {
+            author {
+              displayName
+              emailAddress
+              avatarUrl
             }
+            message
+          }
+          builds(limit: 5) {
+            author
+            time
             branchName
-            fromHash
-            from {
-                id
-            }
-            toHash
-            to {
-                id
-            }
+            concourseUrl
+            branchType
+            duration
+            pipeline
+            status
+            commitMessage
+          }
         }
+      }
+    }
+    branchName
+    fromHash
+    from {
+      id
+    }
+    toHash
+    to {
+      id
+    }
+  }
     }
 `;
