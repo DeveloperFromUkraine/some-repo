@@ -22,6 +22,14 @@
     </mat-nav-list>
 
     <mat-divider></mat-divider>
+    <p matSubheader class="sidenav-subheader">Accessibility</p>
+    <mat-nav-list dense>
+      <div *ngFor="let accessibilityItem of accessibilityItems">
+        <h3><a mat-list-item [routerLink]="[accessibilityItem.route]"><span mat-line>{{ accessibilityItem.name }}</span></a></h3>
+      </div>
+    </mat-nav-list>
+
+    <mat-divider></mat-divider>
     <p matSubheader class="sidenav-subheader">Contributions</p>
     <mat-nav-list dense>
     <h5><a mat-list-item [routerLink]="['contribution']">

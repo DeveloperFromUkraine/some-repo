@@ -11,6 +11,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import { IgniteDesignSystemModule } from '../../src';
 import { TestingModule } from './testing/testing.module';
 import { CommonComponentModule } from './common/common-component.module';
+import { AccessibilityModule } from './accessibility/accessibility.module';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
@@ -130,10 +131,11 @@ const routes: Routes = [
         MarkdownModule,
         DemoModule,
         HttpClientModule,
+        AccessibilityModule
     ],
     providers: [SlackService, PendoService, CookieService],
     bootstrap: [AppComponent],
-    exports: [MatIconModule, MatButtonModule], 
+    exports: [MatIconModule, MatButtonModule],
     entryComponents: [SlackBotDialogComponent],
 })
 
