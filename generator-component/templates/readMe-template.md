@@ -1,6 +1,7 @@
 *** HTML ***
 
 # <%- name %>
+
 <%- firstHalfContent %>
 
 ## Sample

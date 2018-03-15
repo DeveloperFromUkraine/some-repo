@@ -6,7 +6,9 @@
  * Then run rm -rf node_modules and npm link from generator-component directory.
  * Then run npm link generator-component from generator-component directory
  * Then run npm link generator-component from base directory.
- * Then run yo component from the base directory.*/
+ * 
+ * cd into the confluence-scraper directory
+ * run npm start to begin the scraper/parser/generator */
 
 var Generator = require('yeoman-generator');
 var _ = require('lodash');
@@ -210,8 +212,8 @@ class ComponentGenerator extends Generator {
                 this.destinationPath(`../src/${(this.name).toLowerCase().split(' ').join('-')}/${(this.name).toLowerCase().split(' ').join('-')}.md`),
                 {
                    name: this.name,
-                   firstHalfContent: toMarkdown(this.firstHalfHtmlArray[0].split(',').join('\n')),
-                   secondHalfContent: toMarkdown(this.secondHalfHtmlArray[0].split(',').join('\n')), 
+                   firstHalfContent: ((toMarkdown(this.firstHalfHtmlArray[0]).split(',').join('')).split(`\n\n`).join("\n")).split(`\n\n`).join("\n"),
+                   secondHalfContent: ((toMarkdown(this.secondHalfHtmlArray[0]).split(',').join('')).split(`\n\n`).join("\n")).split(`\n\n`).join("\n"), 
                    htmlCode : this.html,
                    tsCode : this.ts,
                 }
