@@ -10,3 +10,8 @@ component.
 ## Style
 
 * No stylistic specifications for this component.
+
+## Accessibility
+
+* Add a descriptive ariaLabel attribute that describes what is being loaded
+* Refer to Sample HTML for an example on usage

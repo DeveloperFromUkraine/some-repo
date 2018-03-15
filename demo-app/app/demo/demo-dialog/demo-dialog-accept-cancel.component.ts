@@ -3,7 +3,7 @@ import { MatDialogRef } from '@angular/material';
 
 @Component({
     selector: 'ign-dialog-cancel',
-    templateUrl: './dialog-accept-cancel.component.html'
+    templateUrl: './demo-dialog-accept-cancel.component.html'
 })
 export class DemoDialogAcceptCancelComponent {
 

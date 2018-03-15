@@ -5,7 +5,7 @@
     "baseUrl": "./",
     "module": "es2015",
     "paths": {
-      "@angular/*": ["./node_modules/@angular/*"]
+      "@angular/*": ["../node_modules/@angular/*"]
     }
   },
   "exclude": [

@@ -14,6 +14,7 @@ import { ApolloLink } from 'apollo-link';
 import { IgniteDesignSystemModule } from '../../src';
 import { TestingModule } from './testing/testing.module';
 import { CommonComponentModule } from './common/common-component.module';
+import { AccessibilityModule } from './accessibility/accessibility.module';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
@@ -59,6 +60,8 @@ import { DemoIconComponent } from './demo/demo-icon/demo-icon.component';
 import { DemoSelectionListComponent } from './demo/demo-selection-list/demo-selection-list.component';
 import { DemoMarkdownComponent } from './demo/demo-markdown/demo-markdown.component';
 import { DemoContributionComponent } from './demo/demo-contribution/demo-contribution.component';
+import { PendoService } from './pendo/pendo.service';
+import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { DemoButtonGroupComponent } from './demo/demo-button-group/demo-button-group.component';
 import { DemoDataTableContainerComponent } from './demo/demo-data-table-container/demo-data-table-container.component';
 import { DemoExpandableSearchComponent } from './demo/demo-expandable-search/demo-expandable-search.component';
@@ -131,8 +134,9 @@ const routes: Routes = [
         MarkdownModule,
         DemoModule,
         HttpClientModule,
+        AccessibilityModule
     ],
-    providers: [SlackService],
+    providers: [SlackService, PendoService, CookieService],
     bootstrap: [AppComponent],
     exports: [MatIconModule, MatButtonModule],
     entryComponents: [SlackBotDialogComponent],
@@ -141,7 +145,7 @@ const routes: Routes = [
 export class AppModule {
 
     constructor(apollo: Apollo, httpLink: HttpLink) {
-        const uri = 'http://bakery-server.apps.mia.ulti.io/graphql';
+        const uri = 'https://bakery-server.apps.mia.ulti.io/graphql';
         const http = httpLink.create({ uri });
 
         const ws = new WebSocketLink({

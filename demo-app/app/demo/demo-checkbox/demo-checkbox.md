@@ -7,3 +7,9 @@
 
 ## Content
 * Use short, succinct labels for options; groups can be preceded by a heading and/or informational text. Progressively disclose longer descriptions when possible.
+
+## Accessibility
+* Assign a unique ID within the enclosing div for the checkboxes
+* Assign a descriptive aria-label within the enclosing div for the checkboxes
+* Reference that same ID within each checkbox using the aria-describedby tag
+* Refer to Sample HTML for an example

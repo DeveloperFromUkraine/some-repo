@@ -14,3 +14,11 @@
 * Don't
     * Don't include more than 5-7 options, depending on label length use a select menu instead.
     * Don't use long labels, consider a heading with an info dialog (for concepts that require additional instruction).
+
+## Accessibility
+
+* Relationships between radio buttons and their group heading should be programatically explicit
+    * Assign a unique ID and a descriptive aria-label within the mat-radio-group tag
+    * Reference the unique ID in each child radio button using the <b>aria-describedby</b> property.
+
+* Refer to HTML in Sample section for example

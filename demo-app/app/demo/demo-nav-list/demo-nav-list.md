@@ -9,3 +9,8 @@
 
 * Nav lists should be displayed in vertical positioning.
 * Nav lists should be spaced evenly apart, to ensure ease of navigation.
+
+## Accessibility
+
+* Add tabindex="0" within the a tag of the nav-list in order to make each link accessible by tab
+* Refer to Sample HTML for an example

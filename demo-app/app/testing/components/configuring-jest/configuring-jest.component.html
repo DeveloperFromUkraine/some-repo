@@ -26,7 +26,7 @@
     <p>1. Install dependency.</p>
     <mat-card class='code-block-card'>
         <pre>
-            <code class="code-block">
+            <code class="code-block line">
 $ yarn add --dev jest jest-preset-angular @types/jest
             </code>
         </pre>
@@ -35,10 +35,10 @@ $ yarn add --dev jest jest-preset-angular @types/jest
     <p>2. Add this entry to package.json.</p>
     <mat-card class='code-block-card'>
         <pre>
-            <code class="code-block">
-"jest": {{ '{' }}
-    "preset": "jest-preset-angular",
-    "setupTestFrameworkScriptFile": "&lt;rootDir&gt;/src/jest.ts"
+            <code class="code-block line">
+<span class="string">"jest"</span>: {{ '{' }}
+    <span class="string">"preset"</span>: <span class="string">"jest-preset-angular"</span>,
+    <span class="string">"setupTestFrameworkScriptFile"</span>: <span class="string">"&lt;rootDir&gt;/src/jest.ts"</span>
 }
             </code>
         </pre>
@@ -48,13 +48,13 @@ $ yarn add --dev jest jest-preset-angular @types/jest
     <p>a. Include the following code to patch the window object since jsdom doesn't have it all implemented.</p>
     <mat-card class='code-block-card'>
         <pre>
-            <code class="code-block">
-const mock = () => {{ '{' }}
-    let storage = {{ '{' }}};
-    return {{ '{' }}
-        getItem: key => key in storage ? storage[key] : null,
-        setItem: (key, value) => storage[key] = value || '',
-        removeItem: key => delete storage[key],
+            <code class="code-block line">
+<span class="keyword">const</span> mock = () => {{ '{' }}
+    <span class="keyword">let</span> storage = {{ '{' }}};
+    <span class="keyword">return</span> {{ '{' }}
+        getItem: key => key in storage ? storage[key] : <span class="keyword">null</span>,
+        setItem: (key, value) => storage[key] = value || <span class="string">''</span>,
+        removeItem: key => <span class="keyword">delete</span> storage[key],
         clear: () => storage = {{ '{' }}},
     };
 };
@@ -65,9 +65,9 @@ const mock = () => {{ '{' }}
     <p>4. At the same location, create the file <span>jest.ts</span> and include the following</p>
     <mat-card class='code-block-card'>
         <pre>
-            <code class="code-block">
-import 'jest-preset-angular';
-import './jest-global-mocks';
+            <code class="code-block line">
+<span class="keyword">import</span> <span class="string">'jest-preset-angular'</span>;
+<span class="keyword">import</span> <span class="string">'./jest-global-mocks'</span>;
             </code>
         </pre>
     </mat-card>
@@ -75,10 +75,10 @@ import './jest-global-mocks';
     <p>5. Update your npm test scripts</p>
     <mat-card class='code-block-card'>
         <pre>
-            <code class="code-block">
-"test": "jest",
-"test:watch": "jest --watch",
-"test:ci": "jest --runInBand"
+            <code class="code-block line">
+<span class="string">"test"</span>: <span class="string">"jest"</span>,
+<span class="string">"test:watch"</span>: <span class="string">"jest --watch"</span>,
+<span class="string">"test:ci"</span>: <span class="string">"jest --runInBand"</span>
             </code>
         </pre>
     </mat-card>
@@ -88,20 +88,20 @@ import './jest-global-mocks';
     <p>7. Update <span>tsconfig.spec.json</span>: Change "jasmine" to "jest"</p>
     <mat-card class='code-block-card'>
         <pre>
-            <code class="code-block">
-"types": [
-    "jasmine",
-    "node"
+            <code class="code-block line">
+<span class="string">"types"</span>: [
+    <span class="string">"jasmine"</span>,
+    <span class="string">"node"</span>
 ]
             </code>
         </pre>
     </mat-card>
     <mat-card class='code-block-card'>
         <pre>
-            <code class="code-block">
-"types": [
-    "jest",
-    "node"
+            <code class="code-block line">
+<span class="string">"types"</span>: [
+    <span class="string">"jest"</span>,
+    <span class="string">"node"</span>
 ]
             </code>
         </pre>
@@ -109,22 +109,22 @@ import './jest-global-mocks';
     <p>8. Update <span>tsconfig.e2e.json</span>: Change "jasmine" to "jest"</p>
     <mat-card class='code-block-card'>
         <pre>
-            <code class="code-block">
-"types": [
-    "jasmine",
-    "jasminewd2",
-    "node"
+            <code class="code-block line">
+<span class="string">"types"</span>: [
+    <span class="string">"jasmine"</span>,
+    <span class="string">"jasminewd2"</span>,
+    <span class="string">"node"</span>
 ]
             </code>
         </pre>
     </mat-card>
     <mat-card class='code-block-card'>
         <pre>
-            <code class="code-block">
-"types": [
-    "jest",
-    "jasminewd2",
-    "node"
+            <code class="code-block line">
+<span class="string">"types"</span>: [
+    <span class="string">"jest"</span>,
+    <span class="string">"jasminewd2"</span>,
+    <span class="string">"node"</span>
 ]
             </code>
         </pre>

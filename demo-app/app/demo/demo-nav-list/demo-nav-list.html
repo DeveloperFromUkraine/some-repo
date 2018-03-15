@@ -8,7 +8,7 @@
     <mat-tab label="Component Sample">
         <div class="tab-height">
             <ign-nav-list>
-                <a ign-list-item onClick=window.open() *ngFor="let folder of folders" target="_blank">
+                <a ign-list-item onClick=window.open() *ngFor="let folder of folders" target="_blank" tabindex="0">
                     <mat-icon mat-list-icon>folder</mat-icon>
                     <h4>{{folder.name}}</h4>
                     <p> {{folder.updated | date}} </p>
@@ -19,7 +19,7 @@
         <table style="width:100%">
             <p> &lt;ign-nav-list&gt;</p>
             <p> &nbsp;&nbsp;&nbsp;&nbsp;&lt;a ign-list-item onClick&#61;window&#46;open&#40;&#41; &#42;ngFor&#61;"let folder of folders"</p>
-            <p>     target="_blank"&gt;</p>
+            <p>     target="_blank" tabindex="0"&gt;</p>
             <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mat-icon mat-list-icon&gt;folder&lt;/mat-icon&gt;</p>
             <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;&#123;folder&#46;name&#125;&lt;/h4&gt;</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt; &#123;folder&#46;updated &#124; date&#125; &lt;/p&gt;</p>

@@ -10,12 +10,12 @@
 <mat-tab-group>
     <mat-tab label="Component Sample">
         <div class="tab-height">
-            <mat-icon>home</mat-icon>
+            <mat-icon aria-label="home icon" aria-hidden="false" tabindex="0">home</mat-icon>
         </div>
     </mat-tab>
     <mat-tab label="HTML"><div class="tab-height">
         <table style="width:100%">
-            &lt;mat-icon&gt;home&lt;/mat-icon&gt;
+            &lt;mat-icon aria-label="Home Icon" aria-hidden="false" tabindex="0"&gt;home&lt;/mat-icon&gt;
         </table>
     </div></mat-tab>
 </mat-tab-group>
@@ -36,10 +36,12 @@
                     <li>The mat-icon matListIcon component should be used for list items.</li>
                     <li>This component should not be used for selection lists.</li>
                     <li>This component should be used for nav lists.</li>
+                    <li>The component should have a descriptive aria-label for the list as well as aria-hidden="false"</li>
+                    <li>The component should have a tabindex="0" to make it possible to navigate through tabs</li>
                 </ul>
             </div></mat-tab>
             <mat-tab label="HTML"><div class="tab-height">
-                <p>&lt;mat-icon matListIcon&gt; &lt;/mat-icon matListIcon&gt;</p>
+                <p>&lt;mat-icon matListIcon aria-label="Icon List Title" aria-hidden="false" tabindex="0"&gt; &lt;/mat-icon matListIcon&gt;</p>
             </div></mat-tab>
         </mat-tab-group>
     </mat-expansion-panel>

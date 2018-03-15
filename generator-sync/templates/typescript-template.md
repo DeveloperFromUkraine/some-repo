@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-
-const NOTES: string = require('raw-loader!./demo-<%= routeName%>.md');
-
+<%- additionalImports %>
 @Component({
     selector: 'demo-<%= routeName%>',
     templateUrl: './demo-<%= routeName%>.html',
@@ -9,5 +7,6 @@ const NOTES: string = require('raw-loader!./demo-<%= routeName%>.md');
 
 export class Demo<%= componentName%>Component {
     <%- tsCode%>
-    notes = NOTES;
 }
+
+<%- externalTSCode %>
