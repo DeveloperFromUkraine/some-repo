@@ -57,14 +57,14 @@ export class WelcomeComponent implements OnInit {
                 }
 
                 //updating branch info
-                this.developBranchData = subscriptionData.data.repositoryChanged.branches.values[0].builds[0];
-                this.masterBranchData = subscriptionData.data.repositoryChanged.branches.values[1].builds[1];
+                // this.developBranchData = subscriptionData.data.repositoryChanged.branches.values[0].builds[0];
+                // this.masterBranchData = subscriptionData.data.repositoryChanged.branches.values[1].builds[1];
 
-                console.log('Insert logic here.');
-                console.log('develop info');
-                console.dir(this.developBranchData);
-                console.log('master info');
-                console.dir(this.masterBranchData);
+                 console.log('Insert logic here.');
+                // console.log('develop info');
+                // console.dir(this.developBranchData);
+                // console.log('master info');
+                // console.dir(this.masterBranchData);
                 console.dir(subscriptionData.data);
             }
         })
