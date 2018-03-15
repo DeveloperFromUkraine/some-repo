@@ -9,7 +9,7 @@ export const SubscriptionRepositoryChanged = gql`
                 project {
                     id
                 }
-                branches {
+                branches(types: [MASTER, DEVELOP]) {
                     nextPageStart
                 }
             }
