@@ -13,6 +13,13 @@ export const SubscriptionRepositoryChanged = gql`
                     nextPageStart
                     values {
                         id
+                        displayId
+                        projectKey
+                        repoKey
+                        project {
+                            id
+                        }
+                        url
                     }
                 }
             }
