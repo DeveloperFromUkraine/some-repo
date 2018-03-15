@@ -5,14 +5,10 @@ export const SubscriptionRepositoryChanged = gql`
         repositoryChanged(types: $types, project: $project, repo: $repo, branches: $branches) {
             type
             repo {
-                slug
                 id
-                name
-                state
-                forkable
-                public
-                project
-                url
+                project {
+                    id
+                }
             }
         }
     }
