@@ -56,7 +56,8 @@ export class WelcomeComponent implements OnInit {
                     return prev;
                 }
 
-                console.log(subscriptionData.data);
+                console.log('it works!');
+                console.dir(subscriptionData.data);
             }
         })
     }
