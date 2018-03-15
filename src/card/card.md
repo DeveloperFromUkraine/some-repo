@@ -14,9 +14,9 @@ See [Material Design Components](https://material.io/guidelines/components/cards
             <ign-card-main>
                 <ign-card-header-container><ign-card-toolbar>
                     <ign-card-title>This is a Card Title Component.</ign-card-title>
-                    <button mat-icon-button> <mat-icon style="color:lightgray" class="material-icons">check</mat-icon></button>
-                    <button mat-icon-button> <mat-icon style="color:lightgray" class="material-icons">menu</mat-icon></button>
-                    <button mat-icon-button> <mat-icon style="color:lightgray" class="material-icons">more</mat-icon></button>
+                    <button mat-icon-button> <mat-icon style="color:lightgray" class="material-icons" aria-hidden="false" aria-label="check">check</mat-icon></button>
+                    <button mat-icon-button> <mat-icon style="color:lightgray" class="material-icons" aria-hidden="false" aria-label="menu">menu</mat-icon></button>
+                    <button mat-icon-button> <mat-icon style="color:lightgray" class="material-icons" aria-hidden="false" aria-label="more">more</mat-icon></button>
                 </ign-card-toolbar></ign-card-header-container>
                 <ign-card-section>
                     <ign-card-header-container> <ign-card-section-title>Here's a Card Section Title Component.</ign-card-section-title></ign-card-header-container>
@@ -119,6 +119,10 @@ See [Material Design Components](https://material.io/guidelines/components/cards
 * Variations to the above may be made to fulfill the purposes of the card, where some components may not be needed.
 * Stylistic specification per Card component may be found in the respective expansion panel below.
 
+## Accessibility
+
+* Add aria-hidden="false" and a descriptive aria-label for each of the action icons used within the card
+* Refer to the Sample HTML for an example
 
 ## Card Components
 

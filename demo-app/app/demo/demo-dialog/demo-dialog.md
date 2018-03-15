@@ -57,4 +57,10 @@ destructive action, cancel (discard information) or delete. This dialog will com
     * Simple dialogs provide in-context assistance such as a definition of a complex term, details, or actions about a list
     item. Their intent is to help the user understand something that may not be clear without interrupting the users flow.
 
+## Accessibility
+* The role of dialogs must be set to 'alertdialog'
+    * Create an instance of MatDialogConfig in TS and set its role="alertdialog"
+    * Pass in the instance when opening the dialog
+* Refer to Sample TS for example 
+
 ## Dialog Components

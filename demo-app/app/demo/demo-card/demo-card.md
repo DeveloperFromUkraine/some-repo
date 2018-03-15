@@ -32,5 +32,9 @@
 * Variations to the above may be made to fulfill the purposes of the card, where some components may not be needed.
 * Stylistic specification per Card component may be found in the respective expansion panel below.
 
+## Accessibility
+
+* Add aria-hidden="false" and a descriptive aria-label for each of the action icons used within the card
+* Refer to the Sample HTML for an example
 
 ## Card Components

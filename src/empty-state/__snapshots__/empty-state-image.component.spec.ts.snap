@@ -5,6 +5,7 @@ exports[`Empty State Image should match snapshot 1`] = `
   
       <img
     _ngcontent-c0=""
+    aria-hidden="true"
     src="/assets/images/empty-state.svg"
     width="100%"
   />'
