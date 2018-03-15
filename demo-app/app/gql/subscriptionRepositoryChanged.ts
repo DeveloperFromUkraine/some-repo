@@ -7,8 +7,11 @@ export const SubscriptionRepositoryChanged = gql`
             repo {
                 branches(types: [MASTER, DEVELOP]) {
                     values {
-                        displayId
-                        url
+                        builds(limit: 1) {
+                            branchName
+                            concourseUrl
+                            status
+                        }
                     }
                 }
             }
