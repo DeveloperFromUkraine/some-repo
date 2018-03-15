@@ -63,7 +63,7 @@ end user to assemble the empty state page how they see fit. (Think of it as,we g
                 <ul>
                     <li>Titles should be concise and not contain descriptions.</li>
                     <li>Titles should be located above all other empty state sub components.</li>
-                    <li>Titles should be centered.</li>   
+                    <li>Titles should be centered.</li>               
                 </ul>
             </div></mat-tab>
             <mat-tab label="HTML"><div class="tab-height">
@@ -84,7 +84,8 @@ end user to assemble the empty state page how they see fit. (Think of it as,we g
                     <li>Descriptions should be brief.</li>
                     <li>Descriptions should inform the user of the empty state.</li>
                     <li>Descriptions should be located below the empty-state-title component.</li>
-                    <li>Descriptions may or may not include a redirect to the previous or other pages.</li>    
+                    <li>Descriptions may or may not include a redirect to the previous or other pages.</li>
+                    <li>Descriptions can include buttons and button groups.</li>        
                 </ul>
             </div></mat-tab>
             <mat-tab label="HTML"><div class="tab-height">
@@ -103,7 +104,8 @@ end user to assemble the empty state page how they see fit. (Think of it as,we g
             <mat-tab label="Component Styling"><div class="tab-height">
                 <ul>
                     <li>Images should only consume a small portion of the empty state.</li>
-                    <li>Images should be contained within the empty state but not the empty-state-description component.</li>           
+                    <li>Images should be contained within the empty state but not the empty-state-description component.</li>   
+                    <li>The default empty state displays the image component in the lower right hand corner.</li>        
                 </ul>
             </div></mat-tab>
             <mat-tab label="HTML"><div class="tab-height">
