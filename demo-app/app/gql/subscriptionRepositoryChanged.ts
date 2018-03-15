@@ -13,15 +13,6 @@ export const SubscriptionRepositoryChanged = gql`
                 public
                 project
                 url
-                branches(types: [MASTER, DEVELOP, FEATURE]) {
-                    values {
-                        builds(limit: 1) {
-                            branchName
-                            concourseUrl
-                            status
-                        }
-                    }
-                }
             }
         }
     }
