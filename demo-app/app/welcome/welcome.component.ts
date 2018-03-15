@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Coverage, Branch, Detail } from '../models/index';
-import { Apollo } from 'apollo-angular';
+import { Apollo, QueryRef } from 'apollo-angular';
 import gql from 'graphql-tag';
 import fetchBranchInfo from '../gql/fetchBranchInfo';
+import { SubscriptionRepositoryChanged } from '../gql/subscriptionRepositoryChanged';
 
 const COVERAGE: any = require('../../../coverage/coverage-summary.json');
 
@@ -18,20 +19,50 @@ export class WelcomeComponent implements OnInit {
     masterBranchData: Branch;
     developBranchData: Branch;
 
+    //sub test
+    queryRef: QueryRef<any>;
 
     constructor(private apollo: Apollo) { }
 
     ngOnInit() {
-        this.getServiceInfo();
-    }
-
-    getServiceInfo() {
-        this.apollo.watchQuery<any>({
+        this.queryRef = this.apollo.watchQuery<any>({
             query: fetchBranchInfo,
             variables: {
                 slug: this.service
             }
         })
+
+        this.getServiceInfo();
+        this.getSubscriptionInfo();
+    }
+
+    getSubscriptionInfo() {
+        console.log('connecting for subscription');
+        this.queryRef.subscribeToMore({
+            document: SubscriptionRepositoryChanged,
+            variables: {
+                types: [
+                    "BRANCH_CREATED",
+                    "BRANCH_COMMITTED_TO"
+                ],
+                project: "nui",
+                repo: "ignite-design-system",
+                branches: [
+                    "feature-subscriptionPoc"
+                ]
+            },
+            updateQuery: (prev, {subscriptionData}) => {
+                if (!subscriptionData.data) {
+                    return prev;
+                }
+
+                console.log(subscriptionData.data);
+            }
+        })
+    }
+
+    getServiceInfo() {
+        this.queryRef
             .valueChanges
             .subscribe(response => {
                 this.developBranchData = response.data.serviceBySlug.branches.values[0].builds[0];

@@ -26,7 +26,11 @@
       "<rootDir>/src/tsconfig.spec.json",
       "<rootDir>/test/*"
     ],
-    "coverageReporters": ["json-summary", "text", "lcov"]
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ]
   },
   "ngPackage": {
     "lib": {
@@ -61,8 +65,10 @@
     "apollo-angular-link-http": "^1.0.2-beta.0",
     "apollo-cache-inmemory": "^1.1.7",
     "apollo-client": "^2.2.2",
+    "apollo-link-ws": "^1.0.7",
     "graphql": "^0.12.3",
-    "graphql-tag": "^2.6.1"
+    "graphql-tag": "^2.6.1",
+    "subscriptions-transport-ws": "^0.9.6"
   },
   "peerDependencies": {
     "@angular/animations": "^5.0.0",
