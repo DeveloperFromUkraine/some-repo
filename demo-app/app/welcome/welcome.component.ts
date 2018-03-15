@@ -19,7 +19,6 @@ export class WelcomeComponent implements OnInit {
     masterBranchData: Branch;
     developBranchData: Branch;
 
-    //sub test
     queryRef: QueryRef<any>;
 
     constructor(private apollo: Apollo) { }
@@ -37,18 +36,17 @@ export class WelcomeComponent implements OnInit {
     }
 
     getSubscriptionInfo() {
-        console.log('connecting for subscription');
         this.queryRef.subscribeToMore({
             document: SubscriptionRepositoryChanged,
             variables: {
                 types: [
-                    "BRANCH_CREATED",
                     "BRANCH_COMMITTED_TO"
                 ],
                 project: "nui",
                 repo: "ignite-design-system",
                 branches: [
-                    "feature-subscriptionPoc"
+                    "master",
+                    "develop"
                 ]
             },
             updateQuery: (prev, {subscriptionData}) => {
@@ -56,7 +54,7 @@ export class WelcomeComponent implements OnInit {
                     return prev;
                 }
 
-                console.log('it works!');
+                console.log('Insert logic here.');
                 console.dir(subscriptionData.data);
             }
         })

@@ -141,22 +141,9 @@ const routes: Routes = [
 export class AppModule {
 
     constructor(apollo: Apollo, httpLink: HttpLink) {
-        /*apollo.createDefault({
-            link: httpLink.create({ uri: 'http://bakery-server.apps.mia.ulti.io/graphql' }),
-            cache: new InMemoryCache()
-        });
-
-        apollo.createNamed(
-            'subscription',
-            {
-                link: httpLink.create({ uri: 'https://bbql.apps.mia.ulti.io/graphql' }),
-                cache: new InMemoryCache()
-            });*/
-
         const uri = 'http://bakery-server.apps.mia.ulti.io/graphql';
         const http = httpLink.create({ uri });
 
-        //1
         const ws = new WebSocketLink({
             uri: 'wss://bbql.apps.mia.ulti.io/subscriptions',
             options: {
@@ -165,9 +152,7 @@ export class AppModule {
         });
 
         apollo.create({
-            //2
             link: ApolloLink.split(
-                //3
                 operation => {
                     const operationAST = getOperationAST(operation.query, operation.operationName);
                     return !!operationAST && operationAST.operation === 'subscription';
