@@ -11,6 +11,9 @@ export const SubscriptionRepositoryChanged = gql`
                 }
                 branches(types: [MASTER, DEVELOP]) {
                     nextPageStart
+                    values {
+                        id
+                    }
                 }
             }
         }
