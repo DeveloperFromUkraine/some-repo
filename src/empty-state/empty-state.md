@@ -40,13 +40,81 @@ end user to assemble the empty state page how they see fit. (Think of it as,we g
 
 ## Content
 
-The empty state is used for pages and elements that do not exist. This includes:
-* Unfinished pages
-* Pages with empty groups or lists.
-* Cards with no content.
+* The empty state is used for pages and elements that do not exist. This includes:
+    * Unfinished pages
+    * Pages with empty groups or lists.
+    * Cards with no content.
+* Empty states are the default view for the list-content pattern when there are no items set up, this mainly applies to company settings and other areas that are primarily lists.
+* The title and content are configurable and the content may include links (e.g., download a template)
+* There are also fixed actions available "Import" and "Add" which display as available, e.g, if import is not available for the area, only add will show.
 
+## Empty State Components
+
+<mat-accordion id="accordion">
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title><b>
+                empty-state-title
+            </b></mat-panel-title>
+            <mat-panel-description><i>The empty state title component allows for a title on the empty state container.</i></mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-tab-group>
+            <mat-tab label="Component Styling"><div class="tab-height">
+                <ul>
+                    <li>Titles should be concise and not contain descriptions.</li>
+                    <li>Titles should be located above all other empty state sub components.</li>
+                    <li>Titles should be centered.</li>   
+                </ul>
+            </div></mat-tab>
+            <mat-tab label="HTML"><div class="tab-height">
+                <p>&lt;ign-empty-state-title&gt; &lt;/ign-empty-state-title&gt;</p>
+            </div></mat-tab>
+        </mat-tab-group>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title><b>
+                empty-state-description
+            </b></mat-panel-title>
+            <mat-panel-description><i>The empty state description component allows for a description in the empty state.</i></mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-tab-group>
+            <mat-tab label="Component Styling"><div class="tab-height">
+                <ul>
+                    <li>Descriptions should be brief.</li>
+                    <li>Descriptions should inform the user of the empty state.</li>
+                    <li>Descriptions should be located below the empty-state-title component.</li>
+                    <li>Descriptions may or may not include a redirect to the previous or other pages.</li>    
+                </ul>
+            </div></mat-tab>
+            <mat-tab label="HTML"><div class="tab-height">
+                <p>&lt;ign-empty-state-description&gt; &lt;/ign-empty-state-description&gt;</p>
+            </div></mat-tab>
+        </mat-tab-group>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title><b>
+                empty-state-image
+            </b></mat-panel-title>
+            <mat-panel-description><i>The empty state image component allows for an image within the empty state.</i></mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-tab-group>
+            <mat-tab label="Component Styling"><div class="tab-height">
+                <ul>
+                    <li>Images should only consume a small portion of the empty state.</li>
+                    <li>Images should be contained within the empty state but not the empty-state-description component.</li>           
+                </ul>
+            </div></mat-tab>
+            <mat-tab label="HTML"><div class="tab-height">
+                <p>&lt;ign-empty-state-image&gt; &lt;/ign-empty-state-image&gt;</p>
+            </div></mat-tab>
+        </mat-tab-group>
+    </mat-expansion-panel>
+</mat-accordion>
 
 ## Style
+
 * The empty-state component has no stylistic specifications.
 
 *** TypeScript *** 
