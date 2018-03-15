@@ -5,7 +5,7 @@ export const SubscriptionRepositoryChanged = gql`
         repositoryChanged(types: $types, project: $project, repo: $repo, branches: $branches) {
             type
             repo {
-                branches(types: [MASTER, DEVELOP]) {
+                branches(types: [MASTER, DEVELOP, FEATURE]) {
                     values {
                         builds(limit: 1) {
                             branchName
