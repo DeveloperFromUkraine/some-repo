@@ -11,10 +11,10 @@ end user to assemble the empty state page how they see fit. (Think of it as,we g
 <mat-tab-group>
     <mat-tab label="Component Sample">
         <div class="tab-height">
-            <p><a [routerLink]="['empty-state-example']" target="_blank">
+            <a [routerLink]="['empty-state-example']" target="_blank">
                 Click Here
-            </a> to go to an example of an empty state page.</p>
-            <p>You'll need to hit the back button to come back!<p>
+            </a> to go to an example of an empty state page.
+            You'll need to hit the back button to come back!
         </div></mat-tab>
     <mat-tab label="HTML"><div class="tab-height">
         <table style="width:100%">
@@ -47,6 +47,10 @@ end user to assemble the empty state page how they see fit. (Think of it as,we g
 * Empty states are the default view for the list-content pattern when there are no items set up, this mainly applies to company settings and other areas that are primarily lists.
 * The title and content are configurable and the content may include links (e.g., download a template)
 * There are also fixed actions available "Import" and "Add" which display as available, e.g, if import is not available for the area, only add will show.
+
+## Style
+
+* The empty-state component has no stylistic specifications.
 
 ## Empty State Components
 
@@ -114,10 +118,6 @@ end user to assemble the empty state page how they see fit. (Think of it as,we g
         </mat-tab-group>
     </mat-expansion-panel>
 </mat-accordion>
-
-## Style
-
-* The empty-state component has no stylistic specifications.
 
 *** TypeScript *** 
 
