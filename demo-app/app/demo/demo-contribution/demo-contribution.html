@@ -1,0 +1,81 @@
+<h2><u><b>Adding to the Playground</b></u></h2>
+
+<ul>
+    <li>If you would like to use the automated documentation generator to add to the playground, run the following from the terminal to install the generator: 
+        <ul><li>npm install 
+            --registry=http://artifactory.mia.ulti.io/artifactory/api/npm/npm generator-ign
+        </li></ul>
+    </li>
+    <li>After installing the generator package, run the following from the terminal to install yeoman: 
+        <ul><li>npm install -g yo</li></ul>
+    </li>
+    <li>After installing yeoman, run the following from the terminal in the directory where the generator is installed: 
+        <ul><li>yo ign</li></ul>
+    </li>
+    <li>Be sure to separate all words within the name of your component with hyphens, i.e. "demo-app-example", when prompted.</li>
+    <li>This package allows for semi-automatic generation of component documentation. Just check the output and push to the repository!</li>
+    <li>You can use this feature for out of the box angular material components and subcomponents or custom components and subcomponents.</li>
+</ul>
+<ign-center><p>OR</p></ign-center>
+<ul><li>Below are the requirements to add to the playground, if you choose to do so manually. Please read these instructions
+    thoroughly and mind our restrictions!</li></ul>
+
+<h3>How to Add Your Own Component:</h3>
+
+<markdown [content]="notes"></markdown>
+
+<h3>HTML Requirements:</h3>
+<ul>
+    <li>A Use description.
+        <ul><li>This informs the consumer how to use the component and should provide any contextual links.</li></ul>
+    </li>
+    <li>A Sample.<ul><li>The playground samples are embedded within a tabs module, which can be found
+        <a href="https://material.angular.io/components/tabs/overview">here.</a> Samples should include an
+        implementation, the HTML for the component, and the typescript if necessary.</li></ul>
+    </li>
+    <li>A ReadMe.
+        <ul><li>This will provide the content and style descriptions.</li></ul>
+    </li>
+</ul>
+<h3>ReadMe Requirements:</h3>
+<ul>
+    <li>Follow the Markdown component styling.</li>
+    <li>A Content Description
+        <ul><li>
+            This provides the consumer with information on what to include within the component.
+        </li></ul>
+    </li>
+    <li>A Style Description
+        <ul><li>This provides the consumer with information on how to style the component. If the
+            component is a container or does not have stylistic aspects, this should be stated outright.
+        </li></ul>
+    </li>
+    <li>You may add other information about your component here! Some components require or are enhanced with API
+        information, for example. It's your component! Do your best to make it as consumable as possible!
+    </li>
+</ul>
+
+<h3>Troubleshooting</h3>
+    <ul>
+        <li>"npm ERR! enoent ENOENT: no such file or directory, access error" when running npm install on the generator.
+            <ul>
+                <li>Run rm -rf node_modules and attempt the install again.</li>
+            </ul>
+        </li>
+        <li>"You don't seem to have a generator with the name “ign” installed" error when running the yo ign command.
+            <ul>
+                <li>Run "npm link" from the terminal in the generator's directory.</li>
+                <li>Run "npm link generator-ign" from the terminal in the generator's directory, if the above fails to work.</li>
+            </ul>
+        </li>
+        <li>"This usually happens because your environment has changed since running npm install" error when running yarn start from the terminal.
+                <ul>
+                    <li>Run rm -rf node_module && yarn install. </li>
+                </ul>
+            </li>
+        <li>"Cannot find command 'yo'" error when running yo ign from the terminal.
+            <ul>
+                <li>Run npm install -g yo from the terminal.</li>
+            </ul>
+        </li>
+    </ul>

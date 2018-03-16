@@ -4,37 +4,47 @@
   background-color: white;
 }
 
-a{
-  text-decoration: none;
-}
-
 .mat-drawer-container {
   background-color: white;
 }
 
-.mat-toolbar .mat-toolbar-row {
-  display: flex;
-  box-sizing: border-box;
-  width: 100%;
-  flex-direction: row;
-  align-items: center;
-  white-space: nowrap;
+.mat-toolbar {
+  background: linear-gradient(to right, #4AB93C, #509E2F);
 }
 
-.mat-toolbar, .mat-toolbar h1, .mat-toolbar h2, .mat-toolbar h3, .mat-toolbar h4, .mat-toolbar h5, .mat-toolbar h6 {
-  font: 500 20px/32px Avenir,Roboto,Helvetica Neue,sans-serif;
-  margin: 0;
-}
-
-.mat-elevation-z5 {
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 5px 8px 0 rgba(0,0,0,.14), 0 1px 14px 0 rgba(0,0,0,.12);
-}
-
-.mat-card{
+.mat-card {
   min-height: 100vh;
   box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 5px 8px 0 rgba(0,0,0,.14), 0 1px 14px 0 rgba(0,0,0,0);
 }
 
-.mat-tab-group.mat-primary .mat-tab-label:focus{
+.mat-tab-group.mat-primary .mat-tab-label:focus {
   background-color: rgba(8, 149, 8, 0.3) !important;
+}
+
+.ultimate-icon {
+  height: 50%;
+  width: 5%;
+}
+
+.ultimate-icon:hover {
+  cursor: pointer
+}
+
+.mat-toolbar {
+  color: white;
+}
+
+.mat-toolbar.component-side-nav {
+  background: #4A4A4F;
+}
+
+#footer {
+  position:absolute;
+  bottom:0;
+  right: 0;
+}
+
+a{
+  text-decoration-line: none;
+  font-weight: bold;
 }

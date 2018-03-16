@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EmptyStateDescriptionComponent should match snapshot 1`] = `
+exports[`Empty State Description should match snapshot 1`] = `
 <ign-empty-state-description>
   <div
     _ngcontent-c0=""

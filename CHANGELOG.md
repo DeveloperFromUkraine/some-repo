@@ -1,10 +1,18 @@
 ### vNEXT
 
+### v0.5.0
+- Added example and demo for max height in dialog
+- New [editable field component](./src/field/README.md#editable-field-component) `ign-editable-field`
+- New [editable inline field component](./src/field/README.md#editable-inline-field-component) `ign-editable-field-inline`
+- Added expandable search component and options container
+
 ### v0.4.0
 - Introducing first pass of text-list-item component
 - Extracting text-list-item and nav-list into modules
 - Adding manifests and modifying ci:package script in order to deploy doc site
 - New [inline field component](./src/field/README.md#inline-field-component) `ign-field-inline`
+- Adding data table container with paginator
+- Added enhanced dialog examples and demo
 - Adding data table container with paginator
 
 ### v0.3.1

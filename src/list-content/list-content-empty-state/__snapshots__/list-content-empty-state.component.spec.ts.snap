@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ListContentEmptyStateComponent should match snapshot 1`] = `
+exports[`List Content Empty State should match snapshot 1`] = `
 <ign-list-content-empty-state>
   
 </ign-list-content-empty-state>

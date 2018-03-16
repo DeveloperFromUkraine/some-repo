@@ -1,11 +1,11 @@
-import { RightDrawerComponent } from 'index';
+import { RightDrawerComponent } from '../index';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { ComponentTest } from '../../test/test-bed/component';
 import { DebugElement } from '@angular/core/src/debug/debug_node';
 import { MatIconModule } from '@angular/material';
 
-describe('RightDrawerComponent', () => {
+describe('Right Drawer', () => {
     let fixture: ComponentFixture<RightDrawerComponent>;
     let component: RightDrawerComponent;
     let de: DebugElement;

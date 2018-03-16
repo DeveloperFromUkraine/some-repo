@@ -1,0 +1,37 @@
+<div>
+    <h1>Angular Testing - Snapshot Testing</h1>
+    <hr />
+
+    <h2>Snapshot Tests have to be deterministic</h2>
+    <p>Set component data members that are in template to static values (ex. Date.now() would be different every run).</p>
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block line">
+it(<span class="string">'should match snapshot'</span>, <span class="keyword">async</span> () => {{ '{' }}
+    component.description = <span class="string">'test description'</span>;
+    Date.now = jest.fn(() => 1482363367071);
+
+    <span class="keyword">await</span> fixture.detectChanges();
+
+    expect(fixture).toMatchSnapshot();
+});
+            </code>
+        </pre>
+    </mat-card>
+
+    <p>Now we can expect this date value to consistently return the same value every run.</p>
+    <mat-card class='code-block-card'>
+        <pre>
+            <code class="code-block line">
+&lt;div class=<span class="string">"date-output"</span>&gt;{{ '{' }}{{ '{' }} date }}&lt;/div&gt;
+&lt;a
+    (click)=<span class="string">"handleClick($event)"</span>
+    class=<span class="string">"app-link"</span>
+&gt;
+    &lt;i class=<span class="string">"material-icons app-link-icon"</span> aria-hidden=<span class="string">"true"</span>&gt;{{ '{' }}{{ '{' }} icon }}&lt;/i&gt;
+    &lt;div class=<span class="string">"app-link-text"</span>&gt;{{ '{' }}{{ '{' }} description }}&lt;/div&gt;
+&lt;/a&gt;
+            </code>
+        </pre>
+    </mat-card>
+</div>

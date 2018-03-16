@@ -1,4 +1,4 @@
-<br>
+
 ## Content
 
 * `@Input() formGroup: FormGroup`
@@ -12,7 +12,7 @@
 * `@Input() endDateFilter: (Date) => boolean`
     * An optional filter function to disable specific dates in the end picker
 
-<br>
+
 ## Style
 
 * The date range component should be placed in the upper left or right hand corners of a card or page.

@@ -5,8 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+
+import { CdkTableModule } from '@angular/cdk/table';
+
 import { DemoDialogComponent } from './demo-dialog/demo-dialog.component';
-import { DemoDialogComponentDialog } from './demo-dialog/demo-dialog.component';
+import { DemoDialogComponentDialog, DemoDialogComponentDialogBackground } from './demo-dialog/demo-dialog.component';
+import { DemoDialogAcceptCancelComponent } from './demo-dialog/demo-dialog-accept-cancel.component';
 import { DemoRadioButtonComponent } from './demo-radio-button/demo-radio-button.component';
 import { DemoCheckboxComponent } from './demo-checkbox/demo-checkbox.component';
 import { DemoCardComponent } from './demo-card/demo-card.component';
@@ -27,12 +33,17 @@ import { DemoLoadingContainerComponent } from './demo-loading-container/demo-loa
 import { DemoNavListComponent } from './demo-nav-list/demo-nav-list.component';
 import { DemoPageComponent } from './demo-page/demo-page.component';
 import { DemoRightDrawerComponent } from './demo-right-drawer/demo-right-drawer.component';
-import { DemoSelectContainerComponent } from './demo-select-container/demo-select-container.component';
 import { DemoSidenavComponent } from './demo-sidenav/demo-sidenav.component';
 import { DemoTextComponent } from './demo-text/demo-text.component';
 import { DemoAccessibilityComponent } from './demo-accessibility/demo-accessibility.component';
 import { DemoIconComponent } from './demo-icon/demo-icon.component';
 import { DemoSelectionListComponent } from './demo-selection-list/demo-selection-list.component';
+import { DemoMarkdownComponent } from './demo-markdown/demo-markdown.component';
+import { DemoContributionComponent } from './demo-contribution/demo-contribution.component';
+import { DemoButtonGroupComponent } from './demo-button-group/demo-button-group.component';
+import { DemoDataTableContainerComponent } from './demo-data-table-container/demo-data-table-container.component';
+import { DemoExpandableSearchComponent } from './demo-expandable-search/demo-expandable-search.component';
+import { DemoRightAlignContainerComponent } from './demo-right-align-container/demo-right-align-container.component';
 
 import { MatExpansionModule } from '@angular/material';
 import { MatTabsModule, MatButtonModule } from '@angular/material';
@@ -45,7 +56,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material';
 import { MatInputModule } from '@angular/material';
 import { MatDatepickerModule } from '@angular/material';
-import {MatListModule} from '@angular/material/list';
+import { MatTableModule } from '@angular/material';
+import { MatListModule } from '@angular/material/list';
 
 import { RouterModule } from '@angular/router';
 
@@ -68,9 +80,11 @@ const materialModules = [
     MatDatepickerModule,
     ReactiveFormsModule,
     MatListModule,
+    MatTableModule,
 ];
 
 @NgModule({
+
   imports: [
     ...materialModules,
     FormsModule,
@@ -78,10 +92,15 @@ const materialModules = [
     IgniteDesignSystemModule,
     DateRangeModule,
     RouterModule,
+    HttpModule,
+    HttpClientModule,
+    CdkTableModule,
   ],
   declarations: [
     DemoDialogComponent,
     DemoDialogComponentDialog,
+    DemoDialogComponentDialogBackground,
+    DemoDialogAcceptCancelComponent,
     DemoRadioButtonComponent,
     DemoCheckboxComponent,
     DemoCardComponent,
@@ -102,17 +121,26 @@ const materialModules = [
     DemoNavListComponent,
     DemoPageComponent,
     DemoRightDrawerComponent,
-    DemoSelectContainerComponent,
     DemoSidenavComponent,
     DemoTextComponent,
     DemoAccessibilityComponent,
     DemoIconComponent,
     DemoSelectionListComponent,
+    DemoMarkdownComponent,
+    DemoContributionComponent,
+    DemoButtonGroupComponent,
+    DemoDataTableContainerComponent,
+    DemoExpandableSearchComponent,
+    DemoRightAlignContainerComponent,
   ],
   exports: [
-      ...materialModules, RouterModule,
+      ...materialModules, RouterModule, MatTableModule
   ],
-    entryComponents: [DemoDialogComponent, DemoDialogComponentDialog, DemoEmptyStateExampleComponent,]
+    entryComponents: [DemoDialogComponent,
+        DemoDialogComponentDialog,
+        DemoDialogComponentDialogBackground,
+        DemoDialogAcceptCancelComponent,
+        DemoEmptyStateExampleComponent, DemoDataTableContainerComponent]
 
 })
 export class DemoModule {}

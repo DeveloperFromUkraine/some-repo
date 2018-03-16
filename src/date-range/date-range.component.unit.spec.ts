@@ -2,7 +2,7 @@ import { DateRangeComponent } from './date-range.component';
 import { Subject } from 'rxjs/Subject';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
-describe('ign-date-range', () => {
+describe('Date Range', () => {
   let dateRange: DateRangeComponent;
   let startPickerInput;
   let endPickerInput;

@@ -1,11 +1,11 @@
-<br>
+
 ## Content
 
 * Info banners should be displayed when there is a message regarding a request sent by the user.
 * Info banners should include mechanisms that allow the user to close the component.
 * Info banners should not contain error messages.
 
-<br>
+
 ## Style
 
 * Info banners should be short and concise.
@@ -14,3 +14,7 @@
 * Info banners should avoid overlapping any elements or content on the page.
 * Info banners should maintain their formatting and blue font, as to draw attention to the user that there was not
 a problem.
+
+## Accessibility
+* Add a descriptive aria-label to the dismiss buttons tag that describes the action of the button (ex: exit)
+* Refer to the Sample HTML for an example

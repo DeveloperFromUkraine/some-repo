@@ -35,4 +35,5 @@ dist/*
 .playground
 
 # Coverage files
-coverage
+coverage/lcov-report
+coverage/lcov.info

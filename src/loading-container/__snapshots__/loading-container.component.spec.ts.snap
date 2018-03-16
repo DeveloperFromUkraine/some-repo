@@ -1,14 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LoadingContainer should match snapshot 1`] = `
+exports[`Loading Container should match snapshot 1`] = `
 <ign-loading-container
+  ariaLabel={[Function String]}
   delay={[Function Number]}
   delayTimeout={[Function Number]}
   loading={[Function Boolean]}
   pastDelay="false"
+  spinnerAriaLabel={[Function String]}
 >
-  <div>
+  
+    <div
+    aria-label="Loading"
+    role="alert"
+    tabindex="0"
+  >
     
+      
+    
+    
+  
   </div>
 </ign-loading-container>
 `;

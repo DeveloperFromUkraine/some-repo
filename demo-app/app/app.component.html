@@ -1,24 +1,59 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <mat-sidenav-container>
-  <mat-sidenav #sidenav class="sidenav" mode="side" opened="false" [fixedInViewport]="true" [fixedTopGap]="headerHeight + 8">
-    <ul>
-      <li *ngFor="let item of navItems">
-        <a [routerLink]="[item.route]">{{ item.name }}</a>
-      </li>
-    </ul>
+  <mat-sidenav #sidenav class="sidenav" mode="side" opened="false" [fixedInViewport]="true"
+               [fixedTopGap]="headerHeight + 8">
+    <div><mat-toolbar class = "component-side-nav">Navigation</mat-toolbar></div>
 
-    <ign-center>Questions? <a href="https://ultimatesoftware.slack.com/messages/docsitequestions/" target="_blank">Ask here!</a></ign-center>
+    <mat-divider></mat-divider>
+    <p matSubheader class="sidenav-subheader">Components</p>
+    <mat-nav-list dense>
+      <div *ngFor="let item of navItems">
+        <h3><a mat-list-item [routerLink]="[item.route]"><span mat-line>{{ item.name }}</span></a></h3>
+      </div>
+    </mat-nav-list>
+
+
+    <mat-divider></mat-divider>
+    <p matSubheader class="sidenav-subheader">Testing</p>
+    <mat-nav-list dense>
+      <div *ngFor="let testItem of testNavItems">
+        <h3><a mat-list-item [routerLink]="[testItem.route]"><span mat-line>{{ testItem.name }}</span></a></h3>
+      </div>
+    </mat-nav-list>
+
+    <mat-divider></mat-divider>
+    <p matSubheader class="sidenav-subheader">Accessibility</p>
+    <mat-nav-list dense>
+      <div *ngFor="let accessibilityItem of accessibilityItems">
+        <h3><a mat-list-item [routerLink]="[accessibilityItem.route]"><span mat-line>{{ accessibilityItem.name }}</span></a></h3>
+      </div>
+    </mat-nav-list>
+
+    <mat-divider></mat-divider>
+    <p matSubheader class="sidenav-subheader">Contributions</p>
+    <mat-nav-list dense>
+    <h5><a mat-list-item [routerLink]="['contribution']">
+      <span mat-line>Doc Site Contributions</span>
+    </a></h5>
+    </mat-nav-list>
+
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-card>
-      <header #header>
-        <mat-toolbar style="background-color: white; color: #424949" class="mat-elevation-z5">
-          <button mat-icon-button> <mat-icon style="color:lightgray" (click)="sidenav.toggle()" class="material-icons">menu</mat-icon></button>
-          <button mat-button><img class ="logo-small" src="/assets/logo-small.png"></button>
-          Ignite Design System
-        </mat-toolbar>
-      </header>
+    <mat-toolbar>
+      <button mat-icon-button> <mat-icon style="color:white" (click)="sidenav.toggle()" class="material-icons">
+        menu</mat-icon>
+      </button>
+      <img routerLink="/" class ="ultimate-icon" src="/assets/ultiu.svg">
+      Ignite Design System Playground
+    </mat-toolbar>
+    <div id ="body-container">
       <router-outlet></router-outlet>
-    </mat-card>
+      <div id="footer" layout-align="end start">
+        <button *ngIf="currUrl !== '/'"  mat-raised-button color = "accent"
+                (click)="openDialog()">
+        <pre>Questions About Our Components?</pre></button></div>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
+

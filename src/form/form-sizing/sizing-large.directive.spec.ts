@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { ComponentFixture, async, TestBed } from "@angular/core/testing";
 import { ComponentTest } from '../../../test/test-bed/component';
-import { SizingLargeDirective } from "index";
+import { SizingLargeDirective } from "./index";
 import { By } from '@angular/platform-browser';
 import { DebugElement } from "@angular/core";
 
@@ -20,7 +20,7 @@ class DirectiveHostComponent {
     sizeLarge: boolean;
 }
 
-describe('SizingLargeDirective', () => {
+describe('Form Sizing Large', () => {
     let fixture: ComponentFixture<DirectiveHostComponent>;
     let component: DirectiveHostComponent;
     let de: DebugElement[];

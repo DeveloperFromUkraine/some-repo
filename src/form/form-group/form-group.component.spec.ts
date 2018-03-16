@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { FormGroupComponent } from "index";
+import { FormGroupComponent } from "./index";
 import { ComponentTest } from "../../../test/test-bed/component";
 
-describe('FormGroupComponent', () => {
+describe('Form Group', () => {
     let fixture: ComponentFixture<FormGroupComponent>;
 
     beforeEach(async () => {

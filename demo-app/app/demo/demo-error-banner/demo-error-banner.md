@@ -1,4 +1,4 @@
-<br>
+
 ## Content
 
 * Error banners should be displayed when there was an issue executing an instruction, whether it is an error from
@@ -6,7 +6,6 @@ the front end or back end.
 * Error banners should include mechanisms that allow the user to close the component.
 * Error banners should not include informational, non-error messages.
 
-<br>
 
 ## Style
 * Error banners should be short and concise. Longer errors should be displayed in logs.
@@ -14,3 +13,7 @@ the front end or back end.
 * Error banners should be displayed along the top of the page or in the corners.
 * Error banners should avoid overlapping any elements or content on the page.
 * Error banners should maintain their formatting and red font, as to draw attention to the user that there was a problem.
+
+## Accessibility
+* Add a descriptive aria-label to the dismiss buttons tag that describes the action of the button (ex: exit)
+* Refer to the Sample HTML for an example

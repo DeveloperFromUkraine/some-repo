@@ -1,16 +1,143 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FieldComponent should match snapshot 1`] = `
-<ign-field
+exports[`EditableFieldComponent should match snapshot 1`] = `
+<ign-editable-field
+  editIcon={[Function String]}
   label={[Function String]}
+  onIconClick={[Function EventEmitter]}
 >
-  <div
-    class="value"
-    da="fieldValue"
-  /><div
+  
+      <div
+    class="label-container"
+  >
+    
+      
+    <div
+      class="value flex-lable-value"
+      da="fieldValue"
+    />
+    
+      
+    <button
+      class="mat-icon-button"
+      mat-icon-button=""
+    >
+      
+        
+      <mat-icon
+        aria-hidden="true"
+        class="mat-icon material-icons"
+        role="img"
+      >
+        mode_edit
+      </mat-icon>
+      
+      
+    </button>
+    
+      
+  </div>
+      <div
     class="label"
   >
     label!
   </div>
+    
+</ign-editable-field>
+`;
+
+exports[`EditableFieldInlineComponent should match snapshot 1`] = `
+<ign-editable-field-inline
+  editIcon={[Function String]}
+  label={[Function String]}
+  onIconClick={[Function EventEmitter]}
+>
+  
+      <div
+    class="label-container"
+  >
+    
+        
+    <div
+      class="value flex-lable-value"
+      da="fieldValue"
+    >
+      
+        
+      <span
+        class="label"
+      >
+        label!
+      </span>
+      
+        
+      
+        
+    </div>
+    
+        
+    <button
+      class="mat-icon-button"
+      mat-icon-button=""
+    >
+      
+        
+      <mat-icon
+        aria-hidden="true"
+        class="mat-icon material-icons"
+        role="img"
+      >
+        mode_edit
+      </mat-icon>
+      
+        
+    </button>
+    
+      
+  </div>
+    
+</ign-editable-field-inline>
+`;
+
+exports[`Field should match snapshot 1`] = `
+<ign-field
+  label={[Function String]}
+>
+  
+      <div
+    class="value"
+    da="fieldValue"
+  />
+      <div
+    class="label"
+  >
+    label!
+  </div>
+    
 </ign-field>
+`;
+
+exports[`FieldInlineComponent should match snapshot 1`] = `
+<ign-field-inline
+  label={[Function String]}
+>
+  
+      <div
+    class="value"
+    da="fieldValue"
+  >
+    
+      
+    <span
+      class="label"
+    >
+      label!
+    </span>
+    
+      
+    
+      
+  </div>
+    
+</ign-field-inline>
 `;

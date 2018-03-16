@@ -1,4 +1,4 @@
-<br>
+
 ## Content
 
 * API:
@@ -17,7 +17,7 @@
         * openChange(boolean)
 * Right drawer components' content should be concise, use links, and or provide basic informational content.
 
-<br>
+
 ## Style
 
 * Right drawer components should always be located to the right.

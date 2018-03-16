@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SideNavListComponent should match snapshot 1`] = `
+exports[`Side Nav List should match snapshot 1`] = `
 <ign-sidenav-list>
   
 </ign-sidenav-list>

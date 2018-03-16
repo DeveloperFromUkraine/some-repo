@@ -1,7 +1,7 @@
 import { ComponentFixture, async, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
 import { ComponentTest } from '../../../test/test-bed/component';
-import { SizingSmallDirective } from 'index';
+import { SizingSmallDirective } from './index';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
@@ -14,7 +14,7 @@ import { DebugElement } from '@angular/core';
 class DirectiveHostComponent {
 }
 
-describe('SizingSmallDirective', () => {
+describe('Form Sizing Small', () => {
     let fixture: ComponentFixture<DirectiveHostComponent>;
     let de: DebugElement[];
     const maxWidth: string = '192px';

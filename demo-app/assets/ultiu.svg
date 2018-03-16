@@ -1,0 +1,22 @@
+
+<svg width="222px" height="297px" viewBox="0 0 222 297" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="222 125.584 222 251.167 0 251.167 0 0 222 0"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="#fff" fill-rule="evenodd">
+        <g id="ultipro">
+            <g id="Group" transform="translate(0.000000, 45.000000)">
+                <g id="Clipped">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="a"></g>
+                    <path d="M182,0 L182,143.5 C182,200 138.5,214.5 111,214.5 C83.5,214.5 40,200 40,143.5 L40,0 L0,0 L0,157 C0,208 48.167,251.167 111,251.167 C173.833,251.167 222,208 222,157 L222,0 L182,0 Z" id="Shape" fill="#ffffff" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+            <path d="M126.361,151.452 L141.049,151.452 L141.049,66.446 C141.049,58.846 135.213,52.696 127.609,52.696 L93.765,52.696 C86.16,52.696 80.003,58.849 80.003,66.45 L80,151.452 L94.687,151.452 L94.687,233 L126.315,232.965 L126.361,151.452 Z M131.318,20.952 C131.318,32.522 121.932,41.908 110.366,41.908 C98.788,41.908 89.421,32.522 89.421,20.952 C89.421,9.386 98.788,0 110.366,0 C121.932,0 131.318,9.386 131.318,20.952 L131.318,20.952 Z" id="Shape" fill="#ffffff" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
