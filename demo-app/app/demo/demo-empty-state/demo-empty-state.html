@@ -10,10 +10,22 @@
 <mat-tab-group>
     <mat-tab label="Component Sample">
         <div class="tab-height">
-            <p><a [routerLink]="['empty-state-example']" target="_blank">
-                Click Here
-            </a> to go to an example of an empty state page.</p>
-            <p>You'll need to hit the back button to come back!</p>
+            <ign-empty-state>
+                <ign-empty-state-title>
+                   You've reached the example of an Empty State Page!</ign-empty-state-title>
+                <ign-empty-state-description>
+                   <p>This page is in an empty state. You'll want to navigate out using the buttons in your implementation,
+                       but for now you'll have to settle with the side nav bar or the back button!</p>
+                </ign-empty-state-description>
+                <ign-button-group>
+                    <button mat-button color="accent" type="button">
+                        We're Buttons
+                    </button>
+                    <button mat-button color="accent" type="button">
+                        But We Don't Work
+                    </button>
+                </ign-button-group>
+            </ign-empty-state>
         </div></mat-tab>
     <mat-tab label="HTML"><div class="tab-height">
         <table style="width:100%">
