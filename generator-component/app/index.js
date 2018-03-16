@@ -11,9 +11,6 @@
  * run npm start to begin the scraper/parser/generator */
 
 var Generator = require('yeoman-generator');
-var _ = require('lodash');
-const cheerio = require('cheerio');
-const rp = require('request-promise');
 const fs = require('fs');
 var toMarkdown = require('to-markdown');
 
