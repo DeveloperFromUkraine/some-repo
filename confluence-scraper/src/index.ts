@@ -32,12 +32,11 @@ else {
             /*env.lookup(function () {
                 console.log(env.get('component:app'))
             });*/
+            
             fs.writeFileSync('./data.json',JSON.stringify(result) , 'utf-8');
             const path = __dirname.replace(/ignite-design-system\/.*/, 'ignite-design-system/');
             env.register(require.resolve(path + 'generator-component/app/index.js'), 'component:app');
             env.run(`component:app ./data.json`);
-            
-            //fs.writeFileSync('./data.json', util.inspect(JSON.stringify(result)) , 'utf-8');
         }
     })
 }
