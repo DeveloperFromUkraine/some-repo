@@ -7,6 +7,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApolloModule, Apollo } from 'apollo-angular';
 import { HttpLink, HttpLinkModule } from 'apollo-angular-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
+import { getOperationAST } from 'graphql';
+import { WebSocketLink } from 'apollo-link-ws';
+import { ApolloLink } from 'apollo-link';
 
 import { IgniteDesignSystemModule } from '../../src';
 import { TestingModule } from './testing/testing.module';
@@ -138,9 +141,27 @@ const routes: Routes = [
 })
 
 export class AppModule {
+
     constructor(apollo: Apollo, httpLink: HttpLink) {
+        const uri = 'https://bakery-server.apps.mia.ulti.io/graphql';
+        const http = httpLink.create({ uri });
+
+        const ws = new WebSocketLink({
+            uri: 'wss://bbql.apps.mia.ulti.io/subscriptions',
+            options: {
+                reconnect: true
+            }
+        });
+
         apollo.create({
-            link: httpLink.create({uri: 'http://bakery-server.apps.mia.ulti.io/graphql'}),
+            link: ApolloLink.split(
+                operation => {
+                    const operationAST = getOperationAST(operation.query, operation.operationName);
+                    return !!operationAST && operationAST.operation === 'subscription';
+                },
+                ws,
+                http,
+            ),
             cache: new InMemoryCache()
         });
     }
