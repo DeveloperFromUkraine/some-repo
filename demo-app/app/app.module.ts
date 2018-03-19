@@ -7,6 +7,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApolloModule, Apollo } from 'apollo-angular';
 import { HttpLink, HttpLinkModule } from 'apollo-angular-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
+import { getOperationAST } from 'graphql';
+import { WebSocketLink } from 'apollo-link-ws';
+import { ApolloLink } from 'apollo-link';
 
 import { IgniteDesignSystemModule } from '../../src';
 import { TestingModule } from './testing/testing.module';
@@ -65,40 +68,40 @@ import { DemoExpandableSearchComponent } from './demo/demo-expandable-search/dem
 import { DemoRightAlignContainerComponent } from './demo/demo-right-align-container/demo-right-align-container.component';
 
 const routes: Routes = [
-  { path: '', component: WelcomeComponent },
-  { path: 'dialog', component: DemoDialogComponent },
-  { path: 'radio-button', component: DemoRadioButtonComponent },
-  { path: 'checkbox', component: DemoCheckboxComponent },
-  { path: 'card', component: DemoCardComponent },
-  { path: 'center', component: DemoCenterComponent },
-  { path: 'data-table-container', component: DemoDataTableContainerComponent },
-  { path: 'date-range', component: DemoDateRangeComponent },
-  { path: 'divider', component: DemoDividerComponent },
-  { path: 'empty-state', component: DemoEmptyStateComponent },
-  { path: 'empty-state/empty-state-example', component: DemoEmptyStateExampleComponent },
-  { path: 'error-banner', component: DemoErrorBannerComponent },
-  { path: 'expandable-fab', component: DemoExpandableFabComponent },
-  { path: 'field', component: DemoFieldComponent },
-  { path: 'footer', component: DemoFooterComponent },
-  { path: 'form', component: DemoFormComponent },
-  { path: 'hub-card', component: DemoHubCardComponent },
-  { path: 'info-banner', component: DemoInfoBannerComponent },
-  { path: 'list-content', component: DemoListContentComponent },
-  { path: 'loading-container', component: DemoLoadingContainerComponent },
-  { path: 'nav-list', component: DemoNavListComponent },
-  { path: 'page', component: DemoPageComponent },
-  { path: 'right-drawer', component: DemoRightDrawerComponent },
-  { path: 'sidenav', component: DemoSidenavComponent },
-  { path: 'text', component: DemoTextComponent },
-  { path: 'accessibility', component: DemoAccessibilityDirective },
-  { path: 'accessibility-component', component: DemoAccessibilityComponent },
-  { path: 'icon', component: DemoIconComponent },
-  { path: 'selection-list', component: DemoSelectionListComponent },
-  { path: 'markdown', component: DemoMarkdownComponent },
-  { path: 'contribution', component: DemoContributionComponent },
-  { path: 'button-group', component: DemoButtonGroupComponent },
-  { path: 'expandable-search', component: DemoExpandableSearchComponent },
-  { path: 'right-align-container', component: DemoRightAlignContainerComponent },
+    { path: '', component: WelcomeComponent },
+    { path: 'dialog', component: DemoDialogComponent },
+    { path: 'radio-button', component: DemoRadioButtonComponent },
+    { path: 'checkbox', component: DemoCheckboxComponent },
+    { path: 'card', component: DemoCardComponent },
+    { path: 'center', component: DemoCenterComponent },
+    { path: 'data-table-container', component: DemoDataTableContainerComponent },
+    { path: 'date-range', component: DemoDateRangeComponent },
+    { path: 'divider', component: DemoDividerComponent },
+    { path: 'empty-state', component: DemoEmptyStateComponent },
+    { path: 'empty-state/empty-state-example', component: DemoEmptyStateExampleComponent },
+    { path: 'error-banner', component: DemoErrorBannerComponent },
+    { path: 'expandable-fab', component: DemoExpandableFabComponent },
+    { path: 'field', component: DemoFieldComponent },
+    { path: 'footer', component: DemoFooterComponent },
+    { path: 'form', component: DemoFormComponent },
+    { path: 'hub-card', component: DemoHubCardComponent },
+    { path: 'info-banner', component: DemoInfoBannerComponent },
+    { path: 'list-content', component: DemoListContentComponent },
+    { path: 'loading-container', component: DemoLoadingContainerComponent },
+    { path: 'nav-list', component: DemoNavListComponent },
+    { path: 'page', component: DemoPageComponent },
+    { path: 'right-drawer', component: DemoRightDrawerComponent },
+    { path: 'sidenav', component: DemoSidenavComponent },
+    { path: 'text', component: DemoTextComponent },
+    { path: 'accessibility', component: DemoAccessibilityDirective },
+    { path: 'accessibility-component', component: DemoAccessibilityComponent },
+    { path: 'icon', component: DemoIconComponent },
+    { path: 'selection-list', component: DemoSelectionListComponent },
+    { path: 'markdown', component: DemoMarkdownComponent },
+    { path: 'contribution', component: DemoContributionComponent },
+    { path: 'button-group', component: DemoButtonGroupComponent },
+    { path: 'expandable-search', component: DemoExpandableSearchComponent },
+    { path: 'right-align-container', component: DemoRightAlignContainerComponent },
 ];
 
 @NgModule({
@@ -140,9 +143,27 @@ const routes: Routes = [
 })
 
 export class AppModule {
+
     constructor(apollo: Apollo, httpLink: HttpLink) {
+        const uri = 'https://bakery-server.apps.mia.ulti.io/graphql';
+        const http = httpLink.create({ uri });
+
+        const ws = new WebSocketLink({
+            uri: 'wss://bbql.apps.mia.ulti.io/subscriptions',
+            options: {
+                reconnect: true
+            }
+        });
+
         apollo.create({
-            link: httpLink.create({uri: 'http://bakery-server.apps.mia.ulti.io/graphql'}),
+            link: ApolloLink.split(
+                operation => {
+                    const operationAST = getOperationAST(operation.query, operation.operationName);
+                    return !!operationAST && operationAST.operation === 'subscription';
+                },
+                ws,
+                http,
+            ),
             cache: new InMemoryCache()
         });
     }
