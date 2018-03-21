@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatDialogConfig } from '@angular/material';
 import { Observable } from 'rxjs/Observable';
 import { DemoDialogAcceptCancelComponent } from './demo-dialog-accept-cancel.component';
 
@@ -18,7 +18,10 @@ export class DemoDialogComponent {
     constructor(public dialog: MatDialog) {}
 
     openDialog() {
-        let dialogRef = this.dialog.open(DemoDialogComponentDialog);
+        const config = new MatDialogConfig();
+        config.role = "alertdialog";
+
+        let dialogRef = this.dialog.open(DemoDialogComponentDialog, config);
         dialogRef.afterClosed().subscribe(result => {
             this.selectedOption = result;
         });

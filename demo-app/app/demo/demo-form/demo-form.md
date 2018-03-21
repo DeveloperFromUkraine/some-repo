@@ -12,3 +12,8 @@ The nested form can be used to build a tree of forms from small components.
 * No stylistic specifications. Forms are containers and are entirely customizable to fit the need of the
 content.
 
+## Accessibility
+
+* If using a dropdown, add a descriptive aria-label for what the selectable components are for in the mat-select tag 
+* Refer to the Sample HTML for an example
+

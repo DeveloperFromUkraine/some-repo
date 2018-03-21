@@ -1,7 +1,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <mat-sidenav-container>
   <mat-sidenav #sidenav class="sidenav" mode="side" opened="false" [fixedInViewport]="true"
-               [fixedTopGap]="headerHeight + 8">
+               [fixedTopGap]="headerHeight + 8" aria-expanded="true">
     <div><mat-toolbar class = "component-side-nav">Navigation</mat-toolbar></div>
 
     <mat-divider></mat-divider>
@@ -40,7 +40,7 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar>
-      <button mat-icon-button> <mat-icon style="color:white" (click)="sidenav.toggle()" class="material-icons">
+      <button mat-icon-button  attr.aria-label="{{sidenavAriaLabel}}" role="button" attr.aria-expanded="{{sidenavVisibility}}" aria-haspopup="true" aria-hidden="false"   > <mat-icon style="color:white" (click)="toggleSideNav()"  class="material-icons" >
         menu</mat-icon>
       </button>
       <img routerLink="/" class ="ultimate-icon" src="/assets/ultiu.svg">
