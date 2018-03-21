@@ -4,3 +4,6 @@
 
 <button mat-raised-button matDialogClose>Close</button>
 
+*** TypeScript ***
+*** ExternalTypeScript ***
+*** Imports ***
