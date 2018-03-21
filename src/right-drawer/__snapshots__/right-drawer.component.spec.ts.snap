@@ -25,7 +25,9 @@ exports[`Right Drawer should match snapshot 1`] = `
       aria-hidden="true"
       aria-label="Close"
       class="close-icon mat-icon material-icons"
+      igna11yclick=""
       role="img"
+      tabindex="0"
     >
       
       close

@@ -20,7 +20,6 @@ import { DemoCenterComponent } from './demo-center/demo-center.component';
 import { DemoDateRangeComponent } from './demo-date-range/demo-date-range.component';
 import { DemoDividerComponent } from './demo-divider/demo-divider.component';
 import { DemoEmptyStateComponent } from './demo-empty-state/demo-empty-state.component';
-import { DemoEmptyStateExampleComponent } from './demo-empty-state/demo-empty-state-example/demo-empty-state-example.component';
 import { DemoErrorBannerComponent } from './demo-error-banner/demo-error-banner.component';
 import { DemoExpandableFabComponent } from './demo-expandable-fab/demo-expandable-fab.component';
 import { DemoFieldComponent } from './demo-field/demo-field.component';
@@ -108,7 +107,6 @@ const materialModules = [
     DemoDateRangeComponent,
     DemoDividerComponent,
     DemoEmptyStateComponent,
-    DemoEmptyStateExampleComponent,
     DemoErrorBannerComponent,
     DemoExpandableFabComponent,
     DemoFieldComponent,
@@ -140,7 +138,7 @@ const materialModules = [
         DemoDialogComponentDialog,
         DemoDialogComponentDialogBackground,
         DemoDialogAcceptCancelComponent,
-        DemoEmptyStateExampleComponent, DemoDataTableContainerComponent]
+        DemoDataTableContainerComponent]
 
 })
 export class DemoModule {}

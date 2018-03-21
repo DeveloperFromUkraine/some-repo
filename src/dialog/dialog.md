@@ -24,7 +24,9 @@ See [Material Design Dialogs](https://material.io/guidelines/components/dialogs.
             <p>&nbsp;selectedOption: string;</p>
             <p>&nbsp;constructor(public dialog: MatDialog) &#123;}</p>
             <p>&nbsp;openDialog() &#123;</p>
-            <p>&nbsp;let dialogRef = this.dialog.open(DemoDialogComponentDialog);</p>
+            <p>&nbsp;const config = new MatDialogConfig();</p>
+            <p>&nbsp;config.role = "alertdialog";</p>
+            <p>&nbsp;let dialogRef = this.dialog.open(DemoDialogComponentDialog, config);</p>
             <p>&nbsp;dialogRef.afterClosed().subscribe(result => &#123;</p>
             <p>&nbsp;&nbsp;this.selectedOption = result;</p>
             <p>&nbsp;&nbsp;&#125;);</p>
@@ -98,6 +100,12 @@ destructive action, cancel (discard information) or delete. This dialog will com
 
 * Simple dialogs provide in-context assistance such as a definition of a complex term, details, or actions about a list
 item. Their intent is to help the user understand something that may not be clear without interrupting the users flow.
+
+## Accessibility
+* The role of dialogs must be set to 'alertdialog'
+    * Create an instance of MatDialogConfig in TS and set its role="alertdialog"
+    * Pass in the instance when opening the dialog
+* Refer to Sample TS for example 
 
 ## Dialog Components
 
@@ -192,7 +200,9 @@ item. Their intent is to help the user understand something that may not be clea
     constructor(public dialog: MatDialog) {}
 
     openDialog() {
-        let dialogRef = this.dialog.open(DemoDialogComponentDialog);
+        const config = new MatDialogConfig();
+        config.role = "alertdialog";
+        let dialogRef = this.dialog.open(DemoDialogComponentDialog, config);
         dialogRef.afterClosed().subscribe(result => {
             this.selectedOption = result;
         });

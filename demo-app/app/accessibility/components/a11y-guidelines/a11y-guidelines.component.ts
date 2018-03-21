@@ -11,13 +11,16 @@ export class AccessibilityGuidelinesComponent {
 
     componentList = [
         { name: 'Checkboxes', route: '/checkbox' },
+        { name: 'Dialog', route: '/dialog' },
         { name: 'Error Banner', route: '/error-banner' },
         { name: 'Floating Action Button', route: '/expandable-fab' },
+        { name: 'Form', route: '/form' },
         { name: 'Icon', route: '/icon' },
         { name: 'Info Banner', route: '/info-banner' },
         { name: 'Loading Container', route: '/loading-container' },
         { name: 'Nav List', route: '/nav-list' },
         { name: 'Radio Buttons', route: '/radio-button' },
+        { name: 'Sidenav', route: '/sidenav' },
     ];
 
     constructor(router: Router) {
