@@ -3,7 +3,6 @@
 exports[`List Item Secondary Text should match snapshot 1`] = `
 <ign-list-item-secondary-text>
   <h4
-    _ngcontent-c0=""
     class="secondary-text"
     mat-line=""
   />

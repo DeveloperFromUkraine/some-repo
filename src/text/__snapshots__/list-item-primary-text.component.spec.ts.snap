@@ -3,7 +3,6 @@
 exports[`List Item Primary Text should match snapshot 1`] = `
 <ign-list-item-primary-text>
   <h3
-    _ngcontent-c0=""
     class="primary-text"
     mat-line=""
   />

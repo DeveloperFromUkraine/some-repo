@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn start
+  /usr/local/bin/node /usr/local/bin/yarn jest --updateSnapshot --verbose
 
 PATH: 
   /users/brianm/library/android/sdk/tools:/users/brianm/library/android/sdk/platform-tools:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/users/brianm/library/android/sdk/tools:/users/brianm/library/android/sdk/platform-tools:/Users/brianm/.sdkman/candidates/springboot/current/bin
@@ -172,8 +172,8 @@ Lockfile:
       rxjs "^5.5.6"
   
   "@angular/animations@^5.0.0":
-    version "5.2.8"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/animations/-/animations-5.2.8.tgz#31cdb49163881323fa5ded41e89683ec5e9ac8b5"
+    version "5.2.9"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/animations/-/animations-5.2.9.tgz#220db9fb5a52a193db0023d721b23ddd25a75770"
     dependencies:
       tslib "^1.7.1"
   
@@ -249,14 +249,14 @@ Lockfile:
       node-sass "^4.7.2"
   
   "@angular/common@^5.0.0":
-    version "5.2.8"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/common/-/common-5.2.8.tgz#25c81609305e4cee6734d90c8ff1132ab35f81bf"
+    version "5.2.9"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/common/-/common-5.2.9.tgz#beb25d4434498abae56bd8dc2c01ade3f6c45e81"
     dependencies:
       tslib "^1.7.1"
   
   "@angular/compiler-cli@^5.0.0":
-    version "5.2.8"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/compiler-cli/-/compiler-cli-5.2.8.tgz#49e298dd8d5f7dde54045ff3c1acd9f3ca62e70b"
+    version "5.2.9"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/compiler-cli/-/compiler-cli-5.2.9.tgz#36a069937d50a8a294eda233b5b1b2c71139751f"
     dependencies:
       chokidar "^1.4.2"
       minimist "^1.2.0"
@@ -264,26 +264,26 @@ Lockfile:
       tsickle "^0.27.2"
   
   "@angular/compiler@^5.0.0":
-    version "5.2.8"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/compiler/-/compiler-5.2.8.tgz#534315d0c700d57c2eb7cc7fff4f180213c8633f"
+    version "5.2.9"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/compiler/-/compiler-5.2.9.tgz#1d03bc1e8b38c259bc58114d691c2140d244f8f5"
     dependencies:
       tslib "^1.7.1"
   
   "@angular/core@^5.0.0":
-    version "5.2.8"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/core/-/core-5.2.8.tgz#d2e7657f2c5ce7f050e8f438dcc420c9bebca10a"
+    version "5.2.9"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/core/-/core-5.2.9.tgz#3daf13ef9aa754b9954ed21da3eb322e8b20f667"
     dependencies:
       tslib "^1.7.1"
   
   "@angular/forms@^5.0.0":
-    version "5.2.8"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/forms/-/forms-5.2.8.tgz#eda3c0ee2cb085581bb9bf8ac3c7b463b082b643"
+    version "5.2.9"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/forms/-/forms-5.2.9.tgz#12c45b3a02c398b354f09cc740d914cd904c0c9c"
     dependencies:
       tslib "^1.7.1"
   
   "@angular/http@^5.0.0":
-    version "5.2.8"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/http/-/http-5.2.8.tgz#be51315032515f8699f8b810ebf3ca78c0cc3759"
+    version "5.2.9"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/http/-/http-5.2.9.tgz#2ffea536e181bc97e2867593d57425ea7853285b"
     dependencies:
       tslib "^1.7.1"
   
@@ -294,20 +294,20 @@ Lockfile:
       tslib "^1.7.1"
   
   "@angular/platform-browser-dynamic@^5.0.0":
-    version "5.2.8"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/platform-browser-dynamic/-/platform-browser-dynamic-5.2.8.tgz#f2a620694ad771bf466d2bd752ca3a657ea7d46c"
+    version "5.2.9"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/platform-browser-dynamic/-/platform-browser-dynamic-5.2.9.tgz#86075b7bb694861f722ceda29aae186b045c6b7d"
     dependencies:
       tslib "^1.7.1"
   
   "@angular/platform-browser@^5.0.0":
-    version "5.2.8"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/platform-browser/-/platform-browser-5.2.8.tgz#253264887429ad71057882bcbc5cfda1fa4bbc06"
+    version "5.2.9"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/platform-browser/-/platform-browser-5.2.9.tgz#9ee76327b1b3affad68ffa839058661b7704bc2c"
     dependencies:
       tslib "^1.7.1"
   
   "@angular/router@^5.0.0":
-    version "5.2.8"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/router/-/router-5.2.8.tgz#10e906803e5e71d42d157b0ccd78e773d1e316fc"
+    version "5.2.9"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/router/-/router-5.2.9.tgz#0369df6e60c6da3a5842c6eb35e3958d4ffe727e"
     dependencies:
       tslib "^1.7.1"
   
@@ -318,14 +318,14 @@ Lockfile:
       tsickle "^0.21.0"
   
   "@babel/code-frame@^7.0.0-beta.35":
-    version "7.0.0-beta.40"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@babel/code-frame/-/code-frame-7.0.0-beta.40.tgz#37e2b0cf7c56026b4b21d3927cadf81adec32ac6"
+    version "7.0.0-beta.42"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@babel/code-frame/-/code-frame-7.0.0-beta.42.tgz#a9c83233fa7cd06b39dc77adbb908616ff4f1962"
     dependencies:
-      "@babel/highlight" "7.0.0-beta.40"
+      "@babel/highlight" "7.0.0-beta.42"
   
-  "@babel/highlight@7.0.0-beta.40":
-    version "7.0.0-beta.40"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@babel/highlight/-/highlight-7.0.0-beta.40.tgz#b43d67d76bf46e1d10d227f68cddcd263786b255"
+  "@babel/highlight@7.0.0-beta.42":
+    version "7.0.0-beta.42"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@babel/highlight/-/highlight-7.0.0-beta.42.tgz#a502a1c0d6f99b2b0e81d468a1b0c0e81e3f3623"
     dependencies:
       chalk "^2.0.0"
       esutils "^2.0.2"
@@ -414,8 +414,8 @@ Lockfile:
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@types/async/-/async-2.0.47.tgz#f49ba1dd1f189486beb6e1d070a850f6ab4bd521"
   
   "@types/googlemaps@^3.29.2":
-    version "3.30.7"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@types/googlemaps/-/googlemaps-3.30.7.tgz#1573d24d326fd96cd8baea1f12e8343fb97ad45b"
+    version "3.30.8"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@types/googlemaps/-/googlemaps-3.30.8.tgz#cc6ab90f79f3a8b799860ea1d70252a221af702e"
   
   "@types/jest@^19.2.3":
     version "19.2.4"
@@ -495,8 +495,8 @@ Lockfile:
       json-schema-traverse "^0.3.0"
   
   ajv@^6.1.0, ajv@^6.1.1:
-    version "6.2.1"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ajv/-/ajv-6.2.1.tgz#28a6abc493a2abe0fb4c8507acaedb43fa550671"
+    version "6.3.0"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ajv/-/ajv-6.3.0.tgz#1650a41114ef00574cac10b8032d8f4c14812da7"
     dependencies:
       fast-deep-equal "^1.0.0"
       fast-json-stable-stringify "^2.0.0"
@@ -608,28 +608,28 @@ Lockfile:
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-angular/-/apollo-angular-1.0.1.tgz#2a48bd4c550be417d2902adcd859493282cd939a"
   
   apollo-cache-inmemory@^1.1.7:
-    version "1.1.10"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-cache-inmemory/-/apollo-cache-inmemory-1.1.10.tgz#472442c6c59395159ae7d686ea33056248b26125"
+    version "1.1.11"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-cache-inmemory/-/apollo-cache-inmemory-1.1.11.tgz#2a96ad076f40575d622c4a45b1eeced18b2dc8ec"
     dependencies:
-      apollo-cache "^1.1.5"
-      apollo-utilities "^1.0.9"
-      graphql-anywhere "^4.1.6"
+      apollo-cache "^1.1.6"
+      apollo-utilities "^1.0.10"
+      graphql-anywhere "^4.1.7"
   
-  apollo-cache@^1.1.5:
-    version "1.1.5"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-cache/-/apollo-cache-1.1.5.tgz#159488bb8981ceacfe26172666a593f38318dbf7"
+  apollo-cache@^1.1.6:
+    version "1.1.6"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-cache/-/apollo-cache-1.1.6.tgz#b953488bcc8244e001b9ab9c8b362a1512e9203f"
     dependencies:
-      apollo-utilities "^1.0.9"
+      apollo-utilities "^1.0.10"
   
   apollo-client@^2.2.2:
-    version "2.2.6"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-client/-/apollo-client-2.2.6.tgz#38b5a197976f3c22b63623c455d4c4606e420b66"
+    version "2.2.7"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-client/-/apollo-client-2.2.7.tgz#d5adbda81ef1f1c9c105ac71227ca8dc42b5731b"
     dependencies:
       "@types/zen-observable" "^0.5.3"
-      apollo-cache "^1.1.5"
+      apollo-cache "^1.1.6"
       apollo-link "^1.0.0"
       apollo-link-dedup "^1.0.0"
-      apollo-utilities "^1.0.9"
+      apollo-utilities "^1.0.10"
       symbol-observable "^1.0.2"
       zen-observable "^0.7.0"
     optionalDependencies:
@@ -649,9 +649,9 @@ Lockfile:
       apollo-utilities "^1.0.0"
       zen-observable-ts "^0.8.6"
   
-  apollo-utilities@^1.0.0, apollo-utilities@^1.0.9:
-    version "1.0.9"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-utilities/-/apollo-utilities-1.0.9.tgz#16f9f2f92fd6c651d497aba6f2747ce17d87d80a"
+  apollo-utilities@^1.0.0, apollo-utilities@^1.0.10:
+    version "1.0.10"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-utilities/-/apollo-utilities-1.0.10.tgz#0c35696891d4fa28d76768e0f7249d63c6da08b9"
   
   app-root-path@^2.0.1:
     version "2.0.1"
@@ -906,12 +906,12 @@ Lockfile:
       babel-runtime "^6.22.0"
       babel-template "^6.24.1"
   
-  babel-jest@^22.4.1:
-    version "22.4.1"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/babel-jest/-/babel-jest-22.4.1.tgz#ff53ebca45957347f27ff4666a31499fbb4c4ddd"
+  babel-jest@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/babel-jest/-/babel-jest-22.4.3.tgz#4b7a0b6041691bbd422ab49b3b73654a49a6627a"
     dependencies:
       babel-plugin-istanbul "^4.1.5"
-      babel-preset-jest "^22.4.1"
+      babel-preset-jest "^22.4.3"
   
   babel-messages@^6.23.0:
     version "6.23.0"
@@ -931,9 +931,9 @@ Lockfile:
     version "20.0.3"
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-20.0.3.tgz#afedc853bd3f8dc3548ea671fbe69d03cc2c1767"
   
-  babel-plugin-jest-hoist@^22.4.1:
-    version "22.4.1"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-22.4.1.tgz#d712fe5da8b6965f3191dacddbefdbdf4fb66d63"
+  babel-plugin-jest-hoist@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-22.4.3.tgz#7d8bcccadc2667f96a0dcc6afe1891875ee6c14a"
   
   babel-plugin-syntax-object-rest-spread@^6.13.0:
     version "6.13.0"
@@ -961,11 +961,11 @@ Lockfile:
     dependencies:
       babel-plugin-jest-hoist "^20.0.3"
   
-  babel-preset-jest@^22.4.1:
-    version "22.4.1"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/babel-preset-jest/-/babel-preset-jest-22.4.1.tgz#efa2e5f5334242a9457a068452d7d09735db172a"
+  babel-preset-jest@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/babel-preset-jest/-/babel-preset-jest-22.4.3.tgz#e92eef9813b7026ab4ca675799f37419b5a44156"
     dependencies:
-      babel-plugin-jest-hoist "^22.4.1"
+      babel-plugin-jest-hoist "^22.4.3"
       babel-plugin-syntax-object-rest-spread "^6.13.0"
   
   babel-register@^6.26.0:
@@ -1253,6 +1253,10 @@ Lockfile:
     version "0.2.13"
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/buffer-crc32/-/buffer-crc32-0.2.13.tgz#0d333e3f00eac50aa1454abd30ef8c2a5d9a7242"
   
+  buffer-from@^1.0.0:
+    version "1.0.0"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/buffer-from/-/buffer-from-1.0.0.tgz#4cb8832d23612589b0406e9e2956c17f06fdf531"
+  
   buffer-indexof@^1.0.0:
     version "1.1.1"
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/buffer-indexof/-/buffer-indexof-1.1.1.tgz#52fabcc6a606d1a00302802648ef68f639da268c"
@@ -1361,8 +1365,8 @@ Lockfile:
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
   
   caniuse-lite@^1.0.30000792, caniuse-lite@^1.0.30000805:
-    version "1.0.30000813"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/caniuse-lite/-/caniuse-lite-1.0.30000813.tgz#7b25e27fdfb8d133f3c932b01f77452140fcc6c9"
+    version "1.0.30000817"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/caniuse-lite/-/caniuse-lite-1.0.30000817.tgz#e993c380eb4bfe76a2aed4223f841c02d6e0d832"
   
   caseless@~0.11.0:
     version "0.11.0"
@@ -1389,7 +1393,7 @@ Lockfile:
       strip-ansi "^3.0.0"
       supports-color "^2.0.0"
   
-  chalk@^2.0.0, chalk@^2.0.1, chalk@^2.3.0, chalk@^2.3.1, chalk@^2.3.2:
+  chalk@^2.0.0, chalk@^2.0.1, chalk@^2.3.0, chalk@^2.3.2:
     version "2.3.2"
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/chalk/-/chalk-2.3.2.tgz#250dc96b07491bfd601e648d66ddf5f60c7a5c65"
     dependencies:
@@ -1597,13 +1601,13 @@ Lockfile:
     dependencies:
       delayed-stream "~1.0.0"
   
-  commander@2.14.x, commander@~2.14.1:
-    version "2.14.1"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/commander/-/commander-2.14.1.tgz#2235123e37af8ca3c65df45b026dbd357b01b9aa"
-  
-  commander@2.15.0, commander@^2.11.0, commander@^2.12.1, commander@^2.9.0:
+  commander@2.15.0:
     version "2.15.0"
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/commander/-/commander-2.15.0.tgz#ad2a23a1c3b036e392469b8012cec6b33b4c1322"
+  
+  commander@2.15.x, commander@^2.11.0, commander@^2.12.1, commander@^2.9.0, commander@~2.15.0:
+    version "2.15.1"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/commander/-/commander-2.15.1.tgz#df46e867d0fc2aec66a34662b406a9ccafff5b0f"
   
   commander@~2.13.0:
     version "2.13.0"
@@ -1650,9 +1654,10 @@ Lockfile:
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   
   concat-stream@^1.5.0:
-    version "1.6.1"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/concat-stream/-/concat-stream-1.6.1.tgz#261b8f518301f1d834e36342b9fea095d2620a26"
+    version "1.6.2"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/concat-stream/-/concat-stream-1.6.2.tgz#904bdf194cd3122fc675c77fc4ac3d4ff0fd1a34"
     dependencies:
+      buffer-from "^1.0.0"
       inherits "^2.0.3"
       readable-stream "^2.2.2"
       typedarray "^0.0.6"
@@ -2218,8 +2223,8 @@ Lockfile:
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ejs/-/ejs-2.5.7.tgz#cc872c168880ae3c7189762fd5ffc00896c9518a"
   
   electron-to-chromium@^1.3.30:
-    version "1.3.37"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/electron-to-chromium/-/electron-to-chromium-1.3.37.tgz#4a92734e0044c8cf0b1553be57eae21a4c6e5fab"
+    version "1.3.40"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/electron-to-chromium/-/electron-to-chromium-1.3.40.tgz#1fbd6d97befd72b8a6f921dc38d22413d2f6fddf"
   
   elliptic@^6.0.0:
     version "6.4.0"
@@ -2277,8 +2282,8 @@ Lockfile:
       is-arrayish "^0.2.1"
   
   es-abstract@^1.5.1, es-abstract@^1.7.0:
-    version "1.10.0"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/es-abstract/-/es-abstract-1.10.0.tgz#1ecb36c197842a00d8ee4c2dfd8646bb97d60864"
+    version "1.11.0"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/es-abstract/-/es-abstract-1.11.0.tgz#cce87d518f0496893b1a30cd8461835535480681"
     dependencies:
       es-to-primitive "^1.1.1"
       function-bind "^1.1.1"
@@ -2295,11 +2300,12 @@ Lockfile:
       is-symbol "^1.0.1"
   
   es5-ext@^0.10.14, es5-ext@^0.10.35, es5-ext@^0.10.9, es5-ext@~0.10.14:
-    version "0.10.40"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/es5-ext/-/es5-ext-0.10.40.tgz#ab3d2179b943008c5e9ef241beb25ef41424c774"
+    version "0.10.41"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/es5-ext/-/es5-ext-0.10.41.tgz#bab3e982d750f0112f0cb9e6abed72c59eb33eb2"
     dependencies:
       es6-iterator "~2.0.3"
       es6-symbol "~3.1.1"
+      next-tick "1"
   
   es6-iterator@^2.0.1, es6-iterator@~2.0.1, es6-iterator@~2.0.3:
     version "2.0.3"
@@ -2505,16 +2511,16 @@ Lockfile:
     dependencies:
       fill-range "^2.1.0"
   
-  expect@^22.4.0:
-    version "22.4.0"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/expect/-/expect-22.4.0.tgz#371edf1ae15b83b5bf5ec34b42f1584660a36c16"
+  expect@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/expect/-/expect-22.4.3.tgz#d5a29d0a0e1fb2153557caef2674d4547e914674"
     dependencies:
       ansi-styles "^3.2.0"
-      jest-diff "^22.4.0"
-      jest-get-type "^22.1.0"
-      jest-matcher-utils "^22.4.0"
-      jest-message-util "^22.4.0"
-      jest-regex-util "^22.1.0"
+      jest-diff "^22.4.3"
+      jest-get-type "^22.4.3"
+      jest-matcher-utils "^22.4.3"
+      jest-message-util "^22.4.3"
+      jest-regex-util "^22.4.3"
   
   express@^4.16.2:
     version "4.16.3"
@@ -2753,8 +2759,8 @@ Lockfile:
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/first-chunk-stream/-/first-chunk-stream-1.0.0.tgz#59bfb50cd905f60d7c394cd3d9acaab4e6ad934e"
   
   flush-write-stream@^1.0.0:
-    version "1.0.2"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/flush-write-stream/-/flush-write-stream-1.0.2.tgz#c81b90d8746766f1a609a46809946c45dd8ae417"
+    version "1.0.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/flush-write-stream/-/flush-write-stream-1.0.3.tgz#c5d586ef38af6097650b49bc41b55fabb19f35bd"
     dependencies:
       inherits "^2.0.1"
       readable-stream "^2.0.4"
@@ -3060,11 +3066,11 @@ Lockfile:
     version "4.1.11"
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
   
-  graphql-anywhere@^4.1.6:
-    version "4.1.6"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/graphql-anywhere/-/graphql-anywhere-4.1.6.tgz#1329ee62c76ff363aa44570d12067178b8611dca"
+  graphql-anywhere@^4.1.7:
+    version "4.1.7"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/graphql-anywhere/-/graphql-anywhere-4.1.7.tgz#cbb9106905bcc25bc0e8390548a97f8b154d3f9b"
     dependencies:
-      apollo-utilities "^1.0.9"
+      apollo-utilities "^1.0.10"
   
   graphql-tag@^2.6.1:
     version "2.8.0"
@@ -3332,12 +3338,12 @@ Lockfile:
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/html-entities/-/html-entities-1.2.1.tgz#0df29351f0721163515dfb9e5543e5f6eed5162f"
   
   html-minifier@^3.2.3:
-    version "3.5.10"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/html-minifier/-/html-minifier-3.5.10.tgz#8522c772c388db81aa5c26f62033302d906ea1c7"
+    version "3.5.12"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/html-minifier/-/html-minifier-3.5.12.tgz#6bfad4d0327f5b8d2b62f5854654ac3703b9b031"
     dependencies:
       camel-case "3.0.x"
       clean-css "4.1.x"
-      commander "2.14.x"
+      commander "2.15.x"
       he "1.1.x"
       ncname "1.0.x"
       param-case "2.1.x"
@@ -3441,8 +3447,8 @@ Lockfile:
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
   
   ieee754@^1.1.4:
-    version "1.1.8"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ieee754/-/ieee754-1.1.8.tgz#be33d40ac10ef1926701f6f08a2d86fbfd1ad3e4"
+    version "1.1.10"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ieee754/-/ieee754-1.1.10.tgz#719a6f7b026831e64bdb838b0de1bb0029bbf716"
   
   iferr@^0.1.5:
     version "0.1.5"
@@ -3526,8 +3532,8 @@ Lockfile:
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/interpret/-/interpret-1.1.0.tgz#7ed1b1410c6a0e0f78cf95d3b8440c63f78b8614"
   
   invariant@^2.2.2:
-    version "2.2.3"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/invariant/-/invariant-2.2.3.tgz#1a827dfde7dcbd7c323f0ca826be8fa7c5e9d688"
+    version "2.2.4"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
     dependencies:
       loose-envify "^1.0.0"
   
@@ -3908,15 +3914,15 @@ Lockfile:
     version "1.1.3"
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/iterall/-/iterall-1.1.3.tgz#1cbbff96204056dde6656e2ed2e2226d0e6d72c9"
   
-  jest-changed-files@^22.2.0:
-    version "22.2.0"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-changed-files/-/jest-changed-files-22.2.0.tgz#517610c4a8ca0925bdc88b0ca53bd678aa8d019e"
+  jest-changed-files@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-changed-files/-/jest-changed-files-22.4.3.tgz#8882181e022c38bd46a2e4d18d44d19d90a90fb2"
     dependencies:
       throat "^4.0.0"
   
-  jest-cli@^22.4.2:
-    version "22.4.2"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-cli/-/jest-cli-22.4.2.tgz#e6546dc651e13d164481aa3e76e53ac4f4edab06"
+  jest-cli@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-cli/-/jest-cli-22.4.3.tgz#bf16c4a5fb7edc3fa5b9bb7819e34139e88a72c7"
     dependencies:
       ansi-escapes "^3.0.0"
       chalk "^2.0.1"
@@ -3929,20 +3935,20 @@ Lockfile:
       istanbul-lib-coverage "^1.1.1"
       istanbul-lib-instrument "^1.8.0"
       istanbul-lib-source-maps "^1.2.1"
-      jest-changed-files "^22.2.0"
-      jest-config "^22.4.2"
-      jest-environment-jsdom "^22.4.1"
-      jest-get-type "^22.1.0"
-      jest-haste-map "^22.4.2"
-      jest-message-util "^22.4.0"
-      jest-regex-util "^22.1.0"
-      jest-resolve-dependencies "^22.1.0"
-      jest-runner "^22.4.2"
-      jest-runtime "^22.4.2"
-      jest-snapshot "^22.4.0"
-      jest-util "^22.4.1"
-      jest-validate "^22.4.2"
-      jest-worker "^22.2.2"
+      jest-changed-files "^22.4.3"
+      jest-config "^22.4.3"
+      jest-environment-jsdom "^22.4.3"
+      jest-get-type "^22.4.3"
+      jest-haste-map "^22.4.3"
+      jest-message-util "^22.4.3"
+      jest-regex-util "^22.4.3"
+      jest-resolve-dependencies "^22.4.3"
+      jest-runner "^22.4.3"
+      jest-runtime "^22.4.3"
+      jest-snapshot "^22.4.3"
+      jest-util "^22.4.3"
+      jest-validate "^22.4.3"
+      jest-worker "^22.4.3"
       micromatch "^2.3.11"
       node-notifier "^5.2.1"
       realpath-native "^1.0.0"
@@ -3968,21 +3974,21 @@ Lockfile:
       jest-validate "^20.0.3"
       pretty-format "^20.0.3"
   
-  jest-config@^22.4.2:
-    version "22.4.2"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-config/-/jest-config-22.4.2.tgz#580ba5819bf81a5e48f4fd470e8b81834f45c855"
+  jest-config@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-config/-/jest-config-22.4.3.tgz#0e9d57db267839ea31309119b41dc2fa31b76403"
     dependencies:
       chalk "^2.0.1"
       glob "^7.1.1"
-      jest-environment-jsdom "^22.4.1"
-      jest-environment-node "^22.4.1"
-      jest-get-type "^22.1.0"
-      jest-jasmine2 "^22.4.2"
-      jest-regex-util "^22.1.0"
-      jest-resolve "^22.4.2"
-      jest-util "^22.4.1"
-      jest-validate "^22.4.2"
-      pretty-format "^22.4.0"
+      jest-environment-jsdom "^22.4.3"
+      jest-environment-node "^22.4.3"
+      jest-get-type "^22.4.3"
+      jest-jasmine2 "^22.4.3"
+      jest-regex-util "^22.4.3"
+      jest-resolve "^22.4.3"
+      jest-util "^22.4.3"
+      jest-validate "^22.4.3"
+      pretty-format "^22.4.3"
   
   jest-diff@^20.0.3:
     version "20.0.3"
@@ -3993,18 +3999,18 @@ Lockfile:
       jest-matcher-utils "^20.0.3"
       pretty-format "^20.0.3"
   
-  jest-diff@^22.4.0:
-    version "22.4.0"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-diff/-/jest-diff-22.4.0.tgz#384c2b78519ca44ca126382df53f134289232525"
+  jest-diff@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-diff/-/jest-diff-22.4.3.tgz#e18cc3feff0aeef159d02310f2686d4065378030"
     dependencies:
       chalk "^2.0.1"
       diff "^3.2.0"
-      jest-get-type "^22.1.0"
-      pretty-format "^22.4.0"
+      jest-get-type "^22.4.3"
+      pretty-format "^22.4.3"
   
-  jest-docblock@^22.4.0:
-    version "22.4.0"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-docblock/-/jest-docblock-22.4.0.tgz#dbf1877e2550070cfc4d9b07a55775a0483159b8"
+  jest-docblock@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-docblock/-/jest-docblock-22.4.3.tgz#50886f132b42b280c903c592373bb6e93bb68b19"
     dependencies:
       detect-newline "^2.1.0"
   
@@ -4016,12 +4022,12 @@ Lockfile:
       jest-util "^20.0.3"
       jsdom "^9.12.0"
   
-  jest-environment-jsdom@^22.4.1:
-    version "22.4.1"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-environment-jsdom/-/jest-environment-jsdom-22.4.1.tgz#754f408872441740100d3917e5ec40c74de6447f"
+  jest-environment-jsdom@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-environment-jsdom/-/jest-environment-jsdom-22.4.3.tgz#d67daa4155e33516aecdd35afd82d4abf0fa8a1e"
     dependencies:
-      jest-mock "^22.2.0"
-      jest-util "^22.4.1"
+      jest-mock "^22.4.3"
+      jest-util "^22.4.3"
       jsdom "^11.5.1"
   
   jest-environment-node@^20.0.3:
@@ -4031,26 +4037,26 @@ Lockfile:
       jest-mock "^20.0.3"
       jest-util "^20.0.3"
   
-  jest-environment-node@^22.4.1:
-    version "22.4.1"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-environment-node/-/jest-environment-node-22.4.1.tgz#418850eb654596b8d6e36c2021cbedbc23df8e16"
+  jest-environment-node@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-environment-node/-/jest-environment-node-22.4.3.tgz#54c4eaa374c83dd52a9da8759be14ebe1d0b9129"
     dependencies:
-      jest-mock "^22.2.0"
-      jest-util "^22.4.1"
+      jest-mock "^22.4.3"
+      jest-util "^22.4.3"
   
-  jest-get-type@^22.1.0:
-    version "22.1.0"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-get-type/-/jest-get-type-22.1.0.tgz#4e90af298ed6181edc85d2da500dbd2753e0d5a9"
+  jest-get-type@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-get-type/-/jest-get-type-22.4.3.tgz#e3a8504d8479342dd4420236b322869f18900ce4"
   
-  jest-haste-map@^22.4.2:
-    version "22.4.2"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-haste-map/-/jest-haste-map-22.4.2.tgz#a90178e66146d4378bb076345a949071f3b015b4"
+  jest-haste-map@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-haste-map/-/jest-haste-map-22.4.3.tgz#25842fa2ba350200767ac27f658d58b9d5c2e20b"
     dependencies:
       fb-watchman "^2.0.0"
       graceful-fs "^4.1.11"
-      jest-docblock "^22.4.0"
-      jest-serializer "^22.4.0"
-      jest-worker "^22.2.2"
+      jest-docblock "^22.4.3"
+      jest-serializer "^22.4.3"
+      jest-worker "^22.4.3"
       micromatch "^2.3.11"
       sane "^2.0.0"
   
@@ -4068,27 +4074,27 @@ Lockfile:
       once "^1.4.0"
       p-map "^1.1.1"
   
-  jest-jasmine2@^22.4.2:
-    version "22.4.2"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-jasmine2/-/jest-jasmine2-22.4.2.tgz#dfd3d259579ed6f52510d8f1ab692808f0d40691"
+  jest-jasmine2@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-jasmine2/-/jest-jasmine2-22.4.3.tgz#4daf64cd14c793da9db34a7c7b8dcfe52a745965"
     dependencies:
       chalk "^2.0.1"
       co "^4.6.0"
-      expect "^22.4.0"
+      expect "^22.4.3"
       graceful-fs "^4.1.11"
       is-generator-fn "^1.0.0"
-      jest-diff "^22.4.0"
-      jest-matcher-utils "^22.4.0"
-      jest-message-util "^22.4.0"
-      jest-snapshot "^22.4.0"
-      jest-util "^22.4.1"
+      jest-diff "^22.4.3"
+      jest-matcher-utils "^22.4.3"
+      jest-message-util "^22.4.3"
+      jest-snapshot "^22.4.3"
+      jest-util "^22.4.3"
       source-map-support "^0.5.0"
   
-  jest-leak-detector@^22.4.0:
-    version "22.4.0"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-leak-detector/-/jest-leak-detector-22.4.0.tgz#64da77f05b001c96d2062226e079f89989c4aa2f"
+  jest-leak-detector@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-leak-detector/-/jest-leak-detector-22.4.3.tgz#2b7b263103afae8c52b6b91241a2de40117e5b35"
     dependencies:
-      pretty-format "^22.4.0"
+      pretty-format "^22.4.3"
   
   jest-matcher-utils@^20.0.3:
     version "20.0.3"
@@ -4097,13 +4103,13 @@ Lockfile:
       chalk "^1.1.3"
       pretty-format "^20.0.3"
   
-  jest-matcher-utils@^22.4.0:
-    version "22.4.0"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-matcher-utils/-/jest-matcher-utils-22.4.0.tgz#d55f5faf2270462736bdf7c7485ee931c9d4b6a1"
+  jest-matcher-utils@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-matcher-utils/-/jest-matcher-utils-22.4.3.tgz#4632fe428ebc73ebc194d3c7b65d37b161f710ff"
     dependencies:
       chalk "^2.0.1"
-      jest-get-type "^22.1.0"
-      pretty-format "^22.4.0"
+      jest-get-type "^22.4.3"
+      pretty-format "^22.4.3"
   
   jest-matchers@^20.0.3:
     version "20.0.3"
@@ -4122,9 +4128,9 @@ Lockfile:
       micromatch "^2.3.11"
       slash "^1.0.0"
   
-  jest-message-util@^22.4.0:
-    version "22.4.0"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-message-util/-/jest-message-util-22.4.0.tgz#e3d861df16d2fee60cb2bc8feac2188a42579642"
+  jest-message-util@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-message-util/-/jest-message-util-22.4.3.tgz#cf3d38aafe4befddbfc455e57d65d5239e399eb7"
     dependencies:
       "@babel/code-frame" "^7.0.0-beta.35"
       chalk "^2.0.1"
@@ -4136,9 +4142,9 @@ Lockfile:
     version "20.0.3"
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-mock/-/jest-mock-20.0.3.tgz#8bc070e90414aa155c11a8d64c869a0d5c71da59"
   
-  jest-mock@^22.2.0:
-    version "22.2.0"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-mock/-/jest-mock-22.2.0.tgz#444b3f9488a7473adae09bc8a77294afded397a7"
+  jest-mock@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-mock/-/jest-mock-22.4.3.tgz#f63ba2f07a1511772cdc7979733397df770aabc7"
   
   jest-preset-angular@^2.0.2:
     version "2.0.5"
@@ -4151,15 +4157,15 @@ Lockfile:
     version "20.0.3"
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-regex-util/-/jest-regex-util-20.0.3.tgz#85bbab5d133e44625b19faf8c6aa5122d085d762"
   
-  jest-regex-util@^22.1.0:
-    version "22.1.0"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-regex-util/-/jest-regex-util-22.1.0.tgz#5daf2fe270074b6da63e5d85f1c9acc866768f53"
+  jest-regex-util@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-regex-util/-/jest-regex-util-22.4.3.tgz#a826eb191cdf22502198c5401a1fc04de9cef5af"
   
-  jest-resolve-dependencies@^22.1.0:
-    version "22.1.0"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-resolve-dependencies/-/jest-resolve-dependencies-22.1.0.tgz#340e4139fb13315cd43abc054e6c06136be51e31"
+  jest-resolve-dependencies@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-resolve-dependencies/-/jest-resolve-dependencies-22.4.3.tgz#e2256a5a846732dc3969cb72f3c9ad7725a8195e"
     dependencies:
-      jest-regex-util "^22.1.0"
+      jest-regex-util "^22.4.3"
   
   jest-resolve@^20.0.4:
     version "20.0.4"
@@ -4169,46 +4175,46 @@ Lockfile:
       is-builtin-module "^1.0.0"
       resolve "^1.3.2"
   
-  jest-resolve@^22.4.2:
-    version "22.4.2"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-resolve/-/jest-resolve-22.4.2.tgz#25d88aa4147462c9c1c6a1ba16250d3794c24d00"
+  jest-resolve@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-resolve/-/jest-resolve-22.4.3.tgz#0ce9d438c8438229aa9b916968ec6b05c1abb4ea"
     dependencies:
       browser-resolve "^1.11.2"
       chalk "^2.0.1"
   
-  jest-runner@^22.4.2:
-    version "22.4.2"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-runner/-/jest-runner-22.4.2.tgz#19390ea9d99f768973e16f95a1efa351c0017e87"
+  jest-runner@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-runner/-/jest-runner-22.4.3.tgz#298ddd6a22b992c64401b4667702b325e50610c3"
     dependencies:
       exit "^0.1.2"
-      jest-config "^22.4.2"
-      jest-docblock "^22.4.0"
-      jest-haste-map "^22.4.2"
-      jest-jasmine2 "^22.4.2"
-      jest-leak-detector "^22.4.0"
-      jest-message-util "^22.4.0"
-      jest-runtime "^22.4.2"
-      jest-util "^22.4.1"
-      jest-worker "^22.2.2"
+      jest-config "^22.4.3"
+      jest-docblock "^22.4.3"
+      jest-haste-map "^22.4.3"
+      jest-jasmine2 "^22.4.3"
+      jest-leak-detector "^22.4.3"
+      jest-message-util "^22.4.3"
+      jest-runtime "^22.4.3"
+      jest-util "^22.4.3"
+      jest-worker "^22.4.3"
       throat "^4.0.0"
   
-  jest-runtime@^22.4.2:
-    version "22.4.2"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-runtime/-/jest-runtime-22.4.2.tgz#0de0444f65ce15ee4f2e0055133fc7c17b9168f3"
+  jest-runtime@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-runtime/-/jest-runtime-22.4.3.tgz#b69926c34b851b920f666c93e86ba2912087e3d0"
     dependencies:
       babel-core "^6.0.0"
-      babel-jest "^22.4.1"
+      babel-jest "^22.4.3"
       babel-plugin-istanbul "^4.1.5"
       chalk "^2.0.1"
       convert-source-map "^1.4.0"
       exit "^0.1.2"
       graceful-fs "^4.1.11"
-      jest-config "^22.4.2"
-      jest-haste-map "^22.4.2"
-      jest-regex-util "^22.1.0"
-      jest-resolve "^22.4.2"
-      jest-util "^22.4.1"
-      jest-validate "^22.4.2"
+      jest-config "^22.4.3"
+      jest-haste-map "^22.4.3"
+      jest-regex-util "^22.4.3"
+      jest-resolve "^22.4.3"
+      jest-util "^22.4.3"
+      jest-validate "^22.4.3"
       json-stable-stringify "^1.0.1"
       micromatch "^2.3.11"
       realpath-native "^1.0.0"
@@ -4217,9 +4223,9 @@ Lockfile:
       write-file-atomic "^2.1.0"
       yargs "^10.0.3"
   
-  jest-serializer@^22.4.0:
-    version "22.4.0"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-serializer/-/jest-serializer-22.4.0.tgz#b5d145b98c4b0d2c20ab686609adbb81fe23b566"
+  jest-serializer@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-serializer/-/jest-serializer-22.4.3.tgz#a679b81a7f111e4766235f4f0c46d230ee0f7436"
   
   jest-snapshot@^20.0.3:
     version "20.0.3"
@@ -4232,16 +4238,16 @@ Lockfile:
       natural-compare "^1.4.0"
       pretty-format "^20.0.3"
   
-  jest-snapshot@^22.4.0:
-    version "22.4.0"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-snapshot/-/jest-snapshot-22.4.0.tgz#03d3ce63f8fa7352388afc6a3c8b5ccc3a180ed7"
+  jest-snapshot@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-snapshot/-/jest-snapshot-22.4.3.tgz#b5c9b42846ffb9faccb76b841315ba67887362d2"
     dependencies:
       chalk "^2.0.1"
-      jest-diff "^22.4.0"
-      jest-matcher-utils "^22.4.0"
+      jest-diff "^22.4.3"
+      jest-matcher-utils "^22.4.3"
       mkdirp "^0.5.1"
       natural-compare "^1.4.0"
-      pretty-format "^22.4.0"
+      pretty-format "^22.4.3"
   
   jest-util@^20.0.0, jest-util@^20.0.3:
     version "20.0.3"
@@ -4255,15 +4261,15 @@ Lockfile:
       leven "^2.1.0"
       mkdirp "^0.5.1"
   
-  jest-util@^22.4.1:
-    version "22.4.1"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-util/-/jest-util-22.4.1.tgz#dd17c3bdb067f8e90591563ec0c42bf847dc249f"
+  jest-util@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-util/-/jest-util-22.4.3.tgz#c70fec8eec487c37b10b0809dc064a7ecf6aafac"
     dependencies:
       callsites "^2.0.0"
       chalk "^2.0.1"
       graceful-fs "^4.1.11"
       is-ci "^1.0.10"
-      jest-message-util "^22.4.0"
+      jest-message-util "^22.4.3"
       mkdirp "^0.5.1"
       source-map "^0.6.0"
   
@@ -4276,19 +4282,19 @@ Lockfile:
       leven "^2.1.0"
       pretty-format "^20.0.3"
   
-  jest-validate@^22.4.2:
-    version "22.4.2"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-validate/-/jest-validate-22.4.2.tgz#e789a4e056173bf97fe797a2df2d52105c57d4f4"
+  jest-validate@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-validate/-/jest-validate-22.4.3.tgz#0780954a5a7daaeec8d3c10834b9280865976b30"
     dependencies:
       chalk "^2.0.1"
-      jest-config "^22.4.2"
-      jest-get-type "^22.1.0"
+      jest-config "^22.4.3"
+      jest-get-type "^22.4.3"
       leven "^2.1.0"
-      pretty-format "^22.4.0"
+      pretty-format "^22.4.3"
   
-  jest-worker@^22.2.2:
-    version "22.2.2"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-worker/-/jest-worker-22.2.2.tgz#c1f5dc39976884b81f68ec50cb8532b2cbab3390"
+  jest-worker@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-worker/-/jest-worker-22.4.3.tgz#5c421417cba1c0abf64bf56bd5fb7968d79dd40b"
     dependencies:
       merge-stream "^1.0.1"
   
@@ -4297,11 +4303,11 @@ Lockfile:
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-zone-patch/-/jest-zone-patch-0.0.7.tgz#d963cd3eb005d500db1b41242a7a63a371a500f3"
   
   jest@^22.0.0:
-    version "22.4.2"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest/-/jest-22.4.2.tgz#34012834a49bf1bdd3bc783850ab44e4499afc20"
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest/-/jest-22.4.3.tgz#2261f4b117dc46d9a4a1a673d2150958dee92f16"
     dependencies:
       import-local "^1.0.0"
-      jest-cli "^22.4.2"
+      jest-cli "^22.4.3"
   
   js-base64@^2.1.8:
     version "2.4.3"
@@ -4747,10 +4753,10 @@ Lockfile:
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/macos-release/-/macos-release-1.1.0.tgz#831945e29365b470aa8724b0ab36c8f8959d10fb"
   
   magic-string@^0.22.3, magic-string@^0.22.4:
-    version "0.22.4"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/magic-string/-/magic-string-0.22.4.tgz#31039b4e40366395618c1d6cf8193c53917475ff"
+    version "0.22.5"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/magic-string/-/magic-string-0.22.5.tgz#8e9cf5afddf44385c1da5bc2a6a0dbd10b03657e"
     dependencies:
-      vlq "^0.2.1"
+      vlq "^0.2.2"
   
   make-dir@^1.0.0:
     version "1.2.0"
@@ -5029,8 +5035,8 @@ Lockfile:
       duplexer2 "0.0.2"
   
   nan@^2.3.0, nan@^2.3.2:
-    version "2.9.2"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/nan/-/nan-2.9.2.tgz#f564d75f5f8f36a6d9456cca7a6c4fe488ab7866"
+    version "2.10.0"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/nan/-/nan-2.10.0.tgz#96d0cd610ebd58d4b4de9cc0c6828cda99c7548f"
   
   nanomatch@^1.2.9:
     version "1.2.9"
@@ -5066,6 +5072,10 @@ Lockfile:
   neo-async@^2.5.0:
     version "2.5.0"
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/neo-async/-/neo-async-2.5.0.tgz#76b1c823130cca26acfbaccc8fbaf0a2fa33b18f"
+  
+  next-tick@1:
+    version "1.0.0"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   
   ng-packagr@^1.6.0:
     version "1.7.0"
@@ -5274,8 +5284,8 @@ Lockfile:
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   
   "nwmatcher@>= 1.3.9 < 2.0.0", nwmatcher@^1.4.3:
-    version "1.4.3"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/nwmatcher/-/nwmatcher-1.4.3.tgz#64348e3b3d80f035b40ac11563d278f8b72db89c"
+    version "1.4.4"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/nwmatcher/-/nwmatcher-1.4.4.tgz#2285631f34a95f0d0395cd900c96ed39b58f346e"
   
   oauth-sign@~0.8.1, oauth-sign@~0.8.2:
     version "0.8.2"
@@ -5348,8 +5358,8 @@ Lockfile:
       wrappy "1"
   
   opn@^5.1.0, opn@latest:
-    version "5.2.0"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/opn/-/opn-5.2.0.tgz#71fdf934d6827d676cecbea1531f95d354641225"
+    version "5.3.0"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/opn/-/opn-5.3.0.tgz#64871565c863875f052cfdf53d3e3cb5adb53b1c"
     dependencies:
       is-wsl "^1.1.0"
   
@@ -5678,8 +5688,8 @@ Lockfile:
       object-assign "^4.1.0"
   
   postcss-loader@^2.0.10:
-    version "2.1.1"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/postcss-loader/-/postcss-loader-2.1.1.tgz#208935af3b1d65e1abb1a870a912dd12e7b36895"
+    version "2.1.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/postcss-loader/-/postcss-loader-2.1.3.tgz#eb210da734e475a244f76ccd61f9860f5bb3ee09"
     dependencies:
       loader-utils "^1.1.0"
       postcss "^6.0.0"
@@ -5701,12 +5711,12 @@ Lockfile:
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/postcss-value-parser/-/postcss-value-parser-3.3.0.tgz#87f38f9f18f774a4ab4c8a232f5c5ce8872a9d15"
   
   postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.16, postcss@^6.0.17, postcss@^6.0.2:
-    version "6.0.19"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/postcss/-/postcss-6.0.19.tgz#76a78386f670b9d9494a655bf23ac012effd1555"
+    version "6.0.20"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/postcss/-/postcss-6.0.20.tgz#686107e743a12d5530cb68438c590d5b2bf72c3c"
     dependencies:
-      chalk "^2.3.1"
+      chalk "^2.3.2"
       source-map "^0.6.1"
-      supports-color "^5.2.0"
+      supports-color "^5.3.0"
   
   prelude-ls@~1.1.2:
     version "1.1.2"
@@ -5730,9 +5740,9 @@ Lockfile:
       ansi-regex "^2.1.1"
       ansi-styles "^3.0.0"
   
-  pretty-format@^22.4.0:
-    version "22.4.0"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/pretty-format/-/pretty-format-22.4.0.tgz#237b1f7e1c50ed03bc65c03ccc29d7c8bb7beb94"
+  pretty-format@^22.4.3:
+    version "22.4.3"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/pretty-format/-/pretty-format-22.4.3.tgz#f873d780839a9c02e9664c8a082e9ee79eaac16f"
     dependencies:
       ansi-regex "^3.0.0"
       ansi-styles "^3.2.0"
@@ -5881,8 +5891,8 @@ Lockfile:
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/raw-loader/-/raw-loader-0.5.1.tgz#0c3d0beaed8a01c966d9787bf778281252a979aa"
   
   rc@^1.1.7:
-    version "1.2.5"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/rc/-/rc-1.2.5.tgz#275cd687f6e3b36cc756baa26dfee80a790301fd"
+    version "1.2.6"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/rc/-/rc-1.2.6.tgz#eb18989c6d4f4f162c399f79ddd29f3835568092"
     dependencies:
       deep-extend "~0.4.0"
       ini "~1.3.0"
@@ -6197,8 +6207,8 @@ Lockfile:
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
   
   resolve@^1.1.6, resolve@^1.1.7, resolve@^1.3.2, resolve@^1.4.0:
-    version "1.5.0"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/resolve/-/resolve-1.5.0.tgz#1f09acce796c9a762579f31b2c1cc4c3cddf9f36"
+    version "1.6.0"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/resolve/-/resolve-1.6.0.tgz#0fbd21278b27b4004481c395349e7aba60a9ff5c"
     dependencies:
       path-parse "^1.0.5"
   
@@ -6236,8 +6246,8 @@ Lockfile:
       rollup-pluginutils "^2.0.1"
   
   rollup-plugin-node-resolve@^3.0.0:
-    version "3.2.0"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/rollup-plugin-node-resolve/-/rollup-plugin-node-resolve-3.2.0.tgz#31534952f3ab21f9473c1d092be7ed43937ea4d4"
+    version "3.3.0"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/rollup-plugin-node-resolve/-/rollup-plugin-node-resolve-3.3.0.tgz#c26d110a36812cbefa7ce117cadcd3439aa1c713"
     dependencies:
       builtin-modules "^2.0.0"
       is-module "^1.0.0"
@@ -6261,8 +6271,8 @@ Lockfile:
       aproba "^1.1.1"
   
   rxjs@^5.4.3, rxjs@^5.5.6:
-    version "5.5.6"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/rxjs/-/rxjs-5.5.6.tgz#e31fb96d6fd2ff1fd84bcea8ae9c02d007179c02"
+    version "5.5.7"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/rxjs/-/rxjs-5.5.7.tgz#afb3d1642b069b2fbf203903d6501d1acb4cda27"
     dependencies:
       symbol-observable "1.0.1"
   
@@ -6299,13 +6309,13 @@ Lockfile:
       rimraf "^2.5.2"
   
   sane@^2.0.0:
-    version "2.4.1"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/sane/-/sane-2.4.1.tgz#29f991208cf28636720efdc584293e7fd66663a5"
+    version "2.5.0"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/sane/-/sane-2.5.0.tgz#6359cd676f5efd9988b264d8ce3b827dd6b27bec"
     dependencies:
-      anymatch "^1.3.0"
+      anymatch "^2.0.0"
       exec-sh "^0.2.0"
       fb-watchman "^2.0.0"
-      minimatch "^3.0.2"
+      micromatch "^3.1.4"
       minimist "^1.1.1"
       walker "~1.0.5"
       watch "~0.18.0"
@@ -6479,8 +6489,8 @@ Lockfile:
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/setprototypeof/-/setprototypeof-1.1.0.tgz#d0bd85536887b6fe7c0d818cb962d9d91c54e656"
   
   sha.js@^2.4.0, sha.js@^2.4.8:
-    version "2.4.10"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/sha.js/-/sha.js-2.4.10.tgz#b1fde5cd7d11a5626638a07c604ab909cfa31f9b"
+    version "2.4.11"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/sha.js/-/sha.js-2.4.11.tgz#37a5cf0b81ecbc6943de109ba2960d1b26584ae7"
     dependencies:
       inherits "^2.0.1"
       safe-buffer "^5.0.1"
@@ -6621,8 +6631,8 @@ Lockfile:
       source-map "^0.5.6"
   
   source-map-support@^0.5.0:
-    version "0.5.3"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/source-map-support/-/source-map-support-0.5.3.tgz#2b3d5fff298cfa4d1afd7d4352d569e9a0158e76"
+    version "0.5.4"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/source-map-support/-/source-map-support-0.5.4.tgz#54456efa89caa9270af7cd624cc2f123e51fbae8"
     dependencies:
       source-map "^0.6.0"
   
@@ -6651,10 +6661,8 @@ Lockfile:
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   
   sourcemap-codec@^1.3.0:
-    version "1.4.0"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/sourcemap-codec/-/sourcemap-codec-1.4.0.tgz#905439c4c65a4db421a2f2d06065bd8b55846a8e"
-    dependencies:
-      vlq "^1.0.0"
+    version "1.4.1"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/sourcemap-codec/-/sourcemap-codec-1.4.1.tgz#c8fd92d91889e902a07aee392bdd2c5863958ba2"
   
   sparkles@^1.0.0:
     version "1.0.0"
@@ -6726,8 +6734,8 @@ Lockfile:
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
   
   sshpk@^1.7.0:
-    version "1.13.1"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/sshpk/-/sshpk-1.13.1.tgz#512df6da6287144316dc4c18fe1cf1d940739be3"
+    version "1.14.1"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/sshpk/-/sshpk-1.14.1.tgz#130f5975eddad963f1d56f92b9ac6c51fa9f83eb"
     dependencies:
       asn1 "~0.2.3"
       assert-plus "^1.0.0"
@@ -6740,8 +6748,8 @@ Lockfile:
       tweetnacl "~0.14.0"
   
   ssri@^5.2.4:
-    version "5.2.4"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ssri/-/ssri-5.2.4.tgz#9985e14041e65fc397af96542be35724ac11da52"
+    version "5.3.0"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ssri/-/ssri-5.3.0.tgz#ba3872c9c6d33a0704a7d71ff045e5ec48999d06"
     dependencies:
       safe-buffer "^5.1.1"
   
@@ -6791,8 +6799,8 @@ Lockfile:
       stream-shift "^1.0.0"
   
   stream-http@^2.7.2:
-    version "2.8.0"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/stream-http/-/stream-http-2.8.0.tgz#fd86546dac9b1c91aff8fc5d287b98fafb41bc10"
+    version "2.8.1"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/stream-http/-/stream-http-2.8.1.tgz#d0441be1a457a73a733a8a7b53570bebd9ef66a4"
     dependencies:
       builtin-status-codes "^3.0.0"
       inherits "^2.0.1"
@@ -6937,7 +6945,7 @@ Lockfile:
     dependencies:
       has-flag "^2.0.0"
   
-  supports-color@^5.1.0, supports-color@^5.2.0, supports-color@^5.3.0:
+  supports-color@^5.1.0, supports-color@^5.3.0:
     version "5.3.0"
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/supports-color/-/supports-color-5.3.0.tgz#5b24ac15db80fa927cf5227a4a33fd3c4c7676c0"
     dependencies:
@@ -7314,10 +7322,10 @@ Lockfile:
       source-map "~0.6.1"
   
   uglify-js@3.3.x, uglify-js@^3.0.7:
-    version "3.3.14"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/uglify-js/-/uglify-js-3.3.14.tgz#d3d84d18722ff342fa96029cca71c67367700079"
+    version "3.3.16"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/uglify-js/-/uglify-js-3.3.16.tgz#23ba13efa27aa00885be7417819e8a9787f94028"
     dependencies:
-      commander "~2.14.1"
+      commander "~2.15.0"
       source-map "~0.6.1"
   
   uglify-js@^2.6, uglify-js@^2.8.29:
@@ -7342,8 +7350,8 @@ Lockfile:
       webpack-sources "^1.0.1"
   
   uglifyjs-webpack-plugin@^1.1.8:
-    version "1.2.3"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/uglifyjs-webpack-plugin/-/uglifyjs-webpack-plugin-1.2.3.tgz#bf23197b37a8fc953fecfbcbab66e506f9a0ae72"
+    version "1.2.4"
+    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/uglifyjs-webpack-plugin/-/uglifyjs-webpack-plugin-1.2.4.tgz#5eec941b2e9b8538be0a20fc6eda25b14c7c1043"
     dependencies:
       cacache "^10.0.4"
       find-cache-dir "^1.0.0"
@@ -7570,13 +7578,9 @@ Lockfile:
     version "1.8.1"
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/viz.js/-/viz.js-1.8.1.tgz#277ab3cf4367c608a95b281a7472083c3e2ee6cf"
   
-  vlq@^0.2.1:
+  vlq@^0.2.2:
     version "0.2.3"
     resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/vlq/-/vlq-0.2.3.tgz#8f3e4328cf63b1540c0d67e1b2778386f8975b26"
-  
-  vlq@^1.0.0:
-    version "1.0.0"
-    resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/vlq/-/vlq-1.0.0.tgz#8101be90843422954c2b13eb27f2f3122bdcc806"
   
   vm-browserify@0.0.4:
     version "0.0.4"
@@ -8025,7 +8029,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c ng serve
+  Arguments: -c '/Users/brianm/Desktop/Cross-Cutting/Web DS/ignite-design-system/node_modules/.bin/jest' --updateSnapshot --verbose
   Directory: /Users/brianm/Desktop/Cross-Cutting/Web DS/ignite-design-system
   Output:
   

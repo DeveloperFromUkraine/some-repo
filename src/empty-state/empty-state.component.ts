@@ -11,14 +11,14 @@ export class EmptyStateComponent {}
 @Component({
   selector: 'ign-empty-state-title',
   template: '<ng-content></ng-content>',
-  styleUrls: [`empty-state-title.scss`],
+  styleUrls: ['./empty-state-title.scss'],
 })
 export class EmptyStateTitleComponent {}
 
 @Component({
   selector: 'ign-empty-state-description',
   template: '<div><ng-content></ng-content></div>',
-  styleUrls: [`./empty-state-description.scss`],
+  styleUrls: ['./empty-state-description.scss'],
 })
 export class EmptyStateDescriptionComponent {}
 
