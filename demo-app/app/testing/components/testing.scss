@@ -3,11 +3,15 @@ pre {
     overflow: auto;
     width: min-content;
     height: min-content;
-  }
+}
+
+.code-test {
+  font-family: Courier New, Courier, monospace;
+}
   
 .code-block {
     font-family: Courier New, Courier, monospace;
-  }
+}
   
 .code-block-card {
     width: min-content;
