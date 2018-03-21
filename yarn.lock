@@ -174,14 +174,14 @@
     tsickle "^0.21.0"
 
 "@babel/code-frame@^7.0.0-beta.35":
-  version "7.0.0-beta.41"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@babel/code-frame/-/code-frame-7.0.0-beta.41.tgz#68845c10a895050ab643e869100bbcf294b64e09"
+  version "7.0.0-beta.42"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@babel/code-frame/-/code-frame-7.0.0-beta.42.tgz#a9c83233fa7cd06b39dc77adbb908616ff4f1962"
   dependencies:
-    "@babel/highlight" "7.0.0-beta.41"
+    "@babel/highlight" "7.0.0-beta.42"
 
-"@babel/highlight@7.0.0-beta.41":
-  version "7.0.0-beta.41"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@babel/highlight/-/highlight-7.0.0-beta.41.tgz#7e1d634de3821e664bc8ad9688f240530d239b95"
+"@babel/highlight@7.0.0-beta.42":
+  version "7.0.0-beta.42"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@babel/highlight/-/highlight-7.0.0-beta.42.tgz#a502a1c0d6f99b2b0e81d468a1b0c0e81e3f3623"
   dependencies:
     chalk "^2.0.0"
     esutils "^2.0.2"
@@ -1231,8 +1231,8 @@ camelcase@^4.1.0:
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
 
 caniuse-lite@^1.0.30000792, caniuse-lite@^1.0.30000805:
-  version "1.0.30000815"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/caniuse-lite/-/caniuse-lite-1.0.30000815.tgz#3a4258e6850362185adb11b0d754a48402d35bf6"
+  version "1.0.30000817"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/caniuse-lite/-/caniuse-lite-1.0.30000817.tgz#e993c380eb4bfe76a2aed4223f841c02d6e0d832"
 
 caseless@~0.11.0:
   version "0.11.0"
@@ -1467,7 +1467,7 @@ combined-stream@1.0.6, combined-stream@^1.0.5, combined-stream@~1.0.5:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@2.15.0, commander@2.15.x, commander@^2.11.0, commander@^2.12.1, commander@^2.9.0, commander@~2.15.0:
+commander@2.15.0:
   version "2.15.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/commander/-/commander-2.15.0.tgz#ad2a23a1c3b036e392469b8012cec6b33b4c1322"
 
@@ -2942,10 +2942,6 @@ graphql-anywhere@^4.1.7:
   dependencies:
     apollo-utilities "^1.0.10"
 
-graphql-tag@^2.6.1:
-  version "2.8.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/graphql-tag/-/graphql-tag-2.8.0.tgz#52cdea07a842154ec11a2e840c11b977f9b835ce"
-
 graphql@^0.12.3:
   version "0.12.3"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/graphql/-/graphql-0.12.3.tgz#11668458bbe28261c0dcb6e265f515ba79f6ce07"
@@ -3208,8 +3204,8 @@ html-entities@^1.2.0, html-entities@^1.2.1:
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/html-entities/-/html-entities-1.2.1.tgz#0df29351f0721163515dfb9e5543e5f6eed5162f"
 
 html-minifier@^3.2.3:
-  version "3.5.11"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/html-minifier/-/html-minifier-3.5.11.tgz#f248927f2e076733f58c136de0376553beb101f8"
+  version "3.5.12"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/html-minifier/-/html-minifier-3.5.12.tgz#6bfad4d0327f5b8d2b62f5854654ac3703b9b031"
   dependencies:
     camel-case "3.0.x"
     clean-css "4.1.x"
@@ -3788,9 +3784,9 @@ iterall@^1.2.1:
   version "1.2.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/iterall/-/iterall-1.2.2.tgz#92d70deb8028e0c39ff3164fdbf4d8b088130cd7"
 
-jest-changed-files@^22.2.0:
-  version "22.2.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-changed-files/-/jest-changed-files-22.2.0.tgz#517610c4a8ca0925bdc88b0ca53bd678aa8d019e"
+jest-changed-files@^22.4.3:
+  version "22.4.3"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/jest-changed-files/-/jest-changed-files-22.4.3.tgz#8882181e022c38bd46a2e4d18d44d19d90a90fb2"
   dependencies:
     throat "^4.0.0"
 
@@ -6573,8 +6569,8 @@ spdx-license-ids@^3.0.0:
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/spdx-license-ids/-/spdx-license-ids-3.0.0.tgz#7a7cd28470cc6d3a1cfe6d66886f6bc430d3ac87"
 
 spdy-transport@^2.0.18:
-  version "2.0.20"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/spdy-transport/-/spdy-transport-2.0.20.tgz#735e72054c486b2354fe89e702256004a39ace4d"
+  version "2.1.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/spdy-transport/-/spdy-transport-2.1.0.tgz#4bbb15aaffed0beefdd56ad61dbdc8ba3e2cb7a1"
   dependencies:
     debug "^2.6.8"
     detect-node "^2.0.3"
@@ -7217,8 +7213,8 @@ uglify-es@^3.3.4:
     source-map "~0.6.1"
 
 uglify-js@3.3.x, uglify-js@^3.0.7:
-  version "3.3.15"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/uglify-js/-/uglify-js-3.3.15.tgz#5b8783b6856110d3a03a9b81e07324a3b925f2dd"
+  version "3.3.16"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/uglify-js/-/uglify-js-3.3.16.tgz#23ba13efa27aa00885be7417819e8a9787f94028"
   dependencies:
     commander "~2.15.0"
     source-map "~0.6.1"
