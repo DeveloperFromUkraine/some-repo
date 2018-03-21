@@ -11,7 +11,7 @@ Forms are components used to house, select, and submit multiple sets of content 
         <div class="tab-height">
             <form [formGroup]="form"> <ign-card-section> <div fxLayout="column">
                 <mat-form-field ignSizeLarge>
-                    <mat-select><mat-option da="jobSelect-empty" [value]="null">Pick me!</mat-option></mat-select>
+                     <mat-select aria-label="Open example mat select"><mat-option da="jobSelect-empty" [value]="null">Pick me!</mat-option></mat-select>
                 </mat-form-field></div></ign-card-section>
             </form>
             Click the form above!
@@ -20,7 +20,7 @@ Forms are components used to house, select, and submit multiple sets of content 
         <table style="width:100%">
             <p>&lt;form [formGroup]="form"&gt; &lt;ign-card-section&gt; &lt;div fxLayout="column"&gt;</p>
             <p> &nbsp;&nbsp;&lt;mat-form-field ignSizeLarge&gt;</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;mat-select>&lt;mat-option da="jobSelect-empty" [value]="null">Pick me!&lt;/mat-option&gt;&lt;/mat-select&gt;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;mat-select aria-label="open example mat select">&lt;mat-option da="jobSelect-empty" [value]="null">Pick me!&lt;/mat-option&gt;&lt;/mat-select&gt;</p>
             <p>&nbsp;&nbsp;&lt;/mat-form-field&gt;&lt;/div>&lt;/ign-card-section&gt;</p>
             <p> &lt;/form&gt;</p>
             <p> Click the form above!</p>
@@ -63,6 +63,11 @@ The nested form can be used to build a tree of forms from small components.
 
 * No stylistic specifications. Forms are containers and are entirely customizable to fit the need of the
 content.
+
+## Accessibility
+
+* If using a dropdown, add a descriptive aria-label for what the selectable components are for in the mat-select tag 
+* Refer to the Sample HTML for an example
 
 *** TypeScript *** 
     public formBuilder: FormBuilder;

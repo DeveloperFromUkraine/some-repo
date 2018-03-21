@@ -15,6 +15,7 @@ exports[`Date Range should match snapshot 1`] = `
     
     <mat-form-field
       class="mat-input-container mat-form-field ng-tns-c0-0 mat-primary"
+      role="group"
     >
       <div
         class="mat-input-wrapper mat-form-field-wrapper"
@@ -31,9 +32,10 @@ exports[`Date Range should match snapshot 1`] = `
             <input
               class="mat-input-element mat-form-field-autofill-control"
               matinput=""
-              placeholder="Start Date"
+              placeholder="Start Date (Typeahead entries appear in dropdown)"
             />
             
+  
       
             
       
@@ -67,6 +69,7 @@ exports[`Date Range should match snapshot 1`] = `
     
     <mat-form-field
       class="mat-input-container mat-form-field ng-tns-c0-1 mat-primary"
+      role="group"
     >
       <div
         class="mat-input-wrapper mat-form-field-wrapper"
@@ -83,7 +86,7 @@ exports[`Date Range should match snapshot 1`] = `
             <input
               class="mat-input-element mat-form-field-autofill-control"
               matinput=""
-              placeholder="End Date"
+              placeholder="End Date (Typeahead entries appear in dropdown)"
             />
             
       
@@ -118,6 +121,5 @@ exports[`Date Range should match snapshot 1`] = `
     
   
   </form>
-  
 </ign-date-range>
 `;

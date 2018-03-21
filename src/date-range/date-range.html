@@ -1,22 +1,23 @@
 <form [formGroup]="formGroup">
-  <mat-form-field>
+  <mat-form-field role="group">
     <input
       #startPickerInput="matDatepickerInput"
       [formControlName]="startDateControlName"
       matInput
-      placeholder="Start Date"
+      placeholder="Start Date (Typeahead entries appear in dropdown)"
       [matDatepicker]="startPicker"
       [matDatepickerFilter]="startDateFilter"
     >
+
     <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
     <mat-datepicker #startPicker></mat-datepicker>
   </mat-form-field>
-  <mat-form-field>
+  <mat-form-field role="group">
     <input
       #endPickerInput="matDatepickerInput"
       [formControlName]="endDateControlName"
       matInput
-      placeholder="End Date"
+      placeholder="End Date (Typeahead entries appear in dropdown)" 
       [matDatepicker]="endPicker"
       [matDatepickerFilter]="endDateFilter"
     >
