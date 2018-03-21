@@ -9,7 +9,16 @@
  *  Run yo sync from the IDS directory.
  * 
  *  If you wish to add a new component, create a readme with the component name, followed by .md 
- *  Then run the generator following the instructions above. Overwrite the demo.module, app.module, and app.component. 
+ *  Then run the generator following the instructions above. 
+ *  Use the following template:
+ * 
+ * *** HTML ***
+ * *** TypeScript ***
+ * *** ExternalTypeScript ***
+ * *** Imports ***
+ * 
+ * 
+ *  Overwrite the demo.module, app.module, and app.component. 
  * 
  *  If unintenionally deleted an existing component from the Playground/demo-app directory, run yo sync and do not
  *  override the demo.module app.module, and app.component files. 
