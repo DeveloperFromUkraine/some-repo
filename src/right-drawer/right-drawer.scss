@@ -1,3 +1,5 @@
+@import '~ignite-common/styles/ignite';
+
 :host {
   // positioning
   position: fixed;
@@ -10,8 +12,11 @@
   z-index: 3; // DO NOT GO ABOVE 3 Z-INDEX
 
   // colors
-  background-color: #fff;
-  box-shadow: 0 16px 12px 0 rgba(0,0,0,0.22), 0 19px 38px 0 rgba(0,0,0,0.30);
+  background-color: ign-color('white');
+  //TODO: RGBA Colors
+  //box-shadow: 0 16px 12px 0 rgba(0,0,0,0.22), 0 19px 38px 0 rgba(0,0,0,0.30);
+  box-shadow: 0 16px 12px 0 ign-palette($ign-palette-gray, 300), 0 19px 38px 0 ign-palette($ign-palette-gray, 200);
+
   opacity: 1;
 
   // contents flow down
@@ -45,6 +50,6 @@
 
 .close-icon {
   padding: 0.25rem;
-  color: #757575;
+  color: ign-palette($ign-palette-gray, 400);
   cursor: pointer;
 }

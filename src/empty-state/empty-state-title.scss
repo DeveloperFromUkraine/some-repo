@@ -1,0 +1,10 @@
+@import '~ignite-common/styles/ignite';
+
+:host {
+    text-align: center;
+    display: block;
+    color: ign-color('black');
+    font-size: 20px;
+    margin-bottom: 32px;
+    position: relative;
+}

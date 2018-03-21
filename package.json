@@ -67,7 +67,8 @@
     "apollo-cache-inmemory": "^1.1.7",
     "apollo-client": "^2.2.2",
     "graphql": "^0.12.3",
-    "graphql-tag": "^2.6.1"
+    "graphql-tag": "^2.6.1",
+    "ignite-common": "^0.13.3"
   },
   "peerDependencies": {
     "@angular/animations": "^5.0.0",

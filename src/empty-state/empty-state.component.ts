@@ -11,37 +11,14 @@ export class EmptyStateComponent {}
 @Component({
   selector: 'ign-empty-state-title',
   template: '<ng-content></ng-content>',
-  styles: [
-    `
-    :host {
-      text-align: center;
-      display: block;
-      color: #000000;
-      font-size: 20px;
-      margin-bottom: 32px;
-      position: relative;
-    }
-  `,
-  ],
+  styleUrls: [`empty-state-title.scss`],
 })
 export class EmptyStateTitleComponent {}
 
 @Component({
   selector: 'ign-empty-state-description',
   template: '<div><ng-content></ng-content></div>',
-  styles: [
-    `
-    :host {
-      text-align: left;
-      display: block;
-      opacity: 0.54;
-      color: #000000;
-      font-size: 14px;
-      line-height: 20px;
-      margin-bottom: 16px;
-    }
-  `,
-  ],
+  styleUrls: [`./empty-state-description.scss`],
 })
 export class EmptyStateDescriptionComponent {}
 
