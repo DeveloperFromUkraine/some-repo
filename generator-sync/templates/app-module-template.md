@@ -27,6 +27,7 @@ import { MatButtonModule } from '@angular/material';
 import { SlackBotDialogComponent } from './slack-bot/slack-bot-dialog.component';
 import { SlackService } from './services/slack-service';
 
+import { DemoDialogAcceptCancelComponent } from './demo/demo-dialog/demo-dialog-accept-cancel.component';
 <% for(var i = 0; i < imports.length; i ++) { %> <%- imports[i]%> 
 <% } %>
 

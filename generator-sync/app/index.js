@@ -9,7 +9,16 @@
  *  Run yo sync from the IDS directory.
  * 
  *  If you wish to add a new component, create a readme with the component name, followed by .md 
- *  Then run the generator following the instructions above. Overwrite the demo.module, app.module, and app.component. 
+ *  Then run the generator following the instructions above. 
+ *  Use the following template:
+ * 
+ * *** HTML ***
+ * *** TypeScript ***
+ * *** ExternalTypeScript ***
+ * *** Imports ***
+ * 
+ * 
+ *  Overwrite the demo.module, app.module, and app.component. 
  * 
  *  If unintenionally deleted an existing component from the Playground/demo-app directory, run yo sync and do not
  *  override the demo.module app.module, and app.component files. 
@@ -30,16 +39,76 @@ var process = require ("process");
 var decode = require('unescape');
 var names = [];
 var readMeContent= [];
+var exceptionArray = [];
+var dialogArray = [];
 
-/** NEEDS TO WRITE ALL COMPONENT NAMES */
 class SyncGenerator extends Generator {
     constructor(args, opts) {
         super(args, opts);
         this.names = [];
         this.readMeContent = [];
         const componentName = '';
-    }
+        this.exceptionArray = ['text-list-item', 'list-item', 'select-container', 'list-selection'];
+        this.dialogArray = ['dialog-dialog', 'dialog-dialog-background', 'dialog-accept-cancel'];
 
+        this.helperFunction = function (nameArg, markdownContents, index){
+            let tempNameArg = nameArg;
+            for (let i = 0; i < markdownContents.length; i++){
+                let tsParsedMarkdown = [];
+                let externalTSMarkdown = [];
+                let tsImportsParsedMarkdown = [];
+                let htmlParsedMarkdown = [];
+
+                let capitalizedName = '';
+                let importsSectionIndex = markdownContents[i].indexOf('*** Imports ***');
+                let tsSectionIndex = markdownContents[i].indexOf('*** TypeScript ***');
+                let htmlSectionIndex = markdownContents[i].indexOf('*** HTML ***');
+                let externalTSSectionIndex = markdownContents[i].indexOf('*** ExternalTypeScript ***');
+                
+                htmlParsedMarkdown = markdownContents[i].substring(htmlSectionIndex + 12, tsSectionIndex);
+                tsImportsParsedMarkdown = markdownContents[i].substring(importsSectionIndex + 15, markdownContents[i].length);
+                tsParsedMarkdown = markdownContents[i].substring(tsSectionIndex + 18, externalTSSectionIndex);
+                externalTSMarkdown = markdownContents[i].substring(externalTSSectionIndex + 27, importsSectionIndex)
+
+                if (index === 1 ){
+                    index += 1;
+                }
+                else if (index === 2){
+                    nameArg = tempNameArg + '-' + tempNameArg;
+                    index += 1;
+                    tsParsedMarkdown = [];
+                }
+                else if (index === 3){
+                    nameArg = tempNameArg + '-' + tempNameArg +'-background';
+                    index +=1;
+                    tsParsedMarkdown = [];
+                }
+                else if (index === 4){
+                    nameArg = tempNameArg + '-accept-cancel';
+                }
+
+                capitalizedName = nameArg.charAt(0).toUpperCase() + nameArg.slice(1);
+
+                for (let k = 0; k < capitalizedName.length; k++){
+                    if (capitalizedName.charAt(k) === '-'){
+                        capitalizedName = capitalizedName.substr(0, k+1) + (capitalizedName.charAt(k+1).toUpperCase()) + capitalizedName.substr((k+1) + 1);
+                    }
+                }
+                
+                this.readMeContent.push(
+                    {
+                        content: (decode(markdown.toHTML(htmlParsedMarkdown)).split(`<p><`).join(`<`)).split(`></p>`).join(`>`),
+                        tsCode : tsParsedMarkdown,
+                        additionalImports : tsImportsParsedMarkdown,
+                        externalTSCode: externalTSMarkdown,
+                        routeName: nameArg,
+                        name: capitalizedName.split('-').join(" "),
+                        fileName: tempNameArg,
+                    }
+                )
+            }
+        }
+    }
 
     /**creates an array of existing files */
     async extract() {
@@ -63,226 +132,49 @@ class SyncGenerator extends Generator {
         })
     }
     
-    /** writes out to files in directory if readMe's, creates blank pages otherwise */
-    writing() {
+    /** writes out to files in directory if readMe's, */
+    parsingComponents() {
+        let index = 0;
         for (let i = 0; i < this.names.length; i++){ 
+            let markdownContent = [];
             try{
                 let stat = fs.statSync(`./src/${this.names[i]}/${this.names[i]}.md`);
-                let capitalizedName;
                 if (stat.isFile()){
-                    capitalizedName = this.names[i];
-                    capitalizedName = capitalizedName.charAt(0).toUpperCase() + this.names[i].slice(1);
-                    for (let j = 0; j < capitalizedName.length; j++){
-                        if (capitalizedName.charAt(j) === '-'){
-                            capitalizedName = capitalizedName.substr(0, j+1) + (capitalizedName.charAt(j+1).toUpperCase()) + capitalizedName.substr((j+1) + 1);
-                        }
+                    if (this.exceptionArray.indexOf(this.names[i]) === -1 && this.names[i] !== 'dialog'){
+                        markdownContent.push(fs.readFileSync(`./src/${this.names[i]}/${this.names[i]}.md`, 'utf8')); 
+                        this.helperFunction(this.names[i], markdownContent, 0);
                     }
-
-                    if (this.names[i] !== 'text-list-item' && this.names[i] !== 'list-item' && this.names[i] !== 'list-selection' && this.names[i] !== 'select-container' && this.names[i] !== 'dialog'){
-                        let tsParsedMarkdown = [];
-                        let externalTSMarkdown = [];
-                        let tsImportsParsedMarkdown = [];
-                        let htmlParsedMarkdown = [];
-                        let markdownContents = fs.readFileSync(`./src/${this.names[i]}/${this.names[i]}.md`, 'utf8'); 
-                    
-                        let importsSectionIndex = markdownContents.indexOf('*** Imports ***');
-                        let tsSectionIndex = markdownContents.indexOf('*** TypeScript ***');
-                        let htmlSectionIndex = markdownContents.indexOf('*** HTML ***');
-                        let externalTSSectionIndex = markdownContents.indexOf('*** ExternalTypeScript ***');
-
-                        if (tsSectionIndex > -1 && htmlSectionIndex > -1 && importsSectionIndex > -1 && externalTSSectionIndex > -1){
-                            htmlParsedMarkdown = markdownContents.substring(htmlSectionIndex + 12, tsSectionIndex);
-                            tsImportsParsedMarkdown = markdownContents.substring(importsSectionIndex + 15, markdownContents.length);
-                            tsParsedMarkdown = markdownContents.substring(tsSectionIndex + 18, externalTSSectionIndex);
-                            externalTSMarkdown = markdownContents.substring(externalTSSectionIndex + 27, importsSectionIndex)
-                            this.readMeContent.push(
-                                {
-                                    content: decode(markdown.toHTML(htmlParsedMarkdown)),
-                                    tsCode : tsParsedMarkdown,
-                                    additionalImports : tsImportsParsedMarkdown,
-                                    externalTSCode: externalTSMarkdown,
-                                    routeName: this.names[i],
-                                    name: capitalizedName.split('-').join(" "),
-                                })
-                            
-                        }
-
-                        else if (tsSectionIndex > -1 && htmlSectionIndex > -1 && importsSectionIndex > -1 && !externalTSSectionIndex > -1){
-                            htmlParsedMarkdown = markdownContents.substring(htmlSectionIndex + 12, tsSectionIndex);
-                            tsImportsParsedMarkdown = markdownContents.substring(importsSectionIndex + 15, markdownContents.length);
-                            tsParsedMarkdown = markdownContents.substring(tsSectionIndex + 18, externalTSSectionIndex);
-                            externalTSMarkdown = markdownContents.substring(externalTSSectionIndex + 27, importsSectionIndex)
-                            this.readMeContent.push(
-                                {
-                                    content: decode(markdown.toHTML(htmlParsedMarkdown)),
-                                    tsCode : tsParsedMarkdown,
-                                    additionalImports : tsImportsParsedMarkdown,
-                                    routeName: this.names[i],
-                                    name: capitalizedName.split('-').join(" "),
-                                })
-                            
-                        }
-
-                        else if (tsSectionIndex > -1 && importsSectionIndex > -1 && externalTSSectionIndex && !htmlSectionIndex > -1 && externalTSindex){
-                            tsImportsParsedMarkdown = markdownContents.substring(importsSectionIndex + 15, markdownContents.length);
-                            tsParsedMarkdown = markdownContents.substring(tsSectionIndex + 18, externalTSSectionIndex);
-                            externalTSMarkdown = markdownContents.substring(externalTSSectionIndex + 27, importsSectionIndex)
-                            this.readMeContent.push(
-                                {
-                                    tsCode : tsParsedMarkdown,
-                                    externalTSCode: externalTSMarkdown,
-                                    additionalImports : tsImportsParsedMarkdown,
-                                    routeName: this.names[i],
-                                    name: capitalizedName.split('-').join(" "),
-                                })
-                            
-                        }
-
-                        else if (importsSectionIndex > -1 && htmlSectionIndex > -1 && !tsSectionIndex > -1 && !externalTSSectionIndex > -1){
-                            htmlParsedMarkdown = markdownContents.substring(htmlSectionIndex + 12, importsSectionIndex);
-                            tsImportsParsedMarkdown = markdownContents.substring(importsSectionIndex + 15, markdownContents.length);
-                            this.readMeContent.push(
-                                {
-                                    content: decode(markdown.toHTML(htmlParsedMarkdown)),
-                                    additionalImports : tsImportsParsedMarkdown,
-                                    routeName: this.names[i],
-                                    name: capitalizedName.split('-').join(" "),
-                                })
-                            
-                        }
-
-                        else if (!importsSectionIndex > -1 && !externalTSSectionIndex > -1 && htmlSectionIndex > -1 && !tsSectionIndex > -1){
-                            htmlParsedMarkdown = markdownContents.substring(htmlSectionIndex + 12, importsSectionIndex);
-                            tsImportsParsedMarkdown = markdownContents.substring(importsSectionIndex + 15, markdownContents.length);
-                            this.readMeContent.push(
-                                {
-                                    content: decode(markdown.toHTML(htmlParsedMarkdown)),
-                                    routeName: this.names[i],
-                                    name: capitalizedName.split('-').join(" "),
-                                })
-                            
-                        }
-                    }
-
                     else if (this.names[i] === 'dialog'){
-                        let tsParsedMarkdown = [];
-                        let externalTSMarkdown = [];
-                        let tsImportsParsedMarkdown = [];
-                        let htmlParsedMarkdown = [];
-                        let markdownContent = [];
                         markdownContent.push(fs.readFileSync(`./src/${this.names[i]}/${this.names[i]}.md`, 'utf8')); 
                         markdownContent.push(fs.readFileSync(`./src/${this.names[i]}/${this.names[i]}-${this.names[i]}.md`, 'utf8')); 
                         markdownContent.push(fs.readFileSync(`./src/${this.names[i]}/${this.names[i]}-${this.names[i]}-background.md`, 'utf8'));
                         markdownContent.push(fs.readFileSync(`./src/${this.names[i]}/${this.names[i]}-accept-cancel.md`, 'utf8'));  
-                        let index = 0;
-                    
-                        for (let j = 0; j < markdownContent.length; j++){
-                            let importsSectionIndex = markdownContent[j].indexOf('*** Imports ***');
-                            let tsSectionIndex = markdownContent[j].indexOf('*** TypeScript ***');
-                            let htmlSectionIndex = markdownContent[j].indexOf('*** HTML ***');
-                            let externalTSSectionIndex = markdownContent[j].indexOf('*** ExternalTypeScript ***');
-
-                            if (tsSectionIndex > -1 && htmlSectionIndex > -1 && importsSectionIndex > -1 && externalTSSectionIndex > -1){
-                                htmlParsedMarkdown = markdownContent[j].substring(htmlSectionIndex + 12, tsSectionIndex);
-                                tsImportsParsedMarkdown = markdownContent[j].substring(importsSectionIndex + 15, markdownContent[j].length);
-                                tsParsedMarkdown = markdownContent[j].substring(tsSectionIndex + 18, externalTSSectionIndex);
-                                externalTSMarkdown = markdownContent[j].substring(externalTSSectionIndex + 27, importsSectionIndex)
-                                let tempName = "";
-                                if (index === 0){
-                                    tempName = `${this.names[i]}`;
-                                }
-
-                                else{
-                                    tempName = `${this.names[i]}-accept-cancel`;
-                                }
-
-                                capitalizedName = capitalizedName.charAt(0).toUpperCase() + tempName.slice(1);
-                                for (let j = 0; j < capitalizedName.length; j++){
-                                    if (capitalizedName.charAt(j) === '-'){
-                                        capitalizedName = capitalizedName.substr(0, j+1) + (capitalizedName.charAt(j+1).toUpperCase()) + capitalizedName.substr((j+1) + 1);
-                                    }
-                                }
-
-                                this.readMeContent.push(
-                                    {
-                                        content: decode(markdown.toHTML(htmlParsedMarkdown)),
-                                        tsCode : tsParsedMarkdown,
-                                        additionalImports : tsImportsParsedMarkdown,
-                                        externalTSCode: externalTSMarkdown,
-                                        routeName: tempName,
-                                        name: capitalizedName.split('-').join(" "),
-                                    })
-                                
-                            }
-
-                            else if(!importsSectionIndex > -1 && htmlSectionIndex > -1 && !tsSectionIndex > -1 && !externalTSSectionIndex > -1){
-                                htmlParsedMarkdown = markdownContent[j].substring(htmlSectionIndex + 12, markdownContent[j].length);
-                                let tempName = "";
-                                if (index === 1){
-                                    tempName = `${this.names[i]}-${this.names[i]}`;
-                                }
-                                else if (index === 2){
-                                    tempName = `${this.names[i]}-${this.names[i]}-background`;
-                                }
-
-                                capitalizedName = capitalizedName.charAt(0).toUpperCase() + tempName.slice(1);
-                                for (let j = 0; j < capitalizedName.length; j++){
-                                    if (capitalizedName.charAt(j) === '-'){
-                                        capitalizedName = capitalizedName.substr(0, j+1) + (capitalizedName.charAt(j+1).toUpperCase()) + capitalizedName.substr((j+1) + 1);
-                                    }
-                                }
-                                this.readMeContent.push(
-                                    {
-                                        content: decode(markdown.toHTML(htmlParsedMarkdown)),
-                                        routeName: tempName,
-                                        name: capitalizedName.split('-').join(" "),
-                                    }
-                                )
-                            }
-                            index = index + 1;
-                        }
+                        this.helperFunction(this.names[i], markdownContent, 1);
                     }
                 }
             }
-            catch (err) { }
-        }
 
-        for (let i = 0; i < this.readMeContent.length; i++){
-            if (this.readMeContent[i].routeName !== 'dialog' && this.readMeContent[i].routeName !== 'dialog-dialog-background' && this.readMeContent[i].routeName !== 'dialog-dialog' && this.readMeContent[i].routeName !== 'dialog-accept-cancel'){
-                this.fs.copyTpl(
-                    this.templatePath('../../templates/html-template.html'),
-                    this.destinationPath(`./demo-app/app/demo/demo-${this.readMeContent[i].routeName}/demo-${this.readMeContent[i].routeName}.html`),
-                    {
-                        componentDescription: this.readMeContent[i].content,
-                    }
-                )
+            catch (err){
 
-                this.fs.copyTpl(
-                    this.templatePath('../../templates/typescript-template.md'),
-                    this.destinationPath(`./demo-app/app/demo/demo-${this.readMeContent[i].routeName}/demo-${this.readMeContent[i].routeName}.component.ts`),
-                    {
-                        componentName: this.readMeContent[i].name.split(" ").join(""),
-                        routeName: this.readMeContent[i].routeName,
-                        tsCode: this.readMeContent[i].tsCode,
-                        additionalImports: this.readMeContent[i].additionalImports,
-                        externalTSCode: this.readMeContent[i].externalTSCode,
-
-                    }
-                )
             }
-            else if (this.readMeContent[i].routeName === 'dialog' || this.readMeContent[i].routeName === 'dialog-accept-cancel') {
-                this.fs.copyTpl(
-                    this.templatePath('../../templates/html-template.html'),
-                    this.destinationPath(`./demo-app/app/demo/demo-dialog/demo-${this.readMeContent[i].routeName}.html`),
-                    {
-                        componentDescription: this.readMeContent[i].content,
-                    }
-                )
+        }
+    }
 
-                if (this.readMeContent[i].routeName === 'dialog-accept-cancel'){
+    writingComponents(){
+        for (let i = 0; i < this.readMeContent.length; i++){
+            if (this.exceptionArray.indexOf(this.readMeContent[i].routeName) === -1){
+                if (this.readMeContent[i].tsCode.length > 0){
                     this.fs.copyTpl(
-                        this.templatePath('../../templates/dialog-typescript-template.md'),
-                        this.destinationPath(`./demo-app/app/demo/demo-dialog/demo-${this.readMeContent[i].routeName}.component.ts`),
+                        this.templatePath('../../templates/html-template.html'),
+                        this.destinationPath(`./demo-app/app/demo/demo-${this.readMeContent[i].fileName}/demo-${this.readMeContent[i].routeName}.html`),
+                        {
+                            componentDescription: this.readMeContent[i].content,
+                        }
+                    )
+
+                    this.fs.copyTpl(
+                        this.templatePath('../../templates/typescript-template.md'),
+                        this.destinationPath(`./demo-app/app/demo/demo-${this.readMeContent[i].fileName}/demo-${this.readMeContent[i].routeName}.component.ts`),
                         {
                             componentName: this.readMeContent[i].name.split(" ").join(""),
                             routeName: this.readMeContent[i].routeName,
@@ -295,62 +187,40 @@ class SyncGenerator extends Generator {
                 }
                 else{
                     this.fs.copyTpl(
-                        this.templatePath('../../templates/typescript-template.md'),
-                        this.destinationPath(`./demo-app/app/demo/demo-dialog/demo-${this.readMeContent[i].routeName}.component.ts`),
+                        this.templatePath('../../templates/html-template.html'),
+                        this.destinationPath(`./demo-app/app/demo/demo-${this.readMeContent[i].fileName}/demo-${this.readMeContent[i].routeName}.html`),
                         {
-                            componentName: this.readMeContent[i].name.split(" ").join(""),
-                            routeName: this.readMeContent[i].routeName,
-                            tsCode: this.readMeContent[i].tsCode,
-                            additionalImports: this.readMeContent[i].additionalImports,
-                            externalTSCode: this.readMeContent[i].externalTSCode,
-
+                            componentDescription: this.readMeContent[i].content,
                         }
                     )
                 }
             }
-            else{
-                this.fs.copyTpl(
-                    this.templatePath('../../templates/html-template.html'),
-                    this.destinationPath(`./demo-app/app/demo/demo-dialog/demo-${this.readMeContent[i].routeName}.html`),
-                    {
-                        componentDescription: this.readMeContent[i].content,
-                    }
-                )
-            }
         }   
+    };
 
-        /**Writes app module file based on component list */
+
+    writeToModules(){
+        /**Writes app module, app component, and demo module file based on component list */
         let imports = [];
         let routes = [];
         let demoList = [];
         let demoImports = [];
         let componentNav = [];
         for (let i = 0; i < this.readMeContent.length; i++){
-            if (this.readMeContent[i].routeName !== "text-list-item" && this.readMeContent[i].routeName !== "list-item" && this.readMeContent[i].routeName !== "list-selection" && this.readMeContent[i].routeName !== 'dialog-dialog' && this.readMeContent[i].routeName !== 'dialog-dialog-background' &&
-            this.readMeContent[i].routeName !== 'dialog-accept-cancel' && this.readMeContent[i].routeName !== 'contribution'){
-                imports.push(`import {Demo` + this.readMeContent[i].name.split(" ").join("") + `Component} from './demo/demo-` +
-                this.readMeContent[i].routeName + `/demo-` + this.readMeContent[i].routeName + `.component';`)
-                routes.push(`{ path: '` + this.readMeContent[i].routeName + `', component: Demo` + this.readMeContent[i].name.split(" ").join("") + `Component },`)
+            if (this.exceptionArray.indexOf(this.readMeContent[i].routeName) === -1 && this.dialogArray.indexOf(this.readMeContent[i].routeName) === -1){
+                imports.push(`import {Demo` + this.readMeContent[i].name.split(" ").join("") + `Component} from './demo/demo-` + this.readMeContent[i].fileName + `/demo-` + this.readMeContent[i].routeName 
+                        + `.component';`);
                 demoList.push(`Demo` + this.readMeContent[i].name.split(" ").join("") + `Component,`)
-                demoImports.push(`import {Demo` + this.readMeContent[i].name.split(" ").join("") + `Component} from './demo-` +
-                this.readMeContent[i].routeName + `/demo-` + this.readMeContent[i].routeName + `.component';`);
-                componentNav.push(`{ name: '` + this.readMeContent[i].name + `', route: '/` + this.readMeContent[i].routeName + `' },`)
-            }
-            else if (this.readMeContent[i].routeName === 'dialog-accept-cancel'){
-                    imports.push(`import {Demo` + this.readMeContent[i].name.split(" ").join("") + `Component} from './demo/demo-dialog/demo-` + this.readMeContent[i].routeName 
-                    + `.component';`);
-                    demoList.push(`Demo` + this.readMeContent[i].name.split(" ").join("") + `Component,`)
-                    demoImports.push(`import {Demo` + this.readMeContent[i].name.split(" ").join("") + `Component} from './demo-dialog/demo-` + 
-                    this.readMeContent[i].routeName + `.component';`);
-            }
+                demoImports.push(`import {Demo` + this.readMeContent[i].name.split(" ").join("") + `Component} from './demo-` + this.readMeContent[i].fileName + `/demo-` + 
+                        this.readMeContent[i].routeName + `.component';`);
 
-            else if (this.readMeContent[i].routeName === 'contribution'){
-                imports.push(`import {Demo` + this.readMeContent[i].name.split(" ").join("") + `Component} from './demo/demo-` +
-                this.readMeContent[i].routeName + `/demo-` + this.readMeContent[i].routeName + `.component';`)
-                routes.push(`{ path: '` + this.readMeContent[i].routeName + `', component: Demo` + this.readMeContent[i].name.split(" ").join("") + `Component },`)
-                demoList.push(`Demo` + this.readMeContent[i].name.split(" ").join("") + `Component,`)
-                demoImports.push(`import {Demo` + this.readMeContent[i].name.split(" ").join("") + `Component} from './demo-` +
-                this.readMeContent[i].routeName + `/demo-` + this.readMeContent[i].routeName + `.component';`);
+                if (this.readMeContent[i].routeName !== 'contribution'){
+                    routes.push(`{ path: '` + this.readMeContent[i].routeName + `', component: Demo` + this.readMeContent[i].name.split(" ").join("") + `Component },`)
+                    componentNav.push(`{ name: '` + this.readMeContent[i].name + `', route: '/` + this.readMeContent[i].routeName + `' },`)
+                }
+                else if (this.readMeContent[i].routeName === 'contribution'){
+                    routes.push(`{ path: '` + this.readMeContent[i].routeName + `', component: Demo` + this.readMeContent[i].name.split(" ").join("") + `Component },`)
+                }
             }
 
 
@@ -379,9 +249,8 @@ class SyncGenerator extends Generator {
                     componentNav: componentNav,
                 }
             )
-        }
+         }
     };
-    
 };
 
 module.exports =  SyncGenerator
