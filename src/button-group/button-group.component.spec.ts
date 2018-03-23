@@ -14,6 +14,6 @@ describe('Button Group', () => {
     });
 
     it('should match snapshot', () => {
-        expect(fixture).not.toMatchSnapshot();
+        expect(fixture).toMatchSnapshot();
     });
 }); 
