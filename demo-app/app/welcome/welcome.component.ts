@@ -40,8 +40,7 @@ export class WelcomeComponent implements OnInit {
             document: SubscriptionRepositoryChanged,
             variables: {
                 types: [
-                    "BRANCH_COMMITTED_TO",
-                    "BRANCH_CREATED"
+                    "BRANCH_COMMITTED_TO"
                 ],
                 project: "nui",
                 repo: "ignite-design-system",
