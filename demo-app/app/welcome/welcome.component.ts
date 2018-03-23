@@ -61,6 +61,7 @@ export class WelcomeComponent implements OnInit {
                 // this.masterBranchData = subscriptionData.data.repositoryChanged.branches.values[1].builds[1];
 
                  console.log('Insert logic here.');
+                 console.log('testingggg');
                 // console.log('develop info');
                 // console.dir(this.developBranchData);
                 // console.log('master info');
