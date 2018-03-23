@@ -18,7 +18,6 @@ export class WelcomeComponent implements OnInit {
     coverageData: Coverage = COVERAGE.total;
     masterBranchData: Branch;
     developBranchData: Branch;
-    featureBranchData: any;
 
     queryRef: QueryRef<any>;
 
@@ -57,24 +56,24 @@ export class WelcomeComponent implements OnInit {
                     return prev;
                 }
 
-                 console.log('Insert logic here.');
-                 console.log('testingggg');
-                // console.log('develop info');
-                // console.dir(this.developBranchData);
-                // console.log('master info');
-                // console.dir(this.masterBranchData);
-                console.dir(subscriptionData.data);
+                //Insert event response here
+
+                /**
+                 * TEMPORARY WORKAROUND 3-23-18
+                 * Subscriptions on Bakery API are not working at the moment.
+                 */
+                this.getServiceInfo();
             }
         })
     }
 
     getServiceInfo() {
+        console.log('Calling getServiceInfo()!!!!');
         this.queryRef
             .valueChanges
             .subscribe(response => {
-                //this.developBranchData = response.data.serviceBySlug.branches.values[0].builds[0];
-                //this.masterBranchData = response.data.serviceBySlug.branches.values[1].builds[0];
-                console.dir(response.data.serviceBySlug);
+                this.developBranchData = response.data.serviceBySlug.branches.values[0].builds[0];
+                this.masterBranchData = response.data.serviceBySlug.branches.values[1].builds[0];
             });
     }
 
