@@ -47,8 +47,7 @@ export class WelcomeComponent implements OnInit {
                 repo: "ignite-design-system",
                 branches: [
                     "master",
-                    "develop",
-                    "feature-graphQLSubs"
+                    "develop"
                 ]
             },
             updateQuery: (prev, {subscriptionData}) => {
@@ -68,7 +67,6 @@ export class WelcomeComponent implements OnInit {
     }
 
     getServiceInfo() {
-        console.log('Calling getServiceInfo()!!!!');
         this.queryRef
             .valueChanges
             .subscribe(response => {
