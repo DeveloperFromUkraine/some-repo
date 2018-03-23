@@ -6,3 +6,6 @@ Click 'cancel' to close this dialog.
 
 <button mat-raised-button matDialogClose>Cancel</button>
 
+*** TypeScript ***
+*** ExternalTypeScript ***
+*** Imports ***

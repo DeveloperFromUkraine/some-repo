@@ -16,10 +16,16 @@ const routes: Routes = [
 })
 export class AppComponent implements OnInit {
     @ViewChild('header')
+    @ViewChild('sidenav') sidenav: any;
     header: ElementRef;
     headerHeight: number;
     private router$;
     private currUrl: string;
+    sidenavAriaLabel: string;
+    sidenavVisibility: string;
+    private sidenavOpenedText: string = "Close Side Navigation";
+    private sidenavClosedText: string = "Open Side Navigation";
+
   navItems = [
     <% for(var i = 0; i < componentNav.length; i ++) { %> <%- componentNav[i]%> 
     <% } %>
@@ -45,6 +51,14 @@ export class AppComponent implements OnInit {
                 this.currUrl = route.url;
             }
         });
+        this.sidenavAriaLabel = this.sidenav.opened ? this.sidenavOpenedText : this.sidenavClosedText;
+        this.sidenavVisibility = this.sidenav.opened;
+    }
+
+    toggleSideNav(): void { 
+        this.sidenav.toggle();
+        this.sidenavAriaLabel = this.sidenav.opened ? this.sidenavOpenedText : this.sidenavClosedText;
+        this.sidenavVisibility = this.sidenav.opened;
     }
 
     openDialog(): void {
