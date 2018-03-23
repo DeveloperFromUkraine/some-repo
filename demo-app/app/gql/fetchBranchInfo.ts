@@ -3,7 +3,7 @@ import gql from 'graphql-tag';
 const fetchBranchInfo = gql`
                 query serviceBySlug($slug: String!) {
                     serviceBySlug(slug: $slug) {
-                        branches(types: [MASTER, DEVELOP]) {
+                        branches(types: [MASTER, DEVELOP, FEATURE]) {
                             values {
                                 builds(limit: 1) {
                                     branchName

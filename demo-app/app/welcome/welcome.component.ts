@@ -18,6 +18,7 @@ export class WelcomeComponent implements OnInit {
     coverageData: Coverage = COVERAGE.total;
     masterBranchData: Branch;
     developBranchData: Branch;
+    featureBranchData: any;
 
     queryRef: QueryRef<any>;
 
@@ -56,10 +57,6 @@ export class WelcomeComponent implements OnInit {
                     return prev;
                 }
 
-                //updating branch info
-                // this.developBranchData = subscriptionData.data.repositoryChanged.branches.values[0].builds[0];
-                // this.masterBranchData = subscriptionData.data.repositoryChanged.branches.values[1].builds[1];
-
                  console.log('Insert logic here.');
                  console.log('testingggg');
                 // console.log('develop info');
@@ -75,10 +72,9 @@ export class WelcomeComponent implements OnInit {
         this.queryRef
             .valueChanges
             .subscribe(response => {
-                this.developBranchData = response.data.serviceBySlug.branches.values[0].builds[0];
-                this.masterBranchData = response.data.serviceBySlug.branches.values[1].builds[0];
-                console.dir(this.developBranchData);
-
+                //this.developBranchData = response.data.serviceBySlug.branches.values[0].builds[0];
+                //this.masterBranchData = response.data.serviceBySlug.branches.values[1].builds[0];
+                console.dir(response.data.serviceBySlug);
             });
     }
 
