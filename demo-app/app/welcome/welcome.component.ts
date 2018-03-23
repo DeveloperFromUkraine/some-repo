@@ -77,6 +77,8 @@ export class WelcomeComponent implements OnInit {
             .subscribe(response => {
                 this.developBranchData = response.data.serviceBySlug.branches.values[0].builds[0];
                 this.masterBranchData = response.data.serviceBySlug.branches.values[1].builds[0];
+                console.dir(this.developBranchData);
+
             });
     }
 
