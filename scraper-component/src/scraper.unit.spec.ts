@@ -1,10 +1,11 @@
 import { ScraperMock } from './scraper-mock';
 import { Data } from './data';
 import { PageInformation } from './models';
+import { Fixture } from './scraper-mock';
 
 describe('Scrape Component', () => {
     let scraper: ScraperMock
-    let fixture: any;
+    let fixture: Fixture;
     let data: Data;
 
     beforeEach(() => {
@@ -53,7 +54,7 @@ describe('Scrape Component', () => {
                 return data.pagesHTML[pageTitle];
             })
 
-            spyOn(scraper, 'imageDownload').and.callFake((imgSrc: string) => {
+            spyOn(scraper, 'fetchImage').and.callFake((imgSrc: string) => {
                 return imgSrc;
             })
         })
@@ -95,15 +96,18 @@ describe('Scrape Component', () => {
         it('should return imageId if given valid image src', () => { 
             let imgSrc = '/download/attachments/testImg.png';
 
-            let result = scraper.imageDownload(imgSrc);
+            let result = scraper.fetchImage(imgSrc);
 
-            expect(result.length).not.toBeNull();
+            expect(result).not.toBeNull();
+            if (result != null) { 
+                expect(result.length).not.toBeNull();
+            }
         });
 
         it('should not imageId if given invalid image src', () => { 
             let imgSrc = 'https://ultidev/images/icons/issuetypes/test.png';
 
-            let result = scraper.imageDownload(imgSrc);
+            let result = scraper.fetchImage(imgSrc);
 
             expect(result).toBeNull();
         });

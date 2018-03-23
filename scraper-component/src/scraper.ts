@@ -2,46 +2,63 @@ import { Pages, Page, Links, ResultList, Body, View, PageInformation, Downloaded
 const jsdom = require("jsdom");
 const crypto = require("crypto");
 const rp = require("request-promise");
-
 const { JSDOM } = jsdom;
 
-export class Scraper {
+const fs = require('fs');
 
+const imageDownloadDir: string = "./imageDownloads"; 
+const confluencePageListUrl = 'https://confluence.ultimatesoftware.com/rest/api/content/103390770/child/page?limit=100';
+const notSupportedImageUrl = 'https://ultidev/images/icons/issuetypes/';
+const imageUrlPrefix = 'https://confluence.ultimatesoftware.com'
+export class Scraper {
     username: string;
     password: string;
 
-    scrape: any = async (username: string, password: string) => {   
+    scrape = async (username: string, password: string): Promise<PageInformation[] | null> => {   
 
         this.username =  username ;
         this.password = password;
 
-        let data: Pages = await this.getData('https://confluence.ultimatesoftware.com/rest/api/content/103390770/child/page?limit=100');
+        let data: Pages = await this.getData(confluencePageListUrl);
         if (data === null) { return null; }
+
+        this.createImageDownloadDir();
 
         const pageData = await this.getPageInformationList(data);
         return pageData;
     };
 
-    getPageInformationList = async(data : Pages) => {
+    createImageDownloadDir() : void { 
+        if (!fs.existsSync(imageDownloadDir)){
+            fs.mkdirSync(imageDownloadDir);
+        }
+    }
+
+    getPageInformationList = async(data : Pages): Promise<PageInformation[] | null> => {
         let pageInformationList : PageInformation[] = []; 
 
         let i = 0;
         for (i = 0; i < data.results.length; i++) { 
             const page: Page = data.results[i];
-            const pageInfo: any = await this.parsePage(page._links.self, page.title);
-            if (pageInfo != "") { 
-                pageInformationList.push(pageInfo);
+
+            const pageData: any = await this.downloadPage(page._links.self)
+            if (pageData != null) { 
+                const pageInfo: any = await this.parsePage(pageData, page.title);
+                if (pageInfo != "") { 
+                    pageInformationList.push(pageInfo);
+                }
             }
         }
 
         return pageInformationList;
     }
 
+    downloadPage = async(pageUrl: string) => { 
+        const data: ResultList = await this.getData(pageUrl + '?expand=body.view');
+        return data;
+    }
 
-    parsePage = async (pageUrl : string, title : string) => { 
-        let data: ResultList = await this.getData(pageUrl + '?expand=body.view');
-        if (data === null) { return ""; }
-
+    parsePage = async (data : any, title : string) => { 
         let pageInformation: PageInformation = {} as PageInformation; 
         pageInformation.pageTitle = title;
         pageInformation.pageHtml = data.body.view.value;
@@ -51,7 +68,9 @@ export class Scraper {
         const document = dom.window.document;
         const statusElements: HTMLSpanElement[] = document.querySelectorAll(".status-macro");
 
-        if (statusElements.length == 0) { return ""; } 
+        if (statusElements.length == 0) { 
+            return ""; 
+        } 
         
         const status = statusElements[0].textContent;
         if (status == null || status.toLowerCase().indexOf('complete') == -1 ) { return "" }
@@ -62,7 +81,7 @@ export class Scraper {
         let i: 0;
         for (i = 0; i < imageLinks.length; i++) { 
             const imageLink = imageLinks[i];
-            const downloadedImageName = await this.imageDownload(imageLink.src);
+            const downloadedImageName = await this.fetchImage(imageLink.src);
             if (downloadedImageName != null) { 
                 let downloadedImage = {imageUrl : imageLink.src, downloadedImage : downloadedImageName} as DownloadedImage;
                 pageInformation.downloadedImageList.push(downloadedImage);
@@ -72,26 +91,34 @@ export class Scraper {
         return pageInformation;
     }
 
-    imageDownload: any = async (imageUrl: string) => {
-        if (imageUrl.startsWith("https://ultidev/images/icons/issuetypes/")) { 
-            return await null;
+    fetchImage = async (imageUrl: string): Promise<string | null> => {
+        if (imageUrl.startsWith(notSupportedImageUrl)) { 
+            return null;
         }
         else if (imageUrl.startsWith("/")) { 
             if (imageUrl.startsWith("/download")) { 
-                imageUrl = "https://confluence.ultimatesoftware.com" + imageUrl;
+                imageUrl = imageUrlPrefix + imageUrl;
             }
-            else { return await null }
+            else { return null }
         }
-
-        const imageId = crypto.randomBytes(20).toString('hex') + ".png";
 
         const imageData = await this.getData(imageUrl);
         if (!imageData) { 
             return null;
         }
-        var fs = require('fs');
+        
+        return this.saveImage(imageData);
+    }
+
+    saveImage (imageData: string) : string  {
+        const imageId = crypto.randomBytes(20).toString('hex') + ".png";
+
         const buffer = Buffer.from(imageData, 'utf8');
-        fs.writeFileSync("./imageDownloads/"+imageId, buffer);
+        if (fs.existsSync(imageDownloadDir)){
+            fs.writeFileSync(imageDownloadDir + "/" + imageId, buffer);
+        } else {
+            throw new Error("./imageDownloads folder can not be found or written to");
+        }
         return imageId;
     }
 
@@ -108,12 +135,7 @@ export class Scraper {
             }
         }
 
-        try {
-            let data = await rp(options);
-            return data;
-        }
-        catch(err) {
-            return await null;
-        };
+        let data = await rp(options);
+        return data;
     }
 }
