@@ -23,6 +23,10 @@ export class AccessibilityGuidelinesComponent {
         { name: 'Sidenav', route: '/sidenav' },
     ];
 
+    pageList = [
+        { name: 'Page Level Guidelines', route: '/page-level-guidelines' },
+    ];
+
     constructor(router: Router) {
         this.router$ = router;
     }
