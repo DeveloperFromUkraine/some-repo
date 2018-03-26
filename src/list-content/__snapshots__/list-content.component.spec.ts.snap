@@ -7,15 +7,15 @@ exports[`List Content should match snapshot 1`] = `
     href="javascript:void(0)"
     id="skip-list"
     target="_self"
-    >
+  >
     Jump to content
-    </a>
-        
-    <div
+  </a>
+  
+  <div
     id="list-content-skip"
     role="main"
     tabindex="-1"
   />
-
+  
 </ign-list-content>
 `;
