@@ -7,6 +7,7 @@
 <h2>Sample</h2>
 <mat-tab-group>
     <mat-tab label="Component Sample">
+        <!--<a class="skip-main" href="#list-content-skip">Jump to content</a>-->
         <div class="tab-height">
             <ign-list-content>
                 <!-- List View  -->
@@ -20,7 +21,7 @@
                 </ign-list-selection>
 
                 <!-- Content View -->
-                <ign-list-content-panel>
+                    <ign-list-content-panel>
                     <ign-list-content-empty-state>
                         <button
                                 mat-button
@@ -34,7 +35,7 @@
                         <ign-card-title>Content View</ign-card-title>
                     </ign-list-content-unselected-state>
                     <ign-list-content-card>
-                        This is content!
+                            This is content!
                     </ign-list-content-card>
                 </ign-list-content-panel>
             </ign-list-content>
@@ -53,7 +54,7 @@
         <p>    &nbsp; &lt;/ign-list-selection&gt; </p>
 
         <p>    &nbsp; &lt;!-- Content View --&gt; </p>
-        <p>    &nbsp; &lt;ign-list-content-panel&gt; </p>
+        <p>    &nbsp; &lt;ign-list-content-panel role="main" &gt; </p>
         <p>    &nbsp;&nbsp;  &lt;ign-list-content-empty-state&gt; </p>
         <p>   &nbsp;&nbsp;&nbsp;&nbsp;&lt;button </p>
         <p>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  mat-button </p>

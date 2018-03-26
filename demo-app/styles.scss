@@ -191,6 +191,10 @@ ul {
 #body-container {
   padding: 24px 48px 48px 48px;
   min-height: 94vh;
+} 
+
+#body-container:focus, #body-container:active {
+  outline-offset: -2.50rem;
 }
 
 .tab-height {
@@ -235,3 +239,36 @@ h6 {
 p.sidenav-subheader{
   color: gray;
 }
+
+a.skip-main {
+  left:-999px;
+  position:absolute;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  z-index:-999;
+}
+a.skip-main:focus, a.skip-main:active {
+  color: rgb(74, 74, 79);
+  background-color: #fff;
+  left: 0rem;
+  top: 3.70rem;
+  width: 50%;
+  height: auto;
+  overflow:auto;
+  margin: .625rem 25%;
+  padding: .3125rem;
+  border-radius: .9375rem;
+  border:.25rem solid #fff;
+  text-align:center;
+  font-size:1rem;
+  z-index:999;
+}
+
+a:visited { 
+  text-decoration: none;  
+  color: rgb(74, 74, 79); 
+}
+
+   

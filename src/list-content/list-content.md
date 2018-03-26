@@ -54,7 +54,7 @@ List components are used for a large selection of content that is individualized
         <p>    &nbsp;&nbsp;  &lt;/ign-list-selection-item&gt; </p>
         <p>    &nbsp; &lt;/ign-list-selection&gt; </p>
         <p>    &nbsp; &lt;!-- Content View --&gt; </p>
-        <p>    &nbsp; &lt;ign-list-content-panel&gt; </p>
+        <p>    &nbsp; &lt;ign-list-content-panel role="main" &gt; </p>
         <p>    &nbsp;&nbsp;  &lt;ign-list-content-empty-state&gt; </p>
         <p>   &nbsp;&nbsp;&nbsp;&nbsp;&lt;button </p>
         <p>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  mat-button </p>
