@@ -1,5 +1,7 @@
 <h1>Date-Range</h1>
+
 <h2>Use</h2>
+
 <p>The date range component is used to create a pair of date pickers corresponding to the start and end dates of a range.</p>
 
 <h2>Sample</h2>
@@ -23,7 +25,6 @@
             <p>constructor (formBuilder: FormBuilder) &#123; </p>
             <p>&nbsp;&nbsp;this.formBuilder = formBuilder; </p>
             <p> &#125; </p>
-
             <p>ngOnInit(): void &#123; </p>
             <p>&nbsp;&nbsp;this.form = this.formBuilder.group(&#123; </p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;myDateRange: this.formBuilder.group(&#123; </p>
@@ -39,4 +40,11 @@
         </table></div>
     </mat-tab>
 </mat-tab-group>
-<markdown [content]="notes"></markdown>
+
+<h2>Content</h2>
+
+<ul><li><code>@Input() formGroup: FormGroup</code><ul><li>The form group for date values</li></ul></li><li><code>@Input() startDateControlName = 'startDate'</code><ul><li>The name of the start picker control in <code>formGroup</code></li></ul></li><li><code>@Input() endDateControlName = 'endDate'</code><ul><li>The name of the end picker control in <code>formGroup</code></li></ul></li><li><code>@Input() startDateFilter: (Date) => boolean</code><ul><li>An optional filter function to disable specific dates in the start picker</li></ul></li><li><code>@Input() endDateFilter: (Date) => boolean</code><ul><li>An optional filter function to disable specific dates in the end picker</li></ul></li></ul>
+
+<h2>Style</h2>
+
+<ul><li>The date range component should be placed in the upper left or right hand corners of a card or page.</li></ul>

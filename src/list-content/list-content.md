@@ -11,7 +11,7 @@ List components are used for a large selection of content that is individualized
 
 <mat-tab-group>
     <mat-tab label="Component Sample">
-        <div class="tab-height">
+        <div class="tab-height" style="height:40vh;">
             <ign-list-content>
                 <!-- List View  -->
                 <ign-list-selection>

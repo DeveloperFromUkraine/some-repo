@@ -1,10 +1,12 @@
 <h1>Cards</h1>
 
 <h2>Use</h2>
+
 <p>A card is a container for content. Cards are static in size, and should be used to organize data in a fixed position
-    on the page where the user wishes to avoid overlap of components and information. </p>
-<p>See <a href="https://material.io/guidelines/components/cards.html">Material Design Components</a> and
+    on the page where the user wishes to avoid overlap of components and information. 
+See <a href="https://material.io/guidelines/components/cards.html">Material Design Components</a> and
     <a href="https://material.angular.io/components/card/overview">Angular Material Cards</a>.</p>
+
 <h2>Sample</h2>
 
 <mat-tab-group>
@@ -25,7 +27,6 @@
                         This is the field.
                         It contains information.
                     </ign-field>
-
                     <ign-field
                             [label]="field">
                         This is another field.
@@ -85,7 +86,21 @@
         </table>
     </div></mat-tab>
 </mat-tab-group>
-<markdown [content]="notes"></markdown>
+
+<h2>Content</h2>
+
+<ul><li>Cards can be used to display a wide variety of content.</li><li>Content should be separated by context.</li><li>The following components are available for usage with and of cards:<ul><li>card-actions</li><li>card-container</li><li>card-header-container</li><li>card-main</li><li>card-section</li><li>card-section-title</li><li>card-section-subtitle</li><li>card-subtitle</li><li>card-title</li><li>card-toolbar</li></ul></li></ul>
+
+<h2>Style</h2>
+
+<ul><li>Cards should be placed evenly spaced around the page in respect to other cards.</li><li>The hierarchy of card components should be as follows (in descending order):<ul><li>card-container<ul><li>card-main<ul><li>card-header-container<ul><li>card-toolbar<ul><li>card-title</li><li>card-subtitle</li></ul></li></ul></li><li>card-section<ul><li>card-header-container<ul><li>card-section-title</li></ul></li><li>card-section-subtitle</li></ul></li><li>card-actions</li></ul></li></ul></li></ul></li><li>Variations to the above may be made to fulfill the purposes of the card, where some components may not be needed.</li><li>Stylistic specification per Card component may be found in the respective expansion panel below.</li></ul>
+
+<h2>Accessibility</h2>
+
+<ul><li>Add aria-hidden="false" and a descriptive aria-label for each of the action icons used within the card</li><li>Refer to the Sample HTML for an example</li></ul>
+
+<h2>Card Components</h2>
+
 <mat-accordion id="accordion">
     <mat-expansion-panel>
         <mat-expansion-panel-header>
@@ -93,7 +108,6 @@
                 card-actions
             </b></mat-panel-title>
             <mat-panel-description><i>The card-actions component allows for save and cancel buttons that complete a given action on a given page via the card.</i></mat-panel-description>
-
         </mat-expansion-panel-header>
         <mat-tab-group>
             <mat-tab label="Component Styling"><div class="tab-height">
@@ -106,7 +120,6 @@
                 <p>&lt;ign-card-actions&gt; &lt;/ign-card-actions&gt;</p>
             </div></mat-tab>
         </mat-tab-group>
-
         </mat-expansion-panel>
         <mat-expansion-panel>
             <mat-expansion-panel-header>
@@ -115,7 +128,6 @@
                 </b></mat-panel-title>
                 <mat-panel-description><i>The card-container component houses the card and all its contents.</i></mat-panel-description>
             </mat-expansion-panel-header>
-
         <mat-tab-group>
             <mat-tab label="Component Styling"><div class="tab-height">
                 <ul>
@@ -129,7 +141,6 @@
                 <p> &lt;ign-card-container&gt;&lt;/ign-card-container&gt;</p>
             </div></mat-tab>
         </mat-tab-group>
-
         </mat-expansion-panel>
         <mat-expansion-panel>
             <mat-expansion-panel-header>
@@ -138,7 +149,6 @@
                 </b></mat-panel-title>
                 <mat-panel-description><i>The card-container-header component houses the header of the card.</i></mat-panel-description>
             </mat-expansion-panel-header>
-
         <mat-tab-group>
             <mat-tab label="Component Styling"><div class="tab-height">
                 <ul>
@@ -151,7 +161,6 @@
                 <p>&lt;ign-card-header-container&gt;&lt;/ign-card-header-container&gt;</p>
             </div></mat-tab>
         </mat-tab-group>
-
         </mat-expansion-panel>
         <mat-expansion-panel>
             <mat-expansion-panel-header>
@@ -160,7 +169,6 @@
                 </b></mat-panel-title>
                 <mat-panel-description><i>The card-main component houses the card content, allowing for uniform formatting of the card.</i></mat-panel-description>
             </mat-expansion-panel-header>
-
         <mat-tab-group>
             <mat-tab label="Component Styling"><div class="tab-height">
                 <ul>
@@ -175,7 +183,6 @@
                 <p>&lt;ign-card-main&gt;&lt;/ign-card-main&gt;</p>
             </div></mat-tab>
         </mat-tab-group>
-
         </mat-expansion-panel>
         <mat-expansion-panel>
             <mat-expansion-panel-header>
@@ -184,7 +191,6 @@
                 </b></mat-panel-title>
                 <mat-panel-description>The card-section component houses different sections in the card, to uniformly distribute contents within the respective sections.</mat-panel-description>
             </mat-expansion-panel-header>
-
         <mat-tab-group>
             <mat-tab label="Component Styling"><div class="tab-height">
                 <ul>
@@ -198,7 +204,6 @@
                 <p>&lt;ign-card-section&gt;&lt;/ign-card-section&gt;</p>
             </div></mat-tab>
         </mat-tab-group>
-
     </mat-expansion-panel>
     <mat-expansion-panel>
         <mat-expansion-panel-header>
@@ -207,7 +212,6 @@
             </b></mat-panel-title>
             <mat-panel-description>The card-section-subtitle component houses the subtitle for the card-section component.</mat-panel-description>
         </mat-expansion-panel-header>
-
         <mat-tab-group>
             <mat-tab label="Component Styling"><div class="tab-height">
                 <ul>
@@ -222,7 +226,6 @@
                 <p>&lt;ign-card-section-subtitle&gt;&lt;/ign-card-section-subtitle&gt;</p>
             </div></mat-tab>
         </mat-tab-group>
-
         </mat-expansion-panel>
         <mat-expansion-panel>
             <mat-expansion-panel-header>
@@ -231,7 +234,6 @@
                 </b></mat-panel-title>
                 <mat-panel-description>The card-section-subtitle component houses the title for the card-section component.</mat-panel-description>
             </mat-expansion-panel-header>
-
         <mat-tab-group>
             <mat-tab label="Component Styling"><div class="tab-height">
                 <ul>
@@ -245,7 +247,6 @@
                 <p>&lt;ign-card-section-title&gt;&lt;/ign-card-section-title&gt;</p>
             </div></mat-tab>
         </mat-tab-group>
-
         </mat-expansion-panel>
         <mat-expansion-panel>
             <mat-expansion-panel-header>
@@ -254,7 +255,6 @@
                 </b></mat-panel-title>
                 <mat-panel-description>The card-subtitle component houses the subtitle for the card-main component.</mat-panel-description>
             </mat-expansion-panel-header>
-
         <mat-tab-group>
             <mat-tab label="Component Styling"><div class="tab-height">
                 <ul>
@@ -268,7 +268,6 @@
                 <p>&lt;ign-card-subtitle&gt;&lt;/ign-card-subtitle&gt;</p>
             </div></mat-tab>
         </mat-tab-group>
-
         </mat-expansion-panel>
         <mat-expansion-panel>
             <mat-expansion-panel-header>
@@ -277,7 +276,6 @@
                 </b></mat-panel-title>
                 <mat-panel-description>The card-title component houses the title for the card-main component.</mat-panel-description>
             </mat-expansion-panel-header>
-
         <mat-tab-group>
             <mat-tab label="Component Styling"><div class="tab-height">
                 <ul>
@@ -291,7 +289,6 @@
                 <p>&lt;ign-card-title&gt;&lt;/ign-card-title&gt;</p>
             </div></mat-tab>
         </mat-tab-group>
-
         </mat-expansion-panel>
         <mat-expansion-panel>
             <mat-expansion-panel-header>
@@ -300,7 +297,6 @@
                 </b></mat-panel-title>
                 <mat-panel-description>The card-toolbar component houses the toolbar for the card-main component.</mat-panel-description>
             </mat-expansion-panel-header>
-
         <mat-tab-group>
             <mat-tab label="Component Styling"><div class="tab-height">
                 <ul>

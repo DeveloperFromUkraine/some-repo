@@ -1,9 +1,12 @@
 <h1>Right Drawer</h1>
-<h2> Use</h2>
-<p> Right drawer components are used to display summarized information and navigational linkage to other pages
+
+<h2>Use</h2>
+
+<p>Right drawer components are used to display summarized information and navigational linkage to other pages
     and components when a selected item is clicked on.</p>
 
 <h2>Sample</h2>
+
 <mat-tab-group>
     <mat-tab label="Component Sample">
         <div class="tab-height">
@@ -40,10 +43,14 @@
             <p> &nbsp;&nbsp;&nbsp;&nbsp;  &lt;/ign-right-drawer&gt;</p>
             <p> &nbsp;&nbsp; &lt;/ign-list-content-panel&gt;</p>
             <p>  &lt;/ign-list-content&gt;</p>
-
         </table>
     </div></mat-tab>
 </mat-tab-group>
-<markdown [content]="notes"></markdown>
 
+<h2>Content</h2>
 
+<ul><li><p>API:</p><ul><li><p>attributes:</p><ul><li>startOpen: boolean</li><li>open: boolean (implicit state, but exposed if needed)</li><li><p>title: string</p></li></ul></li><li><p>methods:</p><ul><li>toggleDrawer(boolean)</li><li>closeDrawer()</li><li>openDrawer()</li></ul></li></ul><ul><li><p>emitters:</p><ul><li>openChange(boolean)</li></ul></li></ul></li><li>Right drawer components' content should be concise, use links, and or provide basic informational content.</li></ul>
+
+<h2>Style</h2>
+
+<ul><li>Right drawer components should always be located to the right.</li><li>Right drawer components should be able to be closed.</li></ul>

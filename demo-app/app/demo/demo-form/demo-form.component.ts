@@ -1,15 +1,15 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup} from '@angular/forms';
 import { Subject } from 'rxjs/Subject';
-
-const NOTES: string = require('raw-loader!./demo-form.md');
-
 @Component({
     selector: 'demo-form',
     templateUrl: './demo-form.html',
 })
-export class DemoFormComponent implements OnInit, OnDestroy{
-    notes = NOTES;
+
+export class DemoFormComponent {
+     
     public formBuilder: FormBuilder;
     private close$ = new Subject<void>();
     form: FormGroup;
@@ -31,4 +31,8 @@ export class DemoFormComponent implements OnInit, OnDestroy{
         this.close$.next();
         this.close$.complete();
     }
+
+
 }
+
+

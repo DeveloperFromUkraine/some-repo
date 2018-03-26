@@ -1,17 +1,21 @@
 import { Component } from '@angular/core';
+
+
 import { MatTableDataSource } from '@angular/material';
-
-const NOTES: string = require('raw-loader!./demo-data-table-container.md');
-
 @Component({
     selector: 'demo-data-table-container',
     templateUrl: './demo-data-table-container.html',
 })
+
 export class DemoDataTableContainerComponent {
-    notes = NOTES;
-    displayedColumns = ['name', 'position', 'type'];
-    dataSource = new MatTableDataSource<Element>(ELEMENT_DATA); 
+     
+
+ displayedColumns = ['name', 'position', 'type'];
+ dataSource = new MatTableDataSource<Element>(ELEMENT_DATA);
+
+
 }
+
 
 export interface Element {
     name: string;
