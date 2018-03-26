@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit, HostListener } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material';
 import { Routes, Router, NavigationEnd } from '@angular/router';
 import { DemoContributionComponent } from './demo/demo-contribution/demo-contribution.component';
@@ -81,6 +81,7 @@ export class AppComponent implements OnInit {
     constructor (public dialog: MatDialog, private router: Router, 
         private pendoService: PendoService, private cookieService: CookieService) {
         this.router$ = router;
+        
     }
 
     ngOnInit(): void {
@@ -123,5 +124,17 @@ export class AppComponent implements OnInit {
             visitor: { id: this.cookieValue }        
         }   
         this.pendoService.initialize(pendoOptions);
+    }
+
+    @HostListener('click',['$event']) 
+    onclick(event) {
+        if (event.target.id === 'skip-main'){
+            this.skipMain();
+        }    
+    }
+        
+    skipMain(){
+        document.getElementById('body-container').scrollIntoView(true);
+        document.getElementById('body-container').focus();
     }
 }
