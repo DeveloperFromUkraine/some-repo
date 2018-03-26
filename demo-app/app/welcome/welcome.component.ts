@@ -29,7 +29,7 @@ export class WelcomeComponent implements OnInit {
             variables: {
                 slug: this.service
             }
-        })
+        });
 
         this.getServiceInfo();
         this.getSubscriptionInfo();
@@ -62,7 +62,7 @@ export class WelcomeComponent implements OnInit {
                  */
                 this.getServiceInfo();
             }
-        })
+        });
     }
 
     getServiceInfo() {

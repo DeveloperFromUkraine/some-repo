@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Apollo } from "apollo-angular/Apollo";
+import { Apollo, QueryRef } from "apollo-angular";
 import { Observable } from 'rxjs/Observable';
 import { map } from 'rxjs/operators';
 import { Service, Branches, Values, Builds } from "../../../models/index";
@@ -8,6 +8,9 @@ import gql from 'graphql-tag';
 import fetchServiceInfo from '../../../gql/fetchServiceInfo';
 
 import { JestBuild, TestResults } from '../../../models/index';
+
+import { SubscriptionRepositoryChanged } from '../../../gql/subscriptionRepositoryChanged';
+
 const BUILD: any = require('../../../../../test/jest-output.json');
 
 @Component({
@@ -26,23 +29,59 @@ export class StatusComponent implements OnInit {
 
     showTabContent: boolean;
 
+    queryRef: QueryRef<any>;
+
     constructor(private apollo: Apollo) { }
 
     ngOnInit() {
         console.log('Jest Build Data');
         console.dir(this.buildData);
 
-        this.getServiceInfo();
-        this.buildComponentList();
-    }
-
-    getServiceInfo() {
-        this.apollo.watchQuery<any>({
+        this.queryRef = this.apollo.watchQuery<any>({
             query: fetchServiceInfo,
             variables: {
                 slug: this.service
             }
-        })
+        });
+
+        this.getServiceInfo();
+        this.buildComponentList();
+        this.getSubscriptionInfo();
+    }
+
+    getSubscriptionInfo() {
+        this.queryRef.subscribeToMore({
+            document: SubscriptionRepositoryChanged,
+            variables: {
+                types: [
+                    "BRANCH_COMMITTED_TO"
+                ],
+                project: "nui",
+                repo: "ignite-design-system",
+                branches: [
+                    "master",
+                    "develop"
+                ]
+            },
+            updateQuery: (prev, {subscriptionData}) => {
+                if (!subscriptionData.data) {
+                    return prev;
+                }
+
+                //Insert event response here
+
+                /**
+                 * TEMPORARY WORKAROUND 3-23-18
+                 * Subscriptions on Bakery API are not working at the moment.
+                 */
+                this.getServiceInfo();
+                this.buildComponentList();
+            }
+        });
+    }
+
+    getServiceInfo() {
+        this.queryRef
             .valueChanges
             .subscribe(response => {
                 this.data = response.data.serviceBySlug;
