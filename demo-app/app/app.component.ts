@@ -74,6 +74,7 @@ export class AppComponent implements OnInit {
     ];
     accessibilityItems = [
         { name: 'A11y Home', route: 'a11y-guidelines' },
+        { name: 'Page Level Guidelines', route: 'page-level-guidelines'}
     ];
     selectedOption: string;
 

@@ -5,19 +5,23 @@ import {
     MatTabsModule,
     MatFormFieldModule,
     MatCheckboxModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCardModule
 } from '@angular/material';
 
 import { AccessibilityGuidelinesComponent } from './components/a11y-guidelines/a11y-guidelines.component';
+import { PageLevelGuidelinesComponent } from './components/page-level-guidelines/page-level-guidelines.component';
 
 
 const routes: Routes = [
-    { path: 'a11y-guidelines', component: AccessibilityGuidelinesComponent }
+    { path: 'a11y-guidelines', component: AccessibilityGuidelinesComponent },
+    { path: 'page-level-guidelines', component:PageLevelGuidelinesComponent }
 ];
 
 @NgModule({
     declarations: [
-        AccessibilityGuidelinesComponent
+        AccessibilityGuidelinesComponent,
+        PageLevelGuidelinesComponent
     ],
     imports: [
         RouterModule.forChild(routes),
@@ -25,7 +29,8 @@ const routes: Routes = [
         MatTabsModule,
         MatFormFieldModule,
         MatCheckboxModule,
-        MatSelectModule
+        MatSelectModule,
+        MatCardModule
     ]
 })
 export class AccessibilityModule {}
