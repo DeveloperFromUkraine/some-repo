@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'accessibility-guidelines',
-    templateUrl: './page-level-guidelines.html',
+    templateUrl: './skip-nav-guidelines.html',
 })
-export class PageLevelGuidelinesComponent {
+export class SkipNavGuidelinesComponent {
 
 }

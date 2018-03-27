@@ -10,18 +10,18 @@ import {
 } from '@angular/material';
 
 import { AccessibilityGuidelinesComponent } from './components/a11y-guidelines/a11y-guidelines.component';
-import { PageLevelGuidelinesComponent } from './components/page-level-guidelines/page-level-guidelines.component';
+import { SkipNavGuidelinesComponent } from './components/page-level-guidelines/skip-nav-guidelines.component';
 
 
 const routes: Routes = [
     { path: 'a11y-guidelines', component: AccessibilityGuidelinesComponent },
-    { path: 'page-level-guidelines', component:PageLevelGuidelinesComponent }
+    { path: 'skip-nav-guidelines', component:SkipNavGuidelinesComponent }
 ];
 
 @NgModule({
     declarations: [
         AccessibilityGuidelinesComponent,
-        PageLevelGuidelinesComponent
+        SkipNavGuidelinesComponent
     ],
     imports: [
         RouterModule.forChild(routes),
