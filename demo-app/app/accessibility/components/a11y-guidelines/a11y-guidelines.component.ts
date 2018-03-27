@@ -24,7 +24,7 @@ export class AccessibilityGuidelinesComponent {
     ];
 
     pageList = [
-        { name: 'Page Level Guidelines', route: '/page-level-guidelines' },
+        { name: 'Skip Navigation', route: '/skip-nav-guidelines' },
     ];
 
     constructor(router: Router) {
