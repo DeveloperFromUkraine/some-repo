@@ -32,9 +32,9 @@ exports[`Expandable Fab should match snapshot 1`] = `
         aria-label=""
         class="icon-container"
         igna11yclick=""
+        igna11yviewaccessible=""
         mat-fab=""
         role="button"
-        tabindex="0"
       >
         
           

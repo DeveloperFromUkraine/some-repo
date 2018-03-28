@@ -2,9 +2,7 @@ import { Attribute, Directive, ElementRef, HostListener, Renderer2 } from '@angu
 
 @Directive({ selector: '[ignA11yClick], [routerLink]:not(button), [routerLink]:not(a)' })
 export class AccessibleClickDirective {
-  private readonly elementRef: ElementRef;
-
-  constructor(elementRef: ElementRef) {
+  constructor(public elementRef: ElementRef) {
     this.elementRef = elementRef;
   }
 
@@ -19,8 +17,7 @@ export class AccessibleClickDirective {
 
 @Directive({
   selector:
-    '[ignA11yView], ign-field, ign-card-title, ign-card-section-title, ign-card-subtitle, mat-error, ' +
-    'ign-empty-state-title, ign-empty-state-description',
+    '[ignA11yViewAccessible], ign-field, ign-empty-state-title, ign-empty-state-description,',
 })
 export class AccessibleViewDirective {
   constructor(
@@ -30,6 +27,23 @@ export class AccessibleViewDirective {
   ) {
     if (!tabIndex) {
       renderer.setAttribute(elementRef.nativeElement, 'tabindex', '0');
+    }
+  }
+}
+
+@Directive({
+  selector:
+    '[ignA11yViewAccessibleRemove], ign-card-title, ign-card-subtitle, mat-error' +
+    'ign-empty-state-image',
+})
+export class AccessibleRemoveViewDirective {
+  constructor(
+    @Attribute('tabindex') tabIndex: string,
+    renderer: Renderer2,
+    elementRef: ElementRef
+  ) {
+    if (!tabIndex) {
+      renderer.setAttribute(elementRef.nativeElement, 'tabindex', '-1');
     }
   }
 }
