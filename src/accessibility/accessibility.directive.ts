@@ -55,12 +55,10 @@ export class AccessibleRemoveViewDirective {
 export class ListItemRoleDirective {
   constructor(
     @Attribute('role') role: string,
-    //@Attribute('tabindex') tabIndex: string,
     renderer: Renderer2,
     elementRef: ElementRef
-  ) {
-    if (!role || role) {
-      renderer.setAttribute(elementRef.nativeElement, 'role', 'listitem');
-    }
+  ) 
+  {
+    renderer.setAttribute(elementRef.nativeElement, 'role', 'listitem');
   }
 }
