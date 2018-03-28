@@ -8,5 +8,4 @@ const NOTES: string = require('raw-loader!./demo-list-content.md');
 })
 export class DemoListContentComponent {
     notes = NOTES;
-    
 }
