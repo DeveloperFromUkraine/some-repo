@@ -25,6 +25,7 @@ export class AccessibilityGuidelinesComponent {
 
     pageList = [
         { name: 'Skip Navigation', route: '/skip-nav-guidelines' },
+        { name: 'Roles', route: '/roles-guidelines' },
     ];
 
     constructor(router: Router) {
