@@ -2,6 +2,9 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common'; 
 
+import { AccessibleViewDirective, AccessibleClickDirective, ListItemRoleDirective} from './accessibility/accessibility.directive';
+ 
+
 import { PageComponent } from './page/page.component';
 export * from './page/page.component';
 
