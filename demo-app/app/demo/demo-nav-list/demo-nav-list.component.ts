@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-const NOTES: string = require('raw-loader!./demo-nav-list.md');
 
 @Component({
     selector: 'demo-nav-list',
     templateUrl: './demo-nav-list.html',
 })
-export class DemoNavListComponent {
-    notes = NOTES;
 
-    folders = [
+export class DemoNavListComponent {
+     
+folders = [
         {
             name: 'Click the folders to open a blank page.',
             updated: new Date('1/1/16'),
@@ -22,4 +21,8 @@ export class DemoNavListComponent {
             updated: new Date('1/28/16'),
         }
     ];
+
+
 }
+
+

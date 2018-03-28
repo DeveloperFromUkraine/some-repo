@@ -1,12 +1,13 @@
 <h1>Icon</h1>
+
 <h2>Use</h2>
+
 <p>The icon component makes it easier to use vector-based icons. Material icons use geometric shapes to visually
-    represent core ideas, capabilities, or topics. </p>
-<p>See <a href="https://material.io/guidelines/style/icons.html">
-    Material Design Style Icons</a>
-    and <a href="https://material.angular.io/components/icon/overview">Angular Material Icon</a>.
-</p>
+    represent core ideas, capabilities, or topics. 
+See <a href="https://material.io/guidelines/style/icons.html">Material Design Style Icons</a> and <a href="https://material.angular.io/components/icon/overview">Angular Material Icon</a>.</p>
+
 <h2>Sample</h2>
+
 <mat-tab-group>
     <mat-tab label="Component Sample">
         <div class="tab-height">
@@ -15,11 +16,24 @@
     </mat-tab>
     <mat-tab label="HTML"><div class="tab-height">
         <table style="width:100%">
-            &lt;mat-icon aria-label="Home Icon" aria-hidden="false" tabindex="0"&gt;home&lt;/mat-icon&gt;
+            &lt;mat-icon aria-label="Home Icon" aria-hidden="false"&gt;home&lt;/mat-icon&gt;
         </table>
     </div></mat-tab>
 </mat-tab-group>
-<markdown [content]="notes"></markdown>
+
+<h2>Content</h2>
+
+<ul><li>Product icons are the visual expression of a brand’s products, services, and tools.</li><li>System icons represent a command, file, device, directory, or common actions.</li><li>The icon component does not support bitmap-based formats (png, jpg, etc.).</li></ul>
+
+<h2>Style</h2>
+
+<ul><li>Product icons are 48dp</li><li>System icons are 24dp</li><li>Stylistic specifications per mat-icon component can be found in the accordion below.</li></ul>
+
+<h2>Accessibility</h2>
+
+<ul><li>Include a descriptive aria-label for the icon as well as setting aria-hidden="false" within the mat-icon tag</li><li>Add a tabindex="0" within the mat-icon tag so that it could be navigated to using tabs</li><li>If the icon is used as a button with eventhandlers on click, include a role="button" within the mat-icon tag</li><li>Refer to HTML in Sample section on usage</li></ul>
+
+<h2>Icon Components</h2>
 
 <mat-accordion id = "accordion">
     <mat-expansion-panel>
@@ -28,7 +42,6 @@
                 mat-icon matListIcon
             </b></mat-panel-title>
             <mat-panel-description><i>Creates icons to add to nav list items.</i></mat-panel-description>
-
         </mat-expansion-panel-header>
         <mat-tab-group>
             <mat-tab label="Component Styling"><div class="tab-height">
@@ -38,6 +51,7 @@
                     <li>This component should be used for nav lists.</li>
                     <li>The component should have a descriptive aria-label for the list as well as aria-hidden="false"</li>
                     <li>The component should have a tabindex="0" to make it possible to navigate through tabs</li>
+                    <li>If the icon is used as a button with eventhandlers on click, include a role="button" within the mat-icon tag</li>
                 </ul>
             </div></mat-tab>
             <mat-tab label="HTML"><div class="tab-height">

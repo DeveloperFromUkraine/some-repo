@@ -1,17 +1,22 @@
 import { Component } from '@angular/core';
-import { MatDialogRef } from '@angular/material';
 
+import { MatDialogRef } from '@angular/material';
 @Component({
-    selector: 'ign-dialog-cancel',
-    templateUrl: './demo-dialog-accept-cancel.component.html'
+    selector: 'demo-dialog-accept-cancel',
+    templateUrl: './demo-dialog-accept-cancel.html',
 })
+
 export class DemoDialogAcceptCancelComponent {
+     
 
     constructor(
         public dialogRef: MatDialogRef<DemoDialogAcceptCancelComponent>) { }
 
      //Passes data from this modal back to an onclose subscriber of the original modal
-    onExitClick(data): void {
+        onExitClick(data): void {
         this.dialogRef.close(data);
     }
+
+
 }
+

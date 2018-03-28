@@ -1,9 +1,12 @@
 <h1>Error Banner</h1>
-<h2> Use</h2>
-<p> Error banner components are used to display error messages to the front end in order to notify users that there
+
+<h2>Use</h2>
+
+<p>Error banner components are used to display error messages to the front end in order to notify users that there
     was a problem processing a command.</p>
 
 <h2>Sample</h2>
+
 <mat-tab-group>
     <mat-tab label="Component Sample">
         <div class="tab-height">
@@ -21,8 +24,20 @@
             <p>&nbsp;&nbsp; &nbsp;&nbsp; &lt;li&gt;This is an error message.&lt;/li&gt;</p>
             <p>&nbsp;&nbsp; &nbsp;&nbsp; &lt;li>You can add icons like the red x above to clear the message.&lt;/li&gt;</p>
             <p> &nbsp;&nbsp; &nbsp;&nbsp;&lt;li&gt;That one doesn't work, but you can still click it.&lt;/li&gt;</p>
-            <p>&nbsp;&nbsp;&lt;/ul&gt;&lt;/ign-error-banner></p>
+            <p>&nbsp;&nbsp;&lt;/ul&gt;&lt;/ign-error-banner>
         </table>
     </div></mat-tab>
 </mat-tab-group>
-<markdown [content]="notes"></markdown>
+
+<h2>Content</h2>
+
+<ul><li>Error banners should be displayed when there was an issue executing an instruction, whether it is an error from
+the front end or back end.</li><li>Error banners should include mechanisms that allow the user to close the component.</li><li>Error banners should not include informational, non-error messages.</li></ul>
+
+<h2>Style</h2>
+
+<ul><li>Error banners should be short and concise. Longer errors should be displayed in logs.</li><li>If there are multiple errors, they should be displayed on the same banner in a list format.</li><li>Error banners should be displayed along the top of the page or in the corners.</li><li>Error banners should avoid overlapping any elements or content on the page.</li><li>Error banners should maintain their formatting and red font, as to draw attention to the user that there was a problem.</li></ul>
+
+<h2>Accessibility</h2>
+
+<ul><li>Add a descriptive aria-label to the dismiss buttons tag that describes the action of the button (ex: exit)</li><li>Refer to the Sample HTML for an example</li></ul>

@@ -1,13 +1,16 @@
 <h1>List</h1>
+
 <h2>Use</h2>
-<p> List components are used for a large selection of content that is individualized based on the users' needs. List
+
+<p>List components are used for a large selection of content that is individualized based on the users' needs. List
     components consist of a list view with summarized information and a content view, which provides more information on the respective
     list item from the list view. In most cases, list components allow for the user to add and remove list items. </p>
 
 <h2>Sample</h2>
+
 <mat-tab-group>
     <mat-tab label="Component Sample">
-        <div class="tab-height">
+        <div class="tab-height" style="height:40vh;">
             <ign-list-content>
                 <!-- List View  -->
                 <ign-list-selection>
@@ -18,7 +21,6 @@
                     >
                     </ign-list-selection-item>
                 </ign-list-selection>
-
                 <!-- Content View -->
                 <ign-list-content-panel>
                     <ign-list-content-empty-state>
@@ -38,7 +40,6 @@
                     </ign-list-content-card>
                 </ign-list-content-panel>
             </ign-list-content>
-
         </div></mat-tab>
     <mat-tab label="HTML"><div class="tab-height">
         <p> &lt;ign-list-content&gt;</p>
@@ -51,7 +52,6 @@
         <p>    &nbsp;&nbsp;  &gt; </p>
         <p>    &nbsp;&nbsp;  &lt;/ign-list-selection-item&gt; </p>
         <p>    &nbsp; &lt;/ign-list-selection&gt; </p>
-
         <p>    &nbsp; &lt;!-- Content View --&gt; </p>
         <p>    &nbsp; &lt;ign-list-content-panel&gt; </p>
         <p>    &nbsp;&nbsp;  &lt;ign-list-content-empty-state&gt; </p>
@@ -71,12 +71,11 @@
         <p>   &nbsp;&nbsp;  &lt;/ign-list-content-card&gt; </p>
         <p>  &nbsp; &lt;/ign-list-content-panel&gt; </p>
         <p>   &lt;/ign-list-content&gt;
-
     </div></mat-tab>
 </mat-tab-group>
-<markdown [content]="notes"></markdown>
 
 <h2>List Components</h2>
+
 <mat-accordion id = "accordion">
     <mat-expansion-panel>
         <mat-expansion-panel-header>
@@ -84,7 +83,6 @@
                 list-content
             </b></mat-panel-title>
             <mat-panel-description><i>Houses the content for the list component</i></mat-panel-description>
-
         </mat-expansion-panel-header>
         <mat-tab-group>
             <mat-tab label="Component Styling"><div class="tab-height">
@@ -98,14 +96,12 @@
             </div></mat-tab>
         </mat-tab-group>
     </mat-expansion-panel>
-
     <mat-expansion-panel>
         <mat-expansion-panel-header>
             <mat-panel-title><b>
                 list-content-card
             </b></mat-panel-title>
             <mat-panel-description><i>Creates the card for the content of the list component</i></mat-panel-description>
-
         </mat-expansion-panel-header>
         <mat-tab-group>
             <mat-tab label="Component Styling"><div class="tab-height">
@@ -120,7 +116,6 @@
             </div></mat-tab>
         </mat-tab-group>
     </mat-expansion-panel>
-
     <mat-expansion-panel>
         <mat-expansion-panel-header>
             <mat-panel-title><b>
@@ -142,7 +137,6 @@
             </div></mat-tab>
         </mat-tab-group>
     </mat-expansion-panel>
-
     <mat-expansion-panel>
         <mat-expansion-panel-header>
             <mat-panel-title><b>
