@@ -148,9 +148,6 @@ import {
 } from '@angular/material';
 
 const components = [
-  AccessibleViewDirective, 
-  AccessibleClickDirective, 
-  ListItemRoleDirective,
   CardHeaderContainerComponent,
   CardSubtitleComponent,
   DividerComponent,
@@ -211,7 +208,8 @@ const components = [
   RightAlignContainerComponent,
   AccessibleClickDirective,
   AccessibleViewDirective,
-  AccessibleRemoveViewDirective
+  AccessibleRemoveViewDirective,
+  ListItemRoleDirective,
 ];
 
 @NgModule({
