@@ -97,7 +97,7 @@ class SyncGenerator extends Generator {
                 
                 this.readMeContent.push(
                     {
-                        content: (decode(markdown.toHTML(htmlParsedMarkdown)).split(`<p><`).join(`<`)).split(`></p>`).join(`>`),
+                        content: ((decode(markdown.toHTML(htmlParsedMarkdown)).split(`<p><`).join(`<`)).split(`></p>`).join(`>`)).split(`</p>`).join(``),
                         tsCode : tsParsedMarkdown,
                         additionalImports : tsImportsParsedMarkdown,
                         externalTSCode: externalTSMarkdown,
