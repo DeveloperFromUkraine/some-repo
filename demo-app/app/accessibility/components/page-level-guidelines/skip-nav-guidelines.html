@@ -7,11 +7,14 @@
 
     <li><h3>How?</h3></li>
         <p> Skip navigation should be able to be utilized either via <a href="https://chrome.google.com/webstore/detail/landmark-navigation-via-k/ddpokpbjopmeeiiolheejjpkonlkklgp/related">
-        browser extension</a> or by simply tabbing through the page. </p>
+        browser extension</a> or by <a href="https://www.w3.org/TR/WCAG20-TECHS/G1.html">activating the focused Skip Navigation link</a>.</p>
 
     <li><h3>Code Examples</h3></li>
+    <p>The skip navigation functionality has already been integrated into the web application for page level 
+        accessibility and the ign-list-content component. For new applications, please utilize the below 
+        templates.  </p>
             <ul>
-                <li>Body Elements</li>
+                <li>Page Level</li>
                 <pre><code>
                     &lt;a id=&quot;skip-main&quot; class=&quot;skip-main&quot; href=&quot;javascript:void(0)&quot; target=&quot;_self&quot;&gt;Skip to main content&lt;/a&gt;
                     &lt;div id=&quot;body-container&quot; role=&quot;main&quot; tabindex=&quot;-1&quot;&gt;
