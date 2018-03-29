@@ -6,7 +6,15 @@
             navigation functionality for webpages. </p>
 
     <li><h3>Where?</h3></li>
-        <p>An aria role or role attribute should be added inline to the opening tag of the element. </p>
+        <p>An aria role or role attribute should be added inline to the opening tag of the element. Whenever possible, use native html elements. However, if generic elements must be used  ensure the appropriate role is added.</p>
+        <p>For example, if a generic container is being used as a heading:</p>
+        <ul>
+            <li>The role should be set to "heading".</li>
+            <li>An aria-label attribute should be added and set to the appropriate level (i.e. 1 for h1, 2 for h2 equivalent tags).</li>
+        </ul>
+        <p>Note: the ignite design system already implements components with the correct roles added to them. </p>
+        
+    <li><h3>When?</h3></li>
         <p>Common instances in which roles should be implemented: </p>
         <ul>
             <li>When implementing icons as button, or with button functionality.</li>
