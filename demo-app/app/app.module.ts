@@ -106,7 +106,7 @@ const routes: Routes = [
     declarations: [
         AppComponent,
         SlackBotDialogComponent,
-        WelcomeComponent,
+        WelcomeComponent
     ],
     imports: [
         BrowserModule,
