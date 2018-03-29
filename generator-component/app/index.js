@@ -75,7 +75,6 @@
                      let keysArray = Object.keys(page);
                      let codeValues;
                      let tempObject;
- 
                      for (let i = 0; i< keysArray.length; i++){
                          if (keysArray[i] === 'name'){
                              this.name = page[keysArray[i]];
@@ -140,7 +139,19 @@
                     tsCode : this.ts,
                  }
              )
+         this.firstHalfHtmlArray = [];
+         this.secondHalfHtmlArray = [];
+         this.styleArray = [];
+         this.contentArray = [];
+         this.introArray = [];
+         this.codeArray = [];
+         this.otherArray =[]; 
+         this.useArray = [];
+         this.tempArray = [];
+         this.html = "";
+         this.ts = "";
          };
+
  };
  
  module.exports =  ComponentGenerator
