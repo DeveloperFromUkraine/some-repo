@@ -47,3 +47,18 @@ export class AccessibleRemoveViewDirective {
     }
   }
 }
+      
+@Directive({
+  selector:
+    'mat-list-item, ign-list-item, ign-list-selection-item',
+})
+export class ListItemRoleDirective {
+  constructor(
+    @Attribute('role') role: string,
+    renderer: Renderer2,
+    elementRef: ElementRef
+  ) 
+  {
+    renderer.setAttribute(elementRef.nativeElement, 'role', 'listitem');
+  }
+}

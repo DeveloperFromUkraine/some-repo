@@ -1,9 +1,10 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<a id="skip-main" class="skip-main" href="javascript:void(0)" target="_self">Skip to main content</a>
+
 <mat-sidenav-container>
   <mat-sidenav #sidenav class="sidenav" mode="side" opened="false" [fixedInViewport]="true"
                [fixedTopGap]="headerHeight + 8" aria-expanded="true">
     <div><mat-toolbar class = "component-side-nav">Navigation</mat-toolbar></div>
-
     <mat-divider></mat-divider>
     <p matSubheader class="sidenav-subheader">Components</p>
     <mat-nav-list dense>
@@ -46,7 +47,7 @@
       <img routerLink="/" class ="ultimate-icon" src="/assets/ultiu.svg">
       Ignite Design System Playground
     </mat-toolbar>
-    <div id ="body-container">
+    <div id="body-container" role="main" tabindex="-1">
       <router-outlet></router-outlet>
       <div id="footer" layout-align="end start">
         <button *ngIf="currUrl !== '/'"  mat-raised-button color = "accent"

@@ -1,6 +1,6 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common';  
 
 import { PageComponent } from './page/page.component';
 export * from './page/page.component';
@@ -128,7 +128,8 @@ import { RightAlignContainerComponent } from './right-align-container/right-alig
 import { 
   AccessibleClickDirective,
   AccessibleViewDirective,
-  AccessibleRemoveViewDirective
+  AccessibleRemoveViewDirective,
+  ListItemRoleDirective
 } from './accessibility/accessibility.directive';
 
 import {
@@ -207,7 +208,8 @@ const components = [
   RightAlignContainerComponent,
   AccessibleClickDirective,
   AccessibleViewDirective,
-  AccessibleRemoveViewDirective
+  AccessibleRemoveViewDirective,
+  ListItemRoleDirective,
 ];
 
 @NgModule({
