@@ -68,6 +68,7 @@
     "apollo-client": "^2.2.2",
     "apollo-link-ws": "^1.0.7",
     "graphql": "^0.12.3",
+    "graphql-tag": "^2.8.0",
     "ignite-common": "^0.13.3",
     "subscriptions-transport-ws": "^0.9.6"
   },
