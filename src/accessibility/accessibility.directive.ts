@@ -62,3 +62,23 @@ export class ListItemRoleDirective {
     renderer.setAttribute(elementRef.nativeElement, 'role', 'listitem');
   }
 }
+
+@Directive({
+  selector:
+    '[matTooltip]',
+})
+
+export class ToolTipDirective {
+  constructor(
+    @Attribute(`matTooltip`) matTooltip: string,
+    @Attribute('aria-label') ariaLabel: string,
+    renderer: Renderer2,
+    elementRef: ElementRef
+  ) 
+  {
+    if (matTooltip && !ariaLabel) {
+      renderer.setAttribute(elementRef.nativeElement, `aria-label`, matTooltip);
+      renderer.setAttribute(elementRef.nativeElement, 'tabindex', '0');
+    }
+  }
+}
