@@ -11,7 +11,7 @@
     "lint": "tslint --project tsconfig.json src/**/*.ts",
     "test": "jest --coverage --json --outputFile=test/jest-output.json",
     "test:watch": "jest --watch",
-    "test:ci": "jest --runInBand",
+    "test:ci": "jest --runInBand --coverage --json --outputFile=test/jest-output.json",
     "ci:test": "npm run test:ci",
     "ci:package": "npm run build && npm run build:demo && npm prune --production && npm run package"
   },

@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit, HostListener } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material';
 import { Routes, Router, NavigationEnd } from '@angular/router';
 import { DemoContributionComponent } from './demo/demo-contribution/demo-contribution.component';
@@ -29,37 +29,37 @@ export class AppComponent implements OnInit {
     sidenavVisibility: string;
     private sidenavOpenedText: string = "Close Side Navigation";
     private sidenavClosedText: string = "Open Side Navigation";
+    
   navItems = [
-    { name: 'Accessibility', route: '/accessibility-component' },
-    { name: 'Button Group', route: '/button-group' },
-    { name: 'Card', route: '/card' },
-    { name: 'Center', route: '/center' },
-    { name: 'Checkbox', route: '/checkbox' },
-    { name: 'Data Table Container', route: '/data-table-container' },
-    { name: 'Date Range', route: '/date-range' },
-    { name: 'Dialog', route: '/dialog' },
-    { name: 'Divider', route: '/divider' },
-    { name: 'Empty State', route: '/empty-state' },
-    { name: 'Error Banner', route: '/error-banner' },
-    { name: 'Expandable Search', route: '/expandable-search' },
-    { name: 'Floating Action Button', route: '/expandable-fab' },
-    { name: 'Field', route: '/field' },
-    { name: 'Footer', route: '/footer' },
-    { name: 'Form', route: '/form' },
-    { name: 'Hub Card', route: '/hub-card' },
-    { name: 'Icon', route: '/icon' },
-    { name: 'Info Banner', route: '/info-banner' },
-    { name: 'List', route: '/list-content' },
-    { name: 'Loading Container', route: '/loading-container' },
-    { name: 'Nav List', route: '/nav-list' },
-    { name: 'Markdown', route: '/markdown' },
-    { name: 'Page', route: '/page' },
-    { name: 'Radio Button', route: '/radio-button' },
-    { name: 'Right Align Container', route: '/right-align-container' },
-    { name: 'Right Drawer', route: '/right-drawer' },
-    { name: 'Selection List', route: '/selection-list' },
-    { name: 'Sidenav', route: '/sidenav' },
-    { name: 'Text', route: '/text' },
+     { name: 'Button Group', route: '/button-group' }, 
+     { name: 'Card', route: '/card' }, 
+     { name: 'Center', route: '/center' }, 
+     { name: 'Checkbox', route: '/checkbox' }, 
+     { name: 'Data Table Container', route: '/data-table-container' }, 
+     { name: 'Date Range', route: '/date-range' }, 
+     { name: 'Dialog', route: '/dialog' }, 
+     { name: 'Divider', route: '/divider' }, 
+     { name: 'Empty State', route: '/empty-state' }, 
+     { name: 'Error Banner', route: '/error-banner' }, 
+     { name: 'Expandable Fab', route: '/expandable-fab' }, 
+     { name: 'Expandable Search', route: '/expandable-search' }, 
+     { name: 'Field', route: '/field' }, 
+     { name: 'Footer', route: '/footer' }, 
+     { name: 'Form', route: '/form' }, 
+     { name: 'Hub Card', route: '/hub-card' }, 
+     { name: 'Icon', route: '/icon' }, 
+     { name: 'Info Banner', route: '/info-banner' }, 
+     { name: 'List Content', route: '/list-content' }, 
+     { name: 'Loading Container', route: '/loading-container' }, 
+     { name: 'Nav List', route: '/nav-list' }, 
+     { name: 'Page', route: '/page' }, 
+     { name: 'Radio Button', route: '/radio-button' }, 
+     { name: 'Right Align Container', route: '/right-align-container' }, 
+     { name: 'Right Drawer', route: '/right-drawer' }, 
+     { name: 'Selection List', route: '/selection-list' }, 
+     { name: 'Sidenav', route: '/sidenav' }, 
+     { name: 'Text', route: '/text' }, 
+    
   ];
     testNavItems = [
         { name: 'Status', route: 'status' },
@@ -71,14 +71,19 @@ export class AppComponent implements OnInit {
         { name: 'Test Types', route: 'test-types'},
         { name: 'Resources', route: 'resources'}
     ];
+
     accessibilityItems = [
         { name: 'A11y Home', route: 'a11y-guidelines' },
+        { name: 'Skip Navigation', route: 'skip-nav-guidelines'},
+        { name: 'Roles', route: 'roles-guidelines'}
     ];
+
     selectedOption: string;
 
     constructor (public dialog: MatDialog, private router: Router, 
         private pendoService: PendoService, private cookieService: CookieService) {
         this.router$ = router;
+        
     }
 
     ngOnInit(): void {
@@ -121,5 +126,17 @@ export class AppComponent implements OnInit {
             visitor: { id: this.cookieValue }        
         }   
         this.pendoService.initialize(pendoOptions);
+    }
+
+    @HostListener('click',['$event']) 
+    onclick(event) {
+        if (event.target.id === 'skip-main'){
+            this.skipMain();
+        }    
+    }
+        
+    skipMain(){
+        document.getElementById('body-container').scrollIntoView(true);
+        document.getElementById('body-container').focus();
     }
 }

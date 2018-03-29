@@ -13,7 +13,7 @@ The expandable fab handles state (open/close) implicitly so developers do not ne
 ## Sample
 <mat-tab-group>
     <mat-tab label="Component Sample"><div class="tab-height">
-        <div id ="element" ><ign-expandable-fab ariaLabelOpen="open example menu" ariaLabelClose="close example menu">
+        <div id ="element" ><ign-expandable-fab ariaLabelOpen="open example menu" ariaLabelClose="close example menu" style="position:relative; right: unset !important; bottom: unset !important;">
             <ign-expandable-fab-item icon="add">
             </ign-expandable-fab-item >
             <ign-expandable-fab-item icon="file\_upload">

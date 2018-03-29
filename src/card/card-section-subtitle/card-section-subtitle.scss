@@ -1,6 +1,6 @@
-@import '~@angular/material/theming';
+@import '~ignite-common/styles/ignite';
 
 .ign-card-section-subtitle {
-  color: mat-color($mat-grey, 700);
+  color: ign-color(text-secondary);
   font-size: 18px;
 }

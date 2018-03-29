@@ -1,6 +1,6 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common';  
 
 import { PageComponent } from './page/page.component';
 export * from './page/page.component';
@@ -125,6 +125,13 @@ import { DataTableContainerComponent } from './data-table-container/data-table-c
 import { ExpandableSearchComponent } from './expandable-search/expandable-search.component';
 import { RightAlignContainerComponent } from './right-align-container/right-align-container.component';
 
+import { 
+  AccessibleClickDirective,
+  AccessibleViewDirective,
+  AccessibleRemoveViewDirective,
+  ListItemRoleDirective
+} from './accessibility/accessibility.directive';
+
 import {
   MatToolbarModule,
   MatMenuModule,
@@ -198,7 +205,11 @@ const components = [
   LoadingContainerComponent,
   FooterComponent,
   ExpandableSearchComponent,
-  RightAlignContainerComponent
+  RightAlignContainerComponent,
+  AccessibleClickDirective,
+  AccessibleViewDirective,
+  AccessibleRemoveViewDirective,
+  ListItemRoleDirective,
 ];
 
 @NgModule({

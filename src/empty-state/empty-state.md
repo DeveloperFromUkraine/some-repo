@@ -10,7 +10,7 @@ end user to assemble the empty state page how they see fit. (Think of it as,we g
 ## Sample
 <mat-tab-group>
     <mat-tab label="Component Sample">
-        <div class="tab-height">
+        <div class="tab-height" style="height:30vh;">
             <ign-empty-state>
                 <ign-empty-state-title>
                    You've reached the example of an Empty State Page!</ign-empty-state-title>

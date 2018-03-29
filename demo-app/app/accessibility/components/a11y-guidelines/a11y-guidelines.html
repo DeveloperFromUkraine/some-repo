@@ -16,6 +16,13 @@
 
 <h2>Page Development Guidelines</h2>
 <ul>
+    <li>The following are page level accessibility guidelines should be adhered to when implementing new pages:
+        <ul>
+            <li *ngFor="let page of pageList">
+                <a [routerLink]="[page.route]">{{ page.name }}</a>
+            </li>
+        </ul>
+    </li>
     <li>The following components have accessibility guidelines that should be adhered to when implemented:
         <ul>
             <li *ngFor="let component of componentList">

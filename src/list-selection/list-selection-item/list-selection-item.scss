@@ -1,3 +1,5 @@
+@import '~ignite-common/styles/ignite';
+
 $left-border-width: 3px;
 
 .list-detail-container {
@@ -9,23 +11,33 @@ $left-border-width: 3px;
   justify-content: flex-start;
   padding: 0 16px 0 (16px - $left-border-width);
 
-  border-left: $left-border-width solid transparent;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: $left-border-width solid ign-color('transparent');
+  //TODO: RGBA COLORS
+  //border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid ign-palette($ign-palette-gray, 150);
   height: 72px;
 
   font-size: 18px;
-  color: rgba(0, 0, 0, 0.5);
+  //TODO: RGBA COLORS
+  //color: rgba(0, 0, 0, 0.5);
+  color: ign-palette($ign-palette-gray, 200);
   text-decoration: none;
   &:hover, &:active {
-    background: rgba(0,0,0,0.015);
+    //TODO: RGBA COLORS
+    //background: rgba(0,0,0,0.015);
+    background: ign-color(light);    
   }
 }
 
 // list-detail 'active' stylings
 :host(.active) ::ng-deep .list-detail-container {
-  color: rgba(0, 0, 0, 0.8);
-  border-left-color: #4AB93C;
-  background: rgba(0, 0, 0, 0.03);
+  //TODO: RGBA COLORS
+  //olor: rgba(0, 0, 0, 0.8);
+  color: ign-color(dark);
+  border-left-color: ign-color(brand);
+  //TODO: RGBA COLORS
+  //background: rgba(0, 0, 0, 0.03);
+  background: ign-color(light);
 }
 
 .list-detail-info {
@@ -37,7 +49,7 @@ $left-border-width: 3px;
 
 .list-detail-title {
   font-size: 16px;
-  color: #000;
+  color: ign-color('black');
   opacity: 0.87;
   white-space: nowrap;
   overflow: hidden;
@@ -50,7 +62,7 @@ $left-border-width: 3px;
 .list-detail-subtitle {
   font-size: 14px;
   margin-top: 4px;
-  color: #000;  
+  color: ign-color('black');
   opacity: 0.54;
   white-space: nowrap;
   overflow: hidden;
@@ -61,7 +73,7 @@ $left-border-width: 3px;
 }
 
 .gray-square {
-  background-color: gray;
+  background-color: ign-palette($ign-palette-gray, 400);
   width: 36px;
   height: 36px;
   border-radius: 100%;

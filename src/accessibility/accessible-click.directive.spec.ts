@@ -9,12 +9,9 @@ import { RouterTestingModule } from '@angular/router/testing';
 @Component({
     template: `
         <button class="directive" ignA11yClick>button</button>
-        <button class="directive" [routerLink]="'./'">routerLink button</button>
-        <a class="directive" src="#" [routerLink]="'./'">anchor</a>
     `
 })
 class DirectiveHostComponent {
-
 }
 
 describe('Accessible Click', () => {
@@ -33,14 +30,12 @@ describe('Accessible Click', () => {
         fixture = TestBed.createComponent(DirectiveHostComponent);
         de = fixture.debugElement.queryAll(By.css('.directive'));
         ne = de[0].nativeElement;
-
         fixture.detectChanges();
     });
 
     it('should trigger onAccessibleClick when keyup.enter event emitted', () => {
         directive = de[0].injector.get(AccessibleClickDirective);
-        jest.spyOn(directive, 'onAccessibleClick').mockImplementation(() => {
-        });
+        jest.spyOn(directive, 'onAccessibleClick');
 
         de[0].triggerEventHandler('keyup.enter', null);
         fixture.detectChanges();
@@ -50,8 +45,7 @@ describe('Accessible Click', () => {
 
     it('should trigger onAccessibleClick when keyup.space event emitted', () => {
         directive = de[0].injector.get(AccessibleClickDirective);
-        jest.spyOn(directive, 'onAccessibleClick').mockImplementation(() => {
-        });
+        jest.spyOn(directive, 'onAccessibleClick');
 
         de[0].triggerEventHandler('keyup.space', null);
         fixture.detectChanges();
@@ -59,47 +53,14 @@ describe('Accessible Click', () => {
         expect(directive.onAccessibleClick).toHaveBeenCalled();
     });
 
-    it('should run the code inside onAccessibleClick', () => {
+    it('should trigger the click event when onAccessibleClick is called', () => {
         directive = de[0].injector.get(AccessibleClickDirective);
-        let spy = jest.spyOn(directive, 'onAccessibleClick');
+        let spy = jest.spyOn(directive.elementRef.nativeElement, 'click');
         let event: KeyboardEvent = new KeyboardEvent('keyup.space', null);
 
         directive.onAccessibleClick(event);
         fixture.detectChanges();
 
-        expect(spy).toHaveBeenCalledWith(event);
-    });
-
-    /**
-     * 12/06/17
-     * THESE TESTS SHOULD FAIL
-     * REVISIT AT A LATER TIME
-     */
-    xit('should not trigger onAccessibleClick with routerLink in button', () => {
-        directive = de[1].injector.get(AccessibleClickDirective);
-        ne = de[1].nativeElement;
-        jest.spyOn(directive, 'onAccessibleClick').mockImplementation(() => {
-        });
-
-        de[1].triggerEventHandler('keyup.enter', null);
-        fixture.detectChanges();
-
-        expect(directive.onAccessibleClick).toHaveBeenCalled();
-    });
-    /**
-     * 12/06/17
-     * THESE TESTS SHOULD FAIL
-     * REVISIT AT A LATER TIME
-     */
-    xit('should not trigger onAccessibleClick with routerLink in anchor', () => {
-        directive = de[2].injector.get(AccessibleClickDirective);
-        ne = de[2].nativeElement;
-        jest.spyOn(directive, 'onAccessibleClick').mockImplementation(() => {
-        });
-
-        de[2].triggerEventHandler('keyup.enter', null);
-        fixture.detectChanges();
-
-        expect(directive.onAccessibleClick).toHaveBeenCalled();
+        expect(spy).toHaveBeenCalled();
     });
 });

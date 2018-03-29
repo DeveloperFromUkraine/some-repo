@@ -1,12 +1,14 @@
 <h1>Loading Container</h1>
-<h2> Use</h2>
-<p> Loading container is a wrapper (higher level) component around your content. It will show a spinner after a
+
+<h2>Use</h2>
+
+<p>Loading container is a wrapper (higher level) component around your content. It will show a spinner after a
     period (right now 400ms) until the consumer declares the content loaded. Most developers needing to consume
-    the loading container will simply wrap their existing on content in an `ign-loading-container` and let the
-    loading container know when the content is loaded.
-</p>
+    the loading container will simply wrap their existing on content in an ign-loading-container and let the
+    loading container know when the content is loaded.</p>
 
 <h2>Sample</h2>
+
 <mat-tab-group>
     <mat-tab label="Component Sample">
         <div class="tab-height">
@@ -24,7 +26,6 @@
                             </button>
                         </ign-button-group>
                     </ign-empty-state>
-
                     <!-- List Content View -->
                     <ign-list-content>
                         <ign-list-selection>
@@ -60,7 +61,6 @@
             <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/button&gt;</p>
             <p> &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ign-button-group&gt; </p>
             <p> &nbsp;&nbsp;  &lt;/ign-empty-state&gt;</p>
-
             <p>&nbsp;&nbsp;  &lt;!-- List Content View --&gt;</p>
             <p>&nbsp;&nbsp;  &lt;ign-list-content&gt;</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;ign-list-selection&gt;</p>
@@ -79,8 +79,20 @@
             <p> &nbsp;&nbsp;  &lt;/ign-list-content&gt;</p>
             <p> &nbsp; &lt;/ign-loading-container&gt;</p>
             <p> &lt;/div&gt;</p>
-
         </table>
     </div></mat-tab>
 </mat-tab-group>
-<markdown [content]="notes"></markdown>
+
+<h2>Content</h2>
+
+<ul><li>The loading-container component is a wrapper. It contains whichever component is inside.</li><li>The loading-container component should be utilized when cards, tables, and pages are loading to display to the front
+end.</li><li>The component must utilized in a way that an action will turn off the loading state by the developer consuming the
+component.</li></ul>
+
+<h2>Style</h2>
+
+<ul><li>No stylistic specifications for this component.</li></ul>
+
+<h2>Accessibility</h2>
+
+<ul><li>Add a descriptive ariaLabel attribute that describes what is being loaded</li><li>Refer to Sample HTML for an example on usage</li></ul>

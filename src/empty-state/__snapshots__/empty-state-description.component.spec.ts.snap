@@ -2,8 +2,6 @@
 
 exports[`Empty State Description should match snapshot 1`] = `
 <ign-empty-state-description>
-  <div
-    _ngcontent-c0=""
-  />
+  <div />
 </ign-empty-state-description>
 `;
