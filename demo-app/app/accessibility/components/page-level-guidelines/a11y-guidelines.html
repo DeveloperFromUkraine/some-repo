@@ -1,0 +1,33 @@
+<h1>A11y @ Ultimate - Making It Accessible Together</h1>
+
+<h2>Acceptance Criteria Guidelines</h2>
+<ul>
+    <li>The new or modified page should be entirely navigable using a keyboard
+        <ul>
+            <li><a href="https://webaim.org/techniques/keyboard/#testing" target="_blank">How to test using a keyboard</a></li>
+        </ul>
+    </li>
+    <li>The new or modified page should be entirely navigable using a screen reader
+        <ul>
+            <li><a href="https://webaim.org/articles/voiceover/" target="_blank">How to test using a screen reader</a></li>
+        </ul>
+    </li>
+</ul>
+
+<h2>Page Development Guidelines</h2>
+<ul>
+    <li>The following are page level accessibility guidelines should be adhered to when implementing new pages:
+        <ul>
+            <li *ngFor="let page of pageList">
+                <a [routerLink]="[page.route]">{{ page.name }}</a>
+            </li>
+        </ul>
+    </li>
+    <li>The following components have accessibility guidelines that should be adhered to when implemented:
+        <ul>
+            <li *ngFor="let component of componentList">
+                <a [routerLink]="[component.route]">{{ component.name }}</a>
+            </li>
+        </ul>
+    </li>
+</ul>
