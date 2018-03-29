@@ -1,3 +1,5 @@
+@import '~ignite-common/styles/ignite';
+
 .app-link {
   display: flex;
   flex-direction: row;
@@ -7,7 +9,7 @@
 }
 
 .app-link-icon {
-  color: #BFBFBF;
+  color: ign-palette($ign-palette-gray, 200);
   font-size: 24px;
 }
 
@@ -17,7 +19,7 @@
 }
 
 :host(.active) ::ng-deep i {
-  color: #509E2F;
+  color: ign-color(brand);
 }
 
 :host {

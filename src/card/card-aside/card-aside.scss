@@ -1,4 +1,5 @@
-@import '~@angular/material/theming';
+@import '~ignite-common/styles/ignite';
+
 
 $mq-md-and-lower: 'only screen and (max-width: 1023px)';
 $mq-lg: 'only screen and (min-width: 1024px) and (max-width: 1279px)';
@@ -8,8 +9,8 @@ $mq-xxl: 'only screen and (min-width: 1440px)';
 :host {
   flex: 2;
   padding: 48px 48px;
-  background-color: mat-color($mat-grey, 50);
-  border-left: 1px solid mat-color($mat-grey, 200);
+  background-color: ign-color(light);
+  border-left: 5px solid ign-palette($ign-palette-gray, 150);
 
   @media #{$mq-md-and-lower} {
     display: none;

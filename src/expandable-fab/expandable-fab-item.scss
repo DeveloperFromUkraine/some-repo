@@ -1,3 +1,5 @@
+@import '~ignite-common/styles/ignite';
+
 :host {
   display: flex;
   flex-direction: row;
@@ -9,7 +11,7 @@
 }
 
 .fab-tooltip {
-  color: #fff;
+  color: ign-color('white');
   margin-right: .5rem;
 
   // google specific

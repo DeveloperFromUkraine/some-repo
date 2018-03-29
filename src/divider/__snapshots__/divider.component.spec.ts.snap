@@ -2,8 +2,6 @@
 
 exports[`Divider should match snapshot 1`] = `
 <ign-divider>
-  <div
-    _ngcontent-c0=""
-  />
+  <div />
 </ign-divider>
 `;

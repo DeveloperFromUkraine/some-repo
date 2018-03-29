@@ -2943,10 +2943,6 @@ graphql-anywhere@^4.1.8:
   dependencies:
     apollo-utilities "^1.0.11"
 
-graphql-tag@^2.6.1:
-  version "2.8.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/graphql-tag/-/graphql-tag-2.8.0.tgz#52cdea07a842154ec11a2e840c11b977f9b835ce"
-
 graphql@^0.12.3:
   version "0.12.3"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/graphql/-/graphql-0.12.3.tgz#11668458bbe28261c0dcb6e265f515ba79f6ce07"
@@ -3324,6 +3320,10 @@ ieee754@^1.1.4:
 iferr@^0.1.5:
   version "0.1.5"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/iferr/-/iferr-0.1.5.tgz#c60eed69e6d8fdb6b3104a1fcbca1c192dc5b501"
+
+ignite-common@^0.13.3:
+  version "0.13.3"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ignite-common/-/ignite-common-0.13.3.tgz#d0e8b8d165e84770d8be7a0a59312e935f5bb037"
 
 ignore@^3.3.5:
   version "3.3.7"
