@@ -1,4 +1,5 @@
 ### vNEXT
+- Updated colors with tokens from Ignite-Common
 
 ### v0.5.0
 - Added example and demo for max height in dialog
