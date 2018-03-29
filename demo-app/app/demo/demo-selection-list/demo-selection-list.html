@@ -1,15 +1,13 @@
-<h1 class="ign-display-1">Selection List</h1>
-<section>
-    <h2 class="ign-headline">Use</h2>
-    <p>A selection list provides an interface for selecting values, where each list item is an option.
-        See <a href="https://material.io/guidelines/style/icons.html">
-            Material Design List</a>
-        and <a href="https://material.io/guidelines/components/lists-controls.html#lists-controls-usage">Angular Material List Controls</a>.
-    </p>
-</section>
-<section>
-    <h2 class="ign-headline">Sample</h2>
-    <mat-tab-group>
+<h1>Selection List</h1>
+
+<h2>Use</h2>
+
+<p>A selection list provides an interface for selecting values, where each list item is an option.
+See <a href="https://material.io/guidelines/style/icons.html">Material Design List</a> and <a href="https://material.io/guidelines/components/lists-controls.html#lists-controls-usage">Angular Material List Controls</a>.</p>
+
+<h2>Sample</h2>
+
+<mat-tab-group>
         <mat-tab label="Component Sample">
             <div class="tab-height">
                 <mat-selection-list #options>
@@ -39,5 +37,11 @@
             </table>
         </div></mat-tab>
     </mat-tab-group>
-</section>
-<markdown [content]="notes"></markdown>
+
+<h2>Content</h2>
+
+<ul><li>The options within a selection-list should not contain further interactive controls, such as buttons and anchors.</li><li>To add an icon to your list item, use the matListIcon attribute.</li></ul>
+
+<h2>Style</h2>
+
+<ul><li>Each selection-list item should be concise.</li><li>A selection list must contain more than one selection-list item in the list.</li></ul>

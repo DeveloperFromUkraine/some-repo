@@ -1,5 +1,8 @@
 ### vNEXT
 
+### v0.6.0
+- Updated colors with tokens from Ignite-Common
+
 ### v0.5.0
 - Added example and demo for max height in dialog
 - New [editable field component](./src/field/README.md#editable-field-component) `ign-editable-field`

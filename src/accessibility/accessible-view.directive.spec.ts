@@ -8,14 +8,12 @@ import { By } from '@angular/platform-browser';
 
 @Component({
     template: `
-        <a class="directive" ignA11yView>anchor</a>
-        <button class="directive" tabindex="1" ignA11yView>button</button>
-        <ign-field class="directive"></ign-field>
-        <mat-error class="directive" tabindex="1"></mat-error>
+        <a class="directive" ignA11yViewAccessible>anchor</a>
+        <button class="directive" tabindex="1" ignA11yViewAccessible>button</button>
+        <a class="directive"></a>
     `
 })
 class DirectiveHostComponent {
-
 }
 
 describe('Accessible View', () => {
@@ -30,11 +28,10 @@ describe('Accessible View', () => {
     beforeEach(() => {
         fixture = TestBed.createComponent(DirectiveHostComponent);
         de = fixture.debugElement.queryAll(By.css('.directive'));
-
         fixture.detectChanges();
     });
 
-    it('should set tabindex for attribute directive with no tabindex defined in element', () => {
+    it('should set tabindex to 0 for attribute directive with no tabindex defined in element', () => {
         ne = de[0].nativeElement;
 
         expect(ne.getAttribute('tabindex')).toBe('0');
@@ -43,18 +40,12 @@ describe('Accessible View', () => {
     it('should not set tabindex for attribute directive with tabindex defined in element', () => {
         ne = de[1].nativeElement;
 
-        expect(ne.getAttribute('tabindex')).not.toBe('0');
+        expect(ne.getAttribute('tabindex')).toBe('1');
     });
 
-    it('should set tabindex for element with no tabindex defined in element', () => {
+    it('should not set tabindex for element with no tabindex defined in element', () => {
         ne = de[2].nativeElement;
 
-        expect(ne.getAttribute('tabindex')).toBe('0');
-    });
-
-    it('should set tabindex for element with tabindex defined', () => {
-        ne = de[3].nativeElement;
-
-        expect(ne.getAttribute('tabindex')).not.toBe('0');
+        expect(ne.getAttribute('tabindex')).toBe(null);
     });
 });

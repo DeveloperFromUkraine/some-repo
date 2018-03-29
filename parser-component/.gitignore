@@ -1,0 +1,12 @@
+# Node stuff
+node_modules/*
+
+# IDE
+.idea
+.idea/*
+
+# Build artifacts
+/dist
+
+# Mac
+.DS_Store

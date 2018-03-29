@@ -17,7 +17,5 @@ You have clicked outside the modal. Does this mean you want to exit?
     }
 
 *** ExternalTypeScript ***
-
 *** Imports ***
-
 import { MatDialogRef } from '@angular/material';

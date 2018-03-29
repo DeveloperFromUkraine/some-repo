@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CdkTableModule } from '@angular/cdk/table';
 
 import { DemoDialogComponentDialog, DemoDialogComponentDialogBackground } from './demo-dialog/demo-dialog.component';
+import { DemoDialogAcceptCancelComponent } from './demo-dialog/demo-dialog-accept-cancel.component';
 <% for(var i = 0; i < imports.length; i ++) { %> <%- imports[i]%> 
 <% } %>
 
@@ -67,6 +68,9 @@ const materialModules = [
   ],
   declarations: [
       DemoContributionComponent,
+      DemoDialogComponentDialog,
+      DemoDialogComponentDialogBackground,
+      DemoDialogAcceptCancelComponent,
     <% for(var i = 0; i < demoList.length; i ++) { %> <%- demoList[i]%> 
     <% } %>
   ],
@@ -74,6 +78,9 @@ const materialModules = [
       ...materialModules, RouterModule, MatTableModule
   ],
     entryComponents: [
+        DemoDialogComponentDialog,
+        DemoDialogComponentDialogBackground,
+        DemoDialogAcceptCancelComponent,
         <% for(var i = 0; i < demoList.length; i ++) { %> <%- demoList[i]%> 
         <% } %>
     ]

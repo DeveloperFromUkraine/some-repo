@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
+
 import { MatDialog } from '@angular/material';
 import { Observable } from 'rxjs/Observable';
 import { DemoDialogAcceptCancelComponent } from './demo-dialog-accept-cancel.component';
-
-const NOTES: string = require('raw-loader!./demo-dialog.md');
-
 @Component({
     selector: 'demo-dialog',
     templateUrl: './demo-dialog.html',
 })
+
 export class DemoDialogComponent {
-    notes = NOTES;
+     
 
     selectedOption: string;
     dialogRefMain: any;
@@ -41,6 +40,8 @@ export class DemoDialogComponent {
                 };
             });
     }
+
+
 }
 
 @Component({
