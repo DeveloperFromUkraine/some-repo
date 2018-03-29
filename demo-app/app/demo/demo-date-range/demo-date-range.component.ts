@@ -1,15 +1,15 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component } from '@angular/core';
+
 import { FormBuilder, FormGroup} from '@angular/forms';
+import { OnInit, OnDestroy } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
-
-const NOTES: string = require('raw-loader!./demo-date-range.md');
-
 @Component({
     selector: 'demo-date-range',
     templateUrl: './demo-date-range.html',
 })
-export class DemoDateRangeComponent implements OnInit, OnDestroy{
-    notes = NOTES;
+
+export class DemoDateRangeComponent {
+     
     public formBuilder: FormBuilder;
     private close$ = new Subject<void>();
     form: FormGroup;
@@ -31,4 +31,8 @@ export class DemoDateRangeComponent implements OnInit, OnDestroy{
         this.close$.next();
         this.close$.complete();
     }
+
+
 }
+
+

@@ -1,15 +1,17 @@
 <h1>Form</h1>
-<h2> Use</h2>
+
+<h2>Use</h2>
+
 <p>Forms are components used to house, select, and submit multiple sets of content within one sitting.</p>
 
 <h2>Sample</h2>
+
 <mat-tab-group>
     <mat-tab label="Component Sample">
         <div class="tab-height">
-
             <form [formGroup]="form"> <ign-card-section> <div fxLayout="column">
                 <mat-form-field ignSizeLarge>
-                    <mat-select aria-label="Open example mat select"><mat-option da="jobSelect-empty" [value]="null">Pick me!</mat-option></mat-select>
+                     <mat-select aria-label="Open example mat select"><mat-option da="jobSelect-empty" [value]="null">Pick me!</mat-option></mat-select>
                 </mat-form-field></div></ign-card-section>
             </form>
             Click the form above!
@@ -32,8 +34,6 @@
             <p>constructor (formBuilder: FormBuilder) &#123; </p>
             <p>&nbsp;&nbsp;this.formBuilder = formBuilder; </p>
             <p>&#125; </p>
-
-
             <p> ngOnInit(): void &#123; </p>
             <p>&nbsp;&nbsp;this.form = this.formBuilder.group(&#123; </p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;myDateRange: this.formBuilder.group(&#123; </p>
@@ -42,7 +42,6 @@
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&#125;) </p>
             <p>&nbsp;&nbsp;&#125;) </p>
             <p>&#125; </p>
-
             <p>ngOnDestroy(): void &#123; </p>
             <p> &nbsp;&nbsp;this.close$.next(); </p>
             <p>&nbsp;&nbsp;this.close$.complete(); </p>
@@ -50,4 +49,18 @@
         </table></div>
     </mat-tab>
 </mat-tab-group>
-<markdown [content]="notes"></markdown>
+
+<h2>Content</h2>
+
+<ul><li><p>The form component generally consists of information that will be requested for processing, including employee number,
+name, birthday, and other identifying information.</p></li><li><p>Form components may also be utilized as a source of processing payments and requests.</p></li><li><p>The form component can be nested. This safely allows large model-driven forms to broken up into smaller pieces.
+The nested form can be used to build a tree of forms from small components.</p></li></ul>
+
+<h2>Style</h2>
+
+<ul><li>No stylistic specifications. Forms are containers and are entirely customizable to fit the need of the
+content.</li></ul>
+
+<h2>Accessibility</h2>
+
+<ul><li>If using a dropdown, add a descriptive aria-label for what the selectable components are for in the mat-select tag </li><li>Refer to the Sample HTML for an example</li></ul>

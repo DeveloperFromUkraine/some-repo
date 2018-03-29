@@ -1,0 +1,15 @@
+# Node stuff
+node_modules/*
+
+# IDE
+.idea
+.idea/*
+
+# Build artifacts
+/dist
+/imageDownloads/*.png
+data.json
+raw.json
+
+# Mac
+.DS_Store

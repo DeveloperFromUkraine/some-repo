@@ -1,9 +1,12 @@
 <h1>Expandable Search</h1>
-<h2> Use</h2>
+
+<h2>Use</h2>
+
 <p>A search component which displays a search icon, which, when clicked, expands to display an input field with a button to go back
     to exit search and a button within the input field to clear search text.</p>
 
 <h2>Sample</h2>
+
 <mat-tab-group>
     <mat-tab label="Component Sample"><div class="tab-height">
         <ign-expandable-search></ign-expandable-search>
@@ -14,4 +17,11 @@
          </table></div>
     </mat-tab>
 </mat-tab-group>
-<markdown [content]="notes"></markdown>
+
+<h2>Content</h2>
+
+<ul><li><code>@Output() searchCriteria$: BehaviorSubject</code><ul><li>Outputs search values for consumers to subscribe to</li></ul></li></ul>
+
+<h2>Style</h2>
+
+<ul><li>The expandable search component should be displayed at the top of the encapsulating container.</li></ul>
