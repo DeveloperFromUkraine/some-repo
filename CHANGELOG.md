@@ -1,4 +1,6 @@
 ### vNEXT
+
+### v0.6.0
 - Updated colors with tokens from Ignite-Common
 
 ### v0.5.0
