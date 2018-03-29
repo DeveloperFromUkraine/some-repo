@@ -129,7 +129,8 @@ import {
   AccessibleClickDirective,
   AccessibleViewDirective,
   AccessibleRemoveViewDirective,
-  ListItemRoleDirective
+  ListItemRoleDirective,
+  ToolTipDirective
 } from './accessibility/accessibility.directive';
 
 import {
@@ -210,6 +211,7 @@ const components = [
   AccessibleViewDirective,
   AccessibleRemoveViewDirective,
   ListItemRoleDirective,
+  ToolTipDirective,
 ];
 
 @NgModule({

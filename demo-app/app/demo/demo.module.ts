@@ -57,6 +57,8 @@ import { MatDatepickerModule } from '@angular/material';
 import { MatTableModule } from '@angular/material';
 import { MatListModule } from '@angular/material/list';
 
+import {MatTooltipModule} from '@angular/material/tooltip';
+
 import { RouterModule } from '@angular/router';
 
 import { DateRangeModule } from '../../../src/date-range/date-range.module';
@@ -79,6 +81,7 @@ const materialModules = [
     ReactiveFormsModule,
     MatListModule,
     MatTableModule,
+    MatTooltipModule,
 ];
 
 @NgModule({
