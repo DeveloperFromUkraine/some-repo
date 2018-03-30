@@ -13,11 +13,13 @@ import { CdkTableModule } from '@angular/cdk/table';
 import { DemoDialogComponentDialog, DemoDialogComponentDialogBackground } from './demo-dialog/demo-dialog.component';
 import { DemoDialogAcceptCancelComponent } from './demo-dialog/demo-dialog-accept-cancel.component';
  import {DemoButtonGroupComponent} from './demo-button-group/demo-button-group.component'; 
+ import {DemoButtonsComponent} from './demo-buttons/demo-buttons.component'; 
  import {DemoCardComponent} from './demo-card/demo-card.component'; 
  import {DemoCenterComponent} from './demo-center/demo-center.component'; 
  import {DemoCheckboxComponent} from './demo-checkbox/demo-checkbox.component'; 
  import {DemoContributionComponent} from './demo-contribution/demo-contribution.component'; 
  import {DemoDataTableContainerComponent} from './demo-data-table-container/demo-data-table-container.component'; 
+ import {DemoDatePickersComponent} from './demo-date-pickers/demo-date-pickers.component'; 
  import {DemoDateRangeComponent} from './demo-date-range/demo-date-range.component'; 
  import {DemoDialogComponent} from './demo-dialog/demo-dialog.component'; 
  import {DemoDividerComponent} from './demo-divider/demo-divider.component'; 
@@ -38,9 +40,13 @@ import { DemoDialogAcceptCancelComponent } from './demo-dialog/demo-dialog-accep
  import {DemoRadioButtonComponent} from './demo-radio-button/demo-radio-button.component'; 
  import {DemoRightAlignContainerComponent} from './demo-right-align-container/demo-right-align-container.component'; 
  import {DemoRightDrawerComponent} from './demo-right-drawer/demo-right-drawer.component'; 
+ import {DemoSelectInputsComponent} from './demo-select-inputs/demo-select-inputs.component'; 
  import {DemoSelectionListComponent} from './demo-selection-list/demo-selection-list.component'; 
  import {DemoSidenavComponent} from './demo-sidenav/demo-sidenav.component'; 
+ import {DemoSnackbarsAndToastsComponent} from './demo-snackbars-and-toasts/demo-snackbars-and-toasts.component'; 
+ import {DemoSwitchesComponent} from './demo-switches/demo-switches.component'; 
  import {DemoTextComponent} from './demo-text/demo-text.component'; 
+ import {DemoTextFieldsComponent} from './demo-text-fields/demo-text-fields.component'; 
 
 
 import { MatExpansionModule } from '@angular/material';
@@ -56,7 +62,9 @@ import { MatInputModule } from '@angular/material';
 import { MatDatepickerModule } from '@angular/material';
 import { MatTableModule } from '@angular/material';
 import { MatListModule } from '@angular/material/list';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatSnackBarModule } from "@angular/material";
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { RouterModule } from '@angular/router';
 
@@ -81,6 +89,8 @@ const materialModules = [
     MatListModule,
     MatTableModule,
     MatTooltipModule,
+    MatSnackBarModule,
+    MatSlideToggleModule,
 ];
 
 @NgModule({
@@ -102,11 +112,13 @@ const materialModules = [
       DemoDialogComponentDialogBackground,
       DemoDialogAcceptCancelComponent,
      DemoButtonGroupComponent, 
+     DemoButtonsComponent, 
      DemoCardComponent, 
      DemoCenterComponent, 
      DemoCheckboxComponent, 
      DemoContributionComponent, 
      DemoDataTableContainerComponent, 
+     DemoDatePickersComponent, 
      DemoDateRangeComponent, 
      DemoDialogComponent, 
      DemoDividerComponent, 
@@ -127,9 +139,13 @@ const materialModules = [
      DemoRadioButtonComponent, 
      DemoRightAlignContainerComponent, 
      DemoRightDrawerComponent, 
+     DemoSelectInputsComponent, 
      DemoSelectionListComponent, 
      DemoSidenavComponent, 
+     DemoSnackbarsAndToastsComponent, 
+     DemoSwitchesComponent, 
      DemoTextComponent, 
+     DemoTextFieldsComponent, 
     
   ],
   exports: [
@@ -140,11 +156,13 @@ const materialModules = [
         DemoDialogComponentDialogBackground,
         DemoDialogAcceptCancelComponent,
          DemoButtonGroupComponent, 
+         DemoButtonsComponent, 
          DemoCardComponent, 
          DemoCenterComponent, 
          DemoCheckboxComponent, 
          DemoContributionComponent, 
          DemoDataTableContainerComponent, 
+         DemoDatePickersComponent, 
          DemoDateRangeComponent, 
          DemoDialogComponent, 
          DemoDividerComponent, 
@@ -165,9 +183,13 @@ const materialModules = [
          DemoRadioButtonComponent, 
          DemoRightAlignContainerComponent, 
          DemoRightDrawerComponent, 
+         DemoSelectInputsComponent, 
          DemoSelectionListComponent, 
          DemoSidenavComponent, 
+         DemoSnackbarsAndToastsComponent, 
+         DemoSwitchesComponent, 
          DemoTextComponent, 
+         DemoTextFieldsComponent, 
         
     ]
 

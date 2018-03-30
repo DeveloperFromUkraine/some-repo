@@ -38,11 +38,13 @@ import { CookieService } from 'angular2-cookie/services/cookies.service';
 
 import { DemoDialogAcceptCancelComponent } from './demo/demo-dialog/demo-dialog-accept-cancel.component';
  import {DemoButtonGroupComponent} from './demo/demo-button-group/demo-button-group.component'; 
+ import {DemoButtonsComponent} from './demo/demo-buttons/demo-buttons.component'; 
  import {DemoCardComponent} from './demo/demo-card/demo-card.component'; 
  import {DemoCenterComponent} from './demo/demo-center/demo-center.component'; 
  import {DemoCheckboxComponent} from './demo/demo-checkbox/demo-checkbox.component'; 
  import {DemoContributionComponent} from './demo/demo-contribution/demo-contribution.component'; 
  import {DemoDataTableContainerComponent} from './demo/demo-data-table-container/demo-data-table-container.component'; 
+ import {DemoDatePickersComponent} from './demo/demo-date-pickers/demo-date-pickers.component'; 
  import {DemoDateRangeComponent} from './demo/demo-date-range/demo-date-range.component'; 
  import {DemoDialogComponent} from './demo/demo-dialog/demo-dialog.component'; 
  import {DemoDividerComponent} from './demo/demo-divider/demo-divider.component'; 
@@ -63,19 +65,25 @@ import { DemoDialogAcceptCancelComponent } from './demo/demo-dialog/demo-dialog-
  import {DemoRadioButtonComponent} from './demo/demo-radio-button/demo-radio-button.component'; 
  import {DemoRightAlignContainerComponent} from './demo/demo-right-align-container/demo-right-align-container.component'; 
  import {DemoRightDrawerComponent} from './demo/demo-right-drawer/demo-right-drawer.component'; 
+ import {DemoSelectInputsComponent} from './demo/demo-select-inputs/demo-select-inputs.component'; 
  import {DemoSelectionListComponent} from './demo/demo-selection-list/demo-selection-list.component'; 
  import {DemoSidenavComponent} from './demo/demo-sidenav/demo-sidenav.component'; 
+ import {DemoSnackbarsAndToastsComponent} from './demo/demo-snackbars-and-toasts/demo-snackbars-and-toasts.component'; 
+ import {DemoSwitchesComponent} from './demo/demo-switches/demo-switches.component'; 
  import {DemoTextComponent} from './demo/demo-text/demo-text.component'; 
+ import {DemoTextFieldsComponent} from './demo/demo-text-fields/demo-text-fields.component'; 
 
 
 const routes: Routes = [
     { path: '', component: WelcomeComponent },
      { path: 'button-group', component: DemoButtonGroupComponent }, 
+     { path: 'buttons', component: DemoButtonsComponent }, 
      { path: 'card', component: DemoCardComponent }, 
      { path: 'center', component: DemoCenterComponent }, 
      { path: 'checkbox', component: DemoCheckboxComponent }, 
      { path: 'contribution', component: DemoContributionComponent }, 
      { path: 'data-table-container', component: DemoDataTableContainerComponent }, 
+     { path: 'date-pickers', component: DemoDatePickersComponent }, 
      { path: 'date-range', component: DemoDateRangeComponent }, 
      { path: 'dialog', component: DemoDialogComponent }, 
      { path: 'divider', component: DemoDividerComponent }, 
@@ -96,9 +104,13 @@ const routes: Routes = [
      { path: 'radio-button', component: DemoRadioButtonComponent }, 
      { path: 'right-align-container', component: DemoRightAlignContainerComponent }, 
      { path: 'right-drawer', component: DemoRightDrawerComponent }, 
+     { path: 'select-inputs', component: DemoSelectInputsComponent }, 
      { path: 'selection-list', component: DemoSelectionListComponent }, 
      { path: 'sidenav', component: DemoSidenavComponent }, 
+     { path: 'snackbars-and-toasts', component: DemoSnackbarsAndToastsComponent }, 
+     { path: 'switches', component: DemoSwitchesComponent }, 
      { path: 'text', component: DemoTextComponent }, 
+     { path: 'text-fields', component: DemoTextFieldsComponent }, 
     
 ];
 

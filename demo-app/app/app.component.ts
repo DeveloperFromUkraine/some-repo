@@ -32,10 +32,12 @@ export class AppComponent implements OnInit {
     
   navItems = [
      { name: 'Button Group', route: '/button-group' }, 
+     { name: 'Buttons', route: '/buttons' }, 
      { name: 'Card', route: '/card' }, 
      { name: 'Center', route: '/center' }, 
      { name: 'Checkbox', route: '/checkbox' }, 
      { name: 'Data Table Container', route: '/data-table-container' }, 
+     { name: 'Date Pickers', route: '/date-pickers' }, 
      { name: 'Date Range', route: '/date-range' }, 
      { name: 'Dialog', route: '/dialog' }, 
      { name: 'Divider', route: '/divider' }, 
@@ -56,9 +58,13 @@ export class AppComponent implements OnInit {
      { name: 'Radio Button', route: '/radio-button' }, 
      { name: 'Right Align Container', route: '/right-align-container' }, 
      { name: 'Right Drawer', route: '/right-drawer' }, 
+     { name: 'Select Inputs', route: '/select-inputs' }, 
      { name: 'Selection List', route: '/selection-list' }, 
      { name: 'Sidenav', route: '/sidenav' }, 
+     { name: 'Snackbars And Toasts', route: '/snackbars-and-toasts' }, 
+     { name: 'Switches', route: '/switches' }, 
      { name: 'Text', route: '/text' }, 
+     { name: 'Text Fields', route: '/text-fields' }, 
     
   ];
     testNavItems = [
@@ -83,7 +89,6 @@ export class AppComponent implements OnInit {
     constructor (public dialog: MatDialog, private router: Router, 
         private pendoService: PendoService, private cookieService: CookieService) {
         this.router$ = router;
-        
     }
 
     ngOnInit(): void {

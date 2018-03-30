@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit, HostListener } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material';
 import { Routes, Router, NavigationEnd } from '@angular/router';
 import { DemoContributionComponent } from './demo/demo-contribution/demo-contribution.component';
@@ -47,6 +47,8 @@ export class AppComponent implements OnInit {
 
     accessibilityItems = [
         { name: 'A11y Home', route: 'a11y-guidelines' },
+        { name: 'Skip Navigation', route: 'skip-nav-guidelines'},
+        { name: 'Roles', route: 'roles-guidelines'}
     ];
 
     selectedOption: string;
@@ -96,5 +98,17 @@ export class AppComponent implements OnInit {
             visitor: { id: this.cookieValue }        
         }   
         this.pendoService.initialize(pendoOptions);
+    }
+
+    @HostListener('click',['$event']) 
+    onclick(event) {
+        if (event.target.id === 'skip-main'){
+            this.skipMain();
+        }    
+    }
+        
+    skipMain(){
+        document.getElementById('body-container').scrollIntoView(true);
+        document.getElementById('body-container').focus();
     }
 }

@@ -37,7 +37,6 @@ import { PendoService } from './pendo/pendo.service';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
 
 import { DemoDialogAcceptCancelComponent } from './demo/demo-dialog/demo-dialog-accept-cancel.component';
-import { AccessibleClickDirective, AccessibleViewDirective } from '../../src/accessibility/accessibility.directive';
 <% for(var i = 0; i < imports.length; i ++) { %> <%- imports[i]%> 
 <% } %>
 
@@ -52,8 +51,6 @@ const routes: Routes = [
         AppComponent,
         SlackBotDialogComponent,
         WelcomeComponent,
-        AccessibleClickDirective,
-        AccessibleClickDirective
     ],
     imports: [
         BrowserModule,

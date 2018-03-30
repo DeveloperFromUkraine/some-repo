@@ -7,6 +7,25 @@
     choice is desired.
 See <a href="https://material.io/guidelines/components/selection-controls.html#selection-controls-checkbox">Material Design Selection Controls</a> and <a href="https://material.angular.io/components/checkbox/overview">Angular Material Checkboxes</a>.</p>
 
+<table>
+<tbody>
+<tr>
+<td>
+<h4 id="do">Do</h4>
+
+<ul><li>Use if there are multiple options presented for selection</li></ul>
+
+</td>
+<td>
+<h4 id="dont">Don't</h4>
+
+<ul><li>Don't use for single options use a Switch instead</li></ul>
+
+</td>
+</tr>
+</tbody>
+</table>
+
 <h2>Sample</h2>
 
 <mat-tab-group>
@@ -19,17 +38,17 @@ See <a href="https://material.io/guidelines/components/selection-controls.html#s
     </mat-tab>
     <mat-tab label="HTML"><div class="tab-height">
         <table style="width:100%">
-            &lt;div id="checkboxList" aria-label ="Checkbox List"&gt; <br/>
-                &nbsp; &lt;mat-checkbox aria-describedby="checkboxList"&gt;Check me!&lt;/mat-checkbox&gt; <br/>
-                &nbsp; &lt;mat-checkbox aria-describedby="checkboxList"&gt;Check me too!&lt;/mat-checkbox&gt; <br/>
-            &lt;/div&gt;
+            <p>&lt;div id="checkboxList" aria-label ="Checkbox List"&gt; </p>
+            <p>    &nbsp; &lt;mat-checkbox aria-describedby="checkboxList"&gt;Check me!&lt;/mat-checkbox&gt; </p>
+            <p>    &nbsp; &lt;mat-checkbox aria-describedby="checkboxList"&gt;Check me too!&lt;/mat-checkbox&gt; </p>
+            <p>&lt;/div&gt;</p>
         </table>
     </div></mat-tab>
 </mat-tab-group>
 
 <h2>Style</h2>
 
-<ul><li>Horizontal group: options should be separated by 16px of space on the right</li><li>Vertical group: options should be separated by 16px of space below</li></ul>
+<ul><li>Horizontal group: options should be separated by 16px of space on the right</li><li>Vertical group: options should be separated by 16px of space below</li><li>All Selection Controls use Accent color to indicate the selected state.</li></ul>
 
 <h2>Content</h2>
 
