@@ -129,6 +129,7 @@ import {
   AccessibleClickDirective,
   AccessibleViewDirective,
   AccessibleRemoveViewDirective,
+  AccessibleContextMenuViewDirective,
   ListItemRoleDirective,
   ToolTipDirective
 } from './accessibility/accessibility.directive';
@@ -210,6 +211,7 @@ const components = [
   AccessibleClickDirective,
   AccessibleViewDirective,
   AccessibleRemoveViewDirective,
+  AccessibleContextMenuViewDirective,
   ListItemRoleDirective,
   ToolTipDirective,
 ];

@@ -2,6 +2,9 @@
 node_modules/*
 npm-debug.log
 
+# Yarn
+yarn-error.log
+
 # TypeScript
 src/*.js
 src/*.map
