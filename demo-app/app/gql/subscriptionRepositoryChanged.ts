@@ -6,15 +6,22 @@ export const SubscriptionRepositoryChanged = gql`
             type
             repo {
                 id
-            }
-            branchName
-            fromHash
-            from {
-                id
-            }
-            toHash
-            to {
-                id
+                project {
+                    id
+                }
+                branches(types: [MASTER, DEVELOP]) {
+                    nextPageStart
+                    values {
+                        id
+                        displayId
+                        projectKey
+                        repoKey
+                        project {
+                            id
+                        }
+                        url
+                    }
+                }
             }
         }
     }

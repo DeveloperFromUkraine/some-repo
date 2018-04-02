@@ -29,7 +29,7 @@ export class WelcomeComponent implements OnInit {
             variables: {
                 slug: this.service
             }
-        })
+        });
 
         this.getServiceInfo();
         this.getSubscriptionInfo();
@@ -54,10 +54,15 @@ export class WelcomeComponent implements OnInit {
                     return prev;
                 }
 
-                console.log('Insert logic here.');
-                console.dir(subscriptionData.data);
+                //Insert event response here
+
+                /**
+                 * TEMPORARY WORKAROUND 3-23-18
+                 * Subscriptions on Bakery API are not working at the moment.
+                 */
+                this.getServiceInfo();
             }
-        })
+        });
     }
 
     getServiceInfo() {
