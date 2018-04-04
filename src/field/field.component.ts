@@ -27,8 +27,8 @@ export class FieldInlineComponent extends FieldComponent {}
   selector: 'ign-editable-field',
   template: `
     <div class="label-container">
-    <div da="fieldValue" class="value flex-lable-value"><ng-content></ng-content></div>
-    <button mat-icon-button class="mat-icon-button" (click)=handleClick()>
+    <div [attr.da]="da" class="value flex-lable-value"><ng-content></ng-content></div>
+    <button [attr.da]="daButton" mat-icon-button class="mat-icon-button" (click)=handleClick()>
       <mat-icon>{{editIcon}}</mat-icon>
     </button>
     </div>
@@ -38,6 +38,8 @@ export class FieldInlineComponent extends FieldComponent {}
 })
 export class EditableFieldComponent extends FieldComponent {
   @Input() editIcon: string = 'mode_edit';
+  @Input() da: string;
+  @Input() daButton: string;
   @Output() onIconClick: EventEmitter<any> = new EventEmitter();
 
   handleClick() {
