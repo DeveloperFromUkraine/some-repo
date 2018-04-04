@@ -10,14 +10,19 @@ See [Material Design Style Icons](https://material.io/guidelines/style/icons.htm
 <mat-tab-group>
     <mat-tab label="Component Sample">
         <div class="tab-height">
-            <mat-icon aria-label="home icon" aria-hidden="false" tabindex="0">home</mat-icon>
+            <mat-icon aria-label="home" aria-hidden="false" tabindex="0" role="button">home</mat-icon>
         </div>
     </mat-tab>
     <mat-tab label="HTML"><div class="tab-height">
         <table style="width:100%">
-            &lt;mat-icon aria-label="Home Icon" aria-hidden="false"&gt;home&lt;/mat-icon&gt;
-        </table>
-    </div></mat-tab>
+        <p>&lt;mat-icon attr.aria-label="{{'{'}}{{'{'}} 'COMMON.HOME' | translate {{'}'}}{{'}'}}" aria-hidden="false"
+                tabindex="0" role="button" (click)="handleClick()" ignA11yClick&gt;home&lt;/mat-icon&gt;</p>
+
+        <p>&lt;button (click)="handleClick()" attr.aria-label="{{'{'}}{{'{'}} 'COMMON.HOME' | translate {{'}'}}{{'}'}}"&gt;
+            &lt;mat-icon&gt;home&lt;/mat-icon&gt;
+    &lt;/button&gt;</p>
+</table>
+</div></mat-tab>
 </mat-tab-group>
 
 ## Content
@@ -34,9 +39,14 @@ See [Material Design Style Icons](https://material.io/guidelines/style/icons.htm
 
 ## Accessibility
 
-* Include a descriptive aria-label for the icon as well as setting aria-hidden="false" within the mat-icon tag
-* Add a tabindex="0" within the mat-icon tag so that it could be navigated to using tabs
-* If the icon is used as a button with eventhandlers on click, include a role="button" within the mat-icon tag
+* When a `mat-icon` is embedded within a button, add a descriptive `aria-label` to the button.
+
+* When a `mat-icon` is being used as a button on its own, do the following:
+    * Include a descriptive aria-label for the icon as well as setting aria-hidden="false" within the mat-icon tag
+    * Add a tabindex="0" within the mat-icon tag so that it could be navigated to using tabs
+    * If the icon is used as a button with eventhandlers on click, include a role="button" within the mat-icon tag
+        * Test to see if the button can be tabbed to and "clicked" through the enter and spacebar keys.
+        * If it cannot be clicked via keyboard, add the `ignA11yClick` attribute directive
 * Refer to HTML in Sample section on usage
 ## Icon Components
 
