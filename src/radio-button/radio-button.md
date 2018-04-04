@@ -4,7 +4,8 @@
 ## Use
 Radio buttons allow the user to select one option from a set. Use radio buttons for exclusive selection if user
     needs to see all available options side-by-side. Otherwise, consider a dropdown, which uses
-    less space than displaying all options.
+    less space than displaying all options. In code Radio Buttons are out of the box Angular Material components. 
+    Within Sketch they are presented in horizontal and vertical layouts.
 
 See [Material Design Radio Button](https://material.io/guidelines/components/selection-controls.html#selection-controls-radio-button).
     and [Angular Material Radio Button](https://material.angular.io/components/radio/overview).
@@ -40,9 +41,7 @@ See [Material Design Radio Button](https://material.io/guidelines/components/sel
 ## Content
 * Radio button components should use succinct labels for options rather than sentences.
 
-
 ## Style
-
 * Options should have 16px spacing vertically and horizontally between items.
 
 * Do
