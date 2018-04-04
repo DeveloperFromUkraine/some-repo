@@ -26,8 +26,8 @@
     <mat-tab label="HTML"><div class="tab-height">
         <table style="width:100%">
             <p>&lt;ign-expandable-fab ariaLabelOpen="open example menu" ariaLabelClose="close example menu"&gt;</p>
-            <p>   &nbsp;&nbsp;&lt;ign-expandable-fab-item icon="add"&gt;</p>
-            <p>   &nbsp;&nbsp;&lt;/ign-expandable-fab-item&gt;</p>
+            <p>   &nbsp;&nbsp;&lt;ign-expandable-fab-item icon="add" router="['./add']"&gt;</p>
+            <p>   &nbsp;&nbsp;&lt;/ign-expandable-fab-item href="#"&gt;</p>
             <p>   &nbsp;&nbsp;&lt;ign-expandable-fab-item icon="file_upload"&gt;</p>
             <p>   &nbsp;&nbsp;&lt;/ign-expandable-fab-item&gt;</p>
             <p>   &nbsp;&nbsp;&lt;ign-expandable-fab-item icon="lock_outline"&gt;</p>
@@ -53,4 +53,4 @@
 
 <h2>Accessibility</h2>
 
-<ul><li>Add a descriptive ariaLabelOpen and ariaLabelClose within the ign-expandable-fab tag to describe the menu being opened/closed</li><li>Refer to Sample HTML for usage</li></ul>
+<ul><li>Add a descriptive ariaLabelOpen and ariaLabelClose within the ign-expandable-fab tag to describe the menu being opened/closed</li><li>When using the fab button to change a route or href, use the provided inputs in the fab tag (router/href) to prevent issues with tabbing through the control for accessibility</li><li>Refer to Sample HTML for usage</li></ul>

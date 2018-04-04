@@ -5,9 +5,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './expandable-fab-item.html',
   styleUrls: ['./expandable-fab-item.scss'],
 })
+
 export class ExpandableFabItemComponent {
   @Input() tooltipText: string;
   @Input() icon: string;
   @Input() href: string;
+  @Input() router: string;
   @Output() clicked = new EventEmitter<any>();
 }

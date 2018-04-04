@@ -102,6 +102,7 @@ export * from './expandable-fab/expandable-fab.component';
 
 import { ExpandableFabItemComponent } from './expandable-fab/expandable-fab-item.component';
 export * from './expandable-fab/expandable-fab-item.component';
+import { ExpandableFabItemModule } from './expandable-fab/expandable-fab-item.module';
 
 import { FieldComponent, FieldInlineComponent, EditableFieldComponent, EditableFieldInlineComponent } from './field/field.component';
 export * from './field/field.component';
@@ -197,7 +198,6 @@ const components = [
   InfoBannerComponent,
   ButtonGroupComponent,
   ExpandableFabComponent,
-  ExpandableFabItemComponent,
   FieldComponent,
   FieldInlineComponent,
   EditableFieldComponent,
@@ -231,6 +231,7 @@ const components = [
     DateRangeModule,
     MatListModule,
     NavListModule,
+    ExpandableFabItemModule,
     TextListItemModule,
     DataTableContainerModule,
     MatFormFieldModule,
@@ -241,6 +242,7 @@ const components = [
     ...components,
     DateRangeComponent,
     NavListComponent,
+    ExpandableFabItemComponent,
     TextListItemComponent,
     DataTableContainerComponent
   ],

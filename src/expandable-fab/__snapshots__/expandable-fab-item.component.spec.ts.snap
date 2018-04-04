@@ -13,24 +13,45 @@ exports[`Expandable Fab Item should match snapshot 1`] = `
     toolTip
   </span>
   <a
+    aria-disabled="false"
+    class="mat-fab mat-accent"
     href="updatedHref"
     igna11yclick=""
     mat-fab=""
     role="menuitem"
+    tabindex="0"
   >
-    
-    
-    <mat-icon
-      aria-hidden="true"
-      class="mat-icon material-icons"
-      role="img"
+    <span
+      class="mat-button-wrapper"
     >
       
+    
+      <mat-icon
+        aria-hidden="true"
+        class="mat-icon material-icons"
+        role="img"
+      >
+        
       email
     
-    </mat-icon>
-    
+      </mat-icon>
+      
   
+    </span>
+    <div
+      class="mat-button-ripple mat-ripple mat-button-ripple-round"
+      matripple=""
+      ng-reflect-centered="false"
+      ng-reflect-disabled="false"
+      ng-reflect-trigger=""
+    />
+    <div
+      class="mat-button-focus-overlay"
+    />
   </a>
+  
+  
+  
+  
 </ign-expandable-fab-item>
 `;
