@@ -136,6 +136,10 @@ import {
 } from './accessibility/accessibility.directive';
 
 import {
+  TranslationService
+} from './localization/translation.service';
+
+import {
   MatToolbarModule,
   MatMenuModule,
   MatButtonModule,
@@ -246,8 +250,14 @@ const components = [
     TextListItemComponent,
     DataTableContainerComponent
   ],
+  providers: [ TranslationService ]
 })
 export class IgniteDesignSystemModule {
+
+  static updateTranslation(translationKey: string, translationValue: string){
+    TranslationService.updateTranslation(translationKey, translationValue);
+  }
+
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: IgniteDesignSystemModule,
