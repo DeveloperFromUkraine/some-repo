@@ -3,6 +3,7 @@ import { DateRangeComponent } from './date-range.component';
 import { ComponentTest } from "../../test/test-bed/component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatFormFieldModule, MatInputModule, MatDatepickerModule, MatNativeDateModule } from "@angular/material";
+import { TranslationModule } from '../localization/translation.module';
 
 describe('Date Range', () => {
     let fixture: ComponentFixture<DateRangeComponent>;
@@ -11,7 +12,9 @@ describe('Date Range', () => {
         await ComponentTest.createTestBed([MatFormFieldModule,
             MatInputModule,
             MatDatepickerModule,
-            ReactiveFormsModule, MatNativeDateModule], [DateRangeComponent]);
+            ReactiveFormsModule,
+            MatNativeDateModule,
+            TranslationModule], [DateRangeComponent]);
     });
 
     beforeEach(() => {

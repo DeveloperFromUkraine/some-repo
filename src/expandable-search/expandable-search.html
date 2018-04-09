@@ -2,7 +2,7 @@
   *ngIf="!searchExpanded"
   mat-icon-button
   (click)="searchExpanded=true"
-  aria-label="Search"
+  attr.aria-label="{{ 'SEARCH' | translateIDS }}"
   da="searchButton">
   <mat-icon>
     search
@@ -25,7 +25,7 @@
   <input
     #searchInput
     matInput
-    placeholder="Search"
+    placeholder="{{ 'SEARCH' | translateIDS }}" 
     value=""
     (keyup)="emitSearchEvents()">
   <button
@@ -33,6 +33,8 @@
     (click)="searchInput.value=''; emitSearchEvents()"
     mat-icon-button
     matSuffix
+    attr.aria-label="{{ 'CLEAR' | translateIDS }}"
+    aria-hidden="false"
     da="clearButton">
     <mat-icon>
       close
