@@ -46,6 +46,7 @@ the front end or back end.
 ## Accessibility
 * Add a descriptive aria-label to the dismiss buttons tag that describes the action of the button (ex: exit)
 * Refer to the Sample HTML for an example
+* Error banners will be set to have a live region of assertive, allowing screen readers to notify the user right away of the contents of the error banner
 
 *** TypeScript *** 
 
