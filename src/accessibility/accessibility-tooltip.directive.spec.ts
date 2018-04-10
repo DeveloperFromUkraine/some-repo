@@ -43,7 +43,7 @@ describe('ToolTip', () => {
         expect(ne.getAttribute('tabindex')).toBe("-1");
     });
     it('should have an aria label different from tooltip if aria label', () => {
-        ne = de[2].nativeElement;
+        ne = de[1].nativeElement;
 
         expect(ne.getAttribute('aria-label') === ne.getAttribute('matTooltip')).toBe(false);
     });
