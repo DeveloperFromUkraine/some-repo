@@ -10,8 +10,7 @@ import { ToolTipDirective } from './accessibility.directive';
 
 @Component({
     template: `<p class="directive" matTooltip="Iamatooltip"> I am a paragraph with a tooltip. </p>
-    <p class="directive" tabindex="-1" aria-label="Iamanarialabel"> I am a paragraph without a tooltip. </p>
-    <p class="directive" matTooltip="Iamatooltip"> I am a paragraph with a tooltip and aria label. </p>`,
+    <p class="directive" tabindex="-1" aria-label="Iamanarialabel"> I am a paragraph without a tooltip. </p>`,
 })
 class DirectiveHostComponent {
 }
