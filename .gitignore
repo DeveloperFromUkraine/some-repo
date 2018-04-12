@@ -38,5 +38,5 @@ dist/*
 .playground
 
 # Coverage files
-coverage/lcov-report
-coverage/lcov.info
+coverage/*
+test/jest-output.json
