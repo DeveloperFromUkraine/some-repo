@@ -15,7 +15,7 @@ import { ToolTipDirective } from './accessibility.directive';
 class DirectiveHostComponent {
 }
 
-describe('ToolTip', () => {
+describe('Accessibility ToolTip', () => {
     let fixture: ComponentFixture<DirectiveHostComponent>;
     let de: DebugElement[];
     let ne: HTMLElement;

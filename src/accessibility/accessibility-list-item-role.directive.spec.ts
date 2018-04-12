@@ -15,7 +15,7 @@ import { ListItemRoleDirective } from './accessibility.directive';
 class DirectiveHostComponent {
 }
 
-describe('List Item Role', () => {
+describe('Accessibility List Item Role', () => {
     let fixture: ComponentFixture<DirectiveHostComponent>;
     let de: DebugElement[];
     let ne: HTMLElement;
