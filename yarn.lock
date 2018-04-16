@@ -167,12 +167,6 @@
   dependencies:
     tslib "^1.7.1"
 
-"@angular/tsc-wrapped@^4.4.5":
-  version "4.4.6"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@angular/tsc-wrapped/-/tsc-wrapped-4.4.6.tgz#16787cbbf50bdc7e738123b19c32527f244e178d"
-  dependencies:
-    tsickle "^0.21.0"
-
 "@babel/code-frame@^7.0.0-beta.35":
   version "7.0.0-beta.44"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@babel/code-frame/-/code-frame-7.0.0-beta.44.tgz#2a02643368de80916162be70865c97774f3adbd9"
@@ -272,21 +266,33 @@
     semver "^5.3.0"
     semver-intersect "^1.1.2"
 
+"@types/async@2.0.47":
+  version "2.0.47"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@types/async/-/async-2.0.47.tgz#f49ba1dd1f189486beb6e1d070a850f6ab4bd521"
+
 "@types/googlemaps@^3.29.2":
   version "3.30.8"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@types/googlemaps/-/googlemaps-3.30.8.tgz#cc6ab90f79f3a8b799860ea1d70252a221af702e"
+
+"@types/graphql@0.12.6":
+  version "0.12.6"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@types/graphql/-/graphql-0.12.6.tgz#3d619198585fcabe5f4e1adfb5cf5f3388c66c13"
 
 "@types/jest@^19.2.3":
   version "19.2.4"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@types/jest/-/jest-19.2.4.tgz#543651712535962b7dc615e18e4a381fc2687442"
 
 "@types/node@*":
-  version "9.6.5"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@types/node/-/node-9.6.5.tgz#ee700810fdf49ac1c399fc5980b7559b3e5a381d"
+  version "9.6.6"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@types/node/-/node-9.6.6.tgz#439b91f9caf3983cad2eef1e11f6bedcbf9431d2"
 
 "@types/node@~6.0.60":
   version "6.0.106"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@types/node/-/node-6.0.106.tgz#391bc3598ab5823563f7155847212152893edcd7"
+
+"@types/zen-observable@^0.5.3":
+  version "0.5.3"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@types/zen-observable/-/zen-observable-0.5.3.tgz#91b728599544efbb7386d8b6633693a3c2e7ade5"
 
 abab@^1.0.3, abab@^1.0.4:
   version "1.0.4"
@@ -321,7 +327,7 @@ acorn-globals@^4.1.0:
   dependencies:
     acorn "^5.0.0"
 
-acorn@^4.0.3, acorn@^4.0.4:
+acorn@4.x, acorn@^4.0.3, acorn@^4.0.4:
   version "4.0.13"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/acorn/-/acorn-4.0.13.tgz#105495ae5361d697bd195c825192e1ad7f253787"
 
@@ -381,6 +387,16 @@ angular-in-memory-web-api@^0.5.2:
   version "0.5.4"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/angular-in-memory-web-api/-/angular-in-memory-web-api-0.5.4.tgz#85af913e0403ead9755bdb2e0835a41a51b658b0"
 
+angular2-cookie@^1.2.6:
+  version "1.2.6"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/angular2-cookie/-/angular2-cookie-1.2.6.tgz#8fa845531e777adb042fe2f339c0040f6ddbf09d"
+
+ansi-align@^2.0.0:
+  version "2.0.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ansi-align/-/ansi-align-2.0.0.tgz#c36aeccba563b89ceb556f3690f0b1d9e3547f7f"
+  dependencies:
+    string-width "^2.0.0"
+
 ansi-colors@^1.0.1:
   version "1.1.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ansi-colors/-/ansi-colors-1.1.0.tgz#6374b4dd5d4718ff3ce27a671a3b1cad077132a9"
@@ -427,7 +443,7 @@ any-promise@^1.3.0:
   version "1.3.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/any-promise/-/any-promise-1.3.0.tgz#abc6afeedcea52e809cdc0376aed3ce39635d17f"
 
-anymatch@^1.3.0:
+anymatch@^1.1.0, anymatch@^1.3.0:
   version "1.3.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/anymatch/-/anymatch-1.3.2.tgz#553dcb8f91e3c889845dfdba34c77721b90b9d7a"
   dependencies:
@@ -450,6 +466,72 @@ apache-crypt@1.1.2:
 apache-md5@1.0.6:
   version "1.0.6"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apache-md5/-/apache-md5-1.0.6.tgz#470239d40c54e7c32dd9d6eb11bc3578ecc903c2"
+
+apollo-angular-link-http-common@~1.0.0:
+  version "1.0.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-angular-link-http-common/-/apollo-angular-link-http-common-1.0.0.tgz#bb15ab9844335531572b44f259c360c36c4bb1e7"
+
+apollo-angular-link-http@^1.0.2-beta.0:
+  version "1.0.2"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-angular-link-http/-/apollo-angular-link-http-1.0.2.tgz#191adc5576510cfa5764a97b690c190e7aa09793"
+  dependencies:
+    apollo-angular-link-http-common "~1.0.0"
+
+apollo-angular@^1.0.1:
+  version "1.0.1"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-angular/-/apollo-angular-1.0.1.tgz#2a48bd4c550be417d2902adcd859493282cd939a"
+
+apollo-cache-inmemory@^1.1.7:
+  version "1.1.12"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-cache-inmemory/-/apollo-cache-inmemory-1.1.12.tgz#ab489bf046b3e026556ab28bdebb6e010cac9531"
+  dependencies:
+    apollo-cache "^1.1.7"
+    apollo-utilities "^1.0.11"
+    graphql-anywhere "^4.1.8"
+
+apollo-cache@^1.1.7:
+  version "1.1.7"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-cache/-/apollo-cache-1.1.7.tgz#5817018a2fbfc05a21ba319bd17a3e7538110cc5"
+  dependencies:
+    apollo-utilities "^1.0.11"
+
+apollo-client@^2.2.2:
+  version "2.2.8"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-client/-/apollo-client-2.2.8.tgz#b604d31ab2d2dd00db3105d8793b93ee02ce567e"
+  dependencies:
+    "@types/zen-observable" "^0.5.3"
+    apollo-cache "^1.1.7"
+    apollo-link "^1.0.0"
+    apollo-link-dedup "^1.0.0"
+    apollo-utilities "^1.0.11"
+    symbol-observable "^1.0.2"
+    zen-observable "^0.7.0"
+  optionalDependencies:
+    "@types/async" "2.0.47"
+
+apollo-link-dedup@^1.0.0:
+  version "1.0.9"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-link-dedup/-/apollo-link-dedup-1.0.9.tgz#3c4e4af88ef027cbddfdb857c043fd0574051dad"
+  dependencies:
+    apollo-link "^1.2.2"
+
+apollo-link-ws@^1.0.7:
+  version "1.0.8"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-link-ws/-/apollo-link-ws-1.0.8.tgz#ac1de8f29e92418728479a9a523af9f75b9ccc8b"
+  dependencies:
+    apollo-link "^1.2.2"
+
+apollo-link@^1.0.0, apollo-link@^1.2.2:
+  version "1.2.2"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-link/-/apollo-link-1.2.2.tgz#54c84199b18ac1af8d63553a68ca389c05217a03"
+  dependencies:
+    "@types/graphql" "0.12.6"
+    apollo-utilities "^1.0.0"
+    zen-observable-ts "^0.8.9"
+
+apollo-utilities@^1.0.0, apollo-utilities@^1.0.11:
+  version "1.0.11"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/apollo-utilities/-/apollo-utilities-1.0.11.tgz#cd36bfa6e5c04eea2caf0c204a0f38a0ad550802"
 
 app-root-path@^2.0.1:
   version "2.0.1"
@@ -541,7 +623,7 @@ array-union@^1.0.1:
   dependencies:
     array-uniq "^1.0.1"
 
-array-uniq@^1.0.1, array-uniq@^1.0.2:
+array-uniq@^1.0.1:
   version "1.0.3"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/array-uniq/-/array-uniq-1.0.3.tgz#af6ac877a25cc7f74e058894753858dfdb24fdb6"
 
@@ -591,10 +673,6 @@ assign-symbols@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/assign-symbols/-/assign-symbols-1.0.0.tgz#59667f41fadd4f20ccbc2bb96b8d4f7f78ec0367"
 
-ast-types@0.9.6:
-  version "0.9.6"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ast-types/-/ast-types-0.9.6.tgz#102c9e9e9005d3e7e3829bf0c4fa24ee862ee9b9"
-
 astral-regex@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/astral-regex/-/astral-regex-1.0.0.tgz#6c8c3fb827dd43ee3918f27b82782ab7658a6fd9"
@@ -615,7 +693,7 @@ async@^1.4.0, async@^1.5.2:
   version "1.5.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
 
-async@^2.0.0-rc.5, async@^2.1.2, async@^2.1.4, async@^2.4.1:
+async@^2.1.2, async@^2.1.4, async@^2.4.1:
   version "2.6.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/async/-/async-2.6.0.tgz#61a29abb6fcc026fea77e56d1c6ec53a795951f4"
   dependencies:
@@ -823,6 +901,10 @@ babylon@^6.18.0:
   version "6.18.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/babylon/-/babylon-6.18.0.tgz#af2f3b88fa6f5c1e4c634d1a0f8eac4f55b395e3"
 
+backo2@^1.0.2:
+  version "1.0.2"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/backo2/-/backo2-1.0.2.tgz#31ab1ac8b129363463e35b3ebb69f4dfcfba7947"
+
 balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
@@ -863,10 +945,6 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-beeper@^1.0.0:
-  version "1.1.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/beeper/-/beeper-1.1.1.tgz#e6d5ea8c5dad001304a70b22638447f69cb2f809"
-
 big.js@^3.1.3:
   version "3.2.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/big.js/-/big.js-3.2.0.tgz#a5fc298b81b9e0dca2e458824784b65c52ba588e"
@@ -887,6 +965,10 @@ block-stream@*:
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/block-stream/-/block-stream-0.0.9.tgz#13ebfe778a03205cfe03751481ebb4b3300c126a"
   dependencies:
     inherits "~2.0.0"
+
+bluebird@^2.9.24:
+  version "2.11.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/bluebird/-/bluebird-2.11.0.tgz#534b9033c022c9579c56ba3b3e5a5caafbb650e1"
 
 bluebird@^3.4.7, bluebird@^3.5.1:
   version "3.5.1"
@@ -943,6 +1025,18 @@ boom@5.x.x:
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/boom/-/boom-5.2.0.tgz#5dd9da6ee3a5f302077436290cb717d3f4a54e02"
   dependencies:
     hoek "4.x.x"
+
+boxen@^1.2.1:
+  version "1.3.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/boxen/-/boxen-1.3.0.tgz#55c6c39a8ba58d9c61ad22cd877532deb665a20b"
+  dependencies:
+    ansi-align "^2.0.0"
+    camelcase "^4.0.0"
+    chalk "^2.0.1"
+    cli-boxes "^1.0.0"
+    string-width "^2.0.0"
+    term-size "^1.2.0"
+    widest-line "^2.0.0"
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -1164,7 +1258,7 @@ camelcase@^1.0.2:
   version "1.2.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/camelcase/-/camelcase-1.2.1.tgz#9bb5304d2e0b56698b2c758b08a3eaa9daa58a39"
 
-camelcase@^2.0.0:
+camelcase@^2.0.0, camelcase@^2.0.1:
   version "2.1.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/camelcase/-/camelcase-2.1.1.tgz#7c1d16d679a1bbe59ca02cacecfb011e201f5a1f"
 
@@ -1172,13 +1266,17 @@ camelcase@^3.0.0:
   version "3.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/camelcase/-/camelcase-3.0.0.tgz#32fc4b9fcdaf845fcdf7e73bb97cac2261f0ab0a"
 
-camelcase@^4.1.0:
+camelcase@^4.0.0, camelcase@^4.1.0:
   version "4.1.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
 
 caniuse-lite@^1.0.30000792, caniuse-lite@^1.0.30000805:
   version "1.0.30000830"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/caniuse-lite/-/caniuse-lite-1.0.30000830.tgz#cb96b8a2dd3cbfe04acea2af3c4e894249095328"
+
+capture-stack-trace@^1.0.0:
+  version "1.0.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/capture-stack-trace/-/capture-stack-trace-1.0.0.tgz#4a6fa07399c26bba47f0b2496b4d0fb408c5550d"
 
 caseless@~0.11.0:
   version "0.11.0"
@@ -1204,7 +1302,7 @@ center-align@^0.1.1:
     align-text "^0.1.3"
     lazy-cache "^1.0.3"
 
-chalk@^1.0.0, chalk@^1.1.1, chalk@^1.1.3:
+chalk@^1.1.1, chalk@^1.1.3:
   version "1.1.3"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/chalk/-/chalk-1.1.3.tgz#a8115c55e4a702fe4d150abd3872822a7e09fc98"
   dependencies:
@@ -1214,7 +1312,7 @@ chalk@^1.0.0, chalk@^1.1.1, chalk@^1.1.3:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
-chalk@^2.0.0, chalk@^2.0.1, chalk@^2.3.0, chalk@^2.3.2:
+chalk@^2.0.0, chalk@^2.0.1, chalk@^2.3.0, chalk@^2.3.1, chalk@^2.3.2:
   version "2.4.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/chalk/-/chalk-2.4.0.tgz#a060a297a6b57e15b61ca63ce84995daa0fe6e52"
   dependencies:
@@ -1245,7 +1343,18 @@ child_process@^1.0.2:
   version "1.0.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/child_process/-/child_process-1.0.2.tgz#b1f7e7fc73d25e7fd1d455adc94e143830182b5a"
 
-chokidar@^1.4.2, chokidar@^1.6.0, chokidar@^1.7.0:
+chokidar-cli@^1.2.0:
+  version "1.2.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/chokidar-cli/-/chokidar-cli-1.2.0.tgz#8e7f58442273182018be1868e53c22af65a21948"
+  dependencies:
+    anymatch "^1.1.0"
+    bluebird "^2.9.24"
+    chokidar "^1.0.1"
+    lodash "^3.7.0"
+    shell-quote "^1.4.3"
+    yargs "^3.7.2"
+
+chokidar@^1.0.1, chokidar@^1.4.2, chokidar@^1.6.0, chokidar@^1.7.0:
   version "1.7.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/chokidar/-/chokidar-1.7.0.tgz#798e689778151c8076b4b360e5edd28cda2bb468"
   dependencies:
@@ -1306,11 +1415,15 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-clean-css@4.1.x, clean-css@^4.1.11:
+clean-css@4.1.x, clean-css@^4.1.11, clean-css@^4.x:
   version "4.1.11"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/clean-css/-/clean-css-4.1.11.tgz#2ecdf145aba38f54740f26cefd0ff3e03e125d6a"
   dependencies:
     source-map "0.5.x"
+
+cli-boxes@^1.0.0:
+  version "1.0.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/cli-boxes/-/cli-boxes-1.0.0.tgz#4fa917c3e59c94a004cd61f8ee509da651687143"
 
 cliui@^2.1.0:
   version "2.1.0"
@@ -1320,7 +1433,7 @@ cliui@^2.1.0:
     right-align "^0.1.1"
     wordwrap "0.0.2"
 
-cliui@^3.2.0:
+cliui@^3.0.3, cliui@^3.2.0:
   version "3.2.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/cliui/-/cliui-3.2.0.tgz#120601537a916d29940f934da3b48d585a39213d"
   dependencies:
@@ -1344,14 +1457,6 @@ clone-deep@^2.0.1:
     is-plain-object "^2.0.4"
     kind-of "^6.0.0"
     shallow-clone "^1.0.0"
-
-clone-stats@^0.0.1:
-  version "0.0.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/clone-stats/-/clone-stats-0.0.1.tgz#b88f94a82cf38b8791d58046ea4029ad88ca99d1"
-
-clone@^1.0.0, clone@~1.0.2:
-  version "1.0.4"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
 
 clone@^2.1.1:
   version "2.1.2"
@@ -1411,7 +1516,7 @@ combined-stream@1.0.6, combined-stream@^1.0.5, combined-stream@~1.0.5:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@2.15.1, commander@2.15.x, commander@^2.11.0, commander@^2.12.1, commander@^2.9.0, commander@~2.15.0:
+commander@2.15.1, commander@2.15.x, commander@^2.12.0, commander@^2.12.1, commander@^2.9.0, commander@~2.15.0:
   version "2.15.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/commander/-/commander-2.15.1.tgz#df46e867d0fc2aec66a34662b406a9ccafff5b0f"
 
@@ -1424,6 +1529,10 @@ commander@~2.8.1:
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/commander/-/commander-2.8.1.tgz#06be367febfda0c330aa1e2a072d3dc9762425d4"
   dependencies:
     graceful-readlink ">= 1.0.0"
+
+commenting@1.0.5:
+  version "1.0.5"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/commenting/-/commenting-1.0.5.tgz#3104d542cac8a4f27b3d51438f4b80431fe4526b"
 
 common-tags@^1.3.1:
   version "1.7.2"
@@ -1481,6 +1590,17 @@ config-chain@^1.1.11:
     ini "^1.3.4"
     proto-list "~1.2.1"
 
+configstore@^3.0.0:
+  version "3.1.2"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/configstore/-/configstore-3.1.2.tgz#c6f25defaeef26df12dd33414b001fe81a543f8f"
+  dependencies:
+    dot-prop "^4.1.0"
+    graceful-fs "^4.1.2"
+    make-dir "^1.0.0"
+    unique-string "^1.0.0"
+    write-file-atomic "^2.0.0"
+    xdg-basedir "^3.0.0"
+
 connect-history-api-fallback@^1.3.0:
   version "1.5.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/connect-history-api-fallback/-/connect-history-api-fallback-1.5.0.tgz#b06873934bc5e344fef611a196a6faae0aee015a"
@@ -1520,7 +1640,7 @@ content-type@~1.0.4:
   version "1.0.4"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/content-type/-/content-type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
 
-convert-source-map@^1.1.1, convert-source-map@^1.4.0, convert-source-map@^1.5.0:
+convert-source-map@^1.4.0, convert-source-map@^1.5.0:
   version "1.5.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/convert-source-map/-/convert-source-map-1.5.1.tgz#b8278097b9bc229365de5c62cf5fcaed8b5599e5"
 
@@ -1616,6 +1736,12 @@ create-ecdh@^4.0.0:
     bn.js "^4.1.0"
     elliptic "^6.0.0"
 
+create-error-class@^3.0.0:
+  version "3.0.2"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/create-error-class/-/create-error-class-3.0.2.tgz#06be7abef947a3f14a30fd610671d401bca8b7b6"
+  dependencies:
+    capture-stack-trace "^1.0.0"
+
 create-hash@^1.1.0, create-hash@^1.1.2:
   version "1.2.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/create-hash/-/create-hash-1.2.0.tgz#889078af11a63756bcfb59bd221996be3a9ef196"
@@ -1679,6 +1805,10 @@ crypto-browserify@^3.11.0:
     public-encrypt "^4.0.0"
     randombytes "^2.0.0"
     randomfill "^1.0.3"
+
+crypto-random-string@^1.0.0:
+  version "1.0.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/crypto-random-string/-/crypto-random-string-1.0.0.tgz#a230f64f568310e1498009940790ec99545bca7e"
 
 csextends@^1.0.3:
   version "1.2.0"
@@ -1767,17 +1897,13 @@ date-now@^0.1.4:
   version "0.1.4"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
 
-dateformat@^2.0.0:
-  version "2.2.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/dateformat/-/dateformat-2.2.0.tgz#4065e2013cf9fb916ddfd82efb506ad4c6769062"
-
 debug@*, debug@^3.1.0:
   version "3.1.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
   dependencies:
     ms "2.0.0"
 
-debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.6, debug@^2.6.8:
+debug@2.6.9, debug@^2.1.2, debug@^2.2.0, debug@^2.3.3, debug@^2.6.6, debug@^2.6.8:
   version "2.6.9"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
   dependencies:
@@ -2054,6 +2180,12 @@ domutils@^1.5.1:
     dom-serializer "0"
     domelementtype "1"
 
+dot-prop@^4.1.0:
+  version "4.2.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/dot-prop/-/dot-prop-4.2.0.tgz#1f19e0c2e1aa0e32797c49799f2837ac6af69c57"
+  dependencies:
+    is-obj "^1.0.0"
+
 dot@^1.1.1:
   version "1.1.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/dot/-/dot-1.1.2.tgz#c7377019fc4e550798928b2b9afeb66abfa1f2f9"
@@ -2074,12 +2206,6 @@ download@^6.1.0:
     p-event "^1.0.0"
     pify "^3.0.0"
 
-duplexer2@0.0.2:
-  version "0.0.2"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/duplexer2/-/duplexer2-0.0.2.tgz#c614dcf67e2fb14995a91711e5a617e8a60a31db"
-  dependencies:
-    readable-stream "~1.1.9"
-
 duplexer3@^0.1.4:
   version "0.1.4"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/duplexer3/-/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"
@@ -2088,7 +2214,7 @@ duplexer@^0.1.1, duplexer@~0.1.1:
   version "0.1.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
 
-duplexify@^3.2.0, duplexify@^3.4.2, duplexify@^3.5.3:
+duplexify@^3.4.2, duplexify@^3.5.3:
   version "3.5.4"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/duplexify/-/duplexify-3.5.4.tgz#4bb46c1796eabebeec4ca9a2e66b808cb7a3d8b4"
   dependencies:
@@ -2119,8 +2245,8 @@ ee-first@1.1.1:
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
 
 ejs@^2.5.7:
-  version "2.5.8"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ejs/-/ejs-2.5.8.tgz#2ab6954619f225e6193b7ac5f7c39c48fefe4380"
+  version "2.5.9"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ejs/-/ejs-2.5.9.tgz#7ba254582a560d267437109a68354112475b0ce5"
 
 electron-to-chromium@^1.3.30:
   version "1.3.42"
@@ -2175,7 +2301,7 @@ errno@^0.1.1, errno@^0.1.3, errno@~0.1.7:
   dependencies:
     prr "~1.0.1"
 
-error-ex@^1.2.0:
+error-ex@^1.2.0, error-ex@^1.3.1:
   version "1.3.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/error-ex/-/error-ex-1.3.1.tgz#f855a86ce61adc4e8621c3cda21e7a7612c3a8dc"
   dependencies:
@@ -2247,13 +2373,6 @@ es6-symbol@3.1.1, es6-symbol@^3.1.1, es6-symbol@~3.1.1:
     d "1"
     es5-ext "~0.10.14"
 
-es6-templates@~0.2.2:
-  version "0.2.3"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/es6-templates/-/es6-templates-0.2.3.tgz#5cb9ac9fb1ded6eb1239342b81d792bbb4078ee4"
-  dependencies:
-    recast "~0.11.12"
-    through "~2.3.6"
-
 es6-weak-map@^2.0.1:
   version "2.0.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/es6-weak-map/-/es6-weak-map-2.0.2.tgz#5e3ab32251ffd1538a1f8e5ffa1357772f92d96f"
@@ -2291,7 +2410,7 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-esprima@^3.1.3, esprima@~3.1.0:
+esprima@^3.1.3:
   version "3.1.3"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/esprima/-/esprima-3.1.3.tgz#fdca51cee6133895e3c88d535ce49dbff62a4633"
 
@@ -2344,9 +2463,13 @@ event-stream@latest:
     stream-combiner "~0.0.4"
     through "~2.3.1"
 
-eventemitter3@1.x.x:
-  version "1.2.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/eventemitter3/-/eventemitter3-1.2.0.tgz#1c86991d816ad1e504750e73874224ecf3bec508"
+eventemitter3@^2.0.3:
+  version "2.0.3"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/eventemitter3/-/eventemitter3-2.0.3.tgz#b5e1079b59fb5e1ba2771c0a993be060a58c99ba"
+
+eventemitter3@^3.0.0:
+  version "3.0.1"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/eventemitter3/-/eventemitter3-3.0.1.tgz#4ce66c3fc5b5a6b9f2245e359e1938f1ab10f960"
 
 events@^1.0.0:
   version "1.1.1"
@@ -2483,7 +2606,7 @@ extend-shallow@^3.0.0, extend-shallow@^3.0.2:
     assign-symbols "^1.0.0"
     is-extendable "^1.0.1"
 
-extend@^3.0.0, extend@~3.0.0, extend@~3.0.1:
+extend@~3.0.0, extend@~3.0.1:
   version "3.0.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/extend/-/extend-3.0.1.tgz#a755ea7bc1adfcc5a31ce7e762dbaadc5e636444"
 
@@ -2538,7 +2661,7 @@ extsprintf@^1.2.0:
   version "1.4.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
 
-fancy-log@^1.1.0, fancy-log@^1.3.0, fancy-log@^1.3.2:
+fancy-log@^1.3.0, fancy-log@^1.3.2:
   version "1.3.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/fancy-log/-/fancy-log-1.3.2.tgz#f41125e3d84f2e7d89a43d06d958c8f78be16be1"
   dependencies:
@@ -2680,6 +2803,10 @@ find-index@^0.1.1:
   version "0.1.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/find-index/-/find-index-0.1.1.tgz#675d358b2ca3892d795a1ab47232f8b6e2e0dde4"
 
+find-parent-dir@^0.3.0:
+  version "0.3.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/find-parent-dir/-/find-parent-dir-0.3.0.tgz#33c44b429ab2b2f0646299c5f9f718f376ff8d54"
+
 find-up@^1.0.0:
   version "1.1.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/find-up/-/find-up-1.1.2.tgz#6b2e9822b1a2ce0a60ab64d610eccad53cb24d0f"
@@ -2697,16 +2824,18 @@ findit2@^2.2.3:
   version "2.2.3"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/findit2/-/findit2-2.2.3.tgz#58a466697df8a6205cdfdbf395536b8bd777a5f6"
 
-first-chunk-stream@^1.0.0:
-  version "1.0.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/first-chunk-stream/-/first-chunk-stream-1.0.0.tgz#59bfb50cd905f60d7c394cd3d9acaab4e6ad934e"
-
 flush-write-stream@^1.0.0:
   version "1.0.3"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/flush-write-stream/-/flush-write-stream-1.0.3.tgz#c5d586ef38af6097650b49bc41b55fabb19f35bd"
   dependencies:
     inherits "^2.0.1"
     readable-stream "^2.0.4"
+
+follow-redirects@^1.0.0:
+  version "1.4.1"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/follow-redirects/-/follow-redirects-1.4.1.tgz#d8120f4518190f55aac65bb6fc7b85fcd666d6aa"
+  dependencies:
+    debug "^3.1.0"
 
 for-in@^0.1.3:
   version "0.1.8"
@@ -2777,7 +2906,7 @@ from@~0:
   version "0.1.7"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/from/-/from-0.1.7.tgz#83c60afc58b9c56997007ed1a768b3ab303a44fe"
 
-fs-extra@^4.0.0, fs-extra@^4.0.1, fs-extra@^4.0.2:
+fs-extra@^4.0.0, fs-extra@^4.0.1:
   version "4.0.3"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/fs-extra/-/fs-extra-4.0.3.tgz#0d852122e5bc5beb453fb028e9c0c9bf36340c94"
   dependencies:
@@ -2793,6 +2922,12 @@ fs-extra@^5.0.0:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
+fs-minipass@^1.2.5:
+  version "1.2.5"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/fs-minipass/-/fs-minipass-1.2.5.tgz#06c277218454ec288df77ada54a03b8702aacb9d"
+  dependencies:
+    minipass "^2.2.1"
+
 fs-write-stream-atomic@^1.0.8:
   version "1.0.10"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/fs-write-stream-atomic/-/fs-write-stream-atomic-1.0.10.tgz#b47df53493ef911df75731e70a9ded0189db40c9"
@@ -2807,21 +2942,13 @@ fs.realpath@^1.0.0:
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
 
 fsevents@^1.0.0, fsevents@^1.1.1, fsevents@^1.1.2:
-  version "1.1.3"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/fsevents/-/fsevents-1.1.3.tgz#11f82318f5fe7bb2cd22965a108e9306208216d8"
+  version "1.2.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/fsevents/-/fsevents-1.2.0.tgz#e11a5ff285471e4cc43ab9cd09bb7986c565dcdc"
   dependencies:
-    nan "^2.3.0"
-    node-pre-gyp "^0.6.39"
+    nan "^2.9.2"
+    node-pre-gyp "^0.9.0"
 
-fstream-ignore@^1.0.5:
-  version "1.0.5"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/fstream-ignore/-/fstream-ignore-1.0.5.tgz#9c31dae34767018fe1d249b24dada67d092da105"
-  dependencies:
-    fstream "^1.0.0"
-    inherits "2"
-    minimatch "^3.0.0"
-
-fstream@^1.0.0, fstream@^1.0.10, fstream@^1.0.2:
+fstream@^1.0.0, fstream@^1.0.2:
   version "1.0.11"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/fstream/-/fstream-1.0.11.tgz#5c1fb1f117477114f0632a0eb4b71b3cb0fd3171"
   dependencies:
@@ -2911,25 +3038,12 @@ glob-parent@^2.0.0:
   dependencies:
     is-glob "^2.0.0"
 
-glob-parent@^3.0.0, glob-parent@^3.1.0:
+glob-parent@^3.1.0:
   version "3.1.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/glob-parent/-/glob-parent-3.1.0.tgz#9e6af6299d8d3bd2bd40430832bd113df906c5ae"
   dependencies:
     is-glob "^3.1.0"
     path-dirname "^1.0.0"
-
-glob-stream@^5.3.2:
-  version "5.3.5"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/glob-stream/-/glob-stream-5.3.5.tgz#a55665a9a8ccdc41915a87c701e32d4e016fad22"
-  dependencies:
-    extend "^3.0.0"
-    glob "^5.0.3"
-    glob-parent "^3.0.0"
-    micromatch "^2.3.7"
-    ordered-read-streams "^0.3.0"
-    through2 "^0.6.0"
-    to-absolute-glob "^0.1.1"
-    unique-stream "^2.0.2"
 
 glob2base@^0.0.12:
   version "0.0.12"
@@ -2945,16 +3059,6 @@ glob@7.0.x:
     inflight "^1.0.4"
     inherits "2"
     minimatch "^3.0.2"
-    once "^1.3.0"
-    path-is-absolute "^1.0.0"
-
-glob@^5.0.3:
-  version "5.0.15"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/glob/-/glob-5.0.15.tgz#1bc936b9e02f4a603fcc222ecf7633d30b8b93b1"
-  dependencies:
-    inflight "^1.0.4"
-    inherits "2"
-    minimatch "2 || 3"
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
@@ -2978,6 +3082,12 @@ glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@^7.1.1, glob@^7.1.2, glob@~7.1.1:
     minimatch "^3.0.4"
     once "^1.3.0"
     path-is-absolute "^1.0.0"
+
+global-dirs@^0.1.0:
+  version "0.1.1"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/global-dirs/-/global-dirs-0.1.1.tgz#b319c0dd4607f353f3be9cca4c72fc148c49f445"
+  dependencies:
+    ini "^1.3.4"
 
 globals@^9.18.0:
   version "9.18.0"
@@ -3012,11 +3122,21 @@ globule@^1.0.0:
     lodash "~4.17.4"
     minimatch "~3.0.2"
 
-glogg@^1.0.0:
-  version "1.0.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/glogg/-/glogg-1.0.1.tgz#dcf758e44789cc3f3d32c1f3562a3676e6a34810"
+got@^6.7.1:
+  version "6.7.1"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/got/-/got-6.7.1.tgz#240cd05785a9a18e561dc1b44b41c763ef1e8db0"
   dependencies:
-    sparkles "^1.0.0"
+    create-error-class "^3.0.0"
+    duplexer3 "^0.1.4"
+    get-stream "^3.0.0"
+    is-redirect "^1.0.0"
+    is-retry-allowed "^1.0.0"
+    is-stream "^1.0.0"
+    lowercase-keys "^1.0.0"
+    safe-buffer "^5.0.1"
+    timed-out "^4.0.0"
+    unzip-response "^2.0.1"
+    url-parse-lax "^1.0.0"
 
 got@^7.0.0:
   version "7.1.0"
@@ -3037,7 +3157,7 @@ got@^7.0.0:
     url-parse-lax "^1.0.0"
     url-to-options "^1.0.1"
 
-graceful-fs@*, graceful-fs@^4.0.0, graceful-fs@^4.1.10, graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.3, graceful-fs@^4.1.4, graceful-fs@^4.1.6:
+graceful-fs@*, graceful-fs@^4.1.10, graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.3, graceful-fs@^4.1.4, graceful-fs@^4.1.6:
   version "4.1.11"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
@@ -3045,60 +3165,25 @@ graceful-fs@*, graceful-fs@^4.0.0, graceful-fs@^4.1.10, graceful-fs@^4.1.11, gra
   version "1.0.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
+graphql-anywhere@^4.1.8:
+  version "4.1.8"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/graphql-anywhere/-/graphql-anywhere-4.1.8.tgz#23882e6a16ec824febbe5bca40937cdd76c5acdc"
+  dependencies:
+    apollo-utilities "^1.0.11"
+
+graphql-tag@^2.8.0:
+  version "2.9.1"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/graphql-tag/-/graphql-tag-2.9.1.tgz#1ab090ef7d3518b06d8c97d1393672145fe91587"
+
+graphql@^0.12.3:
+  version "0.12.3"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/graphql/-/graphql-0.12.3.tgz#11668458bbe28261c0dcb6e265f515ba79f6ce07"
+  dependencies:
+    iterall "1.1.3"
+
 growly@^1.3.0:
   version "1.3.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
-
-gulp-inline-ng2-template@^4.0.0:
-  version "4.1.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/gulp-inline-ng2-template/-/gulp-inline-ng2-template-4.1.0.tgz#61fab59a66945c37a0c4838b5e793d6708e91dfd"
-  dependencies:
-    async "^2.0.0-rc.5"
-    clone "~1.0.2"
-    es6-templates "~0.2.2"
-    extend "~3.0.0"
-    gulp-util "~3.0.6"
-    isarray "0.0.1"
-    through2 "~2.0.0"
-
-gulp-sourcemaps@1.6.0:
-  version "1.6.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/gulp-sourcemaps/-/gulp-sourcemaps-1.6.0.tgz#b86ff349d801ceb56e1d9e7dc7bbcb4b7dee600c"
-  dependencies:
-    convert-source-map "^1.1.1"
-    graceful-fs "^4.1.2"
-    strip-bom "^2.0.0"
-    through2 "^2.0.0"
-    vinyl "^1.0.0"
-
-gulp-util@~3.0.6:
-  version "3.0.8"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/gulp-util/-/gulp-util-3.0.8.tgz#0054e1e744502e27c04c187c3ecc505dd54bbb4f"
-  dependencies:
-    array-differ "^1.0.0"
-    array-uniq "^1.0.2"
-    beeper "^1.0.0"
-    chalk "^1.0.0"
-    dateformat "^2.0.0"
-    fancy-log "^1.1.0"
-    gulplog "^1.0.0"
-    has-gulplog "^0.1.0"
-    lodash._reescape "^3.0.0"
-    lodash._reevaluate "^3.0.0"
-    lodash._reinterpolate "^3.0.0"
-    lodash.template "^3.0.0"
-    minimist "^1.1.0"
-    multipipe "^0.1.2"
-    object-assign "^3.0.0"
-    replace-ext "0.0.1"
-    through2 "^2.0.0"
-    vinyl "^0.5.0"
-
-gulplog@^1.0.0:
-  version "1.0.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/gulplog/-/gulplog-1.0.0.tgz#e28c4d45d05ecbbed818363ce8f9c5926229ffe5"
-  dependencies:
-    glogg "^1.0.0"
 
 handle-thing@^1.2.5:
   version "1.2.5"
@@ -3173,12 +3258,6 @@ has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
 
-has-gulplog@^0.1.0:
-  version "0.1.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/has-gulplog/-/has-gulplog-0.1.0.tgz#6414c82913697da51590397dafb12f22967811ce"
-  dependencies:
-    sparkles "^1.0.0"
-
 has-symbol-support-x@^1.4.1:
   version "1.4.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/has-symbol-support-x/-/has-symbol-support-x-1.4.2.tgz#1409f98bc00247da45da67cee0a36f282ff26455"
@@ -3226,12 +3305,6 @@ has@^1.0.1:
   dependencies:
     function-bind "^1.0.2"
 
-hash-base@^2.0.0:
-  version "2.0.2"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/hash-base/-/hash-base-2.0.2.tgz#66ea1d856db4e8a5470cadf6fce23ae5244ef2e1"
-  dependencies:
-    inherits "^2.0.1"
-
 hash-base@^3.0.0:
   version "3.0.4"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/hash-base/-/hash-base-3.0.4.tgz#5fc8686847ecd73499403319a6b0a3f3f6ae4918"
@@ -3246,7 +3319,7 @@ hash.js@^1.0.0, hash.js@^1.0.3:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.0"
 
-hawk@3.1.3, hawk@~3.1.3:
+hawk@~3.1.3:
   version "3.1.3"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/hawk/-/hawk-3.1.3.tgz#078444bd7c1640b0fe540d2c9b73d59678e8e1c4"
   dependencies:
@@ -3290,12 +3363,6 @@ home-or-tmp@^2.0.0:
   dependencies:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.1"
-
-homedir-polyfill@^1.0.1:
-  version "1.0.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/homedir-polyfill/-/homedir-polyfill-1.0.1.tgz#4c2bbc8a758998feebf5ed68580f76d46768b4bc"
-  dependencies:
-    parse-passwd "^1.0.0"
 
 hosted-git-info@^2.1.4:
   version "2.6.0"
@@ -3407,11 +3474,12 @@ http-proxy-middleware@~0.17.4:
     micromatch "^2.3.11"
 
 http-proxy@^1.16.2:
-  version "1.16.2"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/http-proxy/-/http-proxy-1.16.2.tgz#06dff292952bf64dbe8471fa9df73066d4f37742"
+  version "1.17.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/http-proxy/-/http-proxy-1.17.0.tgz#7ad38494658f84605e2f6db4436df410f4e5be9a"
   dependencies:
-    eventemitter3 "1.x.x"
-    requires-port "1.x.x"
+    eventemitter3 "^3.0.0"
+    follow-redirects "^1.0.0"
+    requires-port "^1.0.0"
 
 http-signature@~1.1.0:
   version "1.1.1"
@@ -3437,6 +3505,12 @@ iconv-lite@0.4.19:
   version "0.4.19"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
 
+iconv-lite@^0.4.4:
+  version "0.4.21"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/iconv-lite/-/iconv-lite-0.4.21.tgz#c47f8733d02171189ebc4a400f3218d348094798"
+  dependencies:
+    safer-buffer "^2.1.0"
+
 ieee754@^1.1.4:
   version "1.1.11"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ieee754/-/ieee754-1.1.11.tgz#c16384ffe00f5b7835824e67b6f2bd44a5229455"
@@ -3448,6 +3522,12 @@ iferr@^0.1.5:
 ignite-common@^0.13.3:
   version "0.13.3"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ignite-common/-/ignite-common-0.13.3.tgz#d0e8b8d165e84770d8be7a0a59312e935f5bb037"
+
+ignore-walk@^3.0.1:
+  version "3.0.1"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ignore-walk/-/ignore-walk-3.0.1.tgz#a83e62e7d272ac0e3b551aaa82831a19b69f82f8"
+  dependencies:
+    minimatch "^3.0.4"
 
 ignore@^3.3.5:
   version "3.3.7"
@@ -3467,6 +3547,10 @@ ignorepatterns@^1.1.0:
 image-size@~0.5.0:
   version "0.5.5"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/image-size/-/image-size-0.5.5.tgz#09dfd4ab9d20e29eb1c3e80b8990378df9e3cb9c"
+
+import-lazy@^2.1.0:
+  version "2.1.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/import-lazy/-/import-lazy-2.1.0.tgz#05698e3d45c88e8d7e9d92cb0584e77f096f3e43"
 
 import-local@^1.0.0:
   version "1.0.0"
@@ -3511,6 +3595,10 @@ inherits@2.0.1:
 ini@^1.3.4, ini@~1.3.0:
   version "1.3.5"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
+
+injection-js@^2.2.1:
+  version "2.2.1"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/injection-js/-/injection-js-2.2.1.tgz#a8d6a085b2f0b8d8650f6f4487f6abb8cc0d67ce"
 
 internal-ip@1.2.0:
   version "1.2.0"
@@ -3691,6 +3779,13 @@ is-glob@^4.0.0:
   dependencies:
     is-extglob "^2.1.1"
 
+is-installed-globally@^0.1.0:
+  version "0.1.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/is-installed-globally/-/is-installed-globally-0.1.0.tgz#0dfd98f5a9111716dd535dda6492f67bf3d25a80"
+  dependencies:
+    global-dirs "^0.1.0"
+    is-path-inside "^1.0.0"
+
 is-module@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/is-module/-/is-module-1.0.0.tgz#3258fb69f78c14d5b815d664336b4cffb6441591"
@@ -3717,6 +3812,10 @@ is-negated-glob@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/is-negated-glob/-/is-negated-glob-1.0.0.tgz#6910bca5da8c95e784b5751b976cf5a10fee36d2"
 
+is-npm@^1.0.0:
+  version "1.0.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/is-npm/-/is-npm-1.0.0.tgz#f2fb63a65e4905b406c86072765a1a4dc793b9f4"
+
 is-number@^2.1.0:
   version "2.1.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/is-number/-/is-number-2.1.0.tgz#01fcbbb393463a548f2f466cce16dece49db908f"
@@ -3732,6 +3831,10 @@ is-number@^3.0.0:
 is-number@^4.0.0:
   version "4.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/is-number/-/is-number-4.0.0.tgz#0026e37f5454d73e356dfe6564699867c6a7f0ff"
+
+is-obj@^1.0.0:
+  version "1.0.1"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/is-obj/-/is-obj-1.0.1.tgz#3e4729ac1f5fde025cd7d83a896dab9f4f67db0f"
 
 is-object@^1.0.1:
   version "1.0.1"
@@ -3781,6 +3884,10 @@ is-property@^1.0.0:
   version "1.0.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/is-property/-/is-property-1.0.2.tgz#57fe1c4e48474edd65b09911f26b1cd4095dda84"
 
+is-redirect@^1.0.0:
+  version "1.0.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/is-redirect/-/is-redirect-1.0.0.tgz#1d03dded53bd8db0f30c26e4f95d36fc7c87dc24"
+
 is-regex@^1.0.4:
   version "1.0.4"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/is-regex/-/is-regex-1.0.4.tgz#5517489b547091b0930e095654ced25ee97e9491"
@@ -3797,7 +3904,7 @@ is-retry-allowed@^1.0.0:
   version "1.1.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/is-retry-allowed/-/is-retry-allowed-1.1.0.tgz#11a060568b67339444033d0125a61a20d564fb34"
 
-is-stream@^1.0.0, is-stream@^1.0.1, is-stream@^1.1.0:
+is-stream@^1.0.0, is-stream@^1.1.0:
   version "1.1.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/is-stream/-/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
 
@@ -3818,10 +3925,6 @@ is-unc-path@^1.0.0:
 is-utf8@^0.2.0:
   version "0.2.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/is-utf8/-/is-utf8-0.2.1.tgz#4b0da1442104d1b336340e80797e865cf39f7d72"
-
-is-valid-glob@^0.3.0:
-  version "0.3.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/is-valid-glob/-/is-valid-glob-0.3.0.tgz#d4b55c69f51886f9b65c70d6c2622d37e29f48fe"
 
 is-windows@^1.0.1, is-windows@^1.0.2:
   version "1.0.2"
@@ -3946,6 +4049,14 @@ isurl@^1.0.0-alpha5:
   dependencies:
     has-to-string-tag-x "^1.2.0"
     is-object "^1.0.1"
+
+iterall@1.1.3:
+  version "1.1.3"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/iterall/-/iterall-1.1.3.tgz#1cbbff96204056dde6656e2ed2e2226d0e6d72c9"
+
+iterall@^1.2.1:
+  version "1.2.2"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/iterall/-/iterall-1.2.2.tgz#92d70deb8028e0c39ff3164fdbf4d8b088130cd7"
 
 jest-changed-files@^22.4.3:
   version "22.4.3"
@@ -4428,6 +4539,10 @@ json-loader@^0.5.4:
   version "0.5.7"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/json-loader/-/json-loader-0.5.7.tgz#dca14a70235ff82f0ac9a3abeb60d337a365185d"
 
+json-parse-better-errors@^1.0.1:
+  version "1.0.2"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/json-parse-better-errors/-/json-parse-better-errors-1.0.2.tgz#bb867cfb3450e69107c131d1c514bab3dc8bcaa9"
+
 json-schema-traverse@^0.3.0:
   version "0.3.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/json-schema-traverse/-/json-schema-traverse-0.3.1.tgz#349a6d44c53a51de89b40805c5d5e59b417d3340"
@@ -4436,7 +4551,7 @@ json-schema@0.2.3:
   version "0.2.3"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/json-schema/-/json-schema-0.2.3.tgz#b480c892e59a2f05954ce727bd3f2a4e882f9e13"
 
-json-stable-stringify@^1.0.0, json-stable-stringify@^1.0.1:
+json-stable-stringify@^1.0.1:
   version "1.0.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/json-stable-stringify/-/json-stable-stringify-1.0.1.tgz#9a759d39c5f2ff503fd5300646ed445f88c4f9af"
   dependencies:
@@ -4513,15 +4628,15 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
 
+latest-version@^3.0.0:
+  version "3.1.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/latest-version/-/latest-version-3.1.0.tgz#a205383fea322b33b5ae3b18abee0dc2f356ee15"
+  dependencies:
+    package-json "^4.0.0"
+
 lazy-cache@^1.0.3:
   version "1.0.4"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
-
-lazystream@^1.0.0:
-  version "1.0.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lazystream/-/lazystream-1.0.0.tgz#f6995fe0f820392f61396be89462407bb77168e4"
-  dependencies:
-    readable-stream "^2.0.5"
 
 lcid@^1.0.0:
   version "1.0.0"
@@ -4608,6 +4723,15 @@ load-json-file@^2.0.0:
     pify "^2.0.0"
     strip-bom "^3.0.0"
 
+load-json-file@^4.0.0:
+  version "4.0.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/load-json-file/-/load-json-file-4.0.0.tgz#2f5f45ab91e33216234fd53adab668eb4ec0993b"
+  dependencies:
+    graceful-fs "^4.1.2"
+    parse-json "^4.0.0"
+    pify "^3.0.0"
+    strip-bom "^3.0.0"
+
 loader-runner@^2.3.0:
   version "2.3.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/loader-runner/-/loader-runner-2.3.0.tgz#f482aea82d543e07921700d5a46ef26fdac6b8a2"
@@ -4636,42 +4760,6 @@ locate-path@^2.0.0:
     p-locate "^2.0.0"
     path-exists "^3.0.0"
 
-lodash._basecopy@^3.0.0:
-  version "3.0.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash._basecopy/-/lodash._basecopy-3.0.1.tgz#8da0e6a876cf344c0ad8a54882111dd3c5c7ca36"
-
-lodash._basetostring@^3.0.0:
-  version "3.0.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash._basetostring/-/lodash._basetostring-3.0.1.tgz#d1861d877f824a52f669832dcaf3ee15566a07d5"
-
-lodash._basevalues@^3.0.0:
-  version "3.0.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash._basevalues/-/lodash._basevalues-3.0.0.tgz#5b775762802bde3d3297503e26300820fdf661b7"
-
-lodash._getnative@^3.0.0:
-  version "3.9.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash._getnative/-/lodash._getnative-3.9.1.tgz#570bc7dede46d61cdcde687d65d3eecbaa3aaff5"
-
-lodash._isiterateecall@^3.0.0:
-  version "3.0.9"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash._isiterateecall/-/lodash._isiterateecall-3.0.9.tgz#5203ad7ba425fae842460e696db9cf3e6aac057c"
-
-lodash._reescape@^3.0.0:
-  version "3.0.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash._reescape/-/lodash._reescape-3.0.0.tgz#2b1d6f5dfe07c8a355753e5f27fac7f1cde1616a"
-
-lodash._reevaluate@^3.0.0:
-  version "3.0.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash._reevaluate/-/lodash._reevaluate-3.0.0.tgz#58bc74c40664953ae0b124d806996daca431e2ed"
-
-lodash._reinterpolate@^3.0.0:
-  version "3.0.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
-
-lodash._root@^3.0.0:
-  version "3.0.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash._root/-/lodash._root-3.0.1.tgz#fba1c4524c19ee9a5f8136b4609f017cf4ded692"
-
 lodash.assign@^4.2.0:
   version "4.2.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash.assign/-/lodash.assign-4.2.0.tgz#0d99f3ccd7a6d261d19bdaeb9245005d285808e7"
@@ -4680,39 +4768,17 @@ lodash.clonedeep@^4.3.2, lodash.clonedeep@^4.5.0:
   version "4.5.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
 
-lodash.escape@^3.0.0:
-  version "3.2.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash.escape/-/lodash.escape-3.2.0.tgz#995ee0dc18c1b48cc92effae71a10aab5b487698"
-  dependencies:
-    lodash._root "^3.0.0"
+lodash.isobject@^3.0.2:
+  version "3.0.2"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash.isobject/-/lodash.isobject-3.0.2.tgz#3c8fb8d5b5bf4bf90ae06e14f2a530a4ed935e1d"
 
-lodash.isarguments@^3.0.0:
-  version "3.1.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash.isarguments/-/lodash.isarguments-3.1.0.tgz#2f573d85c6a24289ff00663b491c1d338ff3458a"
-
-lodash.isarray@^3.0.0:
-  version "3.0.4"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash.isarray/-/lodash.isarray-3.0.4.tgz#79e4eb88c36a8122af86f844aa9bcd851b5fbb55"
-
-lodash.isequal@^4.0.0:
-  version "4.5.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
-
-lodash.keys@^3.0.0:
-  version "3.1.2"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash.keys/-/lodash.keys-3.1.2.tgz#4dbc0472b156be50a0b286855d1bd0b0c656098a"
-  dependencies:
-    lodash._getnative "^3.0.0"
-    lodash.isarguments "^3.0.0"
-    lodash.isarray "^3.0.0"
+lodash.isstring@^4.0.1:
+  version "4.0.1"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash.isstring/-/lodash.isstring-4.0.1.tgz#d527dfb5456eca7cc9bb95d5daeaf88ba54a5451"
 
 lodash.mergewith@^4.6.0:
   version "4.6.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash.mergewith/-/lodash.mergewith-4.6.1.tgz#639057e726c3afbdb3e7d42741caa8d6e4335927"
-
-lodash.restparam@^3.0.0:
-  version "3.6.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash.restparam/-/lodash.restparam-3.6.1.tgz#936a4e309ef330a7645ed4145986c85ae5b20805"
 
 lodash.sortby@^4.7.0:
   version "4.7.0"
@@ -4722,30 +4788,13 @@ lodash.tail@^4.1.1:
   version "4.1.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash.tail/-/lodash.tail-4.1.1.tgz#d2333a36d9e7717c8ad2f7cacafec7c32b444664"
 
-lodash.template@^3.0.0:
-  version "3.6.2"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash.template/-/lodash.template-3.6.2.tgz#f8cdecc6169a255be9098ae8b0c53d378931d14f"
-  dependencies:
-    lodash._basecopy "^3.0.0"
-    lodash._basetostring "^3.0.0"
-    lodash._basevalues "^3.0.0"
-    lodash._isiterateecall "^3.0.0"
-    lodash._reinterpolate "^3.0.0"
-    lodash.escape "^3.0.0"
-    lodash.keys "^3.0.0"
-    lodash.restparam "^3.0.0"
-    lodash.templatesettings "^3.0.0"
-
-lodash.templatesettings@^3.0.0:
-  version "3.1.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash.templatesettings/-/lodash.templatesettings-3.1.1.tgz#fb307844753b66b9f1afa54e262c745307dba8e5"
-  dependencies:
-    lodash._reinterpolate "^3.0.0"
-    lodash.escape "^3.0.0"
-
-lodash@^4.0.0, lodash@^4.11.1, lodash@^4.13.1, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@~4.17.4:
+lodash@4.17.5, lodash@^4.0.0, lodash@^4.11.1, lodash@^4.13.1, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@~4.17.4:
   version "4.17.5"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
+
+lodash@^3.7.0:
+  version "3.10.1"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
 loglevel@^1.4.1:
   version "1.6.1"
@@ -4791,6 +4840,12 @@ macos-release@^1.0.0:
   version "1.1.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/macos-release/-/macos-release-1.1.0.tgz#831945e29365b470aa8724b0ab36c8f8959d10fb"
 
+magic-string@0.22.4:
+  version "0.22.4"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/magic-string/-/magic-string-0.22.4.tgz#31039b4e40366395618c1d6cf8193c53917475ff"
+  dependencies:
+    vlq "^0.2.1"
+
 magic-string@^0.22.3, magic-string@^0.22.4:
   version "0.22.5"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/magic-string/-/magic-string-0.22.5.tgz#8e9cf5afddf44385c1da5bc2a6a0dbd10b03657e"
@@ -4831,7 +4886,7 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-marked@^0.3.19:
+marked@^0.3.19, marked@^0.3.7:
   version "0.3.19"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/marked/-/marked-0.3.19.tgz#5d47f709c4c9fc3c216b6d46127280f40b39d790"
 
@@ -4878,7 +4933,7 @@ merge-descriptors@1.0.1:
   version "1.0.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/merge-descriptors/-/merge-descriptors-1.0.1.tgz#b00aaa556dd8b44568150ec9d1b953f3f90cbb61"
 
-merge-stream@^1.0.0, merge-stream@^1.0.1:
+merge-stream@^1.0.1:
   version "1.0.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/merge-stream/-/merge-stream-1.0.1.tgz#4041202d508a342ba00174008df0c251b8c135e1"
   dependencies:
@@ -4892,7 +4947,7 @@ methods@~1.1.2:
   version "1.1.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/methods/-/methods-1.1.2.tgz#5529a4d67654134edcc5266656835b0f851afcee"
 
-micromatch@^2.1.5, micromatch@^2.3.11, micromatch@^2.3.7:
+micromatch@^2.1.5, micromatch@^2.3.11:
   version "2.3.11"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/micromatch/-/micromatch-2.3.11.tgz#86677c97d1720b363431d04d0d15293bd38c1565"
   dependencies:
@@ -4987,6 +5042,19 @@ minimist@~0.0.1:
   version "0.0.10"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/minimist/-/minimist-0.0.10.tgz#de3f98543dbf96082be48ad1a0c7cda836301dcf"
 
+minipass@^2.2.1, minipass@^2.2.4:
+  version "2.2.4"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/minipass/-/minipass-2.2.4.tgz#03c824d84551ec38a8d1bb5bc350a5a30a354a40"
+  dependencies:
+    safe-buffer "^5.1.1"
+    yallist "^3.0.0"
+
+minizlib@^1.1.0:
+  version "1.1.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/minizlib/-/minizlib-1.1.0.tgz#11e13658ce46bc3a70a267aac58359d1e0c29ceb"
+  dependencies:
+    minipass "^2.2.1"
+
 mississippi@^2.0.0:
   version "2.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/mississippi/-/mississippi-2.0.0.tgz#3442a508fafc28500486feea99409676e4ee5a6f"
@@ -5016,11 +5084,15 @@ mixin-object@^2.0.1:
     for-in "^0.1.3"
     is-extendable "^0.1.1"
 
-mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0:
+mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0:
   version "0.5.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
+
+moment@2.21.0:
+  version "2.21.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/moment/-/moment-2.21.0.tgz#2a114b51d2a6ec9e6d83cf803f838a878d8a023a"
 
 morgan@^1.6.1:
   version "1.9.0"
@@ -5071,13 +5143,7 @@ multimatch@^2.1.0:
     arrify "^1.0.0"
     minimatch "^3.0.0"
 
-multipipe@^0.1.2:
-  version "0.1.2"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/multipipe/-/multipipe-0.1.2.tgz#2a8f2ddf70eed564dff2d57f1e1a137d9f05078b"
-  dependencies:
-    duplexer2 "0.0.2"
-
-nan@^2.10.0, nan@^2.3.0:
+nan@^2.10.0, nan@^2.9.2:
   version "2.10.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/nan/-/nan-2.10.0.tgz#96d0cd610ebd58d4b4de9cc0c6828cda99c7548f"
 
@@ -5102,6 +5168,14 @@ natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
 
+needle@^2.2.0:
+  version "2.2.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/needle/-/needle-2.2.0.tgz#f14efc69cee1024b72c8b21c7bdf94a731dc12fa"
+  dependencies:
+    debug "^2.1.2"
+    iconv-lite "^0.4.4"
+    sax "^1.2.4"
+
 negotiator@0.6.1:
   version "0.6.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
@@ -5114,33 +5188,39 @@ next-tick@1:
   version "1.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
 
-ng-packagr@^1.6.0:
-  version "1.7.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ng-packagr/-/ng-packagr-1.7.0.tgz#f3c594255faa9b22b4fddfe8243e9f0f04f79515"
+ng-packagr@^2.4.0:
+  version "2.4.2"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ng-packagr/-/ng-packagr-2.4.2.tgz#e74b744cad9e44aa7ddfdee5901b097527d03d23"
   dependencies:
-    "@angular/tsc-wrapped" "^4.4.5"
     "@ngtools/json-schema" "^1.1.0"
     autoprefixer "^7.1.1"
     browserslist "^2.1.5"
-    commander "^2.11.0"
+    chalk "^2.3.1"
+    commander "^2.12.0"
     cpx "^1.5.0"
-    fs-extra "^4.0.2"
+    fs-extra "^5.0.0"
     glob "^7.1.2"
-    gulp-inline-ng2-template "^4.0.0"
+    injection-js "^2.2.1"
     less "^2.7.2"
-    lodash "^4.17.4"
     node-sass "^4.5.3"
+    node-sass-tilde-importer "^1.0.0"
     postcss "^6.0.2"
-    read-file "^0.2.0"
+    postcss-clean "^1.1.0"
+    postcss-url "^7.3.0"
+    read-pkg-up "^3.0.0"
     rimraf "^2.6.1"
-    rollup "^0.51.0"
-    rollup-plugin-commonjs "^8.2.1"
+    rollup "^0.55.0"
+    rollup-plugin-cleanup "^2.0.0"
+    rollup-plugin-commonjs "8.3.0"
+    rollup-plugin-license "^0.6.0"
     rollup-plugin-node-resolve "^3.0.0"
+    rxjs "^5.5.0"
     sorcery "^0.10.0"
+    strip-bom "^3.0.0"
     stylus "^0.54.5"
-    ts-node "^3.0.4"
-    uglify-js "^3.0.7"
-    vinyl-fs "^2.4.4"
+    tar "^4.4.1"
+    uglify-js "^3.3.20"
+    update-notifier "^2.3.0"
 
 no-case@^2.2.0:
   version "2.3.2"
@@ -5215,21 +5295,26 @@ node-notifier@^5.2.1:
     shellwords "^0.1.1"
     which "^1.3.0"
 
-node-pre-gyp@^0.6.39:
-  version "0.6.39"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/node-pre-gyp/-/node-pre-gyp-0.6.39.tgz#c00e96860b23c0e1420ac7befc5044e1d78d8649"
+node-pre-gyp@^0.9.0:
+  version "0.9.1"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/node-pre-gyp/-/node-pre-gyp-0.9.1.tgz#f11c07516dd92f87199dbc7e1838eab7cd56c9e0"
   dependencies:
     detect-libc "^1.0.2"
-    hawk "3.1.3"
     mkdirp "^0.5.1"
+    needle "^2.2.0"
     nopt "^4.0.1"
+    npm-packlist "^1.1.6"
     npmlog "^4.0.2"
     rc "^1.1.7"
-    request "2.81.0"
     rimraf "^2.6.1"
     semver "^5.3.0"
-    tar "^2.2.1"
-    tar-pack "^3.4.0"
+    tar "^4"
+
+node-sass-tilde-importer@^1.0.0:
+  version "1.0.2"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/node-sass-tilde-importer/-/node-sass-tilde-importer-1.0.2.tgz#1a15105c153f648323b4347693fdb0f331bad1ce"
+  dependencies:
+    find-parent-dir "^0.3.0"
 
 node-sass@^4.5.3, node-sass@^4.7.2:
   version "4.8.3"
@@ -5291,12 +5376,23 @@ normalize-range@^0.1.2:
   version "0.1.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
 
+npm-bundled@^1.0.1:
+  version "1.0.3"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/npm-bundled/-/npm-bundled-1.0.3.tgz#7e71703d973af3370a9591bafe3a63aca0be2308"
+
 npm-conf@^1.1.0:
   version "1.1.3"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/npm-conf/-/npm-conf-1.1.3.tgz#256cc47bd0e218c259c4e9550bf413bc2192aff9"
   dependencies:
     config-chain "^1.1.11"
     pify "^3.0.0"
+
+npm-packlist@^1.1.6:
+  version "1.1.10"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/npm-packlist/-/npm-packlist-1.1.10.tgz#1039db9e985727e464df066f4cf0ab6ef85c398a"
+  dependencies:
+    ignore-walk "^3.0.1"
+    npm-bundled "^1.0.1"
 
 npm-run-path@^2.0.0:
   version "2.0.2"
@@ -5335,11 +5431,7 @@ oauth-sign@~0.8.1, oauth-sign@~0.8.2:
   version "0.8.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/oauth-sign/-/oauth-sign-0.8.2.tgz#46a6ab7f0aead8deae9ec0565780b7d4efeb9d43"
 
-object-assign@^3.0.0:
-  version "3.0.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/object-assign/-/object-assign-3.0.0.tgz#9bedd5ca0897949bca47e7ff408062d549f587f2"
-
-object-assign@^4, object-assign@^4.0.0, object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1, object-assign@latest:
+object-assign@^4, object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1, object-assign@latest:
   version "4.1.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
 
@@ -5395,7 +5487,7 @@ on-headers@~1.0.1:
   version "1.0.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/on-headers/-/on-headers-1.0.1.tgz#928f5d0f470d49342651ea6794b0857c100693f7"
 
-once@^1.3.0, once@^1.3.1, once@^1.3.3, once@^1.4.0:
+once@^1.3.0, once@^1.3.1, once@^1.4.0:
   version "1.4.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/once/-/once-1.4.0.tgz#583b1aa775961d4b113ac17d9c50baef9dd76bd1"
   dependencies:
@@ -5430,13 +5522,6 @@ optionator@^0.8.1:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
     wordwrap "~1.0.0"
-
-ordered-read-streams@^0.3.0:
-  version "0.3.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ordered-read-streams/-/ordered-read-streams-0.3.0.tgz#7137e69b3298bb342247a1bbee3881c80e2fd78b"
-  dependencies:
-    is-stream "^1.0.1"
-    readable-stream "^2.0.1"
 
 original@>=0.0.5:
   version "1.0.0"
@@ -5524,6 +5609,15 @@ p-try@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/p-try/-/p-try-1.0.0.tgz#cbc79cdbaf8fd4228e13f621f2b1a237c1b207b3"
 
+package-json@^4.0.0:
+  version "4.0.1"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/package-json/-/package-json-4.0.1.tgz#8869a0401253661c4c4ca3da6c2121ed555f5eed"
+  dependencies:
+    got "^6.7.1"
+    registry-auth-token "^3.0.1"
+    registry-url "^3.0.3"
+    semver "^5.1.0"
+
 pako@~1.0.5:
   version "1.0.6"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/pako/-/pako-1.0.6.tgz#0101211baa70c4bca4a0f63f2206e97b7dfaf258"
@@ -5567,9 +5661,12 @@ parse-json@^2.2.0:
   dependencies:
     error-ex "^1.2.0"
 
-parse-passwd@^1.0.0:
-  version "1.0.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/parse-passwd/-/parse-passwd-1.0.0.tgz#6d5b934a456993b23d37f40a382d6f1666a8e5c6"
+parse-json@^4.0.0:
+  version "4.0.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/parse-json/-/parse-json-4.0.0.tgz#be35f5425be1f7f6c747184f98a788cb99477ee0"
+  dependencies:
+    error-ex "^1.3.1"
+    json-parse-better-errors "^1.0.1"
 
 parse5@4.0.0:
   version "4.0.0"
@@ -5658,8 +5755,8 @@ pause-stream@0.0.11:
     through "~2.3"
 
 pbkdf2@^3.0.3:
-  version "3.0.14"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/pbkdf2/-/pbkdf2-3.0.14.tgz#a35e13c64799b06ce15320f459c230e68e73bade"
+  version "3.0.16"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/pbkdf2/-/pbkdf2-3.0.16.tgz#7404208ec6b01b62d85bf83853a8064f8d9c2a5c"
   dependencies:
     create-hash "^1.1.2"
     create-hmac "^1.1.4"
@@ -5719,6 +5816,13 @@ posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
 
+postcss-clean@^1.1.0:
+  version "1.1.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/postcss-clean/-/postcss-clean-1.1.0.tgz#c2d61d5d8caf19a585adba16897726c2674c4207"
+  dependencies:
+    clean-css "^4.x"
+    postcss "^6.x"
+
 postcss-import@^11.0.0:
   version "11.1.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/postcss-import/-/postcss-import-11.1.0.tgz#55c9362c9192994ec68865d224419df1db2981f0"
@@ -5760,7 +5864,7 @@ postcss-loader@^2.0.10:
     postcss-load-config "^1.2.0"
     schema-utils "^0.4.0"
 
-postcss-url@^7.1.2:
+postcss-url@^7.1.2, postcss-url@^7.3.0:
   version "7.3.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/postcss-url/-/postcss-url-7.3.2.tgz#5fea273807fb84b38c461c3c9a9e8abd235f7120"
   dependencies:
@@ -5774,7 +5878,7 @@ postcss-value-parser@^3.2.3:
   version "3.3.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/postcss-value-parser/-/postcss-value-parser-3.3.0.tgz#87f38f9f18f774a4ab4c8a232f5c5ce8872a9d15"
 
-postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.16, postcss@^6.0.17, postcss@^6.0.2:
+postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.16, postcss@^6.0.17, postcss@^6.0.2, postcss@^6.x:
   version "6.0.21"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/postcss/-/postcss-6.0.21.tgz#8265662694eddf9e9a5960db6da33c39e4cd069d"
   dependencies:
@@ -5815,7 +5919,7 @@ pretty-format@^22.4.3:
     ansi-regex "^3.0.0"
     ansi-styles "^3.2.0"
 
-private@^0.1.7, private@~0.1.5:
+private@^0.1.7:
   version "0.1.8"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
 
@@ -5921,9 +6025,9 @@ querystringify@0.0.x:
   version "0.0.4"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/querystringify/-/querystringify-0.0.4.tgz#0cf7f84f9463ff0ae51c4c4b142d95be37724d9c"
 
-querystringify@~1.0.0:
-  version "1.0.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/querystringify/-/querystringify-1.0.0.tgz#6286242112c5b712fa654e526652bf6a13ff05cb"
+querystringify@^2.0.0:
+  version "2.0.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/querystringify/-/querystringify-2.0.0.tgz#fa3ed6e68eb15159457c89b37bc6472833195755"
 
 randomatic@^1.1.3:
   version "1.1.7"
@@ -5962,7 +6066,7 @@ raw-loader@^0.5.1:
   version "0.5.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/raw-loader/-/raw-loader-0.5.1.tgz#0c3d0beaed8a01c966d9787bf778281252a979aa"
 
-rc@^1.1.7:
+rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
   version "1.2.6"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/rc/-/rc-1.2.6.tgz#eb18989c6d4f4f162c399f79ddd29f3835568092"
   dependencies:
@@ -5977,10 +6081,6 @@ read-cache@^1.0.0:
   dependencies:
     pify "^2.3.0"
 
-read-file@^0.2.0:
-  version "0.2.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/read-file/-/read-file-0.2.0.tgz#70c6baf8842ec7d1540f981fd0e6aed4c81bd545"
-
 read-pkg-up@^1.0.1:
   version "1.0.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/read-pkg-up/-/read-pkg-up-1.0.1.tgz#9d63c13276c065918d57f002a57f40a1b643fb02"
@@ -5994,6 +6094,13 @@ read-pkg-up@^2.0.0:
   dependencies:
     find-up "^2.0.0"
     read-pkg "^2.0.0"
+
+read-pkg-up@^3.0.0:
+  version "3.0.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/read-pkg-up/-/read-pkg-up-3.0.0.tgz#3ed496685dba0f8fe118d0691dc51f4a1ff96f07"
+  dependencies:
+    find-up "^2.0.0"
+    read-pkg "^3.0.0"
 
 read-pkg@^1.0.0:
   version "1.1.0"
@@ -6011,7 +6118,15 @@ read-pkg@^2.0.0:
     normalize-package-data "^2.3.2"
     path-type "^2.0.0"
 
-"readable-stream@1 || 2", readable-stream@^2.0.0, readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.4, readable-stream@^2.0.5, readable-stream@^2.0.6, readable-stream@^2.1.4, readable-stream@^2.1.5, readable-stream@^2.2.2, readable-stream@^2.2.9, readable-stream@^2.3.3, readable-stream@^2.3.5:
+read-pkg@^3.0.0:
+  version "3.0.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/read-pkg/-/read-pkg-3.0.0.tgz#9cbc686978fee65d16c00e2b19c237fcf6e38389"
+  dependencies:
+    load-json-file "^4.0.0"
+    normalize-package-data "^2.3.2"
+    path-type "^3.0.0"
+
+"readable-stream@1 || 2", readable-stream@^2.0.0, readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.4, readable-stream@^2.0.6, readable-stream@^2.1.5, readable-stream@^2.2.2, readable-stream@^2.2.9, readable-stream@^2.3.3, readable-stream@^2.3.5:
   version "2.3.6"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/readable-stream/-/readable-stream-2.3.6.tgz#b11c27d88b8ff1fbe070643cf94b0c79ae1b0aaf"
   dependencies:
@@ -6023,18 +6138,9 @@ read-pkg@^2.0.0:
     string_decoder "~1.1.1"
     util-deprecate "~1.0.1"
 
-readable-stream@1.0, "readable-stream@>=1.0.33-1 <1.1.0-0":
+readable-stream@1.0:
   version "1.0.34"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/readable-stream/-/readable-stream-1.0.34.tgz#125820e34bc842d2f2aaafafe4c2916ee32c157c"
-  dependencies:
-    core-util-is "~1.0.0"
-    inherits "~2.0.1"
-    isarray "0.0.1"
-    string_decoder "~0.10.x"
-
-readable-stream@~1.1.9:
-  version "1.1.14"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/readable-stream/-/readable-stream-1.1.14.tgz#7cf4c54ef648e3813084c636dd2079e166c081d9"
   dependencies:
     core-util-is "~1.0.0"
     inherits "~2.0.1"
@@ -6055,15 +6161,6 @@ realpath-native@^1.0.0:
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/realpath-native/-/realpath-native-1.0.0.tgz#7885721a83b43bd5327609f0ddecb2482305fdf0"
   dependencies:
     util.promisify "^1.0.0"
-
-recast@~0.11.12:
-  version "0.11.23"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/recast/-/recast-0.11.23.tgz#451fd3004ab1e4df9b4e4b66376b2a21912462d3"
-  dependencies:
-    ast-types "0.9.6"
-    esprima "~3.1.0"
-    private "~0.1.5"
-    source-map "~0.5.0"
 
 redent@^1.0.0:
   version "1.0.0"
@@ -6104,6 +6201,19 @@ regexpu-core@^1.0.0:
     regenerate "^1.2.1"
     regjsgen "^0.2.0"
     regjsparser "^0.1.4"
+
+registry-auth-token@^3.0.1:
+  version "3.3.2"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/registry-auth-token/-/registry-auth-token-3.3.2.tgz#851fd49038eecb586911115af845260eec983f20"
+  dependencies:
+    rc "^1.1.6"
+    safe-buffer "^5.0.1"
+
+registry-url@^3.0.3:
+  version "3.1.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/registry-url/-/registry-url-3.1.0.tgz#3d4ef870f73dde1d77f0cf9a381432444e174942"
+  dependencies:
+    rc "^1.0.1"
 
 regjsgen@^0.2.0:
   version "0.2.0"
@@ -6146,10 +6256,6 @@ repeating@^2.0.0:
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/repeating/-/repeating-2.0.1.tgz#5214c53a926d3552707527fbab415dbc08d06dda"
   dependencies:
     is-finite "^1.0.0"
-
-replace-ext@0.0.1:
-  version "0.0.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/replace-ext/-/replace-ext-0.0.1.tgz#29bbd92078a739f0bcce2b4ee41e837953522924"
 
 request-promise-core@1.1.1:
   version "1.1.1"
@@ -6256,7 +6362,7 @@ require-main-filename@^1.0.1:
   version "1.0.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/require-main-filename/-/require-main-filename-1.0.1.tgz#97f717b69d48784f5f526a6c5aa8ffdda055a4d1"
 
-requires-port@1.0.x, requires-port@1.x.x, requires-port@~1.0.0:
+requires-port@1.0.x, requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
 
@@ -6294,28 +6400,46 @@ right-align@^0.1.1:
   dependencies:
     align-text "^0.1.1"
 
-rimraf@2, rimraf@^2.2.8, rimraf@^2.5.1, rimraf@^2.5.2, rimraf@^2.5.4, rimraf@^2.6.1, rimraf@^2.6.2:
+rimraf@2, rimraf@^2.2.8, rimraf@^2.5.2, rimraf@^2.5.4, rimraf@^2.6.1, rimraf@^2.6.2:
   version "2.6.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/rimraf/-/rimraf-2.6.2.tgz#2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36"
   dependencies:
     glob "^7.0.5"
 
 ripemd160@^2.0.0, ripemd160@^2.0.1:
-  version "2.0.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ripemd160/-/ripemd160-2.0.1.tgz#0f4584295c53a3628af7e6d79aca21ce57d1c6e7"
+  version "2.0.2"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ripemd160/-/ripemd160-2.0.2.tgz#a1c1a6f624751577ba5d07914cbc92850585890c"
   dependencies:
-    hash-base "^2.0.0"
+    hash-base "^3.0.0"
     inherits "^2.0.1"
 
-rollup-plugin-commonjs@^8.2.1:
-  version "8.4.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/rollup-plugin-commonjs/-/rollup-plugin-commonjs-8.4.1.tgz#5c9cea2b2c3de322f5fbccd147e07ed5e502d7a0"
+rollup-plugin-cleanup@^2.0.0:
+  version "2.0.1"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/rollup-plugin-cleanup/-/rollup-plugin-cleanup-2.0.1.tgz#62c510fe868a77000f33cf13b519fb36a9fbe2ed"
+  dependencies:
+    acorn "4.x"
+    magic-string "^0.22.4"
+    rollup-pluginutils "^2.0.1"
+
+rollup-plugin-commonjs@8.3.0:
+  version "8.3.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/rollup-plugin-commonjs/-/rollup-plugin-commonjs-8.3.0.tgz#91b4ba18f340951e39ed7b1901f377a80ab3f9c3"
   dependencies:
     acorn "^5.2.1"
     estree-walker "^0.5.0"
     magic-string "^0.22.4"
     resolve "^1.4.0"
     rollup-pluginutils "^2.0.1"
+
+rollup-plugin-license@^0.6.0:
+  version "0.6.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/rollup-plugin-license/-/rollup-plugin-license-0.6.0.tgz#d8e5e75ac0fcb5a7af7c5d89a644ef42f05f48a4"
+  dependencies:
+    commenting "1.0.5"
+    lodash "4.17.5"
+    magic-string "0.22.4"
+    mkdirp "0.5.1"
+    moment "2.21.0"
 
 rollup-plugin-node-resolve@^3.0.0:
   version "3.3.0"
@@ -6332,9 +6456,9 @@ rollup-pluginutils@^2.0.1:
     estree-walker "^0.3.0"
     micromatch "^2.3.11"
 
-rollup@^0.51.0:
-  version "0.51.8"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/rollup/-/rollup-0.51.8.tgz#58bd0b642885f4770b5f93cc64f14e4233c2236d"
+rollup@^0.55.0:
+  version "0.55.5"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/rollup/-/rollup-0.55.5.tgz#2f88c300f7cf24b5ec2dca8a6aba73b04e087e93"
 
 run-queue@^1.0.0, run-queue@^1.0.3:
   version "1.0.3"
@@ -6342,7 +6466,7 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   dependencies:
     aproba "^1.1.1"
 
-rxjs@^5.4.3, rxjs@^5.5.6:
+rxjs@^5.4.3, rxjs@^5.5.0, rxjs@^5.5.6:
   version "5.5.10"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/rxjs/-/rxjs-5.5.10.tgz#fde02d7a614f6c8683d0d1957827f492e09db045"
   dependencies:
@@ -6370,6 +6494,10 @@ safefs@^4.1.0:
   dependencies:
     editions "^1.1.1"
     graceful-fs "^4.1.4"
+
+safer-buffer@^2.1.0:
+  version "2.1.2"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
 
 sander@^0.5.0:
   version "0.5.1"
@@ -6465,6 +6593,12 @@ selfsigned@^1.9.1:
   dependencies:
     node-forge "0.7.1"
 
+semver-diff@^2.0.0:
+  version "2.1.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/semver-diff/-/semver-diff-2.1.0.tgz#4bbb8437c8d37e4b0cf1a68fd726ec6d645d6d36"
+  dependencies:
+    semver "^5.0.3"
+
 semver-dsl@^1.0.1:
   version "1.0.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/semver-dsl/-/semver-dsl-1.0.1.tgz#d3678de5555e8a61f629eed025366ae5f27340a0"
@@ -6477,7 +6611,7 @@ semver-intersect@^1.1.2:
   dependencies:
     semver "^5.0.0"
 
-"semver@2 || 3 || 4 || 5", semver@^5.0.0, semver@^5.0.1, semver@^5.1.0, semver@^5.3.0, semver@^5.4.1:
+"semver@2 || 3 || 4 || 5", semver@^5.0.0, semver@^5.0.1, semver@^5.0.3, semver@^5.1.0, semver@^5.3.0, semver@^5.4.1:
   version "5.5.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/semver/-/semver-5.5.0.tgz#dc4bbc7a6ca9d916dee5d43516f0092b58f7b8ab"
 
@@ -6591,7 +6725,7 @@ shebang-regex@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/shebang-regex/-/shebang-regex-1.0.0.tgz#da42f49740c0b42db2ca9728571cb190c98efea3"
 
-shell-quote@^1.6.1:
+shell-quote@^1.4.3, shell-quote@^1.6.1:
   version "1.6.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/shell-quote/-/shell-quote-1.6.1.tgz#f4781949cce402697127430ea3b3c5476f481767"
   dependencies:
@@ -6723,7 +6857,7 @@ source-map-resolve@^0.5.0:
     source-map-url "^0.4.0"
     urix "^0.1.0"
 
-source-map-support@^0.4.0, source-map-support@^0.4.1, source-map-support@^0.4.15, source-map-support@^0.4.2, source-map-support@^0.4.4:
+source-map-support@^0.4.0, source-map-support@^0.4.1, source-map-support@^0.4.15, source-map-support@^0.4.4:
   version "0.4.18"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/source-map-support/-/source-map-support-0.4.18.tgz#0286a6de8be42641338594e97ccea75f0a2c585f"
   dependencies:
@@ -6745,7 +6879,7 @@ source-map@0.1.x:
   dependencies:
     amdefine ">=0.0.4"
 
-source-map@0.5.x, source-map@^0.5.3, source-map@^0.5.6, source-map@^0.5.7, source-map@~0.5.0, source-map@~0.5.1:
+source-map@0.5.x, source-map@^0.5.3, source-map@^0.5.6, source-map@^0.5.7, source-map@~0.5.1:
   version "0.5.7"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
 
@@ -6762,10 +6896,6 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
 sourcemap-codec@^1.3.0:
   version "1.4.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/sourcemap-codec/-/sourcemap-codec-1.4.1.tgz#c8fd92d91889e902a07aee392bdd2c5863958ba2"
-
-sparkles@^1.0.0:
-  version "1.0.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/sparkles/-/sparkles-1.0.0.tgz#1acbbfb592436d10bbe8f785b7cc6f82815012c3"
 
 spdx-correct@^3.0.0:
   version "3.0.0"
@@ -6963,13 +7093,6 @@ strip-ansi@^4.0.0:
   dependencies:
     ansi-regex "^3.0.0"
 
-strip-bom-stream@^1.0.0:
-  version "1.0.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/strip-bom-stream/-/strip-bom-stream-1.0.0.tgz#e7144398577d51a6bed0fa1994fa05f43fd988ee"
-  dependencies:
-    first-chunk-stream "^1.0.0"
-    strip-bom "^2.0.0"
-
 strip-bom@3.0.0, strip-bom@^3.0.0:
   version "3.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/strip-bom/-/strip-bom-3.0.0.tgz#2334c18e9c759f7bdd56fdef7e9ae3d588e68ed3"
@@ -7038,6 +7161,19 @@ subarg@^1.0.0:
   dependencies:
     minimist "^1.1.0"
 
+subscriptions-transport-ws@^0.9.6:
+  version "0.9.8"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/subscriptions-transport-ws/-/subscriptions-transport-ws-0.9.8.tgz#3a26ab96e06f78cf4ace8d083f6227fa55970947"
+  dependencies:
+    backo2 "^1.0.2"
+    eventemitter3 "^2.0.3"
+    iterall "^1.2.1"
+    lodash.assign "^4.2.0"
+    lodash.isobject "^3.0.2"
+    lodash.isstring "^4.0.1"
+    symbol-observable "^1.0.4"
+    ws "^3.0.0"
+
 supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
@@ -7064,6 +7200,10 @@ symbol-observable@1.0.1:
   version "1.0.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/symbol-observable/-/symbol-observable-1.0.1.tgz#8340fc4702c3122df5d22288f88283f513d3fdd4"
 
+symbol-observable@^1.0.2, symbol-observable@^1.0.4:
+  version "1.2.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
+
 symbol-tree@^3.2.1, symbol-tree@^3.2.2:
   version "3.2.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/symbol-tree/-/symbol-tree-3.2.2.tgz#ae27db38f660a7ae2e1c3b7d1bc290819b8519e6"
@@ -7071,19 +7211,6 @@ symbol-tree@^3.2.1, symbol-tree@^3.2.2:
 tapable@^0.2.7:
   version "0.2.8"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/tapable/-/tapable-0.2.8.tgz#99372a5c999bf2df160afc0d74bed4f47948cd22"
-
-tar-pack@^3.4.0:
-  version "3.4.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/tar-pack/-/tar-pack-3.4.1.tgz#e1dbc03a9b9d3ba07e896ad027317eb679a10a1f"
-  dependencies:
-    debug "^2.2.0"
-    fstream "^1.0.10"
-    fstream-ignore "^1.0.5"
-    once "^1.3.3"
-    readable-stream "^2.1.4"
-    rimraf "^2.5.1"
-    tar "^2.2.1"
-    uid-number "^0.0.6"
 
 tar-stream@^1.5.2:
   version "1.5.5"
@@ -7094,13 +7221,25 @@ tar-stream@^1.5.2:
     readable-stream "^2.0.0"
     xtend "^4.0.0"
 
-tar@^2.0.0, tar@^2.2.1:
+tar@^2.0.0:
   version "2.2.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/tar/-/tar-2.2.1.tgz#8e4d2a256c0e2185c6b18ad694aec968b83cb1d1"
   dependencies:
     block-stream "*"
     fstream "^1.0.2"
     inherits "2"
+
+tar@^4, tar@^4.4.1:
+  version "4.4.1"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/tar/-/tar-4.4.1.tgz#b25d5a8470c976fd7a9a8a350f42c59e9fa81749"
+  dependencies:
+    chownr "^1.0.1"
+    fs-minipass "^1.2.5"
+    minipass "^2.2.4"
+    minizlib "^1.1.0"
+    mkdirp "^0.5.0"
+    safe-buffer "^5.1.1"
+    yallist "^3.0.2"
 
 taskgroup@^4.0.5:
   version "4.3.1"
@@ -7118,6 +7257,12 @@ taskgroup@^5.0.1:
     editions "^1.1.1"
     extendr "^3.2.0"
 
+term-size@^1.2.0:
+  version "1.2.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/term-size/-/term-size-1.2.0.tgz#458b83887f288fc56d6fffbfad262e26638efa69"
+  dependencies:
+    execa "^0.7.0"
+
 test-exclude@^4.2.1:
   version "4.2.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/test-exclude/-/test-exclude-4.2.1.tgz#dfa222f03480bca69207ca728b37d74b45f724fa"
@@ -7132,28 +7277,14 @@ throat@^4.0.0:
   version "4.1.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/throat/-/throat-4.1.0.tgz#89037cbc92c56ab18926e6ba4cbb200e15672a6a"
 
-through2-filter@^2.0.0:
-  version "2.0.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/through2-filter/-/through2-filter-2.0.0.tgz#60bc55a0dacb76085db1f9dae99ab43f83d622ec"
-  dependencies:
-    through2 "~2.0.0"
-    xtend "~4.0.0"
-
-through2@^0.6.0:
-  version "0.6.5"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/through2/-/through2-0.6.5.tgz#41ab9c67b29d57209071410e1d7a7a968cd3ad48"
-  dependencies:
-    readable-stream ">=1.0.33-1 <1.1.0-0"
-    xtend ">=4.0.0 <4.1.0-0"
-
-through2@^2.0.0, through2@~2.0.0:
+through2@^2.0.0:
   version "2.0.3"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/through2/-/through2-2.0.3.tgz#0004569b37c7c74ba39c43f3ced78d1ad94140be"
   dependencies:
     readable-stream "^2.1.5"
     xtend "~4.0.1"
 
-through@2, through@X.X.X, through@^2.3.6, through@~2.3, through@~2.3.1, through@~2.3.6:
+through@2, through@X.X.X, through@^2.3.6, through@~2.3, through@~2.3.1:
   version "2.3.8"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
 
@@ -7174,20 +7305,14 @@ timed-out@^4.0.0:
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/timed-out/-/timed-out-4.0.1.tgz#f32eacac5a175bea25d7fab565ab3ed8741ef56f"
 
 timers-browserify@^2.0.4:
-  version "2.0.9"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/timers-browserify/-/timers-browserify-2.0.9.tgz#3dea6faaab8038589dc6d0c4ccbc08b02698bab3"
+  version "2.0.10"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/timers-browserify/-/timers-browserify-2.0.10.tgz#1d28e3d2aadf1d5a5996c4e9f95601cd053480ae"
   dependencies:
     setimmediate "^1.0.4"
 
 tmpl@1.0.x:
   version "1.0.4"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/tmpl/-/tmpl-1.0.4.tgz#23640dd7b42d00433911140820e5cf440e521dd1"
-
-to-absolute-glob@^0.1.1:
-  version "0.1.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/to-absolute-glob/-/to-absolute-glob-0.1.1.tgz#1cdfa472a9ef50c239ee66999b662ca0eb39937f"
-  dependencies:
-    extend-shallow "^2.0.1"
 
 to-arraybuffer@^1.0.0:
   version "1.0.1"
@@ -7282,21 +7407,6 @@ ts-jest@^20.0.7:
     source-map-support "^0.4.4"
     yargs "^8.0.1"
 
-ts-node@^3.0.4:
-  version "3.3.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ts-node/-/ts-node-3.3.0.tgz#c13c6a3024e30be1180dd53038fc209289d4bf69"
-  dependencies:
-    arrify "^1.0.0"
-    chalk "^2.0.0"
-    diff "^3.1.0"
-    make-error "^1.1.1"
-    minimist "^1.2.0"
-    mkdirp "^0.5.1"
-    source-map-support "^0.4.0"
-    tsconfig "^6.0.0"
-    v8flags "^3.0.0"
-    yn "^2.0.0"
-
 ts-node@~2.0.0:
   version "2.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ts-node/-/ts-node-2.0.0.tgz#16e4fecc949088238b4cbf1c39c9582526b66f74"
@@ -7335,22 +7445,6 @@ tsconfig@^5.0.2:
     parse-json "^2.2.0"
     strip-bom "^2.0.0"
     strip-json-comments "^2.0.0"
-
-tsconfig@^6.0.0:
-  version "6.0.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/tsconfig/-/tsconfig-6.0.0.tgz#6b0e8376003d7af1864f8df8f89dd0059ffcd032"
-  dependencies:
-    strip-bom "^3.0.0"
-    strip-json-comments "^2.0.0"
-
-tsickle@^0.21.0:
-  version "0.21.6"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/tsickle/-/tsickle-0.21.6.tgz#53b01b979c5c13fdb13afb3fb958177e5991588d"
-  dependencies:
-    minimist "^1.2.0"
-    mkdirp "^0.5.1"
-    source-map "^0.5.6"
-    source-map-support "^0.4.2"
 
 tsickle@^0.27.2:
   version "0.27.5"
@@ -7433,9 +7527,13 @@ typescript@2.4.2:
   version "2.4.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/typescript/-/typescript-2.4.2.tgz#f8395f85d459276067c988aa41837a8f82870844"
 
-typescript@2.8.1, typescript@^2.4.2:
+typescript@2.8.1:
   version "2.8.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/typescript/-/typescript-2.8.1.tgz#6160e4f8f195d5ba81d4876f9c0cc1fbc0820624"
+
+typescript@^2.4.2:
+  version "2.8.3"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/typescript/-/typescript-2.8.3.tgz#5d817f9b6f31bb871835f4edf0089f21abe6c170"
 
 typescript@~2.6.2:
   version "2.6.2"
@@ -7448,7 +7546,7 @@ uglify-es@^3.3.4:
     commander "~2.13.0"
     source-map "~0.6.1"
 
-uglify-js@3.3.x, uglify-js@^3.0.7:
+uglify-js@3.3.x, uglify-js@^3.3.20:
   version "3.3.21"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/uglify-js/-/uglify-js-3.3.21.tgz#851a34cbb31840ecb881968ed07dd3a61e7264a0"
   dependencies:
@@ -7477,8 +7575,8 @@ uglifyjs-webpack-plugin@^0.4.6:
     webpack-sources "^1.0.1"
 
 uglifyjs-webpack-plugin@^1.1.8:
-  version "1.2.4"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/uglifyjs-webpack-plugin/-/uglifyjs-webpack-plugin-1.2.4.tgz#5eec941b2e9b8538be0a20fc6eda25b14c7c1043"
+  version "1.2.5"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/uglifyjs-webpack-plugin/-/uglifyjs-webpack-plugin-1.2.5.tgz#2ef8387c8f1a903ec5e44fa36f9f3cbdcea67641"
   dependencies:
     cacache "^10.0.4"
     find-cache-dir "^1.0.0"
@@ -7489,9 +7587,9 @@ uglifyjs-webpack-plugin@^1.1.8:
     webpack-sources "^1.1.0"
     worker-farm "^1.5.2"
 
-uid-number@^0.0.6:
-  version "0.0.6"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/uid-number/-/uid-number-0.0.6.tgz#0ea10e8035e8eb5b8e4449f06da1c730663baa81"
+ultron@~1.1.0:
+  version "1.1.1"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ultron/-/ultron-1.1.1.tgz#9fe1536a10a664a65266a1e3ccf85fd36302bc9c"
 
 unbzip2-stream@^1.0.9:
   version "1.2.5"
@@ -7525,12 +7623,11 @@ unique-slug@^2.0.0:
   dependencies:
     imurmurhash "^0.1.4"
 
-unique-stream@^2.0.2:
-  version "2.2.1"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/unique-stream/-/unique-stream-2.2.1.tgz#5aa003cfbe94c5ff866c4e7d668bb1c4dbadb369"
+unique-string@^1.0.0:
+  version "1.0.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/unique-string/-/unique-string-1.0.0.tgz#9e1057cca851abb93398f8b33ae187b99caec11a"
   dependencies:
-    json-stable-stringify "^1.0.0"
-    through2-filter "^2.0.0"
+    crypto-random-string "^1.0.0"
 
 universalify@^0.1.0:
   version "0.1.1"
@@ -7551,9 +7648,28 @@ unset-value@^1.0.0:
     has-value "^0.3.1"
     isobject "^3.0.0"
 
+unzip-response@^2.0.1:
+  version "2.0.1"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/unzip-response/-/unzip-response-2.0.1.tgz#d2f0f737d16b0615e72a6935ed04214572d56f97"
+
 upath@^1.0.0:
   version "1.0.4"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/upath/-/upath-1.0.4.tgz#ee2321ba0a786c50973db043a50b7bcba822361d"
+
+update-notifier@^2.3.0:
+  version "2.5.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/update-notifier/-/update-notifier-2.5.0.tgz#d0744593e13f161e406acb1d9408b72cad08aff6"
+  dependencies:
+    boxen "^1.2.1"
+    chalk "^2.0.1"
+    configstore "^3.0.0"
+    import-lazy "^2.1.0"
+    is-ci "^1.0.10"
+    is-installed-globally "^0.1.0"
+    is-npm "^1.0.0"
+    latest-version "^3.0.0"
+    semver-diff "^2.0.0"
+    xdg-basedir "^3.0.0"
 
 upper-case@^1.1.1:
   version "1.1.3"
@@ -7591,11 +7707,11 @@ url-parse@1.0.x:
     requires-port "1.0.x"
 
 url-parse@^1.1.8:
-  version "1.3.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/url-parse/-/url-parse-1.3.0.tgz#04a06c420d22beb9804f7ada2d57ad13160a4258"
+  version "1.4.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/url-parse/-/url-parse-1.4.0.tgz#6bfdaad60098c7fe06f623e42b22de62de0d3d75"
   dependencies:
-    querystringify "~1.0.0"
-    requires-port "~1.0.0"
+    querystringify "^2.0.0"
+    requires-port "^1.0.0"
 
 url-to-options@^1.0.1:
   version "1.0.1"
@@ -7661,16 +7777,6 @@ v8flags@^2.0.11:
   dependencies:
     user-home "^1.1.1"
 
-v8flags@^3.0.0:
-  version "3.0.2"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/v8flags/-/v8flags-3.0.2.tgz#ad6a78a20a6b23d03a8debc11211e3cc23149477"
-  dependencies:
-    homedir-polyfill "^1.0.1"
-
-vali-date@^1.0.0:
-  version "1.0.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/vali-date/-/vali-date-1.0.0.tgz#1b904a59609fb328ef078138420934f6b86709a6"
-
 validate-npm-package-license@^3.0.1:
   version "3.0.3"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/validate-npm-package-license/-/validate-npm-package-license-3.0.3.tgz#81643bcbef1bdfecd4623793dc4648948ba98338"
@@ -7690,49 +7796,11 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-vinyl-fs@^2.4.4:
-  version "2.4.4"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/vinyl-fs/-/vinyl-fs-2.4.4.tgz#be6ff3270cb55dfd7d3063640de81f25d7532239"
-  dependencies:
-    duplexify "^3.2.0"
-    glob-stream "^5.3.2"
-    graceful-fs "^4.0.0"
-    gulp-sourcemaps "1.6.0"
-    is-valid-glob "^0.3.0"
-    lazystream "^1.0.0"
-    lodash.isequal "^4.0.0"
-    merge-stream "^1.0.0"
-    mkdirp "^0.5.0"
-    object-assign "^4.0.0"
-    readable-stream "^2.0.4"
-    strip-bom "^2.0.0"
-    strip-bom-stream "^1.0.0"
-    through2 "^2.0.0"
-    through2-filter "^2.0.0"
-    vali-date "^1.0.0"
-    vinyl "^1.0.0"
-
-vinyl@^0.5.0:
-  version "0.5.3"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/vinyl/-/vinyl-0.5.3.tgz#b0455b38fc5e0cf30d4325132e461970c2091cde"
-  dependencies:
-    clone "^1.0.0"
-    clone-stats "^0.0.1"
-    replace-ext "0.0.1"
-
-vinyl@^1.0.0:
-  version "1.2.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/vinyl/-/vinyl-1.2.0.tgz#5c88036cf565e5df05558bfc911f8656df218884"
-  dependencies:
-    clone "^1.0.0"
-    clone-stats "^0.0.1"
-    replace-ext "0.0.1"
-
 viz.js@^1.8.0:
   version "1.8.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/viz.js/-/viz.js-1.8.1.tgz#277ab3cf4367c608a95b281a7472083c3e2ee6cf"
 
-vlq@^0.2.2:
+vlq@^0.2.1, vlq@^0.2.2:
   version "0.2.3"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/vlq/-/vlq-0.2.3.tgz#8f3e4328cf63b1540c0d67e1b2778386f8975b26"
 
@@ -7951,6 +8019,12 @@ wide-align@^1.1.0:
   dependencies:
     string-width "^1.0.2"
 
+widest-line@^2.0.0:
+  version "2.0.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/widest-line/-/widest-line-2.0.0.tgz#0142a4e8a243f8882c0233aa0e0281aa76152273"
+  dependencies:
+    string-width "^2.1.1"
+
 win-release@^1.0.0:
   version "1.1.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/win-release/-/win-release-1.1.1.tgz#5fa55e02be7ca934edfc12665632e849b72e5209"
@@ -7960,6 +8034,10 @@ win-release@^1.0.0:
 window-size@0.1.0:
   version "0.1.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/window-size/-/window-size-0.1.0.tgz#5438cd2ea93b202efa3a19fe8887aee7c94f9c9d"
+
+window-size@^0.1.4:
+  version "0.1.4"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/window-size/-/window-size-0.1.4.tgz#f8e1aa1ee5a53ec5bf151ffa09742a6ad7697876"
 
 wordwrap@0.0.2:
   version "0.0.2"
@@ -7990,7 +8068,7 @@ wrappy@1:
   version "1.0.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
 
-write-file-atomic@^2.1.0:
+write-file-atomic@^2.0.0, write-file-atomic@^2.1.0:
   version "2.3.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/write-file-atomic/-/write-file-atomic-2.3.0.tgz#1ff61575c2e2a4e8e510d6fa4e243cce183999ab"
   dependencies:
@@ -7998,12 +8076,24 @@ write-file-atomic@^2.1.0:
     imurmurhash "^0.1.4"
     signal-exit "^3.0.2"
 
+ws@^3.0.0:
+  version "3.3.3"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ws/-/ws-3.3.3.tgz#f1cf84fe2d5e901ebce94efaece785f187a228f2"
+  dependencies:
+    async-limiter "~1.0.0"
+    safe-buffer "~5.1.0"
+    ultron "~1.1.0"
+
 ws@^4.0.0:
   version "4.1.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ws/-/ws-4.1.0.tgz#a979b5d7d4da68bf54efe0408967c324869a7289"
   dependencies:
     async-limiter "~1.0.0"
     safe-buffer "~5.1.0"
+
+xdg-basedir@^3.0.0:
+  version "3.0.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/xdg-basedir/-/xdg-basedir-3.0.0.tgz#496b2cc109eca8dbacfe2dc72b603c17c5870ad4"
 
 xml-name-validator@^2.0.1:
   version "2.0.1"
@@ -8013,7 +8103,7 @@ xml-name-validator@^3.0.0:
   version "3.0.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/xml-name-validator/-/xml-name-validator-3.0.0.tgz#6ae73e06de4d8c6e47f9fb181f78d648ad457c6a"
 
-"xtend@>=4.0.0 <4.1.0-0", xtend@^4.0.0, xtend@~4.0.0, xtend@~4.0.1:
+xtend@^4.0.0, xtend@~4.0.1:
   version "4.0.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/xtend/-/xtend-4.0.1.tgz#a5c6d532be656e23db820efb943a1f04998d63af"
 
@@ -8023,7 +8113,7 @@ xxhashjs@^0.2.1:
   dependencies:
     cuint "^0.2.2"
 
-y18n@^3.2.1:
+y18n@^3.2.0, y18n@^3.2.1:
   version "3.2.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
 
@@ -8034,6 +8124,10 @@ y18n@^4.0.0:
 yallist@^2.1.2:
   version "2.1.2"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/yallist/-/yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52"
+
+yallist@^3.0.0, yallist@^3.0.2:
+  version "3.0.2"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/yallist/-/yallist-3.0.2.tgz#8452b4bb7e83c7c188d8041c1a837c773d6d8bb9"
 
 yargs-parser@^4.2.0:
   version "4.2.1"
@@ -8094,6 +8188,18 @@ yargs@^10.0.3:
     y18n "^3.2.1"
     yargs-parser "^8.1.0"
 
+yargs@^3.7.2:
+  version "3.32.0"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/yargs/-/yargs-3.32.0.tgz#03088e9ebf9e756b69751611d2a5ef591482c995"
+  dependencies:
+    camelcase "^2.0.1"
+    cliui "^3.0.3"
+    decamelize "^1.1.1"
+    os-locale "^1.4.0"
+    string-width "^1.0.1"
+    window-size "^0.1.4"
+    y18n "^3.2.0"
+
 yargs@^7.0.0:
   version "7.1.0"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/yargs/-/yargs-7.1.0.tgz#6ba318eb16961727f5d284f8ea003e8d6154d0c8"
@@ -8152,9 +8258,19 @@ yn@^1.2.0:
   dependencies:
     object-assign "^4.1.1"
 
-yn@^2.0.0:
-  version "2.0.0"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/yn/-/yn-2.0.0.tgz#e5adabc8acf408f6385fc76495684c88e6af689a"
+zen-observable-ts@^0.8.9:
+  version "0.8.9"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/zen-observable-ts/-/zen-observable-ts-0.8.9.tgz#d3c97af08c0afdca37ebcadf7cc3ee96bda9bab1"
+  dependencies:
+    zen-observable "^0.8.0"
+
+zen-observable@^0.7.0:
+  version "0.7.1"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/zen-observable/-/zen-observable-0.7.1.tgz#f84075c0ee085594d3566e1d6454207f126411b3"
+
+zen-observable@^0.8.0:
+  version "0.8.8"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/zen-observable/-/zen-observable-0.8.8.tgz#1ea93995bf098754a58215a1e0a7309e5749ec42"
 
 zone.js@^0.8.4:
   version "0.8.26"
