@@ -5,7 +5,6 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng-packagr -p package.json",
-    "build:demo": "ng build",
     "build:watch": "chokidar 'src/**/*.ts' -c './bin/build' --initial",
     "package": "tar cvf $npm_package_name-$npm_package_version.tgz manifest-* Staticfile dist-demo",
     "lint": "tslint --project tsconfig.json src/**/*.ts",
@@ -13,7 +12,7 @@
     "test:watch": "jest --watch",
     "test:ci": "jest --runInBand --coverage --json --outputFile=test/jest-output.json && npm run push-to-playground-service",
     "ci:test": "npm run test:ci",
-    "ci:package": "npm run build && npm run build:demo && npm prune --production && npm run package",
+    "ci:package": "npm run build && npm prune --production && npm run package",
     "push-coverage": "echo 'starting coverage push...' && curl -X POST https://playground-service.apps.mia.ulti.io/v1/coverage -d @coverage/coverage-summary.json --header 'Content-Type: application/json'",
     "push-jest-build": "echo 'starting jest build push...' && curl -X POST https://playground-service.apps.mia.ulti.io/v1/jestoutput -d @test/jest-output.json --header 'Content-Type: application/json'",
     "push-to-playground-service": "npm run push-coverage && npm run push-jest-build"
