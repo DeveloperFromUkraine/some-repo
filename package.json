@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng-packagr -p package.json",
     "build:watch": "chokidar 'src/**/*.ts' -c './bin/build' --initial",
-    "package": "tar cvf $npm_package_name-$npm_package_version.tgz manifest-* Staticfile dist-demo",
+    "package": "tar cvf $npm_package_name-$npm_package_version.tgz manifest-* Staticfile dist",
     "lint": "tslint --project tsconfig.json src/**/*.ts",
     "test": "jest --coverage --json --outputFile=test/jest-output.json",
     "test:watch": "jest --watch",
