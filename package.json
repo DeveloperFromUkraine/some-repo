@@ -64,16 +64,7 @@
     "url": "http://devgit.dev.us.corp:7990/projects/NUI/repos/ignite-design-system/issues"
   },
   "dependencies": {
-    "angular2-cookie": "^1.2.6",
-    "apollo-angular": "^1.0.1",
-    "apollo-angular-link-http": "^1.0.2-beta.0",
-    "apollo-cache-inmemory": "^1.1.7",
-    "apollo-client": "^2.2.2",
-    "apollo-link-ws": "^1.0.7",
-    "graphql": "^0.12.3",
-    "graphql-tag": "^2.8.0",
-    "ignite-common": "^0.13.3",
-    "subscriptions-transport-ws": "^0.9.6"
+    "ignite-common": "^0.13.3"
   },
   "peerDependencies": {
     "@angular/animations": "^5.0.0",
@@ -108,12 +99,10 @@
     "@types/jest": "^19.2.3",
     "@types/node": "~6.0.60",
     "angular-in-memory-web-api": "^0.5.2",
-    "chokidar-cli": "^1.2.0",
     "codelyzer": "^4.0.2",
     "core-js": "^2.4.1",
     "jest": "^22.0.0",
     "jest-preset-angular": "^2.0.2",
-    "marked": "^0.3.7",
     "ng-packagr": "^1.6.0",
     "raw-loader": "^0.5.1",
     "rxjs": "^5.4.3",
@@ -121,8 +110,5 @@
     "tslint": "^5.8.0",
     "typescript": "2.4.2",
     "zone.js": "^0.8.4"
-  },
-  "engines": {
-    "node": ">=6.0.0"
   }
 }
