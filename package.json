@@ -6,8 +6,12 @@
     "start": "ng serve",
     "build": "ng-packagr -p package.json",
     "build:watch": "chokidar 'src/**/*.ts' -c './bin/build' --initial",
+<<<<<<< HEAD
     "package": "tar cvf $npm_package_name-$npm_package_version.tgz manifest-* Staticfile dist-demo",
     "sonar": "echo Publishing to sonar for branch: $SONARQUBE_BRANCH && sonarqube-scanner-node -Dsonar.branch=$SONARQUBE_BRANCH",
+=======
+    "package": "tar cvf $npm_package_name-$npm_package_version.tgz manifest-* Staticfile dist",
+>>>>>>> develop
     "lint": "tslint --project tsconfig.json src/**/*.ts",
     "test": "jest --coverage --json --outputFile=test/jest-output.json",
     "test:watch": "jest --watch",
