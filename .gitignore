@@ -40,3 +40,6 @@ dist/*
 # Coverage files
 coverage/*
 test/jest-output.json
+
+# Misc
+/.scannerwork
