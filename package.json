@@ -6,12 +6,8 @@
     "start": "ng serve",
     "build": "ng-packagr -p package.json",
     "build:watch": "chokidar 'src/**/*.ts' -c './bin/build' --initial",
-<<<<<<< HEAD
-    "package": "tar cvf $npm_package_name-$npm_package_version.tgz manifest-* Staticfile dist-demo",
-    "sonar": "echo Publishing to sonar for branch: $SONARQUBE_BRANCH && sonarqube-scanner-node -Dsonar.branch=$SONARQUBE_BRANCH",
-=======
     "package": "tar cvf $npm_package_name-$npm_package_version.tgz manifest-* Staticfile dist",
->>>>>>> develop
+    "sonar": "echo Publishing to sonar for branch: $SONARQUBE_BRANCH && sonarqube-scanner-node -Dsonar.branch=$SONARQUBE_BRANCH",
     "lint": "tslint --project tsconfig.json src/**/*.ts",
     "test": "jest --coverage --json --outputFile=test/jest-output.json",
     "test:watch": "jest --watch",
@@ -110,10 +106,10 @@
     "ng-packagr": "^1.6.0",
     "raw-loader": "^0.5.1",
     "rxjs": "^5.4.3",
+    "sonarqube-scanner-node": "^0.0.4",
     "ts-node": "~2.0.0",
     "tslint": "^5.8.0",
     "typescript": "2.4.2",
-    "zone.js": "^0.8.4",
-    "sonarqube-scanner-node": "^0.0.4"
+    "zone.js": "^0.8.4"
   }
 }
