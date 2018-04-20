@@ -33,6 +33,7 @@ Desktop.ini
 
 # Build files
 dist/*
+dist.tgz
 
 # Playground tmp files
 .playground
