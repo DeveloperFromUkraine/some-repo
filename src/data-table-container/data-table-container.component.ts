@@ -12,7 +12,8 @@ import { Subject, BehaviorSubject } from 'rxjs';
 
 @Component({
     selector: 'ign-data-table-container',
-    templateUrl: 'data-table-container.component.html'
+    templateUrl: 'data-table-container.component.html',
+    styleUrls: ['./data-table-container.scss']
 })
 export class DataTableContainerComponent implements AfterViewInit {
     @Input() dataSource: MatTableDataSource<any>;
