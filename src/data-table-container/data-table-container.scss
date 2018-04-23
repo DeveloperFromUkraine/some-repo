@@ -1,38 +1,57 @@
 @import '~ignite-common/styles/ignite';
 
-$checkbox-length: 18px;
+$icon-length: 18px;
 $hover-color: #EEEEEE;
-$selection-color: #F5F5F5;
 
-@mixin column-padding-first {
-    padding-left: ign-padding(s);
+@mixin icon-sizing {
+    width: $icon-length;
+    height: $icon-length;
 }
 
-@mixin column-padding-other {
-    padding-left: 56px;
-}
+%column-spacing {
+    padding-right: 56px;
 
-:host /deep/ .mat-header-cell  {
-    &:nth-child(2) {
-        @include column-padding-first();
+    &:first-child {
+        padding-right: ign-spacing(s);
     }
-    &:nth-child(n+3)  {
-        @include column-padding-other();
+    &:last-child {
+        padding-right: 0;
     }
 }
 
 :host /deep/ .mat-cell {
-    &:nth-child(2) {
-        @include column-padding-first();
-    }
-    &:nth-child(n+3) {
-        @include column-padding-other();
+    @extend %column-spacing;
+}
+
+:host /deep/ .mat-header-cell {
+    @extend %column-spacing;
+}
+
+:host /deep/ .checkbox  {
+    padding-right: ign-spacing(s);
+    overflow: initial;
+}
+
+:host /deep/ .mat-checkbox-inner-container {
+    @include icon-sizing();
+}
+
+:host /deep/ .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: ign-color(accent);
+}
+
+:host /deep/ .inline-edit  {
+    padding-right: ign-spacing(xs);
+    text-align: right;
+    overflow: initial;
+
+    i {
+        @include icon-sizing();
     }
 }
 
-:host /deep/ .mat-column-select {
-    // Needed for this: https://github.com/angular/material2/issues/8600
-    overflow: initial;
+:host /deep/ .number-column {
+    text-align: right;
 }
 
 :host /deep/ .mat-header-row {
@@ -45,24 +64,8 @@ $selection-color: #F5F5F5;
     &:hover {
         background: $hover-color;  
     }
-    &::-moz-selection, &::-webkit-selection, &::selection {
-        background: $selection-color;
-    }
-}
-
-:host /deep/ .number-column {
-    text-align: right;
 }
 
 :host /deep/ .mat-paginator {
     height: 56px;
-}
-
-:host /deep/ .mat-checkbox-inner-container {
-    width: $checkbox-length;
-    height: $checkbox-length;
-}
-
-:host /deep/ .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
-    background-color: ign-color(accent);
 }
