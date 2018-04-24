@@ -12,8 +12,15 @@ A search component which displays a search icon and an input field to be used wi
     </div></mat-tab>
     <mat-tab label="HTML"><div class="tab-height">
         <table style="width:100%">
+        &lt;mat-toolbar&gt;
             &lt;ign-list-search ariaLabel="Search employees"&gt;&lt;/ign-list-search&gt;
-         </table></div>
+        &lt;/mat-toolbar&gt;
+        &lt;mat-nav-list&gt;
+            aria-live="polite"
+            aria-atomic="true"
+            attr.aria-label="{{'{'}}{{'{'}} 'COMMON.SEARCH_HINTS' | translate {{'}'}}{{'}'}}"
+        &lt;/mat-nav-list&gt;
+        </table></div>
     </mat-tab>
 </mat-tab-group>
 
@@ -31,6 +38,10 @@ A search component which displays a search icon and an input field to be used wi
 ## Accessibility
 
 * Add a descriptive ariaLabel attribute that describes what is being searched (for example: "Search Employees")
+* Add the following aria attributes to the (nav) list that the list search component corresponds to:
+    * `aria-live="polite"`
+    * `aria-atomic="true"`
+    * `attr.aria-label="{{'{'}}{{'{'}} 'COMMON.SEARCH_HINTS' | translate {{'}'}}{{'}'}}"`
 * Refer to Sample HTML for an example on usage
 
 *** TypeScript *** 
