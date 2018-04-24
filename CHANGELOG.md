@@ -1,4 +1,5 @@
 ### vNEXT
+- New `ign-list-search` component
 
 ### v0.6.0
 - Updated colors with tokens from Ignite-Common
