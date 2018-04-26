@@ -1,0 +1,89 @@
+// Sizes
+$size-large: 70px;
+$font-size-large: 28px;
+$icon-size-large: 42px;
+
+$size-small: 40px;
+$font-size-small: 18px;
+$icon-size-small: 28px;
+
+// Colors
+$light-gray: #E0E0E0;
+$dark-gray: #424242;
+
+.container {
+  width: $size-large;
+  height: $size-large;
+  border-radius: 50%;
+  overflow: hidden;
+
+  .image {
+    width: $size-large;
+    height: $size-large;
+  }
+
+  .content-container {
+    background-color: $light-gray;
+    width: $size-large;
+    height: $size-large;
+  }
+
+  .image {
+    @extend .content-container;
+  }
+
+  .initials-container {
+    @extend .content-container;
+    font-size: $font-size-large;
+    padding-top: 24px;
+    text-align: center;
+    background-color: $dark-gray;
+    color: #ffffff;
+  }
+
+  .icon-container {
+    @extend .content-container;
+    .icon {
+      width: $size-large;
+      height: $size-large;
+      font-size: $icon-size-large;
+      text-align: center;
+      position: relative;
+      top: 14%;
+      color: $dark-gray;
+    }
+  }
+}
+
+.container.small {
+  width: $size-small;
+  height: $size-small;
+
+  .image {
+    width: $size-small;
+    height: $size-small;
+  }
+
+  .content-container {
+    width: $size-small;
+    height: $size-small;
+  }
+
+  .initials-container {
+    font-size: $font-size-small;
+    padding-top: 12px;
+    text-align: center;
+  }
+
+  .icon-container {
+    .icon {
+      width: $size-small;
+      height: $size-small;
+      font-size: $icon-size-small;
+    }
+  }
+}
+
+.container.large {
+  margin: 0 auto;
+}

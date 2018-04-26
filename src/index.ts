@@ -140,6 +140,7 @@ import {
 import { TranslationService } from './localization/translation.service';
 
 import { TranslationModule } from './localization/translation.module';
+import { AvatarComponent } from './avatar/avatar.component';
 
 import {
   MatToolbarModule,
@@ -221,6 +222,8 @@ const components = [
   AccessibleContextMenuViewDirective,
   ListItemRoleDirective,
   ToolTipDirective,
+  AvatarComponent,
+  AvatarGroupComponent
 ];
 
 @NgModule({
