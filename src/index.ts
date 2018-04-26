@@ -1,6 +1,7 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';  
+
+import { CommonModule } from '@angular/common';
 import { RouterModule } from  '@angular/router'
 
 import { PageComponent } from './page/page.component';
@@ -118,8 +119,6 @@ import { DateRangeComponent } from './date-range/date-range.component';
 
 import { TextListItemModule } from './text-list-item/text-list-item.module';
 import { TextListItemComponent } from './text-list-item/text-list-item.component';
-import { NavListModule } from './nav-list/nav-list.module';
-import { NavListComponent } from './nav-list/nav-list.component';
 
 import { DataTableContainerModule } from './data-table-container/data-table-container.module';
 import { DataTableContainerComponent } from './data-table-container/data-table-container.component';
@@ -244,7 +243,6 @@ const components = [
     MatNativeDateModule,
     DateRangeModule,
     MatListModule,
-    NavListModule,
     ExpandableFabItemModule,
     TextListItemModule,
     DataTableContainerModule,
@@ -257,7 +255,6 @@ const components = [
   exports: [
     ...components,
     DateRangeComponent,
-    NavListComponent,
     ExpandableFabItemComponent,
     TextListItemComponent,
     DataTableContainerComponent
