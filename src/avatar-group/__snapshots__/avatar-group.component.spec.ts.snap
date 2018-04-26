@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AvatarGroupComponent Test Suite should match snapshot 1`] = `
+<ign-avatar-group
+  cap={[Function Number]}
+  counterOffset="0"
+  showCounter={[Function Boolean]}
+  size={[Function String]}
+>
+  
+      
+    
+</ign-avatar-group>
+`;

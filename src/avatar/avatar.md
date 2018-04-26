@@ -17,13 +17,13 @@ The avatar can be provided a tooltip to be displayed on mouse-over, as well a cu
             <!-- This will display an image. -->
             <ign-avatar 
                 [image]="cross_cutting_please_add_image_src_here_thanks!"
-                [initials]="JB"
+                [initials]="'JB'"
                 [size]="'large'"
             ></ign-avatar>
             <!-- This will display two letters. -->
             <ign-avatar 
                 [image]=""
-                [initials]="JB"
+                [initials]="'JB'"
                 [size]="'small'"
             ></ign-avatar>
             <!-- This will display a person icon. -->
@@ -113,7 +113,7 @@ The avatar can be provided a tooltip to be displayed on mouse-over, as well a cu
 ## Accessibility
 
 * When adding a `routerLink` to the avatar component, always add attribute `role="link"`.
-* The component has `tabindex` set to "-1" by default, unless provided @Input `tooltip` or `ariaLabel`.
+* The component has `tabindex` set to "-1" by default, unless provided @Input `tooltip` or `ariaLabel`, which sets it to `"0"`.
 
 ## Style
 
@@ -123,7 +123,7 @@ The avatar can be provided a tooltip to be displayed on mouse-over, as well a cu
 
   @Input() image: string;
   @Input() initials: string;
-  @Input() size = 'medium';
+  @Input() size = 'large';
   @Input() tooltip: string;
   @Input() ariaLabel: string;
 

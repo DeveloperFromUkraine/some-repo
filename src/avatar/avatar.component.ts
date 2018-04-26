@@ -27,7 +27,7 @@ export class AvatarComponent {
   @Input() tooltip: string;
   @Input() ariaLabel: string;
 
-  getSize(size): string { 
+  getSize(size: string): string {
     const sizes = {
       'small': 'small',
       'large': 'large',

@@ -1,4 +1,4 @@
-import { Component, DebugElement } from '@angular/core';
+import { DebugElement } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatIconModule, MatTooltipModule } from '@angular/material';
 import { By } from '@angular/platform-browser';
@@ -12,7 +12,7 @@ describe('AvatarComponent', () => {
     let de: DebugElement;
 
     beforeEach(async () => {
-        await ComponentTest.createTestBed([MatTooltipModule, MatIconModule],[AvatarComponent]);
+        await ComponentTest.createTestBed([MatTooltipModule, MatIconModule], [AvatarComponent]);
     });
 
     beforeEach(() => {
@@ -34,7 +34,7 @@ describe('AvatarComponent', () => {
         expect(de.query(By.css('.initials'))).toBeNull();
         expect(de.query(By.css('.icon'))).toBeNull();
     });
-      
+
     it('should display initials', () => {
         component.image = '';
         component.initials = 'FL';
@@ -75,7 +75,7 @@ describe('AvatarComponent', () => {
 
         expect(ne.getAttribute('ng-reflect-message')).toContain('Tooltip');
     });
-    
+
     it('should display a small avatar', () => {
         component.size = 'small';
         const avatar = de.query(By.css('#avatar'));
@@ -84,7 +84,7 @@ describe('AvatarComponent', () => {
 
         expect(avatar.nativeElement.getAttribute('class')).toContain('small');
     });
-    
+
     it('should display a large avatar', () => {
         component.size = 'large';
         const avatar = de.query(By.css('#avatar'));
@@ -99,7 +99,7 @@ describe('AvatarComponent', () => {
         const avatar = de.query(By.css('#avatar'));
 
         fixture.detectChanges();
-        
+
         expect(avatar.nativeElement.getAttribute('class')).toContain('large');
     });
 
@@ -108,7 +108,7 @@ describe('AvatarComponent', () => {
         const avatar = de.query(By.css('#avatar'));
 
         fixture.detectChanges();
-        
+
         expect(avatar.nativeElement.getAttribute('aria-label')).toContain('Tooltip');
     });
 
@@ -117,7 +117,7 @@ describe('AvatarComponent', () => {
         const avatar = de.query(By.css('#avatar'));
 
         fixture.detectChanges();
-        
+
         expect(avatar.nativeElement.getAttribute('aria-label')).toContain('Aria Label');
     });
 
@@ -144,7 +144,7 @@ describe('AvatarComponent', () => {
         const avatar = de.query(By.css('#avatar'));
 
         fixture.detectChanges();
-        
+
         expect(avatar.nativeElement.getAttribute('tabindex')).toContain('0');
     });
 
@@ -153,7 +153,7 @@ describe('AvatarComponent', () => {
         const avatar = de.query(By.css('#avatar'));
 
         fixture.detectChanges();
-        
+
         expect(avatar.nativeElement.getAttribute('tabindex')).toContain('0');
     });
 
@@ -162,7 +162,7 @@ describe('AvatarComponent', () => {
         const avatar = de.query(By.css('#avatar'));
 
         fixture.detectChanges();
-        
+
         expect(avatar.nativeElement.getAttribute('tabindex')).toContain('0');
     });
 
@@ -170,7 +170,7 @@ describe('AvatarComponent', () => {
         const avatar = de.query(By.css('#avatar'));
 
         fixture.detectChanges();
-        
+
         expect(avatar.nativeElement.getAttribute('tabindex')).toContain('-1');
     });
 
