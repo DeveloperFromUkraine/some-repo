@@ -17,9 +17,6 @@ import {
 } from './sidenav/index';
 export * from './sidenav/index';
 
-import { DividerComponent } from './divider/divider.component';
-export * from './divider/divider.component';
-
 import {
   ListItemComponent,
   ListItemContentComponent,
@@ -162,7 +159,6 @@ import {
 const components = [
   CardHeaderContainerComponent,
   CardSubtitleComponent,
-  DividerComponent,
   PageComponent,
   RightDrawerComponent,
   SideNavHeaderComponent,

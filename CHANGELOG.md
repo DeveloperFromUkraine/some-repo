@@ -1,5 +1,6 @@
 ### vNEXT
 - Deprecated ign-nav-list, it is recommended to use mat-nav-list instead
+- Deprecated ign-divider, it is recommended to use mat-divider instead
 - New `ign-list-search` component
 - Added localization to IDS components
 
