@@ -5,10 +5,12 @@ import { TranslationModule } from './translation.module';
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { TranslationMap } from './translation-map';
+import { TranslationService } from './translation.service';
 
 @Component({
     template: `
         <p translateIDS da="component">SEARCH</p>
+        <img/>
     `
 })
 class HostComponent {
@@ -31,6 +33,14 @@ describe('Translation Directive', () => {
         directive = de.injector.get(TranslationDirective);
     });
 
+    it('should call for updateTranslation when the translation mapping is changed', () => {
+        const spy = jest.spyOn(directive, "updateTranslation");
+
+        TranslationService.updateTranslation("SEARCH", "Search");
+
+        expect(spy).toHaveBeenCalled();
+     })
+
     it('should change the text from translation keys to string', () => {
         ne = de.nativeElement;
 
@@ -48,6 +58,7 @@ describe('Translation Directive', () => {
         jest.spyOn(directive, "getContent");
         let nodes: NodeList = de.nativeElement.childNodes;
         directive.element = de;
+
         directive.updateTranslation(TranslationMap);
 
         // check that correct functions called
@@ -56,6 +67,7 @@ describe('Translation Directive', () => {
 
         // check that element content set properly
         const value = directive.getContent(nodes[0]);
+
         expect(value).toContain("Search");
     });
 
@@ -66,10 +78,33 @@ describe('Translation Directive', () => {
         let nodes: NodeList = de.nativeElement.childNodes;
         nodes[0].originalContent = undefined; 
         nodes[0].data = "SEARCH";
+        
         directive.updateTranslation(TranslationMap);
 
         // check that correct functions called
         expect(directive.setContent).toHaveBeenCalledWith(nodes[0], "Search");
         expect(directive.getContent).toHaveBeenCalled();
+    });
+
+    it("should get the node data when textContent not available", () => { 
+        directive.element = de;
+        let nodes: NodeList = de.nativeElement.childNodes;
+        nodes[0].textContent = undefined; 
+        nodes[0].data = "SEARCH";
+
+        directive.setContent(nodes[0], "Data");
+
+        expect(nodes[0].data).toBe("Data");
+    });
+
+    it("should return node data if textContent is not available", () => { 
+        directive.element = de;
+        let nodes: NodeList = de.nativeElement.childNodes;
+        nodes[0].textContent = undefined; 
+        nodes[0].data = "data";
+
+        const data = directive.getContent(nodes[0]);
+
+        expect(data).toBe("data");
     });
 });

@@ -1,4 +1,5 @@
 import { TranslationPipe } from './translation.pipe';
+import { TranslationService } from './translation.service';
 
 describe("Translation Pipe", () => { 
 
@@ -11,6 +12,7 @@ describe("Translation Pipe", () => {
 
     it("should translate given a translation key", () => { 
         const translationPipe = new TranslationPipe();
+
         const translation = translationPipe.getTranslation("SEARCH");
         
         expect(translation).toContain("Search");
@@ -18,6 +20,7 @@ describe("Translation Pipe", () => {
 
     it("should get the translation when a valid string is passed into transform", () => { 
         const translationPipe = new TranslationPipe();
+
         const translation = translationPipe.transform("SEARCH");
 
         expect(translation).toContain("Search");
@@ -25,8 +28,17 @@ describe("Translation Pipe", () => {
 
     it("should return nothing if invalid string passed into transform", () => {
         const translationPipe = new TranslationPipe(); 
+        
         const translation = translationPipe.transform("INVALID");
 
         expect(translation).toBe(undefined);
+    )};
+
+    it("should return nothing if empty string passed in transform", () => {
+        const translationPipe = new TranslationPipe(); 
+        
+        const translation = translationPipe.transform("");
+
+        expect(translation).toBe("");
     )};
 });
