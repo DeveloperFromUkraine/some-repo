@@ -4,7 +4,7 @@
       #startPickerInput="matDatepickerInput"
       [formControlName]="startDateControlName"
       matInput
-      placeholder="Start Date (Typeahead entries appear in dropdown)"
+      placeholder="{{ 'START_DATE_TYPEAHEAD' | translateIDS }}"
       [matDatepicker]="startPicker"
       [matDatepickerFilter]="startDateFilter"
     >
@@ -17,7 +17,7 @@
       #endPickerInput="matDatepickerInput"
       [formControlName]="endDateControlName"
       matInput
-      placeholder="End Date (Typeahead entries appear in dropdown)" 
+      placeholder="{{ 'END_DATE_TYPEAHEAD' | translateIDS }}"
       [matDatepicker]="endPicker"
       [matDatepickerFilter]="endDateFilter"
     >

@@ -32,7 +32,6 @@ exports[`Date Range should match snapshot 1`] = `
             <input
               class="mat-input-element mat-form-field-autofill-control"
               matinput=""
-              placeholder="Start Date (Typeahead entries appear in dropdown)"
             />
             
   
@@ -86,7 +85,6 @@ exports[`Date Range should match snapshot 1`] = `
             <input
               class="mat-input-element mat-form-field-autofill-control"
               matinput=""
-              placeholder="End Date (Typeahead entries appear in dropdown)"
             />
             
       

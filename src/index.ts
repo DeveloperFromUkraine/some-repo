@@ -137,9 +137,9 @@ import {
   ToolTipDirective
 } from './accessibility/accessibility.directive';
 
-import {
-  TranslationService
-} from './localization/translation.service';
+import { TranslationService } from './localization/translation.service';
+
+import { TranslationModule } from './localization/translation.module';
 
 import {
   MatToolbarModule,
@@ -243,6 +243,7 @@ const components = [
     DataTableContainerModule,
     MatFormFieldModule,
     MatInputModule,
+    TranslationModule,
   ],
   declarations: components,
   exports: [

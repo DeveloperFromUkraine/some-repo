@@ -1,5 +1,6 @@
 ### vNEXT
 - New `ign-list-search` component
+- Added localization to IDS components
 
 ### v0.6.0
 - Updated colors with tokens from Ignite-Common

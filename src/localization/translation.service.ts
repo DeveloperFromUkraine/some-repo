@@ -9,26 +9,15 @@ export class TranslationService {
     static translationMap = TranslationMap;
 
     static getTranslation() {
-        const savedTranslationMap = localStorage.getItem('TranslationMapIDS')
-        if (savedTranslationMap) {
-            TranslationService.translationMap = JSON.parse(savedTranslationMap);
-        }
-
         return TranslationService.translationMap;
     }
 
     static updateTranslation(translationKey: string, translationValue: string) {
         if (TranslationService.translationMap[translationKey]) {
             TranslationService.translationMap[translationKey] = translationValue;
-
-            const translationMapString = JSON.stringify(TranslationService.translationMap);
-            localStorage.setItem('TranslationMapIDS', translationMapString);
-
             TranslationService.changeTranslationObservable.next(TranslationService.translationMap);
         }
     }
 
     constructor() {}
-    
 }
-
