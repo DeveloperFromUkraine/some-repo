@@ -57,15 +57,12 @@ describe('Translation Directive', () => {
         jest.spyOn(directive, "setContent");
         jest.spyOn(directive, "getContent");
         let nodes: NodeList = de.nativeElement.childNodes;
-        directive.element = de;
 
         directive.updateTranslation(TranslationMap);
 
-        // check that correct functions called
         expect(directive.setContent).toHaveBeenCalledWith(nodes[0], "Search");
         expect(directive.getContent).not.toHaveBeenCalled();
 
-        // check that element content set properly
         const value = directive.getContent(nodes[0]);
 
         expect(value).toContain("Search");
@@ -74,37 +71,13 @@ describe('Translation Directive', () => {
     it("should call getContent if originalContent undefined", () => { 
         jest.spyOn(directive, "setContent");
         jest.spyOn(directive, "getContent");
-        directive.element = de;
         let nodes: NodeList = de.nativeElement.childNodes;
         nodes[0].originalContent = undefined; 
         nodes[0].data = "SEARCH";
         
         directive.updateTranslation(TranslationMap);
 
-        // check that correct functions called
         expect(directive.setContent).toHaveBeenCalledWith(nodes[0], "Search");
         expect(directive.getContent).toHaveBeenCalled();
-    });
-
-    it("should get the node data when textContent not available", () => { 
-        directive.element = de;
-        let nodes: NodeList = de.nativeElement.childNodes;
-        nodes[0].textContent = undefined; 
-        nodes[0].data = "SEARCH";
-
-        directive.setContent(nodes[0], "Data");
-
-        expect(nodes[0].data).toBe("Data");
-    });
-
-    it("should return node data if textContent is not available", () => { 
-        directive.element = de;
-        let nodes: NodeList = de.nativeElement.childNodes;
-        nodes[0].textContent = undefined; 
-        nodes[0].data = "data";
-
-        const data = directive.getContent(nodes[0]);
-
-        expect(data).toBe("data");
     });
 });
