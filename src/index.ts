@@ -63,9 +63,6 @@ import {
 } from './card/index';
 export * from './card/index';
 
-import { HubCardComponent } from './hub-card/hub-card.component';
-export * from './hub-card/hub-card.component';
-
 import {
   ListItemPrimaryTextComponent,
   ListItemSecondaryTextComponent,
@@ -194,7 +191,6 @@ const components = [
   CardSectionTitleComponent,
   CardActionsComponent,
   CardToolbarComponent,
-  HubCardComponent,
   SelectContainerComponent,
   FormGroupComponent,
   SizingSmallDirective,
