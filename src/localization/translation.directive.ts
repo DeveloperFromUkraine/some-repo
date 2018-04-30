@@ -38,18 +38,10 @@ export class TranslationDirective  implements AfterViewInit {
     }
 
     getContent(node: any) {
-        return this.isDefined(node.textContent) ? node.textContent : node.data;
+        return node.data;
     }
 
     setContent(node: any, value: string) {
-        if (this.isDefined(node.textContent)) {
-            node.textContent = value;
-         } else {
-            node.data = value;
-         }
-    }
-
-    isDefined(value: any) {
-        return typeof value !== 'undefined' && value !== null;
+        node.data = value;
     }
 }
