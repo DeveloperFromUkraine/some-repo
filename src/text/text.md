@@ -10,7 +10,7 @@ The text component and its subcomponents purposes is to display list items compo
     <mat-tab label="Component Sample">
         <div class="tab-height">
             <ign-page>
-                <ign-card-container>
+                <mat-card>
                     <ign-card-main>
                         <ign-card-title>
                             The card contains a two text-list-item components.
@@ -26,13 +26,13 @@ The text component and its subcomponents purposes is to display list items compo
                             </ign-text-list-item>
                         </ign-nav-list>
                     </ign-card-main>
-                </ign-card-container>
+                </mat-card>
             </ign-page>
         </div></mat-tab>
     <mat-tab label="HTML"><div class="tab-height">
         <table style="width:100%">
             <p> &lt;ign-page&gt;</p>
-            <p>&nbsp; &lt;ign-card-container&gt;</p>
+            <p>&nbsp; &lt;mat-card&gt;</p>
             <p> &nbsp;&nbsp;  &lt;ign-card-main&gt;</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;ign-card-title&gt;</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The card contains a two text-list-item components.</p>
@@ -48,7 +48,7 @@ The text component and its subcomponents purposes is to display list items compo
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ign-text-list-item&gt;</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ign-nav-list&gt;</p>
             <p>&nbsp;&nbsp;  &lt;/ign-card-main&gt;</p>
-            <p>&nbsp; &lt;/ign-card-container&gt;</p>
+            <p>&nbsp; &lt;/mat-card&gt;</p>
             <p> &lt;/ign-page&gt;
         </table>
     </div></mat-tab>

@@ -23,7 +23,7 @@ The following is a usage example:
 
 ```
     <ign-page>
-      <ign-card-container>
+      <mat-card>
         <ign-card-main>
           <ign-card-title>
             Organizational Units
@@ -39,7 +39,7 @@ The following is a usage example:
         </ign-nav-list>
 
         </ign-card-main>
-      </ign-card-container>
+      </mat-card>
     </ign-page>
 
 ```

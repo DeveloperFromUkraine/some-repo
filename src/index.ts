@@ -52,7 +52,6 @@ export * from './list-selection/index';
 import {
   CardHeaderContainerComponent,
   CardSubtitleComponent,
-  CardContainerComponent,
   CardMainComponent,
   CardAsideComponent,
   CardTitleComponent,
@@ -187,7 +186,6 @@ const components = [
   ListSelectionSearchComponent,
   ListFilterPipe,
   ListSelectionAddButtonComponent,
-  CardContainerComponent,
   CardMainComponent,
   CardAsideComponent,
   CardTitleComponent,
