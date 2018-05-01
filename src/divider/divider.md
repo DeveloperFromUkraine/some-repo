@@ -3,18 +3,19 @@
 
 ## Use
 The divider component serves to distinctly separate content.
+See [Angular Material Dividers](https://material.angular.io/components/divider/overview) for reference.
 
 ## Sample
 <mat-tab-group>
     <mat-tab label="Component Sample"><div class="tab-height">
         This upper text is separated from the lower text by a divider component.
-        <ign-divider></ign-divider>
+        <mat-divider></mat-divider>
         This lower text is separated from the upper text by a divider component.
     </div></mat-tab>
     <mat-tab label="HTML"><div class="tab-height">
         <table style="width:100%">
             This upper text is separated from the lower text by a divider component.
-            &lt;ign-divider&gt;&lt;/ign-divider&gt;
+            &lt;mat-divider&gt;&lt;/mat-divider&gt;
             This lower text is separated from the upper text by a divider component.
         </table></div>
     </mat-tab>
