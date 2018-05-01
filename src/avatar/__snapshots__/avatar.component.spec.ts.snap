@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AvatarComponent should match snapshot 1`] = `
+<ign-avatar>
+  
+      <div
+    aria-label=""
+    class="container large"
+    id="avatar"
+    ng-reflect-message=""
+    tabindex="-1"
+  >
+    
+        
+    
+    
+        
+    
+    
+        
+    
+    <div
+      class="icon-container"
+    >
+      
+          
+      <mat-icon
+        aria-hidden="true"
+        class="icon mat-icon material-icons"
+        role="img"
+      >
+        person
+      </mat-icon>
+      
+        
+    </div>
+    
+      
+  </div>
+    
+</ign-avatar>
+`;

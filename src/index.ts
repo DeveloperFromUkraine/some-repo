@@ -1,6 +1,7 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';  
+import { RouterModule } from  '@angular/router'
 
 import { PageComponent } from './page/page.component';
 export * from './page/page.component';
@@ -140,6 +141,8 @@ import {
 import { TranslationService } from './localization/translation.service';
 
 import { TranslationModule } from './localization/translation.module';
+import { AvatarComponent } from './avatar/avatar.component';
+import { AvatarGroupComponent } from './avatar-group/avatar-group.component';
 
 import {
   MatToolbarModule,
@@ -153,7 +156,8 @@ import {
   MatNativeDateModule,
   MatListModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatTooltipModule,
 } from '@angular/material';
 
 const components = [
@@ -221,11 +225,14 @@ const components = [
   AccessibleContextMenuViewDirective,
   ListItemRoleDirective,
   ToolTipDirective,
+  AvatarComponent,
+  AvatarGroupComponent
 ];
 
 @NgModule({
   imports: [
     CommonModule,
+    RouterModule,
     ReactiveFormsModule,
     MatToolbarModule,
     MatMenuModule,
@@ -243,6 +250,7 @@ const components = [
     DataTableContainerModule,
     MatFormFieldModule,
     MatInputModule,
+    MatTooltipModule,
     TranslationModule,
   ],
   declarations: components,
