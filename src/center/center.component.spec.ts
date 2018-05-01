@@ -1,20 +1,19 @@
-import { CenterComponent } from "./center.component";
+import { CenterComponent } from './center.component';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ComponentTest } from "../../test/test-bed/component";
-
+import { ComponentTest } from '../../test/test-bed/component';
 
 describe('Center', () => {
-    let fixture: ComponentFixture<CenterComponent>;
+  let fixture: ComponentFixture<CenterComponent>;
 
-    beforeEach(async () => {
-        await ComponentTest.createTestBed([], [CenterComponent]);
-    });
+  beforeEach(async () => {
+    await ComponentTest.createTestBed([], [CenterComponent]);
+  });
 
-    beforeEach(() => {
-        fixture = TestBed.createComponent(CenterComponent);
-    });
+  beforeEach(() => {
+    fixture = TestBed.createComponent(CenterComponent);
+  });
 
-    it('should match snapshot', () => {
-        expect(fixture).toMatchSnapshot();
-    });
+  it('should match snapshot', () => {
+    expect(fixture).toMatchSnapshot();
+  });
 });

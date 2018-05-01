@@ -1,8 +1,7 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-
 import { CommonModule } from '@angular/common';
-import { RouterModule } from  '@angular/router'
+import { RouterModule } from '@angular/router';
 
 import { PageComponent } from './page/page.component';
 export * from './page/page.component';
@@ -103,7 +102,12 @@ import { ExpandableFabItemComponent } from './expandable-fab/expandable-fab-item
 export * from './expandable-fab/expandable-fab-item.component';
 import { ExpandableFabItemModule } from './expandable-fab/expandable-fab-item.module';
 
-import { FieldComponent, FieldInlineComponent, EditableFieldComponent, EditableFieldInlineComponent } from './field/field.component';
+import {
+  FieldComponent,
+  FieldInlineComponent,
+  EditableFieldComponent,
+  EditableFieldInlineComponent,
+} from './field/field.component';
 export * from './field/field.component';
 
 import { CenterComponent } from './center/center.component';
@@ -131,7 +135,7 @@ import {
   AccessibleRemoveViewDirective,
   AccessibleContextMenuViewDirective,
   ListItemRoleDirective,
-  ToolTipDirective
+  ToolTipDirective,
 } from './accessibility/accessibility.directive';
 
 import { TranslationService } from './localization/translation.service';
@@ -221,7 +225,7 @@ const components = [
   ListItemRoleDirective,
   ToolTipDirective,
   AvatarComponent,
-  AvatarGroupComponent
+  AvatarGroupComponent,
 ];
 
 @NgModule({
@@ -253,13 +257,12 @@ const components = [
     DateRangeComponent,
     ExpandableFabItemComponent,
     TextListItemComponent,
-    DataTableContainerComponent
+    DataTableContainerComponent,
   ],
-  providers: [ TranslationService ]
+  providers: [TranslationService],
 })
 export class IgniteDesignSystemModule {
-
-  static updateTranslation(translationKey: string, translationValue: string){
+  static updateTranslation(translationKey: string, translationValue: string) {
     TranslationService.updateTranslation(translationKey, translationValue);
   }
 

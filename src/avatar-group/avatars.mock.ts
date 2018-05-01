@@ -1,4 +1,4 @@
-import { Avatar }  from './avatar-group.types';
+import { Avatar } from './avatar-group.types';
 
 // All avatars' properties are present and valid.
 export const avatars4: Avatar[] = [
@@ -33,7 +33,7 @@ export const avatars4: Avatar[] = [
     image: 'photoUploadId3',
     link: 'redirectUrl3',
     tooltip: 'tooltip3',
-  }
+  },
 ];
 
 // Each avatar requires a different tooltip computation.
@@ -90,7 +90,7 @@ export const avatars5: Avatar[] = [
     },
     image: 'photoUploadId5',
     link: 'redirectUrl5',
-  }
+  },
 ];
 
 /*
@@ -122,7 +122,7 @@ export const avatarsX: Avatar[] = [
     image: 'photoUploadId2',
     link: 'redirectUrl2',
   },
- // Valid avatar, but missing person preferred first name
+  // Valid avatar, but missing person preferred first name
   {
     person: {
       firstName: 'firstName3',
@@ -175,11 +175,11 @@ export const avatarsX: Avatar[] = [
     link: 'redirectUrl8',
   },
   // Invalid avatar: missing person and tooltip.
-    {
-      image: 'redirectUrl9',
-    },
+  {
+    image: 'redirectUrl9',
+  },
   // Valid avatar: missing all fields other than tooltip.
   {
-    tooltip: 'tooltip10'
-  }
+    tooltip: 'tooltip10',
+  },
 ];

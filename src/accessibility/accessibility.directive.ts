@@ -1,4 +1,11 @@
-import { Attribute, Directive, ElementRef, HostListener, Renderer2, AfterViewInit } from '@angular/core';
+import {
+  Attribute,
+  Directive,
+  ElementRef,
+  HostListener,
+  Renderer2,
+  AfterViewInit,
+} from '@angular/core';
 
 @Directive({ selector: '[ignA11yClick], [routerLink]:not(button), [routerLink]:not(a)' })
 export class AccessibleClickDirective {
@@ -87,35 +94,28 @@ export class AccessibleContextMenuViewDirective implements AfterViewInit {
     }
   }
 }
-      
+
 @Directive({
-  selector:
-    'mat-list-item, ign-list-item, ign-list-selection-item',
+  /* tslint:disable-next-line */
+  selector: 'mat-list-item, ign-list-item, ign-list-selection-item',
 })
 export class ListItemRoleDirective {
-  constructor(
-    @Attribute('role') role: string,
-    renderer: Renderer2,
-    elementRef: ElementRef
-  ) 
-  {
+  constructor(@Attribute('role') role: string, renderer: Renderer2, elementRef: ElementRef) {
     renderer.setAttribute(elementRef.nativeElement, 'role', 'listitem');
   }
 }
 
 @Directive({
-  selector:
-    '[matTooltip]',
+  selector: '[matTooltip]',
 })
-
 export class ToolTipDirective {
   constructor(
-    @Attribute(`matTooltip`) matTooltip: string,
+    @Attribute(`matTooltip`)
+    matTooltip: string,
     @Attribute('aria-label') ariaLabel: string,
     renderer: Renderer2,
     elementRef: ElementRef
-  ) 
-  {
+  ) {
     if (matTooltip && !ariaLabel) {
       renderer.setAttribute(elementRef.nativeElement, `aria-label`, matTooltip);
       renderer.setAttribute(elementRef.nativeElement, 'tabindex', '0');

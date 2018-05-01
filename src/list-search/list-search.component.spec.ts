@@ -6,130 +6,130 @@ import { DebugElement } from '@angular/core/src/debug/debug_node';
 import { MatIconModule, MatInputModule } from '@angular/material';
 
 describe('List Search Component', () => {
-    let fixture: ComponentFixture<ListSearchComponent>;
-    let component: ListSearchComponent;
-    let de: DebugElement;
-    let ne: HTMLElement;
+  let fixture: ComponentFixture<ListSearchComponent>;
+  let component: ListSearchComponent;
+  let de: DebugElement;
+  let ne: HTMLElement;
 
-    beforeEach(async () => {
-        await ComponentTest.createTestBed([MatIconModule, MatInputModule], [ListSearchComponent]);
-    });
+  beforeEach(async () => {
+    await ComponentTest.createTestBed([MatIconModule, MatInputModule], [ListSearchComponent]);
+  });
 
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ListSearchComponent);
+    component = fixture.componentInstance;
+
+    fixture.detectChanges();
+  });
+  describe('Input field', () => {
     beforeEach(() => {
-        fixture = TestBed.createComponent(ListSearchComponent);
-        component = fixture.componentInstance;
+      de = fixture.debugElement.query(By.css('input'));
+      ne = de.nativeElement;
+    });
+    describe('On key up', () => {
+      it('Should call emitSearchEvents', () => {
+        jest.spyOn(component, 'emitSearchEvents');
+
+        de.triggerEventHandler('keyup', null);
+
+        expect(component.emitSearchEvents).toHaveBeenCalledTimes(1);
+      });
+
+      it('Should emit searchEvent', () => {
+        let spy = jest.fn();
+
+        component.searchCriteria$.subscribe(spy);
+        de.triggerEventHandler('keyup', null);
+
+        expect(spy).toHaveBeenCalled();
+      });
+    });
+  });
+  describe('Clear button', () => {
+    beforeEach(() => {
+      component.searchInput.nativeElement.value = 'test';
+
+      fixture.detectChanges();
+
+      de = fixture.debugElement.query(By.css('button'));
+      ne = de.nativeElement;
+    });
+    it('Should display when value present', () => {
+      expect(ne).not.toBeNull();
+    });
+    describe('When clicked', () => {
+      it('Should remove value', () => {
+        ne.click();
 
         fixture.detectChanges();
+
+        expect(component.searchInput.nativeElement.value).toBe('');
+      });
     });
-    describe('Input field', () => {
-        beforeEach(() => {
-            de = fixture.debugElement.query(By.css('input'));
-            ne = de.nativeElement;
-        });
-        describe('On key up', () => {
-            it('Should call emitSearchEvents', () => {
-                jest.spyOn(component, 'emitSearchEvents');
+    it('Should call emitSearchEvents', () => {
+      jest.spyOn(component, 'emitSearchEvents');
 
-                de.triggerEventHandler('keyup', null);
+      de.triggerEventHandler('click', null);
 
-                expect(component.emitSearchEvents).toHaveBeenCalledTimes(1);
-            });
-
-            it('Should emit searchEvent', () => {
-                let spy = jest.fn();
-
-                component.searchCriteria$.subscribe(spy);
-                de.triggerEventHandler('keyup', null);
-
-                expect(spy).toHaveBeenCalled();
-            });
-        });
+      expect(component.emitSearchEvents).toHaveBeenCalledTimes(1);
     });
-    describe('Clear button', () => {
-        beforeEach(() => {
-            component.searchInput.nativeElement.value = 'test';
 
-            fixture.detectChanges();
+    it('Should emit searchEvent', () => {
+      let spy = jest.fn();
 
-            de = fixture.debugElement.query(By.css('button'));
-            ne = de.nativeElement;
-        });
-        it('Should display when value present', () => {
-            expect(ne).not.toBeNull();
-        });
-        describe('When clicked', () => {
-            it('Should remove value', () => {
-                ne.click();
+      component.searchCriteria$.subscribe(spy);
+      de.triggerEventHandler('click', null);
 
-                fixture.detectChanges();
-
-                expect(component.searchInput.nativeElement.value).toBe('');
-            });
-        });
-        it('Should call emitSearchEvents', () => {
-            jest.spyOn(component, 'emitSearchEvents');
-
-            de.triggerEventHandler('click', null);
-
-            expect(component.emitSearchEvents).toHaveBeenCalledTimes(1);
-        });
-
-        it('Should emit searchEvent', () => {
-            let spy = jest.fn();
-
-            component.searchCriteria$.subscribe(spy);
-            de.triggerEventHandler('click', null);
-
-            expect(spy).toHaveBeenCalled();
-        });
+      expect(spy).toHaveBeenCalled();
     });
-    describe('aria-label', () => {
-        beforeEach(() => {
-            de = fixture.debugElement.query(By.css('input'));
-            ne = de.nativeElement;
-        });
-        it('Should be set to passed in value', () => {
-            component.ariaLabel = 'Search employees';
-
-            fixture.detectChanges();
-
-            expect(ne.getAttribute('aria-label')).toBe('Search employees');
-        });
-        it('Should be set to the default value when no value is passed in', () => {
-            fixture.detectChanges();
-
-            expect(ne.getAttribute('aria-label')).toBe('Search list');
-        });
+  });
+  describe('aria-label', () => {
+    beforeEach(() => {
+      de = fixture.debugElement.query(By.css('input'));
+      ne = de.nativeElement;
     });
-    describe('On escape key press', () => {
-        beforeEach(() => {
-            de = fixture.debugElement.query(By.css('input'));
-            ne = de.nativeElement;
-        });
-        it('Should set value to an empty string', () => {
-            de.triggerEventHandler('keyup.escape', null);
+    it('Should be set to passed in value', () => {
+      component.ariaLabel = 'Search employees';
 
-            fixture.detectChanges();
+      fixture.detectChanges();
 
-            expect(component.searchInput.nativeElement.value).toBe('');
-        });
-        it('Should call emitSearchEvents', () => {
-            jest.spyOn(component, 'emitSearchEvents');
-
-            de.triggerEventHandler('keyup.escape', null);
-
-            expect(component.emitSearchEvents).toHaveBeenCalledTimes(1);
-        });
-        it('Should emit searchEvent', () => {
-            let spy = jest.fn();
-
-            component.searchCriteria$.subscribe(spy);
-            de.triggerEventHandler('keyup.escape', null);
-
-            expect(spy).toHaveBeenCalledWith({searchBy: ''});
-        });
+      expect(ne.getAttribute('aria-label')).toBe('Search employees');
     });
-    it('Should match snapshot', () => {
-        expect(fixture).toMatchSnapshot();
+    it('Should be set to the default value when no value is passed in', () => {
+      fixture.detectChanges();
+
+      expect(ne.getAttribute('aria-label')).toBe('Search list');
     });
+  });
+  describe('On escape key press', () => {
+    beforeEach(() => {
+      de = fixture.debugElement.query(By.css('input'));
+      ne = de.nativeElement;
+    });
+    it('Should set value to an empty string', () => {
+      de.triggerEventHandler('keyup.escape', null);
+
+      fixture.detectChanges();
+
+      expect(component.searchInput.nativeElement.value).toBe('');
+    });
+    it('Should call emitSearchEvents', () => {
+      jest.spyOn(component, 'emitSearchEvents');
+
+      de.triggerEventHandler('keyup.escape', null);
+
+      expect(component.emitSearchEvents).toHaveBeenCalledTimes(1);
+    });
+    it('Should emit searchEvent', () => {
+      let spy = jest.fn();
+
+      component.searchCriteria$.subscribe(spy);
+      de.triggerEventHandler('keyup.escape', null);
+
+      expect(spy).toHaveBeenCalledWith({ searchBy: '' });
+    });
+  });
+  it('Should match snapshot', () => {
+    expect(fixture).toMatchSnapshot();
+  });
 });

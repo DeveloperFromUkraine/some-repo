@@ -29,9 +29,9 @@ export class AvatarComponent {
 
   getSize(size: string): string {
     const sizes = {
-      'small': 'small',
-      'large': 'large',
-      'default': 'large'
+      small: 'small',
+      large: 'large',
+      default: 'large',
     };
     return sizes[size] || sizes['default'];
   }

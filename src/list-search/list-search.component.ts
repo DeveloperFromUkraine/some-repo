@@ -1,10 +1,4 @@
-import {
-  Component,
-  ElementRef,
-  Input,
-  Output,
-  ViewChild
-} from '@angular/core';
+import { Component, ElementRef, Input, Output, ViewChild } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Component({

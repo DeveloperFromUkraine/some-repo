@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 const DEFAULT_LOADING_DELAY_MS = 400;
 
@@ -7,10 +7,9 @@ const DEFAULT_LOADING_DELAY_MS = 400;
   styleUrls: ['./loading-container.scss'],
   templateUrl: './loading-container.html',
 })
-
 export class LoadingContainerComponent implements OnInit {
   @Input() loading: boolean;
-  @Input() ariaLabel: string = "Loading";
+  @Input() ariaLabel = 'Loading';
   spinnerAriaLabel: string;
   pastDelay: boolean;
   private delay: number;
