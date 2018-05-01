@@ -6,68 +6,68 @@ import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
 describe('Expandable Fab', () => {
-    let fixture: ComponentFixture<ExpandableFabComponent>;
-    let component: ExpandableFabComponent;
-    let de: DebugElement;
+  let fixture: ComponentFixture<ExpandableFabComponent>;
+  let component: ExpandableFabComponent;
+  let de: DebugElement;
 
-    beforeEach(async () => {
-        await ComponentTest.createTestBed([MatIconModule], [ExpandableFabComponent]);
-    });
+  beforeEach(async () => {
+    await ComponentTest.createTestBed([MatIconModule], [ExpandableFabComponent]);
+  });
 
-    beforeEach(() => {
-        fixture = TestBed.createComponent(ExpandableFabComponent);
-        component = fixture.componentInstance;
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ExpandableFabComponent);
+    component = fixture.componentInstance;
 
-        fixture.detectChanges();
-    });
+    fixture.detectChanges();
+  });
 
-    it('should trigger handleClick when click event emitted', () => {
-        de = fixture.debugElement.query(By.css('.icon-container'));
-        jest.spyOn(component, 'handleClick');
+  it('should trigger handleClick when click event emitted', () => {
+    de = fixture.debugElement.query(By.css('.icon-container'));
+    jest.spyOn(component, 'handleClick');
 
-        de.triggerEventHandler('click', null);
+    de.triggerEventHandler('click', null);
 
-        expect(component.handleClick).toHaveBeenCalled();
-    });
+    expect(component.handleClick).toHaveBeenCalled();
+  });
 
-    it('should set activeClass(null) when handleClick triggered', () => {
-        de = fixture.debugElement.query(By.css('.icon-container'));
+  it('should set activeClass(null) when handleClick triggered', () => {
+    de = fixture.debugElement.query(By.css('.icon-container'));
 
-        de.triggerEventHandler('click', null);
+    de.triggerEventHandler('click', null);
 
-        expect(component.activeClass).toBe('active');
-    });
+    expect(component.activeClass).toBe('active');
+  });
 
-    it('should set activeClass(!null) when handleClick triggered', () => {
-        de = fixture.debugElement.query(By.css('.icon-container'));
+  it('should set activeClass(!null) when handleClick triggered', () => {
+    de = fixture.debugElement.query(By.css('.icon-container'));
 
-        component.activeClass = 'not null';
-        de.triggerEventHandler('click', null);
+    component.activeClass = 'not null';
+    de.triggerEventHandler('click', null);
 
-        expect(component.activeClass).toBe(null);
-    });
+    expect(component.activeClass).toBe(null);
+  });
 
-    it('should have active classes if isOpen is true', async () => {
-        component.isOpen = true;
+  it('should have active classes if isOpen is true', async () => {
+    component.isOpen = true;
 
-        await fixture.detectChanges();
+    await fixture.detectChanges();
 
-        expect(fixture.debugElement.query(By.css('.active'))).toBeTruthy();
-        expect(fixture.debugElement.query(By.css('.icon-primary-active'))).toBeTruthy();
-        expect(fixture.debugElement.query(By.css('.icon-secondary-active'))).toBeTruthy();
-    });
+    expect(fixture.debugElement.query(By.css('.active'))).toBeTruthy();
+    expect(fixture.debugElement.query(By.css('.icon-primary-active'))).toBeTruthy();
+    expect(fixture.debugElement.query(By.css('.icon-secondary-active'))).toBeTruthy();
+  });
 
-    it('should not have active class if isOpen is false', () => {
-        expect(fixture.debugElement.query(By.css('.active'))).not.toBeTruthy();
-        expect(fixture.debugElement.query(By.css('.icon-primary-active'))).not.toBeTruthy();
-        expect(fixture.debugElement.query(By.css('.icon-secondary-active'))).not.toBeTruthy();
-    });
+  it('should not have active class if isOpen is false', () => {
+    expect(fixture.debugElement.query(By.css('.active'))).not.toBeTruthy();
+    expect(fixture.debugElement.query(By.css('.icon-primary-active'))).not.toBeTruthy();
+    expect(fixture.debugElement.query(By.css('.icon-secondary-active'))).not.toBeTruthy();
+  });
 
-    it('should match snapshot', async () => {
-        component.isOpen = true;
-        
-        await fixture.detectChanges();
+  it('should match snapshot', async () => {
+    component.isOpen = true;
 
-        expect(fixture).toMatchSnapshot();
-    });
+    await fixture.detectChanges();
+
+    expect(fixture).toMatchSnapshot();
+  });
 });

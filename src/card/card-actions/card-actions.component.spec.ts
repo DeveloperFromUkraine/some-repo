@@ -1,19 +1,19 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { CardActionsComponent } from "./index";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { CardActionsComponent } from './index';
 import { ComponentTest } from '../../../test/test-bed/component';
 
 describe('Card Actions', () => {
-    let fixture: ComponentFixture<CardActionsComponent>;
+  let fixture: ComponentFixture<CardActionsComponent>;
 
-    beforeEach(async () => {
-        await ComponentTest.createTestBed([], [CardActionsComponent]);
-    });
+  beforeEach(async () => {
+    await ComponentTest.createTestBed([], [CardActionsComponent]);
+  });
 
-    beforeEach(() => {
-        fixture = TestBed.createComponent(CardActionsComponent);
-    });
+  beforeEach(() => {
+    fixture = TestBed.createComponent(CardActionsComponent);
+  });
 
-    it('should match snapshot', () => {
-        expect(fixture).toMatchSnapshot();
-    });
-}); 
+  it('should match snapshot', () => {
+    expect(fixture).toMatchSnapshot();
+  });
+});

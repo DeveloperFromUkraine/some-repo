@@ -13,14 +13,14 @@ export class FieldComponent {
 }
 
 @Component({
-    selector: 'ign-field-inline',
-    template: `
+  selector: 'ign-field-inline',
+  template: `
     <div da="fieldValue" class="value">
     <span class="label">{{label}}</span>
     <ng-content></ng-content>
     </div>
   `,
-    styleUrls: ['field.component.scss'],
+  styleUrls: ['field.component.scss'],
 })
 export class FieldInlineComponent extends FieldComponent {}
 @Component({
@@ -37,7 +37,7 @@ export class FieldInlineComponent extends FieldComponent {}
   styleUrls: ['field.component.scss'],
 })
 export class EditableFieldComponent extends FieldComponent {
-  @Input() editIcon: string = 'mode_edit';
+  @Input() editIcon = 'mode_edit';
   @Input() da: string;
   @Input() daButton: string;
   @Output() onIconClick: EventEmitter<any> = new EventEmitter();
@@ -48,8 +48,8 @@ export class EditableFieldComponent extends FieldComponent {
 }
 
 @Component({
-    selector: 'ign-editable-field-inline',
-    template: `
+  selector: 'ign-editable-field-inline',
+  template: `
     <div class="label-container">
       <div da="fieldValue" class="value flex-lable-value">
       <span class="label">{{label}}</span>
@@ -60,6 +60,6 @@ export class EditableFieldComponent extends FieldComponent {
       </button>
     </div>
   `,
-    styleUrls: ['field.component.scss'],
+  styleUrls: ['field.component.scss'],
 })
 export class EditableFieldInlineComponent extends EditableFieldComponent {}

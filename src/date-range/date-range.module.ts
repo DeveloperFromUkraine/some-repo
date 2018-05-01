@@ -12,11 +12,7 @@ import { TranslationModule } from '../localization/translation.module';
     ReactiveFormsModule,
     TranslationModule,
   ],
-  declarations: [
-    DateRangeComponent,
-  ],
-  exports: [
-    DateRangeComponent,
-  ],
+  declarations: [DateRangeComponent],
+  exports: [DateRangeComponent],
 })
 export class DateRangeModule {}

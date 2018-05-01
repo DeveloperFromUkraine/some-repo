@@ -10,4 +10,4 @@ export type Person = {
   lastName: string;
   preferredFirstName?: string;
   formerLastName?: string;
-}
+};

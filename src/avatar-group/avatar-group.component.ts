@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Avatar, Person } from './avatar-group.types'
+import { Avatar, Person } from './avatar-group.types';
 
 @Component({
   selector: 'ign-avatar-group',
@@ -73,8 +73,7 @@ export class AvatarGroupComponent {
    */
   sanitizeAvatars(avatars: Avatar[]): Avatar[] {
     avatars = avatars.filter(avatar => {
-      const isEmployeeValid =
-        avatar.person && avatar.person.lastName && avatar.person.firstName;
+      const isEmployeeValid = avatar.person && avatar.person.lastName && avatar.person.firstName;
       return avatar.person ? isEmployeeValid : !!avatar.tooltip;
     });
     return avatars;
