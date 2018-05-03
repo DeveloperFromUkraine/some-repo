@@ -1,6 +1,6 @@
 *** HTML ***
 
-# Avatar
+# Avatar Group
 
 ## Use
 
