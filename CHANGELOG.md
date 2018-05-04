@@ -2,6 +2,7 @@
 - Deprecated ign-nav-list, it is recommended to use mat-nav-list instead
 - Deprecated ign-divider, it is recommended to use mat-divider instead
 - Deprecated ign-card-container, it is recommended to use mat-card instead
+- Migrated ign-hub-card over to ultipro-web
 - New `ign-list-search` component
 - Added localization to IDS components
 
