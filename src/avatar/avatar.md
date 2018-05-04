@@ -92,28 +92,28 @@ The avatar can be provided a tooltip to be displayed on mouse-over, as well a cu
 
 ## Content
 
-* `@Input() image: string`
+* @Input() image: string
   * The source url to get the image from. If the avatar represents an employee, it is highly recommended to use pipe EmployeePhoto. Otherwise, enter the full url of the proper ui-gateway url endpoint.
 
-* `@Input() initials: string`
+* @Input() initials: string
   * Two letters to be displayed in the lack of an avatar image.
   
-* `@Input() size: string`
+* @Input() size: string
   * The size of the avatar. Value can be 'small', or 'large'.
 
-* `@Input() tooltip: string`
-  * A tooltip to be displayed on mouse-over. 
-  * Providing `tooltip` sets the component's attribute `aria-label` to the tooltip value.
-  * Providing `tooltip` sets the component's attribute `tabindex` to `"0"`.
+* @Input() tooltip: string
+  * A tooltip to be displayed on mouse-over.
+  * Providing tooltip sets the component's attribute aria-label to the tooltip value.
+  * Providing tooltip sets the component's attribute tabindex to "0".
 
-* `@Input() ariaLabel: string`
-  * A value for the component's attribure `aria-label`.
-  * Providing `ariaLabel` sets the component's attribute `tabindex` to `"0"`.
+* @Input() ariaLabel: string
+  * A value for the component's attribure aria-label.
+  * Providing ariaLabel sets the component's attribute tabindex to "0".
 
 ## Accessibility
 
-* When adding a `routerLink` to the avatar component, always add attribute `role="link"`.
-* The component has `tabindex` set to "-1" by default, unless provided @Input `tooltip` or `ariaLabel`, which sets it to `"0"`.
+* When adding a routerLink to the avatar component, always add attribute role="link".
+* The component has tabindex set to "-1" by default, unless provided @Input tooltip or ariaLabel, which sets it to "0".
 
 ## Style
 

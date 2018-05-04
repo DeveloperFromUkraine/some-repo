@@ -12,7 +12,8 @@ Each avatar, and the counter, can be configured to contain a url link to be navi
 
 The maximum number of avatars displayed, and not displayed (the value seen in the counter), can be configured.
 
-Type `Person` has been added to facilitate the casting of other types to meet interface Avatar's attribute `person` (see sample usage).
+Type Person has been added to facilitate the casting of other types to meet interface Avatar's attribute person (see sample usage).
+
 ## Sample
 
 <mat-tab-group>
@@ -21,7 +22,7 @@ Type `Person` has been added to facilitate the casting of other types to meet in
           <ign-avatar-group
             [avatars]="avatars"
             [cap]="avatarsCap"
-            [counterAriaLabel]="avatars.length - cap + counterOffset + ' more employees available in the Org Chart'"
+            [counterAriaLabel]="'2 more in the org chart.'"
             [counterOffset]="counterOffset"
           ></ign-avatar-group>
         </div></mat-tab>
@@ -30,7 +31,7 @@ Type `Person` has been added to facilitate the casting of other types to meet in
             <p>&lt;ign-avatar-group&gt;</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;[avatars]="avatars"</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;[cap]="avatarsCap"</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;[counterAriaLabel]="avatars.length - cap + counterOffset + ' more employees available in the Org Chart'"</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;[counterAriaLabel]="'2 more in the org chart.'"</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;[counterOffset]="counterOffset"</p>
             <p>&lt;/ign-avatar-group&gt;</p>
         </table>
@@ -60,8 +61,8 @@ Type `Person` has been added to facilitate the casting of other types to meet in
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const avatar: Avatar = &#123;</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;person: <Person>dataItem.employeeInfo,</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;link: dataItem.employeeInfo</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;? `/employees/$&#123;data.dataItem.employmentId&#125;/employment`</p>      
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: `/activations/position-hub/positions/$&#123;dataItem.position.positionId&#125;`,</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;? ``/employees/$&#123;data.dataItem.employmentId&#125;/employment``</p>      
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: ``/activations/position-hub/positions/$&#123;dataItem.position.positionId&#125;``,</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#125;</p>
             <br>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;avatars = [...avatars, avatar];</p>
@@ -73,9 +74,9 @@ Type `Person` has been added to facilitate the casting of other types to meet in
 
 ## Content
 
-* `@Input() avatars: Avatar[]`
+* @Input() avatars: Avatar[]
   * The avatars to be displayed, where:
-  ```
+
     export interface Avatar {
       person?: Person;
       image?: string;
@@ -90,41 +91,41 @@ Type `Person` has been added to facilitate the casting of other types to meet in
       preferredFirstName?: string;
       formerLastName?: string;
     }
-  ```
 
-* `@Input() cap: number`
+
+* @Input() cap: number
   * Optional input. By default, cap = 8.
   * The maximum number of avatars to be rendered, regardless of length of Avatar[].
-  
-* `@Input() size: string`
+
+* @Input() size: string
   * The size of the avatar. Value can be 'small', or 'large'.
 
-* `@Input() showCounter: boolean`
+* @Input() showCounter: boolean
   * Optional input. Default value is true.
   * Whether to show the counter of the number of avatars not being rendered.
   * The counter will only be displayed if the number of avatars is greater than the value of cap.
 
-* `@Input() counterOffset: number`
+* @Input() counterOffset: number
   * Optional input. Default value is 0.
-  * The counter offset is a number added to the avatars's counter in order to modify its rendered value 
-  * Example: Each avatar represents an employee and a company has 30 employees; however, you only have data to generate 10 avatars. 
-  * If a cap has not been specified, the avatar group component will generate 10 avatars, render 8, and display a counter with value 2. If you want this counter to represent the total amount of employees within the company, you could set counterOffset to equal `totalNumberOfEmployees - avatars.length`.
+  * The counter offset is a number added to the avatars's counter in order to modify its rendered value. 
+  * Example: Each avatar represents an employee and a company has 30 employees; however, you only have data to generate 10 avatars.
+  * If a cap has not been specified, the avatar group component will generate 10 avatars, render 8, and display a counter with value 2. If you want this counter to represent the total amount of employees within the company, you could set counterOffset to equal totalNumberOfEmployees - avatars.length.
 
-* `@Input() counterLink: string`
+* @Input() counterLink: string
   * Optional input.
   * When a user clicks on the counter, the router navigates to the specified URI.
   * Use one string with a relative path. Do not use a routes parameter array.
 
-* `@Input() counterAriaLabel: string`
+* @Input() counterAriaLabel: string
   * Optional input.
-  * The value to set the counter's attribute `aria-label` to.
+  * The value to set the counter's attribute aria-label to.
 
 ## Accessibility
 
-* The counter, by default, has attribute `tabindex` set to `"-1"`.
-  * Providing a value for `counterLink` changes the counter's attrinute `tabindex` to `"0"`.
-  * Providing a value for `counterAriaLabel` changes the counter's attrinute `tabindex` to `"0"`.
-* Each avatar's attribute `aria-label` is set to the value of its tooltip.
+* The counter, by default, has attribute tabindex set to "-1".
+  * Providing a value for counterLink changes the counter's attrinute tabindex to "0".
+  * Providing a value for counterAriaLabel changes the counter's attrinute tabindex to "0".
+* Each avatar's attribute aria-label is set to the value of its tooltip.
 
 ## Style
 
