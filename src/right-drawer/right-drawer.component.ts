@@ -1,4 +1,4 @@
-import {Component, Input, Output, OnInit, EventEmitter, HostListener} from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter, HostListener } from '@angular/core';
 
 // tslint:disable:use-host-property-decorator
 @Component({

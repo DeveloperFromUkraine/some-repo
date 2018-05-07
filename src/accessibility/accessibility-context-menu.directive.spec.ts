@@ -4,6 +4,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ComponentTest } from '../../test/test-bed/component';
 
 import { AccessibleContextMenuViewDirective } from './accessibility.directive';
+import { TranslationMap } from '../localization/translation-map';
 
 @Component({
   template: `<button mat-icon-button ignA11yContextMenuViewAccessible>
@@ -44,7 +45,7 @@ describe('ContextMenu Accessibility Directive', () => {
   it('Should have aria-label set to context menu if its a legitimate context menu', () => {
     ne = de[0].nativeElement;
 
-    expect(ne.getAttribute('aria-label')).toContain('Context Menu');
+    expect(ne.getAttribute('aria-label')).toContain(TranslationMap['CONTEXT_MENU']);
   });
 
   it('Should have aria-hidden set to false if its a legitimate context menu', () => {

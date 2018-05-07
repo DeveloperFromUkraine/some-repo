@@ -45,12 +45,12 @@ describe('Translation Pipe', () => {
     expect(translation).toContain('Search');
   });
 
-  it('should return nothing if invalid string passed into transform', () => {
+  it('should return translation key if key passed into transform does not exist on translation map', () => {
     const translationPipe: TranslationPipe = new TranslationPipe(new MockChangeRef());
 
     const translation = translationPipe.transform('INVALID');
 
-    expect(translation).toBe(undefined);
+    expect(translation).toBe('INVALID');
   });
 
   it('should return nothing if empty string passed in transform', () => {

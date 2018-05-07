@@ -5,7 +5,7 @@
   <input
     matInput
     placeholder="Search"
-    attr.aria-label="{{ariaLabel}}"
+    attr.aria-label="{{ariaLabel | translateIDS}}"
     #searchInput
     (keyup.escape)="searchInput.value=''; emitSearchEvents()"
     (keyup)="emitSearchEvents()">

@@ -5,7 +5,9 @@ import {
   HostListener,
   Renderer2,
   AfterViewInit,
+  ChangeDetectorRef,
 } from '@angular/core';
+import { TranslationPipe } from '../localization/translation.pipe';
 
 @Directive({ selector: '[ignA11yClick], [routerLink]:not(button), [routerLink]:not(a)' })
 export class AccessibleClickDirective {
@@ -62,15 +64,18 @@ export class AccessibleContextMenuViewDirective implements AfterViewInit {
   elementRef: ElementRef;
   renderer: Renderer2;
   ariaLabel: string;
+  translatePipe: TranslationPipe;
 
   constructor(
     @Attribute('aria-label') ariaLabel: string,
     renderer: Renderer2,
-    elementRef: ElementRef
+    elementRef: ElementRef,
+    changeRef: ChangeDetectorRef
   ) {
     this.elementRef = elementRef;
     this.renderer = renderer;
     this.ariaLabel = ariaLabel;
+    this.translatePipe = new TranslationPipe(changeRef);
   }
 
   ngAfterViewInit() {
@@ -87,7 +92,11 @@ export class AccessibleContextMenuViewDirective implements AfterViewInit {
           spanChildren.item(0).localName === 'mat-icon' &&
           spanChildren.item(0).innerHTML === 'more_vert'
         ) {
-          this.renderer.setAttribute(this.elementRef.nativeElement, 'aria-label', 'Context Menu');
+          this.renderer.setAttribute(
+            this.elementRef.nativeElement,
+            'aria-label',
+            this.translatePipe.transform('CONTEXT_MENU')
+          );
           this.renderer.setAttribute(this.elementRef.nativeElement, 'aria-hidden', 'false');
         }
       }

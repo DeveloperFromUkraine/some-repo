@@ -1,8 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { LoadingContainerComponent } from './loading-container.component';
 import { ComponentTest } from '../../test/test-bed/component';
-import { DebugElement, Component } from '@angular/core';
+import { DebugElement, Component, NgModule } from '@angular/core';
 import { By } from '@angular/platform-browser';
+import { TranslationModule } from '../localization/translation.module';
 
 describe('Loading Container', () => {
   let fixture: ComponentFixture<LoadingContainerComponent>;
@@ -10,7 +11,10 @@ describe('Loading Container', () => {
   let de: DebugElement;
 
   beforeEach(() => {
-    ComponentTest.createTestBed([], [LoadingContainerComponent] as Component[]);
+    ComponentTest.createTestBed(
+      [TranslationModule] as NgModule[],
+      [LoadingContainerComponent] as Component[]
+    );
 
     fixture = TestBed.createComponent(LoadingContainerComponent);
     component = fixture.componentInstance;

@@ -1,7 +1,7 @@
 <div *ngIf="!loading">
     <ng-content></ng-content>
   </div>
-  <div *ngIf="loading" attr.aria-label="{{spinnerAriaLabel}}" role="alert" tabindex="0">
+  <div *ngIf="loading" attr.aria-label="{{spinnerAriaLabel | translateIDS}}" role="alert" tabindex="0">
     <div *ngIf="pastDelay" class="spinner-container">
       <mat-spinner></mat-spinner>
     </div>
