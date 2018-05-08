@@ -1,19 +1,18 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { EmptyStateDescriptionComponent } from "../index";
-import { ComponentTest } from "../../test/test-bed/component";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { EmptyStateDescriptionComponent } from '../index';
+import { ComponentTest } from '../../test/test-bed/component';
+import { Component } from '@angular/core';
 
 describe('Empty State Description', () => {
-    let fixture: ComponentFixture<EmptyStateDescriptionComponent>;
+  let fixture: ComponentFixture<EmptyStateDescriptionComponent>;
 
-    beforeEach(async () => {
-        await ComponentTest.createTestBed([], [EmptyStateDescriptionComponent]);
-    });
+  beforeEach(() => {
+    ComponentTest.createTestBed([], [EmptyStateDescriptionComponent] as Component[]);
 
-    beforeEach(() => {
-        fixture = TestBed.createComponent(EmptyStateDescriptionComponent);
-    });
+    fixture = TestBed.createComponent(EmptyStateDescriptionComponent);
+  });
 
-    it('should match snapshot', () => {
-        expect(fixture).toMatchSnapshot();
-    });
+  it('should match snapshot', () => {
+    expect(fixture).toMatchSnapshot();
+  });
 });

@@ -8,16 +8,15 @@ import { Component, HostListener } from '@angular/core';
 export class ListContentComponent {
   active: number;
 
-  @HostListener('click',['$event']) 
+  @HostListener('click', ['$event'])
   onclick(event) {
-      if (event.target.id === 'skip-list'){
-          this.skipListContent();
-      }    
-  }
-      
-  skipListContent(){
-      document.getElementById('list-content-skip').scrollIntoView(true);
-      document.getElementById('list-content-skip').focus();
+    if (event.target.id === 'skip-list') {
+      this.skipListContent();
+    }
   }
 
+  skipListContent() {
+    document.getElementById('list-content-skip').scrollIntoView(true);
+    document.getElementById('list-content-skip').focus();
+  }
 }

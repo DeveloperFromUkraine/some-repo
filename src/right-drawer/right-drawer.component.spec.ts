@@ -3,94 +3,96 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { ComponentTest } from '../../test/test-bed/component';
 import { DebugElement } from '@angular/core/src/debug/debug_node';
-import { MatIconModule } from '@angular/material';
+import { TranslationModule } from '../localization/translation.module';
+import { NgModule, Component } from '@angular/core';
 
 describe('Right Drawer', () => {
-    let fixture: ComponentFixture<RightDrawerComponent>;
-    let component: RightDrawerComponent;
-    let de: DebugElement;
-    let ne: HTMLElement;
+  let fixture: ComponentFixture<RightDrawerComponent>;
+  let component: RightDrawerComponent;
+  let de: DebugElement;
+  let ne: HTMLElement;
 
-    beforeEach(async () => {
-        await ComponentTest.createTestBed([MatIconModule], [RightDrawerComponent]);
-    });
+  beforeEach(() => {
+    ComponentTest.createTestBed(
+      [TranslationModule] as NgModule[],
+      [RightDrawerComponent] as Component[]
+    );
 
-    beforeEach(async () => {
-        fixture = TestBed.createComponent(RightDrawerComponent);
-        component = fixture.componentInstance;
+    fixture = TestBed.createComponent(RightDrawerComponent);
+    component = fixture.componentInstance;
 
-        component.title = 'test';
-        fixture.detectChanges();
-    });
+    component.title = 'test';
+    fixture.detectChanges();
+  });
 
-    it('should create title-container if title is set', () => {
-        de = fixture.debugElement.query(By.css('.title-container'));
+  it('should create title-container if title is set', () => {
+    de = fixture.debugElement.query(By.css('.title-container'));
 
-        expect(de).toBeTruthy();
-    });
+    expect(de).toBeTruthy();
+  });
 
-    it('should net create title-container if title is not set', () => {
-        component.title = '';
-        
-        fixture.detectChanges();
-        de = fixture.debugElement.query(By.css('.title-container'));
+  it('should net create title-container if title is not set', () => {
+    component.title = '';
 
-        expect(de).not.toBeTruthy();
-    });
+    fixture.detectChanges();
+    de = fixture.debugElement.query(By.css('.title-container'));
 
-    it('should set title', () => {
-        de = fixture.debugElement.query(By.css('.title'));
-        ne = de.nativeElement;
+    expect(de).not.toBeTruthy();
+  });
 
-        expect(ne.textContent).toContain(component.title);
-    });
+  it('should set title', () => {
+    de = fixture.debugElement.query(By.css('.title'));
+    ne = de.nativeElement;
 
-    it('should emit openChange event', () => {
-        de = fixture.debugElement.query(By.css('.close-icon'));
-        ne = de.nativeElement;
-        let spy = jest.fn();
+    expect(ne.textContent).toContain(component.title);
+  });
 
-        component.openChange.subscribe(spy);
-        ne.dispatchEvent(new Event('click'));
+  it('should emit openChange event', () => {
+    de = fixture.debugElement.query(By.css('.close-icon'));
+    ne = de.nativeElement;
+    let spy = jest.fn();
 
-        expect(spy).toHaveBeenCalled();
-    });
+    component.openChange.subscribe(spy);
+    ne.dispatchEvent(new Event('click'));
 
-    it('should call closeDrawer when click event emitted', () => {
-        de = fixture.debugElement.query(By.css('.close-icon'));
-        ne = de.nativeElement;
-        jest.spyOn(component, 'closeDrawer');
+    expect(spy).toHaveBeenCalled();
+  });
 
-        ne.dispatchEvent(new Event('click'));
+  it('should call closeDrawer when click event emitted', () => {
+    de = fixture.debugElement.query(By.css('.close-icon'));
+    ne = de.nativeElement;
+    jest.spyOn(component, 'closeDrawer');
 
-        expect(component.closeDrawer).toHaveBeenCalled();
-    });
+    ne.dispatchEvent(new Event('click'));
 
-    it('should call toggleDrawer when click event emitted', () => {
-        de = fixture.debugElement.query(By.css('.close-icon'));
-        ne = de.nativeElement;
-        jest.spyOn(component, 'toggleDrawer');
+    expect(component.closeDrawer).toHaveBeenCalled();
+  });
 
-        ne.dispatchEvent(new Event('click'));
+  it('should call toggleDrawer when click event emitted', () => {
+    de = fixture.debugElement.query(By.css('.close-icon'));
+    ne = de.nativeElement;
+    jest.spyOn(component, 'toggleDrawer');
 
-        expect(component.toggleDrawer).toHaveBeenCalled();
-    });
+    ne.dispatchEvent(new Event('click'));
 
-    it('should set open to false when click event emitted', () => {
-        de = fixture.debugElement.query(By.css('.close-icon'));
-        ne = de.nativeElement;
+    expect(component.toggleDrawer).toHaveBeenCalled();
+  });
 
-        component.open = true;
-        ne.dispatchEvent(new Event('click'));
+  it('should set open to false when click event emitted', () => {
+    de = fixture.debugElement.query(By.css('.close-icon'));
+    ne = de.nativeElement;
 
-        expect(component.open).toBe(false);
-    });
+    component.open = true;
+    ne.dispatchEvent(new Event('click'));
 
-    it('should match snapshot', async () => {
-        component.title = 'test';
+    expect(component.open).toBe(false);
+  });
 
-        await fixture.detectChanges();
+  it('should match snapshot', async () => {
+    component.title = 'test';
 
-        expect(fixture).toMatchSnapshot();
-    });
+    await fixture.detectChanges();
+
+    expect(fixture).toMatchSnapshot();
+  });
 });

@@ -1,19 +1,24 @@
 {
   "name": "ignite-design-system",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng-packagr -p package.json",
-    "build:demo": "ng build",
     "build:watch": "chokidar 'src/**/*.ts' -c './bin/build' --initial",
-    "package": "tar cvf $npm_package_name-$npm_package_version.tgz manifest-* Staticfile dist-demo",
+    "package": "tar cvf $npm_package_name-$npm_package_version.tgz manifest-* Staticfile dist",
+    "sonar": "echo Publishing to sonar for branch: $SONARQUBE_BRANCH && sonarqube-scanner-node -Dsonar.branch=$SONARQUBE_BRANCH",
     "lint": "tslint --project tsconfig.json src/**/*.ts",
+    "prettier": "prettier --single-quote --trailing-comma es5 --print-width 100 --write 'src/**/*.{js,ts}' --list-different",
+    "precommit": "npm run prettier && npm run lint",
     "test": "jest --coverage --json --outputFile=test/jest-output.json",
     "test:watch": "jest --watch",
-    "test:ci": "jest --runInBand --coverage --json --outputFile=test/jest-output.json",
+    "test:ci": "jest --runInBand --coverage --json --outputFile=test/jest-output.json && npm run push-to-playground-service && npm run sonar",
     "ci:test": "npm run test:ci",
-    "ci:package": "npm run build && npm run build:demo && npm prune --production && npm run package"
+    "ci:package": "npm run build && npm prune --production && npm run package",
+    "push-coverage": "echo 'starting coverage push...' && curl -X POST https://playground-service.apps.mia.ulti.io/v1/coverage -d @coverage/coverage-summary.json --header 'Content-Type: application/json'",
+    "push-jest-build": "echo 'starting jest build push...' && curl -X POST https://playground-service.apps.mia.ulti.io/v1/jestoutput -d @test/jest-output.json --header 'Content-Type: application/json'",
+    "push-to-playground-service": "npm run push-coverage && npm run push-jest-build"
   },
   "jest": {
     "preset": "jest-preset-angular",
@@ -35,6 +40,9 @@
   "ngPackage": {
     "lib": {
       "entryFile": "./src/index.ts",
+      "umdModuleIds": {
+        "rxjs": "rxjs"
+      },
       "externals": {
         "@angular/material": "ng.material",
         "rxjs": "Rx",
@@ -60,18 +68,7 @@
   "bugs": {
     "url": "http://devgit.dev.us.corp:7990/projects/NUI/repos/ignite-design-system/issues"
   },
-  "dependencies": {
-    "angular2-cookie": "^1.2.6",
-    "apollo-angular": "^1.0.1",
-    "apollo-angular-link-http": "^1.0.2-beta.0",
-    "apollo-cache-inmemory": "^1.1.7",
-    "apollo-client": "^2.2.2",
-    "apollo-link-ws": "^1.0.7",
-    "graphql": "^0.12.3",
-    "graphql-tag": "^2.8.0",
-    "ignite-common": "^0.13.3",
-    "subscriptions-transport-ws": "^0.9.6"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "@angular/animations": "^5.0.0",
     "@angular/cdk": "^5.0.0-rc0",
@@ -83,6 +80,7 @@
     "@angular/platform-browser": "^5.0.0",
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",
+    "ignite-common": "^0.13.3",
     "rxjs": "^5.4.3",
     "zone.js": "^0.8.4"
   },
@@ -104,16 +102,19 @@
     "@types/googlemaps": "^3.29.2",
     "@types/jest": "^19.2.3",
     "@types/node": "~6.0.60",
-    "angular-in-memory-web-api": "^0.5.2",
     "chokidar-cli": "^1.2.0",
     "codelyzer": "^4.0.2",
     "core-js": "^2.4.1",
+    "husky": "^0.14.3",
+    "ignite-common": "^0.13.3",
     "jest": "^22.0.0",
     "jest-preset-angular": "^2.0.2",
     "marked": "^0.3.7",
-    "ng-packagr": "^1.6.0",
+    "ng-packagr": "^2.4.0",
+    "prettier": "^1.12.1",
     "raw-loader": "^0.5.1",
     "rxjs": "^5.4.3",
+    "sonarqube-scanner-node": "^0.0.4",
     "ts-node": "~2.0.0",
     "tslint": "^5.8.0",
     "typescript": "2.4.2",

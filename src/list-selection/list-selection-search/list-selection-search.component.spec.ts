@@ -1,20 +1,18 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { ListSelectionSearchComponent } from "./index";
-import { ComponentTest } from "../../../test/test-bed/component";
-import { ReactiveFormsModule } from "@angular/forms";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ListSelectionSearchComponent } from './index';
+import { ComponentTest } from '../../../test/test-bed/component';
+import { Component } from '@angular/core';
 
 describe('List Selection Search', () => {
-    let fixture: ComponentFixture<ListSelectionSearchComponent>;
+  let fixture: ComponentFixture<ListSelectionSearchComponent>;
 
-    beforeEach(async () => {
-        await ComponentTest.createTestBed([ReactiveFormsModule], [ListSelectionSearchComponent]);
-    });
+  beforeEach(() => {
+    ComponentTest.createTestBed([], [ListSelectionSearchComponent] as Component[]);
 
-    beforeEach(() => {
-        fixture = TestBed.createComponent(ListSelectionSearchComponent);
-    });
+    fixture = TestBed.createComponent(ListSelectionSearchComponent);
+  });
 
-    it('should match snapshot', () => {
-        expect(fixture).toMatchSnapshot();
-    });
+  it('should match snapshot', () => {
+    expect(fixture).toMatchSnapshot();
+  });
 });

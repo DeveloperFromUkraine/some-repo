@@ -1,20 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RightAlignContainerComponent } from './right-align-container.component';
 import { ComponentTest } from '../../test/test-bed/component';
-
+import { Component } from '@angular/core';
 
 describe('Right Align Container', () => {
-    let fixture: ComponentFixture<RightAlignContainerComponent>;
+  let fixture: ComponentFixture<RightAlignContainerComponent>;
 
-    beforeEach(async () => {
-        await ComponentTest.createTestBed([], [RightAlignContainerComponent]);
-    });
+  beforeEach(() => {
+    ComponentTest.createTestBed([], [RightAlignContainerComponent] as Component[]);
 
-    beforeEach(() => {
-        fixture = TestBed.createComponent(RightAlignContainerComponent);
-    });
+    fixture = TestBed.createComponent(RightAlignContainerComponent);
+  });
 
-    it('Should match snapshot', () => {
-        expect(fixture).toMatchSnapshot();
-    });
+  it('Should match snapshot', () => {
+    expect(fixture).toMatchSnapshot();
+  });
 });

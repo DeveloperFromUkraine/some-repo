@@ -1,5 +1,13 @@
-import {AfterContentInit, Component, ContentChildren, OnDestroy, QueryList, Input} from '@angular/core';
-import {ExpandableFabItemComponent} from './expandable-fab-item.component';
+import {
+  AfterContentInit,
+  OnChanges,
+  Component,
+  ContentChildren,
+  OnDestroy,
+  QueryList,
+  Input,
+} from '@angular/core';
+import { ExpandableFabItemComponent } from './expandable-fab-item.component';
 import { Observable, Subject } from 'rxjs';
 import 'rxjs/add/observable/merge';
 
@@ -8,10 +16,10 @@ import 'rxjs/add/observable/merge';
   templateUrl: './expandable-fab.html',
   styleUrls: ['./expandable-fab.scss'],
 })
-export class ExpandableFabComponent implements AfterContentInit, OnDestroy {
+export class ExpandableFabComponent implements AfterContentInit, OnChanges, OnDestroy {
   @ContentChildren(ExpandableFabItemComponent) btns: QueryList<ExpandableFabItemComponent>;
   @Input() ariaLabelOpen: string;
-  @Input() ariaLabelClose: string = 'close';
+  @Input() ariaLabelClose = 'close';
 
   activeClass: string = null;
   isOpen = false;
@@ -24,8 +32,7 @@ export class ExpandableFabComponent implements AfterContentInit, OnDestroy {
 
   ngAfterContentInit() {
     const outputs = this.btns.map(button => button.clicked);
-    Observable
-      .merge(...outputs)
+    Observable.merge(...outputs)
       .takeUntil(this.unSubscribe$)
       .subscribe(_ => this.handleClick());
   }

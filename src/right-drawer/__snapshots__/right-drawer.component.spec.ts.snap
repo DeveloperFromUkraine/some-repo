@@ -24,9 +24,8 @@ exports[`Right Drawer should match snapshot 1`] = `
     <mat-icon
       aria-hidden="true"
       aria-label="Close"
-      class="close-icon mat-icon material-icons"
+      class="close-icon"
       igna11yclick=""
-      role="img"
       tabindex="0"
     >
       

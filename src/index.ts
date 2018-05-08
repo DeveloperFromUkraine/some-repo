@@ -1,6 +1,7 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';  
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { PageComponent } from './page/page.component';
 export * from './page/page.component';
@@ -14,9 +15,6 @@ import {
   SideNavListItemComponent,
 } from './sidenav/index';
 export * from './sidenav/index';
-
-import { DividerComponent } from './divider/divider.component';
-export * from './divider/divider.component';
 
 import {
   ListItemComponent,
@@ -54,7 +52,6 @@ export * from './list-selection/index';
 import {
   CardHeaderContainerComponent,
   CardSubtitleComponent,
-  CardContainerComponent,
   CardMainComponent,
   CardAsideComponent,
   CardTitleComponent,
@@ -65,9 +62,6 @@ import {
   CardToolbarComponent,
 } from './card/index';
 export * from './card/index';
-
-import { HubCardComponent } from './hub-card/hub-card.component';
-export * from './hub-card/hub-card.component';
 
 import {
   ListItemPrimaryTextComponent,
@@ -102,8 +96,14 @@ export * from './expandable-fab/expandable-fab.component';
 
 import { ExpandableFabItemComponent } from './expandable-fab/expandable-fab-item.component';
 export * from './expandable-fab/expandable-fab-item.component';
+import { ExpandableFabItemModule } from './expandable-fab/expandable-fab-item.module';
 
-import { FieldComponent, FieldInlineComponent, EditableFieldComponent, EditableFieldInlineComponent } from './field/field.component';
+import {
+  FieldComponent,
+  FieldInlineComponent,
+  EditableFieldComponent,
+  EditableFieldInlineComponent,
+} from './field/field.component';
 export * from './field/field.component';
 
 import { CenterComponent } from './center/center.component';
@@ -116,8 +116,6 @@ import { DateRangeComponent } from './date-range/date-range.component';
 
 import { TextListItemModule } from './text-list-item/text-list-item.module';
 import { TextListItemComponent } from './text-list-item/text-list-item.component';
-import { NavListModule } from './nav-list/nav-list.module';
-import { NavListComponent } from './nav-list/nav-list.component';
 
 import { DataTableContainerModule } from './data-table-container/data-table-container.module';
 import { DataTableContainerComponent } from './data-table-container/data-table-container.component';
@@ -125,18 +123,27 @@ import { DataTableContainerComponent } from './data-table-container/data-table-c
 import { ExpandableSearchComponent } from './expandable-search/expandable-search.component';
 import { RightAlignContainerComponent } from './right-align-container/right-align-container.component';
 
-import { 
+import { ListSearchComponent } from './list-search/list-search.component';
+
+import {
   AccessibleClickDirective,
   AccessibleViewDirective,
   AccessibleRemoveViewDirective,
-  ListItemRoleDirective
+  AccessibleContextMenuViewDirective,
+  ListItemRoleDirective,
+  ToolTipDirective,
 } from './accessibility/accessibility.directive';
+
+import { TranslationService } from './localization/translation.service';
+
+import { TranslationModule } from './localization/translation.module';
+import { AvatarComponent } from './avatar/avatar.component';
+import { AvatarGroupComponent } from './avatar-group/avatar-group.component';
 
 import {
   MatToolbarModule,
   MatMenuModule,
   MatButtonModule,
-  MatSidenavModule,
   MatCardModule,
   MatIconModule,
   MatRippleModule,
@@ -144,13 +151,13 @@ import {
   MatNativeDateModule,
   MatListModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatTooltipModule,
 } from '@angular/material';
 
 const components = [
   CardHeaderContainerComponent,
   CardSubtitleComponent,
-  DividerComponent,
   PageComponent,
   RightDrawerComponent,
   SideNavHeaderComponent,
@@ -175,7 +182,6 @@ const components = [
   ListSelectionSearchComponent,
   ListFilterPipe,
   ListSelectionAddButtonComponent,
-  CardContainerComponent,
   CardMainComponent,
   CardAsideComponent,
   CardTitleComponent,
@@ -184,7 +190,6 @@ const components = [
   CardSectionTitleComponent,
   CardActionsComponent,
   CardToolbarComponent,
-  HubCardComponent,
   SelectContainerComponent,
   FormGroupComponent,
   SizingSmallDirective,
@@ -195,7 +200,6 @@ const components = [
   InfoBannerComponent,
   ButtonGroupComponent,
   ExpandableFabComponent,
-  ExpandableFabItemComponent,
   FieldComponent,
   FieldInlineComponent,
   EditableFieldComponent,
@@ -206,15 +210,21 @@ const components = [
   FooterComponent,
   ExpandableSearchComponent,
   RightAlignContainerComponent,
+  ListSearchComponent,
   AccessibleClickDirective,
   AccessibleViewDirective,
   AccessibleRemoveViewDirective,
+  AccessibleContextMenuViewDirective,
   ListItemRoleDirective,
+  ToolTipDirective,
+  AvatarComponent,
+  AvatarGroupComponent,
 ];
 
 @NgModule({
   imports: [
     CommonModule,
+    RouterModule,
     ReactiveFormsModule,
     MatToolbarModule,
     MatMenuModule,
@@ -226,22 +236,29 @@ const components = [
     MatNativeDateModule,
     DateRangeModule,
     MatListModule,
-    NavListModule,
+    ExpandableFabItemModule,
     TextListItemModule,
     DataTableContainerModule,
     MatFormFieldModule,
     MatInputModule,
+    MatTooltipModule,
+    TranslationModule,
   ],
   declarations: components,
   exports: [
     ...components,
     DateRangeComponent,
-    NavListComponent,
+    ExpandableFabItemComponent,
     TextListItemComponent,
-    DataTableContainerComponent
+    DataTableContainerComponent,
   ],
+  providers: [TranslationService],
 })
 export class IgniteDesignSystemModule {
+  static updateTranslation(translationKey: string, translationValue: string) {
+    TranslationService.updateTranslation(translationKey, translationValue);
+  }
+
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: IgniteDesignSystemModule,

@@ -1,20 +1,18 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { ListSelectionAddButtonComponent } from "./index";
-import { ComponentTest } from "../../../test/test-bed/component";
-import { MatIconModule } from "@angular/material";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ListSelectionAddButtonComponent } from './index';
+import { ComponentTest } from '../../../test/test-bed/component';
+import { Component } from '@angular/core';
 
 describe('List Selection Add Button', () => {
-    let fixture: ComponentFixture<ListSelectionAddButtonComponent>;
+  let fixture: ComponentFixture<ListSelectionAddButtonComponent>;
 
-    beforeEach(async () => {
-        await ComponentTest.createTestBed([MatIconModule], [ListSelectionAddButtonComponent]);
-    });
+  beforeEach(() => {
+    ComponentTest.createTestBed([], [ListSelectionAddButtonComponent] as Component[]);
 
-    beforeEach(() => {
-        fixture = TestBed.createComponent(ListSelectionAddButtonComponent);
-    });
+    fixture = TestBed.createComponent(ListSelectionAddButtonComponent);
+  });
 
-    it('should match snapshot', () => {
-        expect(fixture).toMatchSnapshot();
-    });
+  it('should match snapshot', () => {
+    expect(fixture).toMatchSnapshot();
+  });
 });

@@ -7,45 +7,46 @@ import { ComponentTest } from '../../test/test-bed/component';
 import { By } from '@angular/platform-browser';
 
 @Component({
-    template: `
+  template: `
         <a class="directive" ignA11yViewAccessible>anchor</a>
         <button class="directive" tabindex="1" ignA11yViewAccessible>button</button>
         <a class="directive"></a>
-    `
+    `,
 })
-class DirectiveHostComponent {
-}
+class DirectiveHostComponent {}
 
 describe('Accessible View', () => {
-    let fixture: ComponentFixture<DirectiveHostComponent>;
-    let de: DebugElement[];
-    let ne: HTMLElement;
+  let fixture: ComponentFixture<DirectiveHostComponent>;
+  let de: DebugElement[];
+  let ne: HTMLElement;
 
-    beforeEach(async () => {
-        await ComponentTest.createTestBed([], [DirectiveHostComponent, AccessibleViewDirective]);
-    });
+  beforeEach(() => {
+    ComponentTest.createTestBed([], [
+      DirectiveHostComponent,
+      AccessibleViewDirective,
+    ] as Component[]);
 
-    beforeEach(() => {
-        fixture = TestBed.createComponent(DirectiveHostComponent);
-        de = fixture.debugElement.queryAll(By.css('.directive'));
-        fixture.detectChanges();
-    });
+    fixture = TestBed.createComponent(DirectiveHostComponent);
+    de = fixture.debugElement.queryAll(By.css('.directive'));
 
-    it('should set tabindex to 0 for attribute directive with no tabindex defined in element', () => {
-        ne = de[0].nativeElement;
+    fixture.detectChanges();
+  });
 
-        expect(ne.getAttribute('tabindex')).toBe('0');
-    });
+  it('should set tabindex to 0 for attribute directive with no tabindex defined in element', () => {
+    ne = de[0].nativeElement;
 
-    it('should not set tabindex for attribute directive with tabindex defined in element', () => {
-        ne = de[1].nativeElement;
+    expect(ne.getAttribute('tabindex')).toBe('0');
+  });
 
-        expect(ne.getAttribute('tabindex')).toBe('1');
-    });
+  it('should not set tabindex for attribute directive with tabindex defined in element', () => {
+    ne = de[1].nativeElement;
 
-    it('should not set tabindex for element with no tabindex defined in element', () => {
-        ne = de[2].nativeElement;
+    expect(ne.getAttribute('tabindex')).toBe('1');
+  });
 
-        expect(ne.getAttribute('tabindex')).toBe(null);
-    });
+  it('should not set tabindex for element with no tabindex defined in element', () => {
+    ne = de[2].nativeElement;
+
+    expect(ne.getAttribute('tabindex')).toBe(null);
+  });
 });

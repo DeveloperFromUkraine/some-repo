@@ -1,19 +1,18 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { PageComponent } from "../index";
-import { ComponentTest } from "../../test/test-bed/component";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { PageComponent } from '../index';
+import { ComponentTest } from '../../test/test-bed/component';
+import { Component } from '@angular/core';
 
 describe('Page', () => {
-    let fixture: ComponentFixture<PageComponent>;
+  let fixture: ComponentFixture<PageComponent>;
 
-    beforeEach(async () => {
-        await ComponentTest.createTestBed([], [PageComponent]);
-    });
+  beforeEach(() => {
+    ComponentTest.createTestBed([], [PageComponent] as Component[]);
 
-    beforeEach(() => {
-        fixture = TestBed.createComponent(PageComponent);
-    });
+    fixture = TestBed.createComponent(PageComponent);
+  });
 
-    it('should match snapshot', () => {
-        expect(fixture).toMatchSnapshot();
-    });
+  it('should match snapshot', () => {
+    expect(fixture).toMatchSnapshot();
+  });
 });

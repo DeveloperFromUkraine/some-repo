@@ -1,0 +1,20 @@
+<mat-icon
+  class="search-icon">search</mat-icon>
+<mat-form-field
+  floatPlaceholder="never">
+  <input
+    matInput
+    placeholder="Search"
+    attr.aria-label="{{ariaLabel}}"
+    #searchInput
+    (keyup.escape)="searchInput.value=''; emitSearchEvents()"
+    (keyup)="emitSearchEvents()">
+  <button
+    *ngIf="searchInput.value"
+    aria-label="Clear"
+    mat-icon-button
+    matSuffix
+    (click)="searchInput.value=''; emitSearchEvents()">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>

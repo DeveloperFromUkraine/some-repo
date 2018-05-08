@@ -1,4 +1,4 @@
-import { ComponentFixture, async, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
 import { ComponentTest } from '../../../test/test-bed/component';
 import { SizingSmallDirective } from './index';
@@ -6,37 +6,35 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 @Component({
-    template: `
+  template: `
         <p ignSizeSmall>one</p>
         <p nuSizeSmall>two</p>
-    `
+    `,
 })
-class DirectiveHostComponent {
-}
+class DirectiveHostComponent {}
 
 describe('Form Sizing Small', () => {
-    let fixture: ComponentFixture<DirectiveHostComponent>;
-    let de: DebugElement[];
-    const maxWidth: string = '192px';
-    const flex: string = '1';
+  let fixture: ComponentFixture<DirectiveHostComponent>;
+  let de: DebugElement[];
+  const maxWidth = '192px';
+  const flex = '1';
 
-    beforeEach(async () => {
-        await ComponentTest.createTestBed([], [DirectiveHostComponent, SizingSmallDirective]);
-    });
+  beforeEach(() => {
+    ComponentTest.createTestBed([], [DirectiveHostComponent, SizingSmallDirective] as Component[]);
 
-    beforeEach(() => {
-        fixture = TestBed.createComponent(DirectiveHostComponent);
-        fixture.detectChanges();
-        de = fixture.debugElement.queryAll(By.css('p'));
-    });
+    fixture = TestBed.createComponent(DirectiveHostComponent);
 
-    it('should set max-width to 192px', () => {
-        expect(de[0].nativeElement.style.maxWidth).toBe(maxWidth);
-        expect(de[1].nativeElement.style.maxWidth).toBe(maxWidth);
-    });
+    fixture.detectChanges();
+    de = fixture.debugElement.queryAll(By.css('p'));
+  });
 
-    it('should set flex to 1', () => {
-        expect(de[0].nativeElement.style.flex).toBe(flex);
-        expect(de[1].nativeElement.style.flex).toBe(flex);
-    });
+  it('should set max-width to 192px', () => {
+    expect(de[0].nativeElement.style.maxWidth).toBe(maxWidth);
+    expect(de[1].nativeElement.style.maxWidth).toBe(maxWidth);
+  });
+
+  it('should set flex to 1', () => {
+    expect(de[0].nativeElement.style.flex).toBe(flex);
+    expect(de[1].nativeElement.style.flex).toBe(flex);
+  });
 });

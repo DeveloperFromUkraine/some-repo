@@ -1,6 +1,5 @@
 export * from './card-actions/index';
 export * from './card-aside/index';
-export * from './card-container/index';
 export * from './card-header-container/index';
 export * from './card-main/index';
 export * from './card-section/index';

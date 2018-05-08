@@ -1,19 +1,18 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { ListContainerComponent } from "../index";
-import { ComponentTest } from "../../test/test-bed/component";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ListContainerComponent } from '../index';
+import { ComponentTest } from '../../test/test-bed/component';
+import { Component } from '@angular/core';
 
 describe('List Container', () => {
-    let fixture: ComponentFixture<ListContainerComponent>;
+  let fixture: ComponentFixture<ListContainerComponent>;
 
-    beforeEach(async () => {
-        await ComponentTest.createTestBed([], [ListContainerComponent]);
-    });
+  beforeEach(() => {
+    ComponentTest.createTestBed([], [ListContainerComponent] as Component[]);
 
-    beforeEach(() => {
-        fixture = TestBed.createComponent(ListContainerComponent);
-    });
+    fixture = TestBed.createComponent(ListContainerComponent);
+  });
 
-    it('should match snapshot', () => {
-        expect(fixture).toMatchSnapshot();
-    });
+  it('should match snapshot', () => {
+    expect(fixture).toMatchSnapshot();
+  });
 });

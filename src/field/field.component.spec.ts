@@ -1,169 +1,163 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import {FieldComponent, FieldInlineComponent, EditableFieldComponent, EditableFieldInlineComponent} from './field.component';
+import {
+  FieldComponent,
+  FieldInlineComponent,
+  EditableFieldComponent,
+  EditableFieldInlineComponent,
+} from './field.component';
 import { ComponentTest } from '../../test/test-bed/component';
 import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-import { MatIconModule } from '@angular/material';
+import { DebugElement, Component } from '@angular/core';
 
 describe('Field', () => {
-    let fixture: ComponentFixture<FieldComponent>;
-    let component: FieldComponent;
-    let de: DebugElement;
-    let ne: HTMLElement;
+  let fixture: ComponentFixture<FieldComponent>;
+  let component: FieldComponent;
+  let de: DebugElement;
+  let ne: HTMLElement;
 
-    beforeEach(async () => {
-        ComponentTest.createTestBed([], [FieldComponent]);
-    });
+  beforeEach(() => {
+    ComponentTest.createTestBed([], [FieldComponent] as Component[]);
 
-    beforeEach(() => {
-        fixture = TestBed.createComponent(FieldComponent);
-        component = fixture.componentInstance;
+    fixture = TestBed.createComponent(FieldComponent);
+    component = fixture.componentInstance;
 
-        fixture.detectChanges();
-    });
+    fixture.detectChanges();
+  });
 
-    it('should set label input', async () => {
-        de = fixture.debugElement.query(By.css('.label'));
-        ne = de.nativeElement;
+  it('should set label input', async () => {
+    de = fixture.debugElement.query(By.css('.label'));
+    ne = de.nativeElement;
 
-        component.label = 'label!';
-        await fixture.detectChanges();
+    component.label = 'label!';
+    await fixture.detectChanges();
 
-        expect(ne.textContent).toContain(component.label);
-    });
+    expect(ne.textContent).toContain(component.label);
+  });
 
-    it('should match snapshot', async () => {
-        component.label = 'label!';
-        await fixture.detectChanges();
+  it('should match snapshot', async () => {
+    component.label = 'label!';
+    await fixture.detectChanges();
 
-        expect(fixture).toMatchSnapshot();
-    });
+    expect(fixture).toMatchSnapshot();
+  });
 });
 
 describe('FieldInlineComponent', () => {
-    let fixture: ComponentFixture<FieldInlineComponent>;
-    let component: FieldInlineComponent;
-    let de: DebugElement;
-    let ne: HTMLElement;
+  let fixture: ComponentFixture<FieldInlineComponent>;
+  let component: FieldInlineComponent;
+  let de: DebugElement;
+  let ne: HTMLElement;
 
-    beforeEach(async () => {
-        ComponentTest.createTestBed([], [FieldInlineComponent]);
-    });
+  beforeEach(() => {
+    ComponentTest.createTestBed([], [FieldInlineComponent] as Component[]);
 
-    beforeEach(() => {
-        fixture = TestBed.createComponent(FieldInlineComponent);
-        component = fixture.componentInstance;
+    fixture = TestBed.createComponent(FieldInlineComponent);
+    component = fixture.componentInstance;
 
-        fixture.detectChanges();
-    });
+    fixture.detectChanges();
+  });
 
-    it('should set label input', async () => {
-        de = fixture.debugElement.query(By.css('.label'));
-        ne = de.nativeElement;
+  it('should set label input', async () => {
+    de = fixture.debugElement.query(By.css('.label'));
+    ne = de.nativeElement;
 
-        component.label = 'label!';
-        await fixture.detectChanges();
+    component.label = 'label!';
+    await fixture.detectChanges();
 
-        expect(ne.textContent).toContain(component.label);
-    });
+    expect(ne.textContent).toContain(component.label);
+  });
 
-    it('should match snapshot', async () => {
-        component.label = 'label!';
-        await fixture.detectChanges();
+  it('should match snapshot', async () => {
+    component.label = 'label!';
+    await fixture.detectChanges();
 
-        expect(fixture).toMatchSnapshot();
-    });
+    expect(fixture).toMatchSnapshot();
+  });
 });
 
 describe('EditableFieldComponent', () => {
-    let fixture: ComponentFixture<EditableFieldComponent>;
-    let component: EditableFieldComponent;
-    let de: DebugElement;
-    let ne: HTMLElement;
+  let fixture: ComponentFixture<EditableFieldComponent>;
+  let component: EditableFieldComponent;
+  let de: DebugElement;
+  let ne: HTMLElement;
 
-    beforeEach(async () => {
-        ComponentTest.createTestBed([MatIconModule], [EditableFieldComponent]);
-    });
+  beforeEach(() => {
+    ComponentTest.createTestBed([], [EditableFieldComponent] as Component[]);
 
-    beforeEach(() => {
-        fixture = TestBed.createComponent(EditableFieldComponent);
-        component = fixture.componentInstance;
+    fixture = TestBed.createComponent(EditableFieldComponent);
+    component = fixture.componentInstance;
 
-        fixture.detectChanges();
-    });
+    fixture.detectChanges();
+  });
 
-    it('should set label input', async () => {
-        de = fixture.debugElement.query(By.css('.label'));
-        ne = de.nativeElement;
+  it('should set label input', async () => {
+    de = fixture.debugElement.query(By.css('.label'));
+    ne = de.nativeElement;
 
-        component.label = 'label!';
-        await fixture.detectChanges();
+    component.label = 'label!';
+    await fixture.detectChanges();
 
-        expect(ne.textContent).toContain(component.label);
-    });
+    expect(ne.textContent).toContain(component.label);
+  });
 
-    it('should show mode_edit icon when none specified', async() => {
-        de = fixture.debugElement.query(By.css('mat-icon'));
-        ne = de.nativeElement;
-        
-        const DEFAULT_LABEL =  'mode_edit';
-        await fixture.detectChanges();
+  it('should show mode_edit icon when none specified', async () => {
+    de = fixture.debugElement.query(By.css('mat-icon'));
+    ne = de.nativeElement;
 
-        expect(ne.textContent).toContain(DEFAULT_LABEL);
-    });
+    const DEFAULT_LABEL = 'mode_edit';
+    await fixture.detectChanges();
 
-    it('should show user defined icon when none specified', async() => {
-        de = fixture.debugElement.query(By.css('mat-icon'));
-        ne = de.nativeElement;
-        
-        component.editIcon = 'home';
-        await fixture.detectChanges();
+    expect(ne.textContent).toContain(DEFAULT_LABEL);
+  });
 
-        expect(ne.textContent).toContain(component.editIcon);
-    });
+  it('should show user defined icon when none specified', async () => {
+    de = fixture.debugElement.query(By.css('mat-icon'));
+    ne = de.nativeElement;
 
-    it('should call handleClick when click event emitted', async () => {
-        de = fixture.debugElement.query(By.css('.mat-icon-button'));
-        ne = de.nativeElement;
+    component.editIcon = 'home';
+    await fixture.detectChanges();
 
-        let spy = jest.fn();
+    expect(ne.textContent).toContain(component.editIcon);
+  });
 
-        component.onIconClick.subscribe(spy);
-        de.triggerEventHandler('click', null);
-        await fixture.detectChanges();
+  it('should call handleClick when click event emitted', async () => {
+    de = fixture.debugElement.query(By.css('.mat-icon-button'));
+    ne = de.nativeElement;
 
-        expect(spy).toHaveBeenCalled();
-    });
+    let spy = jest.fn();
 
-    it('should match snapshot', async () => {
-        component.label = 'label!';
-        await fixture.detectChanges();
+    component.onIconClick.subscribe(spy);
+    de.triggerEventHandler('click', null);
+    await fixture.detectChanges();
 
-        expect(fixture).toMatchSnapshot();
-    });
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('should match snapshot', async () => {
+    component.label = 'label!';
+    await fixture.detectChanges();
+
+    expect(fixture).toMatchSnapshot();
+  });
 });
 
 describe('EditableFieldInlineComponent', () => {
-    let fixture: ComponentFixture<EditableFieldInlineComponent>;
-    let component: EditableFieldInlineComponent;
-    let de: DebugElement;
-    let ne: HTMLElement;
+  let fixture: ComponentFixture<EditableFieldInlineComponent>;
+  let component: EditableFieldInlineComponent;
 
-    beforeEach(async () => {
-        ComponentTest.createTestBed([MatIconModule], [EditableFieldInlineComponent]);
-    });
+  beforeEach(() => {
+    ComponentTest.createTestBed([], [EditableFieldInlineComponent] as Component[]);
 
-    beforeEach(() => {
-        fixture = TestBed.createComponent(EditableFieldInlineComponent);
-        component = fixture.componentInstance;
+    fixture = TestBed.createComponent(EditableFieldInlineComponent);
+    component = fixture.componentInstance;
 
-        fixture.detectChanges();
-    });
+    fixture.detectChanges();
+  });
 
-    it('should match snapshot', async () => {
-        component.label = 'label!';
-        await fixture.detectChanges();
+  it('should match snapshot', async () => {
+    component.label = 'label!';
+    await fixture.detectChanges();
 
-        expect(fixture).toMatchSnapshot();
-    });
+    expect(fixture).toMatchSnapshot();
+  });
 });

@@ -8,115 +8,89 @@ exports[`Date Range should match snapshot 1`] = `
   startDateControlName={[Function String]}
   startPickerInput={[Function MatDatepickerInput]}
 >
-  <form
-    novalidate=""
-  >
+  <form>
     
     
     <mat-form-field
-      class="mat-input-container mat-form-field ng-tns-c0-0 mat-primary"
       role="group"
     >
-      <div
-        class="mat-input-wrapper mat-form-field-wrapper"
-      >
-        <div
-          class="mat-input-flex mat-form-field-flex"
-        >
-          
-          <div
-            class="mat-input-infix mat-form-field-infix"
-          >
-            
       
-            <input
-              class="mat-input-element mat-form-field-autofill-control"
-              matinput=""
-              placeholder="Start Date (Typeahead entries appear in dropdown)"
-            />
-            
+      
+      <input
+        matinput=""
+      />
+      
   
       
-            
-      
-            <mat-datepicker />
-            
-    
-            <span
-              class="mat-form-field-label-wrapper mat-input-placeholder-wrapper mat-form-field-placeholder-wrapper"
-            >
-              
-            </span>
-          </div>
-          
-        </div>
-        <div
-          class="mat-input-underline mat-form-field-underline"
+      <mat-datepicker-toggle
+        class="mat-datepicker-toggle"
+        matsuffix=""
+      >
+        <button
+          class="mat-icon-button"
+          mat-icon-button=""
+          type="button"
         >
           <span
-            class="mat-input-ripple mat-form-field-ripple"
+            class="mat-button-wrapper"
+          >
+            
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
           />
-        </div>
-        <div
-          class="mat-input-subscript-wrapper mat-form-field-subscript-wrapper"
-        >
-          
-          
-        </div>
-      </div>
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+      </mat-datepicker-toggle>
+      
+      
+      <mat-datepicker />
+      
+    
     </mat-form-field>
     
     
     <mat-form-field
-      class="mat-input-container mat-form-field ng-tns-c0-1 mat-primary"
       role="group"
     >
-      <div
-        class="mat-input-wrapper mat-form-field-wrapper"
+      
+      
+      <input
+        matinput=""
+      />
+      
+      
+      <mat-datepicker-toggle
+        class="mat-datepicker-toggle"
+        matsuffix=""
       >
-        <div
-          class="mat-input-flex mat-form-field-flex"
-        >
-          
-          <div
-            class="mat-input-infix mat-form-field-infix"
-          >
-            
-      
-            <input
-              class="mat-input-element mat-form-field-autofill-control"
-              matinput=""
-              placeholder="End Date (Typeahead entries appear in dropdown)"
-            />
-            
-      
-            
-      
-            <mat-datepicker />
-            
-    
-            <span
-              class="mat-form-field-label-wrapper mat-input-placeholder-wrapper mat-form-field-placeholder-wrapper"
-            >
-              
-            </span>
-          </div>
-          
-        </div>
-        <div
-          class="mat-input-underline mat-form-field-underline"
+        <button
+          class="mat-icon-button"
+          mat-icon-button=""
+          type="button"
         >
           <span
-            class="mat-input-ripple mat-form-field-ripple"
+            class="mat-button-wrapper"
+          >
+            
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
           />
-        </div>
-        <div
-          class="mat-input-subscript-wrapper mat-form-field-subscript-wrapper"
-        >
-          
-          
-        </div>
-      </div>
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+      </mat-datepicker-toggle>
+      
+      
+      <mat-datepicker />
+      
+    
     </mat-form-field>
     
   

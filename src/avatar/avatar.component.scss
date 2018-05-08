@@ -1,0 +1,93 @@
+@import '~ignite-common/styles/ignite';
+
+// Sizes
+$size-small: 40px;
+$size-large: ign-size(xxl);
+
+$icon-size-small: ign-icon-size(s); 
+$icon-size-large: ign-icon-size(m); 
+
+$font-size-small: ign-font-size(xxxs);
+$font-size-large: ign-font-size(s);
+
+// Colors
+$white: ign-palette($ign-palette-gray, 50);
+$light-gray: ign-palette($ign-palette-gray, 150);
+$dark-gray: ign-palette($ign-palette-gray, 500);
+
+.container {
+  width: $size-large;
+  height: $size-large;
+  border-radius: 50%;
+  overflow: hidden;
+
+  .image {
+    width: $size-large;
+    height: $size-large;
+  }
+
+  .content-container {
+    background-color: $light-gray;
+    width: $size-large;
+    height: $size-large;
+  }
+
+  .image {
+    @extend .content-container;
+  }
+
+  .initials-container {
+    @extend .content-container;
+    font-size: $font-size-large;
+    padding-top: 24px;
+    text-align: center;
+    background-color: $dark-gray;
+    color: $white;
+  }
+
+  .icon-container {
+    @extend .content-container;
+    .icon {
+      width: $size-large;
+      height: $size-large;
+      font-size: $icon-size-large;
+      text-align: center;
+      position: relative;
+      top: 14%;
+      color: $dark-gray;
+    }
+  }
+}
+
+.container.small {
+  width: $size-small;
+  height: $size-small;
+
+  .image {
+    width: $size-small;
+    height: $size-small;
+  }
+
+  .content-container {
+    width: $size-small;
+    height: $size-small;
+  }
+
+  .initials-container {
+    font-size: $font-size-small;
+    padding-top: 12px;
+    text-align: center;
+  }
+
+  .icon-container {
+    .icon {
+      width: $size-small;
+      height: $size-small;
+      font-size: $icon-size-small;
+    }
+  }
+}
+
+.container.large {
+  margin: 0 auto;
+}

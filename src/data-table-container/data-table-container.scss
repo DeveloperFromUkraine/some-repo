@@ -1,0 +1,71 @@
+@import '~ignite-common/styles/ignite';
+
+$icon-length: 18px;
+$hover-color: #EEEEEE;
+
+@mixin icon-sizing {
+    width: $icon-length;
+    height: $icon-length;
+}
+
+%column-spacing {
+    padding-right: 56px;
+
+    &:first-child {
+        padding-right: ign-spacing(s);
+    }
+    &:last-child {
+        padding-right: 0;
+    }
+}
+
+:host ::ng-deep .mat-cell {
+    @extend %column-spacing;
+}
+
+:host ::ng-deep .mat-header-cell {
+    @extend %column-spacing;
+}
+
+:host ::ng-deep .checkbox  {
+    padding-right: ign-spacing(s);
+    overflow: initial;
+}
+
+:host ::ng-deep .mat-checkbox-inner-container {
+    @include icon-sizing();
+}
+
+:host ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background-color: ign-color(accent);
+}
+
+:host ::ng-deep .inline-edit  {
+    padding-right: ign-spacing(xs);
+    text-align: right;
+    overflow: initial;
+
+    i {
+        @include icon-sizing();
+    }
+}
+
+:host ::ng-deep .number-column {
+    text-align: right;
+}
+
+:host ::ng-deep .mat-header-row {
+    height: ign-spacing(xl);
+}
+
+:host ::ng-deep .mat-row {
+    height: ign-spacing(l);
+
+    &:hover {
+        background: $hover-color;  
+    }
+}
+
+:host ::ng-deep .mat-paginator {
+    height: 56px;
+}

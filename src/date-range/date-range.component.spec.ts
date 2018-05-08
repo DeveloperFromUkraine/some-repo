@@ -1,24 +1,23 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DateRangeComponent } from './date-range.component';
-import { ComponentTest } from "../../test/test-bed/component";
-import { ReactiveFormsModule } from "@angular/forms";
-import { MatFormFieldModule, MatInputModule, MatDatepickerModule, MatNativeDateModule } from "@angular/material";
+import { ComponentTest } from '../../test/test-bed/component';
+import { MatDatepickerModule, MatNativeDateModule } from '@angular/material';
+import { TranslationModule } from '../localization/translation.module';
+import { NgModule, Component } from '@angular/core';
 
 describe('Date Range', () => {
-    let fixture: ComponentFixture<DateRangeComponent>;
+  let fixture: ComponentFixture<DateRangeComponent>;
 
-    beforeEach(async () => {
-        await ComponentTest.createTestBed([MatFormFieldModule,
-            MatInputModule,
-            MatDatepickerModule,
-            ReactiveFormsModule, MatNativeDateModule], [DateRangeComponent]);
-    });
+  beforeEach(() => {
+    ComponentTest.createTestBed(
+      [MatDatepickerModule, MatNativeDateModule, TranslationModule] as NgModule[],
+      [DateRangeComponent] as Component[]
+    );
 
-    beforeEach(() => {
-        fixture = TestBed.createComponent(DateRangeComponent);
-    });
+    fixture = TestBed.createComponent(DateRangeComponent);
+  });
 
-    it('should match snapshot', () => {
-        expect(fixture).toMatchSnapshot();
-    });
+  it('should match snapshot', () => {
+    expect(fixture).toMatchSnapshot();
+  });
 });

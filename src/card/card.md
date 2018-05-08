@@ -10,7 +10,7 @@ See [Material Design Components](https://material.io/guidelines/components/cards
 ## Sample
 <mat-tab-group>
     <mat-tab label="Component Sample"><div class="tab-height">
-        <ign-card-container>
+        <mat-card>
             <ign-card-main>
                 <ign-card-header-container><ign-card-toolbar>
                     <ign-card-title>This is a Card Title Component.</ign-card-title>
@@ -46,11 +46,11 @@ See [Material Design Components](https://material.io/guidelines/components/cards
                             type="button"> Cancel Card Actions Component</button>
                 </ign-card-actions>
             </ign-card-main>
-        </ign-card-container>
+        </mat-card>
     </div></mat-tab>
     <mat-tab label="HTML"><div class="tab-height">
         <table style="width:100%">
-            <p> &lt;ign-card-container&gt;</p>
+            <p> &lt;mat-card&gt;</p>
             <p>&nbsp; &lt;ign-card-main&gt;</p>
             <p>&nbsp;&nbsp;&lt;ign-card-header-container&gt;&lt;ign-card-toolbar&gt;</p>
             <p>&nbsp;&nbsp;&nbsp; &lt;ign-card-title&gt;This is a Card Title Component.&lt;/ign-card-title&gt;</p>
@@ -81,7 +81,7 @@ See [Material Design Components](https://material.io/guidelines/components/cards
             <p>&nbsp;&nbsp;&nbsp;&nbsp; type="button"&gt; Cancel Card Actions Component&lt;/button&gt;</p>
             <p>&nbsp;&nbsp;&nbsp;&lt;/ign-card-actions&gt;</p>
             <p>&nbsp; &lt;/ign-card-main&gt;</p>
-            <p>&lt;/ign-card-container&gt;</p>
+            <p>&lt;/mat-card&gt;</p>
         </table>
     </div></mat-tab>
 </mat-tab-group>
@@ -91,7 +91,6 @@ See [Material Design Components](https://material.io/guidelines/components/cards
 * Content should be separated by context.
 * The following components are available for usage with and of cards:
     * card-actions
-    * card-container
     * card-header-container
     * card-main
     * card-section
@@ -105,7 +104,7 @@ See [Material Design Components](https://material.io/guidelines/components/cards
 ## Style
 * Cards should be placed evenly spaced around the page in respect to other cards.
 * The hierarchy of card components should be as follows (in descending order):
-    * card-container
+    * mat-card
         * card-main
             * card-header-container
                 * card-toolbar
@@ -129,6 +128,27 @@ See [Material Design Components](https://material.io/guidelines/components/cards
 <mat-accordion id="accordion">
     <mat-expansion-panel>
         <mat-expansion-panel-header>
+            <mat-panel-title>
+                mat-card
+            </mat-panel-title>
+            <mat-panel-description><i>The mat-card component houses the card and all its contents.</i></mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-tab-group>
+            <mat-tab label="Component Styling"><div class="tab-height">
+                <ul>
+                    <li>Material Card components must be used to implement cards.</li>
+                    <li>Material Card components should be spaced within 4px-72px of other card-container componenets,
+                        dependent on screen resolution and incrementing in multiples of four.</li>
+                    <li>Material Card components are housing units- they do not have a physical representation.</li>
+                </ul>
+            </div></mat-tab>
+            <mat-tab label="HTML"><div class="tab-height">
+                <p> &lt;mat-card&gt;&lt;/mat-card&gt;</p>
+            </div></mat-tab>
+        </mat-tab-group>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
             <mat-panel-title><b>
                 card-actions
             </b></mat-panel-title>
@@ -143,27 +163,6 @@ See [Material Design Components](https://material.io/guidelines/components/cards
             </div></mat-tab>
             <mat-tab label="HTML"><div class="tab-height">
                 <p>&lt;ign-card-actions&gt; &lt;/ign-card-actions&gt;</p>
-            </div></mat-tab>
-        </mat-tab-group>
-        </mat-expansion-panel>
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title><b>
-                    card-container
-                </b></mat-panel-title>
-                <mat-panel-description><i>The card-container component houses the card and all its contents.</i></mat-panel-description>
-            </mat-expansion-panel-header>
-        <mat-tab-group>
-            <mat-tab label="Component Styling"><div class="tab-height">
-                <ul>
-                    <li>Card-container components must be used to implement cards.</li>
-                    <li>Card-container components should be spaced within 4px-72px of other card-container componenets,
-                        dependent on screen resolution and incrementing in multiples of four.</li>
-                    <li>Card-container components are housing units- they do not have a physical representation.</li>
-                </ul>
-            </div></mat-tab>
-            <mat-tab label="HTML"><div class="tab-height">
-                <p> &lt;ign-card-container&gt;&lt;/ign-card-container&gt;</p>
             </div></mat-tab>
         </mat-tab-group>
         </mat-expansion-panel>

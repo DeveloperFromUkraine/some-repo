@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { MatFormFieldModule, MatInputModule, MatDatepickerModule } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DateRangeComponent } from './date-range.component';
+import { TranslationModule } from '../localization/translation.module';
 
 @NgModule({
   imports: [
@@ -9,12 +10,9 @@ import { DateRangeComponent } from './date-range.component';
     MatInputModule,
     MatDatepickerModule,
     ReactiveFormsModule,
+    TranslationModule,
   ],
-  declarations: [
-    DateRangeComponent,
-  ],
-  exports: [
-    DateRangeComponent,
-  ],
+  declarations: [DateRangeComponent],
+  exports: [DateRangeComponent],
 })
 export class DateRangeModule {}

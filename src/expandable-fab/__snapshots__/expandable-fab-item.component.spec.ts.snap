@@ -20,11 +20,7 @@ exports[`Expandable Fab Item should match snapshot 1`] = `
   >
     
     
-    <mat-icon
-      aria-hidden="true"
-      class="mat-icon material-icons"
-      role="img"
-    >
+    <mat-icon>
       
       email
     
@@ -32,5 +28,9 @@ exports[`Expandable Fab Item should match snapshot 1`] = `
     
   
   </a>
+  
+  
+  
+  
 </ign-expandable-fab-item>
 `;

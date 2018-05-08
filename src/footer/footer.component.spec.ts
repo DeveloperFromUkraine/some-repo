@@ -1,19 +1,18 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { FooterComponent } from "./footer.component";
-import { ComponentTest } from "../../test/test-bed/component";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FooterComponent } from './footer.component';
+import { ComponentTest } from '../../test/test-bed/component';
+import { Component } from '@angular/core';
 
 describe('Footer', () => {
-    let fixture: ComponentFixture<FooterComponent>;
+  let fixture: ComponentFixture<FooterComponent>;
 
-    beforeEach(async () => {
-        await ComponentTest.createTestBed([], [FooterComponent]);
-    });
+  beforeEach(() => {
+    ComponentTest.createTestBed([], [FooterComponent] as Component[]);
 
-    beforeEach(() => {
-        fixture = TestBed.createComponent(FooterComponent);
-    });
+    fixture = TestBed.createComponent(FooterComponent);
+  });
 
-    it('should match snapshot', () => {
-        expect(fixture).toMatchSnapshot();
-    });
+  it('should match snapshot', () => {
+    expect(fixture).toMatchSnapshot();
+  });
 });

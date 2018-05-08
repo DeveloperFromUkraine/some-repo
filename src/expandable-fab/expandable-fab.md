@@ -25,9 +25,9 @@ The expandable fab handles state (open/close) implicitly so developers do not ne
     <mat-tab label="HTML"><div class="tab-height">
         <table style="width:100%">
             <p>&lt;ign-expandable-fab ariaLabelOpen="open example menu" ariaLabelClose="close example menu"&gt;</p>
-            <p>   &nbsp;&nbsp;&lt;ign-expandable-fab-item icon="add"&gt;</p>
+            <p>   &nbsp;&nbsp;&lt;ign-expandable-fab-item icon="add" router="['./add']"&gt;</p>
             <p>   &nbsp;&nbsp;&lt;/ign-expandable-fab-item&gt;</p>
-            <p>   &nbsp;&nbsp;&lt;ign-expandable-fab-item icon="file\_upload"&gt;</p>
+            <p>   &nbsp;&nbsp;&lt;ign-expandable-fab-item icon="file\_upload" href="#"&gt;</p>
             <p>   &nbsp;&nbsp;&lt;/ign-expandable-fab-item&gt;</p>
             <p>   &nbsp;&nbsp;&lt;ign-expandable-fab-item icon="lock\_outline"&gt;</p>
             <p>   &nbsp;&nbsp;&lt;/ign-expandable-fab-item&gt;</p>
@@ -53,10 +53,13 @@ ign-expanadable-fab-item
 * (click) - click handler
 * [tooltipText] - string, tooltip text you wish to display, be sure to pass translated text
 * [icon] - text, a material icon. You can find the list of supported icons [here](https://material.io/icons/).
+* router - route, router change done on click
+* href - link, link to be directed to on click
 
 ## Accessibility
 
 * Add a descriptive ariaLabelOpen and ariaLabelClose within the ign-expandable-fab tag to describe the menu being opened/closed
+* When using the fab button to change a route or href, use the provided inputs in the fab tag (router/href) to prevent issues with tabbing through the control for accessibility
 * Refer to Sample HTML for usage
 
 *** TypeScript *** 

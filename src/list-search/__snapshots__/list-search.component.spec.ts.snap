@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List Search Component Should match snapshot 1`] = `
+<ign-list-search
+  ariaLabel={[Function String]}
+  searchCriteria$={[Function BehaviorSubject]}
+  searchInput={[Function ElementRef]}
+>
+  <mat-icon
+    class="search-icon"
+  >
+    search
+  </mat-icon>
+  <mat-form-field
+    floatplaceholder="never"
+  >
+    
+    
+    <input
+      aria-label="Search list"
+      matinput=""
+      placeholder="Search"
+    />
+    
+    
+    
+    
+  
+  </mat-form-field>
+  
+</ign-list-search>
+`;

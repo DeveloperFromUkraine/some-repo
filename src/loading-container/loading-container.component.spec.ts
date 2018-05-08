@@ -1,47 +1,42 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { LoadingContainerComponent } from "./loading-container.component";
-import { ComponentTest } from "../../test/test-bed/component";
-import { MatProgressSpinnerModule } from "@angular/material";
-import { DebugElement } from "@angular/core";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { LoadingContainerComponent } from './loading-container.component';
+import { ComponentTest } from '../../test/test-bed/component';
+import { DebugElement, Component } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
-
 describe('Loading Container', () => {
-    let fixture: ComponentFixture<LoadingContainerComponent>;
-    let component: LoadingContainerComponent;
-    let de: DebugElement;
-    let ne: HTMLElement;
+  let fixture: ComponentFixture<LoadingContainerComponent>;
+  let component: LoadingContainerComponent;
+  let de: DebugElement;
 
-    beforeEach(async () => {
-        await ComponentTest.createTestBed([MatProgressSpinnerModule], [LoadingContainerComponent]);
-    });
+  beforeEach(() => {
+    ComponentTest.createTestBed([], [LoadingContainerComponent] as Component[]);
 
-    beforeEach(() => {
-        fixture = TestBed.createComponent(LoadingContainerComponent);
-        component = fixture.componentInstance;
+    fixture = TestBed.createComponent(LoadingContainerComponent);
+    component = fixture.componentInstance;
 
-        fixture.detectChanges();
-    }); 
+    fixture.detectChanges();
+  });
 
-    it('should have spinner-container if loading', async () => {
-        component.pastDelay = true;
+  it('should have spinner-container if loading', async () => {
+    component.pastDelay = true;
 
-        await fixture.detectChanges();
-        de = fixture.debugElement.query(By.css('.spinner-container'));
+    await fixture.detectChanges();
+    de = fixture.debugElement.query(By.css('.spinner-container'));
 
-        expect(de).toBeTruthy();
-    });
+    expect(de).toBeTruthy();
+  });
 
-    it('should not have spinner-container if not loading', async () => {
-        component.loading = false;
+  it('should not have spinner-container if not loading', async () => {
+    component.loading = false;
 
-        await fixture.detectChanges();
-        de = fixture.debugElement.query(By.css('.spinner-container'));
+    await fixture.detectChanges();
+    de = fixture.debugElement.query(By.css('.spinner-container'));
 
-        expect(de).toBeNull();
-    });
+    expect(de).toBeNull();
+  });
 
-    it('should match snapshot', async () => {
-        expect(fixture).toMatchSnapshot();
-    });
+  it('should match snapshot', async () => {
+    expect(fixture).toMatchSnapshot();
+  });
 });

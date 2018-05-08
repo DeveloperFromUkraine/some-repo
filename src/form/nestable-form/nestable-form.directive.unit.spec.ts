@@ -9,9 +9,9 @@ describe('Nestable Form', () => {
     beforeEach(() => {
       const fb = new FormBuilder();
 
-      parentDirective = new NestableFormDirective(null, null);
+      parentDirective = new NestableFormDirective(null);
       parentDirective.formGroup = fb.group({});
-      directive = new NestableFormDirective(parentDirective, null);
+      directive = new NestableFormDirective(parentDirective);
       directive.formGroup = fb.group({
         control1: ['1', Validators.required],
         control2: ['2'],
@@ -43,7 +43,7 @@ describe('Nestable Form', () => {
         parentDirective.registerNestedForm('myself', parentDirective.formGroup)
       ).toThrowError(
         'Trying to add itself! Nestable form can be added only on parent "FormGroup".'
-        );
+      );
     });
   });
 });

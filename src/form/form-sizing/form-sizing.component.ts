@@ -1,11 +1,4 @@
-import {
-  Directive,
-  ElementRef,
-  Input,
-  OnChanges,
-  Renderer2,
-  SimpleChanges,
-} from '@angular/core';
+import { Directive, ElementRef, Input, OnChanges, Renderer2, SimpleChanges } from '@angular/core';
 // tslint:disable:max-classes-per-file
 
 @Directive({ selector: '[ignSizeSmall], [nuSizeSmall]' })

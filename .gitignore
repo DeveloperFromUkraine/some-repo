@@ -2,6 +2,9 @@
 node_modules/*
 npm-debug.log
 
+# Yarn
+yarn-error.log
+
 # TypeScript
 src/*.js
 src/*.map
@@ -30,10 +33,14 @@ Desktop.ini
 
 # Build files
 dist/*
+dist.tgz
 
 # Playground tmp files
 .playground
 
 # Coverage files
-coverage/lcov-report
-coverage/lcov.info
+coverage/*
+test/jest-output.json
+
+# Misc
+/.scannerwork

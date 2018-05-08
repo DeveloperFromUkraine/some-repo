@@ -1,4 +1,11 @@
-import { Component, Input, ChangeDetectionStrategy, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import {
+  Component,
+  Input,
+  ChangeDetectionStrategy,
+  OnInit,
+  OnDestroy,
+  ViewChild,
+} from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { MatDatepickerInput, MatDatepickerInputEvent } from '@angular/material';
 import 'rxjs/util/pipe';
@@ -13,22 +20,15 @@ import { Subject } from 'rxjs/Subject';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DateRangeComponent implements OnInit, OnDestroy {
-  @Input()
-  formGroup: FormGroup;
-  @Input()
-  startDateControlName = 'startDate';
-  @Input()
-  endDateControlName = 'endDate';
+  @Input() formGroup: FormGroup;
+  @Input() startDateControlName = 'startDate';
+  @Input() endDateControlName = 'endDate';
 
-  @Input()
-  startDateFilter: (date: Date) => boolean;
-  @Input()
-  endDateFilter: (date: Date) => boolean;
+  @Input() startDateFilter: (date: Date) => boolean;
+  @Input() endDateFilter: (date: Date) => boolean;
 
-  @ViewChild('startPickerInput')
-  startPickerInput: MatDatepickerInput<Date>;
-  @ViewChild('endPickerInput')
-  endPickerInput: MatDatepickerInput<Date>;
+  @ViewChild('startPickerInput') startPickerInput: MatDatepickerInput<Date>;
+  @ViewChild('endPickerInput') endPickerInput: MatDatepickerInput<Date>;
 
   private close$ = new Subject<void>();
 
@@ -37,22 +37,19 @@ export class DateRangeComponent implements OnInit, OnDestroy {
       this.startPickerInput.dateChange.pipe(startWith(null)),
       this.endPickerInput.dateChange.pipe(startWith(null))
     )
-    .pipe(
-      takeUntil(this.close$),
-      switchMap(() => observableOf([
-        this.startPickerInput.value,
-        this.endPickerInput.value,
-      ])),
-      pairwise()
-    )
-    .subscribe(([[prevStart, prevEnd], [currStart, currEnd]]) => {
-      if (currStart && currEnd && (currEnd.getTime() < currStart.getTime())) {
-        if (!prevEnd || (currEnd.getTime() !== prevEnd.getTime())) {
-          this.formGroup.get(this.startDateControlName).setValue(currEnd);
+      .pipe(
+        takeUntil(this.close$),
+        switchMap(() => observableOf([this.startPickerInput.value, this.endPickerInput.value])),
+        pairwise()
+      )
+      .subscribe(([[prevStart, prevEnd], [currStart, currEnd]]) => {
+        if (currStart && currEnd && currEnd.getTime() < currStart.getTime()) {
+          if (!prevEnd || currEnd.getTime() !== prevEnd.getTime()) {
+            this.formGroup.get(this.startDateControlName).setValue(currEnd);
+          }
+          this.formGroup.get(this.endDateControlName).reset();
         }
-        this.formGroup.get(this.endDateControlName).reset();
-      }
-    });
+      });
   }
 
   ngOnDestroy(): void {

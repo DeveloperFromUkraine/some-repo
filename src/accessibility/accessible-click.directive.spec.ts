@@ -4,63 +4,61 @@ import { DebugElement } from '@angular/core';
 import { ComponentTest } from '../../test/test-bed/component';
 import { AccessibleClickDirective } from '../accessibility/accessibility.directive';
 import { By } from '@angular/platform-browser';
-import { RouterTestingModule } from '@angular/router/testing';
 
 @Component({
-    template: `
+  template: `
         <button class="directive" ignA11yClick>button</button>
-    `
+    `,
 })
-class DirectiveHostComponent {
-}
+class DirectiveHostComponent {}
 
 describe('Accessible Click', () => {
-    let fixture: ComponentFixture<DirectiveHostComponent>;
-    let de: DebugElement[];
-    let ne: HTMLElement;
-    let directive: AccessibleClickDirective;
+  let fixture: ComponentFixture<DirectiveHostComponent>;
+  let de: DebugElement[];
+  let ne: HTMLElement;
+  let directive: AccessibleClickDirective;
 
-    beforeEach(async () => {
-        await ComponentTest.createTestBed([RouterTestingModule.withRoutes([
-            { path: '*', component: DirectiveHostComponent }
-        ])], [DirectiveHostComponent, AccessibleClickDirective]);
-    });
+  beforeEach(() => {
+    ComponentTest.createTestBed([], [
+      DirectiveHostComponent,
+      AccessibleClickDirective,
+    ] as Component[]);
 
-    beforeEach(() => {
-        fixture = TestBed.createComponent(DirectiveHostComponent);
-        de = fixture.debugElement.queryAll(By.css('.directive'));
-        ne = de[0].nativeElement;
-        fixture.detectChanges();
-    });
+    fixture = TestBed.createComponent(DirectiveHostComponent);
+    de = fixture.debugElement.queryAll(By.css('.directive'));
+    ne = de[0].nativeElement;
 
-    it('should trigger onAccessibleClick when keyup.enter event emitted', () => {
-        directive = de[0].injector.get(AccessibleClickDirective);
-        jest.spyOn(directive, 'onAccessibleClick');
+    fixture.detectChanges();
+  });
 
-        de[0].triggerEventHandler('keyup.enter', null);
-        fixture.detectChanges();
+  it('should trigger onAccessibleClick when keyup.enter event emitted', () => {
+    directive = de[0].injector.get(AccessibleClickDirective);
+    jest.spyOn(directive, 'onAccessibleClick');
 
-        expect(directive.onAccessibleClick).toHaveBeenCalled();
-    });
+    de[0].triggerEventHandler('keyup.enter', new Event('keyup.enter'));
+    fixture.detectChanges();
 
-    it('should trigger onAccessibleClick when keyup.space event emitted', () => {
-        directive = de[0].injector.get(AccessibleClickDirective);
-        jest.spyOn(directive, 'onAccessibleClick');
+    expect(directive.onAccessibleClick).toHaveBeenCalled();
+  });
 
-        de[0].triggerEventHandler('keyup.space', null);
-        fixture.detectChanges();
+  it('should trigger onAccessibleClick when keyup.space event emitted', () => {
+    directive = de[0].injector.get(AccessibleClickDirective);
+    jest.spyOn(directive, 'onAccessibleClick');
 
-        expect(directive.onAccessibleClick).toHaveBeenCalled();
-    });
+    de[0].triggerEventHandler('keyup.space', new Event('keyup.space'));
+    fixture.detectChanges();
 
-    it('should trigger the click event when onAccessibleClick is called', () => {
-        directive = de[0].injector.get(AccessibleClickDirective);
-        let spy = jest.spyOn(directive.elementRef.nativeElement, 'click');
-        let event: KeyboardEvent = new KeyboardEvent('keyup.space', null);
+    expect(directive.onAccessibleClick).toHaveBeenCalled();
+  });
 
-        directive.onAccessibleClick(event);
-        fixture.detectChanges();
+  it('should trigger the click event when onAccessibleClick is called', () => {
+    directive = de[0].injector.get(AccessibleClickDirective);
+    let spy = jest.spyOn(directive.elementRef.nativeElement, 'click');
+    let event: KeyboardEvent = new KeyboardEvent('keyup.space', null);
 
-        expect(spy).toHaveBeenCalled();
-    });
+    directive.onAccessibleClick(event);
+    fixture.detectChanges();
+
+    expect(spy).toHaveBeenCalled();
+  });
 });
