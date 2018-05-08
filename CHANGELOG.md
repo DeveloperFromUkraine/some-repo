@@ -1,6 +1,6 @@
 ### vNEXT
 
-### v0.6.1
+### v0.7.0
 - Deprecated ign-nav-list, it is recommended to use mat-nav-list instead
 - Deprecated ign-divider, it is recommended to use mat-divider instead
 - Deprecated ign-card-container, it is recommended to use mat-card instead
