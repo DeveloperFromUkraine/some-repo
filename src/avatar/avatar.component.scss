@@ -7,7 +7,7 @@ $size-large: ign-size(xxl);
 $icon-size-small: ign-icon-size(s); 
 $icon-size-large: ign-icon-size(m); 
 
-$font-size-small: ign-font-size(xxxs);
+$font-size-small: 1rem;
 $font-size-large: ign-font-size(s);
 
 // Colors
@@ -39,7 +39,7 @@ $dark-gray: ign-palette($ign-palette-gray, 500);
   .initials-container {
     @extend .content-container;
     font-size: $font-size-large;
-    padding-top: 24px;
+    padding-top: 26px;
     text-align: center;
     background-color: $dark-gray;
     color: $white;
@@ -53,7 +53,7 @@ $dark-gray: ign-palette($ign-palette-gray, 500);
       font-size: $icon-size-large;
       text-align: center;
       position: relative;
-      top: 14%;
+      top: 25%;
       color: $dark-gray;
     }
   }
@@ -75,7 +75,7 @@ $dark-gray: ign-palette($ign-palette-gray, 500);
 
   .initials-container {
     font-size: $font-size-small;
-    padding-top: 12px;
+    padding-top: 14px;
     text-align: center;
   }
 
@@ -84,6 +84,7 @@ $dark-gray: ign-palette($ign-palette-gray, 500);
       width: $size-small;
       height: $size-small;
       font-size: $icon-size-small;
+      top: 12.5%;
     }
   }
 }
