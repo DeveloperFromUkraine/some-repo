@@ -3,6 +3,7 @@ import { SideNavHeaderComponent } from './index';
 import { DebugElement } from '@angular/core/src/debug/debug_node';
 import { ComponentTest } from '../../../test/test-bed/component';
 import { By } from '@angular/platform-browser';
+import { Component } from '@angular/core';
 
 describe('Side Nav Header', () => {
   let fixture: ComponentFixture<SideNavHeaderComponent>;
@@ -10,11 +11,9 @@ describe('Side Nav Header', () => {
   let de: DebugElement;
   let ne: HTMLElement;
 
-  beforeEach(async () => {
-    await ComponentTest.createTestBed([], [SideNavHeaderComponent]);
-  });
-
   beforeEach(() => {
+    ComponentTest.createTestBed([], [SideNavHeaderComponent] as Component[]);
+
     fixture = TestBed.createComponent(SideNavHeaderComponent);
     component = fixture.componentInstance;
 

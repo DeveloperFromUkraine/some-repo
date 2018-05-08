@@ -26,8 +26,7 @@ exports[`AvatarComponent should match snapshot 1`] = `
           
       <mat-icon
         aria-hidden="true"
-        class="icon mat-icon material-icons"
-        role="img"
+        class="icon"
       >
         person
       </mat-icon>

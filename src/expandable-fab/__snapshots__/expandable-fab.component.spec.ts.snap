@@ -39,11 +39,9 @@ exports[`Expandable Fab should match snapshot 1`] = `
         
           
         <mat-icon
-          aria-hidden="true"
-          class="icon icon-secondary mat-icon material-icons icon-secondary-active"
+          class="icon icon-secondary icon-secondary-active"
           ng-reflect-klass="icon icon-secondary"
           ng-reflect-ng-class="[object Object]"
-          role="img"
           style="position:absolute"
         >
           
@@ -53,11 +51,9 @@ exports[`Expandable Fab should match snapshot 1`] = `
         
           
         <mat-icon
-          aria-hidden="true"
-          class="icon icon-primary mat-icon material-icons icon-primary-active"
+          class="icon icon-primary icon-primary-active"
           ng-reflect-klass="icon icon-primary"
           ng-reflect-ng-class="[object Object]"
-          role="img"
         >
           
             add

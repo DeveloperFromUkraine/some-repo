@@ -3,7 +3,7 @@ import { ListSearchComponent } from './list-search.component';
 import { ComponentTest } from '../../test/test-bed/component';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core/src/debug/debug_node';
-import { MatIconModule, MatInputModule } from '@angular/material';
+import { Component } from '@angular/core';
 
 describe('List Search Component', () => {
   let fixture: ComponentFixture<ListSearchComponent>;
@@ -11,11 +11,9 @@ describe('List Search Component', () => {
   let de: DebugElement;
   let ne: HTMLElement;
 
-  beforeEach(async () => {
-    await ComponentTest.createTestBed([MatIconModule, MatInputModule], [ListSearchComponent]);
-  });
-
   beforeEach(() => {
+    ComponentTest.createTestBed([], [ListSearchComponent] as Component[]);
+
     fixture = TestBed.createComponent(ListSearchComponent);
     component = fixture.componentInstance;
 

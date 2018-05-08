@@ -1,6 +1,6 @@
-import { DebugElement } from '@angular/core';
+import { DebugElement, Component, NgModule } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatIconModule, MatTooltipModule } from '@angular/material';
+import { MatTooltipModule } from '@angular/material';
 import { By } from '@angular/platform-browser';
 
 import { ComponentTest } from '../../test/test-bed/component';
@@ -11,11 +11,9 @@ describe('AvatarComponent', () => {
   let component: AvatarComponent;
   let de: DebugElement;
 
-  beforeEach(async () => {
-    await ComponentTest.createTestBed([MatTooltipModule, MatIconModule], [AvatarComponent]);
-  });
-
   beforeEach(() => {
+    ComponentTest.createTestBed([MatTooltipModule] as NgModule[], [AvatarComponent] as Component[]);
+
     fixture = TestBed.createComponent(AvatarComponent);
     component = fixture.componentInstance;
     de = fixture.debugElement;

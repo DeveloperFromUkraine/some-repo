@@ -3,8 +3,8 @@ import { ExpandableSearchComponent } from './expandable-search.component';
 import { ComponentTest } from '../../test/test-bed/component';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core/src/debug/debug_node';
-import { MatFormFieldModule, MatIconModule, MatInputModule } from '@angular/material';
 import { TranslationModule } from '../localization/translation.module';
+import { Component, NgModule } from '@angular/core';
 
 describe('Expandable Search', () => {
   let fixture: ComponentFixture<ExpandableSearchComponent>;
@@ -12,14 +12,12 @@ describe('Expandable Search', () => {
   let de: DebugElement;
   let ne: HTMLElement;
 
-  beforeEach(async () => {
-    await ComponentTest.createTestBed(
-      [MatFormFieldModule, MatIconModule, MatInputModule, TranslationModule],
-      [ExpandableSearchComponent]
-    );
-  });
-
   beforeEach(() => {
+    ComponentTest.createTestBed(
+      [TranslationModule] as NgModule[],
+      [ExpandableSearchComponent] as Component[]
+    );
+
     fixture = TestBed.createComponent(ExpandableSearchComponent);
     component = fixture.componentInstance;
 

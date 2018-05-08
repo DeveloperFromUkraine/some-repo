@@ -16,13 +16,12 @@ describe('Accessibility ToolTip', () => {
   let de: DebugElement[];
   let ne: HTMLElement;
 
-  beforeEach(async () => {
-    await ComponentTest.createTestBed([], [DirectiveHostComponent, ToolTipDirective]);
-  });
-
   beforeEach(() => {
+    ComponentTest.createTestBed([], [DirectiveHostComponent, ToolTipDirective] as Component[]);
+
     fixture = TestBed.createComponent(DirectiveHostComponent);
     de = fixture.debugElement.queryAll(By.css('.directive'));
+
     fixture.detectChanges();
   });
 

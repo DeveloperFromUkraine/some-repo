@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ComponentFixture, TestBed, async } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 import { ComponentTest } from '../../../test/test-bed/component';
 import { SizingFullDirective } from './index';
@@ -16,14 +16,12 @@ class DirectiveHostComponent {}
 describe('Form Sizing Full', () => {
   let fixture: ComponentFixture<DirectiveHostComponent>;
   let de: DebugElement[];
-  const maxWidth: string = '100%';
-  const width: string = '100%';
-
-  beforeEach(async () => {
-    await ComponentTest.createTestBed([], [DirectiveHostComponent, SizingFullDirective]);
-  });
+  const maxWidth = '100%';
+  const width = '100%';
 
   beforeEach(() => {
+    ComponentTest.createTestBed([], [DirectiveHostComponent, SizingFullDirective] as Component[]);
+
     fixture = TestBed.createComponent(DirectiveHostComponent);
     fixture.detectChanges();
     de = fixture.debugElement.queryAll(By.css('p'));

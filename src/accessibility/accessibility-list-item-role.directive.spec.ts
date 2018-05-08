@@ -16,13 +16,12 @@ describe('Accessibility List Item Role', () => {
   let de: DebugElement[];
   let ne: HTMLElement;
 
-  beforeEach(async () => {
-    await ComponentTest.createTestBed([], [DirectiveHostComponent, ListItemRoleDirective]);
-  });
-
   beforeEach(() => {
+    ComponentTest.createTestBed([], [DirectiveHostComponent, ListItemRoleDirective] as Component[]);
+
     fixture = TestBed.createComponent(DirectiveHostComponent);
     de = fixture.debugElement.queryAll(By.css('.directive'));
+
     fixture.detectChanges();
   });
 

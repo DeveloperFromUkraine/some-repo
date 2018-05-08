@@ -1,8 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ExpandableFabComponent } from './expandable-fab.component';
 import { ComponentTest } from '../../test/test-bed/component';
-import { MatIconModule } from '@angular/material';
-import { DebugElement } from '@angular/core';
+import { DebugElement, Component } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
 describe('Expandable Fab', () => {
@@ -10,11 +9,9 @@ describe('Expandable Fab', () => {
   let component: ExpandableFabComponent;
   let de: DebugElement;
 
-  beforeEach(async () => {
-    await ComponentTest.createTestBed([MatIconModule], [ExpandableFabComponent]);
-  });
-
   beforeEach(() => {
+    ComponentTest.createTestBed([], [ExpandableFabComponent] as Component[]);
+
     fixture = TestBed.createComponent(ExpandableFabComponent);
     component = fixture.componentInstance;
 

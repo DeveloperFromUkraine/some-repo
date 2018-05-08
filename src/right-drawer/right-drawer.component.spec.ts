@@ -3,8 +3,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { ComponentTest } from '../../test/test-bed/component';
 import { DebugElement } from '@angular/core/src/debug/debug_node';
-import { MatIconModule } from '@angular/material';
 import { TranslationModule } from '../localization/translation.module';
+import { NgModule, Component } from '@angular/core';
 
 describe('Right Drawer', () => {
   let fixture: ComponentFixture<RightDrawerComponent>;
@@ -12,11 +12,12 @@ describe('Right Drawer', () => {
   let de: DebugElement;
   let ne: HTMLElement;
 
-  beforeEach(async () => {
-    await ComponentTest.createTestBed([MatIconModule, TranslationModule], [RightDrawerComponent]);
-  });
+  beforeEach(() => {
+    ComponentTest.createTestBed(
+      [TranslationModule] as NgModule[],
+      [RightDrawerComponent] as Component[]
+    );
 
-  beforeEach(async () => {
     fixture = TestBed.createComponent(RightDrawerComponent);
     component = fixture.componentInstance;
 

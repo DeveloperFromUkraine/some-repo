@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { ComponentFixture, async, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ComponentTest } from '../../../test/test-bed/component';
 import { SizingMediumDirective } from './index';
 import { By } from '@angular/platform-browser';
-import { ElementRef, DebugElement } from '@angular/core';
+import { DebugElement } from '@angular/core';
 
 @Component({
   template: `
@@ -24,16 +24,15 @@ describe('Form Sizing Medium', () => {
   let fixture: ComponentFixture<DirectiveHostComponent>;
   let component: DirectiveHostComponent;
   let de: DebugElement[];
-  const maxWidth: string = '256px';
-  const flex: string = '2';
-
-  beforeEach(async () => {
-    await ComponentTest.createTestBed([], [DirectiveHostComponent, SizingMediumDirective]);
-  });
+  const maxWidth = '256px';
+  const flex = '2';
 
   beforeEach(() => {
+    ComponentTest.createTestBed([], [DirectiveHostComponent, SizingMediumDirective] as Component[]);
+
     fixture = TestBed.createComponent(DirectiveHostComponent);
     component = fixture.componentInstance;
+
     fixture.detectChanges();
     de = fixture.debugElement.queryAll(By.css('.directive'));
   });
@@ -56,7 +55,7 @@ describe('Form Sizing Medium', () => {
   });
 
   it('should set flex to 2', () => {
-    let de = fixture.debugElement.queryAll(By.css('.directive'));
+    de = fixture.debugElement.queryAll(By.css('.directive'));
 
     expect(de[0].nativeElement.style.flex).toBe(flex);
     expect(de[1].nativeElement.style.flex).toBe(flex);

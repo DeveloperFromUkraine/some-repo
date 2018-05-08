@@ -4,7 +4,6 @@ import { DebugElement } from '@angular/core';
 import { ComponentTest } from '../../test/test-bed/component';
 import { AccessibleClickDirective } from '../accessibility/accessibility.directive';
 import { By } from '@angular/platform-browser';
-import { RouterTestingModule } from '@angular/router/testing';
 
 @Component({
   template: `
@@ -19,17 +18,16 @@ describe('Accessible Click', () => {
   let ne: HTMLElement;
   let directive: AccessibleClickDirective;
 
-  beforeEach(async () => {
-    await ComponentTest.createTestBed(
-      [RouterTestingModule.withRoutes([{ path: '*', component: DirectiveHostComponent }])],
-      [DirectiveHostComponent, AccessibleClickDirective]
-    );
-  });
-
   beforeEach(() => {
+    ComponentTest.createTestBed([], [
+      DirectiveHostComponent,
+      AccessibleClickDirective,
+    ] as Component[]);
+
     fixture = TestBed.createComponent(DirectiveHostComponent);
     de = fixture.debugElement.queryAll(By.css('.directive'));
     ne = de[0].nativeElement;
+
     fixture.detectChanges();
   });
 
@@ -37,7 +35,7 @@ describe('Accessible Click', () => {
     directive = de[0].injector.get(AccessibleClickDirective);
     jest.spyOn(directive, 'onAccessibleClick');
 
-    de[0].triggerEventHandler('keyup.enter', null);
+    de[0].triggerEventHandler('keyup.enter', new Event('keyup.enter'));
     fixture.detectChanges();
 
     expect(directive.onAccessibleClick).toHaveBeenCalled();
@@ -47,7 +45,7 @@ describe('Accessible Click', () => {
     directive = de[0].injector.get(AccessibleClickDirective);
     jest.spyOn(directive, 'onAccessibleClick');
 
-    de[0].triggerEventHandler('keyup.space', null);
+    de[0].triggerEventHandler('keyup.space', new Event('keyup.space'));
     fixture.detectChanges();
 
     expect(directive.onAccessibleClick).toHaveBeenCalled();

@@ -2,39 +2,23 @@
 
 exports[`Text List Item should match snapshot 1`] = `
 <ign-text-list-item>
-  <mat-list-item
-    class="mat-list-item"
-  >
-    <div
-      class="mat-list-item-content"
+  <mat-list-item>
+    
+      
+    <h3
+      class="primary-text"
+      matline=""
     >
-      <div
-        class="mat-list-item-ripple mat-ripple"
-        mat-ripple=""
-        ng-reflect-disabled="true"
-        ng-reflect-trigger="[object HTMLUnknownElement]"
-      />
-      <div
-        class="mat-list-text"
-      >
-        <h3
-          class="primary-text mat-line"
-          matline=""
-        >
-          
-        </h3>
-        
-        
-      </div>
       
+    </h3>
+    
       
+    
+    
       
-      
-      
-      
-      
+    
+    
   
-    </div>
   </mat-list-item>
 </ign-text-list-item>
 `;
