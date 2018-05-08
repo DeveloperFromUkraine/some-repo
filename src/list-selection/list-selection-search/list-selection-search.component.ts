@@ -1,5 +1,5 @@
-import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
-import { FormControl, ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/util/pipe';
 import { map, distinctUntilChanged, skipWhile, share } from 'rxjs/operators';

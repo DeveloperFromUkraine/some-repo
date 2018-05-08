@@ -5,6 +5,7 @@ import { DataTableContainerModule } from './data-table-container.module';
 import { MatTableDataSource } from '@angular/material';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core/src/debug/debug_node';
+import { Component } from '@angular/core';
 
 describe('Data Table Container', () => {
   let fixture: ComponentFixture<DataTableContainerComponent>;
@@ -13,11 +14,9 @@ describe('Data Table Container', () => {
   let de: DebugElement;
   let ne: HTMLElement;
 
-  beforeEach(async () => {
-    await ComponentTest.createTestBed([DataTableContainerModule]);
-  });
-
   beforeEach(() => {
+    ComponentTest.createTestBed([DataTableContainerModule] as Component[]);
+
     fixture = TestBed.createComponent(DataTableContainerComponent);
     component = fixture.componentInstance;
     component.dataSource = matTableDataSource;

@@ -144,7 +144,6 @@ import {
   MatToolbarModule,
   MatMenuModule,
   MatButtonModule,
-  MatSidenavModule,
   MatCardModule,
   MatIconModule,
   MatRippleModule,

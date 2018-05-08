@@ -1,6 +1,5 @@
 import { Component, DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
-import { MatIconModule } from '@angular/material';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ComponentTest } from '../../test/test-bed/component';
 
@@ -30,14 +29,12 @@ describe('ContextMenu Accessibility Directive', () => {
   let de: DebugElement[];
   let ne: HTMLElement;
 
-  beforeEach(async () => {
-    await ComponentTest.createTestBed(
-      [MatIconModule],
-      [DirectiveHostComponent, AccessibleContextMenuViewDirective]
-    );
-  });
-
   beforeEach(() => {
+    ComponentTest.createTestBed([], [
+      DirectiveHostComponent,
+      AccessibleContextMenuViewDirective,
+    ] as Component[]);
+
     fixture = TestBed.createComponent(DirectiveHostComponent);
     de = fixture.debugElement.queryAll(By.css('[mat-icon-button]'));
 

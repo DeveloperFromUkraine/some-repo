@@ -1,9 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ListSelectionSearchComponent } from './index';
-import { ComponentTest } from '../../../test/test-bed/component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
 
 describe('List Selection Search', () => {
   let component: ListSelectionSearchComponent;

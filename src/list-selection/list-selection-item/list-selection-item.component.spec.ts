@@ -1,7 +1,7 @@
 import { ComponentTest } from '../../../test/test-bed/component';
 import { ListSelectionItemComponent } from './index';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { DebugElement } from '@angular/core';
+import { DebugElement, Component } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
 describe('List Selection Item', () => {
@@ -10,11 +10,9 @@ describe('List Selection Item', () => {
   let de: DebugElement;
   let ne: HTMLElement;
 
-  beforeEach(async () => {
-    ComponentTest.createTestBed([], [ListSelectionItemComponent]);
-  });
-
   beforeEach(() => {
+    ComponentTest.createTestBed([], [ListSelectionItemComponent] as Component[]);
+
     fixture = TestBed.createComponent(ListSelectionItemComponent);
     component = fixture.componentInstance;
 

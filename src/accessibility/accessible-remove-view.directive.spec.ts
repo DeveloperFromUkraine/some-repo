@@ -20,13 +20,15 @@ describe('Accessible Remove View', () => {
   let de: DebugElement[];
   let ne: HTMLElement;
 
-  beforeEach(async () => {
-    await ComponentTest.createTestBed([], [DirectiveHostComponent, AccessibleRemoveViewDirective]);
-  });
-
   beforeEach(() => {
+    ComponentTest.createTestBed([], [
+      DirectiveHostComponent,
+      AccessibleRemoveViewDirective,
+    ] as Component[]);
+
     fixture = TestBed.createComponent(DirectiveHostComponent);
     de = fixture.debugElement.queryAll(By.css('.directive'));
+
     fixture.detectChanges();
   });
 

@@ -7,11 +7,7 @@ exports[`List Selection Add Button should match snapshot 1`] = `
   >
     
     
-    <mat-icon
-      aria-hidden="true"
-      class="mat-icon"
-      role="img"
-    >
+    <mat-icon>
       
       add
     

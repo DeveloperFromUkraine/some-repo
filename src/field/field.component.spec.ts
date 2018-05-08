@@ -7,8 +7,7 @@ import {
 } from './field.component';
 import { ComponentTest } from '../../test/test-bed/component';
 import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-import { MatIconModule } from '@angular/material';
+import { DebugElement, Component } from '@angular/core';
 
 describe('Field', () => {
   let fixture: ComponentFixture<FieldComponent>;
@@ -16,11 +15,9 @@ describe('Field', () => {
   let de: DebugElement;
   let ne: HTMLElement;
 
-  beforeEach(async () => {
-    ComponentTest.createTestBed([], [FieldComponent]);
-  });
-
   beforeEach(() => {
+    ComponentTest.createTestBed([], [FieldComponent] as Component[]);
+
     fixture = TestBed.createComponent(FieldComponent);
     component = fixture.componentInstance;
 
@@ -51,11 +48,9 @@ describe('FieldInlineComponent', () => {
   let de: DebugElement;
   let ne: HTMLElement;
 
-  beforeEach(async () => {
-    ComponentTest.createTestBed([], [FieldInlineComponent]);
-  });
-
   beforeEach(() => {
+    ComponentTest.createTestBed([], [FieldInlineComponent] as Component[]);
+
     fixture = TestBed.createComponent(FieldInlineComponent);
     component = fixture.componentInstance;
 
@@ -86,11 +81,9 @@ describe('EditableFieldComponent', () => {
   let de: DebugElement;
   let ne: HTMLElement;
 
-  beforeEach(async () => {
-    ComponentTest.createTestBed([MatIconModule], [EditableFieldComponent]);
-  });
-
   beforeEach(() => {
+    ComponentTest.createTestBed([], [EditableFieldComponent] as Component[]);
+
     fixture = TestBed.createComponent(EditableFieldComponent);
     component = fixture.componentInstance;
 
@@ -152,11 +145,9 @@ describe('EditableFieldInlineComponent', () => {
   let fixture: ComponentFixture<EditableFieldInlineComponent>;
   let component: EditableFieldInlineComponent;
 
-  beforeEach(async () => {
-    ComponentTest.createTestBed([MatIconModule], [EditableFieldInlineComponent]);
-  });
-
   beforeEach(() => {
+    ComponentTest.createTestBed([], [EditableFieldInlineComponent] as Component[]);
+
     fixture = TestBed.createComponent(EditableFieldInlineComponent);
     component = fixture.componentInstance;
 

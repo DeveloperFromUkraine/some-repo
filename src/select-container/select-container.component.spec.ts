@@ -1,15 +1,14 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SelectContainerComponent } from '../index';
 import { ComponentTest } from '../../test/test-bed/component';
+import { Component } from '@angular/core';
 
 describe('Select Container', () => {
   let fixture: ComponentFixture<SelectContainerComponent>;
 
-  beforeEach(async () => {
-    await ComponentTest.createTestBed([], [SelectContainerComponent]);
-  });
-
   beforeEach(() => {
+    ComponentTest.createTestBed([], [SelectContainerComponent] as Component[]);
+
     fixture = TestBed.createComponent(SelectContainerComponent);
   });
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ComponentFixture, async, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ComponentTest } from '../../../test/test-bed/component';
 import { SizingLargeDirective } from './index';
 import { By } from '@angular/platform-browser';
@@ -24,16 +24,15 @@ describe('Form Sizing Large', () => {
   let fixture: ComponentFixture<DirectiveHostComponent>;
   let component: DirectiveHostComponent;
   let de: DebugElement[];
-  const maxWidth: string = '448px';
-  const flex: string = '3';
-
-  beforeEach(async () => {
-    await ComponentTest.createTestBed([], [DirectiveHostComponent, SizingLargeDirective]);
-  });
+  const maxWidth = '448px';
+  const flex = '3';
 
   beforeEach(() => {
+    ComponentTest.createTestBed([], [DirectiveHostComponent, SizingLargeDirective] as Component[]);
+
     fixture = TestBed.createComponent(DirectiveHostComponent);
     component = fixture.componentInstance;
+
     fixture.detectChanges();
     de = fixture.debugElement.queryAll(By.css('.directive'));
   });

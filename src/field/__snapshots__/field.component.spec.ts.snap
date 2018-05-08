@@ -23,11 +23,7 @@ exports[`EditableFieldComponent should match snapshot 1`] = `
     >
       
         
-      <mat-icon
-        aria-hidden="true"
-        class="mat-icon material-icons"
-        role="img"
-      >
+      <mat-icon>
         mode_edit
       </mat-icon>
       
@@ -81,11 +77,7 @@ exports[`EditableFieldInlineComponent should match snapshot 1`] = `
     >
       
         
-      <mat-icon
-        aria-hidden="true"
-        class="mat-icon material-icons"
-        role="img"
-      >
+      <mat-icon>
         mode_edit
       </mat-icon>
       

@@ -3,7 +3,7 @@ import { TextListItemComponent } from './text-list-item.component';
 import { DebugElement } from '@angular/core/src/debug/debug_node';
 import { ComponentTest } from '../../test/test-bed/component';
 import { By } from '@angular/platform-browser';
-import { MatListModule } from '@angular/material';
+import { Component } from '@angular/core';
 
 describe('Text List Item', () => {
   let fixture: ComponentFixture<TextListItemComponent>;
@@ -11,11 +11,9 @@ describe('Text List Item', () => {
   let de: DebugElement;
   let ne: HTMLElement;
 
-  beforeEach(async () => {
-    await ComponentTest.createTestBed([MatListModule], [TextListItemComponent]);
-  });
-
   beforeEach(() => {
+    ComponentTest.createTestBed([], [TextListItemComponent] as Component[]);
+
     fixture = TestBed.createComponent(TextListItemComponent);
     component = fixture.componentInstance;
 

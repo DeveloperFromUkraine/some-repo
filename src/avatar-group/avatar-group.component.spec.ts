@@ -1,8 +1,7 @@
-import { DebugElement } from '@angular/core';
+import { DebugElement, NgModule, Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { By } from '@angular/platform-browser';
-import { MatTooltipModule, MatIconModule } from '@angular/material';
 
 import { AvatarGroupComponent } from '../avatar-group/avatar-group.component';
 import { AvatarComponent } from '../avatar/avatar.component';
@@ -14,14 +13,12 @@ describe('AvatarGroupComponent Test Suite', () => {
   let component: AvatarGroupComponent;
   let de: DebugElement;
 
-  beforeEach(async () => {
-    await ComponentTest.createTestBed(
-      [RouterTestingModule, MatTooltipModule, MatIconModule],
-      [AvatarComponent, AvatarGroupComponent]
-    );
-  });
-
   beforeEach(() => {
+    ComponentTest.createTestBed(
+      [RouterTestingModule] as NgModule[],
+      [AvatarComponent, AvatarGroupComponent] as Component[]
+    );
+
     fixture = TestBed.createComponent(AvatarGroupComponent);
     component = fixture.componentInstance;
     de = fixture.debugElement;
@@ -30,7 +27,6 @@ describe('AvatarGroupComponent Test Suite', () => {
   it('should not display the avatars', async () => {
     let avatarGroup: DebugElement;
 
-    fixture.detectChanges();
     avatarGroup = de.query(By.css('#avatar-group'));
 
     expect(avatarGroup).toBeNull();

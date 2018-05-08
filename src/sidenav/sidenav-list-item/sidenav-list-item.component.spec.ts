@@ -1,10 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SideNavListItemComponent } from './index';
 import { ComponentTest } from '../../../test/test-bed/component';
-import { DebugElement } from '@angular/core';
+import { DebugElement, Component } from '@angular/core';
 import { By } from '@angular/platform-browser';
-import { EventEmitter } from '@angular/core/src/event_emitter';
-import { dispatchEvent } from '@angular/core/src/view/util';
 
 describe('Side Nav List Item', () => {
   let fixture: ComponentFixture<SideNavListItemComponent>;
@@ -12,11 +10,9 @@ describe('Side Nav List Item', () => {
   let de: DebugElement;
   let ne: HTMLElement;
 
-  beforeEach(async () => {
-    await ComponentTest.createTestBed([], [SideNavListItemComponent]);
-  });
-
   beforeEach(() => {
+    ComponentTest.createTestBed([], [SideNavListItemComponent] as Component[]);
+
     fixture = TestBed.createComponent(SideNavListItemComponent);
     component = fixture.componentInstance;
 

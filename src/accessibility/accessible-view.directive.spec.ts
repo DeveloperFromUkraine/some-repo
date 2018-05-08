@@ -20,13 +20,15 @@ describe('Accessible View', () => {
   let de: DebugElement[];
   let ne: HTMLElement;
 
-  beforeEach(async () => {
-    await ComponentTest.createTestBed([], [DirectiveHostComponent, AccessibleViewDirective]);
-  });
-
   beforeEach(() => {
+    ComponentTest.createTestBed([], [
+      DirectiveHostComponent,
+      AccessibleViewDirective,
+    ] as Component[]);
+
     fixture = TestBed.createComponent(DirectiveHostComponent);
     de = fixture.debugElement.queryAll(By.css('.directive'));
+
     fixture.detectChanges();
   });
 
