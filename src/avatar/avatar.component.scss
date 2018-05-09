@@ -1,14 +1,28 @@
 @import '~ignite-common/styles/ignite';
 
 // Sizes
-$size-small: 40px;
-$size-large: ign-size(xxl);
+$size-container-small: 40px;
+$size-container-large: ign-size(xxl);
+$size-text-small: ign-size(xs);
+$size-icon-small: ign-size(s);
+$size-text-large: $size-container-large / 2;
+$size-icon-large: ign-size(l);
 
-$icon-size-small: ign-icon-size(s); 
-$icon-size-large: ign-icon-size(m); 
+@mixin small-container-sizing {
+  width: $size-container-small;
+  height: $size-container-small;
+}
 
-$font-size-small: ign-font-size(xxxs);
-$font-size-large: ign-font-size(s);
+@mixin large-container-sizing {
+  width: $size-container-large;
+  height: $size-container-large;
+}
+
+@mixin flex-centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 // Colors
 $white: ign-palette($ign-palette-gray, 50);
@@ -16,74 +30,82 @@ $light-gray: ign-palette($ign-palette-gray, 150);
 $dark-gray: ign-palette($ign-palette-gray, 500);
 
 .container {
-  width: $size-large;
-  height: $size-large;
+  @include large-container-sizing();
   border-radius: 50%;
   overflow: hidden;
 
   .image {
-    width: $size-large;
-    height: $size-large;
+    @include large-container-sizing();
   }
 
   .content-container {
+    @include large-container-sizing();
     background-color: $light-gray;
-    width: $size-large;
-    height: $size-large;
   }
 
   .image {
     @extend .content-container;
+    @include flex-centering();
   }
 
   .initials-container {
-    @extend .content-container;
-    font-size: $font-size-large;
-    padding-top: 24px;
-    text-align: center;
+    @include large-container-sizing();
+    @include flex-centering();
+    font-size: $size-text-large;
     background-color: $dark-gray;
     color: $white;
+
+    .initials {
+      @include flex-centering();
+      width: $size-text-large;
+      height: $size-text-large;
+    }
   }
 
   .icon-container {
     @extend .content-container;
+    @include flex-centering();
+
     .icon {
-      width: $size-large;
-      height: $size-large;
-      font-size: $icon-size-large;
-      text-align: center;
-      position: relative;
-      top: 14%;
+      width: $size-icon-large;
+      height: $size-icon-large;
+      font-size: $size-icon-large;
       color: $dark-gray;
     }
   }
 }
 
 .container.small {
-  width: $size-small;
-  height: $size-small;
+  @include small-container-sizing();
 
   .image {
-    width: $size-small;
-    height: $size-small;
+    @include small-container-sizing();
   }
 
   .content-container {
-    width: $size-small;
-    height: $size-small;
+    @include small-container-sizing();
   }
 
   .initials-container {
-    font-size: $font-size-small;
-    padding-top: 12px;
-    text-align: center;
+    @include small-container-sizing();
+    @include flex-centering();
+    font-size: $size-text-small;
+
+    .initials {
+      @include flex-centering();
+      width: $size-text-small;
+      height: $size-text-small;
+    }
   }
 
   .icon-container {
+    @include small-container-sizing();
+    @include flex-centering();
+
     .icon {
-      width: $size-small;
-      height: $size-small;
-      font-size: $icon-size-small;
+      width: $size-icon-small;
+      height: $size-icon-small;
+      font-size: $size-icon-small;
     }
   }
 }
