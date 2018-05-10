@@ -32,8 +32,9 @@ export class InputMaskComponent implements OnInit, AfterViewChecked {
 
   lastDisplayMode: boolean;
   currencypipe: CurrencyPipe;
+  value = '';
 
-  @Input() value: string;
+  @Input() currencyCode: string;
   @Output() onValueChanged = new EventEmitter<string>();
 
   constructor(currencypipe: CurrencyPipe) {
