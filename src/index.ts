@@ -140,7 +140,10 @@ import { TranslationModule } from './localization/translation.module';
 import { AvatarComponent } from './avatar/avatar.component';
 import { AvatarGroupComponent } from './avatar-group/avatar-group.component';
 
-import { InputMaskComponent, DisplayMode } from './currency-input-mask/base-input-mask/input-mask.component';
+import {
+  InputMaskComponent,
+  DisplayMode,
+} from './currency-input-mask/base-input-mask/input-mask.component';
 import { CurrencyMaskComponent } from './currency-input-mask/currency-mask/currency-mask.component';
 import { CurrencyMaskDirective } from './currency-input-mask/currency-mask/currency-mask.directive';
 
