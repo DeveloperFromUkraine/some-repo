@@ -1,13 +1,10 @@
 import {
   Component,
   Directive,
-  HostListener,
-  OnInit,
-  AfterContentInit,
   Input,
   ContentChild,
-  TemplateRef,
-  ViewContainerRef,
+  Output,
+  EventEmitter
 } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
 
@@ -23,20 +20,19 @@ export class DisplayMode {
   templateUrl: './input-mask.html',
   styleUrls: ['./input-mask.scss'],
 })
-export class InputMaskComponent implements OnInit {
+export class InputMaskComponent {
   @ContentChild(DisplayMode) displayModeChild: DisplayMode;
-
-  public displayTemplate: TemplateRef<any>;
-  public editTemplate: TemplateRef<any>;
   currencypipe: CurrencyPipe;
 
   @Input() value: string;
-  valueMasked: boolean;
+  @Output() onValueChanged = new EventEmitter<void>();
 
   constructor(currencypipe: CurrencyPipe) {
     this.currencypipe = currencypipe;
   }
 
-  ngOnInit(){
+  onBlur(){
+    console.log(this.displayModeChild);
+    this.onValueChanged.emit();
   }
 }

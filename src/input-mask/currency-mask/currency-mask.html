@@ -1,4 +1,4 @@
-<ign-input-mask [value]="value" class="display" (click)="onClick()">
-    <div *displayMode="displayModeBool" class="display">
+<ign-input-mask [value]="value" (click)="onClick()" (onValueChanged)="onBlur()">
+    <div *displayMode="displayModeBool">
     </div>
 </ign-input-mask>

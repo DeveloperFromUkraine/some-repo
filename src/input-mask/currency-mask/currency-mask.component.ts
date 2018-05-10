@@ -13,11 +13,15 @@ export class CurrencyMaskComponent implements OnInit {
 
   //on entry
   onClick() {
-    this.displayModeBool = !this.displayModeBool;
+    this.displayModeBool = false;
   }
 
   //on init
   ngOnInit() {
     this.displayModeBool = true;
+  }
+
+  onBlur(){
+     this.displayModeBool = true;
   }
 }
