@@ -1,0 +1,11 @@
+<div *ngIf="valueMasked; then displayMode; else editMode"></div>
+<ng-template #displayMode>
+    <mat-form-field>
+        <input matInput [value]="value">
+    </mat-form-field>
+</ng-template>
+<ng-template #editMode class="display">
+    <mat-form-field>
+        <input matInput [value]="value">
+    </mat-form-field>
+</ng-template>

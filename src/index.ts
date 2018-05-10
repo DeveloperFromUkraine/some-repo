@@ -140,6 +140,9 @@ import { TranslationModule } from './localization/translation.module';
 import { AvatarComponent } from './avatar/avatar.component';
 import { AvatarGroupComponent } from './avatar-group/avatar-group.component';
 
+import { InputMaskComponent, EditMode, DisplayMode } from './input-mask/input-mask.component';
+import { CurrencyMaskComponent } from './input-mask/currency-mask/currency-mask.component';
+
 import {
   MatToolbarModule,
   MatMenuModule,
@@ -219,6 +222,10 @@ const components = [
   ToolTipDirective,
   AvatarComponent,
   AvatarGroupComponent,
+  EditMode,
+  DisplayMode,
+  InputMaskComponent,
+  CurrencyMaskComponent,
 ];
 
 @NgModule({
