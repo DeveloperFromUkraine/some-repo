@@ -48,7 +48,7 @@ describe('Right Drawer', () => {
   });
 
   it('should emit openChange event', () => {
-    de = fixture.debugElement.query(By.css('.close-icon'));
+    de = fixture.debugElement.query(By.css('button'));
     ne = de.nativeElement;
     let spy = jest.fn();
 
@@ -59,7 +59,7 @@ describe('Right Drawer', () => {
   });
 
   it('should call closeDrawer when click event emitted', () => {
-    de = fixture.debugElement.query(By.css('.close-icon'));
+    de = fixture.debugElement.query(By.css('button'));
     ne = de.nativeElement;
     jest.spyOn(component, 'closeDrawer');
 
@@ -69,7 +69,7 @@ describe('Right Drawer', () => {
   });
 
   it('should call toggleDrawer when click event emitted', () => {
-    de = fixture.debugElement.query(By.css('.close-icon'));
+    de = fixture.debugElement.query(By.css('button'));
     ne = de.nativeElement;
     jest.spyOn(component, 'toggleDrawer');
 
@@ -79,7 +79,7 @@ describe('Right Drawer', () => {
   });
 
   it('should set open to false when click event emitted', () => {
-    de = fixture.debugElement.query(By.css('.close-icon'));
+    de = fixture.debugElement.query(By.css('button'));
     ne = de.nativeElement;
 
     component.open = true;
