@@ -15,13 +15,8 @@ import { CurrencyPipe } from '@angular/common';
   selector: '[displayMode]',
   inputs: ['displayMode'],
 })
-export class DisplayMode {}
-
-@Directive({
-  selector: '[editMode]',
-  inputs: ['editMode'],
-})
-export class EditMode {}
+export class DisplayMode {
+}
 
 @Component({
   selector: 'ign-input-mask',
@@ -29,8 +24,8 @@ export class EditMode {}
   styleUrls: ['./input-mask.scss'],
 })
 export class InputMaskComponent implements OnInit {
-  @ContentChild(EditMode) editModeChild: EditMode;
   @ContentChild(DisplayMode) displayModeChild: DisplayMode;
+
   public displayTemplate: TemplateRef<any>;
   public editTemplate: TemplateRef<any>;
   currencypipe: CurrencyPipe;
@@ -42,18 +37,6 @@ export class InputMaskComponent implements OnInit {
     this.currencypipe = currencypipe;
   }
 
-  //on blur
-  @HostListener('blur', ['$event'])
-  onBlur($event: any): void {}
-
-  //on entry
-  onClick() {}
-
-  //on init
-  ngOnInit() {
-  }
-
-  currencyPipe(value) {
-    return(this.currencypipe.transform(value, 'USD', 'symbol', '.4'));
+  ngOnInit(){
   }
 }

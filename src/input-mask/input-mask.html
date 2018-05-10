@@ -1,7 +1,7 @@
-<div *ngIf="displayModeChild; then displayMode; else editMode"></div>
+<div *ngIf="displayModeChild.displayMode; then displayMode; else editMode"></div>
 <ng-template #displayMode>
     <mat-form-field>
-        <input matInput [value]="value" (click)="currencyPipe(value)">
+        <input matInput [value]="value | currency:'USD':'symbol': '.4'">
     </mat-form-field>
 </ng-template>
 <ng-template #editMode class="display">

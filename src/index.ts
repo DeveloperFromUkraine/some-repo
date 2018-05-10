@@ -1,6 +1,6 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CommonModule,  CurrencyPipe } from '@angular/common';
+import { CommonModule, CurrencyPipe } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { PageComponent } from './page/page.component';
@@ -140,7 +140,7 @@ import { TranslationModule } from './localization/translation.module';
 import { AvatarComponent } from './avatar/avatar.component';
 import { AvatarGroupComponent } from './avatar-group/avatar-group.component';
 
-import { InputMaskComponent, EditMode, DisplayMode } from './input-mask/input-mask.component';
+import { InputMaskComponent, DisplayMode } from './input-mask/input-mask.component';
 import { CurrencyMaskComponent } from './input-mask/currency-mask/currency-mask.component';
 
 import {
@@ -222,7 +222,6 @@ const components = [
   ToolTipDirective,
   AvatarComponent,
   AvatarGroupComponent,
-  EditMode,
   DisplayMode,
   InputMaskComponent,
   CurrencyMaskComponent,
