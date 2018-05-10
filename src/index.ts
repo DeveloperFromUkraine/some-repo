@@ -142,7 +142,8 @@ import { AvatarGroupComponent } from './avatar-group/avatar-group.component';
 
 import { InputMaskComponent, DisplayMode } from './input-mask/input-mask.component';
 import { CurrencyMaskComponent } from './input-mask/currency-mask/currency-mask.component';
-
+import { CurrencyMaskDirective } from './input-mask/currency-mask/currency-mask.directive';
+ 
 import {
   MatToolbarModule,
   MatMenuModule,
@@ -225,6 +226,7 @@ const components = [
   DisplayMode,
   InputMaskComponent,
   CurrencyMaskComponent,
+  CurrencyMaskDirective
 ];
 
 @NgModule({

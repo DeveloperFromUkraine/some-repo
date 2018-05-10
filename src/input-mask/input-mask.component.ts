@@ -1,5 +1,19 @@
-import { Component, Directive, Input, ContentChild, Output, EventEmitter, OnInit, ViewChild, ElementRef, AfterViewChecked} from '@angular/core';
+import {
+  Component,
+  Directive,
+  Input,
+  ContentChild,
+  Output,
+  EventEmitter,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  AfterViewChecked,
+  HostListener,
+  Renderer2
+} from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
+import { CurrencyMaskDirective } from './currency-mask/currency-mask.directive'
 
 @Directive({
   selector: '[displayMode]',
@@ -34,19 +48,19 @@ export class InputMaskComponent implements OnInit, AfterViewChecked {
     this.onValueChanged.emit(this.value);
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this.lastDisplayMode = (this.displayModeChild as any).displayMode;
   }
 
   setFocus() {
-    if (!(this.displayModeChild as any).displayMode){
+    if (!(this.displayModeChild as any).displayMode) {
       this.editableInputField.nativeElement.focus();
     }
   }
 
   ngAfterViewChecked() {
     setTimeout(() => {
-      if((this.displayModeChild as any).displayMode !== this.lastDisplayMode) {
+      if ((this.displayModeChild as any).displayMode !== this.lastDisplayMode) {
         this.setFocus();
         this.lastDisplayMode = !this.lastDisplayMode;
       }
