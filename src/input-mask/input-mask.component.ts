@@ -10,10 +10,10 @@ import {
   ElementRef,
   AfterViewChecked,
   HostListener,
-  Renderer2
+  Renderer2,
 } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
-import { CurrencyMaskDirective } from './currency-mask/currency-mask.directive'
+import { CurrencyMaskDirective } from './currency-mask/currency-mask.directive';
 
 @Directive({
   selector: '[displayMode]',
