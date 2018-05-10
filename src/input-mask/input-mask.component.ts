@@ -29,18 +29,18 @@ export class EditMode {}
   styleUrls: ['./input-mask.scss'],
 })
 export class InputMaskComponent implements OnInit {
-  @ContentChild(EditMode) editMode: EditMode;
-  @ContentChild(DisplayMode) displayMode: DisplayMode;
+  @ContentChild(EditMode) editModeChild: EditMode;
+  @ContentChild(DisplayMode) displayModeChild: DisplayMode;
   public displayTemplate: TemplateRef<any>;
   public editTemplate: TemplateRef<any>;
-
-  number123 = 123;
-  test = { number: this.number123 };
+  currencypipe: CurrencyPipe;
 
   @Input() value: string;
   valueMasked: boolean;
 
-  constructor() {}
+  constructor(currencypipe: CurrencyPipe) {
+    this.currencypipe = currencypipe;
+  }
 
   //on blur
   @HostListener('blur', ['$event'])
@@ -50,5 +50,10 @@ export class InputMaskComponent implements OnInit {
   onClick() {}
 
   //on init
-  ngOnInit() {}
+  ngOnInit() {
+  }
+
+  currencyPipe(value) {
+    return(this.currencypipe.transform(value, 'USD', 'symbol', '.4'));
+  }
 }

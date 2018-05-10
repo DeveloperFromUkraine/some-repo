@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { InputMaskComponent } from '../../input-mask/input-mask.component';
 
 @Component({
@@ -6,6 +6,17 @@ import { InputMaskComponent } from '../../input-mask/input-mask.component';
   templateUrl: `./currency-mask.html`,
   styleUrls: ['./currency-mask.scss'],
 })
-export class CurrencyMaskComponent {
+export class CurrencyMaskComponent implements OnInit {
   @Input() value: string;
+  displayModeBool: boolean;
+  editModeBool: boolean;
+  
+    //on entry
+    onClick() {}
+  
+    //on init
+    ngOnInit() {
+      this.displayModeBool = true;
+      this.editModeBool = false;
+    }
 }

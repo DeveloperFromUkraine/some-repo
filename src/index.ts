@@ -1,6 +1,6 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { CommonModule,  CurrencyPipe } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { PageComponent } from './page/page.component';
@@ -259,7 +259,7 @@ const components = [
     TextListItemComponent,
     DataTableContainerComponent,
   ],
-  providers: [TranslationService],
+  providers: [TranslationService, CurrencyPipe],
 })
 export class IgniteDesignSystemModule {
   static updateTranslation(translationKey: string, translationValue: string) {
