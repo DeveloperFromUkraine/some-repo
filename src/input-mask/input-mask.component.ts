@@ -20,7 +20,7 @@ export class InputMaskComponent implements OnInit, AfterViewChecked {
   currencypipe: CurrencyPipe;
 
   @Input() value: string;
-  @Output() onValueChanged = new EventEmitter<void>();
+  @Output() onValueChanged = new EventEmitter<string>();
 
   constructor(currencypipe: CurrencyPipe) {
     this.currencypipe = currencypipe;
@@ -30,8 +30,8 @@ export class InputMaskComponent implements OnInit, AfterViewChecked {
   }
 
   onEditBlur(editValue) {
-    this.onValueChanged.emit();
     this.value = editValue;
+    this.onValueChanged.emit(this.value);
   }
 
   ngOnInit(){

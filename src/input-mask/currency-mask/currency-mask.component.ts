@@ -22,7 +22,8 @@ export class CurrencyMaskComponent implements OnInit {
     this.displayModeBool = true;
   }
 
-  onBlur(){
+  onBlur(newValue: string){
+    console.log(newValue)
     this.displayModeBool = true;
   }
 }
