@@ -8,34 +8,53 @@ exports[`Right Drawer should match snapshot 1`] = `
   title={[Function String]}
 >
   <div
-    class="title-container"
+    id="backdrop"
+  />
+  <mat-drawer
+    ng-reflect-ng-style="[object Object]"
+    style="width: 0px;"
   >
     
     
-    <h2
-      class="title"
+    
+    <div
+      class="title-container"
     >
       
-      test
-    
-    </h2>
-    
-    
-    <mat-icon
-      aria-hidden="true"
-      aria-label="Close"
-      class="close-icon"
-      igna11yclick=""
-      tabindex="0"
-    >
       
-      close
+      <h2
+        class="title"
+      >
+        
+        test
+      
+      </h2>
+      
+      
+      <button
+        aria-hidden="true"
+        aria-label="Close"
+        mat-icon-button=""
+      >
+        
+        
+        <mat-icon
+          class="close-icon"
+        >
+          
+          close
+        
+        </mat-icon>
+        
+      
+      </button>
+      
     
-    </mat-icon>
+    </div>
+    
+    
     
   
-  </div>
-  
-  
+  </mat-drawer>
 </ign-right-drawer>
 `;
