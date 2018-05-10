@@ -21,9 +21,17 @@ numeric values and a single decimal, up to four decimal places, to the input fie
 
 ## Content
 
+* Currency mask components can only contain numeric values with periods. All other characters will be removed.
+* Currency mask components require a [currencyCode].
+    * This specifies the currency code desired as per Angular Material's [currency pipe](https://angular.io/api/common/CurrencyPipe).
 
 ## Style
 
+* The currency mask component follows the following design specifications:
+    * Value is displayed up to four decimal places
+    * User input will not be modified until on blur, and then replaced with the proper formatting.
+    * No negative values are permitted.
+* The currency mask requires the users place a 0 before decimal places.
 
 *** TypeScript *** 
 
