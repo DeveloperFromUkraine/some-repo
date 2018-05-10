@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, HostListener } from '@angular/core';
+import { Component, Input, OnInit, HostListener, ElementRef } from '@angular/core';
 import { InputMaskComponent } from '../../input-mask/input-mask.component';
 
 @Component({
@@ -8,6 +8,7 @@ import { InputMaskComponent } from '../../input-mask/input-mask.component';
 })
 export class CurrencyMaskComponent implements OnInit {
   @Input() value: string;
+
   displayModeBool: boolean;
   editModeBool: boolean;
 
@@ -22,6 +23,6 @@ export class CurrencyMaskComponent implements OnInit {
   }
 
   onBlur(){
-     this.displayModeBool = true;
+    this.displayModeBool = true;
   }
 }

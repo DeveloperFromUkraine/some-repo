@@ -1,27 +1,22 @@
-import {
-  Component,
-  Directive,
-  Input,
-  ContentChild,
-  Output,
-  EventEmitter
-} from '@angular/core';
+import { Component, Directive, Input, ContentChild, Output, EventEmitter, OnInit, ViewChild, ElementRef, AfterViewChecked} from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
 
 @Directive({
   selector: '[displayMode]',
   inputs: ['displayMode'],
 })
-export class DisplayMode {
-}
+export class DisplayMode {}
 
 @Component({
   selector: 'ign-input-mask',
   templateUrl: './input-mask.html',
   styleUrls: ['./input-mask.scss'],
 })
-export class InputMaskComponent {
+export class InputMaskComponent implements OnInit, AfterViewChecked {
   @ContentChild(DisplayMode) displayModeChild: DisplayMode;
+  @ViewChild('editableFieldInput') editableInputField: ElementRef;
+
+  lastDisplayMode: boolean;
   currencypipe: CurrencyPipe;
 
   @Input() value: string;
@@ -30,9 +25,31 @@ export class InputMaskComponent {
   constructor(currencypipe: CurrencyPipe) {
     this.currencypipe = currencypipe;
   }
-
-  onBlur(){
-    console.log(this.displayModeChild);
+  onBlur() {
     this.onValueChanged.emit();
+  }
+
+  onEditBlur(editValue) {
+    this.onValueChanged.emit();
+    this.value = editValue;
+  }
+
+  ngOnInit(){
+    this.lastDisplayMode = (this.displayModeChild as any).displayMode;
+  }
+
+  setFocus() {
+    if (!(this.displayModeChild as any).displayMode){
+      this.editableInputField.nativeElement.focus();
+    }
+  }
+
+  ngAfterViewChecked() {
+    setTimeout(() => {
+      if((this.displayModeChild as any).displayMode !== this.lastDisplayMode) {
+        this.setFocus();
+        this.lastDisplayMode = !this.lastDisplayMode;
+      }
+    });
   }
 }

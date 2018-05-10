@@ -6,6 +6,6 @@
 </ng-template>
 <ng-template #editMode class="display">
     <mat-form-field>
-        <input (blur)="onBlur()" matInput [value]="value">
+        <input #editableFieldInput (blur)="onEditBlur(value)" matInput [value]="value">
     </mat-form-field>
 </ng-template>
