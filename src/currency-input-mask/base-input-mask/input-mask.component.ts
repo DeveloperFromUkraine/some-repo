@@ -9,8 +9,6 @@ import {
   ViewChild,
   ElementRef,
   AfterViewChecked,
-  HostListener,
-  Renderer2,
 } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
 import { CurrencyMaskDirective } from '../currency-mask/currency-mask.directive';
@@ -37,16 +35,17 @@ export class InputMaskComponent implements OnInit, AfterViewChecked {
   @Input() currencyCode: string;
   @Output() onValueChanged = new EventEmitter<string>();
 
-  constructor(currencypipe: CurrencyPipe) {
-    this.currencypipe = currencypipe;
-  }
+  constructor() {}
+
   onBlur() {
     this.onValueChanged.emit();
   }
 
   onEditBlur(editValue) {
-    this.value = editValue;
-    this.onValueChanged.emit(this.value);
+    if (this.value !== editValue) {
+      this.value = editValue;
+      this.onValueChanged.emit(this.value);
+    }
   }
 
   ngOnInit() {
