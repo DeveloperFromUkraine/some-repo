@@ -30,4 +30,12 @@ describe('Currency Mask Component', () => {
     component.onClick();
     expect(component.displayModeBool).toBe(false);
   });
+  it('should set the value to true if emitted and has value', () => {
+    component.onBlur('123');
+    expect(component.displayModeBool).toBe(true);
+  });
+  it('should set the value to true if emitted and has no value', () => {
+    component.onBlur('');
+    expect(component.displayModeBool).toBe(true);
+  });
 });
