@@ -2,7 +2,7 @@ import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'ign-currency-mask',
-  templateUrl: `./currency-mask.html`
+  templateUrl: `./currency-mask.html`,
 })
 export class CurrencyMaskComponent implements OnInit {
   @Input() currencyCode: string;
