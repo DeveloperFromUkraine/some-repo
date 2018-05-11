@@ -5,14 +5,9 @@ import { Directive, Renderer2, ElementRef, HostListener, Input } from '@angular/
   exportAs: 'ignCurrencyMask',
 })
 export class CurrencyMaskDirective {
-  element: ElementRef;
-  renderer: Renderer2;
   @Input() ignCurrencyMask: (string)[];
 
-  constructor(renderer: Renderer2, element: ElementRef) {
-    this.element = element;
-    this.renderer = renderer;
-  }
+  constructor(public renderer: Renderer2, public element: ElementRef) {}
 
   @HostListener('input', ['$event'])
   onInputWrapper($event: any): void {
