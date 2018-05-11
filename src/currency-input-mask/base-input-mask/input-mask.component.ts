@@ -9,10 +9,9 @@ import {
   ViewChild,
   ElementRef,
   AfterViewChecked,
-  ChangeDetectorRef
+  ChangeDetectorRef,
 } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
-import { CurrencyMaskDirective } from '../currency-mask/currency-mask.directive';
 
 @Directive({
   selector: '[displayMode]',
