@@ -9,6 +9,7 @@ import {
   ViewChild,
   ElementRef,
   AfterViewChecked,
+  ChangeDetectorRef
 } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
 import { CurrencyMaskDirective } from '../currency-mask/currency-mask.directive';
@@ -35,7 +36,7 @@ export class InputMaskComponent implements OnInit, AfterViewChecked {
   @Input() currencyCode: string;
   @Output() onValueChanged = new EventEmitter<string>();
 
-  constructor() {}
+  constructor(private cdRef: ChangeDetectorRef) {}
 
   onBlur() {
     this.onValueChanged.emit();
@@ -59,11 +60,10 @@ export class InputMaskComponent implements OnInit, AfterViewChecked {
   }
 
   ngAfterViewChecked() {
-    setTimeout(() => {
-      if ((this.displayModeChild as any).displayMode !== this.lastDisplayMode) {
-        this.setFocus();
-        this.lastDisplayMode = !this.lastDisplayMode;
-      }
-    });
+    if ((this.displayModeChild as any).displayMode !== this.lastDisplayMode) {
+      this.setFocus();
+      this.lastDisplayMode = !this.lastDisplayMode;
+    }
+    this.cdRef.detectChanges();
   }
 }
