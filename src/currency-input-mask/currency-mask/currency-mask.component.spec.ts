@@ -4,6 +4,7 @@ import { DebugElement } from '@angular/core/src/debug/debug_node';
 import { CurrencyMaskComponent } from './currency-mask.component';
 import { ChangeDetectorRef, ElementRef, Component } from '@angular/core';
 import { ComponentTest } from '../../../test/test-bed/component';
+import { DisplayMode } from '../base-input-mask/input-mask.component';
 
 describe('Currency Mask Component', () => {
   let fixture: ComponentFixture<CurrencyMaskComponent>;
@@ -12,7 +13,7 @@ describe('Currency Mask Component', () => {
   let ne: HTMLElement;
 
   beforeEach(() => {
-    ComponentTest.createTestBed([], [CurrencyMaskComponent] as Component[]);
+    ComponentTest.createTestBed([], [CurrencyMaskComponent, DisplayMode] as Component[]);
     fixture = TestBed.createComponent(CurrencyMaskComponent);
     component = fixture.componentInstance;
 
@@ -22,11 +23,11 @@ describe('Currency Mask Component', () => {
   it('should not be null', () => {
     expect(fixture).not.toBeNull();
   });
-  //   it('sets should set display to true', () => {
-  //     expect(component.displayModeBool).toBe(true);
-  //   });
-  //   it('should set display to false when clicked', () => {
-  //     component.onClick();
-  //     expect(component.displayModeBool).toBe(false);
-  //   });
+  it('sets should set display to true', () => {
+    expect(component.displayModeBool).toBe(true);
+  });
+  it('should set display to false when clicked', () => {
+    component.onClick();
+    expect(component.displayModeBool).toBe(false);
+  });
 });
