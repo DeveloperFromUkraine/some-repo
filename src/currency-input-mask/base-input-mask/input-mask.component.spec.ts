@@ -5,7 +5,7 @@ import { InputMaskComponent } from './input-mask.component';
 import { ChangeDetectorRef, ElementRef, Component } from '@angular/core';
 import { ComponentTest } from '../../../test/test-bed/component';
 
-describe('Input Mask Component', () => {
+describe('Currency Mask Component', () => {
   let fixture: ComponentFixture<InputMaskComponent>;
   let component: InputMaskComponent;
   let de, deInputEdit, deInputDisplay: DebugElement;
@@ -81,7 +81,6 @@ describe('Input Mask Component', () => {
     const spy = spyOn(component.editableInputField.nativeElement, 'focus');
 
     component.setFocus();
-
     expect(spy).toHaveBeenCalled();
   });
 });
