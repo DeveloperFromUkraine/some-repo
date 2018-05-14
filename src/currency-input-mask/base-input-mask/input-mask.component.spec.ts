@@ -9,7 +9,7 @@ import { CurrencyMaskDirective } from '../currency-mask/currency-mask.directive'
 describe('Currency Mask Component', () => {
   let fixture: ComponentFixture<InputMaskComponent>;
   let component: InputMaskComponent;
-  let de, deInputEdit, deInputDisplay: DebugElement;
+  let deInputEdit, deInputDisplay: DebugElement;
   let inputValue: HTMLInputElement;
   let elementRef = {
     nativeElement: {

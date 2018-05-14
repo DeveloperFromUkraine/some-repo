@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { DebugElement } from '@angular/core/src/debug/debug_node';
 import { CurrencyMaskComponent } from './currency-mask.component';
 import { Component } from '@angular/core';
 import { ComponentTest } from '../../../test/test-bed/component';
