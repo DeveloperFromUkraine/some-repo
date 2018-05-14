@@ -80,7 +80,6 @@ describe('Currency Mask Component', () => {
     component.setFocus();
     expect(spy).toHaveBeenCalled();
   });
-  it('has no null view child', () => {});
   it('should allow numbers without decimals', () => {
     component.displayModeChild = { displayMode: false };
 
