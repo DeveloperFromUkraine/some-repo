@@ -1,5 +1,6 @@
 ### vNEXT
 - Modified `ign-right-drawer` to use `mat-drawer`, to unfocus/darken background content, to close on backdrop click and escape key press, and to make content scrollable
+- Made icon within `ign-sidenav-header` keyboard accessible
 
 ### v0.7.0
 - Deprecated ign-nav-list, it is recommended to use mat-nav-list instead
