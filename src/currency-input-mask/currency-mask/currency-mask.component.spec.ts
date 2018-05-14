@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core/src/debug/debug_node';
 import { CurrencyMaskComponent } from './currency-mask.component';
-import { ChangeDetectorRef, ElementRef, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { ComponentTest } from '../../../test/test-bed/component';
 import { DisplayMode } from '../base-input-mask/input-mask.component';
 
@@ -18,10 +18,6 @@ describe('Currency Mask Component', () => {
     component = fixture.componentInstance;
 
     fixture.detectChanges();
-  });
-
-  it('should not be null', () => {
-    expect(fixture).not.toBeNull();
   });
   it('sets should set display to true', () => {
     expect(component.displayModeBool).toBe(true);

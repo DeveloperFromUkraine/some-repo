@@ -4,12 +4,14 @@ import { DebugElement } from '@angular/core/src/debug/debug_node';
 import { InputMaskComponent } from './input-mask.component';
 import { ChangeDetectorRef, ElementRef, Component } from '@angular/core';
 import { ComponentTest } from '../../../test/test-bed/component';
+import { CurrencyMaskDirective } from '../currency-mask/currency-mask.directive';
 
 describe('Currency Mask Component', () => {
   let fixture: ComponentFixture<InputMaskComponent>;
   let component: InputMaskComponent;
   let de, deInputEdit, deInputDisplay: DebugElement;
   let ne: HTMLElement;
+  let inputValue: HTMLInputElement;
   let cdRef = {
     detectChanges: () => {},
   };
@@ -20,17 +22,16 @@ describe('Currency Mask Component', () => {
   };
 
   beforeEach(() => {
-    ComponentTest.createTestBed([], [InputMaskComponent] as Component[]);
+    ComponentTest.createTestBed([], [InputMaskComponent, CurrencyMaskDirective] as Component[]);
     fixture = TestBed.createComponent(InputMaskComponent);
     component = fixture.componentInstance;
     component.lastDisplayMode = false;
     component.displayModeChild = { displayMode: true };
 
     fixture.detectChanges();
-
-    deInputEdit = fixture.debugElement.query(By.css('editableFieldInput'));
-    deInputDisplay = fixture.debugElement.query(By.css('displayFieldInput'));
     component.ngOnInit();
+    deInputEdit = fixture.debugElement.query(By.css('.editInput'));
+    deInputDisplay = fixture.debugElement.query(By.css('.displayInput'));
 
     fixture.detectChanges();
   });
@@ -83,4 +84,80 @@ describe('Currency Mask Component', () => {
     component.setFocus();
     expect(spy).toHaveBeenCalled();
   });
+  it('should allow numbers without decimals', () => {
+    component.displayModeChild = { displayMode: false };
+
+    fixture.detectChanges();
+    let testString = '123';
+    deInputEdit = fixture.debugElement.query(By.css('.editInput'));
+
+    changeInputToApplyCurrencyMask(testString, testString.length);
+    fixture.detectChanges();
+
+    expect(inputValue.value).toBe('123');
+  });
+  it('should not allow letters as valid input', () => {
+    component.displayModeChild = { displayMode: false };
+
+    fixture.detectChanges();
+    let testString = 'abc';
+    deInputEdit = fixture.debugElement.query(By.css('.editInput'));
+
+    changeInputToApplyCurrencyMask(testString, testString.length);
+    fixture.detectChanges();
+
+    expect(inputValue.value).toBe('');
+  });
+  it('should not allow more than one period', () => {
+    component.displayModeChild = { displayMode: false };
+
+    fixture.detectChanges();
+    let testString = '2..3.4';
+    let count = 0;
+    deInputEdit = fixture.debugElement.query(By.css('.editInput'));
+
+    changeInputToApplyCurrencyMask(testString, testString.length);
+    fixture.detectChanges();
+    for (let i = 0; i < inputValue.value.length; i++) {
+      if (inputValue.value.charAt(i) === '.') {
+        count += 1;
+      }
+    }
+
+    expect(count > 1).toBe(false);
+  });
+  it('should only be four decimal places', () => {
+    component.displayModeChild = { displayMode: false };
+
+    fixture.detectChanges();
+    let testString = '123.45678';
+    deInputEdit = fixture.debugElement.query(By.css('.editInput'));
+
+    changeInputToApplyCurrencyMask(testString, testString.length);
+    fixture.detectChanges();
+
+    expect(inputValue.value).toBe('123.4567');
+  });
+  it('should not allow negative numbers or hyphens', () => {
+    component.displayModeChild = { displayMode: false };
+
+    fixture.detectChanges();
+    let testString = '-';
+    deInputEdit = fixture.debugElement.query(By.css('.editInput'));
+
+    changeInputToApplyCurrencyMask(testString, testString.length);
+    fixture.detectChanges();
+
+    expect(inputValue.value).toBe('');
+  });
+  async function changeInputToApplyCurrencyMask(testingString, testingStringLength) {
+    inputValue = deInputEdit.nativeElement;
+    inputValue.value = testingString;
+
+    for (let i = 0; i < testingStringLength; i++) {
+      inputValue.dispatchEvent(new Event('input'));
+    }
+
+    await fixture.detectChanges();
+  }
 });

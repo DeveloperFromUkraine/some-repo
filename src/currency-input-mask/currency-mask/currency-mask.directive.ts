@@ -7,8 +7,6 @@ import { Directive, Renderer2, ElementRef, HostListener, Input } from '@angular/
 export class CurrencyMaskDirective {
   @Input() ignCurrencyMask: (string)[];
 
-  constructor(public renderer: Renderer2, public element: ElementRef) {}
-
   @HostListener('input', ['$event'])
   onInputWrapper($event: any): void {
     const targetValue = $event.target.value;
