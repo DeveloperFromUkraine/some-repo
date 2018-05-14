@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core/src/debug/debug_node';
 import { InputMaskComponent } from './input-mask.component';
-import { ChangeDetectorRef, ElementRef, Component } from '@angular/core';
+import { ElementRef, Component } from '@angular/core';
 import { ComponentTest } from '../../../test/test-bed/component';
 import { CurrencyMaskDirective } from '../currency-mask/currency-mask.directive';
 
@@ -10,11 +10,7 @@ describe('Currency Mask Component', () => {
   let fixture: ComponentFixture<InputMaskComponent>;
   let component: InputMaskComponent;
   let de, deInputEdit, deInputDisplay: DebugElement;
-  let ne: HTMLElement;
   let inputValue: HTMLInputElement;
-  let cdRef = {
-    detectChanges: () => {},
-  };
   let elementRef = {
     nativeElement: {
       focus: () => {},
@@ -84,6 +80,7 @@ describe('Currency Mask Component', () => {
     component.setFocus();
     expect(spy).toHaveBeenCalled();
   });
+  it('has no null view child', () => {});
   it('should allow numbers without decimals', () => {
     component.displayModeChild = { displayMode: false };
 

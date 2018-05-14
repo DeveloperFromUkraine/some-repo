@@ -1,4 +1,4 @@
-import { Directive, Renderer2, ElementRef, HostListener, Input } from '@angular/core';
+import { Directive, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[ignCurrencyMask]',

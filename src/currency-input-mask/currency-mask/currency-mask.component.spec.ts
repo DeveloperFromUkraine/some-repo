@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core/src/debug/debug_node';
 import { CurrencyMaskComponent } from './currency-mask.component';
 import { Component } from '@angular/core';
@@ -9,8 +8,6 @@ import { DisplayMode } from '../base-input-mask/input-mask.component';
 describe('Currency Mask Component', () => {
   let fixture: ComponentFixture<CurrencyMaskComponent>;
   let component: CurrencyMaskComponent;
-  let de: DebugElement;
-  let ne: HTMLElement;
 
   beforeEach(() => {
     ComponentTest.createTestBed([], [CurrencyMaskComponent, DisplayMode] as Component[]);
