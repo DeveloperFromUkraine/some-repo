@@ -10,6 +10,9 @@ A label must be provided. The contents of the tag will be displayed as the value
 <ign-field label="The Answer">42</ign-field>
 ```
 
+* @Input() label: string 
+    * Label for the content provided via ng-content
+
 # Inline Field Component
 
 This component is similar to the field above but slightly different look and feel. Label will appear first followed by the text value on the same row.
@@ -21,9 +24,10 @@ A label must be provided. The contents of the tag will be displayed as the value
 ```html
 <ign-field-inline label="The Answer">42</ign-field-inline>
 ```
+
 # Editable Field Component
 
-his component is similar to the field component but also includes an edit button that emits an event that can be subscribed to.
+This component is similar to the field component but also includes an edit button that emits an event that can be subscribed to.
 
 ## Usage
 
@@ -33,6 +37,18 @@ An editIcon can be optionaly provided, if none passed the button will display ma
 ```html
 <ign-editable-field label="The Answer" (onIconClick)="myFn($event)">42</ign-field>
 ```
+
+* @Input() ariaBtnLabel: string 
+    * Used to provide accessibility for the button
+* @Input() editIcon: string                
+    * The icon to be used in the button
+    * Defaults to 'mode_edit'
+* @Input() da: string               
+    * da for the editable field
+* @Input() daButton: number[]            
+    * da for the button
+* @Output() onIconClick: EventEmitter<any>                    
+    * Event emitter for the button click
 
 # Editable Inline Field Component
 

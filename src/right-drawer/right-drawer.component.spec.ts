@@ -127,11 +127,11 @@ describe('Right Drawer', () => {
   });
 
   it('should call closeDrawer when keyup.escape emitted', () => {
-      jest.spyOn(component, 'closeDrawer');
+    jest.spyOn(component, 'closeDrawer');
 
-      fixture.debugElement.triggerEventHandler('keyup.escape', {});
+    fixture.debugElement.triggerEventHandler('keyup.escape', {});
 
-      expect(component.closeDrawer).toHaveBeenCalled();
+    expect(component.closeDrawer).toHaveBeenCalled();
   });
 
   it('should call toggleDrawer when keyup.escape emitted', () => {
@@ -151,19 +151,19 @@ describe('Right Drawer', () => {
   });
 
   it('should call toggleDrawer when open drawer called', () => {
-      jest.spyOn(component, 'toggleDrawer');
+    jest.spyOn(component, 'toggleDrawer');
 
-      component.openDrawer();
+    component.openDrawer();
 
-      expect(component.toggleDrawer).toHaveBeenCalledWith(true);
+    expect(component.toggleDrawer).toHaveBeenCalledWith(true);
   });
 
   it('should set open to true when open drawer called', () => {
-      component.open = false;
+    component.open = false;
 
-      component.openDrawer();
+    component.openDrawer();
 
-      expect(component.open).toBe(true);
+    expect(component.open).toBe(true);
   });
 
   it('should match snapshot', async () => {

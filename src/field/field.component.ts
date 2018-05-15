@@ -3,7 +3,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'ign-field',
   template: `
-    <div da="fieldValue" class="value"><ng-content></ng-content></div>
+    <div da="fieldValue" class="value">
+      <ng-content></ng-content>
+    </div>
     <div class="label">{{label}}</div>
   `,
   styleUrls: ['field.component.scss'],
@@ -16,8 +18,8 @@ export class FieldComponent {
   selector: 'ign-field-inline',
   template: `
     <div da="fieldValue" class="value">
-    <span class="label">{{label}}</span>
-    <ng-content></ng-content>
+      <span class="label">{{label}}</span>
+      <ng-content></ng-content>
     </div>
   `,
   styleUrls: ['field.component.scss'],
@@ -27,16 +29,22 @@ export class FieldInlineComponent extends FieldComponent {}
   selector: 'ign-editable-field',
   template: `
     <div class="label-container">
-    <div [attr.da]="da" class="value flex-lable-value"><ng-content></ng-content></div>
-    <button [attr.da]="daButton" mat-icon-button class="mat-icon-button" (click)=handleClick()>
-      <mat-icon>{{editIcon}}</mat-icon>
-    </button>
+      <div id="editable-value" tabindex="0" [attr.da]="da" class="value flex-lable-value"><ng-content></ng-content></div>
+      <button
+        aria-describedby="editable-value"
+        [attr.da]="daButton"
+        mat-icon-button class="mat-icon-button"
+        [attr.aria-label]="ariaBtnLabel"
+        (click)=handleClick()>
+        <mat-icon>{{editIcon}}</mat-icon>
+      </button>
     </div>
     <div class="label">{{label}}</div>
   `,
   styleUrls: ['field.component.scss'],
 })
 export class EditableFieldComponent extends FieldComponent {
+  @Input() ariaBtnLabel = 'Edit';
   @Input() editIcon = 'mode_edit';
   @Input() da: string;
   @Input() daButton: string;
@@ -52,11 +60,11 @@ export class EditableFieldComponent extends FieldComponent {
   template: `
     <div class="label-container">
       <div da="fieldValue" class="value flex-lable-value">
-      <span class="label">{{label}}</span>
-      <ng-content></ng-content>
+        <span class="label">{{label}}</span>
+        <ng-content></ng-content>
       </div>
       <button mat-icon-button class="mat-icon-button" (click)=handleClick()>
-      <mat-icon>{{editIcon}}</mat-icon>
+        <mat-icon>{{editIcon}}</mat-icon>
       </button>
     </div>
   `,
