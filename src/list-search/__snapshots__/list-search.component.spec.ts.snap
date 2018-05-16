@@ -17,7 +17,7 @@ exports[`List Search Component Should match snapshot 1`] = `
     
     
     <input
-      aria-label="Search list"
+      aria-label="List Search"
       matinput=""
       placeholder="Search"
     />

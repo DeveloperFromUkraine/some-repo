@@ -1,8 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ExpandableFabComponent } from './expandable-fab.component';
 import { ComponentTest } from '../../test/test-bed/component';
-import { DebugElement, Component } from '@angular/core';
+import { DebugElement, Component, NgModule } from '@angular/core';
 import { By } from '@angular/platform-browser';
+import { TranslationModule } from '../localization/translation.module';
 
 describe('Expandable Fab', () => {
   let fixture: ComponentFixture<ExpandableFabComponent>;
@@ -10,7 +11,10 @@ describe('Expandable Fab', () => {
   let de: DebugElement;
 
   beforeEach(() => {
-    ComponentTest.createTestBed([], [ExpandableFabComponent] as Component[]);
+    ComponentTest.createTestBed(
+      [TranslationModule] as NgModule[],
+      [ExpandableFabComponent] as Component[]
+    );
 
     fixture = TestBed.createComponent(ExpandableFabComponent);
     component = fixture.componentInstance;

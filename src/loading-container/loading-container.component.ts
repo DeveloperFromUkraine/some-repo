@@ -9,7 +9,7 @@ const DEFAULT_LOADING_DELAY_MS = 400;
 })
 export class LoadingContainerComponent implements OnInit {
   @Input() loading: boolean;
-  @Input() ariaLabel = 'Loading';
+  @Input() ariaLabel = 'LOADING';
   spinnerAriaLabel: string;
   pastDelay: boolean;
   private delay: number;
