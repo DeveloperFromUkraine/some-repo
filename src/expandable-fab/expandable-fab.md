@@ -1,12 +1,12 @@
 *** HTML ***
-# Floating Action Buttons
+# Expandable FAB (Floating Action Button)
 
 ## Use
-Expandable Fab (floating action button) is composed of two parts:
+Expandable FABs are composed of two parts:
 * ign-expanable-fab (the container)
-* ign-expanable-fab-item (items inside the expandable fab)
+* ign-expanable-fab-item (items inside the expandable FAB)
 
-The expandable fab handles state (open/close) implicitly so developers do not need to worry about that.
+The expandable FAB handles state (open/close) implicitly so developers do not need to worry about that.
     The base open/close button are not configurable, and are considered system-wide configuration. To use,
     simply compose the items you wish to expand inside of the container.
 
@@ -38,15 +38,15 @@ The expandable fab handles state (open/close) implicitly so developers do not ne
 
 ## Content
 
-* Buttons within the FAB should only include those relevant to the current page and its navigation.
-* Three or four buttons maximum should be located within the FAB to avoid unfriendly user experience.
+* Buttons within the expandable FAB should only include those relevant to the current page and its navigation.
+* Three or four buttons maximum should be located within the expandable FAB to avoid unfriendly user experience.
 
 
 ## Style
 
 ign-expandable-fab
 
-* By default, the fab is allocated to the lower right hand corner, but may be allocated to any corner on the page.
+* By default, the expandable FAB is allocated to the lower right hand corner, but may be allocated to any corner on the page.
 
 ign-expanadable-fab-item
 
@@ -59,7 +59,7 @@ ign-expanadable-fab-item
 ## Accessibility
 
 * Add a descriptive ariaLabelOpen and ariaLabelClose within the ign-expandable-fab tag to describe the menu being opened/closed
-* When using the fab button to change a route or href, use the provided inputs in the fab tag (router/href) to prevent issues with tabbing through the control for accessibility
+* When using the expandable FAB button to change a route or href, use the provided inputs in the expandable FAB tag (router/href) to prevent issues with tabbing through the control for accessibility
 * Refer to Sample HTML for usage
 
 *** TypeScript *** 
