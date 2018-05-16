@@ -100,6 +100,25 @@ describe('EditableFieldComponent', () => {
     expect(ne.textContent).toContain(component.label);
   });
 
+  it('should default to "Edit" if no input is passed in for the aria-label', async () => {
+    de = fixture.debugElement.query(By.css('.mat-icon-button'));
+    ne = de.nativeElement;
+
+    await fixture.detectChanges();
+
+    expect(de.attributes['aria-label']).toBe('Edit');
+  });
+
+  it('should set the aria-label', async () => {
+    de = fixture.debugElement.query(By.css('.mat-icon-button'));
+    ne = de.nativeElement;
+
+    component.ariaBtnLabel = 'button label';
+    await fixture.detectChanges();
+
+    expect(de.attributes['aria-label']).toBe(component.ariaBtnLabel);
+  });
+
   it('should show mode_edit icon when none specified', async () => {
     de = fixture.debugElement.query(By.css('mat-icon'));
     ne = de.nativeElement;

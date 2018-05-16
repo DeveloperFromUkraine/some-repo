@@ -160,7 +160,7 @@ import {
   MatFormFieldModule,
   MatInputModule,
   MatTooltipModule,
-  MatSidenavModule
+  MatSidenavModule,
 } from '@angular/material';
 
 const components = [
@@ -255,7 +255,7 @@ const components = [
     MatInputModule,
     MatTooltipModule,
     TranslationModule,
-    MatSidenavModule
+    MatSidenavModule,
   ],
   declarations: components,
   exports: [
