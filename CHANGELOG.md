@@ -1,5 +1,6 @@
 ### vNEXT
 - Modified `ign-right-drawer` to use `mat-drawer`, to unfocus/darken background content, to close on backdrop click and escape key press, and to make content scrollable
+- Made icon within `ign-sidenav-header` keyboard accessible
 
 ### v0.8.0
 - Added an aria-describedby between the button and the editable field within the `ign-editable-field` component

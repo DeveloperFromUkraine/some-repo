@@ -17,6 +17,7 @@ exports[`Side Nav Header should match snapshot 1`] = `
       
       <div
         class="user-picture-container"
+        igna11yclick=""
         routerlink="/profile"
         tabindex="0"
       >
