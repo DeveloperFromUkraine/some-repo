@@ -1,10 +1,9 @@
 ### vNEXT
 - Modified `ign-right-drawer` to use `mat-drawer`, to unfocus/darken background content, to close on backdrop click and escape key press, and to make content scrollable
-- Made icon within `ign-sidenav-header` keyboard accessible
+- Added `@Input` ariaBtnLabel, with default value, to `ign-editable-field` component and `ign-editable-field-inline` component
+- Added an aria-describedby to `ign-editable-field` component and `ign-editable-field-inline` component
+- New [currency input mask component](./src/currency-input-mask/currency-input-mask.md) `ign-currency-mask`
 
-### v0.8.0
-- Added an aria-describedby between the button and the editable field within the `ign-editable-field` component
-- Added an aria-label to the button within the `ign-editable-field` component
 
 ### v0.7.0
 - Deprecated ign-nav-list, it is recommended to use mat-nav-list instead
