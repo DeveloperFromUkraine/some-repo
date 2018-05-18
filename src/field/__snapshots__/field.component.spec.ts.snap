@@ -61,7 +61,8 @@ exports[`EditableFieldInlineComponent should match snapshot 1`] = `
         
     <div
       class="value flex-lable-value"
-      da="fieldValue"
+      id="editable-value"
+      tabindex="0"
     >
       
           
@@ -78,6 +79,8 @@ exports[`EditableFieldInlineComponent should match snapshot 1`] = `
     
         
     <button
+      aria-describedby="editable-value"
+      aria-label="Edit"
       class="mat-icon-button"
       mat-icon-button=""
     >
