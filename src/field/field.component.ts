@@ -59,11 +59,16 @@ export class EditableFieldComponent extends FieldComponent {
   selector: 'ign-editable-field-inline',
   template: `
     <div class="label-container">
-      <div da="fieldValue" class="value flex-lable-value">
+      <div da="fieldValue" id="editable-value" tabindex="0" [attr.da]="da" class="value flex-lable-value">
         <span class="label">{{label}}</span>
         <ng-content></ng-content>
       </div>
-      <button mat-icon-button class="mat-icon-button" (click)=handleClick()>
+      <button
+        aria-describedby="editable-value"
+        [attr.da]="daButton"
+        [attr.aria-label]="ariaBtnLabel"
+        mat-icon-button class="mat-icon-button"
+        (click)=handleClick()>
         <mat-icon>{{editIcon}}</mat-icon>
       </button>
     </div>
