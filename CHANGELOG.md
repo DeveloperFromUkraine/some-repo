@@ -4,6 +4,7 @@
 - Added an aria-describedby to `ign-editable-field` component and `ign-editable-field-inline` component
 - New [currency input mask component](./src/currency-input-mask/currency-input-mask.md) `ign-currency-mask`
 
+
 ### v0.7.0
 - Deprecated ign-nav-list, it is recommended to use mat-nav-list instead
 - Deprecated ign-divider, it is recommended to use mat-divider instead
