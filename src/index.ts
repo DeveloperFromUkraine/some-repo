@@ -139,6 +139,7 @@ import { TranslationService } from './localization/translation.service';
 import { TranslationModule } from './localization/translation.module';
 import { AvatarComponent } from './avatar/avatar.component';
 import { AvatarGroupComponent } from './avatar-group/avatar-group.component';
+export * from './avatar-group/avatar-group.types';
 
 import {
   InputMaskComponent,
