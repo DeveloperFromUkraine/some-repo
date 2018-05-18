@@ -1,9 +1,10 @@
 ### vNEXT
+
+### v0.7.1
 - Modified `ign-right-drawer` to use `mat-drawer`, to unfocus/darken background content, to close on backdrop click and escape key press, and to make content scrollable
 - Added `@Input` ariaBtnLabel, with default value, to `ign-editable-field` component and `ign-editable-field-inline` component
 - Added an aria-describedby to `ign-editable-field` component and `ign-editable-field-inline` component
 - New [currency input mask component](./src/currency-input-mask/currency-input-mask.md) `ign-currency-mask`
-
 
 ### v0.7.0
 - Deprecated ign-nav-list, it is recommended to use mat-nav-list instead
