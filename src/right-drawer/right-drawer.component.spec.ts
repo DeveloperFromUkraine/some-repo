@@ -31,7 +31,7 @@ describe('Right Drawer', () => {
     expect(de).toBeTruthy();
   });
 
-  it('should net create title-container if title is not set', () => {
+  it('should not create title-container if title is not set', () => {
     component.title = '';
 
     fixture.detectChanges();
@@ -48,7 +48,7 @@ describe('Right Drawer', () => {
   });
 
   it('should emit openChange event', () => {
-    de = fixture.debugElement.query(By.css('.close-icon'));
+    de = fixture.debugElement.query(By.css('button'));
     ne = de.nativeElement;
     let spy = jest.fn();
 
@@ -58,8 +58,8 @@ describe('Right Drawer', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  it('should call closeDrawer when click event emitted', () => {
-    de = fixture.debugElement.query(By.css('.close-icon'));
+  it('should call closeDrawer when button is clicked', () => {
+    de = fixture.debugElement.query(By.css('button'));
     ne = de.nativeElement;
     jest.spyOn(component, 'closeDrawer');
 
@@ -68,8 +68,8 @@ describe('Right Drawer', () => {
     expect(component.closeDrawer).toHaveBeenCalled();
   });
 
-  it('should call toggleDrawer when click event emitted', () => {
-    de = fixture.debugElement.query(By.css('.close-icon'));
+  it('should call toggleDrawer when button is clicked', () => {
+    de = fixture.debugElement.query(By.css('button'));
     ne = de.nativeElement;
     jest.spyOn(component, 'toggleDrawer');
 
@@ -78,14 +78,92 @@ describe('Right Drawer', () => {
     expect(component.toggleDrawer).toHaveBeenCalled();
   });
 
-  it('should set open to false when click event emitted', () => {
-    de = fixture.debugElement.query(By.css('.close-icon'));
+  it('should set open to false when button is clicked', () => {
+    de = fixture.debugElement.query(By.css('button'));
     ne = de.nativeElement;
 
     component.open = true;
     ne.dispatchEvent(new Event('click'));
 
     expect(component.open).toBe(false);
+  });
+
+  it('should call closeDrawer when backdrop is clicked', () => {
+    de = fixture.debugElement.query(By.css('#backdrop'));
+    ne = de.nativeElement;
+    jest.spyOn(component, 'closeDrawer');
+
+    ne.dispatchEvent(new Event('click'));
+
+    expect(component.closeDrawer).toHaveBeenCalled();
+  });
+
+  it('should call toggleDrawer when backdrop is clicked', () => {
+    de = fixture.debugElement.query(By.css('#backdrop'));
+    ne = de.nativeElement;
+    jest.spyOn(component, 'toggleDrawer');
+
+    ne.dispatchEvent(new Event('click'));
+
+    expect(component.toggleDrawer).toHaveBeenCalled();
+  });
+
+  it('should set open to false when backdrop is clicked', () => {
+    de = fixture.debugElement.query(By.css('#backdrop'));
+    ne = de.nativeElement;
+
+    component.open = true;
+    ne.dispatchEvent(new Event('click'));
+
+    expect(component.open).toBe(false);
+  });
+
+  it('should call handleEscape when keyup.escape emitted', () => {
+    jest.spyOn(component, 'handleEscape');
+
+    fixture.debugElement.triggerEventHandler('keyup.escape', {});
+
+    expect(component.handleEscape).toHaveBeenCalled();
+  });
+
+  it('should call closeDrawer when keyup.escape emitted', () => {
+    jest.spyOn(component, 'closeDrawer');
+
+    fixture.debugElement.triggerEventHandler('keyup.escape', {});
+
+    expect(component.closeDrawer).toHaveBeenCalled();
+  });
+
+  it('should call toggleDrawer when keyup.escape emitted', () => {
+    jest.spyOn(component, 'toggleDrawer');
+
+    fixture.debugElement.triggerEventHandler('keyup.escape', {});
+
+    expect(component.toggleDrawer).toHaveBeenCalled();
+  });
+
+  it('should set open to false when keyup.escape emitted', () => {
+    component.open = true;
+
+    fixture.debugElement.triggerEventHandler('keyup.escape', {});
+
+    expect(component.open).toBe(false);
+  });
+
+  it('should call toggleDrawer when open drawer called', () => {
+    jest.spyOn(component, 'toggleDrawer');
+
+    component.openDrawer();
+
+    expect(component.toggleDrawer).toHaveBeenCalledWith(true);
+  });
+
+  it('should set open to true when open drawer called', () => {
+    component.open = false;
+
+    component.openDrawer();
+
+    expect(component.open).toBe(true);
   });
 
   it('should match snapshot', async () => {

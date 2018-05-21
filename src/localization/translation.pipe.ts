@@ -21,6 +21,6 @@ export class TranslationPipe implements PipeTransform {
 
   getTranslation(translationKey: string) {
     const translationMap = TranslationService.getTranslation();
-    return translationMap[translationKey];
+    return translationMap[translationKey] || translationKey;
   }
 }

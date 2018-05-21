@@ -4,6 +4,7 @@ exports[`Expandable Fab should match snapshot 1`] = `
 <ign-expandable-fab
   activeClass="null"
   ariaLabelClose={[Function String]}
+  ariaLabelOpen={[Function String]}
   btns={[Function QueryList]}
   isOpen={[Function Boolean]}
   unSubscribe$={[Function Subject]}

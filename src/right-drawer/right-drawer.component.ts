@@ -1,4 +1,4 @@
-import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter, HostListener } from '@angular/core';
 
 // tslint:disable:use-host-property-decorator
 @Component({
@@ -14,6 +14,11 @@ export class RightDrawerComponent implements OnInit {
   @Input() startOpen = false;
   @Input() title: string;
   @Output() openChange = new EventEmitter<boolean>();
+
+  @HostListener('keyup.escape')
+  handleEscape() {
+    this.closeDrawer();
+  }
 
   ngOnInit() {
     this.toggleDrawer(this.startOpen || this.open);

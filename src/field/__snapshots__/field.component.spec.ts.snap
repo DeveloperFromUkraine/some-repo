@@ -2,6 +2,7 @@
 
 exports[`EditableFieldComponent should match snapshot 1`] = `
 <ign-editable-field
+  ariaBtnLabel={[Function String]}
   editIcon={[Function String]}
   label={[Function String]}
   onIconClick={[Function EventEmitter]}
@@ -11,23 +12,27 @@ exports[`EditableFieldComponent should match snapshot 1`] = `
     class="label-container"
   >
     
-      
+        
     <div
       class="value flex-lable-value"
+      id="editable-value"
+      tabindex="0"
     />
     
-      
+        
     <button
+      aria-describedby="editable-value"
+      aria-label="Edit"
       class="mat-icon-button"
       mat-icon-button=""
     >
       
-        
+          
       <mat-icon>
         mode_edit
       </mat-icon>
       
-      
+        
     </button>
     
       
@@ -43,6 +48,7 @@ exports[`EditableFieldComponent should match snapshot 1`] = `
 
 exports[`EditableFieldInlineComponent should match snapshot 1`] = `
 <ign-editable-field-inline
+  ariaBtnLabel={[Function String]}
   editIcon={[Function String]}
   label={[Function String]}
   onIconClick={[Function EventEmitter]}
@@ -55,28 +61,31 @@ exports[`EditableFieldInlineComponent should match snapshot 1`] = `
         
     <div
       class="value flex-lable-value"
-      da="fieldValue"
+      id="editable-value"
+      tabindex="0"
     >
       
-        
+          
       <span
         class="label"
       >
         label!
       </span>
       
-        
+          
       
         
     </div>
     
         
     <button
+      aria-describedby="editable-value"
+      aria-label="Edit"
       class="mat-icon-button"
       mat-icon-button=""
     >
       
-        
+          
       <mat-icon>
         mode_edit
       </mat-icon>
@@ -98,7 +107,12 @@ exports[`Field should match snapshot 1`] = `
       <div
     class="value"
     da="fieldValue"
-  />
+  >
+    
+        
+    
+      
+  </div>
       <div
     class="label"
   >
@@ -118,14 +132,14 @@ exports[`FieldInlineComponent should match snapshot 1`] = `
     da="fieldValue"
   >
     
-      
+        
     <span
       class="label"
     >
       label!
     </span>
     
-      
+        
     
       
   </div>

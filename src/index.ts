@@ -1,6 +1,6 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { CommonModule, CurrencyPipe } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { PageComponent } from './page/page.component';
@@ -139,6 +139,14 @@ import { TranslationService } from './localization/translation.service';
 import { TranslationModule } from './localization/translation.module';
 import { AvatarComponent } from './avatar/avatar.component';
 import { AvatarGroupComponent } from './avatar-group/avatar-group.component';
+export * from './avatar-group/avatar-group.types';
+
+import {
+  InputMaskComponent,
+  DisplayMode,
+} from './currency-input-mask/base-input-mask/input-mask.component';
+import { CurrencyMaskComponent } from './currency-input-mask/currency-mask/currency-mask.component';
+import { CurrencyMaskDirective } from './currency-input-mask/currency-mask/currency-mask.directive';
 
 import {
   MatToolbarModule,
@@ -153,6 +161,7 @@ import {
   MatFormFieldModule,
   MatInputModule,
   MatTooltipModule,
+  MatSidenavModule,
 } from '@angular/material';
 
 const components = [
@@ -219,6 +228,10 @@ const components = [
   ToolTipDirective,
   AvatarComponent,
   AvatarGroupComponent,
+  DisplayMode,
+  InputMaskComponent,
+  CurrencyMaskComponent,
+  CurrencyMaskDirective,
 ];
 
 @NgModule({
@@ -243,6 +256,7 @@ const components = [
     MatInputModule,
     MatTooltipModule,
     TranslationModule,
+    MatSidenavModule,
   ],
   declarations: components,
   exports: [
@@ -252,7 +266,7 @@ const components = [
     TextListItemComponent,
     DataTableContainerComponent,
   ],
-  providers: [TranslationService],
+  providers: [TranslationService, CurrencyPipe],
 })
 export class IgniteDesignSystemModule {
   static updateTranslation(translationKey: string, translationValue: string) {

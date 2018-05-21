@@ -3,7 +3,9 @@ import { ListSearchComponent } from './list-search.component';
 import { ComponentTest } from '../../test/test-bed/component';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core/src/debug/debug_node';
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
+import { TranslationModule } from '../localization/translation.module';
+import { TranslationMap } from '../localization/translation-map';
 
 describe('List Search Component', () => {
   let fixture: ComponentFixture<ListSearchComponent>;
@@ -12,7 +14,10 @@ describe('List Search Component', () => {
   let ne: HTMLElement;
 
   beforeEach(() => {
-    ComponentTest.createTestBed([], [ListSearchComponent] as Component[]);
+    ComponentTest.createTestBed(
+      [TranslationModule] as NgModule[],
+      [ListSearchComponent] as Component[]
+    );
 
     fixture = TestBed.createComponent(ListSearchComponent);
     component = fixture.componentInstance;
@@ -96,7 +101,7 @@ describe('List Search Component', () => {
     it('Should be set to the default value when no value is passed in', () => {
       fixture.detectChanges();
 
-      expect(ne.getAttribute('aria-label')).toBe('Search list');
+      expect(ne.getAttribute('aria-label')).toBe(TranslationMap['LIST_SEARCH']);
     });
   });
   describe('On escape key press', () => {

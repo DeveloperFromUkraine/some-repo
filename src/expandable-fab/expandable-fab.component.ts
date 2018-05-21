@@ -18,8 +18,8 @@ import 'rxjs/add/observable/merge';
 })
 export class ExpandableFabComponent implements AfterContentInit, OnChanges, OnDestroy {
   @ContentChildren(ExpandableFabItemComponent) btns: QueryList<ExpandableFabItemComponent>;
-  @Input() ariaLabelOpen: string;
-  @Input() ariaLabelClose = 'close';
+  @Input() ariaLabelOpen = 'OPEN';
+  @Input() ariaLabelClose = 'CLOSE';
 
   activeClass: string = null;
   isOpen = false;

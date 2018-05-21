@@ -9,7 +9,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 export class ListSearchComponent {
   @ViewChild('searchInput') searchInput: ElementRef;
 
-  @Input() ariaLabel = 'Search list';
+  @Input() ariaLabel = 'LIST_SEARCH';
   @Output() searchCriteria$ = new BehaviorSubject<any>({});
 
   emitSearchEvents() {

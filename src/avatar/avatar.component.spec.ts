@@ -129,7 +129,7 @@ describe('AvatarComponent', () => {
     expect(avatar.nativeElement.getAttribute('aria-label')).toContain('Tooltip');
   });
 
-  it('should have empty aria-label by default', () => {
+  it('should have aria-label set to default when neither tooltip nor aria-label are provided', () => {
     const avatar = de.query(By.css('#avatar'));
 
     fixture.detectChanges();
