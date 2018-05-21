@@ -44,8 +44,8 @@ export class InputMaskComponent implements OnInit, AfterViewChecked {
   onEditBlur(editValue) {
     if (this.value !== editValue) {
       this.value = editValue;
-      this.onValueChanged.emit(this.value);
     }
+    this.onValueChanged.emit(this.value);
   }
 
   ngOnInit() {
