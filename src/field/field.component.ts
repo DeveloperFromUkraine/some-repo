@@ -1,4 +1,5 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ChangeDetectorRef } from '@angular/core';
+import { TranslationPipe } from '../localization/translation.pipe';
 
 @Component({
   selector: 'ign-field',
@@ -44,11 +45,18 @@ export class FieldInlineComponent extends FieldComponent {}
   styleUrls: ['field.component.scss'],
 })
 export class EditableFieldComponent extends FieldComponent {
-  @Input() ariaBtnLabel = 'Edit';
+  @Input() ariaBtnLabel;
   @Input() editIcon = 'mode_edit';
   @Input() da: string;
   @Input() daButton: string;
   @Output() onIconClick: EventEmitter<any> = new EventEmitter();
+
+  constructor(private _cdr: ChangeDetectorRef) {
+    super();
+
+    const pipe = new TranslationPipe(this._cdr);
+    this.ariaBtnLabel = pipe.transform('EDIT');
+  }
 
   handleClick() {
     this.onIconClick.emit();
