@@ -16,7 +16,7 @@ import { CurrencyPipe } from '@angular/common';
 @Directive({
   selector: '[displayMode]',
 })
-export class DisplayMode {
+export class DisplayModeDirective {
   @Input() displayMode;
 }
 
@@ -26,7 +26,7 @@ export class DisplayMode {
   styleUrls: ['./input-mask.scss'],
 })
 export class InputMaskComponent implements OnInit, AfterViewChecked {
-  @ContentChild(DisplayMode) displayModeChild: DisplayMode;
+  @ContentChild(DisplayModeDirective) displayModeChild: DisplayModeDirective;
   @ViewChild('editableFieldInput') editableInputField: ElementRef;
 
   lastDisplayMode: boolean;
