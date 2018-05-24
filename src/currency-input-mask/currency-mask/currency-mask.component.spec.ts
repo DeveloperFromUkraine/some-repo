@@ -2,14 +2,14 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CurrencyMaskComponent } from './currency-mask.component';
 import { Component } from '@angular/core';
 import { ComponentTest } from '../../../test/test-bed/component';
-import { DisplayMode } from '../base-input-mask/input-mask.component';
+import { DisplayModeDirective } from '../base-input-mask/input-mask.component';
 
 describe('Currency Mask Component', () => {
   let fixture: ComponentFixture<CurrencyMaskComponent>;
   let component: CurrencyMaskComponent;
 
   beforeEach(() => {
-    ComponentTest.createTestBed([], [CurrencyMaskComponent, DisplayMode] as Component[]);
+    ComponentTest.createTestBed([], [CurrencyMaskComponent, DisplayModeDirective] as Component[]);
     fixture = TestBed.createComponent(CurrencyMaskComponent);
     component = fixture.componentInstance;
 
