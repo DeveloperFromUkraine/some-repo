@@ -15,9 +15,10 @@ import { CurrencyPipe } from '@angular/common';
 
 @Directive({
   selector: '[displayMode]',
-  inputs: ['displayMode'],
 })
-export class DisplayMode {}
+export class DisplayMode {
+  @Input() displayMode;
+}
 
 @Component({
   selector: 'ign-input-mask',
