@@ -143,7 +143,7 @@ export * from './avatar-group/avatar-group.types';
 
 import {
   InputMaskComponent,
-  DisplayMode,
+  DisplayModeDirective,
 } from './currency-input-mask/base-input-mask/input-mask.component';
 import { CurrencyMaskComponent } from './currency-input-mask/currency-mask/currency-mask.component';
 import { CurrencyMaskDirective } from './currency-input-mask/currency-mask/currency-mask.directive';
@@ -228,7 +228,7 @@ const components = [
   ToolTipDirective,
   AvatarComponent,
   AvatarGroupComponent,
-  DisplayMode,
+  DisplayModeDirective,
   InputMaskComponent,
   CurrencyMaskComponent,
   CurrencyMaskDirective,

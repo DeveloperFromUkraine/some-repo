@@ -1,5 +1,9 @@
 ### vNEXT
 
+### v0.7.2
+- Fixed bug in currency component
+- Fixed angular linting issues with components
+
 ### v0.7.1
 - Modified `ign-right-drawer` to use `mat-drawer`, to unfocus/darken background content, to close on backdrop click and escape key press, and to make content scrollable
 - Added `@Input` ariaBtnLabel, with default value, to `ign-editable-field` component and `ign-editable-field-inline` component

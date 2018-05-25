@@ -2,6 +2,7 @@
 
 exports[`EditableFieldComponent should match snapshot 1`] = `
 <ign-editable-field
+  _cdr={[Function ViewRef_]}
   ariaBtnLabel={[Function String]}
   editIcon={[Function String]}
   label={[Function String]}
@@ -48,6 +49,7 @@ exports[`EditableFieldComponent should match snapshot 1`] = `
 
 exports[`EditableFieldInlineComponent should match snapshot 1`] = `
 <ign-editable-field-inline
+  _cdr={[Function ViewRef_]}
   ariaBtnLabel={[Function String]}
   editIcon={[Function String]}
   label={[Function String]}

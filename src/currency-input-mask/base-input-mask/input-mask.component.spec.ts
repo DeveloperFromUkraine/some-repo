@@ -54,13 +54,13 @@ describe('Currency Mask Component', () => {
 
     expect(spy).toHaveBeenCalledWith('120');
   });
-  it('emits no change when value is not changed', () => {
+  it('emits same change when value is not changed', () => {
     component.value = '100';
     let spy = spyOn(component.onValueChanged, 'emit');
 
     component.onEditBlur('100');
 
-    expect(spy).not.toHaveBeenCalled();
+    expect(spy).toHaveBeenCalledWith('100');
   });
   it('emits a change when value is changed', () => {
     component.lastDisplayMode = false;
