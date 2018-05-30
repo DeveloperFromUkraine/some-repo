@@ -102,7 +102,7 @@ exports[`Data Table Container should match snapshot 1`] = `
               
               <div
                 class="mat-input-hint-wrapper mat-form-field-hint-wrapper ng-tns-c37-0 ng-trigger ng-trigger-transitionMessages ng-star-inserted"
-                style="opacity: 1;"
+                style="opacity: 1; transform: translateY(0%);"
               >
                 
                 <div
