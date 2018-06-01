@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
       .card-header-container {
         margin-bottom: 32px;
       }
-
     `,
   ],
 })
