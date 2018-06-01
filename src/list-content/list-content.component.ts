@@ -16,7 +16,8 @@ export class ListContentComponent {
   }
 
   skipListContent() {
-    document.getElementById('list-content-skip').scrollIntoView(true);
-    document.getElementById('list-content-skip').focus();
+    const skipElement = document.getElementById('list-content-skip');
+    skipElement.scrollIntoView(true);
+    skipElement.focus();
   }
 }

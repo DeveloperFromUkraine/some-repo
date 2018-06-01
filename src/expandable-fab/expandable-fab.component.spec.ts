@@ -4,20 +4,33 @@ import { ComponentTest } from '../../test/test-bed/component';
 import { DebugElement, Component, NgModule } from '@angular/core';
 import { By } from '@angular/platform-browser';
 import { TranslationModule } from '../localization/translation.module';
+import { ExpandableFabItemComponent } from '..';
+
+@Component({
+  template: `
+  <ign-expandable-fab>
+    <ign-expandable-fab-item icon="add"></ign-expandable-fab-item>
+  </ign-expandable-fab>`,
+})
+class ExpandableFabHostComponent {}
 
 describe('Expandable Fab', () => {
-  let fixture: ComponentFixture<ExpandableFabComponent>;
+  let fixture: ComponentFixture<ExpandableFabHostComponent>;
   let component: ExpandableFabComponent;
   let de: DebugElement;
 
   beforeEach(() => {
     ComponentTest.createTestBed(
       [TranslationModule] as NgModule[],
-      [ExpandableFabComponent] as Component[]
+      [
+        ExpandableFabHostComponent,
+        ExpandableFabComponent,
+        ExpandableFabItemComponent,
+      ] as Component[]
     );
 
-    fixture = TestBed.createComponent(ExpandableFabComponent);
-    component = fixture.componentInstance;
+    fixture = TestBed.createComponent(ExpandableFabHostComponent);
+    component = fixture.debugElement.children[0].componentInstance;
 
     fixture.detectChanges();
   });
@@ -31,27 +44,73 @@ describe('Expandable Fab', () => {
     expect(component.handleClick).toHaveBeenCalled();
   });
 
-  it('should set activeClass(null) when handleClick triggered', () => {
-    de = fixture.debugElement.query(By.css('.icon-container'));
+  describe('when handleClick is triggered', () => {
+    beforeEach(() => {
+      de = fixture.debugElement.query(By.css('.icon-container'));
+    });
 
-    de.triggerEventHandler('click', null);
+    it('should set activeClass to active if activeClass is null', () => {
+      de.triggerEventHandler('click', null);
 
-    expect(component.activeClass).toBe('active');
+      expect(component.activeClass).toBe('active');
+    });
+
+    it('should set activeClass to null if activeClass is not null', () => {
+      component.activeClass = 'not null';
+
+      de.triggerEventHandler('click', null);
+
+      expect(component.activeClass).toBe(null);
+    });
+
+    it('should set ariaLabelValue to open if isOpen is true', () => {
+      component.isOpen = true;
+
+      de.triggerEventHandler('click', null);
+
+      expect(component.ariaLabelValue).toBe(component.ariaLabelOpen);
+    });
+
+    it('should set ariaLabelValue to close if isOpen is false', () => {
+      component.isOpen = false;
+
+      de.triggerEventHandler('click', null);
+
+      expect(component.ariaLabelValue).toBe(component.ariaLabelClose);
+    });
   });
 
-  it('should set activeClass(!null) when handleClick triggered', () => {
-    de = fixture.debugElement.query(By.css('.icon-container'));
+  describe('When onChanges lifecycle hook is triggered', () => {
+    it('should set ariaLabelValue to close if isOpen is true', () => {
+      component.isOpen = true;
 
-    component.activeClass = 'not null';
-    de.triggerEventHandler('click', null);
+      component.ngOnChanges();
 
-    expect(component.activeClass).toBe(null);
+      expect(component.ariaLabelValue).toBe(component.ariaLabelClose);
+    });
+
+    it('should set ariaLabelValue to open if isOpen is false', () => {
+      component.isOpen = false;
+
+      component.ngOnChanges();
+
+      expect(component.ariaLabelValue).toBe(component.ariaLabelOpen);
+    });
   });
 
-  it('should have active classes if isOpen is true', async () => {
+  it('should call handleClick when the child emits a clicked event', () => {
+    const spy = spyOn(component, 'handleClick');
+
+    component.btns.first.clicked.emit();
+    component.ngAfterContentInit();
+
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('should have active classes if isOpen is true', () => {
     component.isOpen = true;
 
-    await fixture.detectChanges();
+    fixture.detectChanges();
 
     expect(fixture.debugElement.query(By.css('.active'))).toBeTruthy();
     expect(fixture.debugElement.query(By.css('.icon-primary-active'))).toBeTruthy();
@@ -64,10 +123,10 @@ describe('Expandable Fab', () => {
     expect(fixture.debugElement.query(By.css('.icon-secondary-active'))).not.toBeTruthy();
   });
 
-  it('should match snapshot', async () => {
+  it('should match snapshot', () => {
     component.isOpen = true;
 
-    await fixture.detectChanges();
+    fixture.detectChanges();
 
     expect(fixture).toMatchSnapshot();
   });

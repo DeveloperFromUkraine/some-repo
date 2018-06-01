@@ -34,20 +34,67 @@ describe('Date Range', () => {
     dateRange.ngOnDestroy();
   });
 
-  it('should clear end date when start date after end date is selected', () => {
-    formGroup.controls.endDate.setValue(new Date(2000, 0, 1));
-    startPickerInput.value = new Date(2000, 5, 15);
-    endPickerInput.value = new Date(2000, 0, 1);
+  describe('when an end date is chosen that is before the start date', () => {
+    it('should replace the start date with the end date and clear the end date with no previous dates chosen', () => {
+      const startDate = new Date(2000, 5, 2);
+      const endDate = new Date(2000, 5, 1);
+      formGroup.patchValue({
+        startDate,
+        endDate,
+      });
+      startPickerInput.value = startDate;
+      endPickerInput.value = endDate;
 
-    startPickerInput.dateChange.next();
+      endPickerInput.dateChange.next();
 
-    expect(formGroup.controls.endDate.value).toBeNull();
+      expect(formGroup.controls.startDate.value).toEqual(endDate);
+      expect(formGroup.controls.endDate.value).toBeNull();
+    });
+
+    it('should replace the start date with the end date and clear the end date with a previous end date chosen', () => {
+      const startDate = new Date(2000, 5, 2);
+      const endDate = new Date(2000, 5, 3);
+      const endDateNew = new Date(2000, 5, 1);
+      formGroup.patchValue({
+        startDate,
+        endDate,
+      });
+      startPickerInput.value = startDate;
+      endPickerInput.value = endDate;
+
+      endPickerInput.dateChange.next();
+      endPickerInput.value = endDateNew;
+      endPickerInput.dateChange.next();
+
+      expect(formGroup.controls.startDate.value).toEqual(endDateNew);
+      expect(formGroup.controls.endDate.value).toBeNull();
+    });
+
+    it('should not replace the start date with the end date when the prev and current end dates match', () => {
+      const startDate = new Date(2000, 5, 2);
+      const endDate = new Date(2000, 5, 3);
+      const startDateNew = new Date(2000, 5, 4);
+      const endDateNew = new Date(2000, 5, 3);
+      formGroup.patchValue({
+        startDate,
+        endDate,
+      });
+      startPickerInput.value = startDate;
+      endPickerInput.value = endDate;
+
+      endPickerInput.dateChange.next();
+      startPickerInput.value = startDateNew;
+      endPickerInput.value = endDateNew;
+      endPickerInput.dateChange.next();
+
+      expect(formGroup.controls.startDate.value).toEqual(startDate);
+      expect(formGroup.controls.endDate.value).toBeNull();
+    });
   });
 
-  it('should replace the start date with the end date and clear the end date when an end date before the start date is chosen', () => {
-    const startDate = new Date(2000, 5, 1);
-    const endDate = new Date(2000, 0, 1);
-
+  it('should not change either date when an end date after the start date is chosen', () => {
+    const startDate = new Date(2000, 1, 1);
+    const endDate = new Date(2000, 1, 2);
     formGroup.patchValue({
       startDate,
       endDate,
@@ -57,7 +104,7 @@ describe('Date Range', () => {
 
     endPickerInput.dateChange.next();
 
-    expect(formGroup.controls.startDate.value).toEqual(endDate);
-    expect(formGroup.controls.endDate.value).toBeNull();
+    expect(formGroup.controls.startDate.value).toEqual(startDate);
+    expect(formGroup.controls.endDate.value).toEqual(endDate);
   });
 });
