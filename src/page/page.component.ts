@@ -7,15 +7,15 @@ import { Component } from '@angular/core';
   `,
   styles: [
     `
-    :host {
-      width: 100%;
-      display: flex;
-      padding-top: 16px;
-      flex-direction: column;
-      align-items: center;
-      flex-grow: 1; // remove this to not take the whole viewport
-    }
-  `,
+      :host {
+        width: 100%;
+        display: flex;
+        padding-top: 16px;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1; // remove this to not take the whole viewport
+      }
+    `,
   ],
 })
 export class PageComponent {}
