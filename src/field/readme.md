@@ -1,63 +1,92 @@
 # Field Component
-
 This component displays a view field, consisting of a label and a value.
 
 ## Usage
-
 A label must be provided. The contents of the tag will be displayed as the value. Example usage:
 
-```html
-<ign-field label="The Answer">42</ign-field>
-```
-
-* @Input() label: string 
-    * Label for the content provided via ng-content
 
 # Inline Field Component
-
 This component is similar to the field above but slightly different look and feel. Label will appear first followed by the text value on the same row.
 
 ## Usage
-
 A label must be provided. The contents of the tag will be displayed as the value. Example usage:
 
-```html
-<ign-field-inline label="The Answer">42</ign-field-inline>
-```
 
 # Editable Field Component
-
 This component is similar to the field component but also includes an edit button that emits an event that can be subscribed to.
 
 ## Usage
-
 A label must be provided. The contents of the tag will be displayed as the value.
 An editIcon can be optionaly provided, if none passed the button will display mat-icon mode_edit as default. Example usage:
 
-```html
-<ign-editable-field label="The Answer" (onIconClick)="myFn($event)">42</ign-field>
-```
-
-* @Input() ariaBtnLabel: string 
-    * Used to provide accessibility for the button
-* @Input() editIcon: string                
-    * The icon to be used in the button
-    * Defaults to 'mode_edit'
-* @Input() da: string               
-    * da for the editable field
-* @Input() daButton: number[]            
-    * da for the button
-* @Output() onIconClick: EventEmitter<any>                    
-    * Event emitter for the button click
 
 # Editable Inline Field Component
-
 This component is similar to the editable field above but slightly different look and feel. Label will appear first followed by the text value followed by the edit button on the same row.
 
 ## Usage
-
 A label must be provided. The contents of the tag will be displayed as the value. Example usage:
 
-```html
-<ign-editable-field-inline label="The Answer" editIcon="home" (onIconClick)="myFn($event)">42</ign-field-inline>
-```
+
+## API
+   ### Selector Field
+        * ign-field
+
+    ### Selector InlineField
+        * ign-field-inline
+    
+    ### Selector EditableField
+        * ign-editable-field
+    
+    ### Selector EditableInlineField
+        * ign-editable-field-inline
+    
+    ### Export As Field
+        * FieldComponent
+
+    ### Export As InlineField
+        * FieldInlineComponent
+
+    ### Export As EditableField
+        * EditableFieldComponent
+
+    ### Export As EditableInlineField
+        * EditableFieldInlineComponent
+
+    ### Field Component Properties
+        * @Input() label: string 
+            * Label for the content provided via ng-content
+
+    ### Inline Field Component Properties
+        * @Input() ariaBtnLabel: string 
+            * Used to provide accessibility for the button
+        * @Input() editIcon: string                
+            * The icon to be used in the button
+            * Defaults to 'mode_edit'
+        * @Input() da: string               
+            * da for the editable field
+        * @Input() daButton: number[]            
+            * da for the button
+        * @Output() onIconClick: EventEmitter<any>                    
+            * Event emitter for the button click
+
+    ### Editable Field Component Properties
+        None
+
+    ### Editable Inline Field Component Properties
+        None
+
+## Implementation HTML
+    ### Editable Field Component
+        <ign-editable-field label="The Answer" (onIconClick)="myFn($event)">42</ign-field>
+
+    ### Inline Field Component
+        <ign-field-inline label="The Answer">42</ign-field-inline>
+
+    ### Field Component
+        <ign-field label="The Answer">42</ign-field>
+
+    ### Editable Inline Field Component
+        <ign-editable-field-inline label="The Answer" editIcon="home" (onIconClick)="myFn($event)">42</ign-field-inline>
+
+## Implementation TS
+    None

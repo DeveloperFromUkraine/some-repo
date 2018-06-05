@@ -2,11 +2,14 @@
 
 The `divider` serves to distinctly separate content
 
-# Usage
+## API
+  ### Selector
+    * mat-divider
 
-The following demonstrates usage of the divider between buttons in a menu:
+  ### Export As
+    None
 
-```
+## Implementation HTML
     <mat-menu #listMenu="matMenu">
       <button mat-meign-item [routerLink]="['./', item.id]">
         <mat-icon>edit</mat-icon>
@@ -21,4 +24,6 @@ The following demonstrates usage of the divider between buttons in a menu:
     <button mat-icon-button [matMenuTriggerFor]="listMenu">
       <mat-icon class="mat-24 menu">more_vert</mat-icon>
     </button>
-```
+
+## Implementation TS
+  None
