@@ -93,6 +93,27 @@ To lint all `*.ts` files:
 $ npm run lint
 ```
 
+## Contributors
+
+Derek Stobbe
+John Johnson
+Maham Boghani
+Brian Mahecha
+Daniel Weisberg
+Steve Hirabayashi
+Mariah Avalos
+Jo Lares
+Rick Jelte
+Zhan Liang
+Arturo Canler
+Carlos de Freitas Pereira
+Miguel Conde
+Danil Flores
+Baker Bokorney
+Ryan Clements
+Lauren Siegel
+
+
 ## License
 
 MIT © [Derek Stobbe](mailto:derek_stobbe@ultimatesoftware.com)
