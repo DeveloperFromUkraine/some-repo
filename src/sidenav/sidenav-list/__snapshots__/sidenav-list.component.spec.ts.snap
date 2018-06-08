@@ -2,6 +2,13 @@
 
 exports[`Side Nav List should match snapshot 1`] = `
 <ign-sidenav-list>
+  <div
+    role="list"
+  >
+    
+      
+    
   
+  </div>
 </ign-sidenav-list>
 `;

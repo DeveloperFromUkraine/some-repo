@@ -1,20 +1,12 @@
 <button
-  *ngIf="!searchExpanded"
   mat-icon-button
-  (click)="searchExpanded=true"
-  attr.aria-label="{{ 'SEARCH' | translateIDS }}"
+  (click)="handleClick()"
+  attr.aria-label="{{ searchExpanded ? ('CLOSE' | translateIDS) : ('SEARCH' | translateIDS) }}"
   da="searchButton">
-  <mat-icon>
+  <mat-icon da="searchIcon" *ngIf="!searchExpanded">
     search
   </mat-icon>
-</button>
-
-<button
-  *ngIf="searchExpanded"
-  mat-icon-button
-  (click)="searchExpanded=false; searchInput.value=''; emitSearchEvents()"
-  da="cancelSearchButton">
-  <mat-icon>
+  <mat-icon da="backIcon" *ngIf="searchExpanded">
     arrow_back
   </mat-icon>
 </button>
@@ -26,6 +18,7 @@
     #searchInput
     matInput
     placeholder="{{ 'SEARCH' | translateIDS }}" 
+    attr.tabindex="{{ searchExpanded ? 0 : -1 }}"
     value=""
     (keyup)="emitSearchEvents()">
   <button

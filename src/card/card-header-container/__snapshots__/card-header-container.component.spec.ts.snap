@@ -5,6 +5,7 @@ exports[`Card Header Container should match snapshot 1`] = `
   <div
     _ngcontent-c0=""
     class="card-header-container"
+    role="heading"
   />
 </ign-card-header-container>
 `;

@@ -6,26 +6,34 @@ exports[`Side Nav List Item should match snapshot 1`] = `
   icon={[Function String]}
   onClick={[Function EventEmitter]}
 >
-  <a
-    class="app-link"
+  <div
+    role="listitem"
   >
     
     
-    <i
-      aria-hidden="true"
-      class="material-icons app-link-icon"
+    <a
+      class="app-link"
     >
-      mail
-    </i>
+      
+      
+      <i
+        aria-hidden="true"
+        class="material-icons app-link-icon"
+      >
+        mail
+      </i>
+      
+      
+      <div
+        class="app-link-text"
+      >
+        test description
+      </div>
+      
     
-    
-    <div
-      class="app-link-text"
-    >
-      test description
-    </div>
+    </a>
     
   
-  </a>
+  </div>
 </ign-sidenav-list-item>
 `;
