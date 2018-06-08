@@ -1,3 +1,23 @@
+## Use
+    - The datepicker allows users to enter a date either through text input or by choosing a date from the calendar. It also supports setting a date range. See [Material Design date pickers](https://material.io/guidelines/components/pickers.html#pickers-date-pickers) and [Angular Material datepicker](https://material.angular.io/components/datepicker/overview).
+    - In code date pickers are out of the box Angular Material components with the exception of Date Range Picker which is a custom implementation for now. Date pickers are composed of a Text Field with an icon that opens a Date Picker when clicked.
+    -Use date pickers to help users choose properly formatted dates.
+
+        * Date pickers are helpful for choosing a not-yet-known date in context so you can be influenced by the day of the week or week of the month you're trying to select.
+    
+        * They are less helpful for known dates like birthdates. This date picker allows entering free-form and using the picker.
+    
+        * For date ranges: where it is helpful to see both the start and end date
+            * now: use two date pickers
+            * future: will provide a date range picker to make it easier
+        
+    
+    Combinations of this setup can be used to compose a Date Range Picker:
+        * Do
+            * Use when choosing a not-yet-known date in context so you can be influenced by the day of the week or week of the month  
+        * Don't 
+            * Use for known dates if not needed. Dates can also be typed.
+
 ## API
     ### Selector
         * mat-date-picker

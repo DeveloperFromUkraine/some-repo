@@ -1,13 +1,25 @@
-# Expandable Fab
-
 ## Usage
 
-Expandable Fab (floating action button) is composed of two parts:
+  Expandable Fab (floating action button) is composed of two parts:
 
-- ign-expanable-fab (the container)
-- ign-expanable-fab-item (items inside the expandable fab)
+  - ign-expanable-fab (the container)
+  - ign-expanable-fab-item (items inside the expandable fab)
 
-The expandable fab handles state (open/close) implicitly so developers do not need to worry about that. The base open/close button are not configurable, and are considered system-wide configuration. To use, simply compose the items you wish to expand inside of the container.
+  The expandable fab handles state (open/close) implicitly so developers do not need to worry about that. The base open/close button are not configurable, and are considered system-wide configuration. To use, simply compose the items you wish to expand inside of the container.
+
+  ### Icons
+    - New icons can be added via the ign-expandable-fab-item tag. 
+    - Icons should closely resemble the purpose of the icon and be approved by design. 
+    - Expandable FAB uses mat icons. 
+
+  ### Location
+    - Expandable fab should be located in the bottom right or left hand corners of the parent containers. 
+
+  ### Accessibility
+    - Expandable fab has built in accessibility.
+    - Add a descriptive ariaLabelOpen and ariaLabelClose within the ign-expandable-fab tag to describe the menu     being opened/closed
+    - When using the expandable FAB button to change a route or href, use the provided inputs in the expandable     FAB tag (router/href) to prevent issues with tabbing through the control for accessibility
+    - Refer to Sample HTML for usage
 
 ## API 
   ### Selector ign-expandable-fab

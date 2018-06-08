@@ -1,3 +1,6 @@
+## Use
+    Card aside is used for asthetic markers on the card components.
+
 ## API 
   ### Selector
     * ign-card-aside

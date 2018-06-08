@@ -1,3 +1,17 @@
+## Use
+    Info banner components are used to display informational messages to the front end in order to notify users that there was no problem completing a task or other information.
+
+    ### Messages
+        * Error banner should only be used to display informational messages.
+        * No error messages.
+
+    ### Location
+        * Info banner should appear at the top of the page, over the other components.
+        
+    ### Accessibility
+        * The default implementation of aria-live region for info banner is set to polite. 
+        * All other accessibility should be maintained by the components within the info banner container.
+
 ## API
     ### Selector
         * ign-info-banner

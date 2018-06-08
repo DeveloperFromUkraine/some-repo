@@ -1,3 +1,29 @@
+## Use
+    - <mat-select> is a form control for selecting a value from a set of options, similar to the native <select>    element. You can read more about selects in the Material Design spec. It is designed to work inside of a      <mat-form-field> element.
+    - To add options to the select, add <mat-option> elements to the <mat-select>. Each <mat-option> has a value    property that can be used to set the value that will be selected if the user chooses this option. The         content of the <mat-option> is what will be shown to the user.
+    - See [Angular Select Inputs](https://material.angular.io/components/select/overview). 
+
+    ### Getting and Setting Select Values
+        - The <mat-select> supports 2-way binding to the value property without the need for Angular forms.
+        - The <mat-select> also supports all of the form directives from the core FormsModule (NgModel) and         ReactiveFormsModule (FormControl, FormGroup, etc.) As with native <select>, <mat-select> also supports    a compareWith function. (Additional information about using a custom compareWith function can be found    in the Angular forms documentation).
+
+    ### Form Field Feature
+        - There are a number of <mat-form-field> features that can be used with any <mat-select>. These include     error messages, hint text, prefix & suffix, and theming. For additional information about these           features, see the form field documentation.
+
+    ### Setting Static Placeholder
+        - The placeholder is text shown when the <mat-form-field> label is floating but the <mat-select> is         empty. It is used to give the user an additional hint about the value they should select. The             placeholder can be specified by setting the placeholder attribute on the <mat-select> element. In some    cases that <mat-form-field> may use the placeholder as the label (see the form field label                documentation).
+
+    ### Content
+        -Do
+            - Use Select inputs when seeing all available choices is not important or space is limited and only     one choice is valid.
+            - Use brief helper text in place of long labels
+        - Don't
+            - Don't use when knowing choices is important. Use checkboxes. When it is important to see available    choices use radio buttons
+
+    ### Style
+        -Use same styling as text fields Text should be brief. Avoid acronyms or codes unless they are generally understood.
+
+
 ## API
     ### Selector
         * mat-select
@@ -105,6 +131,7 @@
         * open()
         * toggle()
 
+
 ## Implementation HTML
     <mat-form-field>
         <mat-select placeholder="Favorite StarTrek Planet">
@@ -113,6 +140,7 @@
             </mat-option>
         </mat-select>
     </mat-form-field>
+
 
 ## Implementation TS
     planets = [

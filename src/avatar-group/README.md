@@ -1,3 +1,17 @@
+## Use
+  The avatar group component horizontally displays several avatars and, optionally, a count of avatars not displayed.
+
+  ### Tooltip
+    -Each avatar has a configurable tooltip that renders either a standardized full name (if a person is provided), or custom text (if a tooltip value is provided).
+
+  ### Navigation
+    -Each avatar, and the counter, can be configured to contain a url link to be navigated to on click.
+
+  ## Settings
+  -The maximum number of avatars displayed, and not displayed (the value seen in the counter), can be configured.
+  -Type Person has been added to facilitate the casting of other types to meet interface Avatar's attribute person (see sample usage).
+
+
 ## API:
   ### Selector
     * ign-avatar-group
@@ -51,6 +65,7 @@
       * Optional input.
       * The value to set the counter's attribute aria-label to.
 
+
 ## Implementation HTML
     <ign-avatar-group
         [avatars]="avatars"
@@ -58,6 +73,7 @@
         [counterAriaLabel]="'2 more in the org chart.'"
         [counterOffset]="counterOffset"
     ></ign-avatar-group>
+
 
 ## Implementation TS
     @Input() avatars: Avatar[] = [

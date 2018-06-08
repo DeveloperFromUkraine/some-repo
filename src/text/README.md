@@ -1,3 +1,11 @@
+## Use
+    The text component and its subcomponents purposes is to display list items composed of primary and/or
+    secondary/tertiary text and may include routes. 
+
+    ### Implementation
+        * It's important not the mix primary and secondary - they are not able to be substituted by one another.
+        * To be used with text-list items.
+
 ## API
     ### Selector
         * ign-text-list-item-primary-text

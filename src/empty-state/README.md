@@ -1,6 +1,19 @@
-# Menu Component
+## Use
+  * Empty state is used when a user encounter a resource page or a page of resources he/she has not yet created/encountered. 
+  * Empty state is composed of multiple empty state styled specific components. 
+  * It is up to the end user to assemble the empty state page how they see fit. 
+  * Think of it as, we give you the specific lego pieces to use, and it's up to you to build your lego.
 
-Empty state is used when a user encounter a resource page or a page of resources he/she has not yet created/encountered. Empty state is composed of multiple empty state styled specific components. It is up to the end user to assemble the empty state page how they see fit. (Think of it as, we give you the specific lego pieces to use, and it's up to you to build your lego)
+  ### Content
+    -The empty state is used for pages and elements that do not exist. This includes:
+      -Unfinished pages
+      - Pages with empty groups or lists.
+      - Cards with no content.
+    - Empty states are the default view for the list-content pattern when there are no items set up, this mainly applies to company settings and other areas that are primarily lists.
+    - The title and content are configurable and the content may include links (e.g., download a template)
+
+  ### Action Items
+    - There are also fixed actions available "Import" and "Add" which display as available, e.g, if import is not available for the area, only add will show.
 
 ## API
   ### Selector EmptyState 

@@ -1,3 +1,21 @@
+## Use
+    Forms are components used to house, select, and submit multiple sets of content within one sitting.
+
+    ### Content
+        - The form component generally consists of information that will be requested for processing, including employee number, name, birthday, and other identifying information.
+
+    ### Implementation
+        - Form components may also be utilized as a source of processing payments and requests.
+        - The form component can be nested. This safely allows large model-driven forms to broken up into smaller pieces. The nested form can be used to build a tree of forms from small components.
+        
+    ### Accessibility
+        -Relationship between controls in a form which are related should be programatically explicit
+            - Use a descriptive aria-label and id for the heading of the form controls
+            - Use aria-describedby label referencing the header's id on the div that encapsulates the group of related controls
+            - Add a role="group" label within the div that ecapsulates the the group of related controls to show they are all related
+        - If using a dropdown, add a descriptive aria-label for what the selectable components are for in the mat-select tag
+        - Refer to the Sample HTML for an example
+
 ## API
     ### Selector FormGroup
         * ign-form-group
