@@ -5,14 +5,14 @@ import { Component } from '@angular/core';
   template: '<ng-content></ng-content>',
   styles: [
     `
-    :host {
-      display: flex;
-      flex: 1;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-    }
+      :host {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+      }
     `,
   ],
 })
@@ -23,11 +23,11 @@ export class ListItemComponent {}
   template: `<ng-content></ng-content>`,
   styles: [
     `
-    :host {
-      margin: 4px;
-      display: block;
-      width: 100%;
-    }
+      :host {
+        margin: 4px;
+        display: block;
+        width: 100%;
+      }
     `,
   ],
 })
@@ -40,7 +40,7 @@ export class ListItemContentComponent {}
     `
       :host /deep/ ign-list-item:not(:last-child) {
         padding-bottom: 16px;
-        border-bottom: 1px solid rgba(0, 0, 0, .12);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
       }
     `,
   ],

@@ -77,6 +77,8 @@ A container to house a Material data table. This container provides a paginator 
     If none are provided, [5, 10, 15, 20, 50] will be used 
 * @Input() pageSize: number                    
     * Default number of elements to display on a page. If none are specified, 10 will be displayed
+* @Output() paginatorEvents$: BehaviorSubject<any>({});
+  * Emits corresponding events from paginator interaction
 
 ## Style
 * No styling is required for this component.

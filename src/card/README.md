@@ -1,0 +1,48 @@
+## API
+    ### Selector
+        * mat-card
+  
+    ### Export As
+        * matCard
+
+## Implementation HTML
+    <mat-card>
+        <ign-card-main>
+            <ign-card-header-container><ign-card-toolbar>
+                <ign-card-title>This is a Card Title Component.</ign-card-title>
+                <button mat-icon-button> <mat-icon style="color:lightgray" class="material-icons" aria-hidden="false" aria-label="check">check</mat-icon></button>
+                <button mat-icon-button> <mat-icon style="color:lightgray" class="material-icons" aria-hidden="false" aria-label="menu">menu</mat-icon></button>
+                <button mat-icon-button> <mat-icon style="color:lightgray" class="material-icons" aria-hidden="false" aria-label="more">more</mat-icon></button>
+            </ign-card-toolbar></ign-card-header-container>
+            <ign-card-section>
+                <ign-card-header-container> <ign-card-section-title>Here's a Card Section Title Component.</ign-card-section-title></ign-card-header-container>
+                <ign-card-section-subtitle>Here's a Card Section Subtitle Component.</ign-card-section-subtitle>
+                <ign-field
+                        [label]="field">
+                    This is the field.
+                    It contains information.
+                </ign-field>
+                <ign-field
+                        [label]="field">
+                    This is another field.
+                    It has more information.
+                </ign-field>
+            </ign-card-section>
+            <ign-card-actions>
+                <button
+                        mat-raised-button
+                        mat-button
+                        type="submit"
+                        color="accent"
+                >
+                    Save Card Actions Component
+                </button>
+                <button
+                        mat-button
+                        type="button"> Cancel Card Actions Component</button>
+            </ign-card-actions>
+        </ign-card-main>
+    </mat-card>
+
+## Implementation TS 
+    None

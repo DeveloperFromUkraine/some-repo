@@ -4,11 +4,22 @@
 
 ## Usage
 
-The following is a usage example demonstrating the above description:
+## API
+  ### Selector
+    * ign-card-header-container
+  
+  ### Export As
+    * CardHeaderContainerComponent
 
-```
-    <ign-card-header-container>
-      <ign-card-title>{{ 'PEOPLE.ORGANIZATION_LEVELS' | translate }}</ign-card-title>
-      <ign-card-subtitle>{{ 'ACTIVATION.ORGANIZATION_LEVELS_START' | translate }}</ign-card-subtitle>
-    </ign-card-header-container>
-```
+## Implementation HTML 
+  <mat-card>
+    <ign-card-main>
+      <ign-card-header-container>
+        <ign-card-title></ign-card-title>
+        <ign-card-subtitle></ign-card-subtitle>
+      </ign-card-header-container>
+    </ign-card-main>
+  </mat-card>
+
+## Implementation TS
+  None
