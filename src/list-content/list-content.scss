@@ -5,3 +5,40 @@
   display: flex;
   flex-direction: row;
 }
+
+a.skip-main {
+  left:-100%;
+  position:absolute;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  z-index:-999;
+}
+
+a.skip-main:focus, a.skip-main:active {
+  color: rgb(74, 74, 79);
+  background-color: #fff;
+  left: 0rem;
+  top: 3.70rem;
+  width: 50%;
+  height: auto;
+  overflow:auto;
+  margin: .625rem 25%;
+  padding: .3125rem;
+  border-radius: .9375rem;
+  border:.25rem solid #fff;
+  text-align:center;
+  font-size:1rem;
+  z-index:999;
+}
+
+a.skip-main:visited {
+  text-decoration: none;
+  color: rgb(74, 74, 79);
+}
+
+#list-content-skip {
+  display: flex;
+  flex: 1;
+}
