@@ -2,7 +2,9 @@
 
 exports[`Info Banner should match snapshot 1`] = `
 <ign-info-banner>
-  <p>
+  <p
+    aria-live="polite"
+  >
     
     
     

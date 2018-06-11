@@ -17,4 +17,14 @@ export class ExpandableSearchComponent {
       searchBy: this.searchInput.nativeElement.value,
     });
   }
+
+  handleClick() {
+    if (this.searchExpanded) {
+      this.searchExpanded = false;
+      this.searchInput.nativeElement.value = '';
+      this.emitSearchEvents();
+    } else {
+      this.searchExpanded = true;
+    }
+  }
 }

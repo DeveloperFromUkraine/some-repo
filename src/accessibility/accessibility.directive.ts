@@ -28,7 +28,9 @@ export class AccessibleClickDirective {
 
 @Directive({
   selector:
-    '[ignA11yViewAccessible], ign-field, ign-empty-state-title, ign-empty-state-description,',
+    '[ignA11yViewAccessible], ign-field, ign-empty-state-title, ign-empty-state-description,' +
+    'ign-card-title, ign-card-section-title, ign-card-section-subtitle, ign-footer, ign-text-list-item,' +
+    'ign-list-selection-item',
 })
 export class AccessibleViewDirective implements AfterContentInit {
   // tslint:disable-next-line:no-input-rename
@@ -43,9 +45,7 @@ export class AccessibleViewDirective implements AfterContentInit {
 }
 
 @Directive({
-  selector:
-    '[ignA11yViewAccessibleRemove], ign-card-title, ign-card-subtitle, mat-error' +
-    'ign-empty-state-image',
+  selector: '[ignA11yViewAccessibleRemove], mat-error, ign-empty-state-image',
 })
 export class AccessibleRemoveViewDirective implements AfterContentInit {
   // tslint:disable-next-line:no-input-rename
