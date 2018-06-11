@@ -1,5 +1,11 @@
 import { AvatarGroupComponent } from './avatar-group.component';
-import { avatarsX, avatars5 } from './avatars.mock';
+import {
+  avatarsX,
+  avatars5,
+  invalidAvatar,
+  avatarWOPreferredFN,
+  avatarWPreferredFN,
+} from './avatars.mock';
 import { Avatar } from './avatar-group.types';
 
 describe('AvatarGroupComponent Unit Tests', () => {
@@ -45,6 +51,24 @@ describe('AvatarGroupComponent Unit Tests', () => {
         const tooltip = component.getAvatarTooltip(avatars[i]);
         expect(tooltip).toBe(expectedTooltips[i]);
       }
+    });
+
+    it('should return nothing from getAvatarTooltip if given invalidAvatar', () => {
+      const tooltip = component.getAvatarTooltip(invalidAvatar);
+
+      expect(tooltip).toBe('');
+    });
+
+    it('should return initials of name when calling getPersonInitials with avatar that has no preferredName', () => {
+      const initials = component.getPersonInitials(avatarWOPreferredFN.person);
+
+      expect(initials).toBe('FL');
+    });
+
+    it('should return initials of preferred name when calling getPersonInitials with avatar that has a preferredName', () => {
+      const initials = component.getPersonInitials(avatarWPreferredFN.person);
+
+      expect(initials).toBe('PL');
     });
 
     beforeEach(() => {
