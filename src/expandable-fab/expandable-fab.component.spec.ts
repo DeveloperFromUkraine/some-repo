@@ -68,7 +68,9 @@ describe('Expandable Fab', () => {
 
       de.triggerEventHandler('click', null);
 
-      expect(component.ariaLabelValue).toBe(component.ariaLabelOpen);
+      expect(component.ariaLabelValue).toBe(
+        component.translatePipe.transform(component.ariaLabelOpen)
+      );
     });
 
     it('should set ariaLabelValue to close if isOpen is false', () => {
@@ -76,7 +78,9 @@ describe('Expandable Fab', () => {
 
       de.triggerEventHandler('click', null);
 
-      expect(component.ariaLabelValue).toBe(component.ariaLabelClose);
+      expect(component.ariaLabelValue).toBe(
+        component.translatePipe.transform(component.ariaLabelClose)
+      );
     });
   });
 
@@ -86,7 +90,9 @@ describe('Expandable Fab', () => {
 
       component.ngOnChanges();
 
-      expect(component.ariaLabelValue).toBe(component.ariaLabelClose);
+      expect(component.ariaLabelValue).toBe(
+        component.translatePipe.transform(component.ariaLabelClose)
+      );
     });
 
     it('should set ariaLabelValue to open if isOpen is false', () => {
@@ -94,7 +100,9 @@ describe('Expandable Fab', () => {
 
       component.ngOnChanges();
 
-      expect(component.ariaLabelValue).toBe(component.ariaLabelOpen);
+      expect(component.ariaLabelValue).toBe(
+        component.translatePipe.transform(component.ariaLabelOpen)
+      );
     });
   });
 

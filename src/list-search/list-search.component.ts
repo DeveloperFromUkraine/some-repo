@@ -1,5 +1,6 @@
-import { Component, ElementRef, Input, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, Output, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { TranslationPipe } from '../localization/translation.pipe';
 
 @Component({
   selector: 'ign-list-search',
@@ -9,8 +10,13 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 export class ListSearchComponent {
   @ViewChild('searchInput') searchInput: ElementRef;
 
-  @Input() ariaLabel = 'LIST_SEARCH';
+  @Input() ariaLabel;
   @Output() searchCriteria$ = new BehaviorSubject<any>({});
+
+  constructor(private _cdr: ChangeDetectorRef) {
+    const pipe = new TranslationPipe(this._cdr);
+    this.ariaLabel = pipe.transform('LIST_SEARCH');
+  }
 
   emitSearchEvents() {
     this.searchCriteria$.next({

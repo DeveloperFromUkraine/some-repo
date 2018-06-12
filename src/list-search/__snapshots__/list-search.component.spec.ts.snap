@@ -2,6 +2,7 @@
 
 exports[`List Search Component Should match snapshot 1`] = `
 <ign-list-search
+  _cdr={[Function ViewRef_]}
   ariaLabel={[Function String]}
   searchCriteria$={[Function BehaviorSubject]}
   searchInput={[Function ElementRef]}
