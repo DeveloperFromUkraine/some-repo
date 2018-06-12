@@ -6,6 +6,8 @@ import {
   Renderer2,
   AfterViewInit,
   ChangeDetectorRef,
+  Input,
+  AfterContentInit,
 } from '@angular/core';
 import { TranslationPipe } from '../localization/translation.pipe';
 
@@ -26,33 +28,33 @@ export class AccessibleClickDirective {
 
 @Directive({
   selector:
-    '[ignA11yViewAccessible], ign-field, ign-empty-state-title, ign-empty-state-description,',
+    '[ignA11yViewAccessible], ign-field, ign-empty-state-title, ign-empty-state-description,' +
+    'ign-card-title, ign-card-section-title, ign-card-section-subtitle, ign-footer, ign-text-list-item,' +
+    'ign-list-selection-item',
 })
-export class AccessibleViewDirective {
-  constructor(
-    @Attribute('tabindex') tabIndex: string,
-    renderer: Renderer2,
-    elementRef: ElementRef
-  ) {
-    if (!tabIndex) {
-      renderer.setAttribute(elementRef.nativeElement, 'tabindex', '0');
+export class AccessibleViewDirective implements AfterContentInit {
+  // tslint:disable-next-line:no-input-rename
+  @Input('tabindex') tabIndex: string;
+  constructor(private renderer: Renderer2, private elementRef: ElementRef) {}
+
+  ngAfterContentInit() {
+    if (typeof this.tabIndex === 'undefined') {
+      this.renderer.setAttribute(this.elementRef.nativeElement, 'tabindex', '0');
     }
   }
 }
 
 @Directive({
-  selector:
-    '[ignA11yViewAccessibleRemove], ign-card-title, ign-card-subtitle, mat-error' +
-    'ign-empty-state-image',
+  selector: '[ignA11yViewAccessibleRemove], mat-error, ign-empty-state-image',
 })
-export class AccessibleRemoveViewDirective {
-  constructor(
-    @Attribute('tabindex') tabIndex: string,
-    renderer: Renderer2,
-    elementRef: ElementRef
-  ) {
-    if (!tabIndex) {
-      renderer.setAttribute(elementRef.nativeElement, 'tabindex', '-1');
+export class AccessibleRemoveViewDirective implements AfterContentInit {
+  // tslint:disable-next-line:no-input-rename
+  @Input('tabindex') tabIndex: string;
+  constructor(private renderer: Renderer2, private elementRef: ElementRef) {}
+
+  ngAfterContentInit() {
+    if (typeof this.tabIndex === 'undefined') {
+      this.renderer.setAttribute(this.elementRef.nativeElement, 'tabindex', '-1');
     }
   }
 }

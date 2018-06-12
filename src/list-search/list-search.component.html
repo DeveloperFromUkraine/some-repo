@@ -4,14 +4,14 @@
   floatPlaceholder="never">
   <input
     matInput
-    placeholder="Search"
+    placeholder="{{'SEARCH' | translateIDS}}"
     attr.aria-label="{{ariaLabel | translateIDS}}"
     #searchInput
     (keyup.escape)="searchInput.value=''; emitSearchEvents()"
     (keyup)="emitSearchEvents()">
   <button
     *ngIf="searchInput.value"
-    aria-label="Clear"
+    attr.aria-label="{{'CLEAR' | translateIDS}}"
     mat-icon-button
     matSuffix
     (click)="searchInput.value=''; emitSearchEvents()">

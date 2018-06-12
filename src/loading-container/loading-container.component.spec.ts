@@ -22,25 +22,27 @@ describe('Loading Container', () => {
     fixture.detectChanges();
   });
 
-  it('should have spinner-container if loading', async () => {
-    component.pastDelay = true;
+  it('should have spinner-container if loading', () => {
+    jest.useFakeTimers();
+    component.ngOnInit();
+    jest.runAllTimers();
+    fixture.detectChanges();
 
-    await fixture.detectChanges();
     de = fixture.debugElement.query(By.css('.spinner-container'));
 
     expect(de).toBeTruthy();
   });
 
-  it('should not have spinner-container if not loading', async () => {
+  it('should not have spinner-container if not loading', () => {
     component.loading = false;
 
-    await fixture.detectChanges();
+    fixture.detectChanges();
     de = fixture.debugElement.query(By.css('.spinner-container'));
 
     expect(de).toBeNull();
   });
 
-  it('should match snapshot', async () => {
+  it('should match snapshot', () => {
     expect(fixture).toMatchSnapshot();
   });
 });

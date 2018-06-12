@@ -6,10 +6,12 @@ import {
   OnDestroy,
   QueryList,
   Input,
+  ChangeDetectorRef,
 } from '@angular/core';
 import { ExpandableFabItemComponent } from './expandable-fab-item.component';
 import { Observable, Subject } from 'rxjs';
 import 'rxjs/add/observable/merge';
+import { TranslationPipe } from '../localization/translation.pipe';
 
 @Component({
   selector: 'ign-expandable-fab',
@@ -21,13 +23,19 @@ export class ExpandableFabComponent implements AfterContentInit, OnChanges, OnDe
   @Input() ariaLabelOpen = 'OPEN';
   @Input() ariaLabelClose = 'CLOSE';
 
+  translatePipe: TranslationPipe;
+
   activeClass: string = null;
   isOpen = false;
   ariaLabelValue: string;
   private readonly unSubscribe$ = new Subject<void>();
 
+  constructor(changeRef: ChangeDetectorRef) {
+    this.translatePipe = new TranslationPipe(changeRef);
+  }
+
   ngOnChanges() {
-    this.ariaLabelValue = this.isOpen ? this.ariaLabelClose : this.ariaLabelOpen;
+    this.setAria();
   }
 
   ngAfterContentInit() {
@@ -44,12 +52,16 @@ export class ExpandableFabComponent implements AfterContentInit, OnChanges, OnDe
 
   handleClick() {
     this.isOpen = !this.isOpen;
-    this.ariaLabelValue = this.isOpen ? this.ariaLabelClose : this.ariaLabelOpen;
-
+    this.setAria();
     if (this.activeClass) {
       this.activeClass = null;
     } else {
       this.activeClass = 'active';
     }
+  }
+
+  private setAria() {
+    this.ariaLabelValue = this.isOpen ? this.ariaLabelClose : this.ariaLabelOpen;
+    this.ariaLabelValue = this.translatePipe.transform(this.ariaLabelValue);
   }
 }

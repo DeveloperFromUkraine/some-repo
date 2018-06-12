@@ -4,16 +4,24 @@
 
 Loading container is a wrapper (higher level) component around your content. It will show a spinner after a period (right now 400ms) until the consumer declares the content loaded. Most developers needing to consume the loading container will simply wrap their existing on content in an `ign-loading-container` and let the loading container know when the content is loaded.
 
-## Example
-
-<ign-loading-container [loading]="BOOLEAN">
-  <your-loaded-content-here/>
-</ign-loading-container>
-
 ## API
+  ### Selector
+    * ign-loading-container
 
-loading (input): boolean, defaults to true
+  ### Exported As
+    * LoadingContainerComponent
+    
+  ### Properties
+    * '@Input' loading (input): boolean
+      *  Loading status, defaults to true.
 
+## Implementation HTML
+  <ign-loading-container [loading]="BOOLEAN">
+  </ign-loading-container>
+
+## Implementation TS
+  None
+  
 ## Usage
 
 The following is a usage example demonstrating the above descriptions:

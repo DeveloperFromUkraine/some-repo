@@ -13,16 +13,20 @@ exports[`Expandable Search Should match snapshot 1`] = `
   >
     
     
-    <mat-icon>
+    
+    <mat-icon
+      da="searchIcon"
+    >
       
       search
     
     </mat-icon>
     
+    
+    
+    
   
   </button>
-  
-  
   
   <mat-form-field
     class="expanded-search-inactive"
@@ -34,6 +38,7 @@ exports[`Expandable Search Should match snapshot 1`] = `
     <input
       matinput=""
       placeholder="Search"
+      tabindex="-1"
       value=""
     />
     

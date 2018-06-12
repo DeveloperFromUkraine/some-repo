@@ -11,6 +11,7 @@ describe('Expandable Search', () => {
   let component: ExpandableSearchComponent;
   let de: DebugElement;
   let ne: HTMLElement;
+  let icon: DebugElement;
 
   beforeEach(() => {
     ComponentTest.createTestBed(
@@ -28,18 +29,19 @@ describe('Expandable Search', () => {
     beforeEach(() => {
       de = fixture.debugElement.query(By.css('[da=searchButton]'));
       ne = de.nativeElement;
+      icon = fixture.debugElement.query(By.css('[da=searchIcon]'));
     });
-    it('Should display when search not expanded', () => {
+    it('Should display with search icon when search not expanded', () => {
       fixture.detectChanges();
 
-      expect(ne).not.toBeNull();
+      expect(icon).not.toBeNull();
     });
     it('Should expand search on click', () => {
       ne.click();
       fixture.detectChanges();
-      let searchDE = fixture.debugElement.query(By.css('[da=searchButton]'));
+      icon = fixture.debugElement.query(By.css('[da=searchIcon]'));
 
-      expect(searchDE).toBeNull();
+      expect(icon).toBeNull();
       expect(component.searchExpanded).toBe(true);
     });
   });
@@ -49,13 +51,14 @@ describe('Expandable Search', () => {
 
       fixture.detectChanges();
     });
-    describe('Cancel search button', () => {
+    describe('Search button', () => {
       beforeEach(() => {
-        de = fixture.debugElement.query(By.css('[da=cancelSearchButton]'));
+        de = fixture.debugElement.query(By.css('[da=searchButton]'));
         ne = de.nativeElement;
       });
-      it('Should display', () => {
-        expect(ne).not.toBeNull();
+      it('Should display with back arrow icon', () => {
+        icon = fixture.debugElement.query(By.css('[da=backIcon]'));
+        expect(icon).not.toBeNull();
       });
       describe('On click', () => {
         let inputDE: DebugElement;
@@ -69,20 +72,13 @@ describe('Expandable Search', () => {
 
           fixture.detectChanges();
         });
-        it('Should collapse cancel search button', () => {
-          let searchButtonDE = fixture.debugElement.query(By.css('[da=cancelSearchButton]'));
+        it('Should revert search buttons back-arrow icon to search icon', () => {
+          icon = fixture.debugElement.query(By.css('[da=backIcon]'));
 
-          expect(searchButtonDE).toBeNull();
+          expect(icon).toBeNull();
         });
         it('Should clear search input value', () => {
           expect(component.searchInput.nativeElement.value).toBe('');
-        });
-        it('Should call emitSearchEvents', () => {
-          jest.spyOn(component, 'emitSearchEvents');
-
-          de.triggerEventHandler('click', null);
-
-          expect(component.emitSearchEvents).toHaveBeenCalledTimes(1);
         });
 
         it('Should emit searchEvent', () => {

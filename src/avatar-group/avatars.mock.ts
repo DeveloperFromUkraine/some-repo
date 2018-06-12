@@ -183,3 +183,27 @@ export const avatarsX: Avatar[] = [
     tooltip: 'tooltip10',
   },
 ];
+
+export const invalidAvatar: Avatar = {
+  // Invalid avatar: missing person and tooltip.
+  image: 'invalid',
+};
+
+// Avatar with preferred firstName
+export const avatarWPreferredFN: Avatar = {
+  person: {
+    firstName: 'firstName8',
+    lastName: 'lastName',
+    formerLastName: null,
+    preferredFirstName: 'preferredFirstName',
+  },
+};
+
+// Avatar without preferred firstName
+export const avatarWOPreferredFN: Avatar = {
+  person: {
+    firstName: 'firstName',
+    lastName: 'lastName',
+    formerLastName: null,
+  },
+};

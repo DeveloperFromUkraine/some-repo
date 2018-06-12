@@ -1,73 +1,108 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Expandable Fab should match snapshot 1`] = `
-<ign-expandable-fab
-  activeClass="null"
-  ariaLabelClose={[Function String]}
-  ariaLabelOpen={[Function String]}
-  btns={[Function QueryList]}
-  isOpen={[Function Boolean]}
-  unSubscribe$={[Function Subject]}
->
-  <div
-    class="buttons-container active"
-    ng-reflect-klass="buttons-container"
-    ng-reflect-ng-class="[object Object]"
-    role="menu"
-  >
-    
-      
-    
-    
-    
-      
+<ng-component>
+  
+    <ign-expandable-fab>
     <div
-      class="main-button-container"
-      da="mainButton"
+      class="buttons-container active"
+      ng-reflect-klass="buttons-container"
+      ng-reflect-ng-class="[object Object]"
+      role="menu"
     >
       
+      
+      
+      
+      
+      <ign-expandable-fab-item
+        icon="add"
+        ng-reflect-icon="add"
+      >
+        <span
+          class="mat-tooltip fab-tooltip"
+        >
+          
+        </span>
         
-      <a
-        aria-expanded="true"
-        aria-haspopup="true"
-        aria-label=""
-        class="icon-container"
-        igna11yclick=""
-        igna11yviewaccessible=""
-        mat-fab=""
-        role="button"
+  
+        
+        <a
+          igna11yclick=""
+          mat-fab=""
+          role="menuitem"
+        >
+          
+    
+          <mat-icon>
+            
+      add
+    
+          </mat-icon>
+          
+  
+        </a>
+        
+  
+  
+        
+        
+  
+  
+      </ign-expandable-fab-item>
+      
+    
+      
+      
+      
+      <div
+        class="main-button-container"
+        da="mainButton"
       >
         
-          
-        <mat-icon
-          class="icon icon-secondary icon-secondary-active"
-          ng-reflect-klass="icon icon-secondary"
-          ng-reflect-ng-class="[object Object]"
-          style="position:absolute"
+        
+        <a
+          aria-expanded="true"
+          aria-haspopup="true"
+          aria-label=""
+          class="icon-container"
+          igna11yclick=""
+          igna11yviewaccessible=""
+          mat-fab=""
+          role="button"
         >
           
+          
+          <mat-icon
+            class="icon icon-secondary icon-secondary-active"
+            ng-reflect-klass="icon icon-secondary"
+            ng-reflect-ng-class="[object Object]"
+            style="position:absolute"
+          >
+            
             clear
           
-        </mat-icon>
-        
+          </mat-icon>
           
-        <mat-icon
-          class="icon icon-primary icon-primary-active"
-          ng-reflect-klass="icon icon-primary"
-          ng-reflect-ng-class="[object Object]"
-        >
           
+          <mat-icon
+            class="icon icon-primary icon-primary-active"
+            ng-reflect-klass="icon icon-primary"
+            ng-reflect-ng-class="[object Object]"
+          >
+            
             add
           
-        </mat-icon>
+          </mat-icon>
+          
         
+        </a>
         
-      </a>
       
+      </div>
       
-    </div>
-    
   
-  </div>
-</ign-expandable-fab>
+    </div>
+  </ign-expandable-fab>
+</ng-component>
 `;

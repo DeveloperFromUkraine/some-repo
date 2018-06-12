@@ -11,87 +11,97 @@ exports[`Date Range should match snapshot 1`] = `
   <form>
     
     
-    <mat-form-field
-      role="group"
+    <div
+      id="dateRange"
     >
       
       
-      <input
-        matinput=""
-      />
-      
+      <mat-form-field
+        role="group"
+      >
+        
+        
+        <input
+          aria-describedby="dateRange"
+          matinput=""
+        />
+        
   
-      
-      <mat-datepicker-toggle
-        class="mat-datepicker-toggle"
-        matsuffix=""
-      >
-        <button
-          class="mat-icon-button"
-          mat-icon-button=""
-          type="button"
+        
+        <mat-datepicker-toggle
+          class="mat-datepicker-toggle"
+          matsuffix=""
         >
-          <span
-            class="mat-button-wrapper"
+          <button
+            class="mat-icon-button"
+            mat-icon-button=""
+            type="button"
           >
-            
-          </span>
-          <div
-            class="mat-button-ripple mat-ripple"
-            matripple=""
-          />
-          <div
-            class="mat-button-focus-overlay"
-          />
-        </button>
-      </mat-datepicker-toggle>
+            <span
+              class="mat-button-wrapper"
+            >
+              
+            </span>
+            <div
+              class="mat-button-ripple mat-ripple"
+              matripple=""
+            />
+            <div
+              class="mat-button-focus-overlay"
+            />
+          </button>
+        </mat-datepicker-toggle>
+        
+        
+        <mat-datepicker />
+        
+      
+      </mat-form-field>
       
       
-      <mat-datepicker />
-      
-    
-    </mat-form-field>
-    
-    
-    <mat-form-field
-      role="group"
-    >
-      
-      
-      <input
-        matinput=""
-      />
-      
-      
-      <mat-datepicker-toggle
-        class="mat-datepicker-toggle"
-        matsuffix=""
+      <mat-form-field
+        role="group"
       >
-        <button
-          class="mat-icon-button"
-          mat-icon-button=""
-          type="button"
+        
+        
+        <input
+          aria-describedby="dateRange"
+          matinput=""
+        />
+        
+        
+        <mat-datepicker-toggle
+          class="mat-datepicker-toggle"
+          matsuffix=""
         >
-          <span
-            class="mat-button-wrapper"
+          <button
+            class="mat-icon-button"
+            mat-icon-button=""
+            type="button"
           >
-            
-          </span>
-          <div
-            class="mat-button-ripple mat-ripple"
-            matripple=""
-          />
-          <div
-            class="mat-button-focus-overlay"
-          />
-        </button>
-      </mat-datepicker-toggle>
+            <span
+              class="mat-button-wrapper"
+            >
+              
+            </span>
+            <div
+              class="mat-button-ripple mat-ripple"
+              matripple=""
+            />
+            <div
+              class="mat-button-focus-overlay"
+            />
+          </button>
+        </mat-datepicker-toggle>
+        
+        
+        <mat-datepicker />
+        
       
-      
-      <mat-datepicker />
+      </mat-form-field>
       
     
-    </mat-form-field>
+    </div>
     
   
   </form>
