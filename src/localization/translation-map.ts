@@ -9,7 +9,6 @@ export const TranslationMap = {
   OPEN: 'Open',
   LIST_SEARCH: 'List Search',
   LOADING: 'Loading',
-  NEVER: 'Never',
   SEARCH: 'Search',
   START_DATE_TYPEAHEAD: 'Start Date (Typeahead entries appear in dropdown)',
 };
