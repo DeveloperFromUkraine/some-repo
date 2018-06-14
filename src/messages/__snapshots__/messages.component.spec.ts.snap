@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Expandable Fab should match snapshot 1`] = `
+exports[`Messages should match snapshot 1`] = `
 <ign-messages
   destroyed$={[Function Subject]}
   errors$={[Function BehaviorSubject]}
