@@ -1,0 +1,23 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentTest } from '../../test/test-bed/component';
+import { MessagesComponent } from './messages.component';
+import { Component } from '@angular/core';
+import { Logger } from 'ignite-design-services';
+import { ActivatedRoute } from '@angular/router';
+
+describe('Messages', () => {
+  let fixture: ComponentFixture<MessagesComponent>;
+
+  beforeEach(() => {
+    ComponentTest.createTestBed([], [MessagesComponent] as Component[], [
+      Logger,
+      { provide: ActivatedRoute, useValue: {} },
+    ]);
+
+    fixture = TestBed.createComponent(MessagesComponent);
+  });
+
+  it('should match snapshot', () => {
+    expect(fixture).toMatchSnapshot();
+  });
+});

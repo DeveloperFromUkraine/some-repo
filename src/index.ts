@@ -148,6 +148,9 @@ import {
 import { CurrencyMaskComponent } from './currency-input-mask/currency-mask/currency-mask.component';
 import { CurrencyMaskDirective } from './currency-input-mask/currency-mask/currency-mask.directive';
 
+import { MessagesComponent } from './messages/messages.component';
+export * from './messages/messages.component';
+
 import {
   MatToolbarModule,
   MatMenuModule,
@@ -232,6 +235,7 @@ const components = [
   InputMaskComponent,
   CurrencyMaskComponent,
   CurrencyMaskDirective,
+  MessagesComponent,
 ];
 
 @NgModule({
