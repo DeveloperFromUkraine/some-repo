@@ -1,3 +1,6 @@
+## Use
+    A search for the list selection item in the list selection.
+
 ## API
     ### Selector
         * ign-list-selection-search

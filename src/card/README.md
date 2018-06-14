@@ -1,9 +1,22 @@
+## Use
+    <mat-card> is a content container for text, photos, and actions in the context of a single subject
+
+    ### Material Card
+      A card is a container for content. Cards are static in size, and should be used to organize data in a fixed position on the page where the user wishes to avoid overlap of components and information. See [Material    Design Components](https://material.io/guidelines/components/cards.html) and
+      [Angular Material Cards](https://material.angular.io/components/card/overview).
+
+    ### Accessibility
+        - Add aria-hidden="false" and a descriptive aria-label for each of the action icons used within the card
+        - Refer to the Sample HTML for an example
+
+
 ## API
     ### Selector
         * mat-card
   
     ### Export As
         * matCard
+
 
 ## Implementation HTML
     <mat-card>
@@ -43,6 +56,7 @@
             </ign-card-actions>
         </ign-card-main>
     </mat-card>
+
 
 ## Implementation TS 
     None

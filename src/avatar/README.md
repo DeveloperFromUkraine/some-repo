@@ -1,3 +1,13 @@
+## Use
+  An avatar displays an image, two letter initials (in the lack of an image), or the [person Material icon](https://material.io/icons/#ic_person) (in the lack of the previous two).
+
+  ### Sizing
+  -The avatar can be rendered in two sizes, small (40px in diameter) or large (70px in diameter).
+
+  ### Tooltip
+  -The avatar can be provided a tooltip to be displayed on mouse-over, as well a custom aria-label.
+
+
 ## API
   ### Selector
     * ign-avatar
@@ -24,9 +34,10 @@
       * A value for the component's attribure aria-label.
       * Providing ariaLabel sets the component's attribute tabindex to "0".
 
+
 ## Implementation HTML
     <ign-avatar 
-        [image]="cross_cutting_please_add_image_src_here_thanks!"
+        [image]="your_image_here"
         [initials]="'JB'"
         [size]="'large'"
     ></ign-avatar>
@@ -52,6 +63,7 @@
         [size]="'large'"
         [ariaLabel]="'Aria Label'"
     ></ign-avatar>
+
 
 ## Implementation TS 
   @Input() image: string;

@@ -1,3 +1,20 @@
+## Use
+    Error banner components are used to display error messages to the front end in order to notify users that there was a problem processing a command.
+
+    ### Messages
+        * Error banner should only be used to display error messages.
+        * No confirmation messages.
+
+    ### Location
+        * Error banner should appear at the top of the page, over the other components.
+
+    ### Accessibility
+        * The default implementation of aria-live region for info banner is set to assertive. 
+        * Add a descriptive aria-label to the dismiss buttons tag that describes the action of the button (ex:      exit)
+        * Refer to the Sample HTML for an example
+        * All other accessibility should be maintained by the components within the error banner container.
+        
+
 ## API
     ### Selector
         * ign-error-banner

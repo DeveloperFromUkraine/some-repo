@@ -1,10 +1,7 @@
-# Date Range Picker
-
-`import { DateRangeModule } from 'ignite-design-system';`
-
-## DateRangeComponent
-
-A pair of date pickers corresponding to the start and end dates of a range.
+## Use
+    -A pair of date pickers corresponding to the start and end dates of a range.
+    -See [Material Design date pickers](https://material.io/guidelines/components/pickers.html#pickers-date-pickers) and [Angular Material datepicker](https://material.angular.io/components/datepicker/overview).
+    -Also see IDS date picker. 
 
 ## API
     ### Selector

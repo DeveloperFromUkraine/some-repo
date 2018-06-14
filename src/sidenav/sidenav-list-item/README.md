@@ -1,3 +1,15 @@
+## Use
+    Sidenav list items are selectable list items meant to be placed in the sidenav list.
+
+    ### Functionality
+        - The list items should be links or navigational in nature.
+        - There should be no informational content linked to the list items.
+
+    ### Content
+        - Text.
+        - No images.
+        - Concise information about the navigational endpoint.
+
 ## API
     ### Selector
         * ign-sidenav-list-item

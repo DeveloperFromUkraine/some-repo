@@ -1,4 +1,11 @@
-`ign-right-drawer`
+## Use
+    Right drawer components are used to display summarized information and navigational linkage to other pages
+    and components when a selected item is clicked on. 
+
+  ### Styling
+    * Right drawer components should always be located to the right.
+    * Right drawer components should be able to be closed.
+
 
 ## API 
   ### Selector
@@ -25,6 +32,7 @@
     * closeDrawer()
     * openDrawer()
 
+
 ### Implementation HTML
   <ign-right-drawer
           title="I am a title."
@@ -36,6 +44,7 @@
       >
       </ign-list-selection-item>
   </ign-right-drawer>
+
 
 ### Implementation TS
   None

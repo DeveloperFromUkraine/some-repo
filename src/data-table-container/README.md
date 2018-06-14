@@ -1,6 +1,13 @@
-# Data Table Container
+## Use
+  A container to house a Material data table. This container provides a paginator at the container's footer.
 
-A container to house a Material data table. This container provides a paginator at the container's footer.
+  ### Implementation
+    - A data table container houses the material data table
+    - A data table will need to be added to it.
+
+  ### Accessibility
+    - Accessibility is handled via the container contents. 
+
 
 ## API
   ### Selector
@@ -56,16 +63,15 @@ A container to house a Material data table. This container provides a paginator 
       </ign-data-table-container>
   </div>
 
+
 ## Implementation TS
   displayedColumns = ['name', 'position', 'type'];
   dataSource = new MatTableDataSource<Element>(ELEMENT_DATA);
-
   export interface Element {
     name: string;
     position: string;
     type: string;
   }
-
 let ELEMENT_DATA: Element[] = [
     {name: 'Maham Boghani', position: 'Software Engineer', type: 'Human'},
     {name: 'Watson', position: 'Artificial Intelligence', type: 'Computer'},

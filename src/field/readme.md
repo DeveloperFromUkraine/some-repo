@@ -1,8 +1,26 @@
-# Field Component
-This component displays a view field, consisting of a label and a value.
+## Use
+    This component displays a view field, consisting of a label and a value. Fields are not inline styled by default. A label must be provided. The contents of the tag will be displayed as the value.
 
-## Usage
-A label must be provided. The contents of the tag will be displayed as the value. Example usage:
+    ### Editable Fields
+        * Editable fields allow for functionality to edit the field.
+        * Editable inline fields are similar, but maintain inline styling.
+    
+    ### Inline Fields
+        * Fields that are inline.
+        * Inline fields can be editable.
+
+    ### Implementation
+        * The contents of the tag will be displayed as the value.
+        * Fields should not be used in place of input fields (such as text fields). 
+        * Do
+            Use when a set label and certain requirements are specified.
+        * Don't
+            Use for free form user input. 
+        
+    ### Accessibility
+        * For editable field and editable inline field components, a default aria label has been added for the      edit button.
+        * For a more descriptive label, add an ariaBtnLabel attribute and provide a more descriptive value.
+        * Refer to the sample html in the accordion below for examples of usage.
 
 
 # Inline Field Component
@@ -19,12 +37,8 @@ This component is similar to the field component but also includes an edit butto
 A label must be provided. The contents of the tag will be displayed as the value.
 An editIcon can be optionaly provided, if none passed the button will display mat-icon mode_edit as default. Example usage:
 
-
 # Editable Inline Field Component
 This component is similar to the editable field above but slightly different look and feel. Label will appear first followed by the text value followed by the edit button on the same row.
-
-## Usage
-A label must be provided. The contents of the tag will be displayed as the value. Example usage:
 
 
 ## API
@@ -75,6 +89,7 @@ A label must be provided. The contents of the tag will be displayed as the value
     ### Editable Inline Field Component Properties
         None
 
+
 ## Implementation HTML
     ### Editable Field Component
         <ign-editable-field label="The Answer" (onIconClick)="myFn($event)">42</ign-field>
@@ -87,6 +102,7 @@ A label must be provided. The contents of the tag will be displayed as the value
 
     ### Editable Inline Field Component
         <ign-editable-field-inline label="The Answer" editIcon="home" (onIconClick)="myFn($event)">42</ign-field-inline>
+
 
 ## Implementation TS
     None
