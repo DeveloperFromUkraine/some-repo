@@ -1,70 +1,50 @@
-`ign-right-drawer`
+## Use
+    Right drawer components are used to display summarized information and navigational linkage to other pages
+    and components when a selected item is clicked on. 
 
-API:
-
-  attributes:
-  startOpen: boolean
-  open: boolean (implicit state, but exposed if needed)
-  title: string
-
-  methods:
-  toggleDrawer(boolean)
-  closeDrawer()
-  openDrawer()
-
-  emitters:
-  openChange(boolean)
+  ### Styling
+    * Right drawer components should always be located to the right.
+    * Right drawer components should be able to be closed.
 
 
-Example usage:
+## API 
+  ### Selector
+    * ign-right-drawer
 
-```
-<ign-list-content>
-  <!-- List View  -->
-  <ign-list-selection>
-    <ign-list-selection-item
-      *ngFor="let item of (earnings$ | async); let i = index"
-      [routerLink]="['./', item.id]"
-      [routerLinkActive]="'active'"
-      [key]="item.id"
-      [title]="item.earningCode"
-      [subtitle]="item.payStatementDescription"
-    >
-    </ign-list-selection-item>
-    <ign-list-selection-add-button [routerLink]="['./add']"></ign-list-selection-add-button>
-  </ign-list-selection>
+  ### Export As
+    * RightDrawerComponent
+
+  ### Attributes
+    * `@Input()startOpen: boolean`
+      * checks if drawer is open
+
+    * `@Input() open: boolean (implicit state, but exposed if needed)`
+      * placeholder for open drawer status
+
+    * `@Input() title: string`
+      * title for right drawer component
+
+    * `@Input() openChange(boolean)`
+      * emitter for open status
+
+  ### Methods
+    * toggleDrawer(boolean)
+    * closeDrawer()
+    * openDrawer()
 
 
-  <!-- Content View -->
-  <ign-list-content-panel>
-    <!--State for no earnings created yet  -->
-    <ign-list-content-empty-state
-      *ngIf="(earnings$ | async)?.length === 0"
-    >
-    </ign-list-content-empty-state>
-
-    <!--State for earnings exist, but user hasn't selected one yet  -->
-    <ign-list-content-unselected-state [hidden]="isEarningSelected">
-      <ign-card-title>Please select an Earnings</ign-card-title>
-    </ign-list-content-unselected-state>
-
-    <!--State for inspecting selected earnings  -->
-    <ign-list-content-card [hidden]="!isEarningSelected">
-      <router-outlet (activate)="isEarningSelected=true" (deactivate)="isEarningSelected=false"></router-outlet>
-    </ign-list-content-card>
-
-    <ign-right-drawer
-      title="sup fam"
-      [startOpen]="false"
-    >
+### Implementation HTML
+  <ign-right-drawer
+          title="I am a title."
+          [startOpen]="true">
       <ign-list-selection-item
-        key="1234"
-        title="meow"
-        subtitle="meow subtitle"
+              key="1234"
+              title="I am a right drawer."
+              subtitle="I am a right drawer subtitle."
       >
       </ign-list-selection-item>
-    </ign-right-drawer>
+  </ign-right-drawer>
 
-  </ign-list-content-panel>
-</ign-list-content>
-```
+
+### Implementation TS
+  None

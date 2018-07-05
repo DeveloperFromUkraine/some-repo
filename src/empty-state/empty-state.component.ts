@@ -29,14 +29,14 @@ export class EmptyStateDescriptionComponent {}
   `,
   styles: [
     `
-    :host {
-      width: 33%;
-      position: absolute;
-      z-index: 0;
-      bottom: 0px;
-      right: 0px;
-    }
-  `,
+      :host {
+        width: 33%;
+        position: absolute;
+        z-index: 0;
+        bottom: 0px;
+        right: 0px;
+      }
+    `,
   ],
 })
 export class EmptyStateImageComponent {}

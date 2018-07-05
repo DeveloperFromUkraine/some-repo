@@ -1,5 +1,13 @@
 ### vNEXT
 
+### v1.0.0
+- Updated documentation (Readme) for IDS
+- Migrated ign-messages component from ultipro-web
+- Updated test coverage for all components
+- Updated accessibility for all components
+- Added list of contributors
+- Added Readme files, API's and samples for all remaining components and sub-components
+
 ### v0.7.2
 - Fixed bug in currency component
 - Fixed angular linting issues with components

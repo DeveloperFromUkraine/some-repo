@@ -2,6 +2,7 @@ export const TranslationMap = {
   CLEAR: 'Clear',
   CLOSE: 'Close',
   CONTEXT_MENU: 'Context Menu',
+  DATE_RANGE: 'Date Range',
   EDIT: 'Edit',
   END_DATE_TYPEAHEAD: 'End Date (Typeahead entries appear in dropdown)',
   JUMP_TO_CONTENT: 'Jump to content',

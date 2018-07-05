@@ -1,4 +1,6 @@
-# ignite-design-system
+# Ignite Design System
+
+#### Ignite is an Angular component library designed to help developers create the best experience for customers who use Ultimate Software products. Based off of Angular Material, visit the [Angular style guide](https://angularjs.com) to learn more.
 
 ## Installation
 
@@ -15,6 +17,14 @@ Once you have published your library to npm, you can import your library in any 
 ```bash
 $ npm install ignite-design-system
 ```
+
+If you prefer [Yarn](https://yarnpkg.com/en/), use the following command instead:
+
+```bash
+yarn add ignite-design-system
+```
+
+
 
 and then from your Angular `AppModule`:
 
@@ -92,6 +102,32 @@ To lint all `*.ts` files:
 ```bash
 $ npm run lint
 ```
+
+## Learning resources
+
+If you’re new to Angular, we recommend you start with the [official Angular Getting Started documentation](https://angular.io/guide/quickstart). We also recommend Todd Motto's course on Angular: [Ultimate Angular training](https://ultimateangular.com/).
+
+
+## Contributors
+
+Derek Stobbe
+John Johnson
+Maham Boghani
+Brian Mahecha
+Daniel Weisberg
+Steve Hirabayashi
+Mariah Avalos
+Jo Lares
+Rick Jelte
+Zhan Liang
+Arturo Canler
+Carlos de Freitas Pereira
+Miguel Conde
+Danil Flores
+Baker Bokorney
+Ryan Clements
+Lauren Siegel
+
 
 ## License
 

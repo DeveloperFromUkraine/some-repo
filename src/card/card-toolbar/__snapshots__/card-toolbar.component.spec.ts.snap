@@ -2,12 +2,21 @@
 
 exports[`Card Toolbar should match snapshot 1`] = `
 <ign-card-toolbar>
-  
   <div
-    class="right-actions"
+    role="toolbar"
   >
     
     
+    
+    
+    <div
+      class="right-actions"
+    >
+      
+      
+      
+    
+    </div>
     
   
   </div>

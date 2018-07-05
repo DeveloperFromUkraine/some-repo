@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectorRef } from '@angular/core';
+
+import { TranslationPipe } from '../localization/translation.pipe';
 
 const DEFAULT_LOADING_DELAY_MS = 400;
 
@@ -9,20 +11,25 @@ const DEFAULT_LOADING_DELAY_MS = 400;
 })
 export class LoadingContainerComponent implements OnInit {
   @Input() loading: boolean;
-  @Input() ariaLabel = 'LOADING';
+  @Input() ariaLabel: string;
   spinnerAriaLabel: string;
   pastDelay: boolean;
   private delay: number;
   private delayTimeout: any;
+  translatePipe: TranslationPipe;
 
-  constructor() {
+  constructor(changeRef: ChangeDetectorRef) {
     this.delay = DEFAULT_LOADING_DELAY_MS;
     this.loading = true;
     this.pastDelay = false;
+    this.translatePipe = new TranslationPipe(changeRef);
+    this.spinnerAriaLabel = this.translatePipe.transform('LOADING');
   }
 
   ngOnInit() {
-    this.spinnerAriaLabel = this.ariaLabel;
+    if (this.ariaLabel) {
+      this.spinnerAriaLabel = this.ariaLabel;
+    }
     this.delayTimeout = setTimeout(() => {
       this.pastDelay = true;
     }, this.delay);

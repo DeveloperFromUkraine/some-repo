@@ -1,6 +1,6 @@
 {
   "name": "ignite-design-system",
-  "version": "0.7.2",
+  "version": "1.0.0", 
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +8,7 @@
     "build:watch": "chokidar 'src/**/*.ts' -c './bin/build' --initial",
     "package": "tar cvf $npm_package_name-$npm_package_version.tgz manifest-* Staticfile dist",
     "sonar": "echo Publishing to sonar for branch: $SONARQUBE_BRANCH && sonarqube-scanner-node -Dsonar.branch=$SONARQUBE_BRANCH",
-    "lint": "tslint --project tsconfig.json src/**/*.ts",
+    "lint": "tslint --project tsconfig.json src/**/*.ts && ng lint --type-check",
     "prettier": "prettier --single-quote --trailing-comma es5 --print-width 100 --write 'src/**/*.{js,ts}' --list-different",
     "precommit": "npm run prettier && npm run lint",
     "test": "jest --coverage --json --outputFile=test/jest-output.json",
@@ -107,6 +107,7 @@
     "core-js": "^2.4.1",
     "husky": "^0.14.3",
     "ignite-common": "^0.13.3",
+    "ignite-design-services": "^0.1.4",
     "jest": "^22.0.0",
     "jest-preset-angular": "^2.0.2",
     "marked": "^0.3.7",

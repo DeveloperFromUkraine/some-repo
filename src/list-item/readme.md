@@ -1,47 +1,50 @@
-# List Item Components
+## Use
+  List items are items containing brief information and points for a list. They are composed of several different components.
 
-## List Item Content
+  ### List Item Content
+    - `List item content` may hold multiple occurrences of text or anything else desired for the list item's        content
 
-`List item content` may hold multiple occurrences of text or anything else desired for the list item's content
+  ### List Item
+    - `List item` may hold `list item content`, along with a menu if desired, ensuring that the two appear          stylistically correct
 
-## List Item
+  ### List Item Container
+    - `List item container` will usually serve as a container for multiple occurrences of `list item` components.
 
-`List item` may hold `list item content`, along with a menu if desired, ensuring that the two appear stylistically correct
+  ### Implementation
+    - List items should be used for cases such as:
+      - Employees
+      - Companies
+      - Other multi-option lists. 
 
-## List Item Container
 
-`List item container` will usually serve as a container for multiple occurrences of `list item` components.
+## API
+  ### Selector ListItem
+    * ign-list-item
 
-## Usage
+  ### Selector ListItemContent
+    * ign-list-item-content
 
-The following is a usage example demonstrating the above descriptions:
+  ### Selector ListContainer
+    * ign-list-container
 
-```
-      <ign-list-container>
-        <ign-list-item *ngFor="let item of (organizationLevels$ | async)">
-          <ign-list-item-content tabindex="0" ignA11yClick (click)="handleClick(item.id)">
-            <ign-list-item-primary-text>{{ item?.name }}</ign-list-item-primary-text>
-            <ign-list-item-secondary-text *ngIf="item?.organizationUnitCount>0">
-              {{ 'ACTIVATION.ORGANIZATION_LEVELS_UNITS_ADDED' | translate: {amount:item?.organizationUnitCount, orgLevelName:item?.name} }}
-            </ign-list-item-secondary-text>
-            <ign-list-item-secondary-text *ngIf="!(item?.organizationUnitCount>0)">
-              {{ 'ACTIVATION.ORGANIZATION_LEVELS_ADD' | translate: {orgLevelName:item?.name} }}
-            </ign-list-item-secondary-text>
-          </ign-list-item-content>
-          <mat-menu #listMenu="matMenu">
-            <button mat-meign-item [routerLink]="['./', item.id]">
-              <mat-icon>edit</mat-icon>
-              <span>{{ 'COMMON.EDIT' | translate }}</span>
-            </button>
-            <ign-divider></ign-divider>
-            <button mat-meign-item (click)="handleDelete(item.id)">
-              <mat-icon>delete</mat-icon>
-              <span>{{ 'COMMON.DELETE' | translate }}</span>
-            </button>
-          </mat-menu>
-          <button mat-icon-button [matMenuTriggerFor]="listMenu">
-            <mat-icon class="mat-24 menu">more_vert</mat-icon>
-          </button>
-        </ign-list-item>
-      </ign-list-container>
-```
+  ### Exported As ListItem
+    * ListItemComponent
+
+  ### Exported As ListItemContent
+    * ListItemContentComponent
+
+  ### Exported As ListContainer
+    * ListContainerComponent
+
+
+## Implementation HTML
+  <ign-list-container>
+    <ign-list-item>
+      <ign-list-item-content>
+      </ign-list-item-content>
+    </ign-list-item>
+  </ign-list-container>
+
+
+## Implementation TS
+  None
