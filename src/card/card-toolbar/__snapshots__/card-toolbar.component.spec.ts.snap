@@ -1,22 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Card Toolbar should match snapshot 1`] = `
-<ign-card-toolbar>
+<ign-card-toolbar
+  role={[Function String]}
+>
+  
   <div
-    role="toolbar"
+    class="right-actions"
   >
     
     
-    
-    
-    <div
-      class="right-actions"
-    >
-      
-      
-      
-    
-    </div>
     
   
   </div>

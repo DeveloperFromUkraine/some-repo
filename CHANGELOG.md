@@ -1,5 +1,8 @@
 ### vNEXT
 
+### v1.0.1
+- Fixed bug in components setting role attribute in inner div instead of HostBinding
+
 ### v1.0.0
 - Updated documentation (Readme) for IDS
 - Migrated ign-messages component from ultipro-web
