@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'ign-sidenav-list',
   templateUrl: './sidenav-list.html',
   styleUrls: ['./sidenav-list.scss'],
 })
-export class SideNavListComponent {}
+export class SideNavListComponent {
+  @HostBinding('attr.role') role = 'list';
+}
