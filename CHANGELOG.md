@@ -1,5 +1,8 @@
 ### vNEXT
 
+### v1.0.2
+- Version bump to fix k8 pipeline
+
 ### v1.0.1
 - Fixed bug in components setting role attribute in inner div instead of HostBinding
 
