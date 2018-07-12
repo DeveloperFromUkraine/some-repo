@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, BehaviorSubject, Subject } from 'rxjs/Rx';
-import { Logger } from 'ignite-design-services';
+import { Logger } from '../logging/logger.service';
 import { ActivatedRoute } from '@angular/router';
 import { GraphQLErrorResponse } from './types/graphql-error';
 

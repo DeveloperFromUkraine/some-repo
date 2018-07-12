@@ -2,7 +2,7 @@ import { Observable, BehaviorSubject } from 'rxjs/Rx';
 import { Message, MessagesComponent } from './messages.component';
 import { ActivatedRoute } from '@angular/router';
 import { GraphQLErrorResponse, graphQLError, graphQLSyntaxError } from './types/graphql-error';
-import { Logger } from 'ignite-design-services';
+import { Logger } from '../logging/logger.service';
 
 describe('Messages component', () => {
   let component: MessagesComponent;
