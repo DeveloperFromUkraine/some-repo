@@ -44,3 +44,5 @@ test/jest-output.json
 
 # Misc
 /.scannerwork
+
+.ng_pkg_build/
