@@ -1,4 +1,5 @@
 ### vNEXT
+
 - Renamed `ign-list-search` to `ign-persistent-search`, added `placeholder` input, and updated spacing between search icon and input
 
 -
@@ -35,6 +36,10 @@
   in a future release.
 - Added support for AngularPlayground (http://www.angularplayground.it/)
 - Added .nvmrc file to project
+
+### v1.0.3
+
+- Pulled in logger service and removed ignite-design-services as a dependency
 
 ### v1.0.2
 
