@@ -1,4 +1,5 @@
 ### vNEXT
+
 - Renamed `ign-list-search` to `ign-persistent-search`, added `placeholder` input, and updated spacing between search icon and input
 
 - Added new avatar sizes "s" and "l". Support for the corresponding keywords "snall" and "large" respectively will be dropped
@@ -7,6 +8,10 @@
 - Added .nvmrc file to project
 - Added a new input to `ign-selection-item` for the statusText and updated styles to use _typography.
 - Updated ignite-common version.
+
+### v1.0.3
+
+- Pulled in logger service and removed ignite-design-services as a dependency
 
 ### v1.0.2
 
