@@ -19,7 +19,6 @@ $dark-gray: ign-palette($ign-palette-gray, 500);
 .container {
   border-radius: 50%;
   font-family: $ign-font-family;
-
   overflow: hidden;
   display: flex;
 
@@ -49,50 +48,6 @@ $dark-gray: ign-palette($ign-palette-gray, 500);
     }
   }
 
-  &.xs {
-    width: ign-avatar-size(xs);
-    height: ign-avatar-size(xs);
-
-    .initials {
-      @extend %full-width-height;
-      @extend %flex-centering;
-
-      background-color: ign-color(dark);
-      font-size: ign-typography(caption, font-size);
-      color: $white;
-    }
-
-    .icon {
-      @extend %full-width-height;
-      @extend %flex-centering;
-
-      font-size: ign-icon-size(xs);
-      background-color: $light-gray;
-    }
-  }
-
-  &.m {
-    width: ign-avatar-size(m);
-    height: ign-avatar-size(m);
-
-    .initials {
-      @extend %full-width-height;
-      @extend %flex-centering;
-
-      background-color: ign-color(dark);
-      font-size: ign-typography(subheading-2, font-size);
-      color: $white;
-    }
-
-    .icon {
-      @extend %full-width-height;
-      @extend %flex-centering;
-
-      font-size: ign-icon-size(m);
-      background-color: $light-gray;
-    }
-  }
-
   &.l {
     width: ign-avatar-size(l);
     height: ign-avatar-size(l);
@@ -111,28 +66,6 @@ $dark-gray: ign-palette($ign-palette-gray, 500);
       @extend %flex-centering;
 
       font-size: ign-icon-size(l);
-      background-color: $light-gray;
-    }
-  }
-
-  &.xl {
-    width: ign-avatar-size(xl);
-    height: ign-avatar-size(xl);
-
-    .initials {
-      @extend %full-width-height;
-      @extend %flex-centering;
-
-      background-color: ign-color(dark);
-      font-size: ign-typography(subheading-2, font-size);
-      color: $white;
-    }
-
-    .icon {
-      @extend %full-width-height;
-      @extend %flex-centering;
-
-      font-size: ign-icon-size(xl);
       background-color: $light-gray;
     }
   }
