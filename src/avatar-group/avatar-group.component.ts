@@ -3,33 +3,7 @@ import { Avatar, Person } from './avatar-group.types';
 
 @Component({
   selector: 'ign-avatar-group',
-  template: `
-    <div *ngIf="avatars?.length" id="avatar-group" fxLayout="row" tabindex="-1">
-      <ign-avatar
-        *ngFor="let avatar of sanitizeAvatars(avatars).slice(0, cap)"
-        class="avatar avatar-group"
-        matListAvatar
-        [tooltip]="getAvatarTooltip(avatar)"
-        [image]="avatar.image || ''"
-        [initials]="avatar.person ? getPersonInitials(avatar.person) : ''"
-        [size]="size"
-        [routerLink]="avatar.link ? [avatar.link] : []"
-        tabindex="-1"
-      ></ign-avatar>
-      <ign-avatar
-        *ngIf="!!showCounter && getCounterValue(avatars) > 0"
-        id="counter"
-        class="avatar-group"
-        matListAvatar
-        [initials]="'+' + getCounterValue(avatars)"
-        [size]="size"
-        [routerLink]="showCounter && counterLink ? [counterLink] : []"
-        [ariaLabel]="counterAriaLabel || ' '"
-        tabindex="-1"
-        [attr.role]="showCounter && counterLink ? 'link' : ''"
-      ></ign-avatar>
-    </div>
-  `,
+  templateUrl: './avatar-group.html',
   styleUrls: ['./avatar-group.component.scss'],
 })
 export class AvatarGroupComponent {
@@ -40,7 +14,8 @@ export class AvatarGroupComponent {
   @Input() counterLink: string;
   @Input() counterAriaLabel: string;
 
-  size = 'small';
+  // Set size of all avatars in the group to small
+  size = 's';
 
   getAvatarTooltip(avatar: Avatar): string {
     if (avatar.tooltip) {
