@@ -3,6 +3,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
+import { LoggerModule } from './logging/logger.module';
+export * from './logging/logger.service';
+
 import { PageComponent } from './page/page.component';
 export * from './page/page.component';
 
@@ -261,6 +264,7 @@ const components = [
     MatTooltipModule,
     TranslationModule,
     MatSidenavModule,
+    LoggerModule,
   ],
   declarations: components,
   exports: [

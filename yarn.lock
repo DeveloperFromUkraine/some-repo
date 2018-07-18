@@ -3532,18 +3532,6 @@ ignite-common@^0.13.3:
   version "0.13.4"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ignite-common/-/ignite-common-0.13.4.tgz#fe546e15927d79816ae1d46e81286773bd0b4987"
 
-ignite-design-services@^0.1.4:
-  version "0.1.4"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ignite-design-services/-/ignite-design-services-0.1.4.tgz#e3bc756710d968b5a1cb5664d99c359eb2487a05"
-  dependencies:
-    apollo-angular "1.0.1"
-    apollo-cache-inmemory "^1.1.12"
-    apollo-client "2.2.2"
-    apollo-link "^1.2.1"
-    apollo-link-http "^1.5.3"
-    graphql "^0.12.3"
-    tslib "^1.7.1"
-
 ignore-walk@^3.0.1:
   version "3.0.1"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ignore-walk/-/ignore-walk-3.0.1.tgz#a83e62e7d272ac0e3b551aaa82831a19b69f82f8"

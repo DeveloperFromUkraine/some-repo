@@ -1,4 +1,8 @@
 ### vNEXT
+-
+
+### v1.0.3
+- Pulled in logger service and removed ignite-design-services as a dependency
 
 ### v1.0.2
 - Version bump to fix k8 pipeline

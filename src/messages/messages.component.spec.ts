@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ComponentTest } from '../../test/test-bed/component';
 import { MessagesComponent } from './messages.component';
 import { Component } from '@angular/core';
-import { Logger } from 'ignite-design-services';
+import { Logger } from '../logging/logger.service';
 import { ActivatedRoute } from '@angular/router';
 
 describe('Messages', () => {

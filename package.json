@@ -1,6 +1,6 @@
 {
   "name": "ignite-design-system",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -107,7 +107,6 @@
     "core-js": "^2.4.1",
     "husky": "^0.14.3",
     "ignite-common": "^0.13.3",
-    "ignite-design-services": "^0.1.4",
     "jest": "^22.0.0",
     "jest-preset-angular": "^2.0.2",
     "marked": "^0.3.7",
