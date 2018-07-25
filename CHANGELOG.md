@@ -16,6 +16,9 @@
 
 - Renamed `ign-list-search` to `ign-persistent-search`, added `placeholder` input, and updated spacing between search icon and input
 
+### v1.0.4
+- Renamed `ign-list-search` to `ign-persistent-search`, added `placeholder` input, and updated spacing between search icon and input
+
 ### v1.0.3
 
 - Pulled in logger service and removed ignite-design-services as a dependency
