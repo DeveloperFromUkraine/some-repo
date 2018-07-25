@@ -4,8 +4,7 @@
   floatPlaceholder="never">
   <input
     matInput
-    placeholder="{{'SEARCH' | translateIDS}}"
-    attr.aria-label="{{ariaLabel | translateIDS}}"
+    placeholder="{{placeholder | translateIDS}}"
     #searchInput
     (keyup.escape)="searchInput.value=''; emitSearchEvents()"
     (keyup)="emitSearchEvents()">
