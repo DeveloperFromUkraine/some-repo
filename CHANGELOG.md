@@ -1,4 +1,5 @@
 ### vNEXT
+- Renamed `ign-list-search` to `ign-persistent-search`, added `placeholder` input, and updated spacing between search icon and input
 
 -
 
