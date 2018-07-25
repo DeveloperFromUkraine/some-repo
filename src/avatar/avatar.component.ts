@@ -6,7 +6,6 @@ enum AvatarSize {
   M = 'm',
   L = 'l',
   XL = 'xl',
-  XXL = 'xxl',
 }
 
 @Component({
@@ -22,6 +21,6 @@ export class AvatarComponent {
   @Input() ariaLabel: string;
 
   getSize(size: string): string {
-    return AvatarSize[size] || AvatarSize.L;
+    return AvatarSize[size.toUpperCase()] || AvatarSize.L;
   }
 }
