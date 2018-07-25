@@ -3,19 +3,19 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { TranslationPipe } from '../localization/translation.pipe';
 
 @Component({
-  selector: 'ign-list-search',
-  templateUrl: './list-search.component.html',
-  styleUrls: ['./list-search.component.scss'],
+  selector: 'ign-persistent-search',
+  templateUrl: './persistent-search.component.html',
+  styleUrls: ['./persistent-search.component.scss'],
 })
-export class ListSearchComponent {
+export class PersistentSearchComponent {
   @ViewChild('searchInput') searchInput: ElementRef;
 
-  @Input() ariaLabel;
+  @Input() placeholder: string;
   @Output() searchCriteria$ = new BehaviorSubject<any>({});
 
   constructor(private _cdr: ChangeDetectorRef) {
     const pipe = new TranslationPipe(this._cdr);
-    this.ariaLabel = pipe.transform('LIST_SEARCH');
+    this.placeholder = pipe.transform('SEARCH');
   }
 
   emitSearchEvents() {
