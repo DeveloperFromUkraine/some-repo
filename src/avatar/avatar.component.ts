@@ -12,6 +12,7 @@ enum AvatarSize {
 }
 
 const deprecatedSizees = ['small', 'large'];
+
 @Component({
   selector: 'ign-avatar',
   templateUrl: './avatar.html',
