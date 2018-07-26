@@ -20,7 +20,8 @@
     "push-jest-build": "echo 'starting jest build push...' && curl -X POST https://playground-service.apps.mia.ulti.io/v1/jestoutput -d @test/jest-output.json --header 'Content-Type: application/json'",
     "push-to-playground-service": "npm run push-coverage && npm run push-jest-build",
     "playground": "angular-playground",
-    "playground:build": "angular-playground --build"
+    "playground:build": "angular-playground --build",
+    "update-snapshots": "jest --updateSnapshot"
   },
   "jest": {
     "preset": "jest-preset-angular",
