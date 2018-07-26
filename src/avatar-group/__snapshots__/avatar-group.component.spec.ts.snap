@@ -8,7 +8,5 @@ exports[`AvatarGroupComponent Test Suite should match snapshot 1`] = `
   size={[Function String]}
 >
   
-      
-    
 </ign-avatar-group>
 `;
