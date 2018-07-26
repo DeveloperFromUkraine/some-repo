@@ -46,6 +46,10 @@
       "umdModuleIds": {
         "rxjs": "rxjs"
       },
+      "languageLevel": [
+        "dom",
+        "es2017"
+      ],
       "externals": {
         "@angular/material": "ng.material",
         "rxjs": "Rx",
