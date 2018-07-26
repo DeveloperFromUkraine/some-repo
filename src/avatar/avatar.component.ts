@@ -8,15 +8,14 @@ enum AvatarSize {
   S = 's',
   M = 'm',
   L = 'l',
-  XL = 'xl',
+  XL = 'xl'
 }
 
 const deprecatedSizees = ['small', 'large'];
-
 @Component({
   selector: 'ign-avatar',
   templateUrl: './avatar.html',
-  styleUrls: ['./avatar.component.scss'],
+  styleUrls: ['./avatar.component.scss']
 })
 export class AvatarComponent implements AfterViewInit {
   @Input() image: string;
@@ -28,8 +27,8 @@ export class AvatarComponent implements AfterViewInit {
   ngAfterViewInit() {
     if (deprecatedSizees.includes(this.size)) {
       console.warn(
-        `Deprecation warning: Avatar sizes "small", "medium" and "large" are being removed in favor of "s", "m" and "l" respectively.
-        Support for these sizes will be dropped soon.`
+        `Deprecation warning: Avatar sizes "small", "medium" and "large" are being removed
+        in favor of "s", "m" and "l" respectively. Support for these sizes will be dropped soon.`
       );
     }
   }
