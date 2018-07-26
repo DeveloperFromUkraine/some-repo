@@ -8,14 +8,14 @@ enum AvatarSize {
   S = 's',
   M = 'm',
   L = 'l',
-  XL = 'xl'
+  XL = 'xl',
 }
 
 const deprecatedSizees = ['small', 'large'];
 @Component({
   selector: 'ign-avatar',
   templateUrl: './avatar.html',
-  styleUrls: ['./avatar.component.scss']
+  styleUrls: ['./avatar.component.scss'],
 })
 export class AvatarComponent implements AfterViewInit {
   @Input() image: string;
