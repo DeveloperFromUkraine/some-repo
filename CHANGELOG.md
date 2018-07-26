@@ -27,6 +27,10 @@
 ### v1.0.3
 - Pulled in logger service and removed ignite-design-services as a dependency
 
+- Added new avatar sizes "s" and "l". Support for the corresponding keywords "snall" and "large" respectively will be dropped
+  in a future release.
+- Added support for AngularPlayground (http://www.angularplayground.it/)
+
 ### v1.0.2
 
 - Version bump to fix k8 pipeline
