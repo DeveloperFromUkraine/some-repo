@@ -1,5 +1,4 @@
 ### vNEXT
-- Renamed `ign-list-search` to `ign-persistent-search`, added `placeholder` input, and updated spacing between search icon and input
 
 - Modified ign-loading-container so that its contents are hidden instead of ngIfed to prevent issues arising from creating and destroying the components inside.
 
@@ -21,6 +20,19 @@
 
 - Pulled in logger service and removed ignite-design-services as a dependency
 
+<<<<<<< HEAD
+=======
+### v1.0.4
+- Renamed `ign-list-search` to `ign-persistent-search`, added `placeholder` input, and updated spacing between search icon and input
+
+### v1.0.3
+- Pulled in logger service and removed ignite-design-services as a dependency
+
+- Added new avatar sizes "s" and "l". Support for the corresponding keywords "snall" and "large" respectively will be dropped
+  in a future release.
+- Added support for AngularPlayground (http://www.angularplayground.it/)
+
+>>>>>>> edited changelog
 ### v1.0.2
 
 - Version bump to fix k8 pipeline
