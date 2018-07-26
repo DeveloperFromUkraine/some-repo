@@ -34,7 +34,7 @@ export class AvatarComponent implements AfterViewInit {
     }
   }
 
-  getSize(size: string): string {
+  getSize(size = 'l'): string {
     return AvatarSize[size.toUpperCase()] || AvatarSize.L;
   }
 }
