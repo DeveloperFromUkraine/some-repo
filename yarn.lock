@@ -300,9 +300,9 @@
   version "10.3.4"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@types/node/-/node-10.3.4.tgz#c74e8aec19e555df44609b8057311052a2c84d9e"
 
-"@types/node@^6.0.114":
-  version "6.0.115"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@types/node/-/node-6.0.115.tgz#2ebbd6e57589484c043a25ec3b75799c32f67520"
+"@types/node@~6.0.60":
+  version "6.0.113"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/@types/node/-/node-6.0.113.tgz#4b41f38ad03e4b41f9dc259b3b58aecb22c9aebc"
 
 abab@^1.0.3, abab@^1.0.4:
   version "1.0.4"
