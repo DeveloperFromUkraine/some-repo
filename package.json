@@ -18,7 +18,10 @@
     "ci:package": "npm run build && npm prune --production && npm run package",
     "push-coverage": "echo 'starting coverage push...' && curl -X POST https://playground-service.apps.mia.ulti.io/v1/coverage -d @coverage/coverage-summary.json --header 'Content-Type: application/json'",
     "push-jest-build": "echo 'starting jest build push...' && curl -X POST https://playground-service.apps.mia.ulti.io/v1/jestoutput -d @test/jest-output.json --header 'Content-Type: application/json'",
-    "push-to-playground-service": "npm run push-coverage && npm run push-jest-build"
+    "push-to-playground-service": "npm run push-coverage && npm run push-jest-build",
+    "playground": "angular-playground",
+    "playground:build": "angular-playground --build",
+    "update-snapshots": "jest --updateSnapshot"
   },
   "jest": {
     "preset": "jest-preset-angular",
@@ -43,6 +46,10 @@
       "umdModuleIds": {
         "rxjs": "rxjs"
       },
+      "languageLevel": [
+        "dom",
+        "es2017"
+      ],
       "externals": {
         "@angular/material": "ng.material",
         "rxjs": "Rx",
@@ -85,9 +92,10 @@
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
+    "@angular-devkit/core": "^0.6.8",
     "@angular/animations": "^5.0.0",
     "@angular/cdk": "^5.0.0-rc0",
-    "@angular/cli": "^1.6.1",
+    "@angular/cli": "^1.7.4",
     "@angular/common": "^5.0.0",
     "@angular/compiler": "^5.0.0",
     "@angular/compiler-cli": "^5.0.0",
@@ -98,15 +106,18 @@
     "@angular/platform-browser": "^5.0.0",
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",
+    "@angular/service-worker": "^6.0.9",
     "@compodoc/compodoc": "^1.0.0-beta.10",
     "@types/googlemaps": "^3.29.2",
     "@types/jest": "^19.2.3",
     "@types/node": "~6.0.60",
+    "angular-playground": "^4.0.0",
     "chokidar-cli": "^1.2.0",
     "codelyzer": "^4.0.2",
     "core-js": "^2.4.1",
+    "extract-text-webpack-plugin": "^2.1.2",
     "husky": "^0.14.3",
-    "ignite-common": "^0.13.3",
+    "ignite-common": "^0.13.7",
     "jest": "^22.0.0",
     "jest-preset-angular": "^2.0.2",
     "marked": "^0.3.7",
@@ -118,7 +129,8 @@
     "ts-node": "~2.0.0",
     "tslint": "^5.8.0",
     "typescript": "2.4.2",
-    "zone.js": "^0.8.4"
+    "webpack": "^2.5.1",
+    "zone.js": "^0.8.26"
   },
   "engines": {
     "node": ">=6.0.0"
