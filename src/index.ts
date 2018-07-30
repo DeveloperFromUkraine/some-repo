@@ -126,7 +126,7 @@ import { DataTableContainerComponent } from './data-table-container/data-table-c
 import { ExpandableSearchComponent } from './expandable-search/expandable-search.component';
 import { RightAlignContainerComponent } from './right-align-container/right-align-container.component';
 
-import { ListSearchComponent } from './list-search/list-search.component';
+import { PersistentSearchComponent } from './persistent-search/persistent-search.component';
 
 import {
   AccessibleClickDirective,
@@ -225,7 +225,7 @@ const components = [
   FooterComponent,
   ExpandableSearchComponent,
   RightAlignContainerComponent,
-  ListSearchComponent,
+  PersistentSearchComponent,
   AccessibleClickDirective,
   AccessibleViewDirective,
   AccessibleRemoveViewDirective,

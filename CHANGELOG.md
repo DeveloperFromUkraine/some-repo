@@ -1,4 +1,5 @@
 ### vNEXT
+- Renamed `ign-list-search` to `ign-persistent-search`, added `placeholder` input, and updated spacing between search icon and input
 
 - Added new avatar sizes "s" and "l". Support for the corresponding keywords "snall" and "large" respectively will be dropped
   in a future release.
