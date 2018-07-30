@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ListSearchComponent } from './list-search.component';
+import { PersistentSearchComponent } from './persistent-search.component';
 import { ComponentTest } from '../../test/test-bed/component';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core/src/debug/debug_node';
@@ -7,19 +7,19 @@ import { Component, NgModule } from '@angular/core';
 import { TranslationModule } from '../localization/translation.module';
 import { TranslationMap } from '../localization/translation-map';
 
-describe('List Search Component', () => {
-  let fixture: ComponentFixture<ListSearchComponent>;
-  let component: ListSearchComponent;
+describe('Persistent Search Component', () => {
+  let fixture: ComponentFixture<PersistentSearchComponent>;
+  let component: PersistentSearchComponent;
   let de: DebugElement;
   let ne: HTMLElement;
 
   beforeEach(() => {
     ComponentTest.createTestBed(
       [TranslationModule] as NgModule[],
-      [ListSearchComponent] as Component[]
+      [PersistentSearchComponent] as Component[]
     );
 
-    fixture = TestBed.createComponent(ListSearchComponent);
+    fixture = TestBed.createComponent(PersistentSearchComponent);
     component = fixture.componentInstance;
 
     fixture.detectChanges();
@@ -86,22 +86,22 @@ describe('List Search Component', () => {
       expect(spy).toHaveBeenCalled();
     });
   });
-  describe('aria-label', () => {
+  describe('placeholder', () => {
     beforeEach(() => {
       de = fixture.debugElement.query(By.css('input'));
       ne = de.nativeElement;
     });
     it('Should be set to passed in value', () => {
-      component.ariaLabel = 'Search employees';
+      component.placeholder = 'Search employees';
 
       fixture.detectChanges();
 
-      expect(ne.getAttribute('aria-label')).toBe('Search employees');
+      expect(ne.getAttribute('placeholder')).toBe('Search employees');
     });
     it('Should be set to the default value when no value is passed in', () => {
       fixture.detectChanges();
 
-      expect(ne.getAttribute('aria-label')).toBe(TranslationMap['LIST_SEARCH']);
+      expect(ne.getAttribute('placeholder')).toBe(TranslationMap['SEARCH']);
     });
   });
   describe('On escape key press', () => {
