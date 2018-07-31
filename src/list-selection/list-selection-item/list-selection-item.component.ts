@@ -11,5 +11,6 @@ export class ListSelectionItemComponent {
   @Input() active: boolean;
   @Input() title: string;
   @Input() subtitle: string;
+  @Input() statusText: string;
   @Output() onClick: EventEmitter<MouseEvent> = new EventEmitter();
 }
