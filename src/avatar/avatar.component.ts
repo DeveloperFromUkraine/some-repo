@@ -11,7 +11,7 @@ enum AvatarSize {
   XL = 'xl',
 }
 
-const deprecatedSizees = ['small', 'large'];
+const deprecatedSizees = ['small', 'large', 'medium'];
 
 @Component({
   selector: 'ign-avatar',

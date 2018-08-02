@@ -1,5 +1,9 @@
 ### vNEXT
 
+-
+
+### v1.0.5
+
 - Added new avatar sizes "s" and "l". Support for the corresponding keywords "snall" and "large" respectively will be dropped
   in a future release.
 - Added support for AngularPlayground (http://www.angularplayground.it/)
@@ -8,16 +12,12 @@
 - Updated ignite-common version.
 - Upgraded `ignite-common` version. Updated to `"@types/node": "^6.0.114"`
 
-### v1.0.5
-- Renamed `ign-list-search` to `ign-persistent-search`, added `placeholder` input, and updated spacing between search icon and input
-
 ### v1.0.4
-- Renamed `ign-list-search` to `ign-persistent-search`, added `placeholder` input, and updated spacing between search icon and input
 
-### v1.0.4
 - Renamed `ign-list-search` to `ign-persistent-search`, added `placeholder` input, and updated spacing between search icon and input
 
 ### v1.0.3
+
 - Pulled in logger service and removed ignite-design-services as a dependency
 
 ### v1.0.2
