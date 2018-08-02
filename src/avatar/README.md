@@ -23,7 +23,7 @@
       * Two letters to be displayed in the lack of an avatar image.
       
     * @Input() size: string
-      * The size of the avatar. Value can be 'small', or 'large'.
+      * The size of the avatar. Value can be 's','l', 'xl', 'm' or 'xs'
 
     * @Input() tooltip: string
       * A tooltip to be displayed on mouse-over.
@@ -44,23 +44,23 @@
     <ign-avatar 
         [image]=""
         [initials]="'JB'"
-        [size]="'small'"
+        [size]="'s'"
     ></ign-avatar>
     <ign-avatar 
         [image]=""
         [initials]=""
-        [size]="'large'"
+        [size]="'l'"
     ></ign-avatar>
     <ign-avatar 
         [image]=""
         [initials]=""
-        [size]="'large'"
+        [size]="'l'"
         [tooltip]="'Tooltip'"
     ></ign-avatar>
     <ign-avatar 
         [image]=""
         [initials]=""
-        [size]="'large'"
+        [size]="'l'"
         [ariaLabel]="'Aria Label'"
     ></ign-avatar>
 
@@ -68,6 +68,6 @@
 ## Implementation TS 
   @Input() image: string;
   @Input() initials: string;
-  @Input() size = 'large';
+  @Input() size = 'l';
   @Input() tooltip: string;
   @Input() ariaLabel: string;
