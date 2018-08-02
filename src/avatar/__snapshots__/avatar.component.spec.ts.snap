@@ -2,10 +2,9 @@
 
 exports[`AvatarComponent should match snapshot 1`] = `
 <ign-avatar>
-  
-      <div
+  <div
     aria-label=""
-    class="container large"
+    class="container l"
     id="avatar"
     ng-reflect-message=""
     tabindex="-1"
@@ -19,23 +18,14 @@ exports[`AvatarComponent should match snapshot 1`] = `
     
         
     
-    <div
-      class="icon-container"
+    <mat-icon
+      aria-hidden="true"
+      class="icon"
     >
-      
-          
-      <mat-icon
-        aria-hidden="true"
-        class="icon"
-      >
-        person
-      </mat-icon>
-      
-        
-    </div>
+      person
+    </mat-icon>
     
-      
+  
   </div>
-    
 </ign-avatar>
 `;

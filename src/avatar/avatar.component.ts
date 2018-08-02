@@ -1,38 +1,40 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, AfterViewInit } from '@angular/core';
+
+enum AvatarSize {
+  small = 's',
+  large = 'l',
+  medium = 'm',
+  XS = 'xs',
+  S = 's',
+  M = 'm',
+  L = 'l',
+  XL = 'xl',
+}
+
+const deprecatedSizees = ['small', 'large', 'medium'];
 
 @Component({
   selector: 'ign-avatar',
-  template: `
-    <div id="avatar"
-      [class]="'container ' + getSize(size)"
-      matTooltip="{{ tooltip }}"
-      attr.aria-label="{{ tooltip || ariaLabel }}"
-      tabindex="{{ (!!tooltip || !!ariaLabel) ? 0 : -1 }}"
-    >
-      <img *ngIf="!!image" [src]="image" class="image" alt="">
-      <div *ngIf="!image && !!initials" class="initials-container">
-        <span class="initials" aria-hidden="true">{{ initials }}</span>
-      </div>
-      <div *ngIf="!image && !initials" class="icon-container">
-        <mat-icon class="icon" aria-hidden="true">person</mat-icon>
-      </div>
-    </div>
-  `,
+  templateUrl: './avatar.html',
   styleUrls: ['./avatar.component.scss'],
 })
-export class AvatarComponent {
+export class AvatarComponent implements AfterViewInit {
   @Input() image: string;
   @Input() initials: string;
   @Input() size: string;
   @Input() tooltip: string;
   @Input() ariaLabel: string;
 
-  getSize(size: string): string {
-    const sizes = {
-      small: 'small',
-      large: 'large',
-      default: 'large',
-    };
-    return sizes[size] || sizes['default'];
+  ngAfterViewInit() {
+    if (deprecatedSizees.includes(this.size)) {
+      console.warn(
+        `Deprecation warning: Avatar sizes "small", "medium" and "large" are being removed
+        in favor of "s", "m" and "l" respectively. Support for these sizes will be dropped soon.`
+      );
+    }
+  }
+
+  getSize(size = 'l'): string {
+    return AvatarSize[size.toUpperCase()] || AvatarSize.L;
   }
 }

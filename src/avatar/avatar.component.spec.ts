@@ -64,7 +64,7 @@ describe('AvatarComponent', () => {
   it('should display a tooltip', () => {
     component.image = '';
     component.initials = 'FL';
-    component.size = 'small';
+    component.size = 's';
     component.tooltip = 'Tooltip';
     const tooltip = de.query(By.css('#avatar'));
     const ne: HTMLElement = tooltip.nativeElement;
@@ -75,21 +75,21 @@ describe('AvatarComponent', () => {
   });
 
   it('should display a small avatar', () => {
-    component.size = 'small';
+    component.size = 's';
     const avatar = de.query(By.css('#avatar'));
 
     fixture.detectChanges();
 
-    expect(avatar.nativeElement.getAttribute('class')).toContain('small');
+    expect(avatar.nativeElement.getAttribute('class')).toContain('s');
   });
 
   it('should display a large avatar', () => {
-    component.size = 'large';
+    component.size = 'l';
     const avatar = de.query(By.css('#avatar'));
 
     fixture.detectChanges();
 
-    expect(avatar.nativeElement.getAttribute('class')).toContain('large');
+    expect(avatar.nativeElement.getAttribute('class')).toContain('l');
   });
 
   it('should display a large avatar by default', () => {
@@ -98,7 +98,7 @@ describe('AvatarComponent', () => {
 
     fixture.detectChanges();
 
-    expect(avatar.nativeElement.getAttribute('class')).toContain('large');
+    expect(avatar.nativeElement.getAttribute('class')).toContain('l');
   });
 
   it('should have attribute aria-label when tooltip is provided', () => {
