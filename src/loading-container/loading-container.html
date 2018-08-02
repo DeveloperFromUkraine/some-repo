@@ -1,4 +1,4 @@
-<div *ngIf="!loading">
+<div [hidden]="loading">
     <ng-content></ng-content>
   </div>
   <div *ngIf="loading" attr.aria-label="{{spinnerAriaLabel | translateIDS}}" role="alert" tabindex="0">
