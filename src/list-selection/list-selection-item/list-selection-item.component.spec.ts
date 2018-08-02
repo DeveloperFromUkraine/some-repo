@@ -1,7 +1,7 @@
 import { ComponentTest } from '../../../test/test-bed/component';
 import { ListSelectionItemComponent } from './index';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { DebugElement, Component } from '@angular/core';
+import { Component, DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
 describe('List Selection Item', () => {
@@ -15,7 +15,6 @@ describe('List Selection Item', () => {
 
     fixture = TestBed.createComponent(ListSelectionItemComponent);
     component = fixture.componentInstance;
-
     fixture.detectChanges();
   });
 
@@ -54,6 +53,15 @@ describe('List Selection Item', () => {
     ne = de.nativeElement;
 
     expect(ne.textContent).toBe(component.title);
+  });
+
+  it('should set status', async () => {
+    component.statusText = 'custom status';
+    await fixture.detectChanges();
+    de = fixture.debugElement.query(By.css('.list-detail-status'));
+    ne = de.nativeElement;
+
+    expect(ne.textContent).toBe(component.statusText);
   });
 
   it('should not set title if not provided', () => {

@@ -17,8 +17,17 @@
 
 
 ## Implementation HTML
+    <!-- basic list item -->
     <ign-list-selection-item></ign-list-selection-item>
-
+    
+    <!-- list item with custom content -->
+    <ign-list-selection-item
+        title="Item one"
+        [subtitle]="'my subtitle'">
+        statusText="Processing">
+    </ign-list-selection-item>
+Other `@Input`s: key;
+Other `@Output`s: onClick;
 
 ## Implementation TS
     None

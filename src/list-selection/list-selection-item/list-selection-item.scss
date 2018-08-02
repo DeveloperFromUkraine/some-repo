@@ -25,8 +25,9 @@ $left-border-width: 3px;
   &:hover, &:active {
     //TODO: RGBA COLORS
     //background: rgba(0,0,0,0.015);
-    background: ign-color(light);    
+    background: ign-color(light);
   }
+  position: relative;
 }
 
 // list-detail 'active' stylings
@@ -48,7 +49,7 @@ $left-border-width: 3px;
 }
 
 .list-detail-title {
-  font-size: 16px;
+  font-size: ign-font-size('xxxxs');
   color: ign-color('black');
   opacity: 0.87;
   white-space: nowrap;
@@ -56,11 +57,11 @@ $left-border-width: 3px;
   text-overflow: ellipsis;
   max-width: 100%;
   min-width: 0;
-  line-height: 1.2;
+  line-height: ign-line-height('xxxxs');
 }
 
 .list-detail-subtitle {
-  font-size: 14px;
+  font-size: ign-font-size('xxxxs');
   margin-top: 4px;
   color: ign-color('black');
   opacity: 0.54;
@@ -69,7 +70,24 @@ $left-border-width: 3px;
   text-overflow: ellipsis;
   max-width: 100%;
   min-width: 0;
-  line-height: 1.2;
+  line-height: ign-line-height('xxxxs');
+}
+
+.list-detail-status {
+
+  font-size: ign-font-size('xxxxs');
+  color: ign-color('black');
+  opacity: 0.54;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  min-width: 0;
+  line-height: ign-line-height('xxxxs');
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0;
+  padding-right: 1rem;
 }
 
 .gray-square {
