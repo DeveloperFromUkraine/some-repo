@@ -5,6 +5,10 @@
 - Added .nvmrc file to project
 - Added a new input to `ign-selection-item` for the statusText and updated styles to use _typography.
 - Updated ignite-common version.
+- Upgraded `ignite-common` version. Updated to `"@types/node": "^6.0.114"`
+
+### v1.0.5
+- Renamed `ign-list-search` to `ign-persistent-search`, added `placeholder` input, and updated spacing between search icon and input
 
 ### v1.0.4
 - Renamed `ign-list-search` to `ign-persistent-search`, added `placeholder` input, and updated spacing between search icon and input
