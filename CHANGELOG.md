@@ -1,6 +1,6 @@
 ### vNEXT
-
--
+- Modified ign-loading-container so that its contents are hidden instead of ngIfed to prevent issues arising from creating and destroying the components inside.
+- Renamed `ign-list-search` to `ign-persistent-search`, added `placeholder` input, and updated spacing between search icon and input
 
 ### v1.0.5
 
