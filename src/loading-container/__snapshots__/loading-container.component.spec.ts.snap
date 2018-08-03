@@ -9,7 +9,14 @@ exports[`Loading Container should match snapshot 1`] = `
   spinnerAriaLabel={[Function String]}
   translatePipe={[Function TranslationPipe]}
 >
-  
+  <div
+    hidden=""
+  >
+    
+      
+    
+    
+  </div>
     <div
     aria-label="Loading"
     role="alert"
