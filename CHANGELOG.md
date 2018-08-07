@@ -1,5 +1,9 @@
 ### vNEXT
 
+-
+
+### v1.0.6
+
 - Modified ign-loading-container so that its contents are hidden instead of ngIfed to prevent issues arising from creating and destroying the components inside.
 
 ### v1.0.5
