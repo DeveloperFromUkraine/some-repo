@@ -1,9 +1,9 @@
 import { Component, Input, AfterViewInit } from '@angular/core';
 
 enum AvatarSize {
-  small = 's',
-  large = 'l',
-  medium = 'm',
+  SMALL = 's',
+  LARGE = 'l',
+  MEDIUM = 'm',
   XS = 'xs',
   S = 's',
   M = 'm',
