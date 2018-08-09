@@ -14,7 +14,7 @@
   in a future release.
 - Added support for AngularPlayground (http://www.angularplayground.it/)
 - Added .nvmrc file to project
-- Added a new input to `ign-selection-item` for the statusText and updated styles to use \_typography.
+- Added a new input to `ign-selection-item` for the statusText and updated styles to use _typography.
 - Updated ignite-common version.
 - Upgraded `ignite-common` version. Updated to `"@types/node": "^6.0.114"`
 
