@@ -2,7 +2,7 @@ import { sandboxOf } from 'angular-playground';
 import { AvatarGroupComponent } from './avatar-group.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatTooltipModule, MatIconModule } from '@angular/material';
+import { MatTooltipModule, MatIconModule, MatButtonModule } from '@angular/material';
 import { AvatarComponent } from '../avatar/avatar.component';
 
 import { RouterModule, Routes } from '@angular/router';
@@ -50,19 +50,46 @@ export default sandboxOf(AvatarGroupComponent, {
   imports: [
     MatTooltipModule,
     MatIconModule,
+    MatButtonModule,
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
   ],
   declarations: [AvatarComponent],
-}).add('Display 4 avatars in a group: 3 with images 1 with initials', {
-  template: `
+})
+  .add('Display 4 avatars in a group: 3 with images 1 with initials', {
+    template: `
     <ign-avatar-group
       [avatars]="avatars"
-      [cap]="5"
-      [counterAriaLabel]="'2 more in the org chart.'">
+      [cap]="5">
     </ign-avatar-group>
 `,
-  context: {
-    avatars,
-  },
-});
+    context: {
+      avatars,
+    },
+  })
+  .add('Display 4 avatars in a group overflowing with counter', {
+    template: `
+    <ign-avatar-group
+      [avatars]="avatars"
+      [cap]="3"
+      [counterAriaLabel]="'2 more in the org chart.'">
+    </ign-avatar-group>
+  `,
+    context: {
+      avatars,
+    },
+  })
+  .add('Display 4 avatars in a group overflowing with context', {
+    template: `
+    <ign-avatar-group
+      [avatars]="avatars"
+      [cap]="3"
+      [counterAriaLabel]="'2 more in the org chart.'"
+      [showContext]="true"
+      [viewAllAriaLabel]="'view all 5'">
+    </ign-avatar-group>
+  `,
+    context: {
+      avatars,
+    },
+  });

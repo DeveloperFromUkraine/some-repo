@@ -21,6 +21,8 @@ $dark-gray: ign-palette($ign-palette-gray, 500);
 .context__tool-all {
   padding-left: 0;
   padding-right: 0;
+  color: ign-palette($ign-palette-blue, 500);
+  font-size: ign-typography(button, font-size);
 }
 
 :host ::ng-deep #counter {
@@ -30,6 +32,7 @@ $dark-gray: ign-palette($ign-palette-gray, 500);
       font-size: ign-font-size(xxxs);
       color: $dark-gray;
       font-weight: ign-font-weight(regular);
+      padding-right: 0.125rem;
     }
   }
 
