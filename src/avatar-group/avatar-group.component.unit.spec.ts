@@ -72,6 +72,18 @@ describe('AvatarGroupComponent Unit Tests', () => {
       expect(tooltip).toBe('');
     });
 
+    it('should return nothing from getAvatarTooltip if showTooltips is false', () => {
+      component.avatars = component.sanitizeAvatars(avatars5);
+      component.showTooltips = false;
+      const avatars = component.avatars;
+      const expectedTooltips = ['', '', '', '', ''];
+
+      for (let i = 0; i < avatars.length; i++) {
+        const tooltip = component.getAvatarTooltip(avatars[i]);
+        expect(tooltip).toBe(expectedTooltips[i]);
+      }
+    });
+
     it('should return initials of name when calling getPersonInitials with avatar that has no preferredName', () => {
       const initials = component.getPersonInitials(avatarWOPreferredFN.person);
 

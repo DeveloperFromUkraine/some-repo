@@ -11,6 +11,7 @@ export class AvatarGroupComponent {
   @Input() cap = 8;
   @Input() showCounter = true;
   @Input() showContext = false;
+  @Input() showTooltips = true;
   @Input() counterOffset = 0;
   @Input() counterLink: string;
   @Input() counterAriaLabel: string;
@@ -25,6 +26,9 @@ export class AvatarGroupComponent {
   size = 'm';
 
   getAvatarTooltip(avatar: Avatar): string {
+    if (!this.showTooltips) {
+      return '';
+    }
     if (avatar.tooltip) {
       return avatar.tooltip;
     }
