@@ -4,8 +4,6 @@
 $light-gray: ign-palette($ign-palette-gray, 150);
 $dark-gray: ign-palette($ign-palette-gray, 500);
 
-$font-size-small: ign-font-size(xxxs);
-
 #avatar-group {
   display: flex;
 }
@@ -20,15 +18,28 @@ $font-size-small: ign-font-size(xxxs);
   }
 }
 
+.context__tool-all {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 :host ::ng-deep #counter {
-  .initials-container {
-    background-color: $light-gray;
+  &.counter--plus-avatar{
+    .initials {
+      background-color: $light-gray;
+      font-size: ign-font-size(xxxs);
+      color: $dark-gray;
+      font-weight: ign-font-weight(regular);
+    }
   }
 
-  .initials {
-    font-size: $font-size-small;
-    margin-left: -2px;
-    color: $dark-gray;
-    font-weight: 400;
+  &.counter--context-avatar {
+    .initials {
+      background-color: $light-gray;
+      font-size: ign-font-size(xs);
+      color: $dark-gray;
+      font-weight: ign-font-weight(heavy);
+      padding-bottom: 0.5rem;
+    }
   }
 }

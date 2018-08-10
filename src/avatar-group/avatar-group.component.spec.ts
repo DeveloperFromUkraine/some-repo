@@ -82,6 +82,78 @@ describe('AvatarGroupComponent Test Suite', () => {
     expect(ne.getAttribute('ng-reflect-router-link')).toContain('counterRedirectUrl');
   });
 
+  it('should not display context features by default', () => {
+    component.avatars = avatars4;
+    component.cap = 2;
+
+    let viewAllButton: DebugElement;
+
+    fixture.detectChanges();
+    viewAllButton = de.query(By.css('.context__tool-all'));
+
+    expect(viewAllButton).toBeNull();
+  });
+
+  it('should display context features when enabled', () => {
+    component.avatars = avatars4;
+    component.cap = 2;
+    component.showContext = true;
+
+    let viewAllButton: DebugElement;
+    let viewAllButtonEl: HTMLElement;
+
+    fixture.detectChanges();
+    viewAllButton = de.query(By.css('.context__tool-all'));
+    viewAllButtonEl = viewAllButton.nativeElement;
+
+    expect(viewAllButtonEl).toBeDefined();
+  });
+
+  it('should display context features when enabled', () => {
+    component.avatars = avatars4;
+    component.cap = 2;
+    component.showContext = true;
+
+    let viewAllButton: DebugElement;
+    let viewAllButtonEl: HTMLElement;
+
+    fixture.detectChanges();
+    viewAllButton = de.query(By.css('.context__tool-all'));
+    viewAllButtonEl = viewAllButton.nativeElement;
+
+    expect(viewAllButtonEl).toBeDefined();
+  });
+
+  it('should have view all button attribute "aria-label" set to viewAllAriaLabel', () => {
+    component.avatars = avatars4;
+    component.cap = 2;
+    component.viewAllAriaLabel = '4 More Somewhere';
+    component.showContext = true;
+    let counter: DebugElement;
+    let ne: HTMLElement;
+
+    fixture.detectChanges();
+    counter = de.query(By.css('.context__tool-all'));
+    ne = counter.nativeElement;
+
+    expect(ne.getAttribute('aria-label')).toContain('4 More Somewhere');
+  });
+
+  it('should have view all button attribute "routerLink" set to viewAllLink', () => {
+    component.avatars = avatars4;
+    component.cap = 2;
+    component.viewAllLink = 'viewAllRedirectUrl';
+    component.showContext = true;
+    let counter: DebugElement;
+    let ne: HTMLElement;
+
+    fixture.detectChanges();
+    counter = de.query(By.css('.context__tool-all'));
+    ne = counter.nativeElement;
+
+    expect(ne.getAttribute('ng-reflect-router-link')).toContain('viewAllRedirectUrl');
+  });
+
   it('should match snapshot', () => {
     expect(fixture).toMatchSnapshot();
   });

@@ -2,11 +2,16 @@
 
 exports[`AvatarGroupComponent Test Suite should match snapshot 1`] = `
 <ign-avatar-group
+  avatarClick={[Function EventEmitter]}
   cap={[Function Number]}
+  counterClick={[Function EventEmitter]}
   counterOffset="0"
+  showContext="false"
   showCounter={[Function Boolean]}
   size={[Function String]}
+  viewAllClick={[Function EventEmitter]}
 >
+  
   
 </ign-avatar-group>
 `;

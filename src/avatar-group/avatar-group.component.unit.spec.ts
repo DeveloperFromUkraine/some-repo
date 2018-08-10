@@ -19,9 +19,22 @@ describe('AvatarGroupComponent Unit Tests', () => {
     expect(component.avatars).toBeUndefined();
     expect(component.cap).toBe(8);
     expect(component.showCounter).toBeTruthy();
+    expect(component.showContext).toBeFalsy();
     expect(component.counterOffset).toBe(0);
     expect(component.counterLink).toBeUndefined();
     expect(component.counterAriaLabel).toBeUndefined();
+    expect(component.viewAllLink).toBeUndefined();
+    expect(component.viewAllAriaLabel).toBeUndefined();
+  });
+
+  it('should have defined @Output values', () => {
+    expect(component.avatarClick).toBeDefined();
+    expect(component.counterClick).toBeDefined();
+    expect(component.viewAllClick).toBeDefined();
+  });
+
+  it('should have the correct default size', () => {
+    expect(component.size).toBe('m');
   });
 
   describe('Component methods tests', () => {
@@ -80,6 +93,27 @@ describe('AvatarGroupComponent Unit Tests', () => {
       const counterValue = component.getCounterValue(component.avatars);
 
       expect(counterValue).toBe(2);
+    });
+
+    describe('Given the group shows context', () => {
+      beforeEach(() => {
+        component.showContext = true;
+      });
+
+      it('should give the ellipsis value for counter initials', () => {
+        expect(component.getCounterInitials()).toBe('...');
+      });
+    });
+
+    describe('Given the group does not show context', () => {
+      beforeEach(() => {
+        component.showContext = false;
+      });
+
+      it('should give the counter value for counter initials', () => {
+        spyOn(component, 'getCounterValue').and.returnValue(2);
+        expect(component.getCounterInitials()).toBe('+2');
+      });
     });
 
     describe('Given cap is greater than the number of avatars', () => {

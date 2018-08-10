@@ -1,27 +1,38 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Avatar, Person } from './avatar-group.types';
 
 @Component({
   selector: 'ign-avatar-group',
-  templateUrl: './avatar-group.html',
+  templateUrl: './avatar-group.component.html',
   styleUrls: ['./avatar-group.component.scss'],
 })
 export class AvatarGroupComponent {
   @Input() avatars: Avatar[];
   @Input() cap = 8;
   @Input() showCounter = true;
+  @Input() showContext = false;
   @Input() counterOffset = 0;
   @Input() counterLink: string;
   @Input() counterAriaLabel: string;
+  @Input() viewAllLink: string;
+  @Input() viewAllAriaLabel: string;
 
-  // Set size of all avatars in the group to small
-  size = 's';
+  @Output() avatarClick = new EventEmitter<Avatar>();
+  @Output() counterClick = new EventEmitter();
+  @Output() viewAllClick = new EventEmitter();
+
+  // Set size of all avatars in the group to medium
+  size = 'm';
 
   getAvatarTooltip(avatar: Avatar): string {
     if (avatar.tooltip) {
       return avatar.tooltip;
     }
     return avatar.person ? this.getPersonName(avatar.person) : '';
+  }
+
+  getCounterInitials(): string {
+    return this.showContext ? '...' : `+${this.getCounterValue(this.avatars)}`;
   }
 
   getCounterValue(avatars: Avatar[]): number {
