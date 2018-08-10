@@ -17,6 +17,7 @@ $light-gray: ign-palette($ign-palette-gray, 150);
 $dark-gray: ign-palette($ign-palette-gray, 500);
 
 .container {
+  margin: auto;
   border-radius: 50%;
   font-family: $ign-font-family;
 
