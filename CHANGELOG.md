@@ -1,5 +1,13 @@
 ### vNEXT
 
+### v1.0.8
+
+- Hotfix dealing with avatar component alignment issues and theme color changes.
+- The following components needed to use the `secondary` theme instead of `accent`:
+  - src/card/card-toolbar/card-toolbar.scss
+  - src/data-table-container/data-table-container.scss
+  - src/info-banner/info-banner.scss
+
 ### v1.0.7
 
 - Added support to medium size for avatar component

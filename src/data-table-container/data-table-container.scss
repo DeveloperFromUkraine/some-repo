@@ -37,7 +37,7 @@ $hover-color: #EEEEEE;
 }
 
 :host ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
-    background-color: ign-color(accent);
+    background-color: ign-color(secondary);
 }
 
 :host ::ng-deep .inline-edit  {
