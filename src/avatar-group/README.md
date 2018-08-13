@@ -4,7 +4,8 @@
   2. In contextual managers settings: with a view all button and ellipsis overflow that is optionally displayed.
 
 ### Tooltip
-  - Each avatar has a configurable tooltip that renders either a standardized full name (if a person is provided), or custom text (if a tooltip value is provided).
+  - *DEPRECATED* Each avatar has a configurable tooltip that renders either a standardized full name (if a person is provided), or custom text (if a tooltip value is provided).
+  - Please do not use tooltips anymore - this is no longer part of the avatar group pattern. This will be deprecated soon.
 
 ### Navigation
   - Each avatar, and the counter, can be configured to contain a url link to be navigated to on click.
@@ -55,6 +56,11 @@
     * Whether to show the avatar group in context.
     * Causes the counter (if enabled) to render horizontal ellipsis (...).
     * Renders a view all button below the avatar group.
+
+  * @Input() showTooltips: boolean
+    * Optional input. Default value is true.
+    * Whether to show tooltips for all avatars.
+    * This will be deprecated soon - the pattern no longer uses tooltips.
 
   * @Input() counterOffset: number
     * Optional input. Default value is 0.

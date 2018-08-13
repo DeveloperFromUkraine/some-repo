@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, AfterViewInit } from '@angular/core';
 import { Avatar, Person } from './avatar-group.types';
 
 @Component({
@@ -6,7 +6,7 @@ import { Avatar, Person } from './avatar-group.types';
   templateUrl: './avatar-group.component.html',
   styleUrls: ['./avatar-group.component.scss'],
 })
-export class AvatarGroupComponent {
+export class AvatarGroupComponent implements AfterViewInit {
   @Input() avatars: Avatar[];
   @Input() cap = 8;
   @Input() showCounter = true;
@@ -24,6 +24,14 @@ export class AvatarGroupComponent {
 
   // Set size of all avatars in the group to medium
   size = 'm';
+
+  ngAfterViewInit() {
+    if (this.showTooltips) {
+      console.warn(
+        `Deprecation warning: Displaying tooltips for avatar groups is no longer a pattern. This will be deprecated soon.`
+      );
+    }
+  }
 
   getAvatarTooltip(avatar: Avatar): string {
     if (!this.showTooltips) {

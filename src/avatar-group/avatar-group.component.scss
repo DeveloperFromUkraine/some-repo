@@ -21,28 +21,36 @@ $dark-gray: ign-palette($ign-palette-gray, 500);
 .context__tool-all {
   padding-left: 0;
   padding-right: 0;
-  color: ign-palette($ign-palette-blue, 500);
-  font-size: ign-typography(button, font-size);
+  color: ign-color(secondary);
+  font-size: ign-typography(button, font-size); // this size is off - doesn't match the spec, but it consumes the token??
 }
 
 :host ::ng-deep #counter {
   &.counter--plus-avatar{
-    .initials {
+    .container--initials {
       background-color: $light-gray;
+    }
+
+    .initials {
       font-size: ign-font-size(xxxs);
       color: $dark-gray;
       font-weight: ign-font-weight(regular);
-      padding-right: 0.125rem;
+      position: relative;
+      left: -0.125rem; // assumes the size stays 'm'
     }
   }
 
   &.counter--context-avatar {
-    .initials {
+    .container--initials {
       background-color: $light-gray;
+    }
+
+    .initials {
       font-size: ign-font-size(xs);
       color: $dark-gray;
       font-weight: ign-font-weight(heavy);
-      padding-bottom: 0.5rem;
+      position: relative;
+      top: -0.375rem; // assumes the size stays 'm'
     }
   }
 }
