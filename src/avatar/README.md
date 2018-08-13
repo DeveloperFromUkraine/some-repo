@@ -23,7 +23,7 @@
       * Two letters to be displayed in the lack of an avatar image.
       
     * @Input() size: string
-      * The size of the avatar. Value can be 's','l', 'xl', 'm' or 'xs'
+      * The size of the avatar. Value can be 'xs', 's', 'm', 'l', or 'xl'
 
     * @Input() tooltip: string
       * A tooltip to be displayed on mouse-over.

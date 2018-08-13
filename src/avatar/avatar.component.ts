@@ -37,4 +37,14 @@ export class AvatarComponent implements AfterViewInit {
   getSize(size = 'l'): string {
     return AvatarSize[size.toUpperCase()] || AvatarSize.L;
   }
+
+  getState(): string {
+    if (!!this.image) {
+      return 'image';
+    }
+    if (!!this.initials) {
+      return 'initials';
+    }
+    return 'icon';
+  }
 }

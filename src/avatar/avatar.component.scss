@@ -14,7 +14,14 @@
 // Colors
 $white: ign-palette($ign-palette-gray, 50);
 $light-gray: ign-palette($ign-palette-gray, 150);
-$dark-gray: ign-palette($ign-palette-gray, 500);
+
+.container--initials {
+  background-color: ign-color(dark);
+}
+
+.container--icon {
+  background-color: $light-gray;
+}
 
 .container {
   margin: auto;
@@ -28,15 +35,14 @@ $dark-gray: ign-palette($ign-palette-gray, 500);
     @extend %full-width-height;
   }
 
-  &.s {
-    width: ign-avatar-size(s);
-    height: ign-avatar-size(s);
+  &.xs {
+    width: ign-avatar-size(xs);
+    height: ign-avatar-size(xs);
 
     .initials {
       @extend %full-width-height;
       @extend %flex-centering;
 
-      background-color: ign-color(dark);
       font-size: 14px; // TODO: Discuss with design system team on achieving these sizes
       color: $white;
     }
@@ -45,8 +51,27 @@ $dark-gray: ign-palette($ign-palette-gray, 500);
       @extend %full-width-height;
       @extend %flex-centering;
 
-      font-size: ign-icon-size(s);
-      background-color: $light-gray;
+      font-size: ign-icon-size(xs);
+    }
+  }
+
+  &.s {
+    width: ign-avatar-size(s);
+    height: ign-avatar-size(s);
+
+    .initials {
+      @extend %full-width-height;
+      @extend %flex-centering;
+
+      font-size: ign-typography(caption, font-size);
+      color: $white;
+    }
+
+    .icon {
+      @extend %full-width-height;
+      @extend %flex-centering;
+
+      font-size: 14px; // TODO: Discuss with design system team on achieving these sizes
     }
   }
 
@@ -58,7 +83,6 @@ $dark-gray: ign-palette($ign-palette-gray, 500);
       @extend %full-width-height;
       @extend %flex-centering;
 
-      background-color: ign-color(dark);
       font-size: 16px; // TODO: Discuss with design system team on achieving these sizes
       color: $white;
     }
@@ -68,29 +92,6 @@ $dark-gray: ign-palette($ign-palette-gray, 500);
       @extend %flex-centering;
 
       font-size: ign-icon-size(m);
-      background-color: $light-gray;
-    }
-  }
-
-  &.xs {
-    width: ign-avatar-size(xs);
-    height: ign-avatar-size(xs);
-
-    .initials {
-      @extend %full-width-height;
-      @extend %flex-centering;
-
-      background-color: ign-color(dark);
-      font-size: ign-typography(caption, font-size);
-      color: $white;
-    }
-
-    .icon {
-      @extend %full-width-height;
-      @extend %flex-centering;
-
-      font-size: ign-icon-size(xs);
-      background-color: $light-gray;
     }
   }
 
@@ -102,7 +103,6 @@ $dark-gray: ign-palette($ign-palette-gray, 500);
       @extend %full-width-height;
       @extend %flex-centering;
 
-      background-color: ign-color(dark);
       font-size: 32px; // TODO: Discuss with design system team on achieving these sizes
       color: $white;
     }
@@ -112,7 +112,6 @@ $dark-gray: ign-palette($ign-palette-gray, 500);
       @extend %flex-centering;
 
       font-size: ign-icon-size(l);
-      background-color: $light-gray;
     }
   }
 
@@ -124,7 +123,6 @@ $dark-gray: ign-palette($ign-palette-gray, 500);
       @extend %full-width-height;
       @extend %flex-centering;
 
-      background-color: ign-color(dark);
       font-size: ign-typography(subheading-2, font-size);
       color: $white;
     }
@@ -134,7 +132,6 @@ $dark-gray: ign-palette($ign-palette-gray, 500);
       @extend %flex-centering;
 
       font-size: ign-icon-size(xl);
-      background-color: $light-gray;
     }
   }
 }
