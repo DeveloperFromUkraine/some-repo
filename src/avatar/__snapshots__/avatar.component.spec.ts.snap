@@ -4,7 +4,7 @@ exports[`AvatarComponent should match snapshot 1`] = `
 <ign-avatar>
   <div
     aria-label=""
-    class="container l"
+    class="container l container--icon"
     id="avatar"
     ng-reflect-message=""
     tabindex="-1"
