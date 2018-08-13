@@ -1,0 +1,9 @@
+@import '../src/card/card-toolbar/card-toolbar.scss';
+
+@include test-module('Is Truthy') {
+  @include test('True is truthy') {
+    @include assert-equal(_true-is-truthy(true), true);
+
+    @include assert-equal(ign-color(secondary), #0f4790);
+  }
+}
