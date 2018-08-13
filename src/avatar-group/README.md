@@ -8,7 +8,7 @@
   - Please do not use tooltips anymore - this is no longer part of the avatar group pattern. This will be deprecated soon.
 
 ### Navigation
-  - Each avatar, and the counter, can be configured to contain a url link to be navigated to on click.
+  - Each avatar, the counter, and the view all button can be configured to contain a url link to be navigated to on click.
 
 ## Settings
   - The maximum number of avatars displayed, and not displayed (the value seen in the counter), can be configured.
@@ -55,7 +55,7 @@
     * Optional input. Default value is false.
     * Whether to show the avatar group in context.
     * Causes the counter (if enabled) to render horizontal ellipsis (...).
-    * Renders a view all button below the avatar group.
+    * Renders a view all button below the avatar group IF the viewAllLink is provided.
 
   * @Input() showTooltips: boolean
     * Optional input. Default value is true.
@@ -78,7 +78,7 @@
     * Optional input.
     * The value to set the counter's attribute aria-label to.
 
-  * @Input() viewAll: string
+  * @Input() viewAllLink: string
     * Optional input.
     * When a user clicks on the view all button, the router navigates to the specified URI.
     * Use one string with a relative path. Do not use a routes parameter array.

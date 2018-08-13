@@ -94,25 +94,25 @@ describe('AvatarGroupComponent Test Suite', () => {
     expect(viewAllButton).toBeNull();
   });
 
-  it('should display context features when enabled', () => {
+  it('should not display view all button if given no link', () => {
     component.avatars = avatars4;
     component.cap = 2;
     component.showContext = true;
+    component.viewAllLink = undefined;
 
     let viewAllButton: DebugElement;
-    let viewAllButtonEl: HTMLElement;
 
     fixture.detectChanges();
     viewAllButton = de.query(By.css('.context__tool-all'));
-    viewAllButtonEl = viewAllButton.nativeElement;
 
-    expect(viewAllButtonEl).toBeDefined();
+    expect(viewAllButton).toBeNull();
   });
 
   it('should display context features when enabled', () => {
     component.avatars = avatars4;
     component.cap = 2;
     component.showContext = true;
+    component.viewAllLink = '/view/all';
 
     let viewAllButton: DebugElement;
     let viewAllButtonEl: HTMLElement;
@@ -128,6 +128,7 @@ describe('AvatarGroupComponent Test Suite', () => {
     component.avatars = avatars4;
     component.cap = 2;
     component.viewAllAriaLabel = '4 More Somewhere';
+    component.viewAllLink = '/test/route';
     component.showContext = true;
     let counter: DebugElement;
     let ne: HTMLElement;

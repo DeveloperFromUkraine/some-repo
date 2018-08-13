@@ -24,7 +24,7 @@
                 [attr.role]="counterLink ? 'link' : ''"
                 (click)="counterClick.emit()"></ign-avatar>
   </div>
-  <div *ngIf="showContext">
+  <div *ngIf="showContext && viewAllLink">
         <button mat-button
                 class="context__tool-all"
                 [routerLink]="viewAllLink ? [viewAllLink] : []"
