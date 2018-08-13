@@ -28,7 +28,8 @@ export class AvatarGroupComponent implements AfterViewInit {
   ngAfterViewInit() {
     if (this.showTooltips) {
       console.warn(
-        `Deprecation warning: Displaying tooltips for avatar groups is no longer a pattern. This will be deprecated soon.`
+        `Deprecation warning: Displaying tooltips for avatar groups is no longer a pattern. This will be deprecated soon.
+        Please be sure to remove the 'tooltip' field when consuming the Avatar type.`
       );
     }
   }
