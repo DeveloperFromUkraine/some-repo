@@ -1,5 +1,14 @@
 ### vNEXT
 
+### v1.0.9
+
+- Added new context support for avatar groups
+  - Using `showContext` will:
+     - Enable the view all button below the group if `viewAllLink` is provided
+     - Change the counter avatar from +X to (...)
+  - Using `showTooltips` will toggle displaying tooltips across all avatars. Support for showing tooltips will be dropped in a future release.
+- Exposed event emitters on avatar groups for custom hooks
+
 ### v1.0.8
 
 - Hotfix dealing with avatar component alignment issues and theme color changes.

@@ -73,6 +73,7 @@
     * Optional input.
     * When a user clicks on the counter, the router navigates to the specified URI.
     * Use one string with a relative path. Do not use a routes parameter array.
+    * Use with counterClick to subscribe to the event before navigation.
 
   * @Input() counterAriaLabel: string
     * Optional input.
@@ -82,6 +83,7 @@
     * Optional input.
     * When a user clicks on the view all button, the router navigates to the specified URI.
     * Use one string with a relative path. Do not use a routes parameter array.
+    * Use with viewAllClick to subscribe to the event before navigation.
 
   * @Input() viewAllAriaLabel: string
     * Optional input.
