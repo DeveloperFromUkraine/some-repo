@@ -11,7 +11,7 @@ enum AvatarSize {
   XL = 'xl',
 }
 
-const deprecatedSizees = ['small', 'large', 'medium'];
+const deprecatedSizes = ['small', 'large', 'medium'];
 
 @Component({
   selector: 'ign-avatar',
@@ -26,7 +26,7 @@ export class AvatarComponent implements AfterViewInit {
   @Input() ariaLabel: string;
 
   ngAfterViewInit() {
-    if (deprecatedSizees.includes(this.size)) {
+    if (deprecatedSizes.includes(this.size)) {
       console.warn(
         `Deprecation warning: Avatar sizes "small", "medium" and "large" are being removed
         in favor of "s", "m" and "l" respectively. Support for these sizes will be dropped soon.`
