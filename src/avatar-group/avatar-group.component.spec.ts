@@ -7,6 +7,7 @@ import { AvatarGroupComponent } from '../avatar-group/avatar-group.component';
 import { AvatarComponent } from '../avatar/avatar.component';
 import { ComponentTest } from '../../test/test-bed/component';
 import { avatars4 } from './avatars.mock';
+import { TranslationModule } from '../localization/translation.module';
 
 describe('AvatarGroupComponent Test Suite', () => {
   let fixture: ComponentFixture<AvatarGroupComponent>;
@@ -15,7 +16,7 @@ describe('AvatarGroupComponent Test Suite', () => {
 
   beforeEach(() => {
     ComponentTest.createTestBed(
-      [RouterTestingModule] as NgModule[],
+      [RouterTestingModule, TranslationModule] as NgModule[],
       [AvatarComponent, AvatarGroupComponent] as Component[]
     );
 
@@ -89,7 +90,7 @@ describe('AvatarGroupComponent Test Suite', () => {
     let viewAllButton: DebugElement;
 
     fixture.detectChanges();
-    viewAllButton = de.query(By.css('.context__tool-all'));
+    viewAllButton = de.query(By.css('.context__all'));
 
     expect(viewAllButton).toBeNull();
   });
@@ -103,7 +104,7 @@ describe('AvatarGroupComponent Test Suite', () => {
     let viewAllButton: DebugElement;
 
     fixture.detectChanges();
-    viewAllButton = de.query(By.css('.context__tool-all'));
+    viewAllButton = de.query(By.css('.context__all'));
 
     expect(viewAllButton).toBeNull();
   });
@@ -118,7 +119,7 @@ describe('AvatarGroupComponent Test Suite', () => {
     let viewAllButtonEl: HTMLElement;
 
     fixture.detectChanges();
-    viewAllButton = de.query(By.css('.context__tool-all'));
+    viewAllButton = de.query(By.css('.context__all'));
     viewAllButtonEl = viewAllButton.nativeElement;
 
     expect(viewAllButtonEl).toBeDefined();
@@ -134,7 +135,7 @@ describe('AvatarGroupComponent Test Suite', () => {
     let ne: HTMLElement;
 
     fixture.detectChanges();
-    counter = de.query(By.css('.context__tool-all'));
+    counter = de.query(By.css('.context__all'));
     ne = counter.nativeElement;
 
     expect(ne.getAttribute('aria-label')).toContain('4 More Somewhere');
@@ -149,7 +150,7 @@ describe('AvatarGroupComponent Test Suite', () => {
     let ne: HTMLElement;
 
     fixture.detectChanges();
-    counter = de.query(By.css('.context__tool-all'));
+    counter = de.query(By.css('.context__all'));
     ne = counter.nativeElement;
 
     expect(ne.getAttribute('ng-reflect-router-link')).toContain('viewAllRedirectUrl');
