@@ -11,4 +11,5 @@ export const TranslationMap = {
   LOADING: 'Loading',
   SEARCH: 'Search',
   START_DATE_TYPEAHEAD: 'Start Date (Typeahead entries appear in dropdown)',
+  VIEW_ALL: 'VIEW ALL',
 };

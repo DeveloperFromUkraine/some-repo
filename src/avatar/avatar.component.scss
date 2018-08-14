@@ -43,7 +43,7 @@ $light-gray: ign-palette($ign-palette-gray, 150);
       @extend %full-width-height;
       @extend %flex-centering;
 
-      font-size: 14px; // TODO: Discuss with design system team on achieving these sizes
+      font-size: ign-typography(caption, font-size);
       color: $white;
     }
 
@@ -63,7 +63,7 @@ $light-gray: ign-palette($ign-palette-gray, 150);
       @extend %full-width-height;
       @extend %flex-centering;
 
-      font-size: ign-typography(caption, font-size);
+      font-size: 14px; // TODO: Discuss with design system team on achieving these sizes
       color: $white;
     }
 
@@ -71,7 +71,7 @@ $light-gray: ign-palette($ign-palette-gray, 150);
       @extend %full-width-height;
       @extend %flex-centering;
 
-      font-size: 14px; // TODO: Discuss with design system team on achieving these sizes
+      font-size: ign-icon-size(s);
     }
   }
 

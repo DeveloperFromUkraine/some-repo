@@ -8,6 +8,7 @@ import { AvatarComponent } from '../avatar/avatar.component';
 import { RouterModule, Routes } from '@angular/router';
 
 import { Avatar } from './avatar-group.types';
+import { TranslationModule } from '../localization/translation.module';
 
 const appRoutes: Routes = [{ path: 'UI/part1/Details', component: AvatarComponent }];
 
@@ -53,6 +54,7 @@ export default sandboxOf(AvatarGroupComponent, {
     MatButtonModule,
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
+    TranslationModule,
   ],
   declarations: [AvatarComponent],
 })
@@ -86,7 +88,8 @@ export default sandboxOf(AvatarGroupComponent, {
       [cap]="3"
       [counterAriaLabel]="'2 more in the org chart.'"
       [showContext]="true"
-      [viewAllAriaLabel]="'view all 5'">
+      [viewAllAriaLabel]="'view all 5'"
+      [viewAllLink]="'#'">
     </ign-avatar-group>
   `,
     context: {

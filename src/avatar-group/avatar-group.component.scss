@@ -18,15 +18,17 @@ $dark-gray: ign-palette($ign-palette-gray, 500);
   }
 }
 
-.context__tool-all {
+.context__all {
   padding-left: 0;
   padding-right: 0;
   color: ign-color(secondary);
-  font-size: ign-typography(button, font-size); // this size is off - doesn't match the spec, but it consumes the token??
+  font-size: 0.875rem; // TODO: the typography font-size for button doesn't match spec, neither do raw tokens
+  font-family: $ign-font-family;
+  font-weight: 500; // TODO: the typography font-weight for buttons doesn't match spec, neither do raw tokens
 }
 
 :host ::ng-deep #counter {
-  &.counter--plus-avatar{
+  &.counter--plus {
     .container--initials {
       background-color: $light-gray;
     }
@@ -40,7 +42,7 @@ $dark-gray: ign-palette($ign-palette-gray, 500);
     }
   }
 
-  &.counter--context-avatar {
+  &.counter--context {
     .container--initials {
       background-color: $light-gray;
     }

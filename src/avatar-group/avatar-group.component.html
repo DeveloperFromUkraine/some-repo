@@ -14,7 +14,7 @@
                 (click)="avatarClick.emit(avatar)"></ign-avatar>
     <ign-avatar *ngIf="showCounter && getCounterValue(avatars) > 0"
                 id="counter"
-                [class]="'avatar-group ' + (showContext ? 'counter--context-avatar' : 'counter--plus-avatar')"
+                [class]="'avatar-group ' + (showContext ? 'counter--context' : 'counter--plus')"
                 matListAvatar
                 [initials]="getCounterInitials()"
                 [size]="size"
@@ -26,11 +26,11 @@
   </div>
   <div *ngIf="showContext && viewAllLink">
         <button mat-button
-                class="context__tool-all"
+                class="context__all"
                 [routerLink]="viewAllLink ? [viewAllLink] : []"
                 attr.aria-label="{{ viewAllAriaLabel }}"
                 (click)="viewAllClick.emit()">
-                VIEW ALL ({{ this.getCounterValue(avatars) + this.cap }})
+                {{'VIEW_ALL' | translateIDS}} ({{ this.getCounterValue(avatars) + this.cap }})
         </button>
   </div>
 </div>
