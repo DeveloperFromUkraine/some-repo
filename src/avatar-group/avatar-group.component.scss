@@ -24,7 +24,8 @@ $dark-gray: ign-palette($ign-palette-gray, 500);
   color: ign-color(secondary);
   font-size: 0.875rem; // TODO: the typography font-size for button doesn't match spec, neither do raw tokens
   font-family: $ign-font-family;
-  font-weight: 500; // TODO: the typography font-weight for buttons doesn't match spec, neither do raw tokens
+  font-weight: 400; // TODO: the typography font-weight for buttons doesn't match spec
+  text-transform: uppercase;
 }
 
 :host ::ng-deep #counter {
