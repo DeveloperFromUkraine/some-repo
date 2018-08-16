@@ -1,27 +1,51 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter, AfterViewInit } from '@angular/core';
 import { Avatar, Person } from './avatar-group.types';
 
 @Component({
   selector: 'ign-avatar-group',
-  templateUrl: './avatar-group.html',
+  templateUrl: './avatar-group.component.html',
   styleUrls: ['./avatar-group.component.scss'],
 })
-export class AvatarGroupComponent {
+export class AvatarGroupComponent implements AfterViewInit {
   @Input() avatars: Avatar[];
   @Input() cap = 8;
   @Input() showCounter = true;
+  @Input() showContext = false;
+  @Input() showTooltips = true;
   @Input() counterOffset = 0;
   @Input() counterLink: string;
   @Input() counterAriaLabel: string;
+  @Input() viewAllLink: string;
+  @Input() viewAllAriaLabel: string;
 
-  // Set size of all avatars in the group to small
-  size = 's';
+  @Output() avatarClick = new EventEmitter<Avatar>();
+  @Output() counterClick = new EventEmitter();
+  @Output() viewAllClick = new EventEmitter();
+
+  // Set size of all avatars in the group to medium
+  size = 'm';
+
+  ngAfterViewInit() {
+    if (this.showTooltips) {
+      console.warn(
+        `Deprecation warning: Displaying tooltips for avatar groups is no longer a pattern. This will be deprecated soon.
+        Please be sure to remove the 'tooltip' field when consuming the Avatar type.`
+      );
+    }
+  }
 
   getAvatarTooltip(avatar: Avatar): string {
+    if (!this.showTooltips) {
+      return '';
+    }
     if (avatar.tooltip) {
       return avatar.tooltip;
     }
     return avatar.person ? this.getPersonName(avatar.person) : '';
+  }
+
+  getCounterInitials(): string {
+    return this.showContext ? '...' : `+${this.getCounterValue(this.avatars)}`;
   }
 
   getCounterValue(avatars: Avatar[]): number {

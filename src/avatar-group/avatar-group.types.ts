@@ -2,7 +2,7 @@ export interface Avatar {
   person?: Person;
   image?: string;
   link?: string;
-  tooltip?: string;
+  tooltip?: string; // remember to deprecate this field when deprecating tooltips altogether
 }
 
 export type Person = {

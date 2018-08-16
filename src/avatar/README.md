@@ -1,6 +1,8 @@
 ## Use
   An avatar displays an image, two letter initials (in the lack of an image), or the [person Material icon](https://material.io/icons/#ic_person) (in the lack of the previous two).
 
+  If both initials and an image are provided, the image takes priority in display state.
+
   ### Sizing
   -The avatar can be rendered in two sizes, small (40px in diameter) or large (70px in diameter).
 
@@ -23,7 +25,7 @@
       * Two letters to be displayed in the lack of an avatar image.
       
     * @Input() size: string
-      * The size of the avatar. Value can be 's','l', 'xl', 'm' or 'xs'
+      * The size of the avatar. Value can be 'xs', 's', 'm', 'l', or 'xl'
 
     * @Input() tooltip: string
       * A tooltip to be displayed on mouse-over.
