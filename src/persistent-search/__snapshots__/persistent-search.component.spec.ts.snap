@@ -18,7 +18,6 @@ exports[`Persistent Search Component Should match snapshot 1`] = `
     
     
     <input
-      da="searchBarInput"
       matinput=""
       placeholder="Search"
     />
