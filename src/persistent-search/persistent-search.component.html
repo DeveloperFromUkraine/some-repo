@@ -6,6 +6,7 @@
     matInput
     placeholder="{{placeholder | translateIDS}}"
     #searchInput
+    [attr.da]="searchBarInput"
     (keyup.escape)="searchInput.value=''; emitSearchEvents()"
     (keyup)="emitSearchEvents()">
   <button
