@@ -1,5 +1,9 @@
 ### vNEXT
 
+### v1.0.10
+
+- Added da attribute to `ign-persistent-search` input
+
 ### v1.0.9
 
 - Added new context support for avatar groups
@@ -8,7 +12,6 @@
      - Change the counter avatar from +X to (...)
   - Using `showTooltips` will toggle displaying tooltips across all avatars. Support for showing tooltips will be dropped in a future release.
 - Exposed event emitters on avatar groups for custom hooks
-- Added da attribute to `ign-persistent-search` input
 
 ### v1.0.8
 
