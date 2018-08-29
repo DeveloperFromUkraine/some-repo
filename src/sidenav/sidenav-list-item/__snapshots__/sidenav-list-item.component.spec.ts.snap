@@ -12,12 +12,16 @@ exports[`Side Nav List Item should match snapshot 1`] = `
   >
     
     
+    
     <i
       aria-hidden="true"
       class="material-icons app-link-icon"
     >
       mail
     </i>
+    
+    
+    
     
     
     <div
