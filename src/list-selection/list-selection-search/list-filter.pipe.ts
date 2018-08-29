@@ -1,8 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/combineLatest';
-import 'rxjs/add/operator/startWith';
-import 'rxjs/add/operator/map';
+import { combineLatest, Observable } from 'rxjs';
+import { startWith, map } from 'rxjs/operators';
 
 export interface IFilterProvider {
   readonly filterInput$: Observable<string>;
@@ -16,9 +14,9 @@ export class ListFilterPipe implements PipeTransform {
     filterProvider: IFilterProvider,
     matchFn: (searchTerm: string, value: T) => boolean
   ): any {
-    return Observable.combineLatest(
-      values$.startWith([]),
-      filterProvider.filterInput$.startWith('')
-    ).map(([values, searchTerm]) => values.filter(value => matchFn(searchTerm, value)));
+    return combineLatest(
+      values$.pipe(startWith([])),
+      filterProvider.filterInput$.pipe(startWith(''))
+    ).pipe(map(([values, searchTerm]) => values.filter(value => matchFn(searchTerm, value))));
   }
 }

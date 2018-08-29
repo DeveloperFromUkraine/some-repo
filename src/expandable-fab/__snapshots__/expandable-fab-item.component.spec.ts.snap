@@ -11,26 +11,15 @@ exports[`Expandable Fab Item should match snapshot 1`] = `
     class="mat-tooltip fab-tooltip"
   >
     toolTip
-  </span>
-  <a
+  </span><a
     href="updatedHref"
     igna11yclick=""
     mat-fab=""
     role="menuitem"
   >
-    
-    
     <mat-icon>
-      
-      email
-    
+       email 
     </mat-icon>
-    
-  
   </a>
-  
-  
-  
-  
 </ign-expandable-fab-item>
 `;

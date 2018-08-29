@@ -1,8 +1,9 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
-import { Observable, BehaviorSubject, Subject } from 'rxjs/Rx';
+import { combineLatest, EMPTY, Observable, BehaviorSubject, Subject } from 'rxjs';
 import { Logger } from '../logging/logger.service';
 import { ActivatedRoute } from '@angular/router';
 import { GraphQLErrorResponse } from './types/graphql-error';
+import { catchError, map, take, takeUntil } from 'rxjs/operators';
 
 /**
  * Represents a message in the {MessagesComponent}.
@@ -55,14 +56,14 @@ export class MessagesComponent implements OnInit, OnDestroy {
 
   constructor(logger: Logger, route: ActivatedRoute) {
     this.log = logger.named('MESSAGES');
-    this.hasErrors$ = this.errors$.map(errors => errors && errors.length > 0);
-    this.routeArgs$ = Observable.combineLatest(route.params, route.queryParams);
+    this.hasErrors$ = this.errors$.pipe(map(errors => errors && errors.length > 0));
+    this.routeArgs$ = combineLatest(route.params, route.queryParams);
     this.handleFetchErrors = this.handleFetchErrors.bind(this);
   }
 
   ngOnInit(): void {
     // Clear error log on route changes
-    this.routeArgs$.takeUntil(this.destroyed$).subscribe(() => this.clear());
+    this.routeArgs$.pipe(takeUntil(this.destroyed$)).subscribe(() => this.clear());
   }
 
   ngOnDestroy(): void {
@@ -102,11 +103,13 @@ export class MessagesComponent implements OnInit, OnDestroy {
    * return {Observable<any | any>} An observable with the error handling logic.
    */
   handleFetchErrors(observable: Observable<any>) {
-    return observable.catch((err, caught) => {
-      this.log.error(`Error on load`, caught);
-      this.reportErrors(err);
-      return Observable.empty();
-    });
+    return observable.pipe(
+      catchError((err, caught) => {
+        this.log.error(`Error on load`, caught);
+        this.reportErrors(err);
+        return EMPTY;
+      })
+    );
   }
 
   /**
@@ -119,7 +122,9 @@ export class MessagesComponent implements OnInit, OnDestroy {
     try {
       this.clear();
       this.log.trace(`Handling errors in promise or observable`, promise);
-      await Promise.resolve(promise instanceof Observable ? promise.take(1).toPromise() : promise);
+      await Promise.resolve(
+        promise instanceof Observable ? promise.pipe(take(1)).toPromise() : promise
+      );
     } catch (err) {
       this.reportErrors(err);
     }

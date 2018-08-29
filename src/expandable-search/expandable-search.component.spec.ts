@@ -61,11 +61,7 @@ describe('Expandable Search', () => {
         expect(icon).not.toBeNull();
       });
       describe('On click', () => {
-        let inputDE: DebugElement;
-        let inputNE: HTMLElement;
         beforeEach(() => {
-          inputDE = fixture.debugElement.query(By.css('input'));
-          inputNE = inputDE.nativeElement;
           component.searchInput.nativeElement.value = 'Emp';
 
           ne.click();

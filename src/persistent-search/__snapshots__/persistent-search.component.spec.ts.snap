@@ -11,22 +11,14 @@ exports[`Persistent Search Component Should match snapshot 1`] = `
     class="search-icon"
   >
     search
-  </mat-icon>
-  <mat-form-field
+  </mat-icon><mat-form-field
     floatplaceholder="never"
   >
-    
-    
     <input
       matinput=""
       placeholder="Search"
     />
     
-    
-    
-    
-  
   </mat-form-field>
-  
 </ign-persistent-search>
 `;

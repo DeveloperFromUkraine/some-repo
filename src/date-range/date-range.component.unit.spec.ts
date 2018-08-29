@@ -1,5 +1,5 @@
 import { DateRangeComponent } from './date-range.component';
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
 describe('Date Range', () => {

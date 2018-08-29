@@ -3,8 +3,6 @@
 exports[`Text List Item should match snapshot 1`] = `
 <ign-text-list-item>
   <mat-list-item>
-    
-      
     <h3
       class="primary-text"
       matline=""
@@ -12,13 +10,7 @@ exports[`Text List Item should match snapshot 1`] = `
       
     </h3>
     
-      
     
-    
-      
-    
-    
-  
   </mat-list-item>
 </ign-text-list-item>
 `;

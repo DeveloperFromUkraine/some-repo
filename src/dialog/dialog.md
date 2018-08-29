@@ -231,5 +231,5 @@ export class DemoDialogComponentDialogBackground {}
 
 *** Imports ***
 import { MatDialog } from '@angular/material';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { DemoDialogAcceptCancelComponent } from './demo-dialog-accept-cancel.component';

@@ -4,11 +4,6 @@ exports[`Error Banner should match snapshot 1`] = `
 <ign-error-banner>
   <p
     aria-live="assertive"
-  >
-    
-    
-    
-  
-  </p>
+  />
 </ign-error-banner>
 `;

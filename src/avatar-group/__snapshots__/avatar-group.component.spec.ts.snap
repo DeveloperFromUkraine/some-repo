@@ -13,6 +13,5 @@ exports[`AvatarGroupComponent Test Suite should match snapshot 1`] = `
   viewAllClick={[Function EventEmitter]}
 >
   
-  
 </ign-avatar-group>
 `;

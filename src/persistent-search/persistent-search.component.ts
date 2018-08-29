@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, Output, ViewChild, ChangeDetectorRef } from '@angular/core';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { BehaviorSubject } from 'rxjs';
 import { TranslationPipe } from '../localization/translation.pipe';
 
 @Component({

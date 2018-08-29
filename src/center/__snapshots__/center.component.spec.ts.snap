@@ -2,12 +2,6 @@
 
 exports[`Center should match snapshot 1`] = `
 <ign-center>
-  <div>
-    
-    
-    
-  
-  </div>
-  
+  <div />
 </ign-center>
 `;

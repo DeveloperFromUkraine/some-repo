@@ -9,30 +9,22 @@ exports[`Date Range should match snapshot 1`] = `
   startPickerInput={[Function MatDatepickerInput]}
 >
   <form>
-    
-    
     <div
       id="dateRange"
     >
-      
-      
       <mat-form-field
         role="group"
       >
-        
-        
         <input
           aria-describedby="dateRange"
           matinput=""
         />
-        
-  
-        
         <mat-datepicker-toggle
           class="mat-datepicker-toggle"
           matsuffix=""
         >
           <button
+            aria-haspopup="true"
             class="mat-icon-button"
             mat-icon-button=""
             type="button"
@@ -51,30 +43,21 @@ exports[`Date Range should match snapshot 1`] = `
             />
           </button>
         </mat-datepicker-toggle>
-        
-        
         <mat-datepicker />
-        
-      
       </mat-form-field>
-      
-      
       <mat-form-field
         role="group"
       >
-        
-        
         <input
           aria-describedby="dateRange"
           matinput=""
         />
-        
-        
         <mat-datepicker-toggle
           class="mat-datepicker-toggle"
           matsuffix=""
         >
           <button
+            aria-haspopup="true"
             class="mat-icon-button"
             mat-icon-button=""
             type="button"
@@ -93,17 +76,9 @@ exports[`Date Range should match snapshot 1`] = `
             />
           </button>
         </mat-datepicker-toggle>
-        
-        
         <mat-datepicker />
-        
-      
       </mat-form-field>
-      
-    
     </div>
-    
-  
   </form>
 </ign-date-range>
 `;

@@ -4,11 +4,6 @@ exports[`Card Section should match snapshot 1`] = `
 <ign-card-section>
   <div
     class="card-section"
-  >
-    
-    
-    
-  
-  </div>
+  />
 </ign-card-section>
 `;

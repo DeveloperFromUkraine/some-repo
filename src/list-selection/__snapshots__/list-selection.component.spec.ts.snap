@@ -4,12 +4,6 @@ exports[`List Selection should match snapshot 1`] = `
 <ign-list-selection>
   <div
     class="container"
-  >
-    
-    
-    
-  
-  </div>
-  
+  />
 </ign-list-selection>
 `;

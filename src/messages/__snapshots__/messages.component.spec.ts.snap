@@ -10,7 +10,5 @@ exports[`Messages should match snapshot 1`] = `
   routeArgs$={[Function Observable]}
 >
   
-      
-    
 </ign-messages>
 `;

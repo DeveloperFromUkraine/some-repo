@@ -8,42 +8,29 @@ exports[`EditableFieldComponent should match snapshot 1`] = `
   label={[Function String]}
   onIconClick={[Function EventEmitter]}
 >
-  
-      <div
+  <div
     class="label-container"
   >
-    
-        
     <div
       class="value flex-lable-value"
       id="editable-value"
       tabindex="0"
     />
-    
-        
     <button
       aria-describedby="editable-value"
       aria-label="Edit"
       class="mat-icon-button"
       mat-icon-button=""
     >
-      
-          
       <mat-icon>
         mode_edit
       </mat-icon>
-      
-        
     </button>
-    
-      
-  </div>
-      <div
+  </div><div
     class="label"
   >
     label!
   </div>
-    
 </ign-editable-field>
 `;
 
@@ -55,49 +42,31 @@ exports[`EditableFieldInlineComponent should match snapshot 1`] = `
   label={[Function String]}
   onIconClick={[Function EventEmitter]}
 >
-  
-      <div
+  <div
     class="label-container"
   >
-    
-        
     <div
       class="value flex-lable-value"
       id="editable-value"
       tabindex="0"
     >
-      
-          
       <span
         class="label"
       >
         label!
       </span>
-      
-          
-      
-        
     </div>
-    
-        
     <button
       aria-describedby="editable-value"
       aria-label="Edit"
       class="mat-icon-button"
       mat-icon-button=""
     >
-      
-          
       <mat-icon>
         mode_edit
       </mat-icon>
-      
-        
     </button>
-    
-      
   </div>
-    
 </ign-editable-field-inline>
 `;
 
@@ -105,22 +74,14 @@ exports[`Field should match snapshot 1`] = `
 <ign-field
   label={[Function String]}
 >
-  
-      <div
+  <div
     class="value"
     da="fieldValue"
-  >
-    
-        
-    
-      
-  </div>
-      <div
+  /><div
     class="label"
   >
     label!
   </div>
-    
 </ign-field>
 `;
 
@@ -128,23 +89,15 @@ exports[`FieldInlineComponent should match snapshot 1`] = `
 <ign-field-inline
   label={[Function String]}
 >
-  
-      <div
+  <div
     class="value"
     da="fieldValue"
   >
-    
-        
     <span
       class="label"
     >
       label!
     </span>
-    
-        
-    
-      
   </div>
-    
 </ign-field-inline>
 `;

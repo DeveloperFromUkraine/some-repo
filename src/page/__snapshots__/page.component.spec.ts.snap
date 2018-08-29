@@ -3,7 +3,5 @@
 exports[`Page should match snapshot 1`] = `
 <ign-page>
   
-      
-    
 </ign-page>
 `;

@@ -6,8 +6,6 @@ exports[`Data Table Container should match snapshot 1`] = `
   paginator={[Function MatPaginator]}
   paginatorEvents$={[Function BehaviorSubject]}
 >
-  
-  
   <mat-paginator
     class="mat-paginator"
     ng-reflect-page-size="10"
@@ -27,17 +25,18 @@ exports[`Data Table Container should match snapshot 1`] = `
         </div>
         
         <mat-form-field
-          class="mat-paginator-page-size-select mat-input-container mat-form-field ng-tns-c37-0 mat-primary mat-form-field-type-mat-select mat-form-field-can-float mat-form-field-hide-placeholder ng-star-inserted"
+          class="mat-paginator-page-size-select mat-form-field ng-tns-c37-0 mat-primary mat-form-field-type-mat-select mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-hide-placeholder _mat-animation-noopable ng-star-inserted"
         >
           <div
-            class="mat-input-wrapper mat-form-field-wrapper"
+            class="mat-form-field-wrapper"
           >
             <div
-              class="mat-input-flex mat-form-field-flex"
+              class="mat-form-field-flex"
             >
               
+              
               <div
-                class="mat-input-infix mat-form-field-infix"
+                class="mat-form-field-infix"
               >
                 <mat-select
                   aria-disabled="false"
@@ -80,33 +79,34 @@ exports[`Data Table Container should match snapshot 1`] = `
                   
                 </mat-select>
                 <span
-                  class="mat-form-field-label-wrapper mat-input-placeholder-wrapper mat-form-field-placeholder-wrapper"
+                  class="mat-form-field-label-wrapper"
                 >
                   
                 </span>
               </div>
               
             </div>
+            
             <div
-              class="mat-input-underline mat-form-field-underline"
+              class="mat-form-field-underline ng-tns-c37-0 ng-star-inserted"
             >
               <span
-                class="mat-input-ripple mat-form-field-ripple"
+                class="mat-form-field-ripple"
               />
             </div>
             <div
-              class="mat-input-subscript-wrapper mat-form-field-subscript-wrapper"
+              class="mat-form-field-subscript-wrapper"
               ng-reflect-ng-switch="hint"
             >
               
               
               <div
-                class="mat-input-hint-wrapper mat-form-field-hint-wrapper ng-tns-c37-0 ng-trigger ng-trigger-transitionMessages ng-star-inserted"
-                style="opacity: 1; transform: translateY(0%);"
+                class="mat-form-field-hint-wrapper ng-tns-c37-0 ng-trigger ng-trigger-transitionMessages ng-star-inserted"
+                style="opacity:1;transform:translateY(0%);0:opacity;1:transform;"
               >
                 
                 <div
-                  class="mat-input-hint-spacer mat-form-field-hint-spacer"
+                  class="mat-form-field-hint-spacer"
                 />
               </div>
             </div>
@@ -127,7 +127,7 @@ exports[`Data Table Container should match snapshot 1`] = `
           aria-describedby="cdk-describedby-message-12"
           aria-label="Previous page"
           cdk-describedby-host=""
-          class="mat-paginator-navigation-previous mat-icon-button"
+          class="mat-paginator-navigation-previous mat-icon-button _mat-animation-noopable"
           disabled=""
           mat-icon-button=""
           ng-reflect-disabled="true"
@@ -163,7 +163,7 @@ exports[`Data Table Container should match snapshot 1`] = `
           aria-describedby="cdk-describedby-message-13"
           aria-label="Next page"
           cdk-describedby-host=""
-          class="mat-paginator-navigation-next mat-icon-button"
+          class="mat-paginator-navigation-next mat-icon-button _mat-animation-noopable"
           disabled=""
           mat-icon-button=""
           ng-reflect-disabled="true"
@@ -199,6 +199,5 @@ exports[`Data Table Container should match snapshot 1`] = `
       </div>
     </div>
   </mat-paginator>
-  
 </ign-data-table-container>
 `;
