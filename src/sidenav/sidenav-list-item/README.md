@@ -20,6 +20,8 @@
     ### Properties
         * @Input() icon: string;
             * icon file to display
+        * @Input() svgIcon: string;
+            * alternative way to pass an icon when it is being loaded from an SVG file
         * @Input() description: string;
             * description of side nav list item
         * @Input() key: string;

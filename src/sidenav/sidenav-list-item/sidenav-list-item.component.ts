@@ -16,6 +16,7 @@ import {
 })
 export class SideNavListItemComponent {
   @Input() icon: string;
+  @Input() svgIcon: string;
   @Input() description: string;
   @Input() key: string;
   @Output() onClick: EventEmitter<string> = new EventEmitter();
