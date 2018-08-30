@@ -1,5 +1,10 @@
 ### vNEXT
 
+### v1.0.11
+
+- Fixed bug which caused scroll-bar to blink at side of `loading-container`
+- Added `svgIcon` input to `ign--sidenav-list-item`, which allows for non-material icons to be used in the left-hand nav.
+
 ### v1.0.10
 
 - Added da attribute to `ign-persistent-search` input

@@ -10,6 +10,14 @@
 
 .app-link-icon {
   color: ign-palette($ign-palette-gray, 200);
+  fill: ign-palette($ign-palette-gray, 200);
+  svg {
+    fill: ign-palette($ign-palette-gray, 200);
+    path {
+      all: inherit;
+    }
+  }
+
   font-size: 24px;
 }
 
@@ -20,6 +28,19 @@
 
 :host(.active) ::ng-deep i {
   color: ign-color(brand);
+}
+
+:host(.active) {
+  .app-link-icon {
+    color: ign-color(brand);
+    fill: ign-color(brand);
+    svg {
+      fill: ign-color(brand);
+      path {
+        all: inherit;
+      }
+    }
+  }
 }
 
 :host {
