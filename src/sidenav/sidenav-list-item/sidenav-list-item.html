@@ -3,6 +3,6 @@
   class="app-link"
 >
   <i *ngIf="!svgIcon" class="material-icons app-link-icon" aria-hidden="true">{{ icon }}</i>
-  <mat-icon *ngIf="svgIcon" class="material-icons app-link-icon" [svgIcon]="svgIcon"></mat-icon>
+  <mat-icon *ngIf="svgIcon" class="material-icons app-link-icon" [svgIcon]="svgIcon" aria-hidden="true"></mat-icon>
   <div class="app-link-text">{{ description }}</div>
 </a>
