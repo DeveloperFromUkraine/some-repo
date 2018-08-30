@@ -15,7 +15,6 @@ export class LoadingContainerComponent implements OnInit {
   spinnerAriaLabel: string;
   pastDelay: boolean;
   private delay: number;
-  private delayTimeout: any;
   translatePipe: TranslationPipe;
 
   constructor(changeRef: ChangeDetectorRef) {
@@ -30,7 +29,7 @@ export class LoadingContainerComponent implements OnInit {
     if (this.ariaLabel) {
       this.spinnerAriaLabel = this.ariaLabel;
     }
-    this.delayTimeout = setTimeout(() => {
+    setTimeout(() => {
       this.pastDelay = true;
     }, this.delay);
   }

@@ -12,29 +12,17 @@ exports[`Expandable Search Should match snapshot 1`] = `
     mat-icon-button=""
   >
     
-    
-    
     <mat-icon
       da="searchIcon"
     >
-      
-      search
-    
+       search 
     </mat-icon>
     
-    
-    
-    
-  
-  </button>
-  
-  <mat-form-field
+  </button><mat-form-field
     class="expanded-search-inactive"
     floatlabel="never"
     ng-reflect-ng-class="[object Object]"
   >
-    
-    
     <input
       matinput=""
       placeholder="Search"
@@ -42,11 +30,6 @@ exports[`Expandable Search Should match snapshot 1`] = `
       value=""
     />
     
-    
-    
-    
-  
   </mat-form-field>
-  
 </ign-expandable-search>
 `;

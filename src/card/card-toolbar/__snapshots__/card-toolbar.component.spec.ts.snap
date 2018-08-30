@@ -4,15 +4,8 @@ exports[`Card Toolbar should match snapshot 1`] = `
 <ign-card-toolbar
   role={[Function String]}
 >
-  
   <div
     class="right-actions"
-  >
-    
-    
-    
-  
-  </div>
-  
+  />
 </ign-card-toolbar>
 `;

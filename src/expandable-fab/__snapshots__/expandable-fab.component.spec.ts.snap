@@ -2,18 +2,13 @@
 
 exports[`Expandable Fab should match snapshot 1`] = `
 <ng-component>
-  
-    <ign-expandable-fab>
+  <ign-expandable-fab>
     <div
       class="buttons-container active"
       ng-reflect-klass="buttons-container"
       ng-reflect-ng-class="[object Object]"
       role="menu"
     >
-      
-      
-      
-      
       
       <ign-expandable-fab-item
         icon="add"
@@ -25,42 +20,22 @@ exports[`Expandable Fab should match snapshot 1`] = `
           
         </span>
         
-  
-        
         <a
           igna11yclick=""
           mat-fab=""
           role="menuitem"
         >
-          
-    
           <mat-icon>
-            
-      add
-    
+             add 
           </mat-icon>
-          
-  
         </a>
         
-  
-  
-        
-        
-  
-  
       </ign-expandable-fab-item>
-      
-    
-      
-      
       
       <div
         class="main-button-container"
         da="mainButton"
       >
-        
-        
         <a
           aria-expanded="true"
           aria-haspopup="true"
@@ -71,37 +46,23 @@ exports[`Expandable Fab should match snapshot 1`] = `
           mat-fab=""
           role="button"
         >
-          
-          
           <mat-icon
             class="icon icon-secondary icon-secondary-active"
             ng-reflect-klass="icon icon-secondary"
             ng-reflect-ng-class="[object Object]"
             style="position:absolute"
           >
-            
-            clear
-          
+             clear 
           </mat-icon>
-          
-          
           <mat-icon
             class="icon icon-primary icon-primary-active"
             ng-reflect-klass="icon icon-primary"
             ng-reflect-ng-class="[object Object]"
           >
-            
-            add
-          
+             add 
           </mat-icon>
-          
-        
         </a>
-        
-      
       </div>
-      
-  
     </div>
   </ign-expandable-fab>
 </ng-component>

@@ -15,7 +15,6 @@ class DirectiveHostComponent {}
 describe('Accessible Click', () => {
   let fixture: ComponentFixture<DirectiveHostComponent>;
   let de: DebugElement[];
-  let ne: HTMLElement;
   let directive: AccessibleClickDirective;
 
   beforeEach(() => {
@@ -26,7 +25,6 @@ describe('Accessible Click', () => {
 
     fixture = TestBed.createComponent(DirectiveHostComponent);
     de = fixture.debugElement.queryAll(By.css('.directive'));
-    ne = de[0].nativeElement;
 
     fixture.detectChanges();
   });

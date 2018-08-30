@@ -3,7 +3,6 @@
 exports[`Loading Container should match snapshot 1`] = `
 <ign-loading-container
   delay={[Function Number]}
-  delayTimeout={[Function Number]}
   loading={[Function Boolean]}
   pastDelay="false"
   spinnerAriaLabel={[Function String]}
@@ -11,22 +10,12 @@ exports[`Loading Container should match snapshot 1`] = `
 >
   <div
     hidden=""
-  >
-    
-      
-    
-    
-  </div>
-    <div
+  /><div
     aria-label="Loading"
     role="alert"
     tabindex="0"
   >
     
-      
-    
-    
-  
   </div>
 </ign-loading-container>
 `;

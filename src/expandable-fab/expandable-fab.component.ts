@@ -9,9 +9,9 @@ import {
   ChangeDetectorRef,
 } from '@angular/core';
 import { ExpandableFabItemComponent } from './expandable-fab-item.component';
-import { Observable, Subject } from 'rxjs';
-import 'rxjs/add/observable/merge';
+import { merge, Subject } from 'rxjs';
 import { TranslationPipe } from '../localization/translation.pipe';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'ign-expandable-fab',
@@ -40,8 +40,8 @@ export class ExpandableFabComponent implements AfterContentInit, OnChanges, OnDe
 
   ngAfterContentInit() {
     const outputs = this.btns.map(button => button.clicked);
-    Observable.merge(...outputs)
-      .takeUntil(this.unSubscribe$)
+    merge(...outputs)
+      .pipe(takeUntil(this.unSubscribe$))
       .subscribe(_ => this.handleClick());
   }
 

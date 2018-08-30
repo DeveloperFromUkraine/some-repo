@@ -9,13 +9,10 @@ exports[`List Content should match snapshot 1`] = `
     target="_self"
   >
     
-  </a>
-  
-  <div
+  </a><div
     id="list-content-skip"
     role="main"
     tabindex="-1"
   />
-  
 </ign-list-content>
 `;

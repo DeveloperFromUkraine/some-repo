@@ -8,11 +8,8 @@ import {
 } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { MatDatepickerInput, MatDatepickerInputEvent } from '@angular/material';
-import 'rxjs/util/pipe';
-import { combineLatest } from 'rxjs/observable/combineLatest';
-import { of as observableOf } from 'rxjs/observable/of';
+import { combineLatest, of as observableOf, Subject } from 'rxjs';
 import { startWith, switchMap, pairwise, takeUntil } from 'rxjs/operators';
-import { Subject } from 'rxjs/Subject';
 
 @Component({
   selector: 'ign-date-range',

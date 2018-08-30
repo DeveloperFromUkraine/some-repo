@@ -5,16 +5,9 @@ exports[`List Selection Add Button should match snapshot 1`] = `
   <a
     mat-fab=""
   >
-    
-    
     <mat-icon>
-      
-      add
-    
+       add 
     </mat-icon>
-    
-  
   </a>
-  
 </ign-list-selection-add-button>
 `;

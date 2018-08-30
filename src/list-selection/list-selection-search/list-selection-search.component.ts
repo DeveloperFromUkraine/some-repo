@@ -1,7 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/util/pipe';
+import { Observable } from 'rxjs';
 import { map, distinctUntilChanged, skipWhile, share } from 'rxjs/operators';
 import { IFilterProvider } from './list-filter.pipe';
 

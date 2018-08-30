@@ -1,5 +1,9 @@
 ### vNEXT
 
+### v2.0.0
+
+- Upgraded component library to Angular/RxJS 6
+
 ### v1.0.11
 
 - Fixed bug which caused scroll-bar to blink at side of `loading-container`
