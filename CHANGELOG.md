@@ -1,5 +1,9 @@
 ### vNEXT
 
+### v2.0.1
+
+- Bugfix for persistent search da attribute
+
 ### v2.0.0
 
 - Upgraded component library to Angular/RxJS 6
