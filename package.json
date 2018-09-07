@@ -76,7 +76,7 @@
     "url": "http://devgit.dev.us.corp:7990/projects/NUI/repos/ignite-design-system/issues"
   },
   "peerDependencies": {
-    "ignite-common": "^0.13.9",
+    "ignite-common": "^0.13.12",
     "ngx-currency": "^1.4.0",
     "zone.js": "^0.8.4"
   },
