@@ -1,5 +1,9 @@
 ### vNEXT
 
+### v2.0.2
+
+- Bugfix for Angular Material: deprecated attributes for input and form fields
+
 ### v2.0.1
 
 - Bugfix for persistent search da attribute
