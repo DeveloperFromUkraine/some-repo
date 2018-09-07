@@ -4,6 +4,7 @@
 
 - Updated all direct palette selections
 - Update verison of ignite-common to v0.13.12
+- Added currencyMask from ngx-currency
 
 ### v2.0.2
 
