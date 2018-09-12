@@ -2,6 +2,7 @@
 
 exports[`Expandable Search Should match snapshot 1`] = `
 <ign-expandable-search
+  focusOnSearchExpanded={[Function Boolean]}
   searchCriteria$={[Function BehaviorSubject]}
   searchExpanded="false"
   searchInput={[Function ElementRef]}
