@@ -28,6 +28,8 @@ A search component which displays a search icon, which, when clicked, expands to
 ## Content
 * `@Output() searchCriteria$: BehaviorSubject`
     * Outputs search values for consumers to subscribe to
+* `@Input() focusOnSearchExpanded: boolean`
+    * Whether to set the focus on the search input or not (defaults to true)
 
 
 ## Style
