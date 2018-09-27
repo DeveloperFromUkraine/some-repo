@@ -3692,9 +3692,9 @@ iferr@^0.1.5:
   version "0.1.5"
   resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/iferr/-/iferr-0.1.5.tgz#c60eed69e6d8fdb6b3104a1fcbca1c192dc5b501"
 
-ignite-common@^0.13.9:
-  version "0.13.9"
-  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ignite-common/-/ignite-common-0.13.9.tgz#26338a6858613d409aadcac949527118ee932e39"
+ignite-common@^0.13.12:
+  version "0.13.12"
+  resolved "https://artifactory.mia.ulti.io:443/artifactory/api/npm/npm/ignite-common/-/ignite-common-0.13.12.tgz#872c5cf06b6b6fe904ae9118008f18dd880ebea5"
 
 ignore-walk@^3.0.1:
   version "3.0.1"
