@@ -1,5 +1,9 @@
 ### vNEXT
 
+### v2.0.3
+
+- Updated all direct palette selections
+
 ### v2.0.2
 
 - Bugfix for Angular Material: deprecated attributes for input and form fields
