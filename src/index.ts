@@ -296,10 +296,7 @@ const currencyConfig = {
     DataTableContainerComponent,
     NgxCurrencyModule,
   ],
-  providers: [
-    TranslationService,
-    CurrencyPipe,
-  ],
+  providers: [TranslationService, CurrencyPipe],
 })
 export class IgniteDesignSystemModule {
   static updateTranslation(translationKey: string, translationValue: string) {
