@@ -1,5 +1,10 @@
 ### vNEXT
 
+### v2.0.3
+
+- Updated all direct palette selections
+- Update verison of ignite-common to v0.13.12
+
 ### v2.0.2
 
 - Bugfix for Angular Material: deprecated attributes for input and form fields

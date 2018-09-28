@@ -12,8 +12,8 @@
 }
 
 // Colors
-$white: ign-palette($ign-palette-gray, 50);
-$light-gray: ign-palette($ign-palette-gray, 150);
+$white: ign-color('white');
+$light-gray: ign-palette($ign-palette-gray, 200);
 
 .container--initials {
   background-color: ign-color(dark);

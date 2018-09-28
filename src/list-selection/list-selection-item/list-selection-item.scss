@@ -14,7 +14,7 @@ $left-border-width: 3px;
   border-left: $left-border-width solid ign-color('transparent');
   //TODO: RGBA COLORS
   //border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid ign-palette($ign-palette-gray, 150);
+  border-bottom: 1px solid ign-palette($ign-palette-gray, 200);
   height: 72px;
 
   font-size: 18px;

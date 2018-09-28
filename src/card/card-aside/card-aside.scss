@@ -10,7 +10,7 @@ $mq-xxl: 'only screen and (min-width: 1440px)';
   flex: 2;
   padding: 48px 48px;
   background-color: ign-color(light);
-  border-left: 5px solid ign-palette($ign-palette-gray, 150);
+  border-left: 5px solid ign-palette($ign-palette-gray, 200);
 
   @media #{$mq-md-and-lower} {
     display: none;
