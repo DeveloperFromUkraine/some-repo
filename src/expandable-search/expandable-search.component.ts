@@ -1,4 +1,4 @@
-import { Component, ElementRef, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, Output, Input, ViewChild } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
@@ -10,6 +10,7 @@ export class ExpandableSearchComponent {
   @ViewChild('searchInput') searchInput: ElementRef;
 
   @Output() searchCriteria$ = new BehaviorSubject<any>({});
+  @Input() focusOnSearchExpanded = true;
   searchExpanded = false;
 
   emitSearchEvents() {
@@ -25,6 +26,9 @@ export class ExpandableSearchComponent {
       this.emitSearchEvents();
     } else {
       this.searchExpanded = true;
+      if (this.focusOnSearchExpanded) {
+        this.searchInput.nativeElement.focus();
+      }
     }
   }
 }

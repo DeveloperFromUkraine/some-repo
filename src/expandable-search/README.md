@@ -15,6 +15,8 @@ to exit search and a button within the input field to clear search text.
     * Child of the search input
   * `@Output() searchCriteria$: BehaviorSubject<any>`
     * Outputs search values for consumers to subscribe to 
+  * `@Input() focusOnSearchExpanded: boolean`
+    * Whether to set the focus on the search input or not (defaults to true)
 
 ## Implementation HTML
   <ign-expandable-search></ign-expandable-search>
