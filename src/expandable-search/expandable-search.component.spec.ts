@@ -37,12 +37,14 @@ describe('Expandable Search', () => {
       expect(icon).not.toBeNull();
     });
     it('Should expand search on click', () => {
+      jest.spyOn(component.searchInput.nativeElement, 'focus');
       ne.click();
       fixture.detectChanges();
       icon = fixture.debugElement.query(By.css('[da=searchIcon]'));
 
       expect(icon).toBeNull();
       expect(component.searchExpanded).toBe(true);
+      expect(component.searchInput.nativeElement.focus).toHaveBeenCalledTimes(1);
     });
   });
   describe('When search is expanded', () => {
