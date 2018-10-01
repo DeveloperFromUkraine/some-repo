@@ -5,6 +5,7 @@
 - Updated all direct palette selections
 - Update verison of ignite-common to v0.13.12
 - Updated `ign-expandable-search` to allow focus on search expand (default true)
+- Added currencyMask from ngx-currency
 
 ### v2.0.2
 

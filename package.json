@@ -75,9 +75,9 @@
   "bugs": {
     "url": "http://devgit.dev.us.corp:7990/projects/NUI/repos/ignite-design-system/issues"
   },
-  "dependencies": {},
   "peerDependencies": {
-    "ignite-common": "^0.13.9",
+    "ignite-common": "^0.13.12",
+    "ngx-currency": "^1.4.0",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
@@ -112,6 +112,7 @@
     "jest-preset-angular": "^2.0.2",
     "marked": "^0.3.7",
     "ng-packagr": "^2.4.0",
+    "ngx-currency": "^1.5.0",
     "prettier": "^1.12.1",
     "raw-loader": "^0.5.1",
     "rxjs": "^6.0.0",
