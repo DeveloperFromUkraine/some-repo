@@ -9,6 +9,7 @@
     "package": "tar cvf $npm_package_name-$npm_package_version.tgz manifest-* Staticfile dist",
     "sonar": "echo Publishing to sonar for branch: $SONARQUBE_BRANCH && sonarqube-scanner-node -Dsonar.branch=$SONARQUBE_BRANCH",
     "lint": "tslint --project tsconfig.json src/**/*.ts && ng lint",
+    "lint:scss": "stylelint \"src/**/**.scss\"",
     "prettier": "prettier --single-quote --trailing-comma es5 --print-width 100 --write 'src/**/*.{js,ts}' --list-different",
     "precommit": "npm run prettier && npm run lint",
     "test": "jest --coverage --json --outputFile=test/jest-output.json",
@@ -19,9 +20,8 @@
     "push-coverage": "echo 'starting coverage push...' && curl -X POST https://playground-service.apps.mia.ulti.io/v1/coverage -d @coverage/coverage-summary.json --header 'Content-Type: application/json'",
     "push-jest-build": "echo 'starting jest build push...' && curl -X POST https://playground-service.apps.mia.ulti.io/v1/jestoutput -d @test/jest-output.json --header 'Content-Type: application/json'",
     "push-to-playground-service": "npm run push-coverage && npm run push-jest-build",
-    "playground": "angular-playground",
-    "playground:build": "angular-playground --build",
-    "update-snapshots": "jest --updateSnapshot"
+    "update-snapshots": "jest --updateSnapshot",
+    "playground": "angular-playground"
   },
   "jest": {
     "preset": "jest-preset-angular",
@@ -100,14 +100,12 @@
     "@compodoc/compodoc": "^1.0.0-beta.10",
     "@types/googlemaps": "^3.29.2",
     "@types/jest": "^19.2.3",
-    "@types/node": "^6.0.114",
-    "angular-playground": "^4.0.0",
     "chokidar-cli": "^1.2.0",
     "codelyzer": "^4.0.2",
     "core-js": "^2.4.1",
     "extract-text-webpack-plugin": "^2.1.2",
     "husky": "^0.14.3",
-    "ignite-common": "^0.13.12",
+    "ignite-common": "^0.14.1",
     "jest": "^22.0.0",
     "jest-preset-angular": "^2.0.2",
     "marked": "^0.3.7",
@@ -120,10 +118,16 @@
     "ts-node": "~2.0.0",
     "tslint": "^5.8.0",
     "typescript": "2.9.2",
-    "webpack": "^2.5.1",
+    "webpack": "^4.20.2",
+    "webpack-dev-server": "^3.1.9",
     "zone.js": "^0.8.26"
   },
   "engines": {
     "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "angular-playground": "^5.1.3",
+    "stylelint": "^9.6.0",
+    "stylelint-declaration-strict-value": "^1.0.4"
   }
 }
