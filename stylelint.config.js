@@ -26,7 +26,7 @@
  * The above rule will prevent ign-palette from being used directly with a property
  * but will not produce a warning if it's stored in a variable:
  *
- *      $light-gray: ign-palette($ign-palette-gray, 200);
+ *      Example: $light-gray: ign-palette($ign-palette-gray, 200);
  *
  * Will the above is still discouraged, it is the recommended approach if forced to use a
  * palette color directly.

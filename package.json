@@ -76,7 +76,7 @@
     "url": "http://devgit.dev.us.corp:7990/projects/NUI/repos/ignite-design-system/issues"
   },
   "peerDependencies": {
-    "ignite-common": "^0.13.12",
+    "ignite-common": "^0.14.1",
     "ngx-currency": "^1.4.0",
     "zone.js": "^0.8.4"
   },
@@ -120,14 +120,12 @@
     "typescript": "2.9.2",
     "webpack": "^4.20.2",
     "webpack-dev-server": "^3.1.9",
-    "zone.js": "^0.8.26"
-  },
-  "engines": {
-    "node": ">=8.0.0"
-  },
-  "dependencies": {
+    "zone.js": "^0.8.26",
     "angular-playground": "^5.1.3",
     "stylelint": "^9.6.0",
     "stylelint-declaration-strict-value": "^1.0.4"
+  },
+  "engines": {
+    "node": ">=8.0.0"
   }
 }
