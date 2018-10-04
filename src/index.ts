@@ -172,6 +172,28 @@ import {
 
 import { NgxCurrencyModule } from 'ngx-currency';
 
+const currencyConfig = {
+  align: 'right',
+  allowNegative: true,
+  allowZero: true,
+  decimal: new CurrencyPipe(navigator.languages ? navigator.languages[0] : navigator.language)
+    .transform(1000, undefined, undefined, '4.1-1')
+    .split('000')[0]
+    .substr(-1, 1),
+  precision: 2,
+  prefix: '',
+  suffix: '',
+  thousands: new CurrencyPipe(navigator.languages ? navigator.languages[0] : navigator.language)
+    .transform(1000, undefined, undefined, '4.1-1')
+    .split('000')[1]
+    .substr(0, 1),
+  nullable: false,
+};
+
+export const NgxCurrencyModuleForRoot: ModuleWithProviders = NgxCurrencyModule.forRoot(
+  currencyConfig
+);
+
 const components = [
   CardHeaderContainerComponent,
   CardSubtitleComponent,
@@ -243,24 +265,6 @@ const components = [
   MessagesComponent,
 ];
 
-const currencyConfig = {
-  align: 'right',
-  allowNegative: true,
-  allowZero: true,
-  decimal: new CurrencyPipe(navigator.languages ? navigator.languages[0] : navigator.language)
-    .transform(1000, undefined, undefined, '4.1-1')
-    .split('000')[0]
-    .substr(-1, 1),
-  precision: 2,
-  prefix: '',
-  suffix: '',
-  thousands: new CurrencyPipe(navigator.languages ? navigator.languages[0] : navigator.language)
-    .transform(1000, undefined, undefined, '4.1-1')
-    .split('000')[1]
-    .substr(0, 1),
-  nullable: false,
-};
-
 @NgModule({
   imports: [
     CommonModule,
@@ -285,7 +289,7 @@ const currencyConfig = {
     TranslationModule,
     MatSidenavModule,
     LoggerModule,
-    NgxCurrencyModule.forRoot(currencyConfig),
+    NgxCurrencyModuleForRoot,
   ],
   declarations: components,
   exports: [

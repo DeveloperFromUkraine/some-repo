@@ -3,9 +3,11 @@
 ### v2.0.3
 
 - Updated all direct palette selections
-- Update verison of ignite-common to v0.13.12
+- Update verison of ignite-common to v0.14.1
 - Updated `ign-expandable-search` to allow focus on search expand (default true)
 - Added currencyMask from ngx-currency
+- Updated `angular-playground` to latest version
+- Addded stylelint 
 
 ### v2.0.2
 
