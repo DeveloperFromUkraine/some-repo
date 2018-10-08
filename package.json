@@ -14,7 +14,7 @@
     "precommit": "npm run prettier && npm run lint",
     "test": "jest --coverage --json --outputFile=test/jest-output.json",
     "test:watch": "jest --watch",
-    "test:ci": "jest --runInBand --coverage --json --outputFile=test/jest-output.json && npm run push-to-playground-service && npm run sonar",
+    "test:ci": "jest --runInBand --coverage --json --outputFile=test/jest-output.json && npm run push-to-playground-service",
     "ci:test": "npm run test:ci",
     "ci:package": "npm run build && npm prune --production && npm run package",
     "push-coverage": "echo 'starting coverage push...' && curl -X POST https://playground-service.apps.mia.ulti.io/v1/coverage -d @coverage/coverage-summary.json --header 'Content-Type: application/json'",
