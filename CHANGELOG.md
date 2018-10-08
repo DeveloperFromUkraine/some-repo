@@ -1,5 +1,9 @@
 ### vNEXT
 
+### v2.0.4
+
+  - Update `ign-sidenav-list-item` to use darker shades of grey due to color palette update
+
 ### v2.0.3
 
 - Updated all direct palette selections
@@ -7,7 +11,7 @@
 - Updated `ign-expandable-search` to allow focus on search expand (default true)
 - Added currencyMask from ngx-currency
 - Updated `angular-playground` to latest version
-- Addded stylelint 
+- Addded stylelint
 
 ### v2.0.2
 
