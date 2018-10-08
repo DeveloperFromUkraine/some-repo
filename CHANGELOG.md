@@ -1,5 +1,9 @@
 ### vNEXT
 
+### v2.0.5
+
+ - Temporarily removed the ngx-currency integration until it is updated
+
 ### v2.0.4
 
   - Update `ign-sidenav-list-item` to use darker shades of grey due to color palette update
