@@ -170,7 +170,8 @@ import {
   MatSidenavModule,
 } from '@angular/material';
 
-import { NgxCurrencyModule } from 'ngx-currency';
+// import { NgxCurrencyModule } from 'ngx-currency';
+// import { CURRENCY_MASK_CONFIG } from 'ngx-currency/src/currency-mask.config';
 
 const currencyConfig = {
   align: 'right',
@@ -190,9 +191,15 @@ const currencyConfig = {
   nullable: false,
 };
 
-export const NgxCurrencyModuleForRoot: ModuleWithProviders = NgxCurrencyModule.forRoot(
-  currencyConfig
-);
+// export const NgxCurrencyModuleForRoot: ModuleWithProviders = {
+//   ngModule: NgxCurrencyModule,
+//   providers: [
+//     {
+//       provide: CURRENCY_MASK_CONFIG,
+//       useFactory: () => currencyConfig,
+//     },
+//   ],
+// };
 
 const components = [
   CardHeaderContainerComponent,
@@ -289,7 +296,7 @@ const components = [
     TranslationModule,
     MatSidenavModule,
     LoggerModule,
-    NgxCurrencyModuleForRoot,
+    // NgxCurrencyModuleForRoot,
   ],
   declarations: components,
   exports: [
@@ -298,7 +305,7 @@ const components = [
     ExpandableFabItemComponent,
     TextListItemComponent,
     DataTableContainerComponent,
-    NgxCurrencyModule,
+    // NgxCurrencyModule,
   ],
   providers: [TranslationService, CurrencyPipe],
 })
