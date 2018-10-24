@@ -26,6 +26,7 @@
   </div>
   <div *ngIf="showContext && viewAllLink">
         <button mat-button
+                color="secondary"
                 class="context__all"
                 [routerLink]="viewAllLink ? [viewAllLink] : []"
                 attr.aria-label="{{ viewAllAriaLabel }}"
