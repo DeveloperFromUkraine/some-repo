@@ -10,6 +10,7 @@
     (keyup.escape)="searchInput.value=''; emitSearchEvents()"
     (keyup)="emitSearchEvents()">
   <button
+    type="button"
     *ngIf="searchInput.value"
     attr.aria-label="{{'CLEAR' | translateIDS}}"
     mat-icon-button
