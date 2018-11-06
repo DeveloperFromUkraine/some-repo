@@ -23,6 +23,7 @@
     (keyup)="emitSearchEvents()">
   <button
     *ngIf="searchInput.value"
+    type="button"
     (click)="searchInput.value=''; emitSearchEvents()"
     mat-icon-button
     matSuffix
