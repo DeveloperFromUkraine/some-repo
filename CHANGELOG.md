@@ -1,5 +1,11 @@
 ### vNEXT
 
+### v2.0.6
+
+- Added type button to the submit buttons in persistent-search and expandable-search
+- Added sandboxes for avatar and avatar-group
+- Added global style.scss for sandboxes to use
+
 ### v2.0.5
 
  - Temporarily removed the ngx-currency integration until it is updated
