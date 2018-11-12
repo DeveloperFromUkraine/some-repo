@@ -1,0 +1,81 @@
+:host {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+
+.buttons-container ::ng-deep > * {
+  margin-bottom: 8px;
+}
+
+.buttons-container {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.active ::ng-deep > ign-expandable-fab-item {
+  transform: none;
+  opacity: 1;
+}
+
+.active ::ng-deep > *:nth-last-child(1) {
+  -webkit-transition-delay: 25ms;
+          transition-delay: 25ms;
+}
+
+.active ::ng-deep > *:nth-last-child(2) {
+  -webkit-transition-delay: 50ms;
+          transition-delay: 30ms;
+}
+
+.active ::ng-deep > *:nth-last-child(3) {
+  -webkit-transition-delay: 75ms;
+          transition-delay: 40ms;
+}
+
+.active ::ng-deep > *:nth-last-child(4) {
+  -webkit-transition-delay: 100ms;
+          transition-delay: 50ms;
+}
+
+
+.active ::ng-deep > *:nth-last-child(5) {
+  -webkit-transition-delay: 125ms;
+          transition-delay: 60ms;
+}
+
+.icon-container {
+  -webkit-transform: scale(1) rotate(360deg);
+  transform: scale(1) rotate(360deg);
+  -webkit-transition: -webkit-transform 150ms cubic-bezier(.4, 0, 1, 1);
+  transition: transform 150ms cubic-bezier(.4, 0, 1, 1);
+}
+
+.icon {
+  -webkit-transition: all .2s cubic-bezier(.4, 0, .2, 1);
+  transition: all .2s cubic-bezier(.4, 0, .2, 1);
+  position: relative;
+  display: inline-block;
+}
+
+.icon-primary {
+  position: relative;
+  display: inline-block;
+  opacity: 1;
+}
+
+.icon-primary-active {  
+  opacity: 0;
+  visibility: visible;
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.icon-secondary {
+  opacity: 0;
+}
+
+.icon-secondary-active {
+  opacity: 1;
+}

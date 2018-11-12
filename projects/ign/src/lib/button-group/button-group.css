@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;  
+}
+
+:host /deep/ button:not(:first-child) {
+  margin-left: 16px;
+}

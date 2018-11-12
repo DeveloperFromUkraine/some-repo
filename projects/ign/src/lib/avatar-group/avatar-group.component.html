@@ -1,0 +1,37 @@
+<div *ngIf="avatars?.length">
+  <div id="avatar-group"
+       fxLayout="row"
+       tabindex="-1">
+    <ign-avatar *ngFor="let avatar of sanitizeAvatars(avatars).slice(0, cap); let i = index"
+                class="avatar avatar-group"
+                matListAvatar
+                [tooltip]="getAvatarTooltip(avatar)"
+                [image]="avatar.image || ''"
+                [initials]="avatar.person ? getPersonInitials(avatar.person) : ''"
+                [size]="size"
+                [routerLink]="avatar.link ? [avatar.link] : []"
+                tabindex="-1"
+                (click)="avatarClick.emit(avatar)"></ign-avatar>
+    <ign-avatar *ngIf="showCounter && getCounterValue(avatars) > 0"
+                id="counter"
+                [class]="'avatar-group ' + (showContext ? 'counter--context' : 'counter--plus')"
+                matListAvatar
+                [initials]="getCounterInitials()"
+                [size]="size"
+                [routerLink]="counterLink ? [counterLink] : []"
+                [ariaLabel]="counterAriaLabel || ' '"
+                tabindex="-1"
+                [attr.role]="counterLink ? 'link' : ''"
+                (click)="counterClick.emit()"></ign-avatar>
+  </div>
+  <div *ngIf="showContext && viewAllLink">
+        <button mat-button
+                color="secondary"
+                class="context__all"
+                [routerLink]="viewAllLink ? [viewAllLink] : []"
+                attr.aria-label="{{ viewAllAriaLabel }}"
+                (click)="viewAllClick.emit()">
+                {{'VIEW_ALL' | translateIDS}} ({{ this.getCounterValue(avatars) + this.cap }})
+        </button>
+  </div>
+</div>

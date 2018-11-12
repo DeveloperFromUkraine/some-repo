@@ -1,0 +1,16 @@
+<div id="avatar"
+     [class]="'container ' + getSize(size) + ' container--' + getState()"
+     matTooltip="{{ tooltip }}"
+     attr.aria-label="{{ tooltip || ariaLabel }}"
+     tabindex="{{ (!!tooltip || !!ariaLabel) ? 0 : -1 }}">
+      <img *ngIf="getState() === 'image'"
+           [src]="image"
+           class="image"
+           alt="">
+      <span *ngIf="getState() === 'initials'"
+            class="initials"
+            aria-hidden="true">{{ initials }}</span>
+      <mat-icon *ngIf="getState() === 'icon'"
+            class="icon"
+            aria-hidden="true">person</mat-icon>
+</div>
