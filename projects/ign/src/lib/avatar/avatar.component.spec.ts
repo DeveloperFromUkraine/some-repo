@@ -1,29 +1,53 @@
-import { DebugElement, Component, NgModule } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatTooltipModule } from '@angular/material';
+import { DebugElement, Component, Input } from '@angular/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
-import { ComponentTest } from '../../test/test-bed/component';
 import { AvatarComponent } from './avatar.component';
+import { MatTooltipModule, MatIconModule } from '@angular/material';
+
+@Component({
+  selector: 'host-comp',
+  template: `
+    <ign-avatar
+      [image]="image"
+      [initials]="initials"
+      [size]="size"
+      [tooltip]="tooltip"
+      [ariaLabel]="ariaLabel"
+    >
+    </ign-avatar>
+  `
+}) class HostComponent {
+  @Input() image: string;
+  @Input() initials: string;
+  @Input() size: string;
+  @Input() tooltip: string;
+  @Input() ariaLabel: string;
+}
 
 describe('AvatarComponent', () => {
-  let fixture: ComponentFixture<AvatarComponent>;
-  let component: AvatarComponent;
+  let comp: HostComponent;
+  let fixture: ComponentFixture<HostComponent>;
   let de: DebugElement;
 
-  beforeEach(() => {
-    ComponentTest.createTestBed([MatTooltipModule] as NgModule[], [AvatarComponent] as Component[]);
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [ MatIconModule, MatTooltipModule ],
+      declarations: [ AvatarComponent, HostComponent ]
+    })
+    .compileComponents();
+  }));
 
-    fixture = TestBed.createComponent(AvatarComponent);
-    component = fixture.componentInstance;
+  beforeEach(() => {
+    fixture = TestBed.createComponent(HostComponent);
+    comp = fixture.componentInstance;
     de = fixture.debugElement;
 
     fixture.detectChanges();
   });
 
   it('should display image', () => {
-    component.image = 'someImgUrl';
-    component.initials = 'FL';
+    comp.image = 'someImgUrl';
 
     fixture.detectChanges();
 
@@ -34,8 +58,8 @@ describe('AvatarComponent', () => {
   });
 
   it('should display initials', () => {
-    component.image = '';
-    component.initials = 'FL';
+    comp.image = '';
+    comp.initials = 'FL';
 
     fixture.detectChanges();
 
@@ -46,8 +70,8 @@ describe('AvatarComponent', () => {
   });
 
   it('should display person icon', () => {
-    component.image = '';
-    component.initials = '';
+    comp.image = '';
+    comp.initials = '';
     const avatarDiv = de.query(By.css('#avatar'));
     const avatarImg = de.query(By.css('.image'));
     const avatarInitials = de.query(By.css('.initials'));
@@ -62,10 +86,10 @@ describe('AvatarComponent', () => {
   });
 
   it('should display a tooltip', () => {
-    component.image = '';
-    component.initials = 'FL';
-    component.size = 's';
-    component.tooltip = 'Tooltip';
+    comp.image = '';
+    comp.initials = 'FL';
+    comp.size = 's';
+    comp.tooltip = 'Tooltip';
     const tooltip = de.query(By.css('#avatar'));
     const ne: HTMLElement = tooltip.nativeElement;
 
@@ -75,7 +99,7 @@ describe('AvatarComponent', () => {
   });
 
   it('should display a small avatar', () => {
-    component.size = 's';
+    comp.size = 's';
     const avatar = de.query(By.css('#avatar'));
 
     fixture.detectChanges();
@@ -84,7 +108,7 @@ describe('AvatarComponent', () => {
   });
 
   it('should display a large avatar', () => {
-    component.size = 'l';
+    comp.size = 'l';
     const avatar = de.query(By.css('#avatar'));
 
     fixture.detectChanges();
@@ -93,7 +117,7 @@ describe('AvatarComponent', () => {
   });
 
   it('should display a large avatar by default', () => {
-    component.size = 'invalidSize';
+    comp.size = 'invalidSize';
     const avatar = de.query(By.css('#avatar'));
 
     fixture.detectChanges();
@@ -102,7 +126,7 @@ describe('AvatarComponent', () => {
   });
 
   it('should have attribute aria-label when tooltip is provided', () => {
-    component.tooltip = 'Tooltip';
+    comp.tooltip = 'Tooltip';
     const avatar = de.query(By.css('#avatar'));
 
     fixture.detectChanges();
@@ -111,7 +135,7 @@ describe('AvatarComponent', () => {
   });
 
   it('should have attribute aria-label when aria-label is provided', () => {
-    component.ariaLabel = 'Aria Label';
+    comp.ariaLabel = 'Aria Label';
     const avatar = de.query(By.css('#avatar'));
 
     fixture.detectChanges();
@@ -120,8 +144,8 @@ describe('AvatarComponent', () => {
   });
 
   it('should have attribute aria-label set to tooltip when both tooltip and ariaLabel are provided', () => {
-    component.tooltip = 'Tooltip';
-    component.ariaLabel = 'Aria Label';
+    comp.tooltip = 'Tooltip';
+    comp.ariaLabel = 'Aria Label';
     const avatar = de.query(By.css('#avatar'));
 
     fixture.detectChanges();
@@ -138,7 +162,7 @@ describe('AvatarComponent', () => {
   });
 
   it('should have tabindex set to 0 when @Input tooltip is provided', () => {
-    component.tooltip = 'Tooltip';
+    comp.tooltip = 'Tooltip';
     const avatar = de.query(By.css('#avatar'));
 
     fixture.detectChanges();
@@ -147,7 +171,7 @@ describe('AvatarComponent', () => {
   });
 
   it('should have tabindex set to 0 when @Input ariaLabel is provided', () => {
-    component.ariaLabel = 'Aria label';
+    comp.ariaLabel = 'Aria label';
     const avatar = de.query(By.css('#avatar'));
 
     fixture.detectChanges();
@@ -156,7 +180,7 @@ describe('AvatarComponent', () => {
   });
 
   it('should have tabindex set to 0 when @Input ariaLabel is provided', () => {
-    component.ariaLabel = 'Aria label';
+    comp.ariaLabel = 'Aria label';
     const avatar = de.query(By.css('#avatar'));
 
     fixture.detectChanges();

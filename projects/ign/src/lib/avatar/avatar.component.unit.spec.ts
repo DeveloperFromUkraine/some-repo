@@ -1,23 +1,24 @@
 import { AvatarComponent } from './avatar.component';
 
 describe('AvatarComponent Unit Tests', () => {
-  let component: AvatarComponent;
+  let comp: AvatarComponent;
 
   beforeEach(() => {
-    component = new AvatarComponent();
+    comp = new AvatarComponent();
   });
 
   it('should have correct @Input default values', () => {
-    expect(component.image).toBeUndefined();
-    expect(component.initials).toBeUndefined();
-    expect(component.size).toBeUndefined();
-    expect(component.tooltip).toBeUndefined();
-    expect(component.ariaLabel).toBeUndefined();
+    expect(comp.image).toBeUndefined();
+    expect(comp.initials).toBeUndefined();
+    expect(comp.size).toBeUndefined();
+    expect(comp.tooltip).toBeUndefined();
+    expect(comp.ariaLabel).toBeUndefined();
   });
 
   describe('Component methods tests', () => {
     it('default to a large avatar size', () => {
-      expect(component.getSize()).toBe('l');
+      comp.setAvatarSize();
+      expect(comp.avatarSize).toBe('l');
     });
 
     it('select the correct size modifiers', () => {
@@ -26,40 +27,44 @@ describe('AvatarComponent Unit Tests', () => {
       const expectedOutputs = ['s', 'm', 'l', 'xs', 's', 'm', 'l', 'xl'];
 
       for (let i = 0; i < sizeInputs.length; i++) {
-        expect(component.getSize(sizeInputs[i])).toBe(expectedOutputs[i]);
+        comp.setAvatarSize(sizeInputs[i])
+        expect(comp.avatarSize).toBe(expectedOutputs[i]);
       }
     });
 
     describe('Given an image', () => {
       beforeEach(() => {
-        component.image = 'image.png';
+        comp.image = 'image.png';
       });
 
       it('should select the image state', () => {
-        component.initials = 'AW';
-        expect(component.getState()).toBe('image');
+        comp.initials = 'AW';
+        comp.setState();
+        expect(comp.state).toBe('image');
       });
     });
 
     describe('Given no image and some initials', () => {
       beforeEach(() => {
-        component.image = undefined;
-        component.initials = 'AW';
+        comp.image = undefined;
+        comp.initials = 'AW';
       });
 
       it('should select the initials state', () => {
-        expect(component.getState()).toBe('initials');
+        comp.setState();
+        expect(comp.state).toBe('initials');
       });
     });
 
     describe('Given no image and no initials', () => {
       beforeEach(() => {
-        component.image = undefined;
-        component.initials = undefined;
+        comp.image = undefined;
+        comp.initials = undefined;
       });
 
       it('should select the icon state', () => {
-        expect(component.getState()).toBe('icon');
+        comp.setState();
+        expect(comp.state).toBe('icon');
       });
     });
   });

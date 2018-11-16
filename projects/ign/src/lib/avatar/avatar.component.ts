@@ -1,4 +1,10 @@
-import { Component, Input, AfterViewInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  AfterViewInit,
+  OnChanges,
+  ChangeDetectionStrategy
+} from '@angular/core';
 
 enum AvatarSize {
   SMALL = 's',
@@ -17,13 +23,17 @@ const deprecatedSizes = ['small', 'large', 'medium'];
   selector: 'ign-avatar',
   templateUrl: './avatar.component.html',
   styleUrls: ['./avatar.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AvatarComponent implements AfterViewInit {
+export class AvatarComponent implements  AfterViewInit, OnChanges {
   @Input() image: string;
   @Input() initials: string;
   @Input() size: string;
   @Input() tooltip: string;
   @Input() ariaLabel: string;
+
+  avatarSize: string;
+  state = 'icon';
 
   ngAfterViewInit() {
     if (deprecatedSizes.includes(this.size)) {
@@ -34,17 +44,24 @@ export class AvatarComponent implements AfterViewInit {
     }
   }
 
-  getSize(size = 'l'): string {
-    return AvatarSize[size.toUpperCase()] || AvatarSize.L;
+  ngOnChanges() {
+    this.setAvatarSize(this.size);
+    this.setState();
   }
 
-  getState(): string {
+  setAvatarSize(size = 'l'): void {
+    this.avatarSize = AvatarSize[size.toUpperCase()] || AvatarSize.L;
+  }
+
+  setState(): void {
     if (!!this.image) {
-      return 'image';
+      this.state = 'image';
+      return;
     }
     if (!!this.initials) {
-      return 'initials';
+      this.state = 'initials';
+      return;
     }
-    return 'icon';
+    this.state = 'icon';
   }
 }
