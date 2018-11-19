@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
-import { AccessibleRemoveViewDirective } from './accessibility.directive';
-import { ComponentTest } from '../../test/test-bed/component';
 
 import { By } from '@angular/platform-browser';
+import {AccessibilityModule} from './accessibility.module';
+import {AccessibleRemoveViewDirective} from './accessible-remove-view.directive';
+import {AccessibleClickDirective} from './accessible-click.directive';
 
 @Component({
   template: `
@@ -15,18 +16,23 @@ import { By } from '@angular/platform-browser';
 })
 class DirectiveHostComponent {}
 
-describe('Accessible Remove View', () => {
+fdescribe('Accessible Remove View', () => {
   let fixture: ComponentFixture<DirectiveHostComponent>;
   let de: DebugElement[];
   let ne: HTMLElement;
+  let directive: AccessibleRemoveViewDirective;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [AccessibilityModule],
+      declarations: [DirectiveHostComponent]
+    })
+      .compileComponents();
+  }));
 
   beforeEach(() => {
-    ComponentTest.createTestBed([], [
-      DirectiveHostComponent,
-      AccessibleRemoveViewDirective,
-    ] as Component[]);
-
     fixture = TestBed.createComponent(DirectiveHostComponent);
+    directive = de[0].injector.get(AccessibleRemoveViewDirective);
     de = fixture.debugElement.queryAll(By.css('.directive'));
 
     fixture.detectChanges();

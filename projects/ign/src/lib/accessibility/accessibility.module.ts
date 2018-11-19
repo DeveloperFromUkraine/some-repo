@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { AccessibleClickDirective } from './accessible-click.directive';
+import { AccessibleViewDirective } from './accessible-view.directive';
 
 @NgModule({
   declarations: [
-    AccessibleClickDirective
+    AccessibleClickDirective,
+    AccessibleViewDirective
   ],
   exports: [
-    AccessibleClickDirective
+    AccessibleClickDirective,
+    AccessibleViewDirective
   ]
 })
 export class AccessibilityModule {}
