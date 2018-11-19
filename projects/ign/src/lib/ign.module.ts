@@ -3,6 +3,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
+import { AvatarModule } from './avatar/avatar.module';
+export { AvatarModule } from './avatar/avatar.module';
+
 import { LoggerModule } from './logging/logger.module';
 export * from './logging/logger.service';
 
@@ -140,7 +143,6 @@ import {
 import { TranslationService } from './localization/translation.service';
 
 import { TranslationModule } from './localization/translation.module';
-import { AvatarComponent } from './avatar/avatar.component';
 import { AvatarGroupComponent } from './avatar-group/avatar-group.component';
 export * from './avatar-group/avatar-group.types';
 
@@ -232,7 +234,6 @@ const components = [
   AccessibleContextMenuViewDirective,
   ListItemRoleDirective,
   ToolTipDirective,
-  AvatarComponent,
   AvatarGroupComponent,
   DisplayModeDirective,
   InputMaskComponent,
@@ -265,6 +266,7 @@ const components = [
     TranslationModule,
     MatSidenavModule,
     LoggerModule,
+    AvatarModule
   ],
   declarations: components,
   exports: [
