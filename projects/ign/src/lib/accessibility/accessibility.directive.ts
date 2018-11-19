@@ -2,7 +2,6 @@ import {
   Attribute,
   Directive,
   ElementRef,
-  HostListener,
   Renderer2,
   AfterViewInit,
   ChangeDetectorRef,
@@ -10,21 +9,6 @@ import {
   AfterContentInit,
 } from '@angular/core';
 import { TranslationPipe } from '../localization/translation.pipe';
-
-@Directive({ selector: '[ignA11yClick], [routerLink]:not(button), [routerLink]:not(a)' })
-export class AccessibleClickDirective {
-  constructor(public elementRef: ElementRef) {
-    this.elementRef = elementRef;
-  }
-
-  @HostListener('keyup.enter', ['$event'])
-  @HostListener('keyup.space', ['$event'])
-  onAccessibleClick(event: KeyboardEvent) {
-    event.preventDefault();
-
-    this.elementRef.nativeElement.click();
-  }
-}
 
 @Directive({
   selector:
