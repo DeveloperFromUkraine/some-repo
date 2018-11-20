@@ -63,7 +63,7 @@
               "projects/playground/src/assets"
             ],
             "styles": [
-              "projects/playground/src/styles.css"
+              "projects/playground/src/styles.scss"
             ],
             "scripts": []
           },
