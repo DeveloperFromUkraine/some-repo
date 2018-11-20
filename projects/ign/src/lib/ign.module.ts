@@ -134,14 +134,6 @@ import { RightAlignContainerComponent } from './right-align-container/right-alig
 
 import { PersistentSearchComponent } from './persistent-search/persistent-search.component';
 
-import {
-  AccessibleViewDirective,
-  AccessibleRemoveViewDirective,
-  AccessibleContextMenuViewDirective,
-  ListItemRoleDirective,
-  ToolTipDirective,
-} from './accessibility/accessibility.directive';
-
 import { TranslationService } from './localization/translation.service';
 
 import { TranslationModule } from './localization/translation.module';
@@ -230,11 +222,6 @@ const components = [
   ExpandableSearchComponent,
   RightAlignContainerComponent,
   PersistentSearchComponent,
-  AccessibleViewDirective,
-  AccessibleRemoveViewDirective,
-  AccessibleContextMenuViewDirective,
-  ListItemRoleDirective,
-  ToolTipDirective,
   AvatarGroupComponent,
   DisplayModeDirective,
   InputMaskComponent,

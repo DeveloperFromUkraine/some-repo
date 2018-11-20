@@ -1,12 +1,5 @@
-import {
-  Attribute,
-  Directive,
-  ElementRef,
-  Renderer2,
-  AfterViewInit,
-  ChangeDetectorRef,
-} from '@angular/core';
-import { TranslationPipe } from '../localization/translation.pipe';
+import {AfterViewInit, Attribute, ChangeDetectorRef, Directive, ElementRef, Renderer2} from '@angular/core';
+import {TranslationPipe} from '../localization/translation.pipe';
 
 @Directive({
   selector: '[ignA11yContextMenuViewAccessible], button',
@@ -23,11 +16,11 @@ export class AccessibleContextMenuViewDirective implements AfterViewInit {
     elementRef: ElementRef,
     changeRef: ChangeDetectorRef
   ) {
-    this.elementRef = elementRef;
-    this.renderer = renderer;
-    this.ariaLabel = ariaLabel;
-    this.translatePipe = new TranslationPipe(changeRef);
-  }
+      this.elementRef = elementRef;
+      this.renderer = renderer;
+      this.ariaLabel = ariaLabel;
+      this.translatePipe = new TranslationPipe(changeRef);
+    }
 
   ngAfterViewInit() {
     if (this.ariaLabel) {
@@ -51,34 +44,6 @@ export class AccessibleContextMenuViewDirective implements AfterViewInit {
           this.renderer.setAttribute(this.elementRef.nativeElement, 'aria-hidden', 'false');
         }
       }
-    }
-  }
-}
-
-@Directive({
-  /* tslint:disable-next-line */
-  selector: 'mat-list-item, ign-list-item, ign-list-selection-item',
-})
-export class ListItemRoleDirective {
-  constructor(@Attribute('role') role: string, renderer: Renderer2, elementRef: ElementRef) {
-    renderer.setAttribute(elementRef.nativeElement, 'role', 'listitem');
-  }
-}
-
-@Directive({
-  selector: '[matTooltip]',
-})
-export class ToolTipDirective {
-  constructor(
-    @Attribute(`matTooltip`)
-    matTooltip: string,
-    @Attribute('aria-label') ariaLabel: string,
-    renderer: Renderer2,
-    elementRef: ElementRef
-  ) {
-    if (matTooltip && !ariaLabel) {
-      renderer.setAttribute(elementRef.nativeElement, `aria-label`, matTooltip);
-      renderer.setAttribute(elementRef.nativeElement, 'tabindex', '0');
     }
   }
 }

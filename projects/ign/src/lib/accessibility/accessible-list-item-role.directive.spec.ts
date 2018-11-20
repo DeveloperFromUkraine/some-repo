@@ -1,9 +1,8 @@
 import { Component, DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ComponentTest } from '../../test/test-bed/component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ListItemRoleDirective } from './accessibility.directive';
+import {AccessibilityModule} from './accessibility.module';
 
 @Component({
   template: `<mat-list-item class="directive"> I am a mat list item </mat-list-item>
@@ -16,9 +15,14 @@ describe('Accessibility List Item Role', () => {
   let de: DebugElement[];
   let ne: HTMLElement;
 
-  beforeEach(() => {
-    ComponentTest.createTestBed([], [DirectiveHostComponent, ListItemRoleDirective] as Component[]);
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [AccessibilityModule],
+      declarations: [DirectiveHostComponent]
+    })
+  }));
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(DirectiveHostComponent);
     de = fixture.debugElement.queryAll(By.css('.directive'));
 

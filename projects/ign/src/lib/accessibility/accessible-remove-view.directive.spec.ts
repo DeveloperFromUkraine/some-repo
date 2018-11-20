@@ -4,8 +4,6 @@ import { DebugElement } from '@angular/core';
 
 import { By } from '@angular/platform-browser';
 import {AccessibilityModule} from './accessibility.module';
-import {AccessibleRemoveViewDirective} from './accessible-remove-view.directive';
-import {AccessibleClickDirective} from './accessible-click.directive';
 
 @Component({
   template: `
@@ -16,11 +14,10 @@ import {AccessibleClickDirective} from './accessible-click.directive';
 })
 class DirectiveHostComponent {}
 
-fdescribe('Accessible Remove View', () => {
+describe('Accessible Remove View', () => {
   let fixture: ComponentFixture<DirectiveHostComponent>;
   let de: DebugElement[];
   let ne: HTMLElement;
-  let directive: AccessibleRemoveViewDirective;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -32,7 +29,6 @@ fdescribe('Accessible Remove View', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(DirectiveHostComponent);
-    directive = de[0].injector.get(AccessibleRemoveViewDirective);
     de = fixture.debugElement.queryAll(By.css('.directive'));
 
     fixture.detectChanges();
