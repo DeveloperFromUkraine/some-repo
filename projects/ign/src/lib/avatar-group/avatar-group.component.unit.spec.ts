@@ -2,11 +2,9 @@ import { AvatarGroupComponent } from './avatar-group.component';
 import {
   avatarsX,
   avatars5,
-  invalidAvatar,
   avatarWOPreferredFN,
   avatarWPreferredFN,
 } from './avatars.mock';
-import { Avatar } from './avatar-group.types';
 
 describe('AvatarGroupComponent Unit Tests', () => {
   let component: AvatarGroupComponent;
@@ -38,20 +36,14 @@ describe('AvatarGroupComponent Unit Tests', () => {
   });
 
   describe('Component methods tests', () => {
-    beforeEach(() => {
-      component.avatars = avatarsX;
-    });
-
     it('should only use valid avatars', () => {
-      const expectedAvatars: Avatar[] = [avatarsX[0], avatarsX[2], avatarsX[4], avatarsX[8]];
-      const actualAvatars = component.sanitizeAvatars(avatarsX);
-
-      expect(actualAvatars).toEqual(expectedAvatars);
+      component.avatars = avatarsX;
+      component.ngOnChanges();
+      expect(component.sanitizedAvatars.length).toEqual(4);
     });
 
     it('should compute the right tooltip', () => {
-      component.avatars = component.sanitizeAvatars(avatars5);
-      const avatars = component.avatars;
+      component.avatars = avatars5;
       const expectedTooltips = [
         'tooltip1',
         'preferredFirstName2 lastName2 (formerLastName2)',
@@ -60,108 +52,91 @@ describe('AvatarGroupComponent Unit Tests', () => {
         'firstName5 lastName5 (formerLastName5)',
       ];
 
-      for (let i = 0; i < avatars.length; i++) {
-        const tooltip = component.getAvatarTooltip(avatars[i]);
-        expect(tooltip).toBe(expectedTooltips[i]);
-      }
+      component.ngOnChanges();
+
+      expect(expectedTooltips.length).toEqual(component.sanitizedAvatars.length);
+      component.sanitizedAvatars.forEach((avatar, i) => {
+        expect(avatar.tooltip).toBe(expectedTooltips[i]);
+      });
     });
 
-    it('should return nothing from getAvatarTooltip if given invalidAvatar', () => {
-      const tooltip = component.getAvatarTooltip(invalidAvatar);
-
-      expect(tooltip).toBe('');
-    });
-
-    it('should return nothing from getAvatarTooltip if showTooltips is false', () => {
-      component.avatars = component.sanitizeAvatars(avatars5);
-      component.showTooltips = false;
-      const avatars = component.avatars;
-      const expectedTooltips = ['', '', '', '', ''];
-
-      for (let i = 0; i < avatars.length; i++) {
-        const tooltip = component.getAvatarTooltip(avatars[i]);
-        expect(tooltip).toBe(expectedTooltips[i]);
-      }
-    });
-
-    it('should return initials of name when calling getPersonInitials with avatar that has no preferredName', () => {
-      const initials = component.getPersonInitials(avatarWOPreferredFN.person);
-
-      expect(initials).toBe('FL');
-    });
-
-    it('should return initials of preferred name when calling getPersonInitials with avatar that has a preferredName', () => {
-      const initials = component.getPersonInitials(avatarWPreferredFN.person);
-
-      expect(initials).toBe('PL');
-    });
-
-    beforeEach(() => {
+    it('should not set tooltips when "showTooltips" is false', () => {
       component.avatars = avatars5;
-      component.cap = 3;
+      component.showTooltips = false;
+      component.ngOnChanges();
+      component.sanitizedAvatars.forEach((avatar, i) => {
+        expect(avatar.tooltip).toBe('');
+      });
+    });
+
+    it('should set the initials for an avatar that has no preferredName', () => {
+      component.avatars = [avatarWOPreferredFN];
+      component.ngOnChanges();
+      expect(component.sanitizedAvatars[0].initials).toBe('FL');
+    });
+
+    it('should set the initials for an avatar with a preferredName', () => {
+      component.avatars = [avatarWPreferredFN];
+      component.ngOnChanges();
+      expect(component.sanitizedAvatars[0].initials).toBe('PL');
     });
 
     it('should compute the correct count of extra/hidden avatars', () => {
-      const counterValue = component.getCounterValue(component.avatars);
-
-      expect(counterValue).toBe(2);
+      component.avatars = avatars5;
+      component.cap = 3;
+      component.ngOnChanges();
+      expect(component.counterValue).toEqual(2);
     });
 
     describe('Given the group shows context', () => {
-      beforeEach(() => {
-        component.showContext = true;
-      });
-
       it('should give the ellipsis value for counter initials', () => {
-        expect(component.getCounterInitials()).toBe('...');
+        component.avatars = avatars5;
+        component.cap = 3;
+        component.showContext = true;
+        component.ngOnChanges();
+        expect(component.counterInitials).toBe('...');
       });
     });
 
     describe('Given the group does not show context', () => {
-      beforeEach(() => {
-        component.showContext = false;
-      });
-
       it('should give the counter value for counter initials', () => {
-        spyOn(component, 'getCounterValue').and.returnValue(2);
-        expect(component.getCounterInitials()).toBe('+2');
+        component.avatars = avatars5;
+        component.cap = 3;
+        component.showContext = false;
+        component.ngOnChanges();
+        expect(component.counterInitials).toBe('+2');
       });
     });
 
     describe('Given cap is greater than the number of avatars', () => {
-      beforeEach(() => {
-        component.cap = 6;
-      });
-
       it('should not display the counter', () => {
-        const isCounterShown: boolean =
-          component.showCounter && component.getCounterValue(component.avatars) > 0;
+        component.avatars = avatars5;
+        component.cap = 6;
+        component.ngOnChanges();
+        const isCounterShown: boolean = component.showCounter && component.counterValue > 0;
 
         expect(isCounterShown).toBeFalsy();
       });
     });
 
     describe('Given cap is equal to the number of avatars', () => {
-      beforeEach(() => {
-        component.cap = 5;
-      });
-
       it('should not display the counter', () => {
-        const isCounterShown: boolean =
-          component.showCounter && component.getCounterValue(component.avatars) > 0;
+        component.avatars = avatars5;
+        component.cap = 5;
+        component.ngOnChanges();
+        const isCounterShown: boolean = component.showCounter && component.counterValue > 0;
 
         expect(isCounterShown).toBeFalsy();
       });
     });
 
     describe('Given an @Input counter offset', () => {
-      beforeEach(() => {
+      it('should display a value equal to the regular counter plus the offset amount', () => {
+        component.avatars = avatars5;
         component.cap = 4;
         component.counterOffset = 5;
-      });
-
-      it('should display a value equal to the regular counter plus the offset amount', () => {
-        expect(component.getCounterValue(component.avatars)).toBe(6);
+        component.ngOnChanges();
+        expect(component.counterValue).toBe(6);
       });
     });
   });

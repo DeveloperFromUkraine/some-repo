@@ -1,27 +1,63 @@
-import { DebugElement, NgModule, Component } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { DebugElement, Component, Input, NO_ERRORS_SCHEMA } from '@angular/core';
+import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { By } from '@angular/platform-browser';
 
-import { AvatarGroupComponent } from '../avatar-group/avatar-group.component';
-import { AvatarComponent } from '../avatar/avatar.component';
-import { ComponentTest } from '../../test/test-bed/component';
 import { avatars4 } from './avatars.mock';
-import { TranslationModule } from '../localization/translation.module';
+import { Avatar } from './avatar-group.types';
+import { AvatarGroupModule } from './avatar-group.module';
+
+@Component({
+  selector: 'host-comp',
+  template: `
+    <ign-avatar-group
+      [avatars]="avatars"
+      [cap]="cap"
+      [showCounter]="showCounter"
+      [showContext]="showContext"
+      [showTooltips]="showTooltips"
+      [counterOffset]="counterOffset"
+      [counterLink]="counterLink"
+      [counterAriaLabel]="counterAriaLabel"
+      [viewAllLink]="viewAllLink"
+      [viewAllAriaLabel]="viewAllAriaLabel"
+    >
+    </ign-avatar-group>
+  `
+}) class HostComponent {
+  @Input() avatars: Avatar[];
+  @Input() cap = 8;
+  @Input() showCounter = true;
+  @Input() showContext = false;
+  @Input() showTooltips = true;
+  @Input() counterOffset = 0;
+  @Input() counterLink: string;
+  @Input() counterAriaLabel: string;
+  @Input() viewAllLink: string;
+  @Input() viewAllAriaLabel: string;
+
+  // @Output() avatarClick = new EventEmitter<Avatar>();
+  // @Output() counterClick = new EventEmitter();
+  // @Output() viewAllClick = new EventEmitter();
+}
 
 describe('AvatarGroupComponent Test Suite', () => {
-  let fixture: ComponentFixture<AvatarGroupComponent>;
-  let component: AvatarGroupComponent;
+  let fixture: ComponentFixture<HostComponent>;
+  let comp: HostComponent;
   let de: DebugElement;
 
-  beforeEach(() => {
-    ComponentTest.createTestBed(
-      [RouterTestingModule, TranslationModule] as NgModule[],
-      [AvatarComponent, AvatarGroupComponent] as Component[]
-    );
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [ AvatarGroupModule, RouterTestingModule ],
+      declarations: [ HostComponent ],
+      schemas: [NO_ERRORS_SCHEMA]
+    })
+    .compileComponents();
+  }));
 
-    fixture = TestBed.createComponent(AvatarGroupComponent);
-    component = fixture.componentInstance;
+  beforeEach(() => {
+    fixture = TestBed.createComponent(HostComponent);
+    comp = fixture.componentInstance;
     de = fixture.debugElement;
   });
 
@@ -34,8 +70,8 @@ describe('AvatarGroupComponent Test Suite', () => {
   });
 
   it('should display the avatars', () => {
-    component.avatars = avatars4;
-    component.cap = 3;
+    comp.avatars = avatars4;
+    comp.cap = 3;
     let displayedAvatars;
 
     fixture.detectChanges();
@@ -45,8 +81,8 @@ describe('AvatarGroupComponent Test Suite', () => {
   });
 
   it('should not display more avatars than the cap number', () => {
-    component.avatars = avatars4;
-    component.cap = 2;
+    comp.avatars = avatars4;
+    comp.cap = 2;
     let avatars: Array<DebugElement>;
 
     fixture.detectChanges();
@@ -56,9 +92,9 @@ describe('AvatarGroupComponent Test Suite', () => {
   });
 
   it('should have counter attribute "aria-label" set to counterAriaLabel', () => {
-    component.avatars = avatars4;
-    component.cap = 2;
-    component.counterAriaLabel = '4 More in the Org Chart';
+    comp.avatars = avatars4;
+    comp.cap = 2;
+    comp.counterAriaLabel = '4 More in the Org Chart';
     let counter: DebugElement;
     let ne: HTMLElement;
 
@@ -70,9 +106,9 @@ describe('AvatarGroupComponent Test Suite', () => {
   });
 
   it('should have counter attribute "routerLink" set to counterLink', () => {
-    component.avatars = avatars4;
-    component.cap = 2;
-    component.counterLink = 'counterRedirectUrl';
+    comp.avatars = avatars4;
+    comp.cap = 2;
+    comp.counterLink = 'counterRedirectUrl';
     let counter: DebugElement;
     let ne: HTMLElement;
 
@@ -84,8 +120,8 @@ describe('AvatarGroupComponent Test Suite', () => {
   });
 
   it('should not display context features by default', () => {
-    component.avatars = avatars4;
-    component.cap = 2;
+    comp.avatars = avatars4;
+    comp.cap = 2;
 
     let viewAllButton: DebugElement;
 
@@ -96,10 +132,10 @@ describe('AvatarGroupComponent Test Suite', () => {
   });
 
   it('should not display view all button if given no link', () => {
-    component.avatars = avatars4;
-    component.cap = 2;
-    component.showContext = true;
-    component.viewAllLink = undefined;
+    comp.avatars = avatars4;
+    comp.cap = 2;
+    comp.showContext = true;
+    comp.viewAllLink = undefined;
 
     let viewAllButton: DebugElement;
 
@@ -110,10 +146,10 @@ describe('AvatarGroupComponent Test Suite', () => {
   });
 
   it('should display context features when enabled', () => {
-    component.avatars = avatars4;
-    component.cap = 2;
-    component.showContext = true;
-    component.viewAllLink = '/view/all';
+    comp.avatars = avatars4;
+    comp.cap = 2;
+    comp.showContext = true;
+    comp.viewAllLink = '/view/all';
 
     let viewAllButton: DebugElement;
     let viewAllButtonEl: HTMLElement;
@@ -126,11 +162,11 @@ describe('AvatarGroupComponent Test Suite', () => {
   });
 
   it('should have view all button attribute "aria-label" set to viewAllAriaLabel', () => {
-    component.avatars = avatars4;
-    component.cap = 2;
-    component.viewAllAriaLabel = '4 More Somewhere';
-    component.viewAllLink = '/test/route';
-    component.showContext = true;
+    comp.avatars = avatars4;
+    comp.cap = 2;
+    comp.viewAllAriaLabel = '4 More Somewhere';
+    comp.viewAllLink = '/test/route';
+    comp.showContext = true;
     let counter: DebugElement;
     let ne: HTMLElement;
 
@@ -142,10 +178,10 @@ describe('AvatarGroupComponent Test Suite', () => {
   });
 
   it('should have view all button attribute "routerLink" set to viewAllLink', () => {
-    component.avatars = avatars4;
-    component.cap = 2;
-    component.viewAllLink = 'viewAllRedirectUrl';
-    component.showContext = true;
+    comp.avatars = avatars4;
+    comp.cap = 2;
+    comp.viewAllLink = 'viewAllRedirectUrl';
+    comp.showContext = true;
     let counter: DebugElement;
     let ne: HTMLElement;
 
