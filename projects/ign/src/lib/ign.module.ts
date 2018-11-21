@@ -3,6 +3,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
+import { AccessibilityModule } from './accessibility/accessibility.module';
+export { AccessibilityModule } from './accessibility/accessibility.module';
+
 import { AvatarModule } from './avatar/avatar.module';
 export { AvatarModule } from './avatar/avatar.module';
 
@@ -131,15 +134,6 @@ import { RightAlignContainerComponent } from './right-align-container/right-alig
 
 import { PersistentSearchComponent } from './persistent-search/persistent-search.component';
 
-import {
-  AccessibleClickDirective,
-  AccessibleViewDirective,
-  AccessibleRemoveViewDirective,
-  AccessibleContextMenuViewDirective,
-  ListItemRoleDirective,
-  ToolTipDirective,
-} from './accessibility/accessibility.directive';
-
 import { TranslationService } from './localization/translation.service';
 
 import { TranslationModule } from './localization/translation.module';
@@ -228,12 +222,6 @@ const components = [
   ExpandableSearchComponent,
   RightAlignContainerComponent,
   PersistentSearchComponent,
-  AccessibleClickDirective,
-  AccessibleViewDirective,
-  AccessibleRemoveViewDirective,
-  AccessibleContextMenuViewDirective,
-  ListItemRoleDirective,
-  ToolTipDirective,
   AvatarGroupComponent,
   DisplayModeDirective,
   InputMaskComponent,
@@ -266,7 +254,8 @@ const components = [
     TranslationModule,
     MatSidenavModule,
     LoggerModule,
-    AvatarModule
+    AvatarModule,
+    AccessibilityModule
   ],
   declarations: components,
   exports: [

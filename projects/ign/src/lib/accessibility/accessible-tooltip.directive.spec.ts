@@ -1,9 +1,8 @@
 import { Component, DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ComponentTest } from '../../test/test-bed/component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ToolTipDirective } from './accessibility.directive';
+import {AccessibilityModule} from './accessibility.module';
 
 @Component({
   template: `<p class="directive" matTooltip="Iamatooltip"> I am a paragraph with a tooltip. </p>
@@ -18,9 +17,14 @@ describe('Accessibility ToolTip', () => {
   let de: DebugElement[];
   let ne: HTMLElement;
 
-  beforeEach(() => {
-    ComponentTest.createTestBed([], [DirectiveHostComponent, ToolTipDirective] as Component[]);
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [AccessibilityModule],
+      declarations: [DirectiveHostComponent]
+    })
+  }));
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(DirectiveHostComponent);
     de = fixture.debugElement.queryAll(By.css('.directive'));
 

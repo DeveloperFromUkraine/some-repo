@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
-import { AccessibleRemoveViewDirective } from './accessibility.directive';
-import { ComponentTest } from '../../test/test-bed/component';
 
 import { By } from '@angular/platform-browser';
+import {AccessibilityModule} from './accessibility.module';
 
 @Component({
   template: `
@@ -20,12 +19,15 @@ describe('Accessible Remove View', () => {
   let de: DebugElement[];
   let ne: HTMLElement;
 
-  beforeEach(() => {
-    ComponentTest.createTestBed([], [
-      DirectiveHostComponent,
-      AccessibleRemoveViewDirective,
-    ] as Component[]);
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [AccessibilityModule],
+      declarations: [DirectiveHostComponent]
+    })
+      .compileComponents();
+  }));
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(DirectiveHostComponent);
     de = fixture.debugElement.queryAll(By.css('.directive'));
 

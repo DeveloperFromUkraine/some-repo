@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
-import { ComponentTest } from '../../test/test-bed/component';
-import { AccessibleClickDirective } from '../accessibility/accessibility.directive';
+import { AccessibleClickDirective } from './accessible-click.directive';
 import { By } from '@angular/platform-browser';
+import { AccessibilityModule } from './accessibility.module';
 
 @Component({
   template: `
@@ -17,12 +17,15 @@ describe('Accessible Click', () => {
   let de: DebugElement[];
   let directive: AccessibleClickDirective;
 
-  beforeEach(() => {
-    ComponentTest.createTestBed([], [
-      DirectiveHostComponent,
-      AccessibleClickDirective,
-    ] as Component[]);
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [AccessibilityModule],
+      declarations: [DirectiveHostComponent]
+    })
+      .compileComponents();
+  }));
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(DirectiveHostComponent);
     de = fixture.debugElement.queryAll(By.css('.directive'));
 

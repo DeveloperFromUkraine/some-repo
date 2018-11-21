@@ -1,10 +1,10 @@
 import { Component, DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ComponentTest } from '../../test/test-bed/component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {MatIconModule} from '@angular/material';
 
-import { AccessibleContextMenuViewDirective } from './accessibility.directive';
 import { TranslationMap } from '../localization/translation-map';
+import {AccessibilityModule} from './accessibility.module';
 
 @Component({
   template: `<button mat-icon-button ignA11yContextMenuViewAccessible>
@@ -38,12 +38,14 @@ describe('ContextMenu Accessibility Directive', () => {
   let de: DebugElement[];
   let ne: HTMLElement;
 
-  beforeEach(() => {
-    ComponentTest.createTestBed([], [
-      DirectiveHostComponent,
-      AccessibleContextMenuViewDirective,
-    ] as Component[]);
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [AccessibilityModule, MatIconModule],
+      declarations: [DirectiveHostComponent]
+    })
+  }));
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(DirectiveHostComponent);
     de = fixture.debugElement.queryAll(By.css('[mat-icon-button]'));
 
