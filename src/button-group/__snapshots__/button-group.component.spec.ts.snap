@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Button Group should match snapshot 1`] = `
-<ign-button-group>
-  
-</ign-button-group>
-`;

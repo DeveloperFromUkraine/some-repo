@@ -3,7 +3,7 @@
 
 ## Use
 The button group component is utilized as a container for groups of buttons. The button group provides 
-styling and horiztonal formatting for larger groups of buttons and allows for responsive equality of the
+styling and horizontal formatting for larger groups of buttons and allows for responsive equality of the
 individual buttons.
 
 ## Sample

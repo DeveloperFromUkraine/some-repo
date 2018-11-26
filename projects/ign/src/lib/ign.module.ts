@@ -101,8 +101,8 @@ export * from './error-banner/error-banner.component';
 import { InfoBannerComponent } from './info-banner/info-banner.component';
 export * from './info-banner/info-banner.component';
 
-import { ButtonGroupComponent } from './button-group/index';
-export * from './button-group/index';
+import { ButtonGroupModule } from './button-group/button-group.module';
+export { ButtonGroupModule } from './button-group/button-group.module';
 
 import { ExpandableFabComponent } from './expandable-fab/expandable-fab.component';
 export * from './expandable-fab/expandable-fab.component';
@@ -211,7 +211,6 @@ const components = [
   SizingFullDirective,
   ErrorBannerComponent,
   InfoBannerComponent,
-  ButtonGroupComponent,
   ExpandableFabComponent,
   FieldComponent,
   FieldInlineComponent,
@@ -234,7 +233,8 @@ const components = [
 const componentModules = [
   AvatarModule,
   AvatarGroupModule,
-  AccessibilityModule
+  AccessibilityModule,
+  ButtonGroupModule
 ];
 
 @NgModule({
