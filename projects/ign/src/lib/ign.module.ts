@@ -9,6 +9,10 @@ export { AccessibilityModule } from './accessibility/accessibility.module';
 import { AvatarModule } from './avatar/avatar.module';
 export { AvatarModule } from './avatar/avatar.module';
 
+import { AvatarGroupModule } from './avatar-group/avatar-group.module';
+export { AvatarGroupModule } from './avatar-group/avatar-group.module';
+export * from './avatar-group/avatar-group.types';
+
 import { LoggerModule } from './logging/logger.module';
 export * from './logging/logger.service';
 
@@ -137,8 +141,6 @@ import { PersistentSearchComponent } from './persistent-search/persistent-search
 import { TranslationService } from './localization/translation.service';
 
 import { TranslationModule } from './localization/translation.module';
-import { AvatarGroupComponent } from './avatar-group/avatar-group.component';
-export * from './avatar-group/avatar-group.types';
 
 import {
   InputMaskComponent,
@@ -222,12 +224,17 @@ const components = [
   ExpandableSearchComponent,
   RightAlignContainerComponent,
   PersistentSearchComponent,
-  AvatarGroupComponent,
   DisplayModeDirective,
   InputMaskComponent,
   CurrencyMaskComponent,
   CurrencyMaskDirective,
   MessagesComponent,
+];
+
+const componentModules = [
+  AvatarModule,
+  AvatarGroupModule,
+  AccessibilityModule
 ];
 
 @NgModule({
@@ -254,12 +261,12 @@ const components = [
     TranslationModule,
     MatSidenavModule,
     LoggerModule,
-    AvatarModule,
-    AccessibilityModule
+    ...componentModules
   ],
   declarations: components,
   exports: [
     ...components,
+    ...componentModules,
     DateRangeComponent,
     ExpandableFabItemComponent,
     TextListItemComponent,

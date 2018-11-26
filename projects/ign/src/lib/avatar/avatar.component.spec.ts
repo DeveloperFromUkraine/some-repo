@@ -2,8 +2,7 @@ import { DebugElement, Component, Input } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
-import { AvatarComponent } from './avatar.component';
-import { MatTooltipModule, MatIconModule } from '@angular/material';
+import { AvatarModule } from './avatar.module';
 
 @Component({
   selector: 'host-comp',
@@ -32,8 +31,8 @@ describe('AvatarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ MatIconModule, MatTooltipModule ],
-      declarations: [ AvatarComponent, HostComponent ]
+      imports: [ AvatarModule ],
+      declarations: [ HostComponent ]
     })
     .compileComponents();
   }));
