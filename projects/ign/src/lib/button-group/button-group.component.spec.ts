@@ -8,18 +8,11 @@ import { ButtonGroupModule } from './button-group.module';
   template: `
         <ign-button-group class="button-group">
             <button
-                class="cancel-button"
-                mat-raised-button
-                mat-button
-                type="submit">
+                class="cancel-button">
                 Cancel
             </button>
             <button
-                class="save-button"
-                mat-raised-button
-                mat-button
-                type="submit"
-                color="accent">
+                class="save-button">
                 Save and Import
             </button>
         </ign-button-group>
