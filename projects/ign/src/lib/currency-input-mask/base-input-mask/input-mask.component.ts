@@ -36,7 +36,11 @@ export class InputMaskComponent implements OnInit, AfterViewChecked {
   @Input() currencyCode: string;
   @Output() onValueChanged = new EventEmitter<string>();
 
-  constructor(private cdRef: ChangeDetectorRef) {}
+  constructor(private cdRef: ChangeDetectorRef) {
+    console.warn(
+      `Deprecation warning: 'ign-input-mask' is being removed in the next release. Support for this component will be dropped soon.`
+    );
+  }
 
   onBlur() {
     this.onValueChanged.emit();

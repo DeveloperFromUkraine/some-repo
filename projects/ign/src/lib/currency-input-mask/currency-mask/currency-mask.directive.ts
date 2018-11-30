@@ -7,6 +7,12 @@ import { Directive, HostListener, Input } from '@angular/core';
 export class CurrencyMaskDirective {
   @Input() ignCurrencyMask: (string)[];
 
+  constructor() {
+    console.warn(
+      `Deprecation warning: 'ignCurrencyMask' is being removed in the next release. Support for this directive will be dropped soon.`
+    );
+  }
+
   @HostListener('input', ['$event'])
   onInputWrapper($event: any): void {
     const targetValue = $event.target.value;
