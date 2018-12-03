@@ -118,7 +118,6 @@ import { TextListItemComponent } from './text-list-item/text-list-item.component
 import { DataTableContainerModule } from './data-table-container/data-table-container.module';
 import { DataTableContainerComponent } from './data-table-container/data-table-container.component';
 
-import { ExpandableSearchComponent } from './expandable-search/expandable-search.component';
 import { RightAlignContainerComponent } from './right-align-container/right-align-container.component';
 
 import { PersistentSearchComponent } from './persistent-search/persistent-search.component';
@@ -203,7 +202,6 @@ const components = [
   NestableFormDirective,
   LoadingContainerComponent,
   FooterComponent,
-  ExpandableSearchComponent,
   RightAlignContainerComponent,
   PersistentSearchComponent,
   DisplayModeDirective,

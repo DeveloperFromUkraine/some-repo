@@ -13,6 +13,9 @@ import { AvatarGroupModule } from './avatar-group/avatar-group.module';
 export { AvatarGroupModule } from './avatar-group/avatar-group.module';
 export * from './avatar-group/avatar-group.types';
 
+import { ExpandableSearchModule } from './expandable-search/expandable-search.module';
+export { ExpandableSearchModule } from './expandable-search/expandable-search.module';
+
 import { LoggerModule } from './logging/logger.module';
 export * from './logging/logger.service';
 
@@ -131,7 +134,6 @@ import { TextListItemComponent } from './text-list-item/text-list-item.component
 import { DataTableContainerModule } from './data-table-container/data-table-container.module';
 import { DataTableContainerComponent } from './data-table-container/data-table-container.component';
 
-import { ExpandableSearchComponent } from './expandable-search/expandable-search.component';
 import { RightAlignContainerComponent } from './right-align-container/right-align-container.component';
 
 import { PersistentSearchComponent } from './persistent-search/persistent-search.component';
@@ -216,7 +218,6 @@ const components = [
   NestableFormDirective,
   LoadingContainerComponent,
   FooterComponent,
-  ExpandableSearchComponent,
   RightAlignContainerComponent,
   PersistentSearchComponent,
   DisplayModeDirective,
@@ -230,7 +231,8 @@ const componentModules = [
   AvatarModule,
   AvatarGroupModule,
   AccessibilityModule,
-  ButtonGroupModule
+  ButtonGroupModule,
+  ExpandableSearchModule
 ];
 
 @NgModule({
