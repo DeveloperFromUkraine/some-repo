@@ -96,14 +96,6 @@ import { ExpandableFabItemComponent } from './expandable-fab/expandable-fab-item
 export * from './expandable-fab/expandable-fab-item.component';
 import { ExpandableFabItemModule } from './expandable-fab/expandable-fab-item.module';
 
-import {
-  FieldComponent,
-  FieldInlineComponent,
-  EditableFieldComponent,
-  EditableFieldInlineComponent,
-} from './field/field.component';
-export * from './field/field.component';
-
 import { CenterComponent } from './center/center.component';
 
 import { LoadingContainerComponent } from './loading-container/loading-container.component';
@@ -194,10 +186,6 @@ const components = [
   ErrorBannerComponent,
   InfoBannerComponent,
   ExpandableFabComponent,
-  FieldComponent,
-  FieldInlineComponent,
-  EditableFieldComponent,
-  EditableFieldInlineComponent,
   CenterComponent,
   NestableFormDirective,
   LoadingContainerComponent,
