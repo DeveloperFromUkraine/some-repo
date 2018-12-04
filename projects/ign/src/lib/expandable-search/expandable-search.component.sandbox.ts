@@ -8,8 +8,13 @@ export default sandboxOf(ExpandableSearchComponent, {
   imports: [BrowserAnimationsModule, MatButtonModule, MatFormFieldModule, MatIconModule, MatInputModule, TranslationModule],
 }).add('Expandable Search', {
   template: `
-    <div style="width: 50%">
       <ign-expandable-search></ign-expandable-search>
-    </div>
     `,
+  styles: [
+    `
+      :host {
+        width: 50%;
+      }
+    `
+  ]
 });

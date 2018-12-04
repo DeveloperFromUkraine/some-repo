@@ -70,8 +70,7 @@ export class ExpandableSearchComponent implements OnInit {
     this.searchExpanded = false;
     this.searchButtonAriaLabel = this.translatedSearch;
     this.searchInputTabIndex = -1;
-    this.searchInput.nativeElement.value = '';
-    this.emitSearchEvents();
+    this.clearSearch();
   }
 
   clearSearch() {
