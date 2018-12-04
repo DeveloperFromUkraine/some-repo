@@ -8,9 +8,10 @@ import { ExpandableFabItemComponent } from '..';
 
 @Component({
   template: `
-  <ign-expandable-fab>
-    <ign-expandable-fab-item icon="add"></ign-expandable-fab-item>
-  </ign-expandable-fab>`,
+    <ign-expandable-fab>
+      <ign-expandable-fab-item icon="add"></ign-expandable-fab-item>
+    </ign-expandable-fab>
+  `,
 })
 class ExpandableFabHostComponent {}
 

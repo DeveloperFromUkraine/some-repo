@@ -20,7 +20,9 @@ export class ListItemComponent {}
 
 @Component({
   selector: 'ign-list-item-content',
-  template: `<ng-content></ng-content>`,
+  template: `
+    <ng-content></ng-content>
+  `,
   styles: [
     `
       :host {
@@ -35,7 +37,9 @@ export class ListItemContentComponent {}
 
 @Component({
   selector: 'ign-list-container',
-  template: `<ng-content></ng-content>`,
+  template: `
+    <ng-content></ng-content>
+  `,
   styles: [
     `
       :host /deep/ ign-list-item:not(:last-child) {

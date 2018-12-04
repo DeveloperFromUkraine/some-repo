@@ -1,3 +1,4 @@
+/* tslint:disable:no-console */
 import { ConsolePolyfill } from './console-polyfill';
 
 describe('ConsolePolyfill', () => {

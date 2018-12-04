@@ -44,11 +44,9 @@ import {
 export * from './empty-state/empty-state.component';
 
 import {
-  ListFilterPipe,
   ListSelectionAddButtonComponent,
   ListSelectionComponent,
   ListSelectionItemComponent,
-  ListSelectionSearchComponent,
 } from './list-selection/index';
 export * from './list-selection/index';
 
@@ -128,8 +126,6 @@ import { PersistentSearchComponent } from './persistent-search/persistent-search
 import { TranslationService } from './localization/translation.service';
 
 import { TranslationModule } from './localization/translation.module';
-import { AvatarGroupComponent } from './avatar-group/avatar-group.component';
-export * from './avatar-group/avatar-group.types';
 
 import {
   InputMaskComponent,
@@ -181,8 +177,6 @@ const components = [
   ListContentUnselectedStateComponent,
   ListSelectionComponent,
   ListSelectionItemComponent,
-  ListSelectionSearchComponent,
-  ListFilterPipe,
   ListSelectionAddButtonComponent,
   CardMainComponent,
   CardAsideComponent,
@@ -212,7 +206,6 @@ const components = [
   ExpandableSearchComponent,
   RightAlignContainerComponent,
   PersistentSearchComponent,
-  AvatarGroupComponent,
   DisplayModeDirective,
   InputMaskComponent,
   CurrencyMaskComponent,

@@ -54,11 +54,9 @@ import {
 export * from './empty-state/empty-state.component';
 
 import {
-  ListFilterPipe,
   ListSelectionAddButtonComponent,
   ListSelectionComponent,
-  ListSelectionItemComponent,
-  ListSelectionSearchComponent,
+  ListSelectionItemComponent
 } from './list-selection/index';
 export * from './list-selection/index';
 
@@ -192,8 +190,6 @@ const components = [
   ListContentUnselectedStateComponent,
   ListSelectionComponent,
   ListSelectionItemComponent,
-  ListSelectionSearchComponent,
-  ListFilterPipe,
   ListSelectionAddButtonComponent,
   CardMainComponent,
   CardAsideComponent,

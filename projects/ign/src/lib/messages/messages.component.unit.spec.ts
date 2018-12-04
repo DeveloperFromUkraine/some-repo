@@ -9,13 +9,12 @@ describe('Messages component', () => {
   let component: MessagesComponent;
   let route: ActivatedRoute;
   let params: BehaviorSubject<any>;
-  let queryParams: BehaviorSubject<any>;
   let logger: Logger;
 
   beforeEach(() => {
     route = {} as ActivatedRoute;
     route.queryParams = params = new BehaviorSubject({});
-    route.params = queryParams = new BehaviorSubject({});
+    route.params = new BehaviorSubject({});
     logger = {
       named(namespace) {
         return logger;

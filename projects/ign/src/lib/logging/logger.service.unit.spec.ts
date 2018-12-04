@@ -1,3 +1,4 @@
+/* tslint:disable:no-console */
 import { Logger } from './logger.service';
 import { ConsolePolyfill } from './console-polyfill';
 
