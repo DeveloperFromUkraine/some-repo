@@ -2,7 +2,7 @@ import {
   Component, ElementRef, Output, Input, ViewChild, ChangeDetectorRef,
   ChangeDetectionStrategy, EventEmitter, OnInit
 } from '@angular/core';
-import {TranslationPipe} from '../../../../../src/localization/translation.pipe';
+import {TranslationPipe} from '../localization/translation.pipe';
 
 @Component({
   selector: 'ign-expandable-search',
