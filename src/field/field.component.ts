@@ -4,10 +4,8 @@ import { TranslationPipe } from '../localization/translation.pipe';
 @Component({
   selector: 'ign-field',
   template: `
-    <div da="fieldValue" class="value">
-      <ng-content></ng-content>
-    </div>
-    <div class="label">{{label}}</div>
+    <div da="fieldValue" class="value"><ng-content></ng-content></div>
+    <div class="label">{{ label }}</div>
   `,
   styleUrls: ['field.component.scss'],
 })
@@ -19,7 +17,7 @@ export class FieldComponent {
   selector: 'ign-field-inline',
   template: `
     <div da="fieldValue" class="value">
-      <span class="label">{{label}}</span>
+      <span class="label">{{ label }}</span>
       <ng-content></ng-content>
     </div>
   `,
@@ -30,17 +28,21 @@ export class FieldInlineComponent extends FieldComponent {}
   selector: 'ign-editable-field',
   template: `
     <div class="label-container">
-      <div id="editable-value" tabindex="0" [attr.da]="da" class="value flex-lable-value"><ng-content></ng-content></div>
+      <div id="editable-value" tabindex="0" [attr.da]="da" class="value flex-lable-value">
+        <ng-content></ng-content>
+      </div>
       <button
         aria-describedby="editable-value"
         [attr.da]="daButton"
-        mat-icon-button class="mat-icon-button"
+        mat-icon-button
+        class="mat-icon-button"
         [attr.aria-label]="ariaBtnLabel"
-        (click)=handleClick()>
-        <mat-icon>{{editIcon}}</mat-icon>
+        (click)="handleClick()"
+      >
+        <mat-icon>{{ editIcon }}</mat-icon>
       </button>
     </div>
-    <div class="label">{{label}}</div>
+    <div class="label">{{ label }}</div>
   `,
   styleUrls: ['field.component.scss'],
 })
@@ -67,17 +69,25 @@ export class EditableFieldComponent extends FieldComponent {
   selector: 'ign-editable-field-inline',
   template: `
     <div class="label-container">
-      <div da="fieldValue" id="editable-value" tabindex="0" [attr.da]="da" class="value flex-lable-value">
-        <span class="label">{{label}}</span>
+      <div
+        da="fieldValue"
+        id="editable-value"
+        tabindex="0"
+        [attr.da]="da"
+        class="value flex-lable-value"
+      >
+        <span class="label">{{ label }}</span>
         <ng-content></ng-content>
       </div>
       <button
         aria-describedby="editable-value"
         [attr.da]="daButton"
         [attr.aria-label]="ariaBtnLabel"
-        mat-icon-button class="mat-icon-button"
-        (click)=handleClick()>
-        <mat-icon>{{editIcon}}</mat-icon>
+        mat-icon-button
+        class="mat-icon-button"
+        (click)="handleClick()"
+      >
+        <mat-icon>{{ editIcon }}</mat-icon>
       </button>
     </div>
   `,

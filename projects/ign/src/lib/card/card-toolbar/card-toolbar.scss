@@ -1,0 +1,32 @@
+@import '~ignite-common/styles/ignite';
+
+:host {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 2rem;
+}
+
+.right-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: flex-start;
+}
+
+:host /deep/ button {
+  text-transform: uppercase;
+  color: ign-color(secondary);
+}
+
+:host /deep/ mat-icon {
+  height: 28px;
+  width: 28px;
+}
+
+// todo: should card-title include margin at all?
+:host /deep/ .mat-card-title.ign-card-title  {
+  margin-bottom: 0;
+}

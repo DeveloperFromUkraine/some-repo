@@ -1,0 +1,10 @@
+@import '~ignite-common/styles/ignite';
+
+:host {
+  border-bottom: 1px solid ign-color(light);
+  //TODO: RGBA COLORS
+  //border-bottom: 1px solid rgba(224, 224, 224, .50);
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+}

@@ -1,0 +1,10 @@
+:host {
+  // material magic numbers.
+  margin-bottom: 1.296875em;
+  padding-top: 1.296875em;
+  display: inline-block;
+}
+
+:host ::ng-deep > mat-select {
+  width: 100%;
+}

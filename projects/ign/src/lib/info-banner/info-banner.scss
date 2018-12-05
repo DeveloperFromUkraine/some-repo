@@ -1,0 +1,9 @@
+@import '~ignite-common/styles/ignite';
+
+:host {
+  display: block;
+  padding: 16px 16px;
+  color: ign-color(secondary);
+  background: ign-color(light);
+  margin-bottom: 1em;
+}

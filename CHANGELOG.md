@@ -1,5 +1,14 @@
 ### vNEXT
 
+-
+
+### v2.0.7
+
+- Converted repository from being a web application to a library
+- Applied best practices to accessibility directives; avatar, avatar group, and button group components
+- Deprecated center, input mask, and currency mask
+
+
 ### v2.0.6
 
 - Added type button to the submit buttons in persistent-search and expandable-search

@@ -8,11 +8,10 @@ import { DebugElement } from '@angular/core';
 
 @Component({
   template: `
-        <form nuNestableForm="form"  [formGroup]="form">
-            <input formControlName="name">
-            <input formControlName="email">
-        </form>
-    `,
+    <form nuNestableForm="form" [formGroup]="form">
+      <input formControlName="name" /> <input formControlName="email" />
+    </form>
+  `,
 })
 class DirectiveHostComponent {
   form: FormGroup;

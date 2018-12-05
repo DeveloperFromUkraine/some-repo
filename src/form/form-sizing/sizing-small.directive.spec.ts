@@ -7,9 +7,9 @@ import { DebugElement } from '@angular/core';
 
 @Component({
   template: `
-        <p ignSizeSmall>one</p>
-        <p nuSizeSmall>two</p>
-    `,
+    <p ignSizeSmall>one</p>
+    <p nuSizeSmall>two</p>
+  `,
 })
 class DirectiveHostComponent {}
 

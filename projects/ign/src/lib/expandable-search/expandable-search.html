@@ -1,0 +1,37 @@
+<button
+  mat-icon-button
+  (click)="handleClick()"
+  attr.aria-label="{{ searchExpanded ? ('CLOSE' | translateIDS) : ('SEARCH' | translateIDS) }}"
+  da="searchButton">
+  <mat-icon da="searchIcon" *ngIf="!searchExpanded">
+    search
+  </mat-icon>
+  <mat-icon da="backIcon" *ngIf="searchExpanded">
+    arrow_back
+  </mat-icon>
+</button>
+
+<mat-form-field
+  [ngClass]="{'expanded-search-inactive': !searchExpanded, 'expanded-search-active': searchExpanded}"
+  floatLabel="never">
+  <input
+    #searchInput
+    matInput
+    placeholder="{{ 'SEARCH' | translateIDS }}" 
+    attr.tabindex="{{ searchExpanded ? 0 : -1 }}"
+    value=""
+    (keyup)="emitSearchEvents()">
+  <button
+    *ngIf="searchInput.value"
+    type="button"
+    (click)="searchInput.value=''; emitSearchEvents()"
+    mat-icon-button
+    matSuffix
+    attr.aria-label="{{ 'CLEAR' | translateIDS }}"
+    aria-hidden="false"
+    da="clearButton">
+    <mat-icon>
+      close
+    </mat-icon>
+  </button>
+</mat-form-field>

@@ -29,10 +29,12 @@ export interface Message {
   styleUrls: ['messages.component.scss'],
   template: `
     <ign-error-banner *ngIf="(errors$ | async)?.length">
-      <button class="dismiss-button" type="button" mat-icon-button (click)="clear()">&times;</button>
+      <button class="dismiss-button" type="button" mat-icon-button (click)="clear()">
+        &times;
+      </button>
       <ul class="message-list">
-        <li class="message" *ngFor="let error of errors$ | async">
-          {{error.message | uppercase}}
+        <li class="message" *ngFor="let error of (errors$ | async)">
+          {{ error.message | uppercase }}
         </li>
       </ul>
     </ign-error-banner>

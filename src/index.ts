@@ -44,11 +44,9 @@ import {
 export * from './empty-state/empty-state.component';
 
 import {
-  ListFilterPipe,
   ListSelectionAddButtonComponent,
   ListSelectionComponent,
   ListSelectionItemComponent,
-  ListSelectionSearchComponent,
 } from './list-selection/index';
 export * from './list-selection/index';
 
@@ -91,9 +89,6 @@ export * from './error-banner/error-banner.component';
 import { InfoBannerComponent } from './info-banner/info-banner.component';
 export * from './info-banner/info-banner.component';
 
-import { ButtonGroupComponent } from './button-group/index';
-export * from './button-group/index';
-
 import { ExpandableFabComponent } from './expandable-fab/expandable-fab.component';
 export * from './expandable-fab/expandable-fab.component';
 
@@ -128,21 +123,9 @@ import { RightAlignContainerComponent } from './right-align-container/right-alig
 
 import { PersistentSearchComponent } from './persistent-search/persistent-search.component';
 
-import {
-  AccessibleClickDirective,
-  AccessibleViewDirective,
-  AccessibleRemoveViewDirective,
-  AccessibleContextMenuViewDirective,
-  ListItemRoleDirective,
-  ToolTipDirective,
-} from './accessibility/accessibility.directive';
-
 import { TranslationService } from './localization/translation.service';
 
 import { TranslationModule } from './localization/translation.module';
-import { AvatarComponent } from './avatar/avatar.component';
-import { AvatarGroupComponent } from './avatar-group/avatar-group.component';
-export * from './avatar-group/avatar-group.types';
 
 import {
   InputMaskComponent,
@@ -194,8 +177,6 @@ const components = [
   ListContentUnselectedStateComponent,
   ListSelectionComponent,
   ListSelectionItemComponent,
-  ListSelectionSearchComponent,
-  ListFilterPipe,
   ListSelectionAddButtonComponent,
   CardMainComponent,
   CardAsideComponent,
@@ -213,7 +194,6 @@ const components = [
   SizingFullDirective,
   ErrorBannerComponent,
   InfoBannerComponent,
-  ButtonGroupComponent,
   ExpandableFabComponent,
   FieldComponent,
   FieldInlineComponent,
@@ -226,14 +206,6 @@ const components = [
   ExpandableSearchComponent,
   RightAlignContainerComponent,
   PersistentSearchComponent,
-  AccessibleClickDirective,
-  AccessibleViewDirective,
-  AccessibleRemoveViewDirective,
-  AccessibleContextMenuViewDirective,
-  ListItemRoleDirective,
-  ToolTipDirective,
-  AvatarComponent,
-  AvatarGroupComponent,
   DisplayModeDirective,
   InputMaskComponent,
   CurrencyMaskComponent,

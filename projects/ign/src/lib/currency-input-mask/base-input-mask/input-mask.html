@@ -1,0 +1,11 @@
+<div *ngIf="displayModeChild.displayMode; then displayMode; else editMode"></div>
+<ng-template #displayMode>
+    <mat-form-field>
+        <input class="displayInput" #displayFieldInput (blur)="onBlur()" matInput [value]="value | currency:currencyCode:'symbol': '.4'">
+    </mat-form-field>
+</ng-template>
+<ng-template #editMode class="display">
+    <mat-form-field>
+        <input class="editInput" #editableFieldInput ignCurrencyMask (blur)="onEditBlur(editableFieldInput.value)" matInput [value]="value">
+    </mat-form-field>
+</ng-template>

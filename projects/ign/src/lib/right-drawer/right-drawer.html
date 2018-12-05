@@ -1,0 +1,22 @@
+<div id="backdrop" (click)="closeDrawer()"></div>
+<mat-drawer
+  [opened]="open"
+  [ngStyle]="{'width' : open ? '16rem' : '0'}"
+  [disableClose]="true">
+  <div *ngIf="!!title" class="title-container">
+    <h2 class="title">
+      {{ title }}
+    </h2>
+    <button
+      mat-icon-button
+      (click)="closeDrawer()"
+      attr.aria-label="{{ 'CLOSE' | translateIDS }}"
+      attr.aria-hidden="{{!open}}">
+      <mat-icon
+        class="close-icon">
+        close
+      </mat-icon>
+    </button>
+  </div>
+  <ng-content></ng-content>
+</mat-drawer>

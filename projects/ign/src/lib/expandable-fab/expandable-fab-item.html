@@ -1,0 +1,25 @@
+<span class="mat-tooltip fab-tooltip">{{ tooltipText }}</span>
+<a
+  *ngIf = "!router"
+  [attr.href]="href"
+  ignA11yClick
+  (click)="this.clicked.emit()"
+  mat-fab
+  role="menuitem">
+  <mat-icon>
+    {{ icon }}
+  </mat-icon>
+</a>
+
+<a
+  *ngIf = "router"
+  [routerLink]="router"
+  ignA11yClick
+  (click)="this.clicked.emit()"
+  mat-fab
+  role="menuitem">
+    <mat-icon>
+      {{ icon }}
+    </mat-icon>
+</a>
+

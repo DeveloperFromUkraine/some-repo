@@ -7,9 +7,9 @@ import { By } from '@angular/platform-browser';
 
 @Component({
   template: `
-        <p ignSizeFull>one</p>
-        <p nuSizeFull>two</p>
-    `,
+    <p ignSizeFull>one</p>
+    <p nuSizeFull>two</p>
+  `,
 })
 class DirectiveHostComponent {}
 
