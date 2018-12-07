@@ -6,17 +6,17 @@ import { FieldModule } from './field.module';
 @Component({
   selector: 'host-comp',
   template: `
-    <ign-field
+    <ign-field-inline
       [label]="label"
     >
       <input id="testInput" />
-    </ign-field>
+    </ign-field-inline>
   `
 }) class HostComponent {
   @Input() label: string;
 }
 
-describe('Field', () => {
+describe('FieldInlineComponent', () => {
   let fixture: ComponentFixture<HostComponent>;
   let component: HostComponent;
   let de: DebugElement;

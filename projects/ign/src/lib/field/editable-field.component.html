@@ -1,0 +1,16 @@
+<div class="label-container">
+  <div id="editable-value"
+       tabindex="0"
+       [attr.da]="da"
+       class="value flex-lable-value">
+    <ng-content></ng-content>
+  </div>
+  <button aria-describedby="editable-value"
+          [attr.da]="daButton"
+          mat-icon-button class="mat-icon-button"
+          [attr.aria-label]="ariaBtnLabel"
+          (click)=handleClick()>
+    <mat-icon>{{editIcon}}</mat-icon>
+  </button>
+</div>
+<div class="label">{{label}}</div>
