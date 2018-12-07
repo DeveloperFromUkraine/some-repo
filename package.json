@@ -58,7 +58,7 @@
     "url": "http://devgit.dev.us.corp:7990/projects/NUI/repos/ignite-design-system"
   },
   "publishConfig": {
-    "registry": "http://artifactory.mia.ucloud.int/artifactory/api/npm/npm-local"
+    "registry": "https://artifactory.mia.ulti.io/artifactory/api/npm/npm-local"
   },
   "author": {
     "name": "Derek Stobbe",
