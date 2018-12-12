@@ -1,6 +1,6 @@
 ### vNEXT
 
--
+- Removed date range component
 
 ### v2.0.7
 
