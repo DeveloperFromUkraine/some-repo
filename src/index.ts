@@ -101,9 +101,6 @@ import { CenterComponent } from './center/center.component';
 import { LoadingContainerComponent } from './loading-container/loading-container.component';
 import { FooterComponent } from './footer/footer.component';
 
-import { DateRangeModule } from './date-range/date-range.module';
-import { DateRangeComponent } from './date-range/date-range.component';
-
 import { TextListItemModule } from './text-list-item/text-list-item.module';
 import { TextListItemComponent } from './text-list-item/text-list-item.component';
 
@@ -212,7 +209,6 @@ const components = [
     MatRippleModule,
     MatProgressSpinnerModule,
     MatNativeDateModule,
-    DateRangeModule,
     MatListModule,
     ExpandableFabItemModule,
     TextListItemModule,
@@ -227,7 +223,6 @@ const components = [
   declarations: components,
   exports: [
     ...components,
-    DateRangeComponent,
     ExpandableFabItemComponent,
     TextListItemComponent,
     DataTableContainerComponent,
