@@ -1,0 +1,21 @@
+load("@build_bazel_rules_typescript//:defs.bzl", "ts_library")
+load("@angular//:index.bzl", "ng_module")
+
+package(default_visibility = ["//visibility:public"])
+
+ng_module(
+    name = "nestable-form",
+    srcs = [
+        "nestable-form.module.ts",
+        "nestable-form.directive.ts",
+        "index.ts"
+    ],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "@npm//@angular/forms",
+        "@angular//packages/core",
+        "@angular//packages/common"
+    ]
+)

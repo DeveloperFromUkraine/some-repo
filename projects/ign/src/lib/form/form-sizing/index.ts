@@ -1,1 +1,1 @@
-export * from './form-sizing.component';
+export * from './form-sizing.module';

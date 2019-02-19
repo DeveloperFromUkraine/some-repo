@@ -1,4 +1,4 @@
-@import '~ignite-common/styles/ignite';
+//@import '~ignite-common/styles/ignite';
 
 .app-link {
   display: flex;
@@ -9,10 +9,10 @@
 }
 
 .app-link-icon {
-  color: ign-palette($ign-palette-gray, 700);
-  fill: ign-palette($ign-palette-gray, 700);
+  //color: ign-palette($ign-palette-gray, 700);
+  //fill: ign-palette($ign-palette-gray, 700);
   svg {
-    fill: ign-palette($ign-palette-gray, 700);
+    //fill: ign-palette($ign-palette-gray, 700);
     path {
       all: inherit;
     }
@@ -27,15 +27,15 @@
 }
 
 :host(.active) ::ng-deep i {
-  color: ign-color(brand);
+  //color: ign-color(brand);
 }
 
 :host(.active) {
   .app-link-icon {
-    color: ign-color(brand);
-    fill: ign-color(brand);
+    //color: ign-color(brand);
+    //fill: ign-color(brand);
     svg {
-      fill: ign-color(brand);
+      //fill: ign-color(brand);
       path {
         all: inherit;
       }

@@ -44,7 +44,7 @@ export class ListItemContentComponent {}
     `
       :host /deep/ ign-list-item:not(:last-child) {
         padding-bottom: 16px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        /*border-bottom: 1px solid rgba(0, 0, 0, 0.12);*/
       }
     `,
   ],

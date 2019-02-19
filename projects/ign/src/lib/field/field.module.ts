@@ -6,6 +6,7 @@ import { EditableFieldComponent } from './editable-field.component';
 import { EditableFieldInlineComponent } from './editable-field-inline.component';
 import { FieldComponent } from './field.component';
 import { FieldInlineComponent } from './inline-field.component';
+import { TranslationModule } from '../localization/translation.module';
 
 const fieldComponents = [
   EditableFieldComponent,
@@ -19,7 +20,8 @@ const fieldComponents = [
     CommonModule,
     MatButtonModule,
     MatIconModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    TranslationModule
   ],
   declarations: [ ...fieldComponents ],
   exports: [ CommonModule, ...fieldComponents ]

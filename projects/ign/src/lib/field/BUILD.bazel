@@ -1,0 +1,38 @@
+load("@angular//:index.bzl", "ng_module")
+load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+sass_binary(
+    name = "style",
+    src = "field.component.scss",
+)
+
+ng_module(
+    name = "field-module",
+    srcs = [
+        "field.module.ts",
+        "editable-field.component.ts",
+        "editable-field-inline.component.ts",
+        "field.component.sandbox.ts",
+        "field.component.ts",
+        "inline-field.component.ts"
+    ],
+    assets = [
+        ":field.component.css",
+        "editable-field.component.html",
+        "editable-field-inline.component.html",
+        "field.component.html",
+        "inline-field.component.html"
+              ],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "@npm//angular-playground",
+        "@angular//packages/core",
+        "@angular//packages/common",
+        "@angular_material//src/lib:material",
+        "//projects/ign/src/lib/localization:localization-translation-module",
+    ]
+)

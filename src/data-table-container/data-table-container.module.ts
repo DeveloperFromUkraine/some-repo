@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
-import { MatPaginatorModule } from '@angular/material';
 import { DataTableContainerComponent } from './data-table-container.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
-  imports: [MatPaginatorModule],
+  imports: [MatPaginatorModule, MatTableModule],
   declarations: [DataTableContainerComponent],
   exports: [DataTableContainerComponent],
 })

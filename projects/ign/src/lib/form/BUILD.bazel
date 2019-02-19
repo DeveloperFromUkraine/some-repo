@@ -1,0 +1,21 @@
+load("@build_bazel_rules_typescript//:defs.bzl", "ts_library")
+
+package(default_visibility = ["//visibility:public"])
+
+ts_library(
+    name = "form",
+    srcs = [
+        "index.ts"
+    ],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "@angular//packages/core",
+        "@angular//packages/common",
+        "@npm//@angular/forms",
+        "//projects/ign/src/lib/form/form-group:form-group-module",
+        "//projects/ign/src/lib/form/form-sizing:form-sizing",
+        "//projects/ign/src/lib/form/nestable-form:nestable-form",
+    ]
+)

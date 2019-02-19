@@ -1,1 +1,1 @@
-export * from './card-subtitle.component';
+export * from './card-subtitle.module';

@@ -3,7 +3,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 @Component({
   selector: 'ign-card-section-subtitle',
   templateUrl: './card-section-subtitle.html',
-  styleUrls: ['./card-section-subtitle.scss'],
+  styleUrls: ['./card-section-subtitle.css'],
   encapsulation: ViewEncapsulation.None,
 })
 export class CardSectionSubTitleComponent {}

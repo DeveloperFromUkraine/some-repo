@@ -5,7 +5,7 @@ import { TranslationPipe } from '../localization/translation.pipe';
 @Component({
   selector: 'ign-persistent-search',
   templateUrl: './persistent-search.component.html',
-  styleUrls: ['./persistent-search.component.scss'],
+  styleUrls: ['./persistent-search.component.css'],
 })
 export class PersistentSearchComponent {
   @ViewChild('searchInput') searchInput: ElementRef;

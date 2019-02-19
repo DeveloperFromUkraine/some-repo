@@ -11,7 +11,7 @@ interface SanitizedAvatar {
 @Component({
   selector: 'ign-avatar-group',
   templateUrl: './avatar-group.component.html',
-  styleUrls: ['./avatar-group.component.scss'],
+  styleUrls: ['./avatar-group.component.css'],
 })
 export class AvatarGroupComponent implements AfterViewInit, OnChanges {
   @Input() avatars: Avatar[];

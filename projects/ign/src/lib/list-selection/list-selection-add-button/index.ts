@@ -1,1 +1,1 @@
-export * from './list-selection-add-button.component';
+export * from './list-selection-add-button.module';

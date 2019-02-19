@@ -1,0 +1,29 @@
+load("@angular//:index.bzl", "ng_module")
+load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+sass_binary(
+    name = "style",
+    src = "data-table-container.scss",
+)
+
+ng_module(
+    name = "data-table-container-module",
+    srcs = [
+        "data-table-container.module.ts",
+        "data-table-container.component.ts",
+    ],
+    assets = [
+        ":data-table-container.css",
+        "data-table-container.component.html"
+        ],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "@angular//packages/core",
+        "@angular//packages/common",
+        "@angular_material//src/lib:material"
+    ]
+)

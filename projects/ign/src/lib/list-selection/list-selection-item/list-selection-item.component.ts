@@ -3,7 +3,7 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
 @Component({
   selector: 'ign-list-selection-item',
   templateUrl: './list-selection-item.html',
-  styleUrls: ['./list-selection-item.scss'],
+  styleUrls: ['./list-selection-item.css'],
   encapsulation: ViewEncapsulation.Emulated,
 })
 export class ListSelectionItemComponent {

@@ -1,6 +1,5 @@
 import {
   Component,
-  Directive,
   Input,
   ContentChild,
   Output,
@@ -12,18 +11,12 @@ import {
   ChangeDetectorRef,
 } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
-
-@Directive({
-  selector: '[displayMode]',
-})
-export class DisplayModeDirective {
-  @Input() displayMode;
-}
+import { DisplayModeDirective } from './input-mask.directive';
 
 @Component({
   selector: 'ign-input-mask',
   templateUrl: './input-mask.html',
-  styleUrls: ['./input-mask.scss'],
+  styleUrls: ['./input-mask.css'],
 })
 export class InputMaskComponent implements OnInit, AfterViewChecked {
   @ContentChild(DisplayModeDirective) displayModeChild: DisplayModeDirective;

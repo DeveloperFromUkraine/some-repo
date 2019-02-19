@@ -1,4 +1,4 @@
-@import '~ignite-common/styles/ignite';
+//@import '~ignite-common/styles/ignite';
 
 %flex-centering {
   display: flex;
@@ -12,21 +12,21 @@
 }
 
 // Colors
-$white: ign-color('white');
-$light-gray: ign-palette($ign-palette-gray, 200);
+//$white: ign-color('white');
+//$light-gray: ign-palette($ign-palette-gray, 200);
 
 .container--initials {
   background-color: ign-color(dark);
 }
 
 .container--icon {
-  background-color: $light-gray;
+  //background-color: $light-gray;
 }
 
 .container {
   margin: auto;
   border-radius: 50%;
-  font-family: $ign-font-family;
+  //font-family: $ign-font-family;
 
   overflow: hidden;
   display: flex;
@@ -44,7 +44,7 @@ $light-gray: ign-palette($ign-palette-gray, 200);
       @extend %flex-centering;
 
       font-size: ign-typography(caption, font-size);
-      color: $white;
+      //color: $white;
     }
 
     .icon {
@@ -64,7 +64,7 @@ $light-gray: ign-palette($ign-palette-gray, 200);
       @extend %flex-centering;
 
       font-size: 14px; // TODO: Discuss with design system team on achieving these sizes
-      color: $white;
+      //color: $white;
     }
 
     .icon {
@@ -84,7 +84,7 @@ $light-gray: ign-palette($ign-palette-gray, 200);
       @extend %flex-centering;
 
       font-size: 16px; // TODO: Discuss with design system team on achieving these sizes
-      color: $white;
+      //color: $white;
     }
 
     .icon {
@@ -104,7 +104,7 @@ $light-gray: ign-palette($ign-palette-gray, 200);
       @extend %flex-centering;
 
       font-size: 32px; // TODO: Discuss with design system team on achieving these sizes
-      color: $white;
+      //color: $white;
     }
 
     .icon {
@@ -124,7 +124,7 @@ $light-gray: ign-palette($ign-palette-gray, 200);
       @extend %flex-centering;
 
       font-size: ign-typography(subheading-2, font-size);
-      color: $white;
+      //color: $white;
     }
 
     .icon {

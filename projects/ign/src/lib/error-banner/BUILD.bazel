@@ -1,0 +1,26 @@
+load("@angular//:index.bzl", "ng_module")
+load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+sass_binary(
+    name = "error-banner-style",
+    src = "error-banner.scss",
+)
+
+ng_module(
+    name = "error-banner",
+    srcs = [
+        "error-banner.module.ts",
+        "error-banner.component.ts",
+        ],
+    assets = [":error-banner.css", "error-banner.html"],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "@angular//packages/core",
+        "@angular//packages/common",
+        "@npm//@angular/forms",
+    ]
+)

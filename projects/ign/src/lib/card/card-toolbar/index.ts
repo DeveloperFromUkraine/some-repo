@@ -1,1 +1,1 @@
-export * from './card-toolbar.component';
+export * from './card-toolbar.module';

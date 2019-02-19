@@ -1,4 +1,4 @@
-@import '~ignite-common/styles/ignite';
+//@import '~ignite-common/styles/ignite';
 
 :host {
   display: flex;
@@ -16,17 +16,17 @@
   align-self: flex-start;
 }
 
-:host /deep/ button {
+:host ::ng-deep button {
   text-transform: uppercase;
   color: ign-color(secondary);
 }
 
-:host /deep/ mat-icon {
+:host ::ng-deep mat-icon {
   height: 28px;
   width: 28px;
 }
 
 // todo: should card-title include margin at all?
-:host /deep/ .mat-card-title.ign-card-title  {
+:host ::ng-deep .mat-card-title.ign-card-title  {
   margin-bottom: 0;
 }

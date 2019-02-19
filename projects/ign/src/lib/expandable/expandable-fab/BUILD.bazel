@@ -1,0 +1,29 @@
+load("@angular//:index.bzl", "ng_module")
+load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+sass_binary(
+    name = "style",
+    src = "expandable-fab.scss",
+)
+
+ng_module(
+    name = "expandable-fab-module",
+    srcs = [
+        "expandable-fab.module.ts",
+        "expandable-fab.component.ts",
+    ],
+    assets = [":expandable-fab.css", "expandable-fab.html"],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "@angular//packages/core",
+        "@angular_material//src/lib:material",
+        "@angular//packages/router",
+        "@angular//packages/common",
+        "//projects/ign/src/lib/expandable/expandable-fab-item:expandable-fab-item-module",
+        "//projects/ign/src/lib/localization:localization-translation-module"
+    ]
+)

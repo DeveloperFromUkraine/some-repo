@@ -1,0 +1,33 @@
+load("@angular//:index.bzl", "ng_module")
+load("@build_bazel_rules_typescript//:defs.bzl", "ts_library")
+load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+sass_binary(
+    name = "avatar-style",
+    src = "avatar.component.scss",
+)
+
+ng_module(
+    name = "avatar",
+    srcs = [
+        "avatar.module.ts",
+        "avatar.component.ts",
+        "avatar.component.sandbox.ts"
+        ],
+    assets = ["avatar.component.html", ":avatar.component.css"],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@angular/forms",
+        "@npm//@types",
+        "@npm//angular-playground",
+        "@angular//packages/core",
+#        "@npm//@angular/material",
+        "@angular//packages/router",
+        "@angular//packages/common",
+        "@angular_material//src/lib:material"
+    ]
+)
+

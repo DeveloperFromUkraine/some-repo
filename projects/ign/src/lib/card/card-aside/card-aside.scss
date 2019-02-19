@@ -1,4 +1,4 @@
-@import '~ignite-common/styles/ignite';
+//@import '~ignite-common/styles/ignite';
 
 
 $mq-md-and-lower: 'only screen and (max-width: 1023px)';
@@ -9,8 +9,8 @@ $mq-xxl: 'only screen and (min-width: 1440px)';
 :host {
   flex: 2;
   padding: 48px 48px;
-  background-color: ign-color(light);
-  border-left: 5px solid ign-palette($ign-palette-gray, 200);
+  //background-color: ign-color(light);
+  //border-left: 5px solid ign-palette($ign-palette-gray, 200);
 
   @media #{$mq-md-and-lower} {
     display: none;

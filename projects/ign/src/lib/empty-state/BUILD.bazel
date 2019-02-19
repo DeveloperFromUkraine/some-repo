@@ -1,0 +1,33 @@
+load("@angular//:index.bzl", "ng_module")
+load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+sass_binary(
+    name = "empty-state-title-style",
+    src = "empty-state-title.scss",
+)
+sass_binary(
+    name = "empty-state-description-style",
+    src = "empty-state-description.scss",
+)
+sass_binary(
+    name = "empty-state-style",
+    src = "empty-state.scss",
+)
+
+ng_module(
+    name = "empty-state-module",
+    srcs = [
+        "empty-state.module.ts",
+        "empty-state.component.ts",
+    ],
+    assets = [":empty-state.css", ":empty-state-description.css", ":empty-state-title.css", "empty-state.html"],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "@angular//packages/core",
+        "@angular//packages/common",
+    ]
+)

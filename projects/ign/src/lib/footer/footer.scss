@@ -1,4 +1,4 @@
-@import '~ignite-common/styles/ignite';
+//@import '~ignite-common/styles/ignite';
 
 $text-secondary-font-size: 12px;
 $text-secondary-font-weight: 400;
@@ -15,5 +15,5 @@ $text-secondary-font-weight: 400;
 .footer-text {
   font-size: $text-secondary-font-size;
   font-weight: $text-secondary-font-weight;
-  color: ign-color(text-secondary);
+  //color: ign-color(text-secondary);
 }

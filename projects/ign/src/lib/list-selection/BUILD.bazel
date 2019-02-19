@@ -1,0 +1,28 @@
+load("@angular//:index.bzl", "ng_module")
+load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+sass_binary(
+    name = "style",
+    src = "list-selection.scss",
+)
+
+ng_module(
+    name = "list-selection-module",
+    srcs = [
+        "list-selection.module.ts",
+        "list-selection.component.ts",
+        "index.ts"
+    ],
+    assets = [":list-selection.css", "list-selection.html"],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "@angular//packages/core",
+        "@angular//packages/common",
+        "//projects/ign/src/lib/list-selection/list-selection-add-button:list-selection-add-button-module",
+        "//projects/ign/src/lib/list-selection/list-selection-item:list-selection-item-module",
+    ]
+)

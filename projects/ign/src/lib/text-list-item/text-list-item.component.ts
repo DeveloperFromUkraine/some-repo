@@ -3,7 +3,7 @@ import { Component, Input, OnChanges } from '@angular/core';
 @Component({
   selector: 'ign-text-list-item',
   templateUrl: './text-list-item.html',
-  styleUrls: ['./text-list-item.scss'],
+  styleUrls: ['./text-list-item.css'],
 })
 export class TextListItemComponent implements OnChanges {
   @Input() primaryText: string;

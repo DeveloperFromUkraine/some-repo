@@ -1,0 +1,109 @@
+#load("@build_bazel_rules_typescript//:defs.bzl", "ts_library")
+load("@angular//:index.bzl", "ng_module")
+
+package(default_visibility = ["//visibility:public"])
+
+ng_module(
+    name = "localization-translation-module",
+    srcs = glob([
+        "translation.module.ts",
+        "translation.pipe.ts",
+        "translation.service.ts",
+        "translation-map.ts"
+        ]),
+    deps = [
+        "@rxjs",
+        "@angular//packages/core",
+        "@npm//tslib",
+        "@npm//@types",
+        "@angular//packages/common",
+    ]
+)
+
+#ts_library(
+#    name = "translation-pipe",
+#    srcs = [
+#        "translation.pipe.ts"
+#    ],
+#    deps = [
+#        "@angular//packages/core",
+#        "@npm//tslib",
+#        "@npm//@types",
+#        ":translation-service"
+#    ]
+#)
+#
+#ts_library(
+#    name = "translation-service",
+#    srcs = ["translation.service.ts"],
+#    deps = [
+#                "@angular//packages/core",
+#                "@rxjs",
+#                ":translation-map",
+#                "@npm//tslib",
+#                "@npm//@types"
+#            ]
+#)
+#ts_library(
+#    name = "translation-map",
+#    srcs = ["translation-map.ts"],
+#    tsconfig = "//:tsconfig.json",
+#        deps = [
+#            "@angular//packages/core",
+#            "@npm//@types",
+#            "@npm//tslib",
+#        ]
+#)
+
+
+#ts_library(
+#    name = "translation-service",
+#    srcs = ["translation.service.ts"],
+#    deps = [
+#                "@angular//packages/core",
+#                "@rxjs",
+#                ":translation-map",
+#                "@npm//tslib",
+#                "@npm//@types",
+#
+#            ]
+#)
+#
+#ts_library(
+#    name = "translation-pipe",
+#    srcs = ["translation.pipe.ts"],
+#    tsconfig = "//:tsconfig.json",
+#        deps = [
+#            "@npm//tslib",
+#            "@npm//@types",
+#            "@angular//packages/core",
+#            ":translation-service",
+#        ]
+#)
+#
+#ts_library(
+#    name = "translation-map",
+#    srcs = ["translation-map.ts"],
+#    tsconfig = "//:tsconfig.json",
+#        deps = [
+#            "@angular//packages/core",
+#            "@npm//@types",
+#            "@npm//tslib",
+#        ]
+#)
+#
+#ts_library(
+#    name = "localization",
+#    srcs = glob(
+#            include=["**/*.ts"],
+#            exclude=["**/*.spec.ts"]),
+#    tsconfig = "//:tsconfig.json",
+#    deps = [
+#        "@rxjs",
+#        "@npm//tslib",
+#        "@npm//@types",
+#        "@angular//packages/core",
+#        "@angular//packages/router",
+#        "@angular//packages/common",
+#    ]
+#)

@@ -1,0 +1,21 @@
+load("@angular//:index.bzl", "ng_module")
+#load("@build_bazel_rules_typescript//:defs.bzl", "ts_library")
+
+package(default_visibility = ["//visibility:public"])
+
+ng_module(
+    name = "card-header-container",
+    srcs = [
+        "card-header-container.module.ts",
+        "card-header-container.component.ts",
+        "index.ts"
+    ],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "@angular//packages/core",
+        "@angular//packages/common",
+    ]
+)
+

@@ -1,1 +1,1 @@
-export * from './list-content-card.component';
+export * from './list-content-card.module';

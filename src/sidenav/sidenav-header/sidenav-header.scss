@@ -1,12 +1,12 @@
-@import '~ignite-common/styles/ignite';
+//@import '~ignite-common/styles/ignite';
 
 .header-container {
-  color: ign-color('white');
-  background-color: ign-color(dark);
+  //color: ign-color('white');
+  //background-color: ign-color(dark);
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 11px;
-  box-shadow: 0 1px 8px 0 ign-palette($ign-palette-gray, 300);
+  //box-shadow: 0 1px 8px 0 ign-palette($ign-palette-gray, 300);
   //TODO: RGBA COLORS
   //box-shadow: 0 1px 8px 0 rgba(0,0,0,0.20);
 }

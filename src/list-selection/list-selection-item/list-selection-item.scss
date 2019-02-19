@@ -1,4 +1,4 @@
-@import '~ignite-common/styles/ignite';
+//@import '~ignite-common/styles/ignite';
 
 $left-border-width: 3px;
 
@@ -11,21 +11,21 @@ $left-border-width: 3px;
   justify-content: flex-start;
   padding: 0 16px 0 (16px - $left-border-width);
 
-  border-left: $left-border-width solid ign-color('transparent');
+  //border-left: $left-border-width solid ign-color('transparent');
   //TODO: RGBA COLORS
   //border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid ign-palette($ign-palette-gray, 200);
+  //border-bottom: 1px solid ign-palette($ign-palette-gray, 200);
   height: 72px;
 
   font-size: 18px;
   //TODO: RGBA COLORS
   //color: rgba(0, 0, 0, 0.5);
-  color: ign-palette($ign-palette-gray, 200);
+  //color: ign-palette($ign-palette-gray, 200);
   text-decoration: none;
   &:hover, &:active {
     //TODO: RGBA COLORS
     //background: rgba(0,0,0,0.015);
-    background: ign-color(light);
+    //background: ign-color(light);
   }
   position: relative;
 }
@@ -34,11 +34,11 @@ $left-border-width: 3px;
 :host(.active) ::ng-deep .list-detail-container {
   //TODO: RGBA COLORS
   //olor: rgba(0, 0, 0, 0.8);
-  color: ign-color(dark);
-  border-left-color: ign-color(brand);
+  //color: ign-color(dark);
+  //border-left-color: ign-color(brand);
   //TODO: RGBA COLORS
   //background: rgba(0, 0, 0, 0.03);
-  background: ign-color(light);
+  //background: ign-color(light);
 }
 
 .list-detail-info {
@@ -49,41 +49,41 @@ $left-border-width: 3px;
 }
 
 .list-detail-title {
-  font-size: ign-font-size('xxxxs');
-  color: ign-color('black');
+  //font-size: ign-font-size('xxxxs');
+  //color: ign-color('black');
   opacity: 0.87;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
   min-width: 0;
-  line-height: ign-line-height('xxxxs');
+  //line-height: ign-line-height('xxxxs');
 }
 
 .list-detail-subtitle {
-  font-size: ign-font-size('xxxxs');
+  //font-size: ign-font-size('xxxxs');
   margin-top: 4px;
-  color: ign-color('black');
+  //color: ign-color('black');
   opacity: 0.54;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
   min-width: 0;
-  line-height: ign-line-height('xxxxs');
+  //line-height: ign-line-height('xxxxs');
 }
 
 .list-detail-status {
 
-  font-size: ign-font-size('xxxxs');
-  color: ign-color('black');
+  //font-size: ign-font-size('xxxxs');
+  //color: ign-color('black');
   opacity: 0.54;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
   min-width: 0;
-  line-height: ign-line-height('xxxxs');
+  //line-height: ign-line-height('xxxxs');
   position: absolute;
   bottom: 0.5rem;
   right: 0;
@@ -91,7 +91,7 @@ $left-border-width: 3px;
 }
 
 .gray-square {
-  background-color: ign-palette($ign-palette-gray, 400);
+  //background-color: ign-palette($ign-palette-gray, 400);
   width: 36px;
   height: 36px;
   border-radius: 100%;

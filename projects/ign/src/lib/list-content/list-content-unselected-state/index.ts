@@ -1,1 +1,1 @@
-export * from './list-content-unselected-state.component';
+export * from './list-content-unselected-state.module';

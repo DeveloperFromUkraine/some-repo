@@ -1,24 +1,24 @@
-@import '~ignite-common/styles/ignite';
+//@import '~ignite-common/styles/ignite';
 @import '~@angular/material/theming';
 @include mat-core();
 
-$ulti-primary: mat-palette($ign-palette-teal, 700, 300, 900);
-$ulti-secondary: mat-palette($ign-palette-blue, 800, 300, 900);
-$ulti-error: mat-palette($ign-palette-red, 700, 300, 900);
-
-$ulti-brand: mat-palette($ign-palette-green, 700, 300, 900);
-
-$ulti-theme: mat-light-theme($ulti-primary, $ulti-secondary, $ulti-error);
-@include angular-material-theme($ulti-theme);
+//$ulti-primary: mat-palette($ign-palette-teal, 700, 300, 900);
+//$ulti-secondary: mat-palette($ign-palette-blue, 800, 300, 900);
+//$ulti-error: mat-palette($ign-palette-red, 700, 300, 900);
+//
+//$ulti-brand: mat-palette($ign-palette-green, 700, 300, 900);
+//
+//$ulti-theme: mat-light-theme($ulti-primary, $ulti-secondary, $ulti-error);
+//@include angular-material-theme($ulti-theme);
 
 $custom-typography: mat-typography-config(
-  $font-family: $ign-font-family
+  //$font-family: $ign-font-family
 );
 
 @include angular-material-typography($custom-typography);
 
 html {
-  background-color: ign-color(surface);
+  //background-color: ign-color(surface);
   height: 100%;
 }
 
@@ -46,5 +46,5 @@ playground-host {
   margin: 8px;
 }
 
-@import '~ignite-common/styles/overrides/angular-material';
+//@import '~ignite-common/styles/overrides/angular-material';
 

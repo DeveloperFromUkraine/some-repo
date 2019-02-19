@@ -1,0 +1,26 @@
+load("@angular//:index.bzl", "ng_module")
+load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+sass_binary(
+    name = "style",
+    src = "card-main.scss",
+)
+
+ng_module(
+    name = "card-main-module",
+    srcs = [
+        "card-main.module.ts",
+        "card-main.component.ts",
+        "index.ts"
+    ],
+    assets = [":card-main.css", "card-main.html"],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "@angular//packages/core",
+        "@angular//packages/common",
+    ]
+)

@@ -1,17 +1,17 @@
-@import '~ignite-common/styles/ignite';
+//@import '~ignite-common/styles/ignite';
 
 :host {
   flex: 0 0 30%;
   max-width: 350px;
   position: relative;
-  background-color: ign-color('white');
+  //background-color: ign-color('white');
   height: 100%;
 }
 
 .container {
   padding: 0 0 24px 0;
   overflow: hidden;
-  border-right: 1px solid ign-palette($ign-palette-gray, 200);
+  //border-right: 1px solid ign-palette($ign-palette-gray, 200);
   //TODO: RGBA COLORS
   //border-right: 1px solid rgba(0, 0, 0, 0.1);
   overflow-y: auto;

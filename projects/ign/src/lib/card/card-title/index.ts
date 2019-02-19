@@ -1,1 +1,1 @@
-export * from './card-title.component';
+export * from './card-title.module';

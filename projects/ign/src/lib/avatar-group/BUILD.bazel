@@ -1,0 +1,70 @@
+load("@angular//:index.bzl", "ng_module")
+#load("@build_bazel_rules_typescript//:defs.bzl", "ts_library")
+load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
+#
+package(default_visibility = ["//visibility:public"])
+#
+sass_binary(
+    name = "avatar-group-component-style",
+    src = "avatar-group.component.scss"
+)
+#
+#ts_library(
+#    name = "avatar-group-component",
+#    srcs = ["avatar-group.component.ts"],
+#    deps = [
+#        "//projects/ign/src/lib/localization:localization",
+#        "@angular//packages/core",
+#        "@npm//tslib",
+#        "@npm//@types",
+#        ":avatar-group-types"
+#    ]
+#)
+#
+#ts_library(
+#    name = "avatar-group-types",
+#    srcs = ["avatar-group.types.ts"],
+#    deps = [
+#        "@npm//@types",
+#        "@npm//tslib"
+#    ]
+#)
+#
+#ts_library(
+#    name = "avatar-group-mock",
+#    srcs = ["avatars.mock.ts"],
+#    deps = [
+#        ":avatar-group-types",
+#        "@npm//@types",
+#        "@npm//tslib"
+#    ]
+#)
+#
+ng_module(
+    name = "avatar-group-module",
+    srcs = [
+        "avatar-group.module.ts",
+        "avatar-group.component.ts",
+        "avatar-group.types.ts",
+        "avatars.mock.ts",
+        "avatar-group.component.sandbox.ts"
+    ],
+    assets = [
+        "avatar-group.component.html",
+        ":avatar-group.component.css"
+    ],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//@types",
+        "@npm//tslib",
+        "@angular//packages/core",
+        "@npm//@angular/material",
+        "@angular_material//src/lib:material",
+        "@angular//packages/router",
+        "@angular//packages/common",
+        "@npm//angular-playground",
+        "//projects/ign/src/lib/avatar:avatar",
+        "//projects/ign/src/lib/localization:localization-translation-module",
+    ]
+)
+

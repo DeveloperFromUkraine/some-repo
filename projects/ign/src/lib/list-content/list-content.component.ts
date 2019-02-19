@@ -3,7 +3,7 @@ import { Component, HostListener } from '@angular/core';
 @Component({
   selector: 'ign-list-content',
   templateUrl: './list-content.html',
-  styleUrls: ['./list-content.scss'],
+  styleUrls: ['./list-content.css'],
 })
 export class ListContentComponent {
   active: number;

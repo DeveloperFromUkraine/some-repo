@@ -11,7 +11,7 @@ import {
 @Component({
   selector: 'ign-sidenav-list-item',
   templateUrl: './sidenav-list-item.html',
-  styleUrls: ['./sidenav-list-item.scss'],
+  styleUrls: ['./sidenav-list-item.css'],
   encapsulation: ViewEncapsulation.Emulated,
 })
 export class SideNavListItemComponent {

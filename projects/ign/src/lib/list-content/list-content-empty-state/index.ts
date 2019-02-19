@@ -1,1 +1,1 @@
-export * from './list-content-empty-state.component';
+export * from './list-content-empty-state.module';

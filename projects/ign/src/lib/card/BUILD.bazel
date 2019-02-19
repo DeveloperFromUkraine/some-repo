@@ -1,0 +1,27 @@
+load("@angular//:index.bzl", "ng_module")
+
+package(default_visibility = ["//visibility:public"])
+
+ng_module(
+    name = "card",
+    srcs = [
+        "index.ts"
+        ],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "@angular//packages/core",
+        "//projects/ign/src/lib/card/card-actions:card-actions-module",
+        "//projects/ign/src/lib/card/card-aside:card-aside-module",
+        "//projects/ign/src/lib/card/card-header-container:card-header-container",
+        "//projects/ign/src/lib/card/card-main:card-main-module",
+        "//projects/ign/src/lib/card/card-section:card-section-module",
+        "//projects/ign/src/lib/card/card-section-subtitle:card-section-subtitle-module",
+        "//projects/ign/src/lib/card/card-section-title:card-section-title-module",
+        "//projects/ign/src/lib/card/card-subtitle:card-subtitle",
+        "//projects/ign/src/lib/card/card-title:card-title-module",
+        "//projects/ign/src/lib/card/card-toolbar:card-toolbar-module",
+    ]
+)
+

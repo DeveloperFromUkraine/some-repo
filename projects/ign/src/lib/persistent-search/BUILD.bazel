@@ -1,0 +1,32 @@
+load("@angular//:index.bzl", "ng_module")
+load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+sass_binary(
+    name = "style",
+    src = "persistent-search.component.scss",
+)
+
+ng_module(
+    name = "persistent-search-module",
+    srcs = [
+        "persistent-search.module.ts",
+        "persistent-search.component.ts",
+    ],
+    assets = [
+        ":persistent-search.component.css",
+        "persistent-search.component.html"
+        ],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "@angular//packages/core",
+        "@npm//@angular/material",
+        "@angular//packages/router",
+        "@angular//packages/common",
+        "@angular_material//src/lib:material",
+        "//projects/ign/src/lib/localization:localization-translation-module"
+    ]
+)

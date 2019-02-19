@@ -1,0 +1,31 @@
+load("@angular//:index.bzl", "ng_module")
+load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+sass_binary(
+    name = "style",
+    src = "list-content.scss",
+)
+
+ng_module(
+    name = "list-content-module",
+    srcs = [
+        "list-content.module.ts",
+        "list-content.component.ts",
+        "index.ts"
+    ],
+    assets = [":list-content.css", "list-content.html"],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "@angular//packages/core",
+        "@angular//packages/common",
+        "//projects/ign/src/lib/localization:localization-translation-module",
+        "//projects/ign/src/lib/list-content/list-content-card:list-content-card-module",
+        "//projects/ign/src/lib/list-content/list-content-empty-state:list-content-empty-state-module",
+        "//projects/ign/src/lib/list-content/list-content-panel:list-content-panel-module",
+        "//projects/ign/src/lib/list-content/list-content-unselected-state:list-content-unselected-state-module",
+    ]
+)

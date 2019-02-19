@@ -3,6 +3,7 @@
   justify-content: flex-end;
 }
 
-:host /deep/ button {
+:host button { // TODO ask about this from Dima (/deep/)
   margin-left: 8px;
 }
+

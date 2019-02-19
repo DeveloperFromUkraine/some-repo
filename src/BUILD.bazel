@@ -1,0 +1,115 @@
+#load("@angular//:index.bzl", "ng_module")
+#load("@build_bazel_rules_nodejs//:defs.bzl", "history_server", "rollup_bundle")
+#load("@build_bazel_rules_nodejs//internal/web_package:web_package.bzl", "web_package")
+#load("@build_bazel_rules_typescript//:defs.bzl", "ts_library", "ts_config", "ts_devserver")
+#
+#package(default_visibility = ["//visibility:public"])
+#
+## Needed because the prodserver only loads static files that appear under this
+## package.
+#genrule(
+#    name = "zonejs",
+#    srcs = ["@npm//node_modules/zone.js:dist/zone.min.js"],
+#    outs = ["zone.min.js"],
+#    cmd = "cp $< $@",
+#)
+#
+#genrule(
+#    name = "systemjs",
+#    srcs = ["@npm//node_modules/systemjs:dist/system.js"],
+#    outs = ["system.js"],
+#    cmd = "cp $< $@",
+#)
+#
+#ts_config(
+#    name = "tsconfig-test",
+#    src = "tsconfig.spec.json",
+#    deps = [":tsconfig.json"],
+#)
+#
+#ng_module(
+#    name = "src",
+#    srcs = glob(
+#        include = ["**/*.ts"],
+#        exclude = [
+#            "**/*.spec.ts",
+#            "main.ts",
+#            "test.ts",
+#            "initialize_testbed.ts",
+#        ],
+#    ),
+#    assets = [
+#        "//src/styles:styles",
+#        "//src:index.html",
+#    ],
+#    tsconfig = "//:tsconfig.json",
+#    deps = [
+#        "@angular//packages/core",
+#        "@angular//packages/platform-browser",
+#        "@angular//packages/platform-browser/animations",
+#        "@angular//packages/router",
+#    ],
+#)
+#
+#ts_devserver(
+#    name = "devserver1",
+#    port = 4200,
+#    additional_root_paths = [
+#        "npm/node_modules/zone.js/dist",
+#    ],
+#    entry_module = "ignite_design_system_2/src/main.dev",
+#    serving_path = "/bundle.min.js",
+#    static_files = [
+#        "@npm//node_modules/zone.js:dist/zone.min.js",
+#        "index.html",
+#    ],
+#    deps = ["//src"],
+#)
+#
+#rollup_bundle(
+#    name = "bundle",
+#    entry_point = "src/main.prod",
+#    deps = ["//src"],
+#)
+#
+#ts_library(
+#    name = "initialize_testbed",
+#    testonly = 1,
+#    srcs = [
+#        "initialize_testbed.ts",
+#    ],
+#    deps = [
+#        "@angular//packages/core/testing",
+#        "@angular//packages/platform-browser-dynamic/testing",
+#        "@npm//@types",
+#    ],
+#)
+#
+#ts_web_test_suite(
+#    name = "test",
+#    srcs = ["@npm//node_modules/tslib:tslib.js"],
+#    runtime_deps = [
+#        ":initialize_testbed",
+#    ],
+#    # do not sort
+#    bootstrap = [
+#        "@npm//node_modules/zone.js:dist/zone-testing-bundle.js",
+#        "@npm//node_modules/reflect-metadata:Reflect.js",
+#    ],
+#    browsers = [
+#        "@io_bazel_rules_webtesting//browsers:chromium-local",
+#    ],
+#    deps = [
+#        ":test_lib",
+#        "@npm//karma-jasmine",
+#    ],
+#)
+#
+#history_server(
+#    name = "prodserver",
+#    data = [
+#        "index.html",
+#        ":bundle",
+#        ":zonejs",
+#    ],
+#)

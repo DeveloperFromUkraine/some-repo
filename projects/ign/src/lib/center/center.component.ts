@@ -3,7 +3,7 @@ import {AfterViewInit, Component} from '@angular/core';
 @Component({
   selector: 'ign-center',
   templateUrl: './center.html',
-  styleUrls: ['./center.scss'],
+  styleUrls: ['./center.css'],
 })
 export class CenterComponent implements AfterViewInit {
   ngAfterViewInit() {

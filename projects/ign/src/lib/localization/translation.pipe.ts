@@ -1,9 +1,7 @@
-import { Pipe, PipeTransform, ChangeDetectorRef } from '@angular/core';
+import { PipeTransform, ChangeDetectorRef, Pipe } from '@angular/core';
 import { TranslationService } from './translation.service';
-@Pipe({
-  name: 'translateIDS',
-  pure: false,
-})
+
+@Pipe({name: 'translateIDS'})
 export class TranslationPipe implements PipeTransform {
   constructor(private _ref: ChangeDetectorRef) {
     TranslationService.changeTranslationObservable.subscribe(translation => {

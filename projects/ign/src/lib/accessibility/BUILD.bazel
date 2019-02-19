@@ -1,0 +1,32 @@
+load("@build_bazel_rules_typescript//:defs.bzl", "ts_library")
+load("@angular//:index.bzl", "ng_module")
+
+package(default_visibility = ["//visibility:public"])
+#
+#ts_library(
+#    name = "accessible-context-menu-view",
+#    srcs = ["accessible-context-menu-view.directive.ts"],
+#    deps = [
+#        "@angular//packages/core",
+#        "//projects/ign/src/lib/localization:translation-pipe"
+#    ]
+#)
+
+ng_module(
+    name = "accessibility-module",
+        srcs = [
+            "accessibility.module.ts",
+            "accessible-click.directive.ts",
+            "accessible-context-menu-view.directive.ts",
+            "accessible-list-item-role.directive.ts",
+            "accessible-remove-view.directive.ts",
+            "accessible-tooltip.directive.ts",
+            "accessible-view.directive.ts"
+        ],
+        deps = [
+            "@npm//tslib",
+            "@npm//@types",
+            "@angular//packages/core",
+            "//projects/ign/src/lib/localization:localization-translation-module",
+        ],
+)

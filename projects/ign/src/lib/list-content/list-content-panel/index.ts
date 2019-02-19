@@ -1,1 +1,1 @@
-export * from './list-content-panel.component';
+export * from './list-content-panel.module';

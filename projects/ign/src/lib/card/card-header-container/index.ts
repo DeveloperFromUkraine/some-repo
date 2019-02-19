@@ -1,1 +1,1 @@
-export * from './card-header-container.component';
+export * from './card-header-container.module';

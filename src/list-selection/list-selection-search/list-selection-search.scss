@@ -1,4 +1,4 @@
-@import '~ignite-common/styles/ignite';
+//@import '~ignite-common/styles/ignite';
 
 .container {
   display: flex;
@@ -7,7 +7,7 @@
   height: 64px;
   //TODO: RGBA COLORS
   //box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.4);
-  box-shadow: 0px 0px 9px 0px ign-palette($ign-palette-gray, 400);
+  //box-shadow: 0px 0px 9px 0px ign-palette($ign-palette-gray, 400);
   margin-bottom: 4px;
   padding-left: 16px;
 }

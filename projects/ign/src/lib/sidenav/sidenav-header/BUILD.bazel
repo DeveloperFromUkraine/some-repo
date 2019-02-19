@@ -1,0 +1,26 @@
+load("@angular//:index.bzl", "ng_module")
+load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+sass_binary(
+    name = "style",
+    src = "sidenav-header.scss",
+)
+
+ng_module(
+    name = "sidenav-header-module",
+    srcs = [
+        "sidenav-header.module.ts",
+        "sidenav-header.component.ts",
+        "index.ts"
+    ],
+    assets = [":sidenav-header.css", "sidenav-header.html"],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "@angular//packages/core",
+        "@angular//packages/common",
+    ]
+)

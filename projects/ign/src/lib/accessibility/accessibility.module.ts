@@ -5,8 +5,12 @@ import { AccessibleRemoveViewDirective } from './accessible-remove-view.directiv
 import { AccessibleContextMenuViewDirective } from './accessible-context-menu-view.directive';
 import { AccessibleListItemRoleDirective } from './accessible-list-item-role.directive';
 import { AccessibleTooltipDirective } from './accessible-tooltip.directive';
+import { TranslationModule } from '../localization/translation.module';
 
 @NgModule({
+  imports: [
+    TranslationModule
+  ],
   declarations: [
     AccessibleClickDirective,
     AccessibleViewDirective,

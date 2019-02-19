@@ -1,1 +1,1 @@
-export * from './card-main.component';
+export * from './card-main.module';

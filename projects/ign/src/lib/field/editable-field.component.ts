@@ -6,7 +6,7 @@ import { FieldComponent } from './field.component';
 @Component({
   selector: 'ign-editable-field',
   templateUrl: './editable-field.component.html',
-  styleUrls: ['field.component.scss'],
+  styleUrls: ['./field.component.css'],
 })
 export class EditableFieldComponent extends FieldComponent implements OnInit {
   @Input() ariaBtnLabel;

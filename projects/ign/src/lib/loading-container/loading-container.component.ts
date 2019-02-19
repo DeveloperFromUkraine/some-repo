@@ -6,7 +6,7 @@ const DEFAULT_LOADING_DELAY_MS = 400;
 
 @Component({
   selector: 'ign-loading-container',
-  styleUrls: ['./loading-container.scss'],
+  styleUrls: ['./loading-container.css'],
   templateUrl: './loading-container.html',
 })
 export class LoadingContainerComponent implements OnInit {

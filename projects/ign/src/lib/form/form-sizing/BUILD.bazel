@@ -1,0 +1,20 @@
+load("@build_bazel_rules_typescript//:defs.bzl", "ts_library")
+load("@angular//:index.bzl", "ng_module")
+
+package(default_visibility = ["//visibility:public"])
+
+ng_module(
+    name = "form-sizing",
+    srcs = [
+        "form-sizing.module.ts",
+        "form-sizing.component.ts",
+        "index.ts"
+    ],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "@angular//packages/core",
+        "@angular//packages/common",
+    ]
+)

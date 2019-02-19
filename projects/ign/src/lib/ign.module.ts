@@ -10,7 +10,7 @@ import { AvatarModule } from './avatar/avatar.module';
 export { AvatarModule } from './avatar/avatar.module';
 
 import { AvatarGroupModule } from './avatar-group/avatar-group.module';
-export { AvatarGroupModule } from './avatar-group/avatar-group.module';
+export * from './avatar-group/avatar-group.module';
 export * from './avatar-group/avatar-group.types';
 
 import { ExpandableSearchModule } from './expandable-search/expandable-search.module';
@@ -20,129 +20,152 @@ import { FieldModule } from './field/field.module';
 export { FieldModule } from './field/field.module';
 
 import { LoggerModule } from './logging/logger.module';
-export * from './logging/logger.service';
+export * from './logging/logger.module';
 
-import { PageComponent } from './page/page.component';
-export * from './page/page.component';
+import { PageModule } from './page/page.module';
+export * from './page/page.module';
 
-import { RightDrawerComponent } from './right-drawer/right-drawer.component';
-export * from './right-drawer/right-drawer.component';
-
-import {
-  SideNavHeaderComponent,
-  SideNavListComponent,
-  SideNavListItemComponent,
-} from './sidenav/index';
-export * from './sidenav/index';
+import { RightDrawerModule } from './right-drawer/right-drawer.module';
+export * from './right-drawer/right-drawer.module';
 
 import {
-  ListItemComponent,
-  ListItemContentComponent,
-  ListContainerComponent,
-} from './list-item/list-item.component';
+  SidenavHeaderModule,
+  SidenavListModule,
+  SidenavListItemModule,
+} from './sidenav';
+export * from './sidenav';
+
+import { ListItemModule } from './list-item/list-item.module';
 export * from './list-item/list-item.component';
 
 import {
-  ListContentCardComponent,
-  ListContentComponent,
-  ListContentEmptyStateComponent,
-  ListContentPanelComponent,
-  ListContentUnselectedStateComponent,
-} from './list-content/index';
-export * from './list-content/index';
+  ListContentCardModule,
+  ListContentModule,
+  ListContentEmptyStateModule,
+  ListContentPanelModule,
+  ListContentUnselectedStateModule,
+} from './list-content';
+export * from './list-content';
+
+// import {
+//   EmptyStateComponent,
+//   EmptyStateTitleComponent,
+//   EmptyStateDescriptionComponent,
+//   EmptyStateImageComponent,
+// } from './empty-state/empty-state.component';
+// export * from './empty-state/empty-state.component';
+import { EmptyStateModule } from './empty-state/empty-state.module';
+export * from './empty-state/empty-state.module';
 
 import {
-  EmptyStateComponent,
-  EmptyStateTitleComponent,
-  EmptyStateDescriptionComponent,
-  EmptyStateImageComponent,
-} from './empty-state/empty-state.component';
-export * from './empty-state/empty-state.component';
+  ListSelectionAddButtonModule,
+  ListSelectionModule,
+  ListSelectionItemModule
+} from './list-selection';
+export * from './list-selection';
 
 import {
-  ListSelectionAddButtonComponent,
-  ListSelectionComponent,
-  ListSelectionItemComponent
-} from './list-selection/index';
-export * from './list-selection/index';
+  CardHeaderContainerModule,
+  CardSubtitleModule,
+  CardMainModule,
+  CardAsideModule,
+  CardTitleModule,
+  CardSectionModule,
+  CardSectionSubtitleModule,
+  CardSectionTitleModule,
+  CardActionsModule,
+  CardToolbarModule,
+} from './card';
+export * from './card';
+
+// import {
+//   ListItemPrimaryTextComponent,
+//   ListItemSecondaryTextComponent,
+// } from './text/text.component';
+// export * from './text/text.component';
+import { TextModule } from './text/text.module';
+export * from './text/text.module';
+
+// import { SelectContainerComponent } from './select-container/select-container.component';
+// export * from './select-container/select-container.component';
+import { SelectContainerModule } from './select-container/select-container.module';
+export * from './select-container/select-container.module';
 
 import {
-  CardHeaderContainerComponent,
-  CardSubtitleComponent,
-  CardMainComponent,
-  CardAsideComponent,
-  CardTitleComponent,
-  CardSectionComponent,
-  CardSectionSubTitleComponent,
-  CardSectionTitleComponent,
-  CardActionsComponent,
-  CardToolbarComponent,
-} from './card/index';
-export * from './card/index';
+  FormGroupModule,
+  FormSizingModule,
+  NestableFormModule,
+} from './form';
+export * from './form';
 
-import {
-  ListItemPrimaryTextComponent,
-  ListItemSecondaryTextComponent,
-} from './text/text.component';
-export * from './text/text.component';
+import { ErrorBannerModule } from './error-banner/error-banner.module'
+export * from './error-banner/error-banner.module'
+// import { ErrorBannerComponent } from './error-banner/error-banner.component';
+// export * from './error-banner/error-banner.component';
 
-import { SelectContainerComponent } from './select-container/select-container.component';
-export * from './select-container/select-container.component';
 
-import {
-  FormGroupComponent,
-  SizingFullDirective,
-  SizingLargeDirective,
-  SizingMediumDirective,
-  SizingSmallDirective,
-  NestableFormDirective,
-} from './form/index';
-export * from './form/index';
-
-import { ErrorBannerComponent } from './error-banner/error-banner.component';
-export * from './error-banner/error-banner.component';
-
-import { InfoBannerComponent } from './info-banner/info-banner.component';
-export * from './info-banner/info-banner.component';
+// import { InfoBannerComponent } from './info-banner/info-banner.component';
+// export * from './info-banner/info-banner.component';
+import { InfoBannerModule } from './info-banner/info-banner.module';
+export * from './info-banner/info-banner.module';
 
 import { ButtonGroupModule } from './button-group/button-group.module';
-export { ButtonGroupModule } from './button-group/button-group.module';
+export * from './button-group/button-group.module';
 
-import { ExpandableFabComponent } from './expandable-fab/expandable-fab.component';
-export * from './expandable-fab/expandable-fab.component';
+// import { ExpandableFabComponent } from './expandable-fab/expandable-fab/expandable-fab.component';
+// export * from './expandable-fab/expandable-fab/expandable-fab.component';
+//
+// import { ExpandableFabItemComponent } from './expandable-fab/expandable-fab-item.component';
+// export * from './expandable-fab/expandable-fab-item.component';
+// import { ExpandableFabItemModule } from './expandable-fab/expandable-fab-item.module';
+import { ExpandableModule } from './expandable/expandable.module';
+export * from './expandable/expandable.module';
 
-import { ExpandableFabItemComponent } from './expandable-fab/expandable-fab-item.component';
-export * from './expandable-fab/expandable-fab-item.component';
-import { ExpandableFabItemModule } from './expandable-fab/expandable-fab-item.module';
 
-import { CenterComponent } from './center/center.component';
+// import { CenterComponent } from './center/center.component';
+import { CenterModule } from './center/center.module';
 
-import { LoadingContainerComponent } from './loading-container/loading-container.component';
-import { FooterComponent } from './footer/footer.component';
+// import { LoadingContainerComponent } from './loading-container/loading-container.component';
+import { LoadingContainerModule } from './loading-container/loading-container.module';
+
+// import { FooterComponent } from './footer/footer.component';
+import { FooterModule } from './footer/footer.module';
 
 import { TextListItemModule } from './text-list-item/text-list-item.module';
-import { TextListItemComponent } from './text-list-item/text-list-item.component';
+// import { TextListItemComponent } from './text-list-item/text-list-item.component';
 
 import { DataTableContainerModule } from './data-table-container/data-table-container.module';
-import { DataTableContainerComponent } from './data-table-container/data-table-container.component';
+// import { DataTableContainerComponent } from './data-table-container/data-table-container.component';
 
-import { RightAlignContainerComponent } from './right-align-container/right-align-container.component';
+// import { RightAlignContainerComponent } from './right-align-container/right-align-container.component';
+import { RightAlignContainerModule } from './right-align-container/right-align-container.module';
 
-import { PersistentSearchComponent } from './persistent-search/persistent-search.component';
+// import { PersistentSearchComponent } from './persistent-search/persistent-search.component';
+import { PersistentSearchModule } from './persistent-search/persistent-search.module';
 
-import { TranslationService } from './localization/translation.service';
+// import { TranslationService } from './localization/translation.service';
+// import { TranslationModule } from './localization/translation.module';
 
 import { TranslationModule } from './localization/translation.module';
+import { TranslationService } from './localization/translation.service';
 
-import {
-  InputMaskComponent,
-  DisplayModeDirective,
-} from './currency-input-mask/base-input-mask/input-mask.component';
-import { CurrencyMaskComponent } from './currency-input-mask/currency-mask/currency-mask.component';
-import { CurrencyMaskDirective } from './currency-input-mask/currency-mask/currency-mask.directive';
+// import {
+//   InputMaskComponent,
+//   DisplayModeDirective,
+// } from './currency-input-mask/base-input-mask/input-mask.component';
+import { InputMaskModule } from './currency-input-mask/base-input-mask/input-mask.module';
+export * from './currency-input-mask/base-input-mask/input-mask.module';
 
-import { MessagesComponent } from './messages/messages.component';
-export * from './messages/messages.component';
+// import { CurrencyMaskComponent } from './currency-input-mask/currency-mask/currency-mask.component';
+// import { CurrencyMaskDirective } from './currency-input-mask/currency-mask/currency-mask.directive';
+
+import { CurrencyMaskModule } from './currency-input-mask/currency-mask/currency-mask.module';
+export * from './currency-input-mask/currency-mask/currency-mask.module';
+
+// import { MessagesComponent } from './messages/messages.component';
+// export * from './messages/messages.component';
+import { MessagesModule } from './messages/messages.module';
+export * from './messages/messages.module';
 
 import {
   MatToolbarModule,
@@ -161,68 +184,71 @@ import {
 } from '@angular/material';
 
 const components = [
-  CardHeaderContainerComponent,
-  CardSubtitleComponent,
-  PageComponent,
-  RightDrawerComponent,
-  SideNavHeaderComponent,
-  SideNavListComponent,
-  SideNavListItemComponent,
-  ListContainerComponent,
-  ListContentComponent,
-  ListContentCardComponent,
-  ListItemComponent,
-  ListItemContentComponent,
-  ListItemPrimaryTextComponent,
-  ListItemSecondaryTextComponent,
-  ListContentPanelComponent,
-  ListContentEmptyStateComponent,
-  EmptyStateComponent,
-  EmptyStateTitleComponent,
-  EmptyStateDescriptionComponent,
-  EmptyStateImageComponent,
-  ListContentUnselectedStateComponent,
-  ListSelectionComponent,
-  ListSelectionItemComponent,
-  ListSelectionAddButtonComponent,
-  CardMainComponent,
-  CardAsideComponent,
-  CardTitleComponent,
-  CardSectionComponent,
-  CardSectionSubTitleComponent,
-  CardSectionTitleComponent,
-  CardActionsComponent,
-  CardToolbarComponent,
-  SelectContainerComponent,
-  FormGroupComponent,
-  SizingSmallDirective,
-  SizingMediumDirective,
-  SizingLargeDirective,
-  SizingFullDirective,
-  ErrorBannerComponent,
-  InfoBannerComponent,
-  ExpandableFabComponent,
-  CenterComponent,
-  NestableFormDirective,
-  LoadingContainerComponent,
-  FooterComponent,
-  RightAlignContainerComponent,
-  PersistentSearchComponent,
-  DisplayModeDirective,
-  InputMaskComponent,
-  CurrencyMaskComponent,
-  CurrencyMaskDirective,
-  MessagesComponent,
+  // CardHeaderContainerComponent,
+  // CardSubtitleComponent,
+  // PageComponent,
+  // RightDrawerComponent,
+  // SideNavHeaderComponent,
+  // SideNavListComponent,
+  // SideNavListItemComponent,
+  // ListContainerComponent,
+  // ListContentComponent,
+  // ListContentCardComponent,
+  // ListItemComponent,
+  // ListItemContentComponent,
+  // ListItemPrimaryTextComponent,
+  // ListItemSecondaryTextComponent,
+  // ListContentPanelComponent,
+  // ListContentEmptyStateComponent,
+  // EmptyStateComponent,
+  // EmptyStateTitleComponent,
+  // EmptyStateDescriptionComponent,
+  // EmptyStateImageComponent,
+  // ListContentUnselectedStateComponent,
+  // ListSelectionComponent,
+  // ListSelectionItemComponent,
+  // ListSelectionAddButtonComponent,
+  // CardMainComponent,
+  // CardAsideComponent,
+  // CardTitleComponent,
+  // CardSectionComponent,
+  // CardSectionSubTitleComponent,
+  // CardSectionTitleComponent,
+  // CardActionsComponent,
+  // CardToolbarComponent,
+  // SelectContainerComponent,
+  // FormGroupComponent,
+  // ErrorBannerComponent,
+  // InfoBannerComponent,
+  // ExpandableFabComponent,
+  // CenterComponent,
+  // LoadingContainerComponent,
+  // FooterComponent,
+  // RightAlignContainerComponent,
+  // PersistentSearchComponent,
+  // InputMaskComponent,
+  // CurrencyMaskComponent,
+  // MessagesComponent
 ];
 
-const componentModules = [
-  AvatarModule,
-  AvatarGroupModule,
-  AccessibilityModule,
-  ButtonGroupModule,
-  ExpandableSearchModule,
-  FieldModule
+const directive = [
+  // CurrencyMaskDirective,
+  // NestableFormDirective,
+  // SizingSmallDirective,
+  // SizingMediumDirective,
+  // SizingLargeDirective,
+  // SizingFullDirective,
+  // DisplayModeDirective
 ];
+
+// const componentModules = [
+//   AvatarModule,
+//   AvatarGroupModule,
+//   AccessibilityModule,
+//   ButtonGroupModule,
+//   ExpandableSearchModule,
+//   FieldModule
+// ];
 
 @NgModule({
   imports: [
@@ -238,7 +264,7 @@ const componentModules = [
     MatProgressSpinnerModule,
     MatNativeDateModule,
     MatListModule,
-    ExpandableFabItemModule,
+    // ExpandableFabItemModule,
     TextListItemModule,
     DataTableContainerModule,
     MatFormFieldModule,
@@ -247,17 +273,75 @@ const componentModules = [
     TranslationModule,
     MatSidenavModule,
     LoggerModule,
-    ...componentModules
+    MessagesModule,
+    ErrorBannerModule,
+    CurrencyMaskModule,
+    InputMaskModule,
+    PersistentSearchModule,
+    RightAlignContainerModule,
+    FooterModule,
+    LoadingContainerModule,
+    CenterModule,
+    ExpandableModule,
+    InfoBannerModule,
+    FormGroupModule,
+    SelectContainerModule,
+    TextModule,
+    CardMainModule,
+    CardAsideModule,
+    CardTitleModule,
+    CardSectionModule,
+    CardSectionSubtitleModule,
+    CardSectionTitleModule,
+    CardActionsModule,
+    CardToolbarModule,
+    CardHeaderContainerModule,
+    CardSubtitleModule,
+    ListSelectionAddButtonModule,
+    ListSelectionModule,
+    ListSelectionItemModule,
+    EmptyStateModule,
+    ListContentCardModule,
+    ListContentModule,
+    ListContentEmptyStateModule,
+    ListContentPanelModule,
+    ListContentUnselectedStateModule,
+    SidenavHeaderModule,
+    SidenavListModule,
+    SidenavListItemModule,
+    RightDrawerModule,
+    PageModule,
+    ListItemModule,
+    FormSizingModule,
+    NestableFormModule,
+    AvatarModule,
+    AvatarGroupModule,
+    AccessibilityModule,
+    ButtonGroupModule,
+    ExpandableSearchModule,
+    FieldModule,
+    // ...componentModules
   ],
-  declarations: components,
+  declarations: [
+      // ...components,
+    // ...directive
+  ],
   exports: [
-    ...components,
-    ...componentModules,
-    ExpandableFabItemComponent,
-    TextListItemComponent,
-    DataTableContainerComponent,
+    // ...components,
+    // ...componentModules,
+    // ExpandableFabItemComponent,
+    // TextListItemComponent,
+    // DataTableContsainerComponent,
+    AvatarModule,
+    AvatarGroupModule,
+    AccessibilityModule,
+    ButtonGroupModule,
+    ExpandableSearchModule,
+    FieldModule
   ],
-  providers: [TranslationService, CurrencyPipe],
+  providers: [
+      CurrencyPipe
+  ],
 })
 export class IgniteDesignSystemModule {
   static updateTranslation(translationKey: string, translationValue: string) {

@@ -1,0 +1,21 @@
+load("@angular//:index.bzl", "ng_module")
+
+package(default_visibility = ["//visibility:public"])
+
+ng_module(
+    name = "currency-mask-module",
+    srcs = [
+        "currency-mask.module.ts",
+        "currency-mask.component.ts",
+        "currency-mask.directive.ts"
+    ],
+    assets = ["currency-mask.html"],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "@angular//packages/core",
+        "@angular//packages/common",
+        "//projects/ign/src/lib/currency-input-mask/base-input-mask:base-input-mask-module"
+    ]
+)

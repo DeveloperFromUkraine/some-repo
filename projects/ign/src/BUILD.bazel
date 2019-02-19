@@ -1,0 +1,30 @@
+load("@build_bazel_rules_typescript//:defs.bzl", "ts_library", "ts_config", "ts_devserver")
+load("@angular//:index.bzl", "ng_module", "ng_package" )
+load("@build_bazel_rules_nodejs//:defs.bzl", "npm_package")
+
+package(default_visibility = ["//visibility:public"])
+
+exports_files(["tsconfig.lib.json"])
+
+ts_config(
+    name = "tsconfig-lib",
+    src = "tsconfig.lib.json",
+    deps = ["//:tsconfig.json"]
+)
+
+ts_library(
+    name = "ignite-system",
+    srcs = ["public_api.ts", "index.ts"],
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "//projects/ign/src/lib:library"
+    ],
+)
+
+npm_package(
+    name = "npm_package",
+    srcs = ["//:package.json"],
+    deps = [":ignite-system"],
+    replacements = {"//internal/": "//"},
+)

@@ -26,7 +26,7 @@ export interface Message {
 @Component({
   selector: 'ign-messages',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styleUrls: ['messages.component.scss'],
+  styleUrls: ['./messages.component.css'],
   template: `
     <ign-error-banner *ngIf="(errors$ | async)?.length">
       <button class="dismiss-button" type="button" mat-icon-button (click)="clear()">&times;</button>

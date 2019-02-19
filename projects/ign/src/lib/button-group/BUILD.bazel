@@ -1,0 +1,30 @@
+load("@angular//:index.bzl", "ng_module")
+load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+sass_binary(
+    name = "button-group-style",
+    src = "button-group.scss"
+)
+
+ng_module(
+    name = "button-group-module",
+    srcs = [
+        "button-group.module.ts",
+        "button-group.component.ts",
+        "button-group.component.sandbox.ts"
+    ],
+    assets = [
+        ":button-group.css"
+    ],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@angular//packages/core",
+        "@npm//tslib",
+        "@npm//@types",
+        "@angular_material//src/lib:material",
+        "@npm//angular-playground",
+    ]
+)
+

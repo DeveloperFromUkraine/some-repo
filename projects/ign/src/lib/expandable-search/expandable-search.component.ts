@@ -7,7 +7,7 @@ import {TranslationPipe} from '../localization/translation.pipe';
 @Component({
   selector: 'ign-expandable-search',
   templateUrl: './expandable-search.html',
-  styleUrls: ['./expandable-search.scss'],
+  styleUrls: ['./expandable-search.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExpandableSearchComponent implements OnInit {

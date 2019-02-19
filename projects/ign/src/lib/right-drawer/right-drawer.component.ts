@@ -4,7 +4,7 @@ import { Component, Input, Output, OnInit, EventEmitter, HostListener } from '@a
 @Component({
   selector: 'ign-right-drawer',
   templateUrl: './right-drawer.html',
-  styleUrls: ['./right-drawer.scss'],
+  styleUrls: ['./right-drawer.css'],
   host: {
     '[class.drawer-is-open]': 'open',
   },

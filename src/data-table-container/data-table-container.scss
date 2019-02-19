@@ -1,4 +1,4 @@
-@import '~ignite-common/styles/ignite';
+//@import '~ignite-common/styles/ignite';
 
 $icon-length: 18px;
 $hover-color: #EEEEEE;
@@ -12,7 +12,7 @@ $hover-color: #EEEEEE;
     padding-right: 56px;
 
     &:first-child {
-        padding-right: ign-spacing(s);
+        //padding-right: ign-spacing(s);
     }
     &:last-child {
         padding-right: 0;
@@ -28,7 +28,7 @@ $hover-color: #EEEEEE;
 }
 
 :host ::ng-deep .checkbox  {
-    padding-right: ign-spacing(s);
+    //padding-right: ign-spacing(s);
     overflow: initial;
 }
 
@@ -37,11 +37,11 @@ $hover-color: #EEEEEE;
 }
 
 :host ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
-    background-color: ign-color(secondary);
+    //background-color: ign-color(secondary);
 }
 
 :host ::ng-deep .inline-edit  {
-    padding-right: ign-spacing(xs);
+    //padding-right: ign-spacing(xs);
     text-align: right;
     overflow: initial;
 
@@ -55,11 +55,11 @@ $hover-color: #EEEEEE;
 }
 
 :host ::ng-deep .mat-header-row {
-    height: ign-spacing(xl);
+    //height: ign-spacing(xl);
 }
 
 :host ::ng-deep .mat-row {
-    height: ign-spacing(l);
+    //height: ign-spacing(l);
 
     &:hover {
         background: $hover-color;  

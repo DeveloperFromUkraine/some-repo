@@ -1,0 +1,25 @@
+load("@angular//:index.bzl", "ng_module")
+load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+sass_binary(
+    name = "style",
+    src = "text.scss",
+)
+
+ng_module(
+    name = "text-module",
+    srcs = [
+        "text.module.ts",
+        "text.component.ts",
+    ],
+    assets = [":text.css"],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "@angular//packages/core",
+        "@angular//packages/common",
+    ]
+)

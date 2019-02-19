@@ -1,1 +1,1 @@
-export * from './sidenav-list.component';
+export * from './sidenav-list.module';

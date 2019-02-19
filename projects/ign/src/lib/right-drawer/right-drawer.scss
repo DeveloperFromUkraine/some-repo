@@ -1,4 +1,4 @@
-@import '~ignite-common/styles/ignite';
+//@import '~ignite-common/styles/ignite';
 
 :host {
   width: 0;
@@ -15,7 +15,7 @@
     z-index: 3; // DO NOT GO ABOVE 3 Z-INDEX
 
     // colors
-    background-color: rgba(ign-color('black'), .5);
+    //background-color: rgba(ign-color('black'), .5);
   }
 }
 
@@ -33,7 +33,7 @@ mat-drawer {
   z-index: 3; // DO NOT GO ABOVE 3 Z-INDEX
 
   // colors
-  background-color: ign-color('white');
+  //background-color: ign-color('white');
 
   // contents flow down
   display: flex;
@@ -60,6 +60,6 @@ mat-drawer {
 }
 
 .close-icon {
-  color: ign-palette($ign-palette-gray, 400);
+  //color: ign-palette($ign-palette-gray, 400);
   cursor: pointer;
 }

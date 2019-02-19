@@ -1,0 +1,28 @@
+load("@angular//:index.bzl", "ng_module")
+load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+sass_binary(
+    name = "style",
+    src = "text-list-item.scss",
+)
+
+ng_module(
+    name = "text-list-item-module",
+    srcs = [
+        "text-list-item.module.ts",
+        "text-list-item.component.ts",
+    ],
+    assets = [":text-list-item.css", "text-list-item.html"],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "@angular//packages/core",
+        "@npm//@angular/material",
+        "@angular//packages/router",
+        "@angular//packages/common",
+        "@angular_material//src/lib:material",
+    ]
+)

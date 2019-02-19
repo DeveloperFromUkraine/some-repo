@@ -1,1 +1,1 @@
-export * from './nestable-form.directive';
+export * from './nestable-form.module';

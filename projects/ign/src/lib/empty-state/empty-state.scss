@@ -20,13 +20,13 @@
   margin-top: 4rem;
 }
 
-:host /deep/ ign-button-group,
-:host /deep/ mat-card-actions {
+:host ::ng-deep ign-button-group,
+:host ::ng-deep mat-card-actions {
   justify-content: center;
   align-items: center;
   margin-bottom: 1.5rem;
 }
 
-:host /deep/ button {
+:host ::ng-deep button {
   text-transform: uppercase;
 }

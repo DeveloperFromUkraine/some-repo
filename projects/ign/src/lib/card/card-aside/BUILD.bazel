@@ -1,0 +1,26 @@
+load("@angular//:index.bzl", "ng_module")
+load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+sass_binary(
+    name = "style",
+    src = "card-aside.scss",
+)
+
+ng_module(
+    name = "card-aside-module",
+    srcs = [
+        "card-aside.module.ts",
+        "card-aside.component.ts",
+        "index.ts"
+    ],
+    assets = [":card-aside.css", "card-aside.html"],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "@angular//packages/core",
+        "@angular//packages/common",
+    ]
+)

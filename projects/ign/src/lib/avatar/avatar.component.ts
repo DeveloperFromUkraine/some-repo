@@ -22,7 +22,7 @@ const deprecatedSizes = ['small', 'large', 'medium'];
 @Component({
   selector: 'ign-avatar',
   templateUrl: './avatar.component.html',
-  styleUrls: ['./avatar.component.scss'],
+  styleUrls: ['./avatar.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AvatarComponent implements  AfterViewInit, OnChanges {

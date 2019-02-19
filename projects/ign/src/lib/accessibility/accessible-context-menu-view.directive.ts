@@ -1,5 +1,5 @@
 import {AfterViewInit, Attribute, ChangeDetectorRef, Directive, ElementRef, Renderer2} from '@angular/core';
-import {TranslationPipe} from '../localization/translation.pipe';
+import { TranslationPipe } from '../localization/translation.pipe';
 
 @Directive({
   selector: '[ignA11yContextMenuViewAccessible], button',

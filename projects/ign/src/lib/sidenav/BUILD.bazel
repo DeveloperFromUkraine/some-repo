@@ -1,0 +1,20 @@
+load("@angular//:index.bzl", "ng_module")
+
+package(default_visibility = ["//visibility:public"])
+
+ng_module(
+    name = "sidenav",
+    srcs = [
+        "index.ts"
+        ],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "@angular//packages/core",
+        "//projects/ign/src/lib/sidenav/sidenav-header:sidenav-header-module",
+        "//projects/ign/src/lib/sidenav/sidenav-list:sidenav-list-module",
+        "//projects/ign/src/lib/sidenav/sidenav-list-item:sidenav-list-item-module",
+    ]
+)
+

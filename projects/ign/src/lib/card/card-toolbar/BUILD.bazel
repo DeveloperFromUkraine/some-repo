@@ -1,0 +1,26 @@
+load("@angular//:index.bzl", "ng_module")
+load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+sass_binary(
+    name = "style",
+    src = "card-toolbar.scss",
+)
+
+ng_module(
+    name = "card-toolbar-module",
+    srcs = [
+        "card-toolbar.module.ts",
+        "card-toolbar.component.ts",
+        "index.ts"
+    ],
+    assets = [":card-toolbar.css", "card-toolbar.html"],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "@angular//packages/core",
+        "@angular//packages/common",
+    ]
+)

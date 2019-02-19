@@ -1,6 +1,6 @@
 $field-label-font-size: 0.85rem;
 
-@import '~ignite-common/styles/ignite';
+//@import '~ignite-common/styles/ignite';
 
 :host {
   display: block;
@@ -9,7 +9,7 @@ $field-label-font-size: 0.85rem;
 }
 
 .label {
-  color: ign-color(text-secondary);
+  //color: ign-color(text-secondary);
   font-size: $field-label-font-size;
 }
 

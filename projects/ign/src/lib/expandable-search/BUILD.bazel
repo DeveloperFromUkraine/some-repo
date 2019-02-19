@@ -1,0 +1,29 @@
+load("@angular//:index.bzl", "ng_module")
+load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+sass_binary(
+    name = "style",
+    src = "expandable-search.scss",
+)
+
+ng_module(
+    name = "expandable-search-module",
+    srcs = [
+        "expandable-search.module.ts",
+        "expandable-search.component.ts",
+    ],
+    assets = [":expandable-search.css", "expandable-search.html"],
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "@angular//packages/core",
+        "@angular_material//src/lib:material",
+        "@angular//packages/router",
+        "@angular//packages/common",
+        "@angular//packages/platform-browser/animations",
+        "//projects/ign/src/lib/localization:localization-translation-module",
+    ]
+)

@@ -3,6 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'ign-list-content-card',
   templateUrl: './list-content-card.html',
-  styleUrls: ['./list-content-card.scss'],
+  styleUrls: ['./list-content-card.css'],
 })
 export class ListContentCardComponent {}
