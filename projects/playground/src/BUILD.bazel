@@ -1,11 +1,23 @@
-load("@angular//:index.bzl", "ng_module")
-load("@build_bazel_rules_nodejs//:defs.bzl", "history_server", "rollup_bundle")
-load("@build_bazel_rules_typescript//:defs.bzl", "ts_library", "ts_web_test_suite", "ts_config", "ts_devserver")
+load("@angular//:index.bzl", "ng_module", "ng_package")
 
 package(default_visibility = ["//visibility:public"])
 
-ts_config(
-    name = "tsconfig-app",
-    src = "tsconfig.app.json",
-    deps = ["//:tsconfig.json"]
+ng_module(
+    name = "playground",
+    srcs = glob(
+        include = ["**/*.ts"],
+        exclude= [
+            "test.ts",
+            "main.ts",
+            "polyfills.ts",
+            "**/*.spec.ts"
+        ]
+    ),
+    assets = glob(["**/*.html", "**/*.css"]),
+    tsconfig = "//:tsconfig.json",
+    deps = [
+        "@npm//tslib",
+        "@npm//@types",
+        "//projects/ign/src:ignite-system"
+        ]
 )
