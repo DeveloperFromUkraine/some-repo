@@ -23,13 +23,6 @@ http_archive(
  ],
 )
 
-#http_archive(
-#    name = "build_bazel_rules_nodejs",
-#    sha256 = "895c2b0d1480834808216fb36cd4bf21517954cb966c893ee42421dfefcfd4bc",
-#    strip_prefix = "rules_nodejs-1f6d878a9ea3a095291f66e3d1a0f6b4641f5159",
-#    url = "https://github.com/bazelbuild/rules_nodejs/archive/1f6d878a9ea3a095291f66e3d1a0f6b4641f5159.zip",
-#)
-
 http_archive(
     name = "build_bazel_rules_nodejs",
     sha256 = "1416d03823fed624b49a0abbd9979f7c63bbedfd37890ddecedd2fe25cccebc6",
@@ -50,7 +43,7 @@ RXJS_VERSION = "6.3.3"
 http_archive(
     name = "rxjs",
     strip_prefix = "package/src",
-    url = "https://registry.yarnpkg.com/rxjs/-/rxjs-%s.tgz" % RXJS_VERSION,
+    url = "https://registry.npmjs.com/rxjs/-/rxjs-%s.tgz" % RXJS_VERSION,
 )
 
 # Angular material
@@ -88,18 +81,18 @@ rules_typescript_dependencies()
 load("@build_bazel_rules_nodejs//:package.bzl", "rules_nodejs_dependencies")
 rules_nodejs_dependencies()
 
-load("@build_bazel_rules_nodejs//:defs.bzl", "check_bazel_version", "node_repositories", "yarn_install")
+load("@build_bazel_rules_nodejs//:defs.bzl", "check_bazel_version", "node_repositories", "npm_install")
 # 0.18.0 is needed for .bazelignore
 check_bazel_version("0.21.0")
 
 node_repositories()
 
-yarn_install(
+npm_install(
     name = "npm",
-    data = ["//:tsconfig.json"],
+#    data = ["//:tsconfig.json"],
     package_json = "//:package.json",
-    yarn_lock = "//:yarn.lock",
-#    package_lock_json="//:package-lock.json"
+#    yarn_lock = "//:yarn.lock",
+    package_lock_json="//:package-lock.json"
 )
 
 load("@io_bazel_rules_go//go:def.bzl", "go_rules_dependencies", "go_register_toolchains")

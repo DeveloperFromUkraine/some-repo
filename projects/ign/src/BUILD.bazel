@@ -16,6 +16,7 @@ ts_library(
     name = "ignite-system",
     srcs = ["public_api.ts", "index.ts"],
     deps = [
+        "@rxjs",
         "@npm//tslib",
         "@npm//@types",
         "//projects/ign/src/lib:library"
